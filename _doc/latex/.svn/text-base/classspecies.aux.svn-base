@@ -1,0 +1,83 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {5.11}species Class Reference}{50}{section.5.11}}
+\newlabel{classspecies}{{5.11}{50}{species Class Reference\relax }{section.5.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{51}{subsection.5.11.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.11.2}Constructor \& Destructor Documentation}{51}{subsection.5.11.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.2.1}species}{51}{subsubsection.5.11.2.1}}
+\newlabel{classspecies_a3627a97538daa04240dc7a7ecdf7ff44}{{5.11.2.1}{51}{species\relax }{subsubsection.5.11.2.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.2.2}species}{51}{subsubsection.5.11.2.2}}
+\newlabel{classspecies_a2db5bfb016466ff23c91402a51162c82}{{5.11.2.2}{51}{species\relax }{subsubsection.5.11.2.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.2.3}species}{52}{subsubsection.5.11.2.3}}
+\newlabel{classspecies_abfa979a865efa477ecdccf63ac9766ce}{{5.11.2.3}{52}{species\relax }{subsubsection.5.11.2.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.2.4}species}{52}{subsubsection.5.11.2.4}}
+\newlabel{classspecies_aa4e4002d375df5c4bda87e6b8851fd74}{{5.11.2.4}{52}{species\relax }{subsubsection.5.11.2.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.2.5}$\sim $species}{53}{subsubsection.5.11.2.5}}
+\newlabel{classspecies_a4ec3e21535ff68a06dba4e1eed935dc0}{{5.11.2.5}{53}{$\sim $species\relax }{subsubsection.5.11.2.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.11.3}Member Function Documentation}{53}{subsection.5.11.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.1}decrement}{53}{subsubsection.5.11.3.1}}
+\newlabel{classspecies_aba943f0be46db2b0e31635f1259fe520}{{5.11.3.1}{53}{decrement\relax }{subsubsection.5.11.3.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.2}getAge}{53}{subsubsection.5.11.3.2}}
+\newlabel{classspecies_a209c36c4e7eda0608f14cc003c344d65}{{5.11.3.2}{53}{getAge\relax }{subsubsection.5.11.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.3}getAmount}{53}{subsubsection.5.11.3.3}}
+\newlabel{classspecies_a53c74ca3861c4cdac2457e7057fbef21}{{5.11.3.3}{53}{getAmount\relax }{subsubsection.5.11.3.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.4}getCatalyst\_\discretionary {-}{}{}ID}{53}{subsubsection.5.11.3.4}}
+\newlabel{classspecies_a4be19a81a4de43016316832fdf8b5f35}{{5.11.3.4}{53}{getCatalyst\_\-ID\relax }{subsubsection.5.11.3.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.5}getComplexCutPnt}{53}{subsubsection.5.11.3.5}}
+\newlabel{classspecies_a4c87285bf983ddd5635b58ce82d02a80}{{5.11.3.5}{53}{getComplexCutPnt\relax }{subsubsection.5.11.3.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.6}getComplexDegEnh}{53}{subsubsection.5.11.3.6}}
+\newlabel{classspecies_a2870bc4874efda0a1a079eb2b326ecd9}{{5.11.3.6}{53}{getComplexDegEnh\relax }{subsubsection.5.11.3.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.7}getDiffusionEnh}{53}{subsubsection.5.11.3.7}}
+\newlabel{classspecies_ac609ed0616615f27ed1a3313efcda075}{{5.11.3.7}{53}{getDiffusionEnh\relax }{subsubsection.5.11.3.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.8}getEvaluated}{53}{subsubsection.5.11.3.8}}
+\newlabel{classspecies_acb08d02f3dcadd9f422d435219d1dc57}{{5.11.3.8}{53}{getEvaluated\relax }{subsubsection.5.11.3.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.9}getID}{54}{subsubsection.5.11.3.9}}
+\newlabel{classspecies_a59f2a9963c10fcb3748153c73c9c7072}{{5.11.3.9}{54}{getID\relax }{subsubsection.5.11.3.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.10}getReborns}{54}{subsubsection.5.11.3.10}}
+\newlabel{classspecies_a00fe9b888d23788423cbcdc634eae934}{{5.11.3.10}{54}{getReborns\relax }{subsubsection.5.11.3.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.11}getSequence}{54}{subsubsection.5.11.3.11}}
+\newlabel{classspecies_a553019883dd1344a7f15b805453e46d1}{{5.11.3.11}{54}{getSequence\relax }{subsubsection.5.11.3.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.12}getSequenceLength}{54}{subsubsection.5.11.3.12}}
+\newlabel{classspecies_ade5b59eab17c02ff322dcf068f923f9d}{{5.11.3.12}{54}{getSequenceLength\relax }{subsubsection.5.11.3.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.13}getSolubility}{54}{subsubsection.5.11.3.13}}
+\newlabel{classspecies_a14bde6b3114c4507c0b8018df41eaf4f}{{5.11.3.13}{54}{getSolubility\relax }{subsubsection.5.11.3.13}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.14}getSubstrate\_\discretionary {-}{}{}ID}{54}{subsubsection.5.11.3.14}}
+\newlabel{classspecies_a3bc786de75d9c6235c75eeda10b01b8d}{{5.11.3.14}{54}{getSubstrate\_\-ID\relax }{subsubsection.5.11.3.14}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.15}increment}{54}{subsubsection.5.11.3.15}}
+\newlabel{classspecies_aa99999d7cbd733367d3829aa9188d789}{{5.11.3.15}{54}{increment\relax }{subsubsection.5.11.3.15}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.16}rebornsIncrement}{54}{subsubsection.5.11.3.16}}
+\newlabel{classspecies_a90d5fc1d90637f2245e8b0ecf228ddfa}{{5.11.3.16}{54}{rebornsIncrement\relax }{subsubsection.5.11.3.16}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.17}setDiffusion}{54}{subsubsection.5.11.3.17}}
+\newlabel{classspecies_ab4b4adbc3c26e3a8c81a090c9d1330e3}{{5.11.3.17}{54}{setDiffusion\relax }{subsubsection.5.11.3.17}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.18}setEvaluated}{54}{subsubsection.5.11.3.18}}
+\newlabel{classspecies_a089da38f8016bd588fa262cd836d1c4d}{{5.11.3.18}{54}{setEvaluated\relax }{subsubsection.5.11.3.18}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.19}setNewAge}{54}{subsubsection.5.11.3.19}}
+\newlabel{classspecies_aa73ab15fb28aefd3b0c6b19e7c9bb944}{{5.11.3.19}{54}{setNewAge\relax }{subsubsection.5.11.3.19}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.20}setSolubility}{55}{subsubsection.5.11.3.20}}
+\newlabel{classspecies_a27c2d0448e1f56e0962132d8d360fc07}{{5.11.3.20}{55}{setSolubility\relax }{subsubsection.5.11.3.20}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.3.21}specificIncrement}{55}{subsubsection.5.11.3.21}}
+\newlabel{classspecies_a3641a3bb0856df80ca17f497813bfed5}{{5.11.3.21}{55}{specificIncrement\relax }{subsubsection.5.11.3.21}{}}
+\@setckpt{classspecies}{
+\setcounter{page}{56}
+\setcounter{equation}{0}
+\setcounter{enumi}{2}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{5}
+\setcounter{section}{11}
+\setcounter{subsection}{3}
+\setcounter{subsubsection}{21}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{float@type}{8}
+\setcounter{lstnumber}{1}
+\setcounter{Item}{2}
+\setcounter{Hfootnote}{0}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{3}
+}

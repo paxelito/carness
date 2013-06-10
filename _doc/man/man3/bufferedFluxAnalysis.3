@@ -1,0 +1,381 @@
+.TH "bufferedFluxAnalysis" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+bufferedFluxAnalysis \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "list \fBStrPath\fP sys\&.argv[1]"
+.br
+.ti -1c
+.RI "list \fBtmpResFold\fP sys\&.argv[2]"
+.br
+.ti -1c
+.RI "tuple \fBtoday\fP dt\&.date\&.today()"
+.br
+.ti -1c
+.RI "string \fBsimF\fP '/'"
+.br
+.ti -1c
+.RI "tuple \fBtmpDirs\fP sort(glob\&.glob(\fBsimF\fP))"
+.br
+.ti -1c
+.RI "tuple \fBnewdir\fP os\&.path\&.join(os\&.curdir, '0_statistics')"
+.br
+.ti -1c
+.RI "tuple \fBmatrixTimeLITE\fP np\&.zeros((101,len(\fBtmpDirs\fP)))"
+.br
+.ti -1c
+.RI "tuple \fBmatrixFluxLITE\fP np\&.zeros((101,len(\fBtmpDirs\fP)))"
+.br
+.ti -1c
+.RI "tuple \fBmatrixAbsLITE\fP np\&.zeros((101,len(\fBtmpDirs\fP)))"
+.br
+.ti -1c
+.RI "tuple \fBmatrixExpLITE\fP np\&.zeros((101,len(\fBtmpDirs\fP)))"
+.br
+.ti -1c
+.RI "int \fBtmpDirsCnt\fP 0"
+.br
+.ti -1c
+.RI "tuple \fBspeciesFiles\fP sort(glob\&.glob('species_*'))"
+.br
+.ti -1c
+.RI "tuple \fBfidSpecies\fP open(\fBspeciesFiles\fP[0], '\fBr\fP')"
+.br
+.ti -1c
+.RI "int \fBok\fP 0"
+.br
+.ti -1c
+.RI "list \fBfluxIndexes\fP []"
+.br
+.ti -1c
+.RI "list \fBfluxLengths\fP []"
+.br
+.ti -1c
+.RI "tuple \fBindex\fP int(tmpID)"
+.br
+.ti -1c
+.RI "tuple \fBspeciesSeq\fP len(tmpSeq)"
+.br
+.ti -1c
+.RI "tuple \fBconcFixed\fP int(tmpConcFixed)"
+.br
+.ti -1c
+.RI "tuple \fBfileslist\fP sort(glob\&.glob('reactions_parameters_*'))"
+.br
+.ti -1c
+.RI "int \fBrctParFileNum\fP 1"
+.br
+.ti -1c
+.RI "int \fBrctID\fP 1"
+.br
+.ti -1c
+.RI "list \fBtotFluxDyn\fP []"
+.br
+.ti -1c
+.RI "list \fBabsorbedBricks\fP []"
+.br
+.ti -1c
+.RI "int \fBtempAbsorbedBricks\fP 0"
+.br
+.ti -1c
+.RI "list \fBexpelledBricks\fP []"
+.br
+.ti -1c
+.RI "int \fBtempExpelledBricks\fP 0"
+.br
+.ti -1c
+.RI "list \fBtotTimes\fP []"
+.br
+.ti -1c
+.RI "list \fBtotFluxDyn_LITE\fP []"
+.br
+.ti -1c
+.RI "list \fBabsorbedBricks_LITE\fP []"
+.br
+.ti -1c
+.RI "list \fBexpelledBricks_LITE\fP []"
+.br
+.ti -1c
+.RI "list \fBtotTimes_LITE\fP []"
+.br
+.ti -1c
+.RI "tuple \fBfid\fP open(\fBfile\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "int \fBokmonitor\fP 1"
+.br
+.ti -1c
+.RI "int \fBoksaveLite\fP 0"
+.br
+.ti -1c
+.RI "int \fBdeltaRct\fP 0"
+.br
+.ti -1c
+.RI "tuple \fBreaction\fP int(tmpReaction)"
+.br
+.ti -1c
+.RI "tuple \fBrtime\fP float(tmpTime)"
+.br
+.ti -1c
+.RI "tuple \fBcc\fP int(tmpcc)"
+.br
+.ti -1c
+.RI "tuple \fBcat\fP int(tmpCat)"
+.br
+.ti -1c
+.RI "tuple \fBmol_I\fP int(tmpMol_I)"
+.br
+.ti -1c
+.RI "tuple \fBmol_II\fP int(tmpMol_II)"
+.br
+.ti -1c
+.RI "tuple \fBmol_III\fP int(tmpMol_III)"
+.br
+.ti -1c
+.RI "tuple \fBloadedMolsConc\fP float(tmpLoadedMolsConc)"
+.br
+.ti -1c
+.RI "tuple \fBloadedMols\fP int(tmpLoadedMols)"
+.br
+.ti -1c
+.RI "tuple \fBgillMean\fP float(tmpGillMean)"
+.br
+.ti -1c
+.RI "tuple \fBgillSD\fP float(tmpGillSD)"
+.br
+.ti -1c
+.RI "tuple \fBgillEntropy\fP float(tmpGillEntropy)"
+.br
+.ti -1c
+.RI "tuple \fBsavingMatrix\fP np\&.zeros((len(\fBtotTimes\fP),4))"
+.br
+.ti -1c
+.RI "tuple \fBtmpDirSplit\fP tmpDir\&.split('/')"
+.br
+.ti -1c
+.RI "string \fBcmdFileName\fP '0_statistics/0_fluxDynamics_'"
+.br
+.ti -1c
+.RI "tuple \fBcmdFileFid\fP open(\fBcmdFileName\fP, '\fBa\fP')"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "list bufferedFluxAnalysis\&.absorbedBricks []"
+
+.PP
+Definition at line 99 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.absorbedBricks_LITE []"
+
+.PP
+Definition at line 107 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.cat int(tmpCat)"
+
+.PP
+Definition at line 131 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.cc int(tmpcc)"
+
+.PP
+Definition at line 130 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.cmdFileFid open(\fBcmdFileName\fP, '\fBa\fP')"
+
+.PP
+Definition at line 206 of file bufferedFluxAnalysis\&.py\&.
+.SS "string bufferedFluxAnalysis\&.cmdFileName '0_statistics/0_fluxDynamics_'"
+
+.PP
+Definition at line 203 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.concFixed int(tmpConcFixed)"
+
+.PP
+Definition at line 85 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.deltaRct 0"
+
+.PP
+Definition at line 123 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.expelledBricks []"
+
+.PP
+Definition at line 101 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.expelledBricks_LITE []"
+
+.PP
+Definition at line 108 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.fid open(\fBfile\fP, '\fBr\fP')"
+
+.PP
+Definition at line 116 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.fidSpecies open(\fBspeciesFiles\fP[0], '\fBr\fP')"
+
+.PP
+Definition at line 70 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.fileslist sort(glob\&.glob('reactions_parameters_*'))"
+
+.PP
+Definition at line 94 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.fluxIndexes []"
+
+.PP
+Definition at line 76 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.fluxLengths []"
+
+.PP
+Definition at line 77 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.gillEntropy float(tmpGillEntropy)"
+
+.PP
+Definition at line 139 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.gillMean float(tmpGillMean)"
+
+.PP
+Definition at line 137 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.gillSD float(tmpGillSD)"
+
+.PP
+Definition at line 138 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.index int(tmpID)"
+
+.PP
+Definition at line 83 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.loadedMols int(tmpLoadedMols)"
+
+.PP
+Definition at line 136 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.loadedMolsConc float(tmpLoadedMolsConc)"
+
+.PP
+Definition at line 135 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.matrixAbsLITE np\&.zeros((101,len(\fBtmpDirs\fP)))"
+
+.PP
+Definition at line 48 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.matrixExpLITE np\&.zeros((101,len(\fBtmpDirs\fP)))"
+
+.PP
+Definition at line 49 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.matrixFluxLITE np\&.zeros((101,len(\fBtmpDirs\fP)))"
+
+.PP
+Definition at line 47 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.matrixTimeLITE np\&.zeros((101,len(\fBtmpDirs\fP)))"
+
+.PP
+Definition at line 46 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.mol_I int(tmpMol_I)"
+
+.PP
+Definition at line 132 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.mol_II int(tmpMol_II)"
+
+.PP
+Definition at line 133 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.mol_III int(tmpMol_III)"
+
+.PP
+Definition at line 134 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.newdir os\&.path\&.join(os\&.curdir, '0_statistics')"
+
+.PP
+Definition at line 39 of file bufferedFluxAnalysis\&.py\&.
+.SS "int bufferedFluxAnalysis\&.ok 0"
+
+.PP
+Definition at line 75 of file bufferedFluxAnalysis\&.py\&.
+.SS "int bufferedFluxAnalysis\&.okmonitor 1"
+
+.PP
+Definition at line 118 of file bufferedFluxAnalysis\&.py\&.
+.SS "int bufferedFluxAnalysis\&.oksaveLite 0"
+
+.PP
+Definition at line 119 of file bufferedFluxAnalysis\&.py\&.
+.SS "int bufferedFluxAnalysis\&.rctID 1"
+
+.PP
+Definition at line 96 of file bufferedFluxAnalysis\&.py\&.
+.SS "int bufferedFluxAnalysis\&.rctParFileNum 1"
+
+.PP
+Definition at line 95 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.reaction int(tmpReaction)"
+
+.PP
+Definition at line 128 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.rtime float(tmpTime)"
+
+.PP
+Definition at line 129 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.savingMatrix np\&.zeros((len(\fBtotTimes\fP),4))"
+
+.PP
+Definition at line 195 of file bufferedFluxAnalysis\&.py\&.
+.SS "string bufferedFluxAnalysis\&.simF '/'"
+
+.PP
+Definition at line 31 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.speciesFiles sort(glob\&.glob('species_*'))"
+
+.PP
+Definition at line 64 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.speciesSeq len(tmpSeq)"
+
+.PP
+Definition at line 84 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.StrPath sys\&.argv[1]"
+
+.PP
+Definition at line 18 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.tempAbsorbedBricks 0"
+
+.PP
+Definition at line 100 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.tempExpelledBricks 0"
+
+.PP
+Definition at line 102 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.tmpDirs sort(glob\&.glob(\fBsimF\fP))"
+
+.PP
+Definition at line 32 of file bufferedFluxAnalysis\&.py\&.
+.SS "int bufferedFluxAnalysis\&.tmpDirsCnt 0"
+
+.PP
+Definition at line 51 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.tmpDirSplit tmpDir\&.split('/')"
+
+.PP
+Definition at line 202 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.tmpResFold sys\&.argv[2]"
+
+.PP
+Definition at line 19 of file bufferedFluxAnalysis\&.py\&.
+.SS "tuple bufferedFluxAnalysis\&.today dt\&.date\&.today()"
+
+.PP
+Definition at line 25 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.totFluxDyn []"
+
+.PP
+Definition at line 98 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.totFluxDyn_LITE []"
+
+.PP
+Definition at line 106 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.totTimes []"
+
+.PP
+Definition at line 103 of file bufferedFluxAnalysis\&.py\&.
+.SS "list bufferedFluxAnalysis\&.totTimes_LITE []"
+
+.PP
+Definition at line 109 of file bufferedFluxAnalysis\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

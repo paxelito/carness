@@ -1,0 +1,155 @@
+\hypertarget{namespacereset_for_new_simulations}{\section{reset\-For\-New\-Simulations Namespace Reference}
+\label{namespacereset_for_new_simulations}\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacereset_for_new_simulations_aba1c55fe18d1a0b31b346994a7a96628}{zero\-Before\-Str\-Num}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacereset_for_new_simulations_a60b4005683b2bced2f3e0b22a66abd47}{folders\-S\-I\-M\-S} 10
+\item 
+int \hyperlink{namespacereset_for_new_simulations_a3869e711bac998c005313abd611c6158}{folders\-R\-E\-P} 10
+\item 
+tuple \hyperlink{namespacereset_for_new_simulations_a067f416fc59f243e38a0b8a40627979b}{zeros\-S\-I\-M\-S} \hyperlink{namespacereset_for_new_simulations_aba1c55fe18d1a0b31b346994a7a96628}{zero\-Before\-Str\-Num}(\hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i},\hyperlink{namespacereset_for_new_simulations_a60b4005683b2bced2f3e0b22a66abd47}{folders\-S\-I\-M\-S})
+\item 
+tuple \hyperlink{namespacereset_for_new_simulations_a9f88ef39633f68b28f6b0e96d5ebb34c}{zeros\-R\-E\-P\-S} \hyperlink{namespacereset_for_new_simulations_aba1c55fe18d1a0b31b346994a7a96628}{zero\-Before\-Str\-Num}(\hyperlink{inizializzatore___a_c_s_8m_ac86694252f8dfdb19aaeadc4b7c342c6}{j},\hyperlink{namespacereset_for_new_simulations_a3869e711bac998c005313abd611c6158}{folders\-R\-E\-P})
+\item 
+string \hyperlink{namespacereset_for_new_simulations_af9fbda1c8e6d13404f0224a5b3ef16fe}{folder\-Name} \char`\"{}s\-\_\-inv\-\_\-1e-\/2\-\_\-\char`\"{}
+\item 
+string \hyperlink{namespacereset_for_new_simulations_adfad2b3e8459d644a442c254865c564b}{folder\-New} \char`\"{}s\-\_\-inv\-\_\-1e-\/1\-\_\-\char`\"{}
+\item 
+tuple \hyperlink{namespacereset_for_new_simulations_addd72b08bf24570a2a851808a0b21949}{resdir} os.\-path.\-join(os.\-curdir, \char`\"{}res\char`\"{})
+\item 
+tuple \hyperlink{namespacereset_for_new_simulations_ad71f20889e7a6394d3c15e5e9381394d}{crt\-Sim\-Folder} os.\-path.\-join(Str\-To,\hyperlink{namespacereset_for_new_simulations_af9fbda1c8e6d13404f0224a5b3ef16fe}{folder\-Name})
+\item 
+tuple \hyperlink{namespacereset_for_new_simulations_a0fd24d58ef8ebf1029176f620ce7fe65}{file\-Dest} os.\-path.\-join(Str\-To,\hyperlink{namespacereset_for_new_simulations_adfad2b3e8459d644a442c254865c564b}{folder\-New},\char`\"{}\-\_\-acsinflux.\-csv\char`\"{})
+\item 
+tuple \hyperlink{namespacereset_for_new_simulations_a876ddf603699b40992ad784167b1121e}{species\-Files} sorted(glob.\-glob(\char`\"{}species\-\_\-1\-\_\-$\ast$\char`\"{}))
+\item 
+tuple \hyperlink{namespacereset_for_new_simulations_a7a0ded4bf7d86d876a380d82be3c66bd}{mod} open(\char`\"{}\-\_\-acsspecies.\-csv\char`\"{})
+\item 
+int \hyperlink{namespacereset_for_new_simulations_a9defa7f80f548a96cc89f83a6140727d}{id} 0
+\item 
+tuple \hyperlink{namespacereset_for_new_simulations_a8479d45d2399e5ddd429e2dc4961204a}{linesplitted} line.\-split(\char`\"{}\textbackslash{}t\char`\"{})
+\item 
+tuple \hyperlink{namespacereset_for_new_simulations_a3caa9a656a250a12f7112582bde03381}{file} open(\char`\"{}\-\_\-acsspecies.\-csv\char`\"{}, \char`\"{}w\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacereset_for_new_simulations_aba1c55fe18d1a0b31b346994a7a96628}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}}
+\index{zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{zero\-Before\-Str\-Num}]{\setlength{\rightskip}{0pt plus 5cm}def reset\-For\-New\-Simulations.\-zero\-Before\-Str\-Num (
+\begin{DoxyParamCaption}
+\item[{}]{tmpl, }
+\item[{}]{tmp\-L}
+\end{DoxyParamCaption}
+)}}\label{namespacereset_for_new_simulations_aba1c55fe18d1a0b31b346994a7a96628}
+
+
+Definition at line 5 of file reset\-For\-New\-Simulations.\-py.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacereset_for_new_simulations_ad71f20889e7a6394d3c15e5e9381394d}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!crt\-Sim\-Folder@{crt\-Sim\-Folder}}
+\index{crt\-Sim\-Folder@{crt\-Sim\-Folder}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{crt\-Sim\-Folder}]{\setlength{\rightskip}{0pt plus 5cm}tuple reset\-For\-New\-Simulations.\-crt\-Sim\-Folder os.\-path.\-join(Str\-To,{\bf folder\-Name})}}\label{namespacereset_for_new_simulations_ad71f20889e7a6394d3c15e5e9381394d}
+
+
+Definition at line 51 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_a3caa9a656a250a12f7112582bde03381}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!file@{file}}
+\index{file@{file}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}tuple reset\-For\-New\-Simulations.\-file open(\char`\"{}\-\_\-acsspecies.\-csv\char`\"{}, \char`\"{}w\char`\"{})}}\label{namespacereset_for_new_simulations_a3caa9a656a250a12f7112582bde03381}
+
+
+Definition at line 99 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_a0fd24d58ef8ebf1029176f620ce7fe65}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!file\-Dest@{file\-Dest}}
+\index{file\-Dest@{file\-Dest}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{file\-Dest}]{\setlength{\rightskip}{0pt plus 5cm}tuple reset\-For\-New\-Simulations.\-file\-Dest os.\-path.\-join(Str\-To,{\bf folder\-New},\char`\"{}\-\_\-acsinflux.\-csv\char`\"{})}}\label{namespacereset_for_new_simulations_a0fd24d58ef8ebf1029176f620ce7fe65}
+
+
+Definition at line 57 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_af9fbda1c8e6d13404f0224a5b3ef16fe}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!folder\-Name@{folder\-Name}}
+\index{folder\-Name@{folder\-Name}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{folder\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string reset\-For\-New\-Simulations.\-folder\-Name \char`\"{}s\-\_\-inv\-\_\-1e-\/2\-\_\-\char`\"{}}}\label{namespacereset_for_new_simulations_af9fbda1c8e6d13404f0224a5b3ef16fe}
+
+
+Definition at line 31 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_adfad2b3e8459d644a442c254865c564b}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!folder\-New@{folder\-New}}
+\index{folder\-New@{folder\-New}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{folder\-New}]{\setlength{\rightskip}{0pt plus 5cm}string reset\-For\-New\-Simulations.\-folder\-New \char`\"{}s\-\_\-inv\-\_\-1e-\/1\-\_\-\char`\"{}}}\label{namespacereset_for_new_simulations_adfad2b3e8459d644a442c254865c564b}
+
+
+Definition at line 32 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_a3869e711bac998c005313abd611c6158}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!folders\-R\-E\-P@{folders\-R\-E\-P}}
+\index{folders\-R\-E\-P@{folders\-R\-E\-P}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{folders\-R\-E\-P}]{\setlength{\rightskip}{0pt plus 5cm}int reset\-For\-New\-Simulations.\-folders\-R\-E\-P 10}}\label{namespacereset_for_new_simulations_a3869e711bac998c005313abd611c6158}
+
+
+Definition at line 22 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_a60b4005683b2bced2f3e0b22a66abd47}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!folders\-S\-I\-M\-S@{folders\-S\-I\-M\-S}}
+\index{folders\-S\-I\-M\-S@{folders\-S\-I\-M\-S}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{folders\-S\-I\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}int reset\-For\-New\-Simulations.\-folders\-S\-I\-M\-S 10}}\label{namespacereset_for_new_simulations_a60b4005683b2bced2f3e0b22a66abd47}
+
+
+Definition at line 21 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_a9defa7f80f548a96cc89f83a6140727d}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!id@{id}}
+\index{id@{id}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int reset\-For\-New\-Simulations.\-id 0}}\label{namespacereset_for_new_simulations_a9defa7f80f548a96cc89f83a6140727d}
+
+
+Definition at line 83 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_a8479d45d2399e5ddd429e2dc4961204a}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!linesplitted@{linesplitted}}
+\index{linesplitted@{linesplitted}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{linesplitted}]{\setlength{\rightskip}{0pt plus 5cm}tuple reset\-For\-New\-Simulations.\-linesplitted line.\-split(\char`\"{}\textbackslash{}t\char`\"{})}}\label{namespacereset_for_new_simulations_a8479d45d2399e5ddd429e2dc4961204a}
+
+
+Definition at line 85 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_a7a0ded4bf7d86d876a380d82be3c66bd}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!mod@{mod}}
+\index{mod@{mod}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{mod}]{\setlength{\rightskip}{0pt plus 5cm}tuple reset\-For\-New\-Simulations.\-mod open(\char`\"{}\-\_\-acsspecies.\-csv\char`\"{})}}\label{namespacereset_for_new_simulations_a7a0ded4bf7d86d876a380d82be3c66bd}
+
+
+Definition at line 82 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_addd72b08bf24570a2a851808a0b21949}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!resdir@{resdir}}
+\index{resdir@{resdir}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{resdir}]{\setlength{\rightskip}{0pt plus 5cm}tuple reset\-For\-New\-Simulations.\-resdir os.\-path.\-join(os.\-curdir, \char`\"{}res\char`\"{})}}\label{namespacereset_for_new_simulations_addd72b08bf24570a2a851808a0b21949}
+
+
+Definition at line 42 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_a876ddf603699b40992ad784167b1121e}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!species\-Files@{species\-Files}}
+\index{species\-Files@{species\-Files}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{species\-Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple reset\-For\-New\-Simulations.\-species\-Files sorted(glob.\-glob(\char`\"{}species\-\_\-1\-\_\-$\ast$\char`\"{}))}}\label{namespacereset_for_new_simulations_a876ddf603699b40992ad784167b1121e}
+
+
+Definition at line 66 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_a9f88ef39633f68b28f6b0e96d5ebb34c}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!zeros\-R\-E\-P\-S@{zeros\-R\-E\-P\-S}}
+\index{zeros\-R\-E\-P\-S@{zeros\-R\-E\-P\-S}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{zeros\-R\-E\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}tuple reset\-For\-New\-Simulations.\-zeros\-R\-E\-P\-S {\bf zero\-Before\-Str\-Num}({\bf j},{\bf folders\-R\-E\-P})}}\label{namespacereset_for_new_simulations_a9f88ef39633f68b28f6b0e96d5ebb34c}
+
+
+Definition at line 29 of file reset\-For\-New\-Simulations.\-py.
+
+\hypertarget{namespacereset_for_new_simulations_a067f416fc59f243e38a0b8a40627979b}{\index{reset\-For\-New\-Simulations@{reset\-For\-New\-Simulations}!zeros\-S\-I\-M\-S@{zeros\-S\-I\-M\-S}}
+\index{zeros\-S\-I\-M\-S@{zeros\-S\-I\-M\-S}!resetForNewSimulations@{reset\-For\-New\-Simulations}}
+\subsubsection[{zeros\-S\-I\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}tuple reset\-For\-New\-Simulations.\-zeros\-S\-I\-M\-S {\bf zero\-Before\-Str\-Num}({\bf i},{\bf folders\-S\-I\-M\-S})}}\label{namespacereset_for_new_simulations_a067f416fc59f243e38a0b8a40627979b}
+
+
+Definition at line 28 of file reset\-For\-New\-Simulations.\-py.
+

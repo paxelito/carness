@@ -1,0 +1,890 @@
+\hypertarget{start_8m}{\section{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-matlabinitializator/start.m File Reference}
+\label{start_8m}\index{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-matlabinitializator/start.\-m@{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-matlabinitializator/start.\-m}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Numero di \hyperlink{start_8m_a1b273eb41d82b5ca6c9f74a3c0aa2855}{simulazioni} (diversi semi random) \hyperlink{lancia__inizializzatore__acs_8m_aaded2f2d61413dc4bddf805e9be03ded}{n\-Seconds}
+\item 
+Numero massimo di \hyperlink{start_8m_a69962f56e60d0c88abc5d4b6839c2886}{reazioni} (secondo parametro di \hyperlink{_k_s_search_8m_a6bd08e37edf4151f5f6d1fc27a6f227a}{stop} oltre al numero di secondi) n\-Hours=0
+\item 
+Numero massimo di ore per la \hyperlink{start_8m_ad4ff287bf077be8ffb479fcc197bc548}{simulazione} (=0 no vincolo) n\-Attempts=0
+\item 
+Numero di volte in cui sistema \\*
+ritenta la stessa \hyperlink{start_8m_a40d2922f55b48d94c99038a8c2bef2ff}{rete} (=0 no vincolo) \hyperlink{lancia__inizializzatore__acs_8m_a4c7433c24b6426a15069cc5a93a5cbec}{initial\-Max\-Length}
+\item 
+Number of different networks \\*
+for every network will be \\*
+performed n\-Sim different \hyperlink{start_8m_a096e1441156fd2c744baece86d6b295c}{simulation} (differnt random seeds) \hyperlink{garbage_search_8m_abbf559a76fab59203496b0847ab9502a}{sim\-Folder.\-name}
+\item 
+\hyperlink{start_8m_abe327856a9ee2f30f3ccafe4dc9edf5e}{cd} (\hyperlink{start_8m_af28466084b87af2cdc5c7b48f4661f2d}{sim\-Folder.\-path}) \hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{overall_stats_8m_ab41b8dc78dee42a1a5e5a33d8bf6eeb3}{exist}(\hyperlink{garbage_search_8m_abbf559a76fab59203496b0847ab9502a}{sim\-Folder.\-name}
+\item 
+converto in decimale for per \\*
+default è uniforme \hyperlink{start_8m_aa053e90bd0493b6b9dfbb0e8febbee0e}{funzioni\-\_\-booleane\-\_\-in\-\_\-dec} (\hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i}, 2)
+\item 
+\hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z}$<$ 10 parte\-\_\-a=num2str(0);parte\-\_\-b=num2str(\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z});parte4\-\_\-nome\-\_\-cartella=strcat(parte\-\_\-a, \\*
+parte\-\_\-b);\hyperlink{_k_s_search_launcher_8m_af5946383720aa572eb93e1e63afc23c2}{else} \\*
+parte4\-\_\-nome\-\_\-cartella=num2str(\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z});\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \\*
+nome\-\_\-cartella=strcat(parte1\-\_\-nome\-\_\-cartella, \\*
+\hyperlink{start_8m_a8de4259e8461bac9182e4218c9be6710}{parte2\-\_\-nome\-\_\-cartella}, \\*
+\hyperlink{start_8m_a1795e2dc228962c5b67eaee336bba2ad}{parte3\-\_\-nome\-\_\-cartella}, \\*
+parte4\-\_\-nome\-\_\-cartella);\%scrivo \\*
+il lanciatore.\-sh \\*
+riga\-\_\-lanciatore=strcat('nice./acsm2s./', \\*
+nome\-\_\-cartella,'/./', \\*
+nome\-\_\-cartella,'/res/./', \\*
+nome\-\_\-cartella,'/ $>$ \hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str} (\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z})
+\item 
+clear riga\-\_\-lanciatore lancio \\*
+il vero e proprio \\*
+inizializzatore \hyperlink{start_8m_a8a726216ff46a409fe160de06ac1e317}{inizializzatore\-\_\-\-A\-C\-S} (\hyperlink{start_8m_a4af22ee598eb5fcc4d0ff8439823e600}{n\-G\-E\-N}, \hyperlink{start_8m_a2b9b3728c03157895f28160b24f4c572}{n\-S\-I\-M}, \hyperlink{lancia__inizializzatore__acs_8m_aaded2f2d61413dc4bddf805e9be03ded}{n\-Seconds}, \hyperlink{start_8m_a8d704532b4b419f1428cb078bb5c7ffe}{n\-Reactions}, \hyperlink{lancia__inizializzatore__acs_8m_a4c7433c24b6426a15069cc5a93a5cbec}{initial\-Max\-Length}, \hyperlink{start_8m_a20355c3a8f29f03f3b002dfb23f03a86}{virtual\-\_\-fd\-\_\-max\-\_\-length}, \hyperlink{start_8m_a59597688ed79473c0234f45eb9167574}{overall\-Concentration},...\hyperlink{start_8m_abcbc32fc68e4323620d6171a17310212}{alphabet}, \hyperlink{start_8m_ac5d9cfec5453da5efc3e8d574b455833}{complex\-Formation\-Symmetry}, \hyperlink{start_8m_ab6966d9ee620bc7376dc41a38352b948}{fino\-\_\-a\-\_\-che\-\_\-lunghezza\-\_\-i\-\_\-polimeri\-\_\-non\-\_\-catalizzano}, \hyperlink{start_8m_a9101beaeb03fddb5c6a9e68442177543}{reaction\-Probability}, \hyperlink{start_8m_a9d512df05ee559766d2b8f08e4704b04}{cleavage\-Probability},...\hyperlink{start_8m_a9341167cb56ed18499df723220990b9c}{diffusion\-\_\-contribute}, \hyperlink{start_8m_acbefa7c9bfd826fec9b32fa3bd29c288}{solubility\-\_\-threshold}, \hyperlink{start_8m_ad795c71664f3161dc8f7a769341daadf}{influx\-\_\-rate}, \hyperlink{start_8m_a650532b3a3c04865cc35cff6d567c5c0}{reverse\-Reactions}, \hyperlink{start_8m_ac8f2b2a8d859ca2b7cf056575c7b0538}{K\-\_\-nrg}, \hyperlink{start_8m_a5feeae2bacd93807ef83114349bb4080}{molecule\-Decay\-\_\-\-Kinetic\-Constant}, \hyperlink{lancia__inizializzatore__acs_8m_acd685f63a27f53fc049aff633634ddd6}{ratio\-\_\-firing\-\_\-disk},...\hyperlink{start_8m_a7c974cc56015b6503e0619d32ebd4180}{lunghezza\-\_\-max\-\_\-fd}, \hyperlink{start_8m_ac60b74a4c1b8bc23e64008ba1e0c41a8}{scelta\-\_\-concentrazioni}, \hyperlink{start_8m_a7cd0915d7542523abc226a8eecf67ecf}{gamma\-\_\-powerlaw\-\_\-concentrazioni}, \hyperlink{start_8m_a78948f867453293fcff0835b1bb05b8c}{decisione\-\_\-catalizzatori}, \hyperlink{start_8m_ac9358e0c7555a21532187de31cdbd469}{last\-Firing\-Disk\-Species\-I\-D}, E\-C\-Concentration,...\hyperlink{start_8m_a9bc498ccac8db41438f855f5dd3f4c05}{volume}, \hyperlink{start_8m_ac002779c383d2cc783e881f94449de66}{energy}, controllo\-\_\-\-A\-C\-S\-\_\-nel\-\_\-ciclo, \hyperlink{start_8m_abd02c282e86e2173abc6daed03f73584}{K\-\_\-nrg\-\_\-decay}, nome\-\_\-cartella, \hyperlink{start_8m_aa053e90bd0493b6b9dfbb0e8febbee0e}{funzioni\-\_\-booleane\-\_\-in\-\_\-dec}, \hyperlink{start_8m_a1fa680d8b3a4f885d99f56fef41d2c37}{ratio\-Species\-Energizable}, \hyperlink{start_8m_a484afe97369bc993daaa71613dd2a665}{Kass}, \hyperlink{start_8m_a51a314f9df0eaa4488a1b264d1de0173}{Kdiss}, \hyperlink{start_8m_aaea32371e0f1645dcea44ce4d4a3d147}{Kcpx}, \hyperlink{start_8m_a26dbdfeb290332837753db666ee56981}{K\-\_\-cpx},...\hyperlink{start_8m_a422f03a95f0b273407ed13891d8d9f4d}{random\-Seed}, \hyperlink{start_8m_a08ef28bc85447e904ca9ea64de89b676}{debug\-Level}, \hyperlink{start_8m_ae912a42ee691e9c69e17d5d791e0c71b}{time\-Structures\-Saving\-Interval}, \hyperlink{start_8m_abb126c97fed10420e64f85923bf5e04b}{max\-L\-Out}, \hyperlink{overall_stats_8m_aa671e3345005bd599e662bcaa115b18a}{sim\-Folder}, \hyperlink{start_8m_a5b50e4bf0f01cb1e2d8bdf9494493579}{l\-Max\-Influx}(\hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i}), \hyperlink{start_8m_a825ee95e200498001c9f82b9637c1ff5}{file\-Times\-Save\-Interval}, n\-Hours, n\-Attempts, \hyperlink{start_8m_aa7d97d27bd1a172a2f0ad49ef13ef8ac}{rev\-Rct\-Ratio})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+lancia\-\_\-serie\-\_\-di\-\_\-inizializzatore \\*
+m clear all close all \\*
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$Inserimento \\*
+dei P\-A\-R\-A\-M\-E\-T\-R\-I V\-A\-R\-I\-A\-B\-I\-L\-I sui \\*
+quali fare lo \hyperlink{start_8m_abc4a849052f02bdfa554624d1d058817}{S\-C\-R\-E\-E\-N\-I\-N\-G}
+\item 
+lancia\-\_\-serie\-\_\-di\-\_\-inizializzatore \\*
+m clear all close all \\*
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$Inserimento \\*
+dei P\-A\-R\-A\-M\-E\-T\-R\-I V\-A\-R\-I\-A\-B\-I\-L\-I sui \\*
+quali fare lo sottoforma di \\*
+matrici o vettori \hyperlink{start_8m_a9101beaeb03fddb5c6a9e68442177543}{reaction\-Probability} = \mbox{[}0.\-000516529
+\item 
+\hyperlink{start_8m_ab05ea37ca64abe64c55c1f166e3a818b}{nome\-\_\-prob} = \mbox{[}0.\-125
+\item 
+\hyperlink{start_8m_a5b50e4bf0f01cb1e2d8bdf9494493579}{l\-Max\-Influx} = \mbox{[}4\mbox{]}
+\item 
+\hyperlink{start_8m_adc8f9d08ccff64cc5892dfd1791e14bc}{parametro\-\_\-screening} = \hyperlink{start_8m_a5b50e4bf0f01cb1e2d8bdf9494493579}{l\-Max\-Influx}
+\item 
+\hyperlink{start_8m_a277bc625a7a558f74ccc1eb2963d70d0}{nome\-\_\-folder} = \mbox{[}4\mbox{]}
+\item 
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$Inserimento \\*
+dei P\-A\-R\-A\-M\-E\-T\-R\-I \hyperlink{start_8m_aea8a3181c0f6f0f47e51930921720484}{F\-I\-S\-S\-I}
+\item 
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$Inserimento \\*
+dei P\-A\-R\-A\-M\-E\-T\-R\-I quelli che \\*
+restano cioè costanti in tutti \\*
+gli esperimenti della serie \hyperlink{start_8m_a2b9b3728c03157895f28160b24f4c572}{n\-S\-I\-M} =1
+\item 
+Numero di secondi \hyperlink{start_8m_a422f03a95f0b273407ed13891d8d9f4d}{random\-Seed} =0
+\item 
+lasciare \hyperlink{somma_8m_a2ffdbad9ea59541e59cbd2b938e0770c}{a} \hyperlink{start_8m_a08ef28bc85447e904ca9ea64de89b676}{debug\-Level} =0
+\item 
+livello di dettaglio messaggi \\*
+durante \hyperlink{start_8m_a31ca4d05639b265fc794a2776aa8fad3}{simulazione}
+\item 
+livello di dettaglio messaggi \\*
+durante lasciare \hyperlink{start_8m_a683f8d65c21f968751716fc09c13473b}{a}
+\item 
+livello di dettaglio messaggi \\*
+durante lasciare per debug \\*
+software \hyperlink{start_8m_ae912a42ee691e9c69e17d5d791e0c71b}{time\-Structures\-Saving\-Interval} =\hyperlink{lancia__inizializzatore__acs_8m_aaded2f2d61413dc4bddf805e9be03ded}{n\-Seconds}/100
+\item 
+definisce il tempo in cui \\*
+vengono salvati \hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i} \hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file} durante \\*
+la \hyperlink{start_8m_ad4ff287bf077be8ffb479fcc197bc548}{simulazione} \hyperlink{start_8m_a825ee95e200498001c9f82b9637c1ff5}{file\-Times\-Save\-Interval} =0
+\item 
+Definisce il tempo in cui \\*
+vengono salvati \hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i} dati sui \\*
+\hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file} \hyperlink{start_8m_af3b4ff50e3fefed842dc431f3d32ff0e}{times}
+\item 
+Definisce il tempo in cui \\*
+vengono salvati \hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i} dati sui \\*
+\hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file} reaction\-\_\-parameter e \hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i} \\*
+vari living \hyperlink{start_8m_a8d704532b4b419f1428cb078bb5c7ffe}{n\-Reactions} =200000000
+\item 
+Lunghezza massima delle specie \\*
+da creare \hyperlink{start_8m_a20355c3a8f29f03f3b002dfb23f03a86}{virtual\-\_\-fd\-\_\-max\-\_\-length} = 4
+\item 
+Lunghezza massima fino alla \\*
+quale creare le \hyperlink{start_8m_a69962f56e60d0c88abc5d4b6839c2886}{reazioni} \hyperlink{start_8m_abb126c97fed10420e64f85923bf5e04b}{max\-L\-Out} = 0
+\item 
+\hyperlink{start_8m_a99032f27eaf45da350b544c68aa6467c}{se} =0 non viene considerato
+\item 
+altrimenti Quando \hyperlink{start_8m_ad795c71664f3161dc8f7a769341daadf}{influx\-\_\-rate} \\*
+indica la \hyperlink{crea__influx_8m_a984d293145d85a936f430c0990316e51}{lunghezza} massima \\*
+delle molecole che possono \\*
+uscire dal \hyperlink{start_8m_a8fcf98921930aa3720acdd081c5b0c2f}{contenitore}
+\item 
+altrimenti Quando influx\-\_\-rate \\*
+indica la \hyperlink{crea__influx_8m_a984d293145d85a936f430c0990316e51}{lunghezza} massima \\*
+delle molecole che possono \\*
+uscire dal quando \hyperlink{start_8m_ad795c71664f3161dc8f7a769341daadf}{influx\-\_\-rate}
+\item 
+\hyperlink{start_8m_abcbc32fc68e4323620d6171a17310212}{alphabet} = \mbox{[}'\hyperlink{lancia__acs_8m_abfef5bcdab19147dbfbb68112da17044}{A\-B}'\mbox{]}
+\item 
+\hyperlink{start_8m_a59597688ed79473c0234f45eb9167574}{overall\-Concentration} =0.\-0333
+\item 
+\hyperlink{start_8m_a9bc498ccac8db41438f855f5dd3f4c05}{volume} =1e-\/18
+\item 
+\hyperlink{start_8m_ac002779c383d2cc783e881f94449de66}{energy} =0
+\item 
+energia \hyperlink{start_8m_ad76697f83c5d8bf201c45822af227e21}{considerata}
+\item 
+energia non \hyperlink{start_8m_ad76697f83c5d8bf201c45822af227e21}{considerata} \hyperlink{start_8m_ac5d9cfec5453da5efc3e8d574b455833}{complex\-Formation\-Symmetry} =0
+\item 
+\hyperlink{start_8m_ab6966d9ee620bc7376dc41a38352b948}{fino\-\_\-a\-\_\-che\-\_\-lunghezza\-\_\-i\-\_\-polimeri\-\_\-non\-\_\-catalizzano} = 2
+\item 
+\hyperlink{start_8m_a9d512df05ee559766d2b8f08e4704b04}{cleavage\-Probability} =0.\-5
+\item 
+\hyperlink{start_8m_a650532b3a3c04865cc35cff6d567c5c0}{reverse\-Reactions} =0
+\item 
+\hyperlink{start_8m_a484afe97369bc993daaa71613dd2a665}{Kass} = 50
+\item 
+\hyperlink{start_8m_a51a314f9df0eaa4488a1b264d1de0173}{Kdiss} = 25
+\item 
+\hyperlink{start_8m_aaea32371e0f1645dcea44ce4d4a3d147}{Kcpx} = 50
+\item 
+\hyperlink{start_8m_a26dbdfeb290332837753db666ee56981}{K\-\_\-cpx} = 1
+\item 
+\hyperlink{start_8m_ac8f2b2a8d859ca2b7cf056575c7b0538}{K\-\_\-nrg} = 0
+\item 
+\hyperlink{start_8m_abd02c282e86e2173abc6daed03f73584}{K\-\_\-nrg\-\_\-decay} =0
+\item 
+coefficiente di decadimento \\*
+delle molecole o dei carrier \\*
+dalla propria componente \\*
+energetica \hyperlink{start_8m_aa7d97d27bd1a172a2f0ad49ef13ef8ac}{rev\-Rct\-Ratio} = 10
+\item 
+\hyperlink{start_8m_a1fa680d8b3a4f885d99f56fef41d2c37}{ratio\-Species\-Energizable} = 0
+\item 
+percentuale di specie presenti \\*
+nel sistema che possono essere \\*
+energizzate per ogni specie \\*
+create \hyperlink{somma_8m_a6be92348ba85ef257b11d06209e1d7b6}{c} è una certa \\*
+probabilità di essere \\*
+energizzabile o meno \hyperlink{start_8m_a5feeae2bacd93807ef83114349bb4080}{molecule\-Decay\-\_\-\-Kinetic\-Constant} =0.\-02
+\item 
+\hyperlink{start_8m_a9341167cb56ed18499df723220990b9c}{diffusion\-\_\-contribute} =0
+\item 
+\hyperlink{start_8m_acbefa7c9bfd826fec9b32fa3bd29c288}{solubility\-\_\-threshold} =0
+\item 
+\hyperlink{crea__influx_8m_a984d293145d85a936f430c0990316e51}{lunghezza} massima delle \\*
+molecole presenti nell \hyperlink{crea__influx__semplice_8m_a902e747aeec6b345d3a057099152f41f}{influx} \hyperlink{start_8m_a83c1660d71068ae836121af0890bb3dd}{ratio\-\_\-firing\-\_\-disk} =0
+\item 
+percentuale di specie da \\*
+cancellare rispetto \hyperlink{somma_8m_a2ffdbad9ea59541e59cbd2b938e0770c}{a} tutte \\*
+quelle che restano dopo aver \\*
+conservato \hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i} polimeri fino \hyperlink{somma_8m_a2ffdbad9ea59541e59cbd2b938e0770c}{a} \\*
+lunghezzamaxfd \hyperlink{start_8m_a7c974cc56015b6503e0619d32ebd4180}{lunghezza\-\_\-max\-\_\-fd} = 4
+\item 
+\hyperlink{crea__influx_8m_a984d293145d85a936f430c0990316e51}{lunghezza} dei monomeri \\*
+polimeri da conservare \hyperlink{start_8m_ac60b74a4c1b8bc23e64008ba1e0c41a8}{scelta\-\_\-concentrazioni} =1
+\item 
+parametro \hyperlink{start_8m_adc12f688ec66254762f4bdd2ce8c73df}{switch}
+\item 
+parametro uniforme sulle \hyperlink{start_8m_ad1bbbd24e4be6c7d8af30304c155c742}{lunghezze}
+\item 
+parametro uniforme sulle \\*
+powerlaw con esponente gamma \hyperlink{start_8m_a7cd0915d7542523abc226a8eecf67ecf}{gamma\-\_\-powerlaw\-\_\-concentrazioni} = 2.\-1
+\item 
+esponente della powerlaw in caso \hyperlink{start_8m_a78948f867453293fcff0835b1bb05b8c}{decisione\-\_\-catalizzatori} =1
+\item 
+parametri per la distribuzione dei \hyperlink{start_8m_a5a2da1d1b50e51c66813f40da0d9d0d1}{catalizzatori}
+\item 
+controllo che non ci siano \\*
+cicli nell \hyperlink{start_8m_a637d2af7e7b03600bcaf1931b999e3fc}{influx}
+\item 
+Number of different networks \hyperlink{start_8m_a450b0c257ca2430779e4244700c076e7}{ensambles}
+\item 
+Nome della cartella dove verrˆ \\*
+salvata la \hyperlink{start_8m_ad4ff287bf077be8ffb479fcc197bc548}{simulazione} \\*
+\hyperlink{overall_stats_8m_aa671e3345005bd599e662bcaa115b18a}{sim\-Folder} \hyperlink{start_8m_af28466084b87af2cdc5c7b48f4661f2d}{path} = '$\sim$/Documents/init/'
+\item 
+Percorso dove verrˆ creata la \\*
+cartella \hyperlink{overall_stats_8m_aa671e3345005bd599e662bcaa115b18a}{sim\-Folder} dove \\*
+verranno salvati tutti \hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i} \hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file} $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ \hyperlink{start_8m_a4af22ee598eb5fcc4d0ff8439823e600}{n\-G\-E\-N} =10
+\item 
+Numero di \hyperlink{start_8m_a5951b3462407a0e7e2e60534f76f5fec}{generazioni}
+\item 
+Numero di al momento significa \\*
+che alla fine di ogni \\*
+generazione da ogni \hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file} di \\*
+fine sim partono altre \hyperlink{start_8m_af882a6050e97fe1c6cc2bb391ea57479}{Nsim}
+\item 
+Numero di al momento significa \\*
+che alla fine di ogni \\*
+generazione da ogni \hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file} di \\*
+fine sim partono altre \\*
+lasciare ad \hyperlink{start_8m_aafb51343927e7262fbd66ce291fdbb87}{!last\-Firing\-Disk\-Species\-I\-D} = 0
+\item 
+calcolata in automatico for \hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i}
+\item 
+\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{start_8m_ac9358e0c7555a21532187de31cdbd469}{last\-Firing\-Disk\-Species\-I\-D} = last\-Firing\-Disk\-Species\-I\-D -\/1
+\item 
+\hyperlink{start_8m_a2d4125646b62462ce279d82913125ccf}{this\-Folder} = pwd
+\item 
+\hyperlink{start_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir}
+\item 
+\hyperlink{start_8m_abe327856a9ee2f30f3ccafe4dc9edf5e}{cd}(\hyperlink{start_8m_a2d4125646b62462ce279d82913125ccf}{this\-Folder})\%introduzione \\*
+delle F\-U\-N\-Z\-I\-O\-N\-I B\-O\-O\-L\-E\-A\-N\-E nell'energia \hyperlink{start_8m_a116958824076bbd8ba3a094b73919de4}{funzioni\-\_\-booleane\-\_\-in\-\_\-dec} = bi2de(funzioni\-\_\-booleane,'left-\/msb')
+\item 
+\hyperlink{start_8m_a8de4259e8461bac9182e4218c9be6710}{parte2\-\_\-nome\-\_\-cartella} = \hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str}(\hyperlink{start_8m_a277bc625a7a558f74ccc1eb2963d70d0}{nome\-\_\-folder}(\hyperlink{start_8m_ad3efca1ea6e3333daf30719ee0501862}{i}))
+\item 
+\hyperlink{start_8m_a1795e2dc228962c5b67eaee336bba2ad}{parte3\-\_\-nome\-\_\-cartella} = ('\-\_\-rete\-\_\-n\-\_\-')
+\item 
+\hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z}$<$ 10 parte\-\_\-a=\hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str}(0);parte\-\_\-b=\hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str}(\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z});parte4\-\_\-nome\-\_\-cartella=strcat(parte\-\_\-a, \\*
+parte\-\_\-b);\hyperlink{_k_s_search_launcher_8m_af5946383720aa572eb93e1e63afc23c2}{else} \\*
+parte4\-\_\-nome\-\_\-cartella=\hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str}(\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z});\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \\*
+nome\-\_\-cartella=strcat(parte1\-\_\-nome\-\_\-cartella, \\*
+\hyperlink{start_8m_a8de4259e8461bac9182e4218c9be6710}{parte2\-\_\-nome\-\_\-cartella}, \\*
+\hyperlink{start_8m_a1795e2dc228962c5b67eaee336bba2ad}{parte3\-\_\-nome\-\_\-cartella}, \\*
+parte4\-\_\-nome\-\_\-cartella);\%scrivo \\*
+il lanciatore.\-sh \\*
+riga\-\_\-lanciatore=strcat('nice./acsm2s./', \\*
+nome\-\_\-cartella,'/./', \\*
+nome\-\_\-cartella,'/res/./', \\*
+nome\-\_\-cartella,'/ $>$ \hyperlink{start_8m_a577b8d3679c2346bceb19c754b5bf403}{sims}
+\item 
+\hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z}$<$ 10 parte\-\_\-a=\hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str}(0);parte\-\_\-b=\hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str}(\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z});parte4\-\_\-nome\-\_\-cartella=strcat(parte\-\_\-a, \\*
+parte\-\_\-b);\hyperlink{_k_s_search_launcher_8m_af5946383720aa572eb93e1e63afc23c2}{else} \\*
+parte4\-\_\-nome\-\_\-cartella=\hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str}(\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z});\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \\*
+nome\-\_\-cartella=strcat(parte1\-\_\-nome\-\_\-cartella, \\*
+\hyperlink{start_8m_a8de4259e8461bac9182e4218c9be6710}{parte2\-\_\-nome\-\_\-cartella}, \\*
+\hyperlink{start_8m_a1795e2dc228962c5b67eaee336bba2ad}{parte3\-\_\-nome\-\_\-cartella}, \\*
+parte4\-\_\-nome\-\_\-cartella);\%scrivo \\*
+il lanciatore.\-sh \\*
+riga\-\_\-lanciatore=strcat('nice./acsm2s./', \\*
+nome\-\_\-cartella,'/./', \\*
+nome\-\_\-cartella,'/res/./', \\*
+nome\-\_\-cartella,'/ $>$ \hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}
+\item 
+\hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z}$<$ 10 parte\-\_\-a=\hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str}(0);parte\-\_\-b=\hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str}(\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z});parte4\-\_\-nome\-\_\-cartella=strcat(parte\-\_\-a, \\*
+parte\-\_\-b);\hyperlink{_k_s_search_launcher_8m_af5946383720aa572eb93e1e63afc23c2}{else} \\*
+parte4\-\_\-nome\-\_\-cartella=\hyperlink{start_8m_a98a8912cc0fff468250472cd41281c51}{num2str}(\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z});\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \\*
+nome\-\_\-cartella=strcat(parte1\-\_\-nome\-\_\-cartella, \\*
+\hyperlink{start_8m_a8de4259e8461bac9182e4218c9be6710}{parte2\-\_\-nome\-\_\-cartella}, \\*
+\hyperlink{start_8m_a1795e2dc228962c5b67eaee336bba2ad}{parte3\-\_\-nome\-\_\-cartella}, \\*
+parte4\-\_\-nome\-\_\-cartella);\%scrivo \\*
+il lanciatore.\-sh \\*
+riga\-\_\-lanciatore=strcat('nice./acsm2s./', \\*
+nome\-\_\-cartella,'/./', \\*
+nome\-\_\-cartella,'/res/./', \\*
+nome\-\_\-cartella,'/ $>$ \hyperlink{start_8m_a1c107e2d086ce1113fd96ff7dfbdf006}{log}
+\item 
+\hyperlink{start_8m_ac9a4176e3fc6f6d186c4f5c573b8a617}{riga\-\_\-lanciatore\-\_\-2} = strcat('echo \char`\"{}Reverse/',nome\-\_\-cartella,'\char`\"{} ;',riga\-\_\-lanciatore)
+\item 
+\hyperlink{start_8m_ae11b3deb3de3df7dc48e439074023e35}{count} = \hyperlink{inizializzatore___a_c_s_8m_aa6dc40efe43a338c9ff278260d95b4d9}{fprintf}(fid20,'\%s\textbackslash{}n ',\hyperlink{start_8m_ac9a4176e3fc6f6d186c4f5c573b8a617}{riga\-\_\-lanciatore\-\_\-2})
+\item 
+\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{start_8m_a8ab6edae433ed8b2d6590ee155fa4bb7}{st} = \hyperlink{read_parameters_8m_a66a54a4db5a27a03991b5f3034bbc6a4}{fclose}(fid20)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{start_8m_abe327856a9ee2f30f3ccafe4dc9edf5e}{\index{start.\-m@{start.\-m}!cd@{cd}}
+\index{cd@{cd}!start.m@{start.\-m}}
+\subsubsection[{cd}]{\setlength{\rightskip}{0pt plus 5cm}cd (
+\begin{DoxyParamCaption}
+\item[{sim\-Folder.}]{path}
+\end{DoxyParamCaption}
+)}}\label{start_8m_abe327856a9ee2f30f3ccafe4dc9edf5e}
+\hypertarget{start_8m_aa053e90bd0493b6b9dfbb0e8febbee0e}{\index{start.\-m@{start.\-m}!funzioni\-\_\-booleane\-\_\-in\-\_\-dec@{funzioni\-\_\-booleane\-\_\-in\-\_\-dec}}
+\index{funzioni\-\_\-booleane\-\_\-in\-\_\-dec@{funzioni\-\_\-booleane\-\_\-in\-\_\-dec}!start.m@{start.\-m}}
+\subsubsection[{funzioni\-\_\-booleane\-\_\-in\-\_\-dec}]{\setlength{\rightskip}{0pt plus 5cm}converto in decimale for per default è uniforme funzioni\-\_\-booleane\-\_\-in\-\_\-dec (
+\begin{DoxyParamCaption}
+\item[{{\bf i}}]{, }
+\item[{2}]{}
+\end{DoxyParamCaption}
+)}}\label{start_8m_aa053e90bd0493b6b9dfbb0e8febbee0e}
+\hypertarget{start_8m_a8a726216ff46a409fe160de06ac1e317}{\index{start.\-m@{start.\-m}!inizializzatore\-\_\-\-A\-C\-S@{inizializzatore\-\_\-\-A\-C\-S}}
+\index{inizializzatore\-\_\-\-A\-C\-S@{inizializzatore\-\_\-\-A\-C\-S}!start.m@{start.\-m}}
+\subsubsection[{inizializzatore\-\_\-\-A\-C\-S}]{\setlength{\rightskip}{0pt plus 5cm}clear riga\-\_\-lanciatore lancio il vero e proprio inizializzatore inizializzatore\-\_\-\-A\-C\-S (
+\begin{DoxyParamCaption}
+\item[{{\bf n\-G\-E\-N}}]{, }
+\item[{{\bf n\-S\-I\-M}}]{, }
+\item[{{\bf n\-Seconds}}]{, }
+\item[{{\bf n\-Reactions}}]{, }
+\item[{{\bf initial\-Max\-Length}}]{, }
+\item[{{\bf virtual\-\_\-fd\-\_\-max\-\_\-length}}]{, }
+\item[{{\bf overall\-Concentration}}]{, }
+\item[{}]{alphabet, }
+\item[{{\bf complex\-Formation\-Symmetry}}]{, }
+\item[{{\bf fino\-\_\-a\-\_\-che\-\_\-lunghezza\-\_\-i\-\_\-polimeri\-\_\-non\-\_\-catalizzano}}]{, }
+\item[{{\bf reaction\-Probability}}]{, }
+\item[{{\bf cleavage\-Probability}}]{, }
+\item[{}]{diffusion\-\_\-contribute, }
+\item[{{\bf solubility\-\_\-threshold}}]{, }
+\item[{{\bf influx\-\_\-rate}}]{, }
+\item[{{\bf reverse\-Reactions}}]{, }
+\item[{{\bf K\-\_\-nrg}}]{, }
+\item[{{\bf molecule\-Decay\-\_\-\-Kinetic\-Constant}}]{, }
+\item[{{\bf ratio\-\_\-firing\-\_\-disk}}]{, }
+\item[{}]{lunghezza\-\_\-max\-\_\-fd, }
+\item[{{\bf scelta\-\_\-concentrazioni}}]{, }
+\item[{{\bf gamma\-\_\-powerlaw\-\_\-concentrazioni}}]{, }
+\item[{{\bf decisione\-\_\-catalizzatori}}]{, }
+\item[{{\bf last\-Firing\-Disk\-Species\-I\-D}}]{, }
+\item[{E\-C\-Concentration}]{, }
+\item[{}]{volume, }
+\item[{{\bf energy}}]{, }
+\item[{controllo\-\_\-\-A\-C\-S\-\_\-nel\-\_\-ciclo}]{, }
+\item[{{\bf K\-\_\-nrg\-\_\-decay}}]{, }
+\item[{nome\-\_\-cartella}]{, }
+\item[{{\bf funzioni\-\_\-booleane\-\_\-in\-\_\-dec}}]{, }
+\item[{{\bf ratio\-Species\-Energizable}}]{, }
+\item[{{\bf Kass}}]{, }
+\item[{{\bf Kdiss}}]{, }
+\item[{{\bf Kcpx}}]{, }
+\item[{{\bf K\-\_\-cpx}}]{, }
+\item[{}]{random\-Seed, }
+\item[{{\bf debug\-Level}}]{, }
+\item[{{\bf time\-Structures\-Saving\-Interval}}]{, }
+\item[{{\bf max\-L\-Out}}]{, }
+\item[{{\bf sim\-Folder}}]{, }
+\item[{{\bf l\-Max\-Influx}({\bf i})}]{, }
+\item[{{\bf file\-Times\-Save\-Interval}}]{, }
+\item[{n\-Hours}]{, }
+\item[{n\-Attempts}]{, }
+\item[{{\bf rev\-Rct\-Ratio}}]{}
+\end{DoxyParamCaption}
+)}}\label{start_8m_a8a726216ff46a409fe160de06ac1e317}
+\hypertarget{start_8m_a98a8912cc0fff468250472cd41281c51}{\index{start.\-m@{start.\-m}!num2str@{num2str}}
+\index{num2str@{num2str}!start.m@{start.\-m}}
+\subsubsection[{num2str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} {\bf z}$<$10 parte\-\_\-a=num2str(0); parte\-\_\-b=num2str({\bf z}); parte4\-\_\-nome\-\_\-cartella = strcat(parte\-\_\-a,parte\-\_\-b); {\bf else} parte4\-\_\-nome\-\_\-cartella = num2str({\bf z}); {\bf end} nome\-\_\-cartella= strcat(parte1\-\_\-nome\-\_\-cartella,{\bf parte2\-\_\-nome\-\_\-cartella},{\bf parte3\-\_\-nome\-\_\-cartella},parte4\-\_\-nome\-\_\-cartella); \%scrivo il lanciatore.\-sh riga\-\_\-lanciatore = strcat(' nice ./acsm2s ./',nome\-\_\-cartella,'/ ./',nome\-\_\-cartella,'/res/ ./', nome\-\_\-cartella,'/ $>$ num2str (
+\begin{DoxyParamCaption}
+\item[{{\bf z}}]{}
+\end{DoxyParamCaption}
+)}}\label{start_8m_a98a8912cc0fff468250472cd41281c51}
+\hypertarget{start_8m_a69962f56e60d0c88abc5d4b6839c2886}{\index{start.\-m@{start.\-m}!reazioni@{reazioni}}
+\index{reazioni@{reazioni}!start.m@{start.\-m}}
+\subsubsection[{reazioni}]{\setlength{\rightskip}{0pt plus 5cm}Numero massimo di reazioni (
+\begin{DoxyParamCaption}
+\item[{secondo parametro di {\bf stop} oltre al numero di}]{secondi}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{start_8m_a69962f56e60d0c88abc5d4b6839c2886}
+\hypertarget{start_8m_a40d2922f55b48d94c99038a8c2bef2ff}{\index{start.\-m@{start.\-m}!rete@{rete}}
+\index{rete@{rete}!start.m@{start.\-m}}
+\subsubsection[{rete}]{\setlength{\rightskip}{0pt plus 5cm}Numero di volte in cui sistema ritenta la stessa rete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{start_8m_a40d2922f55b48d94c99038a8c2bef2ff}
+\hypertarget{start_8m_a096e1441156fd2c744baece86d6b295c}{\index{start.\-m@{start.\-m}!simulation@{simulation}}
+\index{simulation@{simulation}!start.m@{start.\-m}}
+\subsubsection[{simulation}]{\setlength{\rightskip}{0pt plus 5cm}Number of different networks for every network will be performed n\-Sim different simulation (
+\begin{DoxyParamCaption}
+\item[{differnt random}]{seeds}
+\end{DoxyParamCaption}
+)}}\label{start_8m_a096e1441156fd2c744baece86d6b295c}
+\hypertarget{start_8m_ad4ff287bf077be8ffb479fcc197bc548}{\index{start.\-m@{start.\-m}!simulazione@{simulazione}}
+\index{simulazione@{simulazione}!start.m@{start.\-m}}
+\subsubsection[{simulazione}]{\setlength{\rightskip}{0pt plus 5cm}Numero massimo di ore per la simulazione (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{start_8m_ad4ff287bf077be8ffb479fcc197bc548}
+\hypertarget{start_8m_a1b273eb41d82b5ca6c9f74a3c0aa2855}{\index{start.\-m@{start.\-m}!simulazioni@{simulazioni}}
+\index{simulazioni@{simulazioni}!start.m@{start.\-m}}
+\subsubsection[{simulazioni}]{\setlength{\rightskip}{0pt plus 5cm}Numero di simulazioni (
+\begin{DoxyParamCaption}
+\item[{diversi semi}]{random}
+\end{DoxyParamCaption}
+)}}\label{start_8m_a1b273eb41d82b5ca6c9f74a3c0aa2855}
+
+
+\subsection{Variable Documentation}
+\hypertarget{start_8m_aafb51343927e7262fbd66ce291fdbb87}{\index{start.\-m@{start.\-m}!!last\-Firing\-Disk\-Species\-I\-D@{!last\-Firing\-Disk\-Species\-I\-D}}
+\index{!last\-Firing\-Disk\-Species\-I\-D@{!last\-Firing\-Disk\-Species\-I\-D}!start.m@{start.\-m}}
+\subsubsection[{!last\-Firing\-Disk\-Species\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}Numero di al momento significa che alla fine di ogni generazione da ogni {\bf file} di fine sim partono altre lasciare ad !{\bf last\-Firing\-Disk\-Species\-I\-D} = 0}}\label{start_8m_aafb51343927e7262fbd66ce291fdbb87}
+
+
+Definition at line 76 of file start.\-m.
+
+\hypertarget{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\index{start.\-m@{start.\-m}!\-\_\-@{\-\_\-}}
+\index{\-\_\-@{\-\_\-}!start.m@{start.\-m}}
+\subsubsection[{\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} {\bf z}$<$ 10 parte\-\_\-a={\bf num2str}(0) parte\-\_\-b={\bf num2str}({\bf z}) parte4\-\_\-nome\-\_\-cartella=strcat(parte\-\_\-a, parte\-\_\-b) {\bf else} parte4\-\_\-nome\-\_\-cartella={\bf num2str}({\bf z}) {\bf end} nome\-\_\-cartella=strcat(parte1\-\_\-nome\-\_\-cartella, {\bf parte2\-\_\-nome\-\_\-cartella}, {\bf parte3\-\_\-nome\-\_\-cartella}, parte4\-\_\-nome\-\_\-cartella)\%scrivo il lanciatore.\-sh riga\-\_\-lanciatore=strcat('nice./acsm2s./', nome\-\_\-cartella,'/./', nome\-\_\-cartella,'/res/./', nome\-\_\-cartella,'/ $>$ \-\_\-}}\label{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}
+
+
+Definition at line 151 of file start.\-m.
+
+\hypertarget{start_8m_a683f8d65c21f968751716fc09c13473b}{\index{start.\-m@{start.\-m}!a@{a}}
+\index{a@{a}!start.m@{start.\-m}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}livello di dettaglio messaggi durante lasciare a}}\label{start_8m_a683f8d65c21f968751716fc09c13473b}
+
+
+Definition at line 26 of file start.\-m.
+
+\hypertarget{start_8m_abcbc32fc68e4323620d6171a17310212}{\index{start.\-m@{start.\-m}!alphabet@{alphabet}}
+\index{alphabet@{alphabet}!start.m@{start.\-m}}
+\subsubsection[{alphabet}]{\setlength{\rightskip}{0pt plus 5cm}alphabet = \mbox{[}'{\bf A\-B}'\mbox{]}}}\label{start_8m_abcbc32fc68e4323620d6171a17310212}
+
+
+Definition at line 36 of file start.\-m.
+
+\hypertarget{start_8m_a5a2da1d1b50e51c66813f40da0d9d0d1}{\index{start.\-m@{start.\-m}!catalizzatori@{catalizzatori}}
+\index{catalizzatori@{catalizzatori}!start.m@{start.\-m}}
+\subsubsection[{catalizzatori}]{\setlength{\rightskip}{0pt plus 5cm}parametri per la distribuzione dei catalizzatori}}\label{start_8m_a5a2da1d1b50e51c66813f40da0d9d0d1}
+
+
+Definition at line 63 of file start.\-m.
+
+\hypertarget{start_8m_a9d512df05ee559766d2b8f08e4704b04}{\index{start.\-m@{start.\-m}!cleavage\-Probability@{cleavage\-Probability}}
+\index{cleavage\-Probability@{cleavage\-Probability}!start.m@{start.\-m}}
+\subsubsection[{cleavage\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}cleavage\-Probability =0.\-5}}\label{start_8m_a9d512df05ee559766d2b8f08e4704b04}
+
+
+Definition at line 42 of file start.\-m.
+
+\hypertarget{start_8m_ac5d9cfec5453da5efc3e8d574b455833}{\index{start.\-m@{start.\-m}!complex\-Formation\-Symmetry@{complex\-Formation\-Symmetry}}
+\index{complex\-Formation\-Symmetry@{complex\-Formation\-Symmetry}!start.m@{start.\-m}}
+\subsubsection[{complex\-Formation\-Symmetry}]{\setlength{\rightskip}{0pt plus 5cm}energia non {\bf considerata} complex\-Formation\-Symmetry =0}}\label{start_8m_ac5d9cfec5453da5efc3e8d574b455833}
+
+
+Definition at line 40 of file start.\-m.
+
+\hypertarget{start_8m_ad76697f83c5d8bf201c45822af227e21}{\index{start.\-m@{start.\-m}!considerata@{considerata}}
+\index{considerata@{considerata}!start.m@{start.\-m}}
+\subsubsection[{considerata}]{\setlength{\rightskip}{0pt plus 5cm}energia considerata}}\label{start_8m_ad76697f83c5d8bf201c45822af227e21}
+
+
+Definition at line 39 of file start.\-m.
+
+\hypertarget{start_8m_a8fcf98921930aa3720acdd081c5b0c2f}{\index{start.\-m@{start.\-m}!contenitore@{contenitore}}
+\index{contenitore@{contenitore}!start.m@{start.\-m}}
+\subsubsection[{contenitore}]{\setlength{\rightskip}{0pt plus 5cm}altrimenti Quando {\bf influx\-\_\-rate} indica la {\bf lunghezza} massima delle molecole che possono uscire dal contenitore}}\label{start_8m_a8fcf98921930aa3720acdd081c5b0c2f}
+
+
+Definition at line 34 of file start.\-m.
+
+\hypertarget{start_8m_ae11b3deb3de3df7dc48e439074023e35}{\index{start.\-m@{start.\-m}!count@{count}}
+\index{count@{count}!start.m@{start.\-m}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}count = {\bf fprintf}(fid20,'\%s\textbackslash{}n ',{\bf riga\-\_\-lanciatore\-\_\-2})}}\label{start_8m_ae11b3deb3de3df7dc48e439074023e35}
+
+
+Definition at line 153 of file start.\-m.
+
+\hypertarget{start_8m_a08ef28bc85447e904ca9ea64de89b676}{\index{start.\-m@{start.\-m}!debug\-Level@{debug\-Level}}
+\index{debug\-Level@{debug\-Level}!start.m@{start.\-m}}
+\subsubsection[{debug\-Level}]{\setlength{\rightskip}{0pt plus 5cm}lasciare {\bf a} debug\-Level =0}}\label{start_8m_a08ef28bc85447e904ca9ea64de89b676}
+
+
+Definition at line 26 of file start.\-m.
+
+\hypertarget{start_8m_a78948f867453293fcff0835b1bb05b8c}{\index{start.\-m@{start.\-m}!decisione\-\_\-catalizzatori@{decisione\-\_\-catalizzatori}}
+\index{decisione\-\_\-catalizzatori@{decisione\-\_\-catalizzatori}!start.m@{start.\-m}}
+\subsubsection[{decisione\-\_\-catalizzatori}]{\setlength{\rightskip}{0pt plus 5cm}esponente della powerlaw in caso decisione\-\_\-catalizzatori =1}}\label{start_8m_a78948f867453293fcff0835b1bb05b8c}
+
+
+Definition at line 62 of file start.\-m.
+
+\hypertarget{start_8m_a9341167cb56ed18499df723220990b9c}{\index{start.\-m@{start.\-m}!diffusion\-\_\-contribute@{diffusion\-\_\-contribute}}
+\index{diffusion\-\_\-contribute@{diffusion\-\_\-contribute}!start.m@{start.\-m}}
+\subsubsection[{diffusion\-\_\-contribute}]{\setlength{\rightskip}{0pt plus 5cm}diffusion\-\_\-contribute =0}}\label{start_8m_a9341167cb56ed18499df723220990b9c}
+
+
+Definition at line 54 of file start.\-m.
+
+\hypertarget{start_8m_a4ca269cf93df1b512b52174c1a256fe5}{\index{start.\-m@{start.\-m}!dir@{dir}}
+\index{dir@{dir}!start.m@{start.\-m}}
+\subsubsection[{dir}]{\setlength{\rightskip}{0pt plus 5cm}dir}}\label{start_8m_a4ca269cf93df1b512b52174c1a256fe5}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+== 0
+    \hyperlink{inizializzatore___a_c_s_8m_ae58a11ed5ac7873b1039a391d5c86a05}{mkdir}(\hyperlink{general_concentration_over_threshold_8m_a0ffb8131632b48d9111c3a27d91262e2}{simFolder}.name)
+\end{DoxyCode}
+
+
+Definition at line 85 of file start.\-m.
+
+\hypertarget{start_8m_ac002779c383d2cc783e881f94449de66}{\index{start.\-m@{start.\-m}!energy@{energy}}
+\index{energy@{energy}!start.m@{start.\-m}}
+\subsubsection[{energy}]{\setlength{\rightskip}{0pt plus 5cm}energy =0}}\label{start_8m_ac002779c383d2cc783e881f94449de66}
+
+
+Definition at line 39 of file start.\-m.
+
+\hypertarget{start_8m_a450b0c257ca2430779e4244700c076e7}{\index{start.\-m@{start.\-m}!ensambles@{ensambles}}
+\index{ensambles@{ensambles}!start.m@{start.\-m}}
+\subsubsection[{ensambles}]{\setlength{\rightskip}{0pt plus 5cm}Number of different networks ensambles}}\label{start_8m_a450b0c257ca2430779e4244700c076e7}
+
+
+Definition at line 69 of file start.\-m.
+
+\hypertarget{start_8m_a825ee95e200498001c9f82b9637c1ff5}{\index{start.\-m@{start.\-m}!file\-Times\-Save\-Interval@{file\-Times\-Save\-Interval}}
+\index{file\-Times\-Save\-Interval@{file\-Times\-Save\-Interval}!start.m@{start.\-m}}
+\subsubsection[{file\-Times\-Save\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}definisce il tempo in cui vengono salvati {\bf i} {\bf file} durante la {\bf simulazione} file\-Times\-Save\-Interval =0}}\label{start_8m_a825ee95e200498001c9f82b9637c1ff5}
+
+
+Definition at line 28 of file start.\-m.
+
+\hypertarget{start_8m_ab6966d9ee620bc7376dc41a38352b948}{\index{start.\-m@{start.\-m}!fino\-\_\-a\-\_\-che\-\_\-lunghezza\-\_\-i\-\_\-polimeri\-\_\-non\-\_\-catalizzano@{fino\-\_\-a\-\_\-che\-\_\-lunghezza\-\_\-i\-\_\-polimeri\-\_\-non\-\_\-catalizzano}}
+\index{fino\-\_\-a\-\_\-che\-\_\-lunghezza\-\_\-i\-\_\-polimeri\-\_\-non\-\_\-catalizzano@{fino\-\_\-a\-\_\-che\-\_\-lunghezza\-\_\-i\-\_\-polimeri\-\_\-non\-\_\-catalizzano}!start.m@{start.\-m}}
+\subsubsection[{fino\-\_\-a\-\_\-che\-\_\-lunghezza\-\_\-i\-\_\-polimeri\-\_\-non\-\_\-catalizzano}]{\setlength{\rightskip}{0pt plus 5cm}fino\-\_\-a\-\_\-che\-\_\-lunghezza\-\_\-i\-\_\-polimeri\-\_\-non\-\_\-catalizzano = 2}}\label{start_8m_ab6966d9ee620bc7376dc41a38352b948}
+
+
+Definition at line 41 of file start.\-m.
+
+\hypertarget{start_8m_aea8a3181c0f6f0f47e51930921720484}{\index{start.\-m@{start.\-m}!F\-I\-S\-S\-I@{F\-I\-S\-S\-I}}
+\index{F\-I\-S\-S\-I@{F\-I\-S\-S\-I}!start.m@{start.\-m}}
+\subsubsection[{F\-I\-S\-S\-I}]{\setlength{\rightskip}{0pt plus 5cm}$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Inserimento dei P\-A\-R\-A\-M\-E\-T\-R\-I F\-I\-S\-S\-I}}\label{start_8m_aea8a3181c0f6f0f47e51930921720484}
+
+
+Definition at line 20 of file start.\-m.
+
+\hypertarget{start_8m_a116958824076bbd8ba3a094b73919de4}{\index{start.\-m@{start.\-m}!funzioni\-\_\-booleane\-\_\-in\-\_\-dec@{funzioni\-\_\-booleane\-\_\-in\-\_\-dec}}
+\index{funzioni\-\_\-booleane\-\_\-in\-\_\-dec@{funzioni\-\_\-booleane\-\_\-in\-\_\-dec}!start.m@{start.\-m}}
+\subsubsection[{funzioni\-\_\-booleane\-\_\-in\-\_\-dec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cd} ({\bf this\-Folder}) \%introduzione delle F\-U\-N\-Z\-I\-O\-N\-I B\-O\-O\-L\-E\-A\-N\-E nell'energia funzioni\-\_\-booleane\-\_\-in\-\_\-dec = bi2de(funzioni\-\_\-booleane,'left-\/msb')}}\label{start_8m_a116958824076bbd8ba3a094b73919de4}
+
+
+Definition at line 116 of file start.\-m.
+
+\hypertarget{start_8m_a7cd0915d7542523abc226a8eecf67ecf}{\index{start.\-m@{start.\-m}!gamma\-\_\-powerlaw\-\_\-concentrazioni@{gamma\-\_\-powerlaw\-\_\-concentrazioni}}
+\index{gamma\-\_\-powerlaw\-\_\-concentrazioni@{gamma\-\_\-powerlaw\-\_\-concentrazioni}!start.m@{start.\-m}}
+\subsubsection[{gamma\-\_\-powerlaw\-\_\-concentrazioni}]{\setlength{\rightskip}{0pt plus 5cm}parametro uniforme sulle powerlaw con esponente gamma gamma\-\_\-powerlaw\-\_\-concentrazioni = 2.\-1}}\label{start_8m_a7cd0915d7542523abc226a8eecf67ecf}
+
+
+Definition at line 61 of file start.\-m.
+
+\hypertarget{start_8m_a5951b3462407a0e7e2e60534f76f5fec}{\index{start.\-m@{start.\-m}!generazioni@{generazioni}}
+\index{generazioni@{generazioni}!start.m@{start.\-m}}
+\subsubsection[{generazioni}]{\setlength{\rightskip}{0pt plus 5cm}Numero di generazioni}}\label{start_8m_a5951b3462407a0e7e2e60534f76f5fec}
+
+
+Definition at line 75 of file start.\-m.
+
+\hypertarget{start_8m_ad3efca1ea6e3333daf30719ee0501862}{\index{start.\-m@{start.\-m}!i@{i}}
+\index{i@{i}!start.m@{start.\-m}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end}$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ $\ast$$\ast$$\ast$$\ast$$\ast$ S T {\bf A} R T$\ast$$\ast$$\ast$$\ast$$\ast$ $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ for i}}\label{start_8m_ad3efca1ea6e3333daf30719ee0501862}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 1:\hyperlink{start_8m_a20355c3a8f29f03f3b002dfb23f03a86}{virtual\_fd\_max\_length}
+    \hyperlink{lancia__inizializzatore__acs_8m_ac9358e0c7555a21532187de31cdbd469}{lastFiringDiskSpeciesID} = \hyperlink{lancia__inizializzatore__acs_8m_ac9358e0c7555a21532187de31cdbd469}{lastFiringDiskSpeciesID}
+       + length(\hyperlink{lancia__inizializzatore__acs_8m_abcbc32fc68e4323620d6171a17310212}{alphabet})^\hyperlink{garbage_search_8m_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}
+\end{DoxyCode}
+
+
+Definition at line 77 of file start.\-m.
+
+\hypertarget{start_8m_a637d2af7e7b03600bcaf1931b999e3fc}{\index{start.\-m@{start.\-m}!influx@{influx}}
+\index{influx@{influx}!start.m@{start.\-m}}
+\subsubsection[{influx}]{\setlength{\rightskip}{0pt plus 5cm}controllo che non ci siano cicli nell influx}}\label{start_8m_a637d2af7e7b03600bcaf1931b999e3fc}
+
+
+Definition at line 69 of file start.\-m.
+
+\hypertarget{start_8m_ad795c71664f3161dc8f7a769341daadf}{\index{start.\-m@{start.\-m}!influx\-\_\-rate@{influx\-\_\-rate}}
+\index{influx\-\_\-rate@{influx\-\_\-rate}!start.m@{start.\-m}}
+\subsubsection[{influx\-\_\-rate}]{\setlength{\rightskip}{0pt plus 5cm}influx\-\_\-rate}}\label{start_8m_ad795c71664f3161dc8f7a769341daadf}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 0 indica fino \hyperlink{conc_analysis_8m_a230414213a9710ed03b6cf8d2695ee94}{a} quale \hyperlink{crea__influx_8m_a984d293145d85a936f430c0990316e51}{lunghezza} le molecole non variano in quantita\textcolor{stringliteral}{
+      ' (simulazione membrana permeabile)}
+\textcolor{stringliteral}{ECConcentration=0}
+\end{DoxyCode}
+
+
+Definition at line 34 of file start.\-m.
+
+\hypertarget{start_8m_a26dbdfeb290332837753db666ee56981}{\index{start.\-m@{start.\-m}!K\-\_\-cpx@{K\-\_\-cpx}}
+\index{K\-\_\-cpx@{K\-\_\-cpx}!start.m@{start.\-m}}
+\subsubsection[{K\-\_\-cpx}]{\setlength{\rightskip}{0pt plus 5cm}K\-\_\-cpx = 1}}\label{start_8m_a26dbdfeb290332837753db666ee56981}
+
+
+Definition at line 48 of file start.\-m.
+
+\hypertarget{start_8m_ac8f2b2a8d859ca2b7cf056575c7b0538}{\index{start.\-m@{start.\-m}!K\-\_\-nrg@{K\-\_\-nrg}}
+\index{K\-\_\-nrg@{K\-\_\-nrg}!start.m@{start.\-m}}
+\subsubsection[{K\-\_\-nrg}]{\setlength{\rightskip}{0pt plus 5cm}K\-\_\-nrg = 0}}\label{start_8m_ac8f2b2a8d859ca2b7cf056575c7b0538}
+
+
+Definition at line 49 of file start.\-m.
+
+\hypertarget{start_8m_abd02c282e86e2173abc6daed03f73584}{\index{start.\-m@{start.\-m}!K\-\_\-nrg\-\_\-decay@{K\-\_\-nrg\-\_\-decay}}
+\index{K\-\_\-nrg\-\_\-decay@{K\-\_\-nrg\-\_\-decay}!start.m@{start.\-m}}
+\subsubsection[{K\-\_\-nrg\-\_\-decay}]{\setlength{\rightskip}{0pt plus 5cm}K\-\_\-nrg\-\_\-decay =0}}\label{start_8m_abd02c282e86e2173abc6daed03f73584}
+
+
+Definition at line 50 of file start.\-m.
+
+\hypertarget{start_8m_a484afe97369bc993daaa71613dd2a665}{\index{start.\-m@{start.\-m}!Kass@{Kass}}
+\index{Kass@{Kass}!start.m@{start.\-m}}
+\subsubsection[{Kass}]{\setlength{\rightskip}{0pt plus 5cm}Kass = 50}}\label{start_8m_a484afe97369bc993daaa71613dd2a665}
+
+
+Definition at line 45 of file start.\-m.
+
+\hypertarget{start_8m_aaea32371e0f1645dcea44ce4d4a3d147}{\index{start.\-m@{start.\-m}!Kcpx@{Kcpx}}
+\index{Kcpx@{Kcpx}!start.m@{start.\-m}}
+\subsubsection[{Kcpx}]{\setlength{\rightskip}{0pt plus 5cm}Kcpx = 50}}\label{start_8m_aaea32371e0f1645dcea44ce4d4a3d147}
+
+
+Definition at line 47 of file start.\-m.
+
+\hypertarget{start_8m_a51a314f9df0eaa4488a1b264d1de0173}{\index{start.\-m@{start.\-m}!Kdiss@{Kdiss}}
+\index{Kdiss@{Kdiss}!start.m@{start.\-m}}
+\subsubsection[{Kdiss}]{\setlength{\rightskip}{0pt plus 5cm}Kdiss = 25}}\label{start_8m_a51a314f9df0eaa4488a1b264d1de0173}
+
+
+Definition at line 46 of file start.\-m.
+
+\hypertarget{start_8m_ac9358e0c7555a21532187de31cdbd469}{\index{start.\-m@{start.\-m}!last\-Firing\-Disk\-Species\-I\-D@{last\-Firing\-Disk\-Species\-I\-D}}
+\index{last\-Firing\-Disk\-Species\-I\-D@{last\-Firing\-Disk\-Species\-I\-D}!start.m@{start.\-m}}
+\subsubsection[{last\-Firing\-Disk\-Species\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} last\-Firing\-Disk\-Species\-I\-D = last\-Firing\-Disk\-Species\-I\-D -\/1}}\label{start_8m_ac9358e0c7555a21532187de31cdbd469}
+
+
+Definition at line 80 of file start.\-m.
+
+\hypertarget{start_8m_a5b50e4bf0f01cb1e2d8bdf9494493579}{\index{start.\-m@{start.\-m}!l\-Max\-Influx@{l\-Max\-Influx}}
+\index{l\-Max\-Influx@{l\-Max\-Influx}!start.m@{start.\-m}}
+\subsubsection[{l\-Max\-Influx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf se} è il sistema è chiuso l\-Max\-Influx = \mbox{[}4\mbox{]}}}\label{start_8m_a5b50e4bf0f01cb1e2d8bdf9494493579}
+
+
+Definition at line 13 of file start.\-m.
+
+\hypertarget{start_8m_a1c107e2d086ce1113fd96ff7dfbdf006}{\index{start.\-m@{start.\-m}!log@{log}}
+\index{log@{log}!start.m@{start.\-m}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} {\bf z}$<$10 parte\-\_\-a={\bf num2str}(0); parte\-\_\-b={\bf num2str}({\bf z}); parte4\-\_\-nome\-\_\-cartella = strcat(parte\-\_\-a,parte\-\_\-b); {\bf else} parte4\-\_\-nome\-\_\-cartella = {\bf num2str}({\bf z}); {\bf end} nome\-\_\-cartella= strcat(parte1\-\_\-nome\-\_\-cartella,{\bf parte2\-\_\-nome\-\_\-cartella},{\bf parte3\-\_\-nome\-\_\-cartella},parte4\-\_\-nome\-\_\-cartella); \%scrivo il lanciatore.\-sh riga\-\_\-lanciatore = strcat(' nice ./acsm2s ./',nome\-\_\-cartella,'/ ./',nome\-\_\-cartella,'/res/ ./', nome\-\_\-cartella,'/ $>$ log}}\label{start_8m_a1c107e2d086ce1113fd96ff7dfbdf006}
+
+
+Definition at line 151 of file start.\-m.
+
+\hypertarget{start_8m_a7c974cc56015b6503e0619d32ebd4180}{\index{start.\-m@{start.\-m}!lunghezza\-\_\-max\-\_\-fd@{lunghezza\-\_\-max\-\_\-fd}}
+\index{lunghezza\-\_\-max\-\_\-fd@{lunghezza\-\_\-max\-\_\-fd}!start.m@{start.\-m}}
+\subsubsection[{lunghezza\-\_\-max\-\_\-fd}]{\setlength{\rightskip}{0pt plus 5cm}percentuale di specie da cancellare rispetto {\bf a} tutte quelle che restano dopo aver conservato {\bf i} polimeri fino {\bf a} lunghezzamaxfd lunghezza\-\_\-max\-\_\-fd = 4}}\label{start_8m_a7c974cc56015b6503e0619d32ebd4180}
+
+
+Definition at line 59 of file start.\-m.
+
+\hypertarget{start_8m_ad1bbbd24e4be6c7d8af30304c155c742}{\index{start.\-m@{start.\-m}!lunghezze@{lunghezze}}
+\index{lunghezze@{lunghezze}!start.m@{start.\-m}}
+\subsubsection[{lunghezze}]{\setlength{\rightskip}{0pt plus 5cm}parametro uniforme sulle lunghezze}}\label{start_8m_ad1bbbd24e4be6c7d8af30304c155c742}
+
+
+Definition at line 60 of file start.\-m.
+
+\hypertarget{start_8m_abb126c97fed10420e64f85923bf5e04b}{\index{start.\-m@{start.\-m}!max\-L\-Out@{max\-L\-Out}}
+\index{max\-L\-Out@{max\-L\-Out}!start.m@{start.\-m}}
+\subsubsection[{max\-L\-Out}]{\setlength{\rightskip}{0pt plus 5cm}Lunghezza massima fino alla quale creare le {\bf reazioni} max\-L\-Out = 0}}\label{start_8m_abb126c97fed10420e64f85923bf5e04b}
+
+
+Definition at line 34 of file start.\-m.
+
+\hypertarget{start_8m_a5feeae2bacd93807ef83114349bb4080}{\index{start.\-m@{start.\-m}!molecule\-Decay\-\_\-\-Kinetic\-Constant@{molecule\-Decay\-\_\-\-Kinetic\-Constant}}
+\index{molecule\-Decay\-\_\-\-Kinetic\-Constant@{molecule\-Decay\-\_\-\-Kinetic\-Constant}!start.m@{start.\-m}}
+\subsubsection[{molecule\-Decay\-\_\-\-Kinetic\-Constant}]{\setlength{\rightskip}{0pt plus 5cm}percentuale di specie presenti nel sistema che possono essere energizzate per ogni specie create {\bf c} è una certa probabilità di essere energizzabile o meno molecule\-Decay\-\_\-\-Kinetic\-Constant =0.\-02}}\label{start_8m_a5feeae2bacd93807ef83114349bb4080}
+
+
+Definition at line 53 of file start.\-m.
+
+\hypertarget{start_8m_a4af22ee598eb5fcc4d0ff8439823e600}{\index{start.\-m@{start.\-m}!n\-G\-E\-N@{n\-G\-E\-N}}
+\index{n\-G\-E\-N@{n\-G\-E\-N}!start.m@{start.\-m}}
+\subsubsection[{n\-G\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}Percorso dove verrˆ creata la cartella {\bf sim\-Folder} dove verranno salvati tutti {\bf i} {\bf file}$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ n\-G\-E\-N =10}}\label{start_8m_a4af22ee598eb5fcc4d0ff8439823e600}
+
+
+Definition at line 75 of file start.\-m.
+
+\hypertarget{start_8m_a277bc625a7a558f74ccc1eb2963d70d0}{\index{start.\-m@{start.\-m}!nome\-\_\-folder@{nome\-\_\-folder}}
+\index{nome\-\_\-folder@{nome\-\_\-folder}!start.m@{start.\-m}}
+\subsubsection[{nome\-\_\-folder}]{\setlength{\rightskip}{0pt plus 5cm}nome\-\_\-folder = \mbox{[}4\mbox{]}}}\label{start_8m_a277bc625a7a558f74ccc1eb2963d70d0}
+
+
+Definition at line 15 of file start.\-m.
+
+\hypertarget{start_8m_ab05ea37ca64abe64c55c1f166e3a818b}{\index{start.\-m@{start.\-m}!nome\-\_\-prob@{nome\-\_\-prob}}
+\index{nome\-\_\-prob@{nome\-\_\-prob}!start.m@{start.\-m}}
+\subsubsection[{nome\-\_\-prob}]{\setlength{\rightskip}{0pt plus 5cm}nome\-\_\-prob = \mbox{[}0.\-125}}\label{start_8m_ab05ea37ca64abe64c55c1f166e3a818b}
+
+
+Definition at line 12 of file start.\-m.
+
+\hypertarget{start_8m_a8d704532b4b419f1428cb078bb5c7ffe}{\index{start.\-m@{start.\-m}!n\-Reactions@{n\-Reactions}}
+\index{n\-Reactions@{n\-Reactions}!start.m@{start.\-m}}
+\subsubsection[{n\-Reactions}]{\setlength{\rightskip}{0pt plus 5cm}Definisce il tempo in cui vengono salvati {\bf i} dati sui {\bf file} reaction\-\_\-parameter e {\bf i} vari living n\-Reactions =200000000}}\label{start_8m_a8d704532b4b419f1428cb078bb5c7ffe}
+
+
+Definition at line 29 of file start.\-m.
+
+\hypertarget{start_8m_a2b9b3728c03157895f28160b24f4c572}{\index{start.\-m@{start.\-m}!n\-S\-I\-M@{n\-S\-I\-M}}
+\index{n\-S\-I\-M@{n\-S\-I\-M}!start.m@{start.\-m}}
+\subsubsection[{n\-S\-I\-M}]{\setlength{\rightskip}{0pt plus 5cm}$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Inserimento dei P\-A\-R\-A\-M\-E\-T\-R\-I quelli che restano cioè costanti in tutti gli esperimenti della serie n\-S\-I\-M =1}}\label{start_8m_a2b9b3728c03157895f28160b24f4c572}
+
+
+Definition at line 23 of file start.\-m.
+
+\hypertarget{start_8m_af882a6050e97fe1c6cc2bb391ea57479}{\index{start.\-m@{start.\-m}!Nsim@{Nsim}}
+\index{Nsim@{Nsim}!start.m@{start.\-m}}
+\subsubsection[{Nsim}]{\setlength{\rightskip}{0pt plus 5cm}Numero di al momento significa che alla fine di ogni generazione da ogni {\bf file} di fine sim partono altre Nsim}}\label{start_8m_af882a6050e97fe1c6cc2bb391ea57479}
+
+
+Definition at line 75 of file start.\-m.
+
+\hypertarget{start_8m_a59597688ed79473c0234f45eb9167574}{\index{start.\-m@{start.\-m}!overall\-Concentration@{overall\-Concentration}}
+\index{overall\-Concentration@{overall\-Concentration}!start.m@{start.\-m}}
+\subsubsection[{overall\-Concentration}]{\setlength{\rightskip}{0pt plus 5cm}overall\-Concentration =0.\-0333}}\label{start_8m_a59597688ed79473c0234f45eb9167574}
+
+
+Definition at line 37 of file start.\-m.
+
+\hypertarget{start_8m_adc8f9d08ccff64cc5892dfd1791e14bc}{\index{start.\-m@{start.\-m}!parametro\-\_\-screening@{parametro\-\_\-screening}}
+\index{parametro\-\_\-screening@{parametro\-\_\-screening}!start.m@{start.\-m}}
+\subsubsection[{parametro\-\_\-screening}]{\setlength{\rightskip}{0pt plus 5cm}parametro\-\_\-screening = {\bf l\-Max\-Influx}}}\label{start_8m_adc8f9d08ccff64cc5892dfd1791e14bc}
+
+
+Definition at line 14 of file start.\-m.
+
+\hypertarget{start_8m_a8de4259e8461bac9182e4218c9be6710}{\index{start.\-m@{start.\-m}!parte2\-\_\-nome\-\_\-cartella@{parte2\-\_\-nome\-\_\-cartella}}
+\index{parte2\-\_\-nome\-\_\-cartella@{parte2\-\_\-nome\-\_\-cartella}!start.m@{start.\-m}}
+\subsubsection[{parte2\-\_\-nome\-\_\-cartella}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} {\bf z}$<$ 10 parte\-\_\-a={\bf num2str}(0) parte\-\_\-b={\bf num2str}({\bf z}) parte4\-\_\-nome\-\_\-cartella=strcat(parte\-\_\-a, parte\-\_\-b) {\bf else} parte4\-\_\-nome\-\_\-cartella={\bf num2str}({\bf z}) {\bf end} nome\-\_\-cartella=strcat(parte1\-\_\-nome\-\_\-cartella, parte2\-\_\-nome\-\_\-cartella, {\bf parte3\-\_\-nome\-\_\-cartella}, parte4\-\_\-nome\-\_\-cartella)\%scrivo il lanciatore.\-sh riga\-\_\-lanciatore=strcat('nice./acsm2s./', nome\-\_\-cartella,'/./', nome\-\_\-cartella,'/res/./', nome\-\_\-cartella,'/ $>$ parte2\-\_\-nome\-\_\-cartella = {\bf num2str}({\bf nome\-\_\-folder}({\bf i}))}}\label{start_8m_a8de4259e8461bac9182e4218c9be6710}
+
+
+Definition at line 138 of file start.\-m.
+
+\hypertarget{start_8m_a1795e2dc228962c5b67eaee336bba2ad}{\index{start.\-m@{start.\-m}!parte3\-\_\-nome\-\_\-cartella@{parte3\-\_\-nome\-\_\-cartella}}
+\index{parte3\-\_\-nome\-\_\-cartella@{parte3\-\_\-nome\-\_\-cartella}!start.m@{start.\-m}}
+\subsubsection[{parte3\-\_\-nome\-\_\-cartella}]{\setlength{\rightskip}{0pt plus 5cm}parte3\-\_\-nome\-\_\-cartella = ('\-\_\-rete\-\_\-n\-\_\-')}}\label{start_8m_a1795e2dc228962c5b67eaee336bba2ad}
+
+
+Definition at line 139 of file start.\-m.
+
+\hypertarget{start_8m_af28466084b87af2cdc5c7b48f4661f2d}{\index{start.\-m@{start.\-m}!path@{path}}
+\index{path@{path}!start.m@{start.\-m}}
+\subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conc\-Analysis}(params) clear all close all params path = '$\sim$/Documents/init/'}}\label{start_8m_af28466084b87af2cdc5c7b48f4661f2d}
+
+
+Definition at line 71 of file start.\-m.
+
+\hypertarget{start_8m_a422f03a95f0b273407ed13891d8d9f4d}{\index{start.\-m@{start.\-m}!random\-Seed@{random\-Seed}}
+\index{random\-Seed@{random\-Seed}!start.m@{start.\-m}}
+\subsubsection[{random\-Seed}]{\setlength{\rightskip}{0pt plus 5cm}Numero di secondi random\-Seed =0}}\label{start_8m_a422f03a95f0b273407ed13891d8d9f4d}
+
+
+Definition at line 25 of file start.\-m.
+
+\hypertarget{start_8m_a83c1660d71068ae836121af0890bb3dd}{\index{start.\-m@{start.\-m}!ratio\-\_\-firing\-\_\-disk@{ratio\-\_\-firing\-\_\-disk}}
+\index{ratio\-\_\-firing\-\_\-disk@{ratio\-\_\-firing\-\_\-disk}!start.m@{start.\-m}}
+\subsubsection[{ratio\-\_\-firing\-\_\-disk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf lunghezza} massima delle molecole presenti nell {\bf influx} ratio\-\_\-firing\-\_\-disk =0}}\label{start_8m_a83c1660d71068ae836121af0890bb3dd}
+
+
+Definition at line 58 of file start.\-m.
+
+\hypertarget{start_8m_a1fa680d8b3a4f885d99f56fef41d2c37}{\index{start.\-m@{start.\-m}!ratio\-Species\-Energizable@{ratio\-Species\-Energizable}}
+\index{ratio\-Species\-Energizable@{ratio\-Species\-Energizable}!start.m@{start.\-m}}
+\subsubsection[{ratio\-Species\-Energizable}]{\setlength{\rightskip}{0pt plus 5cm}ratio\-Species\-Energizable = 0}}\label{start_8m_a1fa680d8b3a4f885d99f56fef41d2c37}
+
+
+Definition at line 52 of file start.\-m.
+
+\hypertarget{start_8m_a9101beaeb03fddb5c6a9e68442177543}{\index{start.\-m@{start.\-m}!reaction\-Probability@{reaction\-Probability}}
+\index{reaction\-Probability@{reaction\-Probability}!start.m@{start.\-m}}
+\subsubsection[{reaction\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}reaction\-Probability = \mbox{[}0.\-000516529}}\label{start_8m_a9101beaeb03fddb5c6a9e68442177543}
+
+
+Definition at line 11 of file start.\-m.
+
+\hypertarget{start_8m_a650532b3a3c04865cc35cff6d567c5c0}{\index{start.\-m@{start.\-m}!reverse\-Reactions@{reverse\-Reactions}}
+\index{reverse\-Reactions@{reverse\-Reactions}!start.m@{start.\-m}}
+\subsubsection[{reverse\-Reactions}]{\setlength{\rightskip}{0pt plus 5cm}reverse\-Reactions =0}}\label{start_8m_a650532b3a3c04865cc35cff6d567c5c0}
+
+
+Definition at line 43 of file start.\-m.
+
+\hypertarget{start_8m_aa7d97d27bd1a172a2f0ad49ef13ef8ac}{\index{start.\-m@{start.\-m}!rev\-Rct\-Ratio@{rev\-Rct\-Ratio}}
+\index{rev\-Rct\-Ratio@{rev\-Rct\-Ratio}!start.m@{start.\-m}}
+\subsubsection[{rev\-Rct\-Ratio}]{\setlength{\rightskip}{0pt plus 5cm}coefficiente di decadimento delle molecole o dei carrier dalla propria componente energetica rev\-Rct\-Ratio = 10}}\label{start_8m_aa7d97d27bd1a172a2f0ad49ef13ef8ac}
+
+
+Definition at line 51 of file start.\-m.
+
+\hypertarget{start_8m_ac9a4176e3fc6f6d186c4f5c573b8a617}{\index{start.\-m@{start.\-m}!riga\-\_\-lanciatore\-\_\-2@{riga\-\_\-lanciatore\-\_\-2}}
+\index{riga\-\_\-lanciatore\-\_\-2@{riga\-\_\-lanciatore\-\_\-2}!start.m@{start.\-m}}
+\subsubsection[{riga\-\_\-lanciatore\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}riga\-\_\-lanciatore\-\_\-2 = strcat('echo \char`\"{}Reverse/',nome\-\_\-cartella,'\char`\"{} ;',riga\-\_\-lanciatore)}}\label{start_8m_ac9a4176e3fc6f6d186c4f5c573b8a617}
+
+
+Definition at line 152 of file start.\-m.
+
+\hypertarget{start_8m_ac60b74a4c1b8bc23e64008ba1e0c41a8}{\index{start.\-m@{start.\-m}!scelta\-\_\-concentrazioni@{scelta\-\_\-concentrazioni}}
+\index{scelta\-\_\-concentrazioni@{scelta\-\_\-concentrazioni}!start.m@{start.\-m}}
+\subsubsection[{scelta\-\_\-concentrazioni}]{\setlength{\rightskip}{0pt plus 5cm}{\bf lunghezza} dei monomeri polimeri da conservare scelta\-\_\-concentrazioni =1}}\label{start_8m_ac60b74a4c1b8bc23e64008ba1e0c41a8}
+
+
+Definition at line 60 of file start.\-m.
+
+\hypertarget{start_8m_abc4a849052f02bdfa554624d1d058817}{\index{start.\-m@{start.\-m}!S\-C\-R\-E\-E\-N\-I\-N\-G@{S\-C\-R\-E\-E\-N\-I\-N\-G}}
+\index{S\-C\-R\-E\-E\-N\-I\-N\-G@{S\-C\-R\-E\-E\-N\-I\-N\-G}!start.m@{start.\-m}}
+\subsubsection[{S\-C\-R\-E\-E\-N\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}lancia\-\_\-serie\-\_\-di\-\_\-inizializzatore m clear all close all$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Inserimento dei P\-A\-R\-A\-M\-E\-T\-R\-I V\-A\-R\-I\-A\-B\-I\-L\-I sui quali fare lo S\-C\-R\-E\-E\-N\-I\-N\-G}}\label{start_8m_abc4a849052f02bdfa554624d1d058817}
+
+
+Definition at line 8 of file start.\-m.
+
+\hypertarget{start_8m_a99032f27eaf45da350b544c68aa6467c}{\index{start.\-m@{start.\-m}!se@{se}}
+\index{se@{se}!start.m@{start.\-m}}
+\subsubsection[{se}]{\setlength{\rightskip}{0pt plus 5cm}se =0 non viene considerato}}\label{start_8m_a99032f27eaf45da350b544c68aa6467c}
+
+
+Definition at line 34 of file start.\-m.
+
+\hypertarget{start_8m_a577b8d3679c2346bceb19c754b5bf403}{\index{start.\-m@{start.\-m}!sims@{sims}}
+\index{sims@{sims}!start.m@{start.\-m}}
+\subsubsection[{sims}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} {\bf z}$<$10 parte\-\_\-a={\bf num2str}(0); parte\-\_\-b={\bf num2str}({\bf z}); parte4\-\_\-nome\-\_\-cartella = strcat(parte\-\_\-a,parte\-\_\-b); {\bf else} parte4\-\_\-nome\-\_\-cartella = {\bf num2str}({\bf z}); {\bf end} nome\-\_\-cartella= strcat(parte1\-\_\-nome\-\_\-cartella,{\bf parte2\-\_\-nome\-\_\-cartella},{\bf parte3\-\_\-nome\-\_\-cartella},parte4\-\_\-nome\-\_\-cartella); \%scrivo il lanciatore.\-sh riga\-\_\-lanciatore = strcat(' nice ./acsm2s ./',nome\-\_\-cartella,'/ ./',nome\-\_\-cartella,'/res/ ./', nome\-\_\-cartella,'/ $>$ sims}}\label{start_8m_a577b8d3679c2346bceb19c754b5bf403}
+
+
+Definition at line 151 of file start.\-m.
+
+\hypertarget{start_8m_a31ca4d05639b265fc794a2776aa8fad3}{\index{start.\-m@{start.\-m}!simulazione@{simulazione}}
+\index{simulazione@{simulazione}!start.m@{start.\-m}}
+\subsubsection[{simulazione}]{\setlength{\rightskip}{0pt plus 5cm}livello di dettaglio messaggi durante simulazione}}\label{start_8m_a31ca4d05639b265fc794a2776aa8fad3}
+
+
+Definition at line 26 of file start.\-m.
+
+\hypertarget{start_8m_acbefa7c9bfd826fec9b32fa3bd29c288}{\index{start.\-m@{start.\-m}!solubility\-\_\-threshold@{solubility\-\_\-threshold}}
+\index{solubility\-\_\-threshold@{solubility\-\_\-threshold}!start.m@{start.\-m}}
+\subsubsection[{solubility\-\_\-threshold}]{\setlength{\rightskip}{0pt plus 5cm}solubility\-\_\-threshold =0}}\label{start_8m_acbefa7c9bfd826fec9b32fa3bd29c288}
+
+
+Definition at line 55 of file start.\-m.
+
+\hypertarget{start_8m_a8ab6edae433ed8b2d6590ee155fa4bb7}{\index{start.\-m@{start.\-m}!st@{st}}
+\index{st@{st}!start.m@{start.\-m}}
+\subsubsection[{st}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} {\bf end} st = {\bf fclose}(fid20)}}\label{start_8m_a8ab6edae433ed8b2d6590ee155fa4bb7}
+
+
+Definition at line 167 of file start.\-m.
+
+\hypertarget{start_8m_adc12f688ec66254762f4bdd2ce8c73df}{\index{start.\-m@{start.\-m}!switch@{switch}}
+\index{switch@{switch}!start.m@{start.\-m}}
+\subsubsection[{switch}]{\setlength{\rightskip}{0pt plus 5cm}parametro switch}}\label{start_8m_adc12f688ec66254762f4bdd2ce8c73df}
+
+
+Definition at line 60 of file start.\-m.
+
+\hypertarget{start_8m_a2d4125646b62462ce279d82913125ccf}{\index{start.\-m@{start.\-m}!this\-Folder@{this\-Folder}}
+\index{this\-Folder@{this\-Folder}!start.m@{start.\-m}}
+\subsubsection[{this\-Folder}]{\setlength{\rightskip}{0pt plus 5cm}this\-Folder = pwd}}\label{start_8m_a2d4125646b62462ce279d82913125ccf}
+
+
+Definition at line 83 of file start.\-m.
+
+\hypertarget{start_8m_af3b4ff50e3fefed842dc431f3d32ff0e}{\index{start.\-m@{start.\-m}!times@{times}}
+\index{times@{times}!start.m@{start.\-m}}
+\subsubsection[{times}]{\setlength{\rightskip}{0pt plus 5cm}Definisce il tempo in cui vengono salvati {\bf i} dati sui {\bf file} times}}\label{start_8m_af3b4ff50e3fefed842dc431f3d32ff0e}
+
+
+Definition at line 28 of file start.\-m.
+
+\hypertarget{start_8m_ae912a42ee691e9c69e17d5d791e0c71b}{\index{start.\-m@{start.\-m}!time\-Structures\-Saving\-Interval@{time\-Structures\-Saving\-Interval}}
+\index{time\-Structures\-Saving\-Interval@{time\-Structures\-Saving\-Interval}!start.m@{start.\-m}}
+\subsubsection[{time\-Structures\-Saving\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}livello di dettaglio messaggi durante lasciare per debug software time\-Structures\-Saving\-Interval ={\bf n\-Seconds}/100}}\label{start_8m_ae912a42ee691e9c69e17d5d791e0c71b}
+
+
+Definition at line 27 of file start.\-m.
+
+\hypertarget{start_8m_a20355c3a8f29f03f3b002dfb23f03a86}{\index{start.\-m@{start.\-m}!virtual\-\_\-fd\-\_\-max\-\_\-length@{virtual\-\_\-fd\-\_\-max\-\_\-length}}
+\index{virtual\-\_\-fd\-\_\-max\-\_\-length@{virtual\-\_\-fd\-\_\-max\-\_\-length}!start.m@{start.\-m}}
+\subsubsection[{virtual\-\_\-fd\-\_\-max\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}Lunghezza massima delle specie da creare virtual\-\_\-fd\-\_\-max\-\_\-length = 4}}\label{start_8m_a20355c3a8f29f03f3b002dfb23f03a86}
+
+
+Definition at line 33 of file start.\-m.
+
+\hypertarget{start_8m_a9bc498ccac8db41438f855f5dd3f4c05}{\index{start.\-m@{start.\-m}!volume@{volume}}
+\index{volume@{volume}!start.m@{start.\-m}}
+\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}volume =1e-\/18}}\label{start_8m_a9bc498ccac8db41438f855f5dd3f4c05}
+
+
+Definition at line 38 of file start.\-m.
+

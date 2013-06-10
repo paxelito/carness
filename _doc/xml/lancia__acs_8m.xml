@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="lancia__acs_8m" kind="file">
+    <compoundname>lancia_acs.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="lancia__acs_8m_1aa3a014475bd24120996191acceaa4f3d" prot="public" static="no" mutable="no">
+        <type>lancia_acs m clear all close all parametri</type>
+        <definition>lancia_acs m clear all close all parametri kdiss</definition>
+        <argsstring></argsstring>
+        <name>kdiss</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="7" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="lancia__acs_8m_1a9cf172af920b969c5411ac19e5e13e22" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>kcomplex</definition>
+        <argsstring></argsstring>
+        <name>kcomplex</name>
+        <initializer>= 1e6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="8" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="lancia__acs_8m_1af49f64b0687f4e269a7dc8e56ca82772" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>kcond</definition>
+        <argsstring></argsstring>
+        <name>kcond</name>
+        <initializer>= 6e8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="9" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="lancia__acs_8m_1ad821064ff58d369f2a880dc5bf3db527" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>k_complex</definition>
+        <argsstring></argsstring>
+        <name>k_complex</name>
+        <initializer>= 1e-4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="10" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="lancia__acs_8m_1abfef5bcdab19147dbfbb68112da17044" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>AB</definition>
+        <argsstring></argsstring>
+        <name>AB</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="12" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="lancia__acs_8m_1aaa53ca0b650dfd85c4f59fa156f7a2cc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>C</definition>
+        <argsstring></argsstring>
+        <name>C</name>
+        <initializer>= 2e-7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="13" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="lancia__acs_8m_1afb377083e62f3bde1716905353335a78" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>CA</definition>
+        <argsstring></argsstring>
+        <name>CA</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="14" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="lancia__acs_8m_1adc468c70fb574ebd07287b38d0d0676d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="16" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="lancia__acs_8m_1ab4f8a2431d9ad6efec44b47971737c52" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for A</definition>
+        <argsstring></argsstring>
+        <name>A</name>
+        <initializer>= 10e-7:10e-7:10e-6
+    
+    k=k+1
+    j=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="20" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="lancia__acs_8m_1afb39b9efa52a33745c5e622fa358a97f" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for B</definition>
+        <argsstring></argsstring>
+        <name>B</name>
+        <initializer>= 10e-7:10e-7:10e-6
+        
+        j=j+1
+        
+        
+        [t y] = ACS_reverse_reaction_con_input(A,B,AB,C,CA,kdiss,kcomplex,kcond,k_complex)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="26" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lancia__acs_8m_1af7113c457c6779161b052400fad75b12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Keq</definition>
+        <argsstring>(k, j)</argsstring>
+        <name>Keq</name>
+        <param>
+          <type><ref refid="inizializzatore___a_c_s_8m_1abf70355c2e58f64c6b18bda1b9bccfd7" kindref="member">k</ref></type>
+        </param>
+        <param>
+          <type><ref refid="inizializzatore___a_c_s_8m_1ac86694252f8dfdb19aaeadc4b7c342c6" kindref="member">j</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m" line="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">%lancia_acs.m</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">clear<sp/>all</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">close<sp/>all</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">%parametri</highlight></codeline>
+<codeline lineno="7" refid="lancia__acs_8m_1aa3a014475bd24120996191acceaa4f3d" refkind="member"><highlight class="normal"><ref refid="lancia__acs_8m_1aa3a014475bd24120996191acceaa4f3d" kindref="member">kdiss</ref><sp/>=<sp/>0<sp/>;<sp/></highlight></codeline>
+<codeline lineno="8" refid="lancia__acs_8m_1a9cf172af920b969c5411ac19e5e13e22" refkind="member"><highlight class="normal"><ref refid="lancia__acs_8m_1a9cf172af920b969c5411ac19e5e13e22" kindref="member">kcomplex</ref><sp/>=<sp/>1e6;<sp/></highlight></codeline>
+<codeline lineno="9" refid="lancia__acs_8m_1af49f64b0687f4e269a7dc8e56ca82772" refkind="member"><highlight class="normal"><ref refid="lancia__acs_8m_1af49f64b0687f4e269a7dc8e56ca82772" kindref="member">kcond</ref><sp/>=<sp/>6e8;</highlight></codeline>
+<codeline lineno="10" refid="lancia__acs_8m_1ad821064ff58d369f2a880dc5bf3db527" refkind="member"><highlight class="normal"><ref refid="lancia__acs_8m_1ad821064ff58d369f2a880dc5bf3db527" kindref="member">k_complex</ref><sp/>=<sp/>1e-4;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="lancia__acs_8m_1abfef5bcdab19147dbfbb68112da17044" refkind="member"><highlight class="normal"><ref refid="lancia__acs_8m_1abfef5bcdab19147dbfbb68112da17044" kindref="member">AB</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="13" refid="lancia__acs_8m_1aaa53ca0b650dfd85c4f59fa156f7a2cc" refkind="member"><highlight class="normal"><ref refid="lancia__acs_8m_1aaa53ca0b650dfd85c4f59fa156f7a2cc" kindref="member">C</ref><sp/>=<sp/>2e-7;</highlight></codeline>
+<codeline lineno="14" refid="lancia__acs_8m_1afb377083e62f3bde1716905353335a78" refkind="member"><highlight class="normal"><ref refid="lancia__acs_8m_1afb377083e62f3bde1716905353335a78" kindref="member">CA</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="lancia__acs_8m_1adc468c70fb574ebd07287b38d0d0676d" refkind="member"><highlight class="normal"><ref refid="conc_analysis_8m_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="17" refid="lancia__acs_8m_1ab4f8a2431d9ad6efec44b47971737c52" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="lancia__acs_8m_1ab4f8a2431d9ad6efec44b47971737c52" kindref="member">A</ref><sp/>=<sp/>10e-7:10e-7:10e-6</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>k=k+1</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>j=0;</highlight></codeline>
+<codeline lineno="21" refid="lancia__acs_8m_1afb39b9efa52a33745c5e622fa358a97f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="lancia__acs_8m_1afb39b9efa52a33745c5e622fa358a97f" kindref="member">B</ref><sp/>=<sp/>10e-7:10e-7:10e-6</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j=j+1</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[t<sp/>y]<sp/>=<sp/>ACS_reverse_reaction_con_input(<ref refid="lancia__acs_8m_1ab4f8a2431d9ad6efec44b47971737c52" kindref="member">A</ref>,<ref refid="lancia__acs_8m_1afb39b9efa52a33745c5e622fa358a97f" kindref="member">B</ref>,<ref refid="lancia__acs_8m_1abfef5bcdab19147dbfbb68112da17044" kindref="member">AB</ref>,<ref refid="lancia__acs_8m_1aaa53ca0b650dfd85c4f59fa156f7a2cc" kindref="member">C</ref>,<ref refid="lancia__acs_8m_1afb377083e62f3bde1716905353335a78" kindref="member">CA</ref>,<ref refid="lancia__acs_8m_1aa3a014475bd24120996191acceaa4f3d" kindref="member">kdiss</ref>,<ref refid="lancia__acs_8m_1a9cf172af920b969c5411ac19e5e13e22" kindref="member">kcomplex</ref>,<ref refid="lancia__acs_8m_1af49f64b0687f4e269a7dc8e56ca82772" kindref="member">kcond</ref>,<ref refid="lancia__acs_8m_1ad821064ff58d369f2a880dc5bf3db527" kindref="member">k_complex</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lancia__acs_8m_1af7113c457c6779161b052400fad75b12" kindref="member">Keq</ref>(<ref refid="conc_analysis_8m_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref>,<ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>)=(y(length(y(:,1)),3))/(y(length(y(:,1)),1)*y(length(y(:,1)),2));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">imagesc(<ref refid="lancia__acs_8m_1af7113c457c6779161b052400fad75b12" kindref="member">Keq</ref>)</highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_acs.m"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,150 @@
+.TH "gillespie" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gillespie \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gillespie\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBgillespie\fP ()"
+.br
+.ti -1c
+.RI "\fBgillespie\fP (\fBacs_longInt\fP tmpIDU, \fBacs_int\fP tmpIdReactionType, \fBacs_double\fP tmpScore, \fBacs_longInt\fP tmpMolI, \fBacs_longInt\fP tmpMolII, \fBacs_longInt\fP tmpMolIII, \fBacs_longInt\fP tmpMolIV, \fBacs_longInt\fP tmpIdReaction, \fBacs_longInt\fP tmpIdCatalysis)"
+.br
+.ti -1c
+.RI "\fBgillespie\fP (\fBacs_longInt\fP tmpIDU, \fBacs_int\fP tmpIdReactionType, \fBacs_double\fP tmpScore, \fBacs_longInt\fP tmpMolI, \fBacs_longInt\fP tmpMolII, \fBacs_longInt\fP tmpMolIII, \fBacs_longInt\fP tmpMolIV, \fBacs_int\fP tmpNRGside, \fBacs_longInt\fP tmpIdReaction, \fBacs_longInt\fP tmpIdCatalysis)"
+.br
+.ti -1c
+.RI "\fB~gillespie\fP ()"
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBgetID\fP () const "
+.br
+.ti -1c
+.RI "\fBacs_int\fP \fBgetIdReactionType\fP () const "
+.br
+.ti -1c
+.RI "\fBacs_double\fP \fBgetScore\fP () const "
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBgetMolI\fP () const "
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBgetMolII\fP () const "
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBgetMolIII\fP () const "
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBgetMolIV\fP () const "
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBgetReactionID\fP () const "
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBgetCatalysisID\fP () const "
+.br
+.ti -1c
+.RI "\fBacs_int\fP \fBgetNRGside\fP () const "
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBAuthor:\fP
+.RS 4
+Alessandro Filisetti 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+0\&.1 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+2009-04-21 
+.RE
+.PP
+
+.PP
+Definition at line 12 of file gillespie\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "gillespie::gillespie ()"
+
+.SS "gillespie::gillespie (\fBacs_longInt\fPtmpIDU, \fBacs_int\fPtmpIdReactionType, \fBacs_double\fPtmpScore, \fBacs_longInt\fPtmpMolI, \fBacs_longInt\fPtmpMolII, \fBacs_longInt\fPtmpMolIII, \fBacs_longInt\fPtmpMolIV, \fBacs_longInt\fPtmpIdReaction, \fBacs_longInt\fPtmpIdCatalysis)"
+Gillespie Obj constructor 
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fItmpRndDoubleGen\fP randomGenerator reference 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file gillespie\&.cpp\&.
+.SS "gillespie::gillespie (\fBacs_longInt\fPtmpIDU, \fBacs_int\fPtmpIdReactionType, \fBacs_double\fPtmpScore, \fBacs_longInt\fPtmpMolI, \fBacs_longInt\fPtmpMolII, \fBacs_longInt\fPtmpMolIII, \fBacs_longInt\fPtmpMolIV, \fBacs_int\fPtmpNRGside, \fBacs_longInt\fPtmpIdReaction, \fBacs_longInt\fPtmpIdCatalysis)"
+
+.PP
+Definition at line 38 of file gillespie\&.cpp\&.
+.SS "gillespie::~gillespie ()\fC [inline]\fP"
+
+.PP
+Definition at line 33 of file gillespie\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBacs_longInt\fP gillespie::getCatalysisID () const\fC [inline]\fP"
+
+.PP
+Definition at line 44 of file gillespie\&.h\&.
+.SS "\fBacs_longInt\fP gillespie::getID () const\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file gillespie\&.h\&.
+.SS "\fBacs_int\fP gillespie::getIdReactionType () const\fC [inline]\fP"
+
+.PP
+Definition at line 37 of file gillespie\&.h\&.
+.SS "\fBacs_longInt\fP gillespie::getMolI () const\fC [inline]\fP"
+
+.PP
+Definition at line 39 of file gillespie\&.h\&.
+.SS "\fBacs_longInt\fP gillespie::getMolII () const\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file gillespie\&.h\&.
+.SS "\fBacs_longInt\fP gillespie::getMolIII () const\fC [inline]\fP"
+
+.PP
+Definition at line 41 of file gillespie\&.h\&.
+.SS "\fBacs_longInt\fP gillespie::getMolIV () const\fC [inline]\fP"
+
+.PP
+Definition at line 42 of file gillespie\&.h\&.
+.SS "\fBacs_int\fP gillespie::getNRGside () const\fC [inline]\fP"
+
+.PP
+Definition at line 45 of file gillespie\&.h\&.
+.SS "\fBacs_longInt\fP gillespie::getReactionID () const\fC [inline]\fP"
+
+.PP
+Definition at line 43 of file gillespie\&.h\&.
+.SS "\fBacs_double\fP gillespie::getScore () const\fC [inline]\fP"
+
+.PP
+Definition at line 38 of file gillespie\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

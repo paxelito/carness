@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="crea__influx_8m" kind="file">
+    <compoundname>crea_influx.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="crea__influx_8m_1a9e9d25cb3f9488c7e910885a0eed2ffa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>function[influx]</definition>
+        <argsstring>[influx]</argsstring>
+        <name>function</name>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1aedefd8a9b5b6248834cd58472da4be7d" kindref="member">crea_influx</ref>(<ref refid="crea__concentrazioni__iniziali_8m_1a89801fa89eee3ba40f6610f290d6f6c3" kindref="member">concentrazioni_iniziali</ref>)
+%function [<ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>] = <ref refid="inizializzatore___a_c_s_8m_1aedefd8a9b5b6248834cd58472da4be7d" kindref="member">crea_influx</ref>(<ref refid="crea__concentrazioni__iniziali_8m_1a89801fa89eee3ba40f6610f290d6f6c3" kindref="member">concentrazioni_iniziali</ref>)
+
+
+for <ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref> =1:length(<ref refid="crea__concentrazioni__iniziali_8m_1a89801fa89eee3ba40f6610f290d6f6c3" kindref="member">concentrazioni_iniziali</ref>)
+    
+    <ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,1)=<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="9" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx_8m_1a8f47e0001258b78994326e2d07d7c51d" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> for</type>
+        <definition>end for j</definition>
+        <argsstring></argsstring>
+        <name>j</name>
+        <initializer>= length(<ref refid="crea__concentrazioni__iniziali_8m_1a89801fa89eee3ba40f6610f290d6f6c3" kindref="member">concentrazioni_iniziali</ref>):-1:1
+    <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref> (j,2)==0
+        <ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>(j,:)=[]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="15" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx_8m_1a354e9aa3d0786bab7f2475c58693017d" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end end tot_species</definition>
+        <argsstring></argsstring>
+        <name>tot_species</name>
+        <initializer>= length(<ref refid="crea__concentrazioni__iniziali_8m_1acb72987b5000cf59c6f81c482e2ac8ac" kindref="member">firing_disk</ref>(:,1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="44" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx_8m_1a6d872cdbb63424cff04a431f8c23cb99" prot="public" static="no" mutable="no">
+        <type><ref refid="crea__catalizzatori_8m_1a0d28c684ab6483b3af034981a7db4806" kindref="member">switch</ref> scelta_influx casuale case</type>
+        <definition>end end species_to_delete</definition>
+        <argsstring></argsstring>
+        <name>species_to_delete</name>
+        <initializer>= <ref refid="common_functions_8h_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(ratio_influx*<ref refid="crea__influx_8m_1a354e9aa3d0786bab7f2475c58693017d" kindref="member">tot_species</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="53" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx_8m_1ac8f034c683f5b66572af8149f27da7e0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>species_to_keep</definition>
+        <argsstring></argsstring>
+        <name>species_to_keep</name>
+        <initializer>= <ref refid="crea__influx_8m_1a354e9aa3d0786bab7f2475c58693017d" kindref="member">tot_species</ref> - <ref refid="crea__influx_8m_1a6d872cdbb63424cff04a431f8c23cb99" kindref="member">species_to_delete</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="54" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx_8m_1a6f6ccfcf58b31cb6412107d9d5281426" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <initializer>= 1:<ref refid="crea__influx_8m_1ac8f034c683f5b66572af8149f27da7e0" kindref="member">species_to_keep</ref>
+%             <ref refid="crea__influx_8m_1ab9820e0c2b1ec444c369e5ba77827df6" kindref="member">trovato</ref> = 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="57" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx_8m_1ab9820e0c2b1ec444c369e5ba77827df6" prot="public" static="no" mutable="no">
+        <type>while</type>
+        <definition>while trovato</definition>
+        <argsstring></argsstring>
+        <name>trovato</name>
+        <initializer>== 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="58" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx_8m_1af0b70072788ca3a1d140d4708f054ad0" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>else clear influx influx</definition>
+        <argsstring></argsstring>
+        <name>influx</name>
+        <initializer>=sort(influx)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="65" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx_8m_1a3749709d4cc2c50b5107d802173fb144" prot="public" static="no" mutable="no">
+        <type>casuale tenendo <ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref> polimeri fino <ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref> <ref refid="crea__influx_8m_1a984d293145d85a936f430c0990316e51" kindref="member">lunghezza</ref> <ref refid="_k_s_search_launcher_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref> e poi ne toglie l <ref refid="_k_s_search_launcher_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref> case</type>
+        <definition>remaining_species</definition>
+        <argsstring></argsstring>
+        <name>remaining_species</name>
+        <initializer>= <ref refid="crea__influx_8m_1a354e9aa3d0786bab7f2475c58693017d" kindref="member">tot_species</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="71" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx_8m_1a984d293145d85a936f430c0990316e51" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> proporzionale alla</type>
+        <definition>end proporzionale alla lunghezza</definition>
+        <argsstring></argsstring>
+        <name>lunghezza</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="108" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="crea__influx_8m_1a0fbac6c3f9b5a2d3cc1b576ab1cc6321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>influx</definition>
+        <argsstring>(i, 2)</argsstring>
+        <name>influx</name>
+        <param>
+          <type><ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
+        </param>
+        <param>
+          <type>2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="10"/>
+      </memberdef>
+      <memberdef kind="function" id="crea__influx_8m_1a13a0f382c5677ab166d9109a493cbd0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>influx</definition>
+        <argsstring>(i,:)</argsstring>
+        <name>influx</name>
+        <param>
+          <type><ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
+        </param>
+        <param>
+          <type>:</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="crea__influx_8m_1a59a869fb2b28d56dacd91c09e1dffc8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>if sum</definition>
+        <argsstring>(influx(i, 1)==influx(:, 1))</argsstring>
+        <name>sum</name>
+        <param>
+          <type><ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 1)</type>
+          <defval>=<ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>(:, 1)</defval>
+        </param>
+        <initializer>==1
+%                         <ref refid="crea__influx_8m_1ab9820e0c2b1ec444c369e5ba77827df6" kindref="member">trovato</ref> = 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="crea__influx_8m_1a4ef89096a50d152e533ee51aca1c5189" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type></type>
+        <definition>influx</definition>
+        <argsstring>(1, 1:2)=0</argsstring>
+        <name>influx</name>
+        <param>
+          <type>1</type>
+        </param>
+        <param>
+          <type>1:2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="crea__influx_8m_1a275d5adacb8e442c595845d6ed25e27a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>if influx</definition>
+        <argsstring>(1, 1)&gt;0%%%for i</argsstring>
+        <name>influx</name>
+        <param>
+          <type>1</type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m" line="92"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="crea__influx_8m_1a9e9d25cb3f9488c7e910885a0eed2ffa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[influx]<sp/>=<sp/><ref refid="inizializzatore___a_c_s_8m_1aedefd8a9b5b6248834cd58472da4be7d" kindref="member">crea_influx</ref>(<ref refid="crea__concentrazioni__iniziali_8m_1a409d61ee8298ee18e20b19b5bd3f7abc" kindref="member">concentrazioni_iniziali</ref>)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">%</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[influx]<sp/>=<sp/><ref refid="inizializzatore___a_c_s_8m_1aedefd8a9b5b6248834cd58472da4be7d" kindref="member">crea_influx</ref>(<ref refid="crea__concentrazioni__iniziali_8m_1a409d61ee8298ee18e20b19b5bd3f7abc" kindref="member">concentrazioni_iniziali</ref>)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">for<sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=1:length(<ref refid="crea__concentrazioni__iniziali_8m_1a409d61ee8298ee18e20b19b5bd3f7abc" kindref="member">concentrazioni_iniziali</ref>)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,1)=i;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>(i,2)=<ref refid="crea__concentrazioni__iniziali_8m_1a409d61ee8298ee18e20b19b5bd3f7abc" kindref="member">concentrazioni_iniziali</ref>(i)/<ref refid="general_concentration_over_threshold_8m_1a576bebae86b11914280920c448def53d" kindref="member">sum</ref>(<ref refid="crea__concentrazioni__iniziali_8m_1a409d61ee8298ee18e20b19b5bd3f7abc" kindref="member">concentrazioni_iniziali</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="crea__influx_8m_1a8f47e0001258b78994326e2d07d7c51d" refkind="member"><highlight class="normal">for<sp/><ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref><sp/>=<sp/>length(concentrazioni_iniziali):-1:1</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref><sp/>(<ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>,2)==0</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>(j,:)=[];</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="44" refid="crea__influx_8m_1a354e9aa3d0786bab7f2475c58693017d" refkind="member"><highlight class="normal">%<sp/><ref refid="crea__concentrazioni__iniziali_8m_1a776a9a06b8375875869043079a11ba0c" kindref="member">tot_species</ref><sp/>=<sp/>length(<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>(:,1));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">%<sp/><ref refid="lancia__inizializzatore__acs_8m_1adc12f688ec66254762f4bdd2ce8c73df" kindref="member">switch</ref><sp/>scelta_influx</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/>%casuale</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/>case<sp/>1</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="crea__influx_8m_1a6d872cdbb63424cff04a431f8c23cb99" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a6d872cdbb63424cff04a431f8c23cb99" kindref="member">species_to_delete</ref><sp/>=<sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(ratio_influx*<ref refid="crea__concentrazioni__iniziali_8m_1a776a9a06b8375875869043079a11ba0c" kindref="member">tot_species</ref>);</highlight></codeline>
+<codeline lineno="54" refid="crea__influx_8m_1ac8f034c683f5b66572af8149f27da7e0" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a529ab6e60f79d401d9fcbab38ef5c25b" kindref="member">species_to_keep</ref><sp/>=<sp/>tot_species<sp/>-<sp/><ref refid="crea__concentrazioni__iniziali_8m_1a6d872cdbb63424cff04a431f8c23cb99" kindref="member">species_to_delete</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="56" refid="crea__influx_8m_1a6f6ccfcf58b31cb6412107d9d5281426" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:<ref refid="crea__concentrazioni__iniziali_8m_1a529ab6e60f79d401d9fcbab38ef5c25b" kindref="member">species_to_keep</ref></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1ab9820e0c2b1ec444c369e5ba77827df6" kindref="member">trovato</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="58" refid="crea__influx_8m_1ab9820e0c2b1ec444c369e5ba77827df6" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>while<sp/>trovato<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>(i,:)=firing_disk(ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*tot_species),:);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="general_concentration_over_threshold_8m_1a576bebae86b11914280920c448def53d" kindref="member">sum</ref>(<ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>(i,1)==<ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>(:,1))==1</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trovato<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="65" refid="crea__influx_8m_1af0b70072788ca3a1d140d4708f054ad0" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>influx=sort(influx);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/>%casuale<sp/>tenendo<sp/>i<sp/>polimeri<sp/>fino<sp/><ref refid="conc_analysis_8m_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref><sp/><ref refid="crea__influx_8m_1a984d293145d85a936f430c0990316e51" kindref="member">lunghezza</ref><sp/><ref refid="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref><sp/>e<sp/>poi<sp/>ne<sp/>toglie<sp/>l&apos;<ref refid="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>%</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/>case<sp/>2</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">%<sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="crea__influx_8m_1a3749709d4cc2c50b5107d802173fb144" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a954c3e86b303e7b5ff41a314b0e845db" kindref="member">remaining_species</ref><sp/>=<sp/>tot_species;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>influx(1,1:2)=0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=1:tot_species</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>firing_disk(i,2)&lt;=lunghezza_max_influx</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>influx(i,:)=firing_disk(i,:);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a954c3e86b303e7b5ff41a314b0e845db" kindref="member">remaining_species</ref><sp/>=<sp/><ref refid="crea__concentrazioni__iniziali_8m_1a954c3e86b303e7b5ff41a314b0e845db" kindref="member">remaining_species</ref>-1;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>species_to_delete<sp/>=<sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(ratio_influx*remaining_species);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a529ab6e60f79d401d9fcbab38ef5c25b" kindref="member">species_to_keep</ref><sp/>=<sp/>remaining_species<sp/>-<sp/>species_to_delete;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>influx(1,1)&gt;0</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>length(influx(:,1))+1:length(influx(:,1))+<ref refid="crea__concentrazioni__iniziali_8m_1a529ab6e60f79d401d9fcbab38ef5c25b" kindref="member">species_to_keep</ref></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trovato<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>while<sp/>trovato<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>influx(i,:)=firing_disk(ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*tot_species),:);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="general_concentration_over_threshold_8m_1a576bebae86b11914280920c448def53d" kindref="member">sum</ref>(influx(i,1)==influx(:,1))==1</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trovato<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>influx=sort(influx);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>influx<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>influx<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108" refid="crea__influx_8m_1a984d293145d85a936f430c0990316e51" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/>%proporzionale<sp/>alla<sp/><ref refid="crea__influx_8m_1a984d293145d85a936f430c0990316e51" kindref="member">lunghezza</ref>,<sp/>conservando<sp/>i<sp/>monomeri</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/>case<sp/>3</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">%<sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx.m"/>
+  </compounddef>
+</doxygen>

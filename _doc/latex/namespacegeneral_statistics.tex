@@ -1,0 +1,1188 @@
+\hypertarget{namespacegeneral_statistics}{\section{general\-Statistics \-Namespace \-Reference}
+\label{namespacegeneral_statistics}\index{general\-Statistics@{general\-Statistics}}
+}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa46cfad394454af6b0edb80b804912c4}{init\-Time} = time.\-time()
+\item 
+list \hyperlink{namespacegeneral_statistics_a6f9e03e2d193c637dbe6f1f499a2f2ca}{\-Str\-Path} = sys.\-argv\mbox{[}1\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a155d64c28850cab0f82a1476f73c376d}{threshold} = float(sys.\-argv\mbox{[}2\mbox{]})
+\item 
+list \hyperlink{namespacegeneral_statistics_ab5f0084f0bffc62955b6478be2d9c9b2}{single\-Graph\-Creation} = sys.\-argv\mbox{[}3\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_acfada06fea0c10e3f1eea8b9cdde37e3}{species\-To\-Observe} = np.\-array(\mbox{[}\mbox{[}1,2,3,4\mbox{]}\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aab694ae45f6a40a105eee68bffad9bc2}{tmp\-Dirs} = sort(os.\-listdir(\hyperlink{namespacegeneral_statistics_a6f9e03e2d193c637dbe6f1f499a2f2ca}{\-Str\-Path}))
+\item 
+int \hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples} = 0
+\item 
+int \hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders} = 0
+\item 
+string \hyperlink{namespacegeneral_statistics_abb8208696dc18d1afb27e8c01a0c0a58}{species\-Files\-In\-This\-Sim} = 'species\-\_\-$\ast$'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa0ecc1dfa89ff9c9f241affd61ada255}{speciesfileslist} = sorted(glob.\-glob(\hyperlink{namespacegeneral_statistics_abb8208696dc18d1afb27e8c01a0c0a58}{species\-Files\-In\-This\-Sim}))
+\item 
+string \hyperlink{namespacegeneral_statistics_a84a4d4e74b9c4bceedf625a578c8ddec}{param\-File} = \char`\"{}acsm2s.\-conf\char`\"{}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a6d04dfb31ad3b33487a80fa7ba0ad5f2}{fid} = open(\hyperlink{namespacegeneral_statistics_a84a4d4e74b9c4bceedf625a578c8ddec}{param\-File}, '\hyperlink{_k_s_search_launcher_8m_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa452571aa8a33f2385c9129c6957624f}{str\-Line} = line.\-split('=')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a973d65dc8f8e3c00253543a466ec0482}{gens} = int(\hyperlink{namespacegeneral_statistics_aa452571aa8a33f2385c9129c6957624f}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab1c429f24e411b4f961a86e7a3f53cf1}{sims} = int(\hyperlink{namespacegeneral_statistics_aa452571aa8a33f2385c9129c6957624f}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a96c2985cd728ad6a5b6b5da7ae6d410e}{rcts} = int(\hyperlink{namespacegeneral_statistics_aa452571aa8a33f2385c9129c6957624f}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a87e08b22001c9743c83dc51acc3ca722}{nsec} = int(\hyperlink{namespacegeneral_statistics_aa452571aa8a33f2385c9129c6957624f}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7a09c1a430c7f4d0a7a65e70d54651a0}{overall\-Times} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a30aa594476bc94ecfb8620527263a5eb}{times\-Frames} = range(0,\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a4df112574861c37c17c7a7c842bdd4e0}{overall\-Liv\-Spe} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_afab120e1b028a2a67fde971820733047}{overall\-Mols} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a0377ba0e73cecde3c76c99eafd076d0a}{overall\-Cpx} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7752c6b40eefef937d0b9e67726c8f6c}{overall\-Cpx\-Copies} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_abef0fa683159357a302601cdd6580039}{overall\-Death} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ad59fdb746c72780e836c7a5fcf5bf619}{overallnew\-Species} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aca7914003b583bc82be1810eb5316e0e}{overallmax\-Amount} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa560b60037e1f655bcbcb7a8e2e243f9}{overallmin\-Amount} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a1ef9cf11c214d55261a4911942c1a1f4}{overallmean\-Amount} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7900c747a30a58e5997f39d32538c071}{overallmedian\-Amount} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a611c6d1d277f96f931197de89b125c88}{overallmax\-L} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_acfe28cce0c9a412ed8f1fa674038556e}{overallmin\-L} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa01431c8721236c3a11784408d939414}{overallmean\-L} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a1d0f3d0b25c12aa4a05ab9f543edf8c7}{overallmedian\-L} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ada024998af2caa201a94d7a571747842}{overall\-Loaded\-Species} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{n\-Folders}))
+\item 
+string \hyperlink{namespacegeneral_statistics_aab80dabdb4bf7e3d9600c16118a88f98}{ndn} = '\-\_\-0\-\_\-all\-Stat\-Results\-\_\-'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a467e98804f050cc4600b0705a664fea1}{newdir\-All\-Results} = os.\-path.\-join(os.\-curdir, \hyperlink{namespacegeneral_statistics_aab80dabdb4bf7e3d9600c16118a88f98}{ndn})
+\item 
+int \hyperlink{namespacegeneral_statistics_a5193f44043d24342fab95fb5d704a20f}{dir\-Count} = 0
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aae4999d25c34936e487c12f7b967e638}{rgens} = fl.\-zero\-Before\-Str\-Num(1, 1)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a67c2e718220e1b11a31ed770b5a97f94}{rsims} = fl.\-zero\-Before\-Str\-Num(1, 1)
+\item 
+string \hyperlink{namespacegeneral_statistics_a7ccf9a2d306ba41029a6c988dea19484}{ndn\-I\-I} = '\-\_\-\-\_\-10\-\_\-stastistic\-Files\-\_\-'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a862af869b2c09a9bcb32f2c159d387e8}{newdir} = os.\-path.\-join(os.\-curdir, \hyperlink{namespacegeneral_statistics_a7ccf9a2d306ba41029a6c988dea19484}{ndn\-I\-I})
+\item 
+string \hyperlink{namespacegeneral_statistics_adfaa9da42539b29b71a53ddb2da53688}{influx\-Species\-File} = '\-\_\-acsinflux.\-csv'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a709d2fc5d6a459dbc9c4a04023635a20}{fidflux} = open(\hyperlink{namespacegeneral_statistics_adfaa9da42539b29b71a53ddb2da53688}{influx\-Species\-File}, '\hyperlink{_k_s_search_launcher_8m_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+list \hyperlink{namespacegeneral_statistics_a5182af5b7ba2ac034a2be23a49197e8e}{index\-In} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a999cd7acfeb999ca44418154c38bd0f6}{timesfileslist} = sorted(glob.\-glob('times\-\_\-$\ast$'))
+\item 
+int \hyperlink{namespacegeneral_statistics_a6f463c2d878793522d2ac91f1aaa8bc2}{simulation\-I\-D} = 1
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a6cf3e4aec08e23edc7453e9dc795360e}{rrcts} = fl.\-zero\-Before\-Str\-Num(0, \hyperlink{namespacegeneral_statistics_a96c2985cd728ad6a5b6b5da7ae6d410e}{rcts})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a9f0e3da38cc8d932786debb2d495a13b}{rgen} = fl.\-zero\-Before\-Str\-Num(gen\-I\-D, \hyperlink{namespacegeneral_statistics_a973d65dc8f8e3c00253543a466ec0482}{gens})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a34b463634037dcf1dff3e5c03eb9d169}{species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T} = np.\-array(\mbox{[}\mbox{[}int(0), int(0), float(0), int(0)\mbox{]}\mbox{]})
+\item 
+int \hyperlink{namespacegeneral_statistics_a6b94bc4781eb4017a82145d7e6260e61}{species\-File\-I\-D} = 1
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a2dfa50767faeb2e6493518af2b17dec0}{rsim} = fl.\-zero\-Before\-Str\-Num(\hyperlink{namespacegeneral_statistics_a6f463c2d878793522d2ac91f1aaa8bc2}{simulation\-I\-D}, \hyperlink{namespacegeneral_statistics_ab1c429f24e411b4f961a86e7a3f53cf1}{sims})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ae6314a6ebdb4acc22a09fa68ca70565d}{orig\-Dir} = os.\-getcwd()
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a6267f224190a3e4cc4743c3c3710fe0a}{stat\-Dir} = os.\-path.\-join(os.\-curdir, \hyperlink{namespacegeneral_statistics_a862af869b2c09a9bcb32f2c159d387e8}{newdir})
+\item 
+string \hyperlink{namespacegeneral_statistics_a3395f09c196abc5195fcdd3d4e04b564}{out\-Fname\-Stat} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a54d5cb035107bb188a78056c1f62ef26}{statfiles\-Flag} = os.\-path.\-isfile(\hyperlink{namespacegeneral_statistics_a3395f09c196abc5195fcdd3d4e04b564}{out\-Fname\-Stat})
+\item 
+float \hyperlink{namespacegeneral_statistics_ad203c6e593d0dda94aa3de01f64438f1}{rct\-I\-Dshow} = 1.\-0
+\item 
+float \hyperlink{namespacegeneral_statistics_a18f6111b43faa560d8b42f29ec031377}{rct\-I\-Dshow\-No\-Save} = 1.\-0
+\item 
+int \hyperlink{namespacegeneral_statistics_a1d30aa03b17d083ca247d3fc75d12882}{rct\-I\-D} = 1
+\item 
+int \hyperlink{namespacegeneral_statistics_af0ac4abd35899cf6efdc0422a6d97c35}{previous\-Time} = 0
+\item 
+string \hyperlink{namespacegeneral_statistics_a9834b16ec1ee9c5bf0835e87b4c41108}{filename} = '01\-\_\-gillespie\-\_\-'
+\item 
+list \hyperlink{namespacegeneral_statistics_a2d95f5d313dd8da87f5b5be5b4326a03}{stat} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacegeneral_statistics_a717d9bbd4459fc3d0c6d358cdbdc3287}{species3\-Damount} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacegeneral_statistics_a49505b471d187739723d5212c07a7a0a}{species3\-D\-S\-I\-Z\-Eamount} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a900d9e27b938468e0d244dbb49d7111c}{conc\-Species\-Hystory} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{crea__e__controlla__i__catalizzatori_8m_ae113ea7f9e515a12ac4b5595c6faf61e}{size}(\hyperlink{namespacegeneral_statistics_acfada06fea0c10e3f1eea8b9cdde37e3}{species\-To\-Observe})))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ae67f4c2cba55845d070f6b0c783ad6fb}{conc\-Species\-Relative\-Hystory} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{crea__e__controlla__i__catalizzatori_8m_ae113ea7f9e515a12ac4b5595c6faf61e}{size}(\hyperlink{namespacegeneral_statistics_acfada06fea0c10e3f1eea8b9cdde37e3}{species\-To\-Observe})))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a0478def357ccc1565f0e5749605a7f7f}{tot\-Times} = np.\-zeros((\hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{samples},\hyperlink{crea__e__controlla__i__catalizzatori_8m_ae113ea7f9e515a12ac4b5595c6faf61e}{size}(\hyperlink{namespacegeneral_statistics_acfada06fea0c10e3f1eea8b9cdde37e3}{species\-To\-Observe})))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab65e4a0772acf69489feaf7a723dd18a}{strs} = string.\-split(root, '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab24b721d76ddf791f3097efe4da17080}{rct\-Number} = int(\hyperlink{namespacegeneral_statistics_ab65e4a0772acf69489feaf7a723dd18a}{strs}\mbox{[}len(\hyperlink{namespacegeneral_statistics_ab65e4a0772acf69489feaf7a723dd18a}{strs})-\/1\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_abc048a358e184e9fb3b68f18c254a5f0}{sng\-Sp\-File\-Fid} = open(sng\-Sp\-File, '\hyperlink{_k_s_search_launcher_8m_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a1ae65ffff7c2a91a33059633266d7b4c}{species\-Table} = sng\-Sp\-File\-Fid.\-readlines()
+\item 
+list \hyperlink{namespacegeneral_statistics_a3796f56e86ab8d479fbfeb68a5f67b01}{s\-I\-D} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacegeneral_statistics_af29ad6a22b3f3465af2fe01a8e83b7e5}{loaded\-Species} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ac869e7a93953327296c2c2840049f28b}{\-Kdeg} = array(\hyperlink{namespacegeneral_statistics_ac869e7a93953327296c2c2840049f28b}{\-Kdeg})
+\item 
+list \hyperlink{namespacegeneral_statistics_a2ddfeb15247fcd76c5799776c251d274}{sizes} = \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{namespacegeneral_statistics_a7f7cffe1bc7c0281cbf5c6c41582d50d}{seq\-I\-D} = 0
+\item 
+\hyperlink{namespacegeneral_statistics_a4403e02b267a59338d77f9a53f9893c2}{real\-Theshold} = \hyperlink{namespacegeneral_statistics_a155d64c28850cab0f82a1476f73c376d}{threshold}
+\item 
+int \hyperlink{namespacegeneral_statistics_a5d195c38bf488e92ee6250184c903b13}{tot\-Amount} = 0
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ad6743c4b3941567c5169875b866b00ea}{eq\-Len} = where(\hyperlink{namespacegeneral_statistics_a49505b471d187739723d5212c07a7a0a}{species3\-D\-S\-I\-Z\-Eamount}\mbox{[}\-:,0\mbox{]} == len(seq))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7b6c4c854f530c8f42d2e6cf8c76d40f}{eq\-Len\-L\-A\-S\-T} = where(\hyperlink{namespacegeneral_statistics_a34b463634037dcf1dff3e5c03eb9d169}{species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T}\mbox{[}\-:,0\mbox{]} == len(seq))
+\item 
+list \hyperlink{namespacegeneral_statistics_ad6f78bf5f1f1301baa9e3ecd82fe10c1}{sto\-Position} = \hyperlink{namespacegeneral_statistics_acfada06fea0c10e3f1eea8b9cdde37e3}{species\-To\-Observe}\mbox{[}0,\-:\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a72c855982b631ffb69610244f533662e}{\-M\-Sizes} = int(\hyperlink{crea__e__controlla__i__catalizzatori_8m_a6d9c24e62aee61f54530163edf684ae2}{max}(\hyperlink{namespacegeneral_statistics_a2ddfeb15247fcd76c5799776c251d274}{sizes}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a0e29f06b06068607b9235006b7b63367}{m\-Sizes} = int(min(\hyperlink{namespacegeneral_statistics_a2ddfeb15247fcd76c5799776c251d274}{sizes}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ad7622b488c1a4fa5f072b59f0bdd0f51}{av\-Sizes} = float(mean(\hyperlink{namespacegeneral_statistics_a2ddfeb15247fcd76c5799776c251d274}{sizes}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a1cadfe43529f9c53e77c9b1371463c0b}{me\-Sizes} = float(median(\hyperlink{namespacegeneral_statistics_a2ddfeb15247fcd76c5799776c251d274}{sizes}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a329d09d383e53e22ade6723b35e103d8}{overall\-Controlled\-Species} = float(\hyperlink{crea__influx_8m_a59a869fb2b28d56dacd91c09e1dffc8d}{sum}(\hyperlink{namespacegeneral_statistics_a900d9e27b938468e0d244dbb49d7111c}{conc\-Species\-Hystory}\mbox{[}\hyperlink{namespacegeneral_statistics_a6b94bc4781eb4017a82145d7e6260e61}{species\-File\-I\-D}-\/1,\-:\mbox{]}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a1aa6e06b015adb6e6c1462d23ac27fdc}{overall\-Controlled\-Species\-Over\-Tot\-Conc} = \hyperlink{namespacegeneral_statistics_a329d09d383e53e22ade6723b35e103d8}{overall\-Controlled\-Species}/float(\hyperlink{crea__influx_8m_a59a869fb2b28d56dacd91c09e1dffc8d}{sum}(amount\mbox{[}cut\-Pnt==0\mbox{]}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ae4d5f219fa4de0de3ad4968fd52b4e61}{overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc} = \hyperlink{namespacegeneral_statistics_a329d09d383e53e22ade6723b35e103d8}{overall\-Controlled\-Species}/float(\hyperlink{crea__influx_8m_a59a869fb2b28d56dacd91c09e1dffc8d}{sum}(amount\mbox{[}\-:\mbox{]}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ac380b2dd5c569341f6295d2e8e7337f0}{stat\-Controlled} = np.\-vstack(\mbox{[}\hyperlink{namespacegeneral_statistics_ac380b2dd5c569341f6295d2e8e7337f0}{stat\-Controlled},(\hyperlink{namespacegeneral_statistics_a329d09d383e53e22ade6723b35e103d8}{overall\-Controlled\-Species},\hyperlink{namespacegeneral_statistics_a1aa6e06b015adb6e6c1462d23ac27fdc}{overall\-Controlled\-Species\-Over\-Tot\-Conc},\hyperlink{namespacegeneral_statistics_ae4d5f219fa4de0de3ad4968fd52b4e61}{overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc})\mbox{]})
+\item 
+string \hyperlink{namespacegeneral_statistics_a4f197037332b3c3891277d8becc9fb92}{final\-Stat\-Dir} = '\-\_\-\-\_\-10\-\_\-stastistic\-Files\-\_\-'
+\item 
+\hyperlink{namespacegeneral_statistics_ab0b7c4a5bea76a8e43a176a8438cdb81}{species3\-D\-No\-Influx} = \hyperlink{namespacegeneral_statistics_a717d9bbd4459fc3d0c6d358cdbdc3287}{species3\-Damount}
+\item 
+\hyperlink{namespacegeneral_statistics_a16af43c0053996886f2c1f6f0d99fae2}{species3\-D\-S\-I\-Z\-Eno\-Influx} = \hyperlink{namespacegeneral_statistics_a49505b471d187739723d5212c07a7a0a}{species3\-D\-S\-I\-Z\-Eamount}
+\item 
+string \hyperlink{namespacegeneral_statistics_af956e5e24f6fb8519c5142bd589caeca}{out\-Fname3\-D\-Size} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+string \hyperlink{namespacegeneral_statistics_a0f53a86c9390e90115eaa38967ac1eab}{out\-Fname3\-D\-Size\-Grouped} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+string \hyperlink{namespacegeneral_statistics_a41b8a01562c7b02335cd9693c3e23742}{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+string \hyperlink{namespacegeneral_statistics_ade201b7fa63723879eab1912ec6e0f48}{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-Ttot} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a5db80fc99086fc28f22bf3c86c99ea41}{save\-File\-Stat} = open(\hyperlink{namespacegeneral_statistics_a3395f09c196abc5195fcdd3d4e04b564}{out\-Fname\-Stat}, 'w')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aab92303ab2917a1f41abe3a499f353dc}{save\-File3\-Dsize} = open(\hyperlink{namespacegeneral_statistics_af956e5e24f6fb8519c5142bd589caeca}{out\-Fname3\-D\-Size}, 'w')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_acebe9590443db7047d11646821848b6c}{save\-File3\-Dsize\-G\-R} = open(\hyperlink{namespacegeneral_statistics_a0f53a86c9390e90115eaa38967ac1eab}{out\-Fname3\-D\-Size\-Grouped}, 'w')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7dff4431bede759c68f27cb8b8ca3030}{save\-File3\-Dsize\-G\-R\-L\-A\-S\-T} = open(\hyperlink{namespacegeneral_statistics_a41b8a01562c7b02335cd9693c3e23742}{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T}, 'w')
+\item 
+string \hyperlink{namespacegeneral_statistics_aa2ed0468341b598ff719c6a531cd44c1}{out\-Fname\-Stat\-To\-Observe} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+string \hyperlink{namespacegeneral_statistics_a26991f5cc2efbf935f14d32cea1991fc}{out\-Fname\-To\-Observe} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+string \hyperlink{namespacegeneral_statistics_a208835711455a9a3ef08807b9d561de5}{out\-Fname\-Ratio\-To\-Observe} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a6d34190172987c2f4683421687406e59}{save\-File\-Stat\-Keep\-In\-Eye} = open(\hyperlink{namespacegeneral_statistics_aa2ed0468341b598ff719c6a531cd44c1}{out\-Fname\-Stat\-To\-Observe}, 'w')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_acdda9c45b9c93c48ec480c6aeb1a5f57}{save\-File\-Keep\-In\-Eye} = open(\hyperlink{namespacegeneral_statistics_a26991f5cc2efbf935f14d32cea1991fc}{out\-Fname\-To\-Observe}, 'w')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ad9c5a196f37842caca2ecf19f8f1c6db}{save\-File\-Ratio\-Keep\-In\-Eye} = open(\hyperlink{namespacegeneral_statistics_a208835711455a9a3ef08807b9d561de5}{out\-Fname\-Ratio\-To\-Observe}, 'w')
+\item 
+string \hyperlink{namespacegeneral_statistics_a2b6dc22bc04220d81b7bb62826f0a5ad}{sng\-Stat\-File} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa6bcf857bdf3f6f2f12ca093f0e59297}{sng\-Stat\-File\-Fid} = open(\hyperlink{namespacegeneral_statistics_a2b6dc22bc04220d81b7bb62826f0a5ad}{sng\-Stat\-File}, '\hyperlink{_k_s_search_launcher_8m_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+int \hyperlink{namespacegeneral_statistics_aabdf31c148d67f609f1ba9a84c9239a6}{lines\-I\-D} = 0
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a2755d118509228a47dd95be4a18734bb}{\-Time} = float(tmp\-Time)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a3d0e4581ae576e909d1449f0fe6ce4ec}{\-Liv\-Spe} = int(tmp\-Liv\-Spe)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_afdf7a7822139d1447506bf98127d29d1}{\-Mols} = float(tmp\-Mols)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_adf189f2548701e50989d743b810b998d}{\-Death} = int(tmp\-Death)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a0418b52e2bcb77390b50c70b94197f48}{\-New\-S} = int(tmp\-New\-S)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a8c7eaceb16faabc2452eb6ec26a244ce}{\-Max\-A} = float(tmp\-Max\-A)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_af6172dcd5abbc1704a9159c48df2627c}{\-Min\-A} = float(tmp\-Min\-A)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7401b301b0d33e936b080290d6c24800}{\-Mean\-A} = float(tmp\-Mean\-A)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab5588d21a923247b4daefa52d179fca5}{\-Median\-A} = float(tmp\-Median\-A)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a01c3b02ff04ff7cd0ac095d94ce2158c}{\-Cpx} = int(tmp\-Cpx)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab0724b4ad6530b45535743fb7939fd5a}{\-Cpx\-Copies} = float(tmp\-Cpx\-Copies)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a06985566d39675323e33de90bd0a73d7}{\-Max\-L} = int(tmp\-Max\-L)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a9d940b683251a6dc9ff0313a5f931da1}{\-Min\-L} = int(tmp\-Min\-L)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab88669192815a1e37e03baefc3417e75}{\-Mean\-L} = float(tmp\-Mean\-L)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a3c165f47efb809460b0169ceb049ed52}{\-Median\-L} = float(tmp\-Median\-L)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a6b5cf2698396af31b36f7dbd4743164a}{loaded\-Conc} = float(tmp\-Loaded\-Conc)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a3ce9d5db09e5f3011e0b7b2375b4e702}{statfileslast\-F\-I\-D} = open(\hyperlink{namespacegeneral_statistics_a41b8a01562c7b02335cd9693c3e23742}{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T}, '\hyperlink{_k_s_search_launcher_8m_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa828d0bb88c0d1db3d8477b2452d8e25}{norm\-Times} = np.\-mean(\hyperlink{namespacegeneral_statistics_a7a09c1a430c7f4d0a7a65e70d54651a0}{overall\-Times},1)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aed3e07509d7b31285bf3975023e243e1}{norm\-Times\-Std} = np.\-std(\hyperlink{namespacegeneral_statistics_a7a09c1a430c7f4d0a7a65e70d54651a0}{overall\-Times},1)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a9693505ac595a3847a5d258750c5b115}{norm\-Y} = np.\-mean(\hyperlink{namespacegeneral_statistics_a4df112574861c37c17c7a7c842bdd4e0}{overall\-Liv\-Spe},1)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab775e3e84f49c48bb285c0713d55a6cd}{norm\-Ystd} = np.\-std(\hyperlink{namespacegeneral_statistics_a4df112574861c37c17c7a7c842bdd4e0}{overall\-Liv\-Spe},1)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aeb767013d3dae060634c685e388ffd5c}{end\-Time} = time.\-time()
+\item 
+int \hyperlink{namespacegeneral_statistics_ac4f1304faada68628850abb2e6101b10}{minutes} = 60
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{namespacegeneral_statistics_ad7622b488c1a4fa5f072b59f0bdd0f51}{\index{general\-Statistics@{general\-Statistics}!av\-Sizes@{av\-Sizes}}
+\index{av\-Sizes@{av\-Sizes}!generalStatistics@{general\-Statistics}}
+\subsubsection[{av\-Sizes}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::av\-Sizes} = float(mean({\bf sizes}))}}\label{namespacegeneral_statistics_ad7622b488c1a4fa5f072b59f0bdd0f51}
+
+
+\-Definition at line 450 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a900d9e27b938468e0d244dbb49d7111c}{\index{general\-Statistics@{general\-Statistics}!conc\-Species\-Hystory@{conc\-Species\-Hystory}}
+\index{conc\-Species\-Hystory@{conc\-Species\-Hystory}!generalStatistics@{general\-Statistics}}
+\subsubsection[{conc\-Species\-Hystory}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::conc\-Species\-Hystory} = np.\-zeros(({\bf samples},{\bf size}({\bf species\-To\-Observe})))}}\label{namespacegeneral_statistics_a900d9e27b938468e0d244dbb49d7111c}
+
+
+\-Definition at line 330 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ae67f4c2cba55845d070f6b0c783ad6fb}{\index{general\-Statistics@{general\-Statistics}!conc\-Species\-Relative\-Hystory@{conc\-Species\-Relative\-Hystory}}
+\index{conc\-Species\-Relative\-Hystory@{conc\-Species\-Relative\-Hystory}!generalStatistics@{general\-Statistics}}
+\subsubsection[{conc\-Species\-Relative\-Hystory}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::conc\-Species\-Relative\-Hystory} = np.\-zeros(({\bf samples},{\bf size}({\bf species\-To\-Observe})))}}\label{namespacegeneral_statistics_ae67f4c2cba55845d070f6b0c783ad6fb}
+
+
+\-Definition at line 331 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a01c3b02ff04ff7cd0ac095d94ce2158c}{\index{general\-Statistics@{general\-Statistics}!\-Cpx@{\-Cpx}}
+\index{\-Cpx@{\-Cpx}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Cpx}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Cpx} = int(tmp\-Cpx)}}\label{namespacegeneral_statistics_a01c3b02ff04ff7cd0ac095d94ce2158c}
+
+
+\-Definition at line 646 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ab0724b4ad6530b45535743fb7939fd5a}{\index{general\-Statistics@{general\-Statistics}!\-Cpx\-Copies@{\-Cpx\-Copies}}
+\index{\-Cpx\-Copies@{\-Cpx\-Copies}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Cpx\-Copies}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Cpx\-Copies} = float(tmp\-Cpx\-Copies)}}\label{namespacegeneral_statistics_ab0724b4ad6530b45535743fb7939fd5a}
+
+
+\-Definition at line 647 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_adf189f2548701e50989d743b810b998d}{\index{general\-Statistics@{general\-Statistics}!\-Death@{\-Death}}
+\index{\-Death@{\-Death}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Death}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Death} = int(tmp\-Death)}}\label{namespacegeneral_statistics_adf189f2548701e50989d743b810b998d}
+
+
+\-Definition at line 640 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a5193f44043d24342fab95fb5d704a20f}{\index{general\-Statistics@{general\-Statistics}!dir\-Count@{dir\-Count}}
+\index{dir\-Count@{dir\-Count}!generalStatistics@{general\-Statistics}}
+\subsubsection[{dir\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::dir\-Count} = 0}}\label{namespacegeneral_statistics_a5193f44043d24342fab95fb5d704a20f}
+
+
+\-Definition at line 213 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aeb767013d3dae060634c685e388ffd5c}{\index{general\-Statistics@{general\-Statistics}!end\-Time@{end\-Time}}
+\index{end\-Time@{end\-Time}!generalStatistics@{general\-Statistics}}
+\subsubsection[{end\-Time}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::end\-Time} = time.\-time()}}\label{namespacegeneral_statistics_aeb767013d3dae060634c685e388ffd5c}
+
+
+\-Definition at line 826 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ad6743c4b3941567c5169875b866b00ea}{\index{general\-Statistics@{general\-Statistics}!eq\-Len@{eq\-Len}}
+\index{eq\-Len@{eq\-Len}!generalStatistics@{general\-Statistics}}
+\subsubsection[{eq\-Len}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::eq\-Len} = where({\bf species3\-D\-S\-I\-Z\-Eamount}\mbox{[}\-:,0\mbox{]} == len(seq))}}\label{namespacegeneral_statistics_ad6743c4b3941567c5169875b866b00ea}
+
+
+\-Definition at line 400 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a7b6c4c854f530c8f42d2e6cf8c76d40f}{\index{general\-Statistics@{general\-Statistics}!eq\-Len\-L\-A\-S\-T@{eq\-Len\-L\-A\-S\-T}}
+\index{eq\-Len\-L\-A\-S\-T@{eq\-Len\-L\-A\-S\-T}!generalStatistics@{general\-Statistics}}
+\subsubsection[{eq\-Len\-L\-A\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::eq\-Len\-L\-A\-S\-T} = where({\bf species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T}\mbox{[}\-:,0\mbox{]} == len(seq))}}\label{namespacegeneral_statistics_a7b6c4c854f530c8f42d2e6cf8c76d40f}
+
+
+\-Definition at line 418 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a6d04dfb31ad3b33487a80fa7ba0ad5f2}{\index{general\-Statistics@{general\-Statistics}!fid@{fid}}
+\index{fid@{fid}!generalStatistics@{general\-Statistics}}
+\subsubsection[{fid}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::fid} = open({\bf param\-File}, '{\bf r}')}}\label{namespacegeneral_statistics_a6d04dfb31ad3b33487a80fa7ba0ad5f2}
+
+
+\-Definition at line 156 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a709d2fc5d6a459dbc9c4a04023635a20}{\index{general\-Statistics@{general\-Statistics}!fidflux@{fidflux}}
+\index{fidflux@{fidflux}!generalStatistics@{general\-Statistics}}
+\subsubsection[{fidflux}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::fidflux} = open({\bf influx\-Species\-File}, '{\bf r}')}}\label{namespacegeneral_statistics_a709d2fc5d6a459dbc9c4a04023635a20}
+
+
+\-Definition at line 240 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a9834b16ec1ee9c5bf0835e87b4c41108}{\index{general\-Statistics@{general\-Statistics}!filename@{filename}}
+\index{filename@{filename}!generalStatistics@{general\-Statistics}}
+\subsubsection[{filename}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::filename} = '01\-\_\-gillespie\-\_\-'}}\label{namespacegeneral_statistics_a9834b16ec1ee9c5bf0835e87b4c41108}
+
+
+\-Definition at line 295 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a4f197037332b3c3891277d8becc9fb92}{\index{general\-Statistics@{general\-Statistics}!final\-Stat\-Dir@{final\-Stat\-Dir}}
+\index{final\-Stat\-Dir@{final\-Stat\-Dir}!generalStatistics@{general\-Statistics}}
+\subsubsection[{final\-Stat\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::final\-Stat\-Dir} = '\-\_\-\-\_\-10\-\_\-stastistic\-Files\-\_\-'}}\label{namespacegeneral_statistics_a4f197037332b3c3891277d8becc9fb92}
+
+
+\-Definition at line 524 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a973d65dc8f8e3c00253543a466ec0482}{\index{general\-Statistics@{general\-Statistics}!gens@{gens}}
+\index{gens@{gens}!generalStatistics@{general\-Statistics}}
+\subsubsection[{gens}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::gens} = int({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{namespacegeneral_statistics_a973d65dc8f8e3c00253543a466ec0482}
+
+
+\-Definition at line 164 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a5182af5b7ba2ac034a2be23a49197e8e}{\index{general\-Statistics@{general\-Statistics}!index\-In@{index\-In}}
+\index{index\-In@{index\-In}!generalStatistics@{general\-Statistics}}
+\subsubsection[{index\-In}]{\setlength{\rightskip}{0pt plus 5cm}list {\bf general\-Statistics\-::index\-In} = \mbox{[}$\,$\mbox{]}}}\label{namespacegeneral_statistics_a5182af5b7ba2ac034a2be23a49197e8e}
+
+
+\-Definition at line 241 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_adfaa9da42539b29b71a53ddb2da53688}{\index{general\-Statistics@{general\-Statistics}!influx\-Species\-File@{influx\-Species\-File}}
+\index{influx\-Species\-File@{influx\-Species\-File}!generalStatistics@{general\-Statistics}}
+\subsubsection[{influx\-Species\-File}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::influx\-Species\-File} = '\-\_\-acsinflux.\-csv'}}\label{namespacegeneral_statistics_adfaa9da42539b29b71a53ddb2da53688}
+
+
+\-Definition at line 238 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aa46cfad394454af6b0edb80b804912c4}{\index{general\-Statistics@{general\-Statistics}!init\-Time@{init\-Time}}
+\index{init\-Time@{init\-Time}!generalStatistics@{general\-Statistics}}
+\subsubsection[{init\-Time}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::init\-Time} = time.\-time()}}\label{namespacegeneral_statistics_aa46cfad394454af6b0edb80b804912c4}
+
+
+\-Definition at line 102 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ac869e7a93953327296c2c2840049f28b}{\index{general\-Statistics@{general\-Statistics}!\-Kdeg@{\-Kdeg}}
+\index{\-Kdeg@{\-Kdeg}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Kdeg}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Kdeg} = array({\bf \-Kdeg})}}\label{namespacegeneral_statistics_ac869e7a93953327296c2c2840049f28b}
+
+
+\-Definition at line 368 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aabdf31c148d67f609f1ba9a84c9239a6}{\index{general\-Statistics@{general\-Statistics}!lines\-I\-D@{lines\-I\-D}}
+\index{lines\-I\-D@{lines\-I\-D}!generalStatistics@{general\-Statistics}}
+\subsubsection[{lines\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::lines\-I\-D} = 0}}\label{namespacegeneral_statistics_aabdf31c148d67f609f1ba9a84c9239a6}
+
+
+\-Definition at line 633 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a3d0e4581ae576e909d1449f0fe6ce4ec}{\index{general\-Statistics@{general\-Statistics}!\-Liv\-Spe@{\-Liv\-Spe}}
+\index{\-Liv\-Spe@{\-Liv\-Spe}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Liv\-Spe}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Liv\-Spe} = int(tmp\-Liv\-Spe)}}\label{namespacegeneral_statistics_a3d0e4581ae576e909d1449f0fe6ce4ec}
+
+
+\-Definition at line 638 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a6b5cf2698396af31b36f7dbd4743164a}{\index{general\-Statistics@{general\-Statistics}!loaded\-Conc@{loaded\-Conc}}
+\index{loaded\-Conc@{loaded\-Conc}!generalStatistics@{general\-Statistics}}
+\subsubsection[{loaded\-Conc}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::loaded\-Conc} = float(tmp\-Loaded\-Conc)}}\label{namespacegeneral_statistics_a6b5cf2698396af31b36f7dbd4743164a}
+
+
+\-Definition at line 652 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_af29ad6a22b3f3465af2fe01a8e83b7e5}{\index{general\-Statistics@{general\-Statistics}!loaded\-Species@{loaded\-Species}}
+\index{loaded\-Species@{loaded\-Species}!generalStatistics@{general\-Statistics}}
+\subsubsection[{loaded\-Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::loaded\-Species} = \mbox{[}$\,$\mbox{]}}}\label{namespacegeneral_statistics_af29ad6a22b3f3465af2fe01a8e83b7e5}
+
+
+\-Definition at line 356 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a8c7eaceb16faabc2452eb6ec26a244ce}{\index{general\-Statistics@{general\-Statistics}!\-Max\-A@{\-Max\-A}}
+\index{\-Max\-A@{\-Max\-A}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Max\-A}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Max\-A} = float(tmp\-Max\-A)}}\label{namespacegeneral_statistics_a8c7eaceb16faabc2452eb6ec26a244ce}
+
+
+\-Definition at line 642 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a06985566d39675323e33de90bd0a73d7}{\index{general\-Statistics@{general\-Statistics}!\-Max\-L@{\-Max\-L}}
+\index{\-Max\-L@{\-Max\-L}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Max\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Max\-L} = int(tmp\-Max\-L)}}\label{namespacegeneral_statistics_a06985566d39675323e33de90bd0a73d7}
+
+
+\-Definition at line 648 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a7401b301b0d33e936b080290d6c24800}{\index{general\-Statistics@{general\-Statistics}!\-Mean\-A@{\-Mean\-A}}
+\index{\-Mean\-A@{\-Mean\-A}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Mean\-A}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Mean\-A} = float(tmp\-Mean\-A)}}\label{namespacegeneral_statistics_a7401b301b0d33e936b080290d6c24800}
+
+
+\-Definition at line 644 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ab88669192815a1e37e03baefc3417e75}{\index{general\-Statistics@{general\-Statistics}!\-Mean\-L@{\-Mean\-L}}
+\index{\-Mean\-L@{\-Mean\-L}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Mean\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Mean\-L} = float(tmp\-Mean\-L)}}\label{namespacegeneral_statistics_ab88669192815a1e37e03baefc3417e75}
+
+
+\-Definition at line 650 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ab5588d21a923247b4daefa52d179fca5}{\index{general\-Statistics@{general\-Statistics}!\-Median\-A@{\-Median\-A}}
+\index{\-Median\-A@{\-Median\-A}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Median\-A}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Median\-A} = float(tmp\-Median\-A)}}\label{namespacegeneral_statistics_ab5588d21a923247b4daefa52d179fca5}
+
+
+\-Definition at line 645 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a3c165f47efb809460b0169ceb049ed52}{\index{general\-Statistics@{general\-Statistics}!\-Median\-L@{\-Median\-L}}
+\index{\-Median\-L@{\-Median\-L}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Median\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Median\-L} = float(tmp\-Median\-L)}}\label{namespacegeneral_statistics_a3c165f47efb809460b0169ceb049ed52}
+
+
+\-Definition at line 651 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a1cadfe43529f9c53e77c9b1371463c0b}{\index{general\-Statistics@{general\-Statistics}!me\-Sizes@{me\-Sizes}}
+\index{me\-Sizes@{me\-Sizes}!generalStatistics@{general\-Statistics}}
+\subsubsection[{me\-Sizes}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::me\-Sizes} = float(median({\bf sizes}))}}\label{namespacegeneral_statistics_a1cadfe43529f9c53e77c9b1371463c0b}
+
+
+\-Definition at line 451 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_af6172dcd5abbc1704a9159c48df2627c}{\index{general\-Statistics@{general\-Statistics}!\-Min\-A@{\-Min\-A}}
+\index{\-Min\-A@{\-Min\-A}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Min\-A}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Min\-A} = float(tmp\-Min\-A)}}\label{namespacegeneral_statistics_af6172dcd5abbc1704a9159c48df2627c}
+
+
+\-Definition at line 643 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a9d940b683251a6dc9ff0313a5f931da1}{\index{general\-Statistics@{general\-Statistics}!\-Min\-L@{\-Min\-L}}
+\index{\-Min\-L@{\-Min\-L}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Min\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Min\-L} = int(tmp\-Min\-L)}}\label{namespacegeneral_statistics_a9d940b683251a6dc9ff0313a5f931da1}
+
+
+\-Definition at line 649 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ac4f1304faada68628850abb2e6101b10}{\index{general\-Statistics@{general\-Statistics}!minutes@{minutes}}
+\index{minutes@{minutes}!generalStatistics@{general\-Statistics}}
+\subsubsection[{minutes}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::minutes} = 60}}\label{namespacegeneral_statistics_ac4f1304faada68628850abb2e6101b10}
+
+
+\-Definition at line 827 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_afdf7a7822139d1447506bf98127d29d1}{\index{general\-Statistics@{general\-Statistics}!\-Mols@{\-Mols}}
+\index{\-Mols@{\-Mols}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Mols}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Mols} = float(tmp\-Mols)}}\label{namespacegeneral_statistics_afdf7a7822139d1447506bf98127d29d1}
+
+
+\-Definition at line 639 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a72c855982b631ffb69610244f533662e}{\index{general\-Statistics@{general\-Statistics}!\-M\-Sizes@{\-M\-Sizes}}
+\index{\-M\-Sizes@{\-M\-Sizes}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-M\-Sizes}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-M\-Sizes} = int({\bf max}({\bf sizes}))}}\label{namespacegeneral_statistics_a72c855982b631ffb69610244f533662e}
+
+
+\-Definition at line 448 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a0e29f06b06068607b9235006b7b63367}{\index{general\-Statistics@{general\-Statistics}!m\-Sizes@{m\-Sizes}}
+\index{m\-Sizes@{m\-Sizes}!generalStatistics@{general\-Statistics}}
+\subsubsection[{m\-Sizes}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::m\-Sizes} = int(min({\bf sizes}))}}\label{namespacegeneral_statistics_a0e29f06b06068607b9235006b7b63367}
+
+
+\-Definition at line 449 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aab80dabdb4bf7e3d9600c16118a88f98}{\index{general\-Statistics@{general\-Statistics}!ndn@{ndn}}
+\index{ndn@{ndn}!generalStatistics@{general\-Statistics}}
+\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::ndn} = '\-\_\-0\-\_\-all\-Stat\-Results\-\_\-'}}\label{namespacegeneral_statistics_aab80dabdb4bf7e3d9600c16118a88f98}
+
+
+\-Definition at line 204 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a7ccf9a2d306ba41029a6c988dea19484}{\index{general\-Statistics@{general\-Statistics}!ndn\-I\-I@{ndn\-I\-I}}
+\index{ndn\-I\-I@{ndn\-I\-I}!generalStatistics@{general\-Statistics}}
+\subsubsection[{ndn\-I\-I}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::ndn\-I\-I} = '\-\_\-\-\_\-10\-\_\-stastistic\-Files\-\_\-'}}\label{namespacegeneral_statistics_a7ccf9a2d306ba41029a6c988dea19484}
+
+
+\-Definition at line 229 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a862af869b2c09a9bcb32f2c159d387e8}{\index{general\-Statistics@{general\-Statistics}!newdir@{newdir}}
+\index{newdir@{newdir}!generalStatistics@{general\-Statistics}}
+\subsubsection[{newdir}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::newdir} = os.\-path.\-join(os.\-curdir, {\bf ndn\-I\-I})}}\label{namespacegeneral_statistics_a862af869b2c09a9bcb32f2c159d387e8}
+
+
+\-Definition at line 230 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a467e98804f050cc4600b0705a664fea1}{\index{general\-Statistics@{general\-Statistics}!newdir\-All\-Results@{newdir\-All\-Results}}
+\index{newdir\-All\-Results@{newdir\-All\-Results}!generalStatistics@{general\-Statistics}}
+\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::newdir\-All\-Results} = os.\-path.\-join(os.\-curdir, {\bf ndn})}}\label{namespacegeneral_statistics_a467e98804f050cc4600b0705a664fea1}
+
+
+\-Definition at line 205 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a0418b52e2bcb77390b50c70b94197f48}{\index{general\-Statistics@{general\-Statistics}!\-New\-S@{\-New\-S}}
+\index{\-New\-S@{\-New\-S}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-New\-S}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-New\-S} = int(tmp\-New\-S)}}\label{namespacegeneral_statistics_a0418b52e2bcb77390b50c70b94197f48}
+
+
+\-Definition at line 641 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{\index{general\-Statistics@{general\-Statistics}!n\-Folders@{n\-Folders}}
+\index{n\-Folders@{n\-Folders}!generalStatistics@{general\-Statistics}}
+\subsubsection[{n\-Folders}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::n\-Folders} = 0}}\label{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}
+
+
+\-Definition at line 137 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aa828d0bb88c0d1db3d8477b2452d8e25}{\index{general\-Statistics@{general\-Statistics}!norm\-Times@{norm\-Times}}
+\index{norm\-Times@{norm\-Times}!generalStatistics@{general\-Statistics}}
+\subsubsection[{norm\-Times}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::norm\-Times} = np.\-mean({\bf overall\-Times},1)}}\label{namespacegeneral_statistics_aa828d0bb88c0d1db3d8477b2452d8e25}
+
+
+\-Definition at line 721 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aed3e07509d7b31285bf3975023e243e1}{\index{general\-Statistics@{general\-Statistics}!norm\-Times\-Std@{norm\-Times\-Std}}
+\index{norm\-Times\-Std@{norm\-Times\-Std}!generalStatistics@{general\-Statistics}}
+\subsubsection[{norm\-Times\-Std}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::norm\-Times\-Std} = np.\-std({\bf overall\-Times},1)}}\label{namespacegeneral_statistics_aed3e07509d7b31285bf3975023e243e1}
+
+
+\-Definition at line 722 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a9693505ac595a3847a5d258750c5b115}{\index{general\-Statistics@{general\-Statistics}!norm\-Y@{norm\-Y}}
+\index{norm\-Y@{norm\-Y}!generalStatistics@{general\-Statistics}}
+\subsubsection[{norm\-Y}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::norm\-Y} = np.\-mean({\bf overall\-Liv\-Spe},1)}}\label{namespacegeneral_statistics_a9693505ac595a3847a5d258750c5b115}
+
+
+\-Definition at line 723 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ab775e3e84f49c48bb285c0713d55a6cd}{\index{general\-Statistics@{general\-Statistics}!norm\-Ystd@{norm\-Ystd}}
+\index{norm\-Ystd@{norm\-Ystd}!generalStatistics@{general\-Statistics}}
+\subsubsection[{norm\-Ystd}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::norm\-Ystd} = np.\-std({\bf overall\-Liv\-Spe},1)}}\label{namespacegeneral_statistics_ab775e3e84f49c48bb285c0713d55a6cd}
+
+
+\-Definition at line 724 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a87e08b22001c9743c83dc51acc3ca722}{\index{general\-Statistics@{general\-Statistics}!nsec@{nsec}}
+\index{nsec@{nsec}!generalStatistics@{general\-Statistics}}
+\subsubsection[{nsec}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::nsec} = int({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{namespacegeneral_statistics_a87e08b22001c9743c83dc51acc3ca722}
+
+
+\-Definition at line 170 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ae6314a6ebdb4acc22a09fa68ca70565d}{\index{general\-Statistics@{general\-Statistics}!orig\-Dir@{orig\-Dir}}
+\index{orig\-Dir@{orig\-Dir}!generalStatistics@{general\-Statistics}}
+\subsubsection[{orig\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::orig\-Dir} = os.\-getcwd()}}\label{namespacegeneral_statistics_ae6314a6ebdb4acc22a09fa68ca70565d}
+
+
+\-Definition at line 274 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_af956e5e24f6fb8519c5142bd589caeca}{\index{general\-Statistics@{general\-Statistics}!out\-Fname3\-D\-Size@{out\-Fname3\-D\-Size}}
+\index{out\-Fname3\-D\-Size@{out\-Fname3\-D\-Size}!generalStatistics@{general\-Statistics}}
+\subsubsection[{out\-Fname3\-D\-Size}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::out\-Fname3\-D\-Size} = '{\bf \-\_\-}'}}\label{namespacegeneral_statistics_af956e5e24f6fb8519c5142bd589caeca}
+
+
+\-Definition at line 564 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a0f53a86c9390e90115eaa38967ac1eab}{\index{general\-Statistics@{general\-Statistics}!out\-Fname3\-D\-Size\-Grouped@{out\-Fname3\-D\-Size\-Grouped}}
+\index{out\-Fname3\-D\-Size\-Grouped@{out\-Fname3\-D\-Size\-Grouped}!generalStatistics@{general\-Statistics}}
+\subsubsection[{out\-Fname3\-D\-Size\-Grouped}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::out\-Fname3\-D\-Size\-Grouped} = '{\bf \-\_\-}'}}\label{namespacegeneral_statistics_a0f53a86c9390e90115eaa38967ac1eab}
+
+
+\-Definition at line 565 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a41b8a01562c7b02335cd9693c3e23742}{\index{general\-Statistics@{general\-Statistics}!out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T@{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T}}
+\index{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T@{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T}!generalStatistics@{general\-Statistics}}
+\subsubsection[{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T} = '{\bf \-\_\-}'}}\label{namespacegeneral_statistics_a41b8a01562c7b02335cd9693c3e23742}
+
+
+\-Definition at line 566 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ade201b7fa63723879eab1912ec6e0f48}{\index{general\-Statistics@{general\-Statistics}!out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-Ttot@{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-Ttot}}
+\index{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-Ttot@{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-Ttot}!generalStatistics@{general\-Statistics}}
+\subsubsection[{out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-Ttot}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-Ttot} = '{\bf \-\_\-}'}}\label{namespacegeneral_statistics_ade201b7fa63723879eab1912ec6e0f48}
+
+
+\-Definition at line 567 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a208835711455a9a3ef08807b9d561de5}{\index{general\-Statistics@{general\-Statistics}!out\-Fname\-Ratio\-To\-Observe@{out\-Fname\-Ratio\-To\-Observe}}
+\index{out\-Fname\-Ratio\-To\-Observe@{out\-Fname\-Ratio\-To\-Observe}!generalStatistics@{general\-Statistics}}
+\subsubsection[{out\-Fname\-Ratio\-To\-Observe}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::out\-Fname\-Ratio\-To\-Observe} = '{\bf \-\_\-}'}}\label{namespacegeneral_statistics_a208835711455a9a3ef08807b9d561de5}
+
+
+\-Definition at line 594 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a3395f09c196abc5195fcdd3d4e04b564}{\index{general\-Statistics@{general\-Statistics}!out\-Fname\-Stat@{out\-Fname\-Stat}}
+\index{out\-Fname\-Stat@{out\-Fname\-Stat}!generalStatistics@{general\-Statistics}}
+\subsubsection[{out\-Fname\-Stat}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::out\-Fname\-Stat} = '{\bf \-\_\-}'}}\label{namespacegeneral_statistics_a3395f09c196abc5195fcdd3d4e04b564}
+
+
+\-Definition at line 276 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aa2ed0468341b598ff719c6a531cd44c1}{\index{general\-Statistics@{general\-Statistics}!out\-Fname\-Stat\-To\-Observe@{out\-Fname\-Stat\-To\-Observe}}
+\index{out\-Fname\-Stat\-To\-Observe@{out\-Fname\-Stat\-To\-Observe}!generalStatistics@{general\-Statistics}}
+\subsubsection[{out\-Fname\-Stat\-To\-Observe}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::out\-Fname\-Stat\-To\-Observe} = '{\bf \-\_\-}'}}\label{namespacegeneral_statistics_aa2ed0468341b598ff719c6a531cd44c1}
+
+
+\-Definition at line 592 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a26991f5cc2efbf935f14d32cea1991fc}{\index{general\-Statistics@{general\-Statistics}!out\-Fname\-To\-Observe@{out\-Fname\-To\-Observe}}
+\index{out\-Fname\-To\-Observe@{out\-Fname\-To\-Observe}!generalStatistics@{general\-Statistics}}
+\subsubsection[{out\-Fname\-To\-Observe}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::out\-Fname\-To\-Observe} = '{\bf \-\_\-}'}}\label{namespacegeneral_statistics_a26991f5cc2efbf935f14d32cea1991fc}
+
+
+\-Definition at line 593 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a329d09d383e53e22ade6723b35e103d8}{\index{general\-Statistics@{general\-Statistics}!overall\-Controlled\-Species@{overall\-Controlled\-Species}}
+\index{overall\-Controlled\-Species@{overall\-Controlled\-Species}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overall\-Controlled\-Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overall\-Controlled\-Species} = float({\bf sum}({\bf conc\-Species\-Hystory}\mbox{[}{\bf species\-File\-I\-D}-\/1,\-:\mbox{]}))}}\label{namespacegeneral_statistics_a329d09d383e53e22ade6723b35e103d8}
+
+
+\-Definition at line 468 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a1aa6e06b015adb6e6c1462d23ac27fdc}{\index{general\-Statistics@{general\-Statistics}!overall\-Controlled\-Species\-Over\-Tot\-Conc@{overall\-Controlled\-Species\-Over\-Tot\-Conc}}
+\index{overall\-Controlled\-Species\-Over\-Tot\-Conc@{overall\-Controlled\-Species\-Over\-Tot\-Conc}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overall\-Controlled\-Species\-Over\-Tot\-Conc}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overall\-Controlled\-Species\-Over\-Tot\-Conc} = {\bf overall\-Controlled\-Species}/float({\bf sum}(amount\mbox{[}cut\-Pnt==0\mbox{]}))}}\label{namespacegeneral_statistics_a1aa6e06b015adb6e6c1462d23ac27fdc}
+
+
+\-Definition at line 469 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ae4d5f219fa4de0de3ad4968fd52b4e61}{\index{general\-Statistics@{general\-Statistics}!overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc@{overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc}}
+\index{overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc@{overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc} = {\bf overall\-Controlled\-Species}/float({\bf sum}(amount\mbox{[}\-:\mbox{]}))}}\label{namespacegeneral_statistics_ae4d5f219fa4de0de3ad4968fd52b4e61}
+
+
+\-Definition at line 470 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a0377ba0e73cecde3c76c99eafd076d0a}{\index{general\-Statistics@{general\-Statistics}!overall\-Cpx@{overall\-Cpx}}
+\index{overall\-Cpx@{overall\-Cpx}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overall\-Cpx}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overall\-Cpx} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_a0377ba0e73cecde3c76c99eafd076d0a}
+
+
+\-Definition at line 188 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a7752c6b40eefef937d0b9e67726c8f6c}{\index{general\-Statistics@{general\-Statistics}!overall\-Cpx\-Copies@{overall\-Cpx\-Copies}}
+\index{overall\-Cpx\-Copies@{overall\-Cpx\-Copies}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overall\-Cpx\-Copies}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overall\-Cpx\-Copies} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_a7752c6b40eefef937d0b9e67726c8f6c}
+
+
+\-Definition at line 189 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_abef0fa683159357a302601cdd6580039}{\index{general\-Statistics@{general\-Statistics}!overall\-Death@{overall\-Death}}
+\index{overall\-Death@{overall\-Death}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overall\-Death}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overall\-Death} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_abef0fa683159357a302601cdd6580039}
+
+
+\-Definition at line 190 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a4df112574861c37c17c7a7c842bdd4e0}{\index{general\-Statistics@{general\-Statistics}!overall\-Liv\-Spe@{overall\-Liv\-Spe}}
+\index{overall\-Liv\-Spe@{overall\-Liv\-Spe}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overall\-Liv\-Spe}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overall\-Liv\-Spe} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_a4df112574861c37c17c7a7c842bdd4e0}
+
+
+\-Definition at line 186 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ada024998af2caa201a94d7a571747842}{\index{general\-Statistics@{general\-Statistics}!overall\-Loaded\-Species@{overall\-Loaded\-Species}}
+\index{overall\-Loaded\-Species@{overall\-Loaded\-Species}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overall\-Loaded\-Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overall\-Loaded\-Species} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_ada024998af2caa201a94d7a571747842}
+
+
+\-Definition at line 200 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aca7914003b583bc82be1810eb5316e0e}{\index{general\-Statistics@{general\-Statistics}!overallmax\-Amount@{overallmax\-Amount}}
+\index{overallmax\-Amount@{overallmax\-Amount}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overallmax\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overallmax\-Amount} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_aca7914003b583bc82be1810eb5316e0e}
+
+
+\-Definition at line 192 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a611c6d1d277f96f931197de89b125c88}{\index{general\-Statistics@{general\-Statistics}!overallmax\-L@{overallmax\-L}}
+\index{overallmax\-L@{overallmax\-L}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overallmax\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overallmax\-L} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_a611c6d1d277f96f931197de89b125c88}
+
+
+\-Definition at line 196 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a1ef9cf11c214d55261a4911942c1a1f4}{\index{general\-Statistics@{general\-Statistics}!overallmean\-Amount@{overallmean\-Amount}}
+\index{overallmean\-Amount@{overallmean\-Amount}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overallmean\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overallmean\-Amount} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_a1ef9cf11c214d55261a4911942c1a1f4}
+
+
+\-Definition at line 194 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aa01431c8721236c3a11784408d939414}{\index{general\-Statistics@{general\-Statistics}!overallmean\-L@{overallmean\-L}}
+\index{overallmean\-L@{overallmean\-L}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overallmean\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overallmean\-L} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_aa01431c8721236c3a11784408d939414}
+
+
+\-Definition at line 198 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a7900c747a30a58e5997f39d32538c071}{\index{general\-Statistics@{general\-Statistics}!overallmedian\-Amount@{overallmedian\-Amount}}
+\index{overallmedian\-Amount@{overallmedian\-Amount}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overallmedian\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overallmedian\-Amount} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_a7900c747a30a58e5997f39d32538c071}
+
+
+\-Definition at line 195 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a1d0f3d0b25c12aa4a05ab9f543edf8c7}{\index{general\-Statistics@{general\-Statistics}!overallmedian\-L@{overallmedian\-L}}
+\index{overallmedian\-L@{overallmedian\-L}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overallmedian\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overallmedian\-L} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_a1d0f3d0b25c12aa4a05ab9f543edf8c7}
+
+
+\-Definition at line 199 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aa560b60037e1f655bcbcb7a8e2e243f9}{\index{general\-Statistics@{general\-Statistics}!overallmin\-Amount@{overallmin\-Amount}}
+\index{overallmin\-Amount@{overallmin\-Amount}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overallmin\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overallmin\-Amount} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_aa560b60037e1f655bcbcb7a8e2e243f9}
+
+
+\-Definition at line 193 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_acfe28cce0c9a412ed8f1fa674038556e}{\index{general\-Statistics@{general\-Statistics}!overallmin\-L@{overallmin\-L}}
+\index{overallmin\-L@{overallmin\-L}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overallmin\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overallmin\-L} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_acfe28cce0c9a412ed8f1fa674038556e}
+
+
+\-Definition at line 197 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_afab120e1b028a2a67fde971820733047}{\index{general\-Statistics@{general\-Statistics}!overall\-Mols@{overall\-Mols}}
+\index{overall\-Mols@{overall\-Mols}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overall\-Mols}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overall\-Mols} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_afab120e1b028a2a67fde971820733047}
+
+
+\-Definition at line 187 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ad59fdb746c72780e836c7a5fcf5bf619}{\index{general\-Statistics@{general\-Statistics}!overallnew\-Species@{overallnew\-Species}}
+\index{overallnew\-Species@{overallnew\-Species}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overallnew\-Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overallnew\-Species} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_ad59fdb746c72780e836c7a5fcf5bf619}
+
+
+\-Definition at line 191 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a7a09c1a430c7f4d0a7a65e70d54651a0}{\index{general\-Statistics@{general\-Statistics}!overall\-Times@{overall\-Times}}
+\index{overall\-Times@{overall\-Times}!generalStatistics@{general\-Statistics}}
+\subsubsection[{overall\-Times}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::overall\-Times} = np.\-zeros(({\bf samples},{\bf n\-Folders}))}}\label{namespacegeneral_statistics_a7a09c1a430c7f4d0a7a65e70d54651a0}
+
+
+\-Definition at line 175 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a84a4d4e74b9c4bceedf625a578c8ddec}{\index{general\-Statistics@{general\-Statistics}!param\-File@{param\-File}}
+\index{param\-File@{param\-File}!generalStatistics@{general\-Statistics}}
+\subsubsection[{param\-File}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::param\-File} = \char`\"{}acsm2s.\-conf\char`\"{}}}\label{namespacegeneral_statistics_a84a4d4e74b9c4bceedf625a578c8ddec}
+
+
+\-Definition at line 153 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_af0ac4abd35899cf6efdc0422a6d97c35}{\index{general\-Statistics@{general\-Statistics}!previous\-Time@{previous\-Time}}
+\index{previous\-Time@{previous\-Time}!generalStatistics@{general\-Statistics}}
+\subsubsection[{previous\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::previous\-Time} = 0}}\label{namespacegeneral_statistics_af0ac4abd35899cf6efdc0422a6d97c35}
+
+
+\-Definition at line 286 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a1d30aa03b17d083ca247d3fc75d12882}{\index{general\-Statistics@{general\-Statistics}!rct\-I\-D@{rct\-I\-D}}
+\index{rct\-I\-D@{rct\-I\-D}!generalStatistics@{general\-Statistics}}
+\subsubsection[{rct\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::rct\-I\-D} = 1}}\label{namespacegeneral_statistics_a1d30aa03b17d083ca247d3fc75d12882}
+
+
+\-Definition at line 285 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ad203c6e593d0dda94aa3de01f64438f1}{\index{general\-Statistics@{general\-Statistics}!rct\-I\-Dshow@{rct\-I\-Dshow}}
+\index{rct\-I\-Dshow@{rct\-I\-Dshow}!generalStatistics@{general\-Statistics}}
+\subsubsection[{rct\-I\-Dshow}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf general\-Statistics\-::rct\-I\-Dshow} = 1.\-0}}\label{namespacegeneral_statistics_ad203c6e593d0dda94aa3de01f64438f1}
+
+
+\-Definition at line 283 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a18f6111b43faa560d8b42f29ec031377}{\index{general\-Statistics@{general\-Statistics}!rct\-I\-Dshow\-No\-Save@{rct\-I\-Dshow\-No\-Save}}
+\index{rct\-I\-Dshow\-No\-Save@{rct\-I\-Dshow\-No\-Save}!generalStatistics@{general\-Statistics}}
+\subsubsection[{rct\-I\-Dshow\-No\-Save}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf general\-Statistics\-::rct\-I\-Dshow\-No\-Save} = 1.\-0}}\label{namespacegeneral_statistics_a18f6111b43faa560d8b42f29ec031377}
+
+
+\-Definition at line 284 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ab24b721d76ddf791f3097efe4da17080}{\index{general\-Statistics@{general\-Statistics}!rct\-Number@{rct\-Number}}
+\index{rct\-Number@{rct\-Number}!generalStatistics@{general\-Statistics}}
+\subsubsection[{rct\-Number}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::rct\-Number} = int({\bf strs}\mbox{[}len({\bf strs})-\/1\mbox{]})}}\label{namespacegeneral_statistics_ab24b721d76ddf791f3097efe4da17080}
+
+
+\-Definition at line 338 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a96c2985cd728ad6a5b6b5da7ae6d410e}{\index{general\-Statistics@{general\-Statistics}!rcts@{rcts}}
+\index{rcts@{rcts}!generalStatistics@{general\-Statistics}}
+\subsubsection[{rcts}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::rcts} = int({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{namespacegeneral_statistics_a96c2985cd728ad6a5b6b5da7ae6d410e}
+
+
+\-Definition at line 168 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a4403e02b267a59338d77f9a53f9893c2}{\index{general\-Statistics@{general\-Statistics}!real\-Theshold@{real\-Theshold}}
+\index{real\-Theshold@{real\-Theshold}!generalStatistics@{general\-Statistics}}
+\subsubsection[{real\-Theshold}]{\setlength{\rightskip}{0pt plus 5cm}{\bf general\-Statistics\-::real\-Theshold} = {\bf threshold}}}\label{namespacegeneral_statistics_a4403e02b267a59338d77f9a53f9893c2}
+
+
+\-Definition at line 377 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a9f0e3da38cc8d932786debb2d495a13b}{\index{general\-Statistics@{general\-Statistics}!rgen@{rgen}}
+\index{rgen@{rgen}!generalStatistics@{general\-Statistics}}
+\subsubsection[{rgen}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::rgen} = fl.\-zero\-Before\-Str\-Num(gen\-I\-D, {\bf gens})}}\label{namespacegeneral_statistics_a9f0e3da38cc8d932786debb2d495a13b}
+
+
+\-Definition at line 265 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aae4999d25c34936e487c12f7b967e638}{\index{general\-Statistics@{general\-Statistics}!rgens@{rgens}}
+\index{rgens@{rgens}!generalStatistics@{general\-Statistics}}
+\subsubsection[{rgens}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::rgens} = fl.\-zero\-Before\-Str\-Num(1, 1)}}\label{namespacegeneral_statistics_aae4999d25c34936e487c12f7b967e638}
+
+
+\-Definition at line 214 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a6cf3e4aec08e23edc7453e9dc795360e}{\index{general\-Statistics@{general\-Statistics}!rrcts@{rrcts}}
+\index{rrcts@{rrcts}!generalStatistics@{general\-Statistics}}
+\subsubsection[{rrcts}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::rrcts} = fl.\-zero\-Before\-Str\-Num(0, {\bf rcts})}}\label{namespacegeneral_statistics_a6cf3e4aec08e23edc7453e9dc795360e}
+
+
+\-Definition at line 263 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a2dfa50767faeb2e6493518af2b17dec0}{\index{general\-Statistics@{general\-Statistics}!rsim@{rsim}}
+\index{rsim@{rsim}!generalStatistics@{general\-Statistics}}
+\subsubsection[{rsim}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::rsim} = fl.\-zero\-Before\-Str\-Num({\bf simulation\-I\-D}, {\bf sims})}}\label{namespacegeneral_statistics_a2dfa50767faeb2e6493518af2b17dec0}
+
+
+\-Definition at line 272 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a67c2e718220e1b11a31ed770b5a97f94}{\index{general\-Statistics@{general\-Statistics}!rsims@{rsims}}
+\index{rsims@{rsims}!generalStatistics@{general\-Statistics}}
+\subsubsection[{rsims}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::rsims} = fl.\-zero\-Before\-Str\-Num(1, 1)}}\label{namespacegeneral_statistics_a67c2e718220e1b11a31ed770b5a97f94}
+
+
+\-Definition at line 215 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{\index{general\-Statistics@{general\-Statistics}!samples@{samples}}
+\index{samples@{samples}!generalStatistics@{general\-Statistics}}
+\subsubsection[{samples}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::samples} = 0}}\label{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}
+
+
+\-Definition at line 135 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aab92303ab2917a1f41abe3a499f353dc}{\index{general\-Statistics@{general\-Statistics}!save\-File3\-Dsize@{save\-File3\-Dsize}}
+\index{save\-File3\-Dsize@{save\-File3\-Dsize}!generalStatistics@{general\-Statistics}}
+\subsubsection[{save\-File3\-Dsize}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::save\-File3\-Dsize} = open({\bf out\-Fname3\-D\-Size}, 'w')}}\label{namespacegeneral_statistics_aab92303ab2917a1f41abe3a499f353dc}
+
+
+\-Definition at line 569 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_acebe9590443db7047d11646821848b6c}{\index{general\-Statistics@{general\-Statistics}!save\-File3\-Dsize\-G\-R@{save\-File3\-Dsize\-G\-R}}
+\index{save\-File3\-Dsize\-G\-R@{save\-File3\-Dsize\-G\-R}!generalStatistics@{general\-Statistics}}
+\subsubsection[{save\-File3\-Dsize\-G\-R}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::save\-File3\-Dsize\-G\-R} = open({\bf out\-Fname3\-D\-Size\-Grouped}, 'w')}}\label{namespacegeneral_statistics_acebe9590443db7047d11646821848b6c}
+
+
+\-Definition at line 570 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a7dff4431bede759c68f27cb8b8ca3030}{\index{general\-Statistics@{general\-Statistics}!save\-File3\-Dsize\-G\-R\-L\-A\-S\-T@{save\-File3\-Dsize\-G\-R\-L\-A\-S\-T}}
+\index{save\-File3\-Dsize\-G\-R\-L\-A\-S\-T@{save\-File3\-Dsize\-G\-R\-L\-A\-S\-T}!generalStatistics@{general\-Statistics}}
+\subsubsection[{save\-File3\-Dsize\-G\-R\-L\-A\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::save\-File3\-Dsize\-G\-R\-L\-A\-S\-T} = open({\bf out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T}, 'w')}}\label{namespacegeneral_statistics_a7dff4431bede759c68f27cb8b8ca3030}
+
+
+\-Definition at line 571 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_acdda9c45b9c93c48ec480c6aeb1a5f57}{\index{general\-Statistics@{general\-Statistics}!save\-File\-Keep\-In\-Eye@{save\-File\-Keep\-In\-Eye}}
+\index{save\-File\-Keep\-In\-Eye@{save\-File\-Keep\-In\-Eye}!generalStatistics@{general\-Statistics}}
+\subsubsection[{save\-File\-Keep\-In\-Eye}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::save\-File\-Keep\-In\-Eye} = open({\bf out\-Fname\-To\-Observe}, 'w')}}\label{namespacegeneral_statistics_acdda9c45b9c93c48ec480c6aeb1a5f57}
+
+
+\-Definition at line 596 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ad9c5a196f37842caca2ecf19f8f1c6db}{\index{general\-Statistics@{general\-Statistics}!save\-File\-Ratio\-Keep\-In\-Eye@{save\-File\-Ratio\-Keep\-In\-Eye}}
+\index{save\-File\-Ratio\-Keep\-In\-Eye@{save\-File\-Ratio\-Keep\-In\-Eye}!generalStatistics@{general\-Statistics}}
+\subsubsection[{save\-File\-Ratio\-Keep\-In\-Eye}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::save\-File\-Ratio\-Keep\-In\-Eye} = open({\bf out\-Fname\-Ratio\-To\-Observe}, 'w')}}\label{namespacegeneral_statistics_ad9c5a196f37842caca2ecf19f8f1c6db}
+
+
+\-Definition at line 597 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a5db80fc99086fc28f22bf3c86c99ea41}{\index{general\-Statistics@{general\-Statistics}!save\-File\-Stat@{save\-File\-Stat}}
+\index{save\-File\-Stat@{save\-File\-Stat}!generalStatistics@{general\-Statistics}}
+\subsubsection[{save\-File\-Stat}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::save\-File\-Stat} = open({\bf out\-Fname\-Stat}, 'w')}}\label{namespacegeneral_statistics_a5db80fc99086fc28f22bf3c86c99ea41}
+
+
+\-Definition at line 568 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a6d34190172987c2f4683421687406e59}{\index{general\-Statistics@{general\-Statistics}!save\-File\-Stat\-Keep\-In\-Eye@{save\-File\-Stat\-Keep\-In\-Eye}}
+\index{save\-File\-Stat\-Keep\-In\-Eye@{save\-File\-Stat\-Keep\-In\-Eye}!generalStatistics@{general\-Statistics}}
+\subsubsection[{save\-File\-Stat\-Keep\-In\-Eye}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::save\-File\-Stat\-Keep\-In\-Eye} = open({\bf out\-Fname\-Stat\-To\-Observe}, 'w')}}\label{namespacegeneral_statistics_a6d34190172987c2f4683421687406e59}
+
+
+\-Definition at line 595 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a7f7cffe1bc7c0281cbf5c6c41582d50d}{\index{general\-Statistics@{general\-Statistics}!seq\-I\-D@{seq\-I\-D}}
+\index{seq\-I\-D@{seq\-I\-D}!generalStatistics@{general\-Statistics}}
+\subsubsection[{seq\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::seq\-I\-D} = 0}}\label{namespacegeneral_statistics_a7f7cffe1bc7c0281cbf5c6c41582d50d}
+
+
+\-Definition at line 376 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a3796f56e86ab8d479fbfeb68a5f67b01}{\index{general\-Statistics@{general\-Statistics}!s\-I\-D@{s\-I\-D}}
+\index{s\-I\-D@{s\-I\-D}!generalStatistics@{general\-Statistics}}
+\subsubsection[{s\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::s\-I\-D} = \mbox{[}$\,$\mbox{]}}}\label{namespacegeneral_statistics_a3796f56e86ab8d479fbfeb68a5f67b01}
+
+
+\-Definition at line 355 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ab1c429f24e411b4f961a86e7a3f53cf1}{\index{general\-Statistics@{general\-Statistics}!sims@{sims}}
+\index{sims@{sims}!generalStatistics@{general\-Statistics}}
+\subsubsection[{sims}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::sims} = int({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{namespacegeneral_statistics_ab1c429f24e411b4f961a86e7a3f53cf1}
+
+
+\-Definition at line 166 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a6f463c2d878793522d2ac91f1aaa8bc2}{\index{general\-Statistics@{general\-Statistics}!simulation\-I\-D@{simulation\-I\-D}}
+\index{simulation\-I\-D@{simulation\-I\-D}!generalStatistics@{general\-Statistics}}
+\subsubsection[{simulation\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::simulation\-I\-D} = 1}}\label{namespacegeneral_statistics_a6f463c2d878793522d2ac91f1aaa8bc2}
+
+
+\-Definition at line 262 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ab5f0084f0bffc62955b6478be2d9c9b2}{\index{general\-Statistics@{general\-Statistics}!single\-Graph\-Creation@{single\-Graph\-Creation}}
+\index{single\-Graph\-Creation@{single\-Graph\-Creation}!generalStatistics@{general\-Statistics}}
+\subsubsection[{single\-Graph\-Creation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::single\-Graph\-Creation} = sys.\-argv\mbox{[}3\mbox{]}}}\label{namespacegeneral_statistics_ab5f0084f0bffc62955b6478be2d9c9b2}
+
+
+\-Definition at line 116 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a2ddfeb15247fcd76c5799776c251d274}{\index{general\-Statistics@{general\-Statistics}!sizes@{sizes}}
+\index{sizes@{sizes}!generalStatistics@{general\-Statistics}}
+\subsubsection[{sizes}]{\setlength{\rightskip}{0pt plus 5cm}list {\bf general\-Statistics\-::sizes} = \mbox{[}$\,$\mbox{]}}}\label{namespacegeneral_statistics_a2ddfeb15247fcd76c5799776c251d274}
+
+
+\-Definition at line 375 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_abc048a358e184e9fb3b68f18c254a5f0}{\index{general\-Statistics@{general\-Statistics}!sng\-Sp\-File\-Fid@{sng\-Sp\-File\-Fid}}
+\index{sng\-Sp\-File\-Fid@{sng\-Sp\-File\-Fid}!generalStatistics@{general\-Statistics}}
+\subsubsection[{sng\-Sp\-File\-Fid}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::sng\-Sp\-File\-Fid} = open(sng\-Sp\-File, '{\bf r}')}}\label{namespacegeneral_statistics_abc048a358e184e9fb3b68f18c254a5f0}
+
+
+\-Definition at line 343 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a2b6dc22bc04220d81b7bb62826f0a5ad}{\index{general\-Statistics@{general\-Statistics}!sng\-Stat\-File@{sng\-Stat\-File}}
+\index{sng\-Stat\-File@{sng\-Stat\-File}!generalStatistics@{general\-Statistics}}
+\subsubsection[{sng\-Stat\-File}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::sng\-Stat\-File} = '{\bf \-\_\-}'}}\label{namespacegeneral_statistics_a2b6dc22bc04220d81b7bb62826f0a5ad}
+
+
+\-Definition at line 624 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aa6bcf857bdf3f6f2f12ca093f0e59297}{\index{general\-Statistics@{general\-Statistics}!sng\-Stat\-File\-Fid@{sng\-Stat\-File\-Fid}}
+\index{sng\-Stat\-File\-Fid@{sng\-Stat\-File\-Fid}!generalStatistics@{general\-Statistics}}
+\subsubsection[{sng\-Stat\-File\-Fid}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::sng\-Stat\-File\-Fid} = open({\bf sng\-Stat\-File}, '{\bf r}')}}\label{namespacegeneral_statistics_aa6bcf857bdf3f6f2f12ca093f0e59297}
+
+
+\-Definition at line 628 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a717d9bbd4459fc3d0c6d358cdbdc3287}{\index{general\-Statistics@{general\-Statistics}!species3\-Damount@{species3\-Damount}}
+\index{species3\-Damount@{species3\-Damount}!generalStatistics@{general\-Statistics}}
+\subsubsection[{species3\-Damount}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::species3\-Damount} = \mbox{[}$\,$\mbox{]}}}\label{namespacegeneral_statistics_a717d9bbd4459fc3d0c6d358cdbdc3287}
+
+
+\-Definition at line 325 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ab0b7c4a5bea76a8e43a176a8438cdb81}{\index{general\-Statistics@{general\-Statistics}!species3\-D\-No\-Influx@{species3\-D\-No\-Influx}}
+\index{species3\-D\-No\-Influx@{species3\-D\-No\-Influx}!generalStatistics@{general\-Statistics}}
+\subsubsection[{species3\-D\-No\-Influx}]{\setlength{\rightskip}{0pt plus 5cm}list {\bf general\-Statistics\-::species3\-D\-No\-Influx} = {\bf species3\-Damount}}}\label{namespacegeneral_statistics_ab0b7c4a5bea76a8e43a176a8438cdb81}
+
+
+\-Definition at line 531 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a49505b471d187739723d5212c07a7a0a}{\index{general\-Statistics@{general\-Statistics}!species3\-D\-S\-I\-Z\-Eamount@{species3\-D\-S\-I\-Z\-Eamount}}
+\index{species3\-D\-S\-I\-Z\-Eamount@{species3\-D\-S\-I\-Z\-Eamount}!generalStatistics@{general\-Statistics}}
+\subsubsection[{species3\-D\-S\-I\-Z\-Eamount}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::species3\-D\-S\-I\-Z\-Eamount} = \mbox{[}$\,$\mbox{]}}}\label{namespacegeneral_statistics_a49505b471d187739723d5212c07a7a0a}
+
+
+\-Definition at line 326 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a34b463634037dcf1dff3e5c03eb9d169}{\index{general\-Statistics@{general\-Statistics}!species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T@{species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T}}
+\index{species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T@{species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T}!generalStatistics@{general\-Statistics}}
+\subsubsection[{species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T} = np.\-array(\mbox{[}\mbox{[}int(0), int(0), float(0), int(0)\mbox{]}\mbox{]})}}\label{namespacegeneral_statistics_a34b463634037dcf1dff3e5c03eb9d169}
+
+
+\-Definition at line 267 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a16af43c0053996886f2c1f6f0d99fae2}{\index{general\-Statistics@{general\-Statistics}!species3\-D\-S\-I\-Z\-Eno\-Influx@{species3\-D\-S\-I\-Z\-Eno\-Influx}}
+\index{species3\-D\-S\-I\-Z\-Eno\-Influx@{species3\-D\-S\-I\-Z\-Eno\-Influx}!generalStatistics@{general\-Statistics}}
+\subsubsection[{species3\-D\-S\-I\-Z\-Eno\-Influx}]{\setlength{\rightskip}{0pt plus 5cm}list {\bf general\-Statistics\-::species3\-D\-S\-I\-Z\-Eno\-Influx} = {\bf species3\-D\-S\-I\-Z\-Eamount}}}\label{namespacegeneral_statistics_a16af43c0053996886f2c1f6f0d99fae2}
+
+
+\-Definition at line 532 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a6b94bc4781eb4017a82145d7e6260e61}{\index{general\-Statistics@{general\-Statistics}!species\-File\-I\-D@{species\-File\-I\-D}}
+\index{species\-File\-I\-D@{species\-File\-I\-D}!generalStatistics@{general\-Statistics}}
+\subsubsection[{species\-File\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::species\-File\-I\-D} = 1}}\label{namespacegeneral_statistics_a6b94bc4781eb4017a82145d7e6260e61}
+
+
+\-Definition at line 271 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_abb8208696dc18d1afb27e8c01a0c0a58}{\index{general\-Statistics@{general\-Statistics}!species\-Files\-In\-This\-Sim@{species\-Files\-In\-This\-Sim}}
+\index{species\-Files\-In\-This\-Sim@{species\-Files\-In\-This\-Sim}!generalStatistics@{general\-Statistics}}
+\subsubsection[{species\-Files\-In\-This\-Sim}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf general\-Statistics\-::species\-Files\-In\-This\-Sim} = 'species\-\_\-$\ast$'}}\label{namespacegeneral_statistics_abb8208696dc18d1afb27e8c01a0c0a58}
+
+
+\-Definition at line 147 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aa0ecc1dfa89ff9c9f241affd61ada255}{\index{general\-Statistics@{general\-Statistics}!speciesfileslist@{speciesfileslist}}
+\index{speciesfileslist@{speciesfileslist}!generalStatistics@{general\-Statistics}}
+\subsubsection[{speciesfileslist}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::speciesfileslist} = sorted(glob.\-glob({\bf species\-Files\-In\-This\-Sim}))}}\label{namespacegeneral_statistics_aa0ecc1dfa89ff9c9f241affd61ada255}
+
+
+\-Definition at line 148 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a1ae65ffff7c2a91a33059633266d7b4c}{\index{general\-Statistics@{general\-Statistics}!species\-Table@{species\-Table}}
+\index{species\-Table@{species\-Table}!generalStatistics@{general\-Statistics}}
+\subsubsection[{species\-Table}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::species\-Table} = sng\-Sp\-File\-Fid.\-readlines()}}\label{namespacegeneral_statistics_a1ae65ffff7c2a91a33059633266d7b4c}
+
+
+\-Definition at line 344 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_acfada06fea0c10e3f1eea8b9cdde37e3}{\index{general\-Statistics@{general\-Statistics}!species\-To\-Observe@{species\-To\-Observe}}
+\index{species\-To\-Observe@{species\-To\-Observe}!generalStatistics@{general\-Statistics}}
+\subsubsection[{species\-To\-Observe}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::species\-To\-Observe} = np.\-array(\mbox{[}\mbox{[}1,2,3,4\mbox{]}\mbox{]})}}\label{namespacegeneral_statistics_acfada06fea0c10e3f1eea8b9cdde37e3}
+
+
+\-Definition at line 123 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a2d95f5d313dd8da87f5b5be5b4326a03}{\index{general\-Statistics@{general\-Statistics}!stat@{stat}}
+\index{stat@{stat}!generalStatistics@{general\-Statistics}}
+\subsubsection[{stat}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::stat} = \mbox{[}$\,$\mbox{]}}}\label{namespacegeneral_statistics_a2d95f5d313dd8da87f5b5be5b4326a03}
+
+
+\-Definition at line 324 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ac380b2dd5c569341f6295d2e8e7337f0}{\index{general\-Statistics@{general\-Statistics}!stat\-Controlled@{stat\-Controlled}}
+\index{stat\-Controlled@{stat\-Controlled}!generalStatistics@{general\-Statistics}}
+\subsubsection[{stat\-Controlled}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::stat\-Controlled} = np.\-vstack(\mbox{[}{\bf stat\-Controlled},({\bf overall\-Controlled\-Species},{\bf overall\-Controlled\-Species\-Over\-Tot\-Conc},{\bf overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc})\mbox{]})}}\label{namespacegeneral_statistics_ac380b2dd5c569341f6295d2e8e7337f0}
+
+
+\-Definition at line 472 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a6267f224190a3e4cc4743c3c3710fe0a}{\index{general\-Statistics@{general\-Statistics}!stat\-Dir@{stat\-Dir}}
+\index{stat\-Dir@{stat\-Dir}!generalStatistics@{general\-Statistics}}
+\subsubsection[{stat\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::stat\-Dir} = os.\-path.\-join(os.\-curdir, {\bf newdir})}}\label{namespacegeneral_statistics_a6267f224190a3e4cc4743c3c3710fe0a}
+
+
+\-Definition at line 275 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a54d5cb035107bb188a78056c1f62ef26}{\index{general\-Statistics@{general\-Statistics}!statfiles\-Flag@{statfiles\-Flag}}
+\index{statfiles\-Flag@{statfiles\-Flag}!generalStatistics@{general\-Statistics}}
+\subsubsection[{statfiles\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf general\-Statistics\-::statfiles\-Flag} = os.\-path.\-isfile({\bf out\-Fname\-Stat})}}\label{namespacegeneral_statistics_a54d5cb035107bb188a78056c1f62ef26}
+
+
+\-Definition at line 278 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a3ce9d5db09e5f3011e0b7b2375b4e702}{\index{general\-Statistics@{general\-Statistics}!statfileslast\-F\-I\-D@{statfileslast\-F\-I\-D}}
+\index{statfileslast\-F\-I\-D@{statfileslast\-F\-I\-D}!generalStatistics@{general\-Statistics}}
+\subsubsection[{statfileslast\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::statfileslast\-F\-I\-D} = open({\bf out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T}, '{\bf r}')}}\label{namespacegeneral_statistics_a3ce9d5db09e5f3011e0b7b2375b4e702}
+
+
+\-Definition at line 678 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ad6f78bf5f1f1301baa9e3ecd82fe10c1}{\index{general\-Statistics@{general\-Statistics}!sto\-Position@{sto\-Position}}
+\index{sto\-Position@{sto\-Position}!generalStatistics@{general\-Statistics}}
+\subsubsection[{sto\-Position}]{\setlength{\rightskip}{0pt plus 5cm}list {\bf general\-Statistics\-::sto\-Position} = {\bf species\-To\-Observe}\mbox{[}0,\-:\mbox{]}}}\label{namespacegeneral_statistics_ad6f78bf5f1f1301baa9e3ecd82fe10c1}
+
+
+\-Definition at line 432 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aa452571aa8a33f2385c9129c6957624f}{\index{general\-Statistics@{general\-Statistics}!str\-Line@{str\-Line}}
+\index{str\-Line@{str\-Line}!generalStatistics@{general\-Statistics}}
+\subsubsection[{str\-Line}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::str\-Line} = line.\-split('=')}}\label{namespacegeneral_statistics_aa452571aa8a33f2385c9129c6957624f}
+
+
+\-Definition at line 162 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a6f9e03e2d193c637dbe6f1f499a2f2ca}{\index{general\-Statistics@{general\-Statistics}!\-Str\-Path@{\-Str\-Path}}
+\index{\-Str\-Path@{\-Str\-Path}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}list {\bf general\-Statistics\-::\-Str\-Path} = sys.\-argv\mbox{[}1\mbox{]}}}\label{namespacegeneral_statistics_a6f9e03e2d193c637dbe6f1f499a2f2ca}
+
+
+\-Definition at line 110 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_ab65e4a0772acf69489feaf7a723dd18a}{\index{general\-Statistics@{general\-Statistics}!strs@{strs}}
+\index{strs@{strs}!generalStatistics@{general\-Statistics}}
+\subsubsection[{strs}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::strs} = string.\-split(root, '{\bf \-\_\-}')}}\label{namespacegeneral_statistics_ab65e4a0772acf69489feaf7a723dd18a}
+
+
+\-Definition at line 337 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a155d64c28850cab0f82a1476f73c376d}{\index{general\-Statistics@{general\-Statistics}!threshold@{threshold}}
+\index{threshold@{threshold}!generalStatistics@{general\-Statistics}}
+\subsubsection[{threshold}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::threshold} = float(sys.\-argv\mbox{[}2\mbox{]})}}\label{namespacegeneral_statistics_a155d64c28850cab0f82a1476f73c376d}
+
+
+\-Definition at line 111 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a2755d118509228a47dd95be4a18734bb}{\index{general\-Statistics@{general\-Statistics}!\-Time@{\-Time}}
+\index{\-Time@{\-Time}!generalStatistics@{general\-Statistics}}
+\subsubsection[{\-Time}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::\-Time} = float(tmp\-Time)}}\label{namespacegeneral_statistics_a2755d118509228a47dd95be4a18734bb}
+
+
+\-Definition at line 637 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a999cd7acfeb999ca44418154c38bd0f6}{\index{general\-Statistics@{general\-Statistics}!timesfileslist@{timesfileslist}}
+\index{timesfileslist@{timesfileslist}!generalStatistics@{general\-Statistics}}
+\subsubsection[{timesfileslist}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::timesfileslist} = sorted(glob.\-glob('times\-\_\-$\ast$'))}}\label{namespacegeneral_statistics_a999cd7acfeb999ca44418154c38bd0f6}
+
+
+\-Definition at line 261 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a30aa594476bc94ecfb8620527263a5eb}{\index{general\-Statistics@{general\-Statistics}!times\-Frames@{times\-Frames}}
+\index{times\-Frames@{times\-Frames}!generalStatistics@{general\-Statistics}}
+\subsubsection[{times\-Frames}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::times\-Frames} = range(0,{\bf samples})}}\label{namespacegeneral_statistics_a30aa594476bc94ecfb8620527263a5eb}
+
+
+\-Definition at line 176 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_aab694ae45f6a40a105eee68bffad9bc2}{\index{general\-Statistics@{general\-Statistics}!tmp\-Dirs@{tmp\-Dirs}}
+\index{tmp\-Dirs@{tmp\-Dirs}!generalStatistics@{general\-Statistics}}
+\subsubsection[{tmp\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::tmp\-Dirs} = sort(os.\-listdir({\bf \-Str\-Path}))}}\label{namespacegeneral_statistics_aab694ae45f6a40a105eee68bffad9bc2}
+
+
+\-Definition at line 127 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a5d195c38bf488e92ee6250184c903b13}{\index{general\-Statistics@{general\-Statistics}!tot\-Amount@{tot\-Amount}}
+\index{tot\-Amount@{tot\-Amount}!generalStatistics@{general\-Statistics}}
+\subsubsection[{tot\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf general\-Statistics\-::tot\-Amount} = 0}}\label{namespacegeneral_statistics_a5d195c38bf488e92ee6250184c903b13}
+
+
+\-Definition at line 378 of file general\-Statistics.\-py.
+
+\hypertarget{namespacegeneral_statistics_a0478def357ccc1565f0e5749605a7f7f}{\index{general\-Statistics@{general\-Statistics}!tot\-Times@{tot\-Times}}
+\index{tot\-Times@{tot\-Times}!generalStatistics@{general\-Statistics}}
+\subsubsection[{tot\-Times}]{\setlength{\rightskip}{0pt plus 5cm}tuple {\bf general\-Statistics\-::tot\-Times} = np.\-zeros(({\bf samples},{\bf size}({\bf species\-To\-Observe})))}}\label{namespacegeneral_statistics_a0478def357ccc1565f0e5749605a7f7f}
+
+
+\-Definition at line 332 of file general\-Statistics.\-py.
+

@@ -1,0 +1,1 @@
+find . -name 'acsm2s.conf' -type f -exec perl -pi -e 's/K_cpxDiss=1e-8/K_cpxDiss=1e-9/g' {} \;

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="crea__tutte__le__combinazioni__di__elementi_8m" kind="file">
+    <compoundname>crea_tutte_le_combinazioni_di_elementi.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="crea__tutte__le__combinazioni__di__elementi_8m_1aa23fc0b22eb0c24718a8969136a459f9" prot="public" static="no" mutable="no">
+        <type>prova m</type>
+        <definition>prova m function[specie]</definition>
+        <argsstring>[specie]</argsstring>
+        <name>function</name>
+        <initializer>=crea_tutte_le_combinazioni_di_elementi(vettore_elementi,K)
+%function [specie]=crea_tutte_le_combinazioni_di_elementi(vettore_elementi)
+
+%dato un vettore di elementi e una <ref refid="crea__influx_8m_1a984d293145d85a936f430c0990316e51" kindref="member">lunghezza</ref> massima K restituisce tutte le
+%possibili combinazioni di elementi ordinati
+
+lunghezza_stringa = K</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_tutte_le_combinazioni_di_elementi.m" line="10" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_tutte_le_combinazioni_di_elementi.m" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>numero_elementi</definition>
+        <argsstring></argsstring>
+        <name>numero_elementi</name>
+        <initializer>= length(vettore_elementi)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_tutte_le_combinazioni_di_elementi.m" line="11" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_tutte_le_combinazioni_di_elementi.m" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__tutte__le__combinazioni__di__elementi_8m_1abdf49e297e2c121f2d09f075ac3d518a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>righe</definition>
+        <argsstring></argsstring>
+        <name>righe</name>
+        <initializer>= <ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" kindref="member">numero_elementi</ref>^lunghezza_stringa</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_tutte_le_combinazioni_di_elementi.m" line="12" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_tutte_le_combinazioni_di_elementi.m" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__tutte__le__combinazioni__di__elementi_8m_1a6f6ccfcf58b31cb6412107d9d5281426" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <initializer>=1:lunghezza_stringa %colonne
+   for <ref refid="inizializzatore___a_c_s_8m_1ac86694252f8dfdb19aaeadc4b7c342c6" kindref="member">j</ref> = 1:<ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" kindref="member">numero_elementi</ref>
+       for <ref refid="inizializzatore___a_c_s_8m_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref> = (<ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" kindref="member">numero_elementi</ref>^(i-1))*(<ref refid="inizializzatore___a_c_s_8m_1ac86694252f8dfdb19aaeadc4b7c342c6" kindref="member">j</ref>-1)+1:<ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" kindref="member">numero_elementi</ref>^(i):<ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1abdf49e297e2c121f2d09f075ac3d518a" kindref="member">righe</ref>
+           specie(z:z+<ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" kindref="member">numero_elementi</ref>^(i-1)-1,i)=(vettore_elementi(<ref refid="inizializzatore___a_c_s_8m_1ac86694252f8dfdb19aaeadc4b7c342c6" kindref="member">j</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_tutte_le_combinazioni_di_elementi.m" line="17" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_tutte_le_combinazioni_di_elementi.m" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">%prova.m</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="crea__tutte__le__combinazioni__di__elementi_8m_1aa23fc0b22eb0c24718a8969136a459f9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[specie]=crea_tutte_le_combinazioni_di_elementi(vettore_elementi,K)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">%</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[specie]=crea_tutte_le_combinazioni_di_elementi(vettore_elementi)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">%dato<sp/>un<sp/>vettore<sp/>di<sp/>elementi<sp/>e<sp/>una<sp/><ref refid="crea__influx_8m_1a984d293145d85a936f430c0990316e51" kindref="member">lunghezza</ref><sp/>massima<sp/>K<sp/>restituisce<sp/>tutte<sp/>le</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">%possibili<sp/>combinazioni<sp/>di<sp/>elementi<sp/>ordinati</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">lunghezza_stringa<sp/>=<sp/>K;</highlight></codeline>
+<codeline lineno="11" refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" refkind="member"><highlight class="normal"><ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" kindref="member">numero_elementi</ref><sp/>=<sp/>length(vettore_elementi);</highlight></codeline>
+<codeline lineno="12" refid="crea__tutte__le__combinazioni__di__elementi_8m_1abdf49e297e2c121f2d09f075ac3d518a" refkind="member"><highlight class="normal"><ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1abdf49e297e2c121f2d09f075ac3d518a" kindref="member">righe</ref><sp/>=<sp/><ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" kindref="member">numero_elementi</ref>^lunghezza_stringa;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="crea__tutte__le__combinazioni__di__elementi_8m_1a6f6ccfcf58b31cb6412107d9d5281426" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=1:lunghezza_stringa<sp/>%colonne</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref><sp/>=<sp/>1:<ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" kindref="member">numero_elementi</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="inizializzatore___a_c_s_8m_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref><sp/>=<sp/>(<ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" kindref="member">numero_elementi</ref>^(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>-1))*(<ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>-1)+1:numero_elementi^(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>):righe</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>specie(<ref refid="inizializzatore___a_c_s_8m_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref>:<ref refid="inizializzatore___a_c_s_8m_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref>+<ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1a071e4a20ed3694e1603406261e60409a" kindref="member">numero_elementi</ref>^(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>-1)-1,i)=(vettore_elementi(<ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_tutte_le_combinazioni_di_elementi.m"/>
+  </compounddef>
+</doxygen>

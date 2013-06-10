@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Catalytic Rections Network Stochastic Simulator - CaRNeSS 3.2 (20130403.51)</title>
+    <innerpage refid="intro">Essential informations</innerpage>
+    <innerpage refid="page_init_str">Initial Data Structures</innerpage>
+    <innerpage refid="pageoutcomes">Outcomes</innerpage>
+    <innerpage refid="page_initializator">The initializator (a very brief description)</innerpage>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alessandro Filisetti </para></simplesect>
+<simplesect kind="version"><para>3.2 (20130403.51) </para></simplesect>
+<simplesect kind="date"><para>2013-04-13 sourceforge repository <ndash/> <ulink url="https://carness.svn.sourceforge.net/svnroot/carness/">https://carness.svn.sourceforge.net/svnroot/carness/</ulink></para></simplesect>
+This manual is divided in the following sections:<itemizedlist>
+<listitem><para><ref refid="intro_1intro" kindref="member">Essential informations</ref></para></listitem><listitem><para><ref refid="page_init_str_1pageInitStr" kindref="member">Initial Data Structures</ref></para></listitem><listitem><para><ref refid="pageoutcomes_1pageoutcomes" kindref="member">Outcomes</ref></para></listitem><listitem><para><ref refid="page_initializator_1pageInitializator" kindref="member">The initializator (a very brief description)</ref> </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

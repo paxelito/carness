@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="crea__firing__disk_8m" kind="file">
+    <compoundname>crea_firing_disk.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="crea__firing__disk_8m_1a70722b81985b6bdb90b3db95d25480e5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>function[firing_disk]</definition>
+        <argsstring>[firing_disk]</argsstring>
+        <name>function</name>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1a9436783422a447fac5122c24d195e61d" kindref="member">crea_firing_disk</ref>(<ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>)
+%function [<ref refid="crea__concentrazioni__iniziali_8m_1acb72987b5000cf59c6f81c482e2ac8ac" kindref="member">firing_disk</ref>] = <ref refid="inizializzatore___a_c_s_8m_1a9436783422a447fac5122c24d195e61d" kindref="member">crea_firing_disk</ref>(<ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>)
+
+<ref refid="crea__influx_8m_1a354e9aa3d0786bab7f2475c58693017d" kindref="member">tot_species</ref> = 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_firing_disk.m" line="6" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_firing_disk.m" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__firing__disk_8m_1a6f6ccfcf58b31cb6412107d9d5281426" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <initializer>= 1:<ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>
+    <ref refid="crea__influx_8m_1a354e9aa3d0786bab7f2475c58693017d" kindref="member">tot_species</ref> = <ref refid="crea__influx_8m_1a354e9aa3d0786bab7f2475c58693017d" kindref="member">tot_species</ref>+length(<ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)^i</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_firing_disk.m" line="9" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_firing_disk.m" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__firing__disk_8m_1adc468c70fb574ebd07287b38d0d0676d" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_firing_disk.m" line="18" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_firing_disk.m" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__firing__disk_8m_1a8279082712ddae1fa40657403fbc6bd1" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end firing_disk</definition>
+        <argsstring></argsstring>
+        <name>firing_disk</name>
+        <initializer>=id_species</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_firing_disk.m" line="24" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_firing_disk.m" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="crea__firing__disk_8m_1a2728ab473c82f1a8f1fb8648351e774c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>step</definition>
+        <argsstring>(i)</argsstring>
+        <name>step</name>
+        <param>
+          <type><ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_firing_disk.m" line="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="crea__firing__disk_8m_1a70722b81985b6bdb90b3db95d25480e5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[firing_disk]<sp/>=<sp/><ref refid="inizializzatore___a_c_s_8m_1a9436783422a447fac5122c24d195e61d" kindref="member">crea_firing_disk</ref>(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">%</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[firing_disk]<sp/>=<sp/><ref refid="inizializzatore___a_c_s_8m_1a9436783422a447fac5122c24d195e61d" kindref="member">crea_firing_disk</ref>(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="crea__concentrazioni__iniziali_8m_1a776a9a06b8375875869043079a11ba0c" kindref="member">tot_species</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="crea__firing__disk_8m_1a6f6ccfcf58b31cb6412107d9d5281426" refkind="member"><highlight class="normal">for<sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>1:<ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>tot_species<sp/>=<sp/>tot_species+length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)^<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crea__firing__disk_8m_1a2728ab473c82f1a8f1fb8648351e774c" kindref="member">step</ref>(i)=length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)^i;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">for<sp/>i=1:tot_species</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>id_species(i,1)=i;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="crea__firing__disk_8m_1adc468c70fb574ebd07287b38d0d0676d" refkind="member"><highlight class="normal"><ref refid="conc_analysis_8m_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">for<sp/>i<sp/>=1:length(<ref refid="crea__firing__disk_8m_1a2728ab473c82f1a8f1fb8648351e774c" kindref="member">step</ref>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>id_species(<ref refid="conc_analysis_8m_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref>:<ref refid="crea__firing__disk_8m_1a2728ab473c82f1a8f1fb8648351e774c" kindref="member">step</ref>(i)+<ref refid="conc_analysis_8m_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref>-1,2)=i;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>k<sp/>=<sp/>k+<ref refid="crea__firing__disk_8m_1a2728ab473c82f1a8f1fb8648351e774c" kindref="member">step</ref>(i);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="crea__firing__disk_8m_1a8279082712ddae1fa40657403fbc6bd1" refkind="member"><highlight class="normal"><ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>=id_species;</highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_firing_disk.m"/>
+  </compounddef>
+</doxygen>

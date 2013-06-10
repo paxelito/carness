@@ -1,0 +1,143 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_e_controlla_i_catalizzatori.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_e_controlla_i_catalizzatori.m \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "1:length(\fBinflux\fP(:, 1 \fBmatrice_adiacenza_sub_prod:\fP (\fBinflux\fP(:, 1 length)"
+.br
+.ti -1c
+.RI "\fBmatrice_adiacenza_sub_prod\fP (1:\fBmax\fP(\fBinflux\fP(:, 1)), 1:\fBmax\fP(\fBinflux\fP(:, 1)))=0"
+.br
+.ti -1c
+.RI "\fBmatrice_adiacenza_sub_prod\fP (\fBreazione\fP(\fBi\fP, 5), \fBreazione\fP(\fBi\fP, 3))"
+.br
+.ti -1c
+.RI "\fBelse\fP \fBmatrice_adiacenza_sub_prod\fP (\fBreazione\fP(\fBi\fP, 3), \fBreazione\fP(\fBi\fP, 4))"
+.br
+.ti -1c
+.RI "\fBmatrice_adiacenza_sub_prod\fP (\fBreazione\fP(\fBi\fP, 3), \fBreazione\fP(\fBi\fP, 5))"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP \fBend\fP \fBif\fP \fBmax\fP (real(eig(\fBmatrice_adiacenza_sub_prod\fP))) > 0 clear \fBcatalizzatore\fP clear \fBreazione\fP clear \fBspecie_non_esistenti\fP clear \fBmatrice_adiacenza_sub_prod\fP \fBcheck_ACS\fP=0"
+.br
+.ti -1c
+.RI "id \fBcheck_ACS\fP ()"
+.br
+.ti -1c
+.RI "\fBmatrice_adiacenza_cat_prod\fP (1:\fBmax\fP(\fBinflux\fP(:, 1)), 1:\fBmax\fP(\fBinflux\fP(:, 1)))=0"
+.br
+.ti -1c
+.RI "\fBelse\fP \fBmatrice_adiacenza_cat_prod\fP (\fBcatalizzatore\fP(\fBi\fP, 2), \fBreazione\fP(\fBcatalizzatore\fP(\fBi\fP, 3), 4))"
+.br
+.ti -1c
+.RI "\fBmatrice_adiacenza_cat_prod\fP (\fBcatalizzatore\fP(\fBi\fP, 2), \fBreazione\fP(\fBcatalizzatore\fP(\fBi\fP, 3), 5))"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP \fBend\fP \fBif\fP \fBmax\fP (real(eig(\fBmatrice_adiacenza_cat_prod\fP))) > 0 clear \fBcatalizzatore\fP clear \fBreazione\fP clear \fBspecie_non_esistenti\fP clear \fBmatrice_adiacenza_cat_prod\fP \fBcheck_ACS\fP=0 = 1"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP \fBend\fP \fBsize\fP (\fBmatrice_adiacenza_sub_prod\fP)%size(\fBmatrice_adiacenza_cat_prod\fP) \fBif\fP \fBmax\fP(real(eig(\fBmatrice_adiacenza_sub_prod\fP))) > 0||\fBmax\fP(real(eig(\fBmatrice_adiacenza_cat_prod\fP))) > 0 clear \fBcatalizzatore\fP clear \fBreazione\fP clear \fBspecie_non_esistenti\fP clear \fBmatrice_adiacenza_cat_prod\fP clear \fBmatrice_adiacenza_sub_prod\fP \fBcheck_ACS\fP=0"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBfunction\fP [\fBcatalizzatore\fP \fBreazione\fP \fBspecie_non_esistenti\fP \fBmatrice_adiacenza_sub_prod\fP \fBmatrice_adiacenza_cat_prod\fP] = \fBcrea_e_controlla_i_catalizzatori\fP (controllo_ACS_nel_ciclo, \fBfiring_disk\fP, \fBreactionProbability\fP, \fBdecisione_catalizzatori\fP, \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP, \fBalphabet\fP, \fBcleavageProbability\fP, \fBspecie_def\fP, \fBinflux\fP)"
+.br
+.ti -1c
+.RI "controllo no \fBACS\fP nell \fBinflux\fP 
+.br
+\fBswitch\fP controllo_ACS_nel_ciclo 
+.br
+case nessun controllo \fBmatrice_adiacenza_sub_prod\fP =0"
+.br
+.ti -1c
+.RI "\fBmatrice_adiacenza_cat_prod\fP = 0"
+.br
+.ti -1c
+.RI "\fBcheck_ACS\fP = 0"
+.br
+.ti -1c
+.RI "for \fBi\fP"
+.br
+.ti -1c
+.RI "\fBinpudda\fP = input('')"
+.br
+.ti -1c
+.RI "\fBcounter_cicli\fP = 0"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "id check_ACS ()\fC [virtual]\fP"
+
+.SS "matrice_adiacenza_cat_prod (1:maxinflux(:, 1), 1:maxinflux(:, 1))\fC [pure virtual]\fP"
+
+.SS "\fBelse\fP matrice_adiacenza_cat_prod (\fBcatalizzatore\fP(\fBi\fP, 2), \fBreazione\fP(\fBcatalizzatore\fP(\fBi\fP, 3), 4))"
+
+.SS "matrice_adiacenza_cat_prod (\fBcatalizzatore\fP(\fBi\fP, 2), \fBreazione\fP(\fBcatalizzatore\fP(\fBi\fP, 3), 5))"
+
+.SS "matrice_adiacenza_sub_prod (1:maxinflux(:, 1), 1:maxinflux(:, 1))\fC [pure virtual]\fP"
+
+.SS "matrice_adiacenza_sub_prod (\fBreazione\fP(\fBi\fP, 5), \fBreazione\fP(\fBi\fP, 3))"
+
+.SS "\fBelse\fP matrice_adiacenza_sub_prod (\fBreazione\fP(\fBi\fP, 3), \fBreazione\fP(\fBi\fP, 4))"
+
+.SS "matrice_adiacenza_sub_prod (\fBreazione\fP(\fBi\fP, 3), \fBreazione\fP(\fBi\fP, 5))"
+
+.SS "1:length(\fBinflux\fP(:,1 matrice_adiacenza_sub_prod: ()\fC [virtual]\fP"
+
+.SS "\fBend\fP \fBend\fP \fBend\fP \fBif\fP max (real(eig(\fBmatrice_adiacenza_sub_prod\fP)))\fC [pure virtual]\fP"
+
+.SS "\fBend\fP \fBend\fP \fBend\fP \fBif\fP max (real(eig(\fBmatrice_adiacenza_cat_prod\fP))) = 1\fC [pure virtual]\fP"
+
+.SS "\fBend\fP \fBend\fP \fBend\fP size (\fBmatrice_adiacenza_sub_prod\fP)\fC [pure virtual]\fP"
+
+.SH "Variable Documentation"
+.PP 
+.SS "while check_ACS = 0"
+
+.PP
+Definition at line 18 of file crea_e_controlla_i_catalizzatori\&.m\&.
+.SS "counter_cicli = 0"
+
+.PP
+Definition at line 82 of file crea_e_controlla_i_catalizzatori\&.m\&.
+.SS "function[\fBcatalizzatore\fP \fBreazione\fP \fBspecie_non_esistenti\fP] = \fBcrea_e_controlla_i_catalizzatori\fP (controllo_ACS_nel_ciclo, \fBfiring_disk\fP, \fBreactionProbability\fP, \fBdecisione_catalizzatori\fP, \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP, \fBalphabet\fP, \fBcleavageProbability\fP, \fBspecie_def\fP, \fBinflux\fP)"
+
+.PP
+Definition at line 1 of file crea_e_controlla_i_catalizzatori\&.m\&.
+.SS "for i"
+\fBInitial value:\fP
+.PP
+.nf
+= 1:length(reazione(:,1))
+                if sum(reazione(i,3)==influx(:,1))==1 && sum(reazione(i,4)==influx(:,1))==1 && sum(reazione(i,5)==influx(:,1))==1
+                    if reazione(i,2)==0                        
+                        matrice_adiacenza_sub_prod(reazione(i,4),reazione(i,3))=1
+.fi
+.PP
+Definition at line 26 of file crea_e_controlla_i_catalizzatori\&.m\&.
+.SS "inpudda = input('')"
+
+.PP
+Definition at line 44 of file crea_e_controlla_i_catalizzatori\&.m\&.
+.SS "matrice_adiacenza_cat_prod = 0"
+
+.PP
+Definition at line 11 of file crea_e_controlla_i_catalizzatori\&.m\&.
+.SS "matrice_adiacenza_sub_prod =0"
+
+.PP
+Definition at line 10 of file crea_e_controlla_i_catalizzatori\&.m\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

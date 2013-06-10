@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="classcommon_functions" kind="class" prot="public">
+    <compoundname>commonFunctions</compoundname>
+    <includes refid="common_functions_8h" local="no">commonFunctions.h</includes>
+    <briefdescription>
+<para>This class contains all the common function of the system. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class contains all the functions useful in general <simplesect kind="authors"><para>alessandro filisetti </para></simplesect>
+<simplesect kind="date"><para>2011/12/10 </para></simplesect>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

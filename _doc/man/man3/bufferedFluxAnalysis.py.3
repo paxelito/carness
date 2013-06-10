@@ -1,0 +1,178 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/bufferedFluxAnalysis.py" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/bufferedFluxAnalysis.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBbufferedFluxAnalysis\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.StrPath\fP sys\&.argv[1]"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.tmpResFold\fP sys\&.argv[2]"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.today\fP dt\&.date\&.today()"
+.br
+.ti -1c
+.RI "string \fBbufferedFluxAnalysis\&.simF\fP '/'"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.tmpDirs\fP sort(glob\&.glob(simF))"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.newdir\fP os\&.path\&.join(os\&.curdir, '0_statistics')"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.matrixTimeLITE\fP np\&.zeros((101,len(tmpDirs)))"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.matrixFluxLITE\fP np\&.zeros((101,len(tmpDirs)))"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.matrixAbsLITE\fP np\&.zeros((101,len(tmpDirs)))"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.matrixExpLITE\fP np\&.zeros((101,len(tmpDirs)))"
+.br
+.ti -1c
+.RI "int \fBbufferedFluxAnalysis\&.tmpDirsCnt\fP 0"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.speciesFiles\fP sort(glob\&.glob('species_*'))"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.fidSpecies\fP open(\fBspeciesFiles\fP[0], '\fBr\fP')"
+.br
+.ti -1c
+.RI "int \fBbufferedFluxAnalysis\&.ok\fP 0"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.fluxIndexes\fP []"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.fluxLengths\fP []"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.index\fP int(tmpID)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.speciesSeq\fP len(tmpSeq)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.concFixed\fP int(tmpConcFixed)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.fileslist\fP sort(glob\&.glob('reactions_parameters_*'))"
+.br
+.ti -1c
+.RI "int \fBbufferedFluxAnalysis\&.rctParFileNum\fP 1"
+.br
+.ti -1c
+.RI "int \fBbufferedFluxAnalysis\&.rctID\fP 1"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.totFluxDyn\fP []"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.absorbedBricks\fP []"
+.br
+.ti -1c
+.RI "int \fBbufferedFluxAnalysis\&.tempAbsorbedBricks\fP 0"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.expelledBricks\fP []"
+.br
+.ti -1c
+.RI "int \fBbufferedFluxAnalysis\&.tempExpelledBricks\fP 0"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.totTimes\fP []"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.totFluxDyn_LITE\fP []"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.absorbedBricks_LITE\fP []"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.expelledBricks_LITE\fP []"
+.br
+.ti -1c
+.RI "list \fBbufferedFluxAnalysis\&.totTimes_LITE\fP []"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.fid\fP open(\fBfile\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "int \fBbufferedFluxAnalysis\&.okmonitor\fP 1"
+.br
+.ti -1c
+.RI "int \fBbufferedFluxAnalysis\&.oksaveLite\fP 0"
+.br
+.ti -1c
+.RI "int \fBbufferedFluxAnalysis\&.deltaRct\fP 0"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.reaction\fP int(tmpReaction)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.rtime\fP float(tmpTime)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.cc\fP int(tmpcc)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.cat\fP int(tmpCat)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.mol_I\fP int(tmpMol_I)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.mol_II\fP int(tmpMol_II)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.mol_III\fP int(tmpMol_III)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.loadedMolsConc\fP float(tmpLoadedMolsConc)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.loadedMols\fP int(tmpLoadedMols)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.gillMean\fP float(tmpGillMean)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.gillSD\fP float(tmpGillSD)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.gillEntropy\fP float(tmpGillEntropy)"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.savingMatrix\fP np\&.zeros((len(totTimes),4))"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.tmpDirSplit\fP tmpDir\&.split('/')"
+.br
+.ti -1c
+.RI "string \fBbufferedFluxAnalysis\&.cmdFileName\fP '0_statistics/0_fluxDynamics_'"
+.br
+.ti -1c
+.RI "tuple \fBbufferedFluxAnalysis\&.cmdFileFid\fP open(cmdFileName, '\fBa\fP')"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

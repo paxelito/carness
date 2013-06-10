@@ -1,0 +1,1545 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/generalConcentrationOverThreshold.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/generalConcentrationOverThreshold.m \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcd\fP (\fBparams\&.tmpPath\fP)"
+.br
+.ti -1c
+.RI "\fBdisp\fP ('start analysis\&.\&.\&.') if~isdir('0_statistics') mkdir('0_statistics')"
+.br
+.ti -1c
+.RI "\fBend\fP \fBcd\fP ('0_statistics')%CREATE HEADER ROW IN THE FINAL OUTCOMES FILES outFilenName"
+.br
+.ti -1c
+.RI "\fBif\fP \fBexist\fP (outFilenName,'\fBfile\fP') delete(outFilenName)"
+.br
+.ti -1c
+.RI "\fBfprintf\fP (\fBfidFINAL\fP,'\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\n',\&.\&.\&. 'Reaction Probability','Energy Concentration','Tot over Threshold','Real ACSs','in ACSs',\&.\&.\&. 'Leaves','by Chain','Overlap','Autocatalysis','in ACSs(W)','Leaves(W)','by Chain(W)','Overlap(W)','Autocatalysis(W)',\&.\&.\&. '[\fBACS\fP]','[Leaves]','[Chains]','[Self]','Endo Cond','Cond','Endo Cleavage','Cleavage','Wasted \fBspecies\fP')"
+.br
+.ti -1c
+.RI "\fBfclose\fP (\fBfidFINAL\fP)"
+.br
+.ti -1c
+.RI "For each folder the necessary 
+.br
+computations are performed \fBdisp\fP ('*********************************************************************************')"
+.br
+.ti -1c
+.RI "\fBdisp\fP ('*NEW SIMULATION ANALYSIS PROCESS')"
+.br
+.ti -1c
+.RI "Go into the results folder \fBcd\fP (strcat(\fBsimDirs\fP(\fBIDF\fP)\&.\fBname\fP,'/res'))"
+.br
+.ti -1c
+.RI "\fBend\fP If there are \fBspecies\fP over 
+.br
+theshold network \fBanalysis\fP is 
+.br
+performed \fBdisp\fP ('|-Graph Creation')"
+.br
+.ti -1c
+.RI "\fBif\fP \fB~isdir\fP (strcat('\&.\&./\&.\&./', \fBfolderCat\fP)) \fBmkdir\fP(strcat('\&.\&./\&.\&./'"
+.br
+.ti -1c
+.RI "\fBend\fP \fBif\fP \fB~isdir\fP (strcat('\&.\&./\&.\&./', \fBfolderSub\fP)) \fBmkdir\fP(strcat('\&.\&./\&.\&./'"
+.br
+.ti -1c
+.RI "\fBdisp\fP (strcat('|-File ', \fBrcsFiles\fP(\fBrfileID\fP)\&.\fBname\fP, 'processing\&.\&.\&.'))"
+.br
+.ti -1c
+.RI "while \fBischar\fP (\fBrlineb\fP) \fBif\fP ischar(\fBrlineb\fP)%Format lines \fBif\fP isstrprop(\fBrline\fP(\fBend\fP)"
+.br
+.ti -1c
+.RI "while \fBrline\fP (\fBend\fP)"
+.br
+.ti -1c
+.RI "\fBend\fP \fBgillTimeSeries\fP (\fBrlineID\fP,:)"
+.br
+.ti -1c
+.RI "\fBsaveGraphSUBToFile\fP (\fBfolderSub\fP, \fBreaction\fP, \fBrtime\fP, \fBconfparams\&.nReactions\fP, \fBgraphSUB\fP, \fBfilextPre\fP)"
+.br
+.ti -1c
+.RI "\fBend\fP If the prompt time is 
+.br
+\fBrighe\fP \fBa\fP message on the screen 
+.br
+indicating the \fBreaction\fP number 
+.br
+and the time is shown \fBif\fP \fBand\fP ((\fBrtime\fP > \fBrctIDshowNoSave\fP *analysisTimeIntervalNoSave),(\fBprintTemporalMessage\fP==1)) msg"
+.br
+.ti -1c
+.RI "\fBdisp\fP (msg)"
+.br
+.ti -1c
+.RI ":, 4 \fBtimeInterval\fP ()"
+.br
+.ti -1c
+.RI "\fBgraph\fP (:, 5)"
+.br
+.ti -1c
+.RI "\fBgraphSUB\fP (:, 5)"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP \fBif\fP (\fBcc\fP==0)||(\fBcc\fP"
+.br
+.ti -1c
+.RI "\fBend\fP INFLUX ECONOMY ANALYSIS \fBif\fP \fBsum\fP (\fBinflux\fP==\fBmol_I\fP) >"
+.br
+.ti -1c
+.RI "params params \fBSubstrate\fP (If different \fBfrom\fP 1) \fBend\fP \fBelse\fP%CAT-> PRO, Otherwise \fBif\fP the \fBreaction\fP is already present its parameters are updatedif \fBsum\fP(\fBand\fP((\fBgraph\fP(:, 1)==\fBcat\fP), \fBgraph\fP(:, 2)==\fBmol_I\fP))==1position=and((graph(:, 1)==cat), graph(:, 2)==mol_I)"
+.br
+.ti -1c
+.RI "\fBgraph\fP (position,:)"
+.br
+.ti -1c
+.RI ":, 2 \fBmol_I\fP ()"
+.br
+.ti -1c
+.RI "\fBgraphSUB\fP (position,:)"
+.br
+.ti -1c
+.RI ":, 2 \fBmol_II\fP ()"
+.br
+.ti -1c
+.RI "\fBend\fP \fBfclose\fP (\fBfid\fP)"
+.br
+.ti -1c
+.RI "\fBcd\fP ('\&.\&./\&.\&./0_statistics')"
+.br
+.ti -1c
+.RI "e\&.g\&.sim 1 of 10 \fBsims\fP, \fBstrZero\fP 
+.br
+will be '0'in order \fBto\fP create 
+.br
+\fBa\fP%\fBfile\fP named XXX_01_XXX 
+.br
+\fBstrZero\fP=zeroBeforeStrNum(\fBIDF\fP, 
+.br
+length(\fBsimDirs\fP \fBnames\fP ()"
+.br
+.ti -1c
+.RI "grid on \fBset\fP (gca,'fontsize', 15,'fontname','\fBtimes\fP')"
+.br
+.ti -1c
+.RI "\fBxlabel\fP ('Time', 'Interpreter', 'latex', 'fontsize', 15)"
+.br
+.ti -1c
+.RI "\fBylabel\fP ('Gillespie Mean', 'Interpreter', 'latex', 'fontsize', 15)"
+.br
+.ti -1c
+.RI "\fBeval\fP (['print-depsc ', \fBfileName\fP])"
+.br
+.ti -1c
+.RI "\fBsaveas\fP (\fBfigure1\fP, \fBfileName\fP)"
+.br
+.ti -1c
+.RI "\fBylabel\fP ('Gillespie SD', 'Interpreter', 'latex', 'fontsize', 15)"
+.br
+.ti -1c
+.RI "\fBsaveas\fP (\fBfigure2\fP, \fBfileName\fP)"
+.br
+.ti -1c
+.RI "\fBylabel\fP ('Entropy', 'Interpreter', 'latex', 'fontsize', 15)"
+.br
+.ti -1c
+.RI "\fBsaveas\fP (\fBfigure3\fP, \fBfileName\fP)"
+.br
+.ti -1c
+.RI "\fBylabel\fP ('New \fBspecies\fP Probability', 'Interpreter', 'latex', 'fontsize', 15)"
+.br
+.ti -1c
+.RI "\fBsaveas\fP (\fBfigure4\fP, \fBfileName\fP)"
+.br
+.ti -1c
+.RI "\fBylabel\fP ('Flux Molecules Balance', 'Interpreter', 'latex', 'fontsize', 15)"
+.br
+.ti -1c
+.RI "\fBsaveas\fP (\fBfigure5\fP, \fBfileName\fP)"
+.br
+.ti -1c
+.RI "\fBylabel\fP ('Ratio of backward \fBreactions\fP', 'Interpreter', 'latex', 'fontsize', 15)"
+.br
+.ti -1c
+.RI "\fBsaveas\fP (\fBfigure6\fP, \fBfileName\fP)"
+.br
+.ti -1c
+.RI "\fBylabel\fP ('Flux Molecules', 'Interpreter', 'latex', 'fontsize', 15)"
+.br
+.ti -1c
+.RI "\fBlegend\fP ('Added','Removed')"
+.br
+.ti -1c
+.RI "\fBsaveas\fP (\fBfigure7\fP, \fBfileName\fP)"
+.br
+.ti -1c
+.RI "NET ANALYSIS \fBdisp\fP ('|-*******NETWORK ANALYSIS *******')"
+.br
+.ti -1c
+.RI "\fBdisp\fP ('|-Strongly connected components analysis\&.\&.\&. ')"
+.br
+.ti -1c
+.RI "\fBdisp\fP (sprintf('<> SCC n\&.%d', \fBc\fP))"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP \fBdisp\fP (sprintf('|-Number of ACS:%d', \fBrealSccs\fP))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (sprintf('|-Number of \fBACS\fP(length 1):%d', self))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (sprintf('|-Species over threshold:%d', length(\fBIDsOverThreshold\fP)))"
+.br
+.ti -1c
+.RI "\fBif\fP \fB~isempty\fP (\fBIDsOverThreshold\fP) for idot"
+.br
+.ti -1c
+.RI "\fBif\fP \fB~isempty\fP (\fBincomingNodes\fP) \fBwasteSpeciesFLAG\fP"
+.br
+.ti -1c
+.RI "\fBif\fP \fBsum\fP (find(scc==\fBc\fP)==\fBIDsOverThreshold\fP(idot))%If the \fBspecies\fP belong \fBto\fP the \fBACS\fP \fBinSCCFlag\fP"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t Within Acs%d->%d#%d-[%d]%d%6\&.4f', incomingNodes(innode), IDsOverThreshold(idot), weightToDistribute,\&.\&.\&.IDsOverThreshold(idot), IDsOverThreshold(idot), concVec(idot)))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t From Acs%d->%d#%d-[%d]%d%6\&.4f', incomingNodes(innode), IDsOverThreshold(idot), weightToDistribute,\&.\&.\&.IDsOverThreshold(idot), IDsOverThreshold(idot), concVec(idot)))"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP \fBend\fP \fBend\fP \fBif\fP self \fBif\fP \fBsum\fP (selfID==idot) > 0 \fBwasteSpeciesFLAG\fP"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP \fBdisp\fP (\fBfprintf\fP('\\t\\t<> Number of Structural Autocatalytic \fBset\fP of molecules:%d', \fBrealSccs\fP))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<>-----------------------------------------------'))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced by \fBa\fP CHAIN:%d', \fBprod_chain\fP))"
+.br
+.ti -1c
+.RI "\fBif\fP \fBrealSccs\fP \fBdisp\fP (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced INTO an ACS:%d', \fBprod_inSCC\fP))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced INTO an \fBACS\fP(weigthed):%d', \fBprod_inSCC_weight\fP))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced BY an ACS:%d', \fBprod_bySCC\fP))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced BY an \fBACS\fP(weigthed):%d', \fBprod_bySCC_weight\fP))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced by an overlap:%d', \fBprod_overlap\fP))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced by an overlap(weigthed):%d', \fBprod_overlap_weight\fP))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced by itself:%d', \fBautocatalysis\fP))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced by itself(weigthed):%d', \fBself_loop_weight\fP))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Concentration in ACSs:%6\&.4f', conc_inSCC))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Concentration in ACSs leaves:%6\&.4f', conc_bySCC))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Concentration in chains:%6\&.4f', conc_chain))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Concentration of autocatalyst:%6\&.4f', conc_selfCat))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Number of endo condensations:%6\&.4f', endo_condensation_counter))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Number of condensations:%6\&.4f', condensation_counter))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Number of endo cleavages:%6\&.4f', endo_cleavage_counter))"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\t\\t<> Number of cleavages:%6\&.4f', cleavage_counter))"
+.br
+.ti -1c
+.RI "\fBfprintf\fP (\fBfidFINAL\fP,'\\n%s\\t%6\&.4f\\t%6\&.4f\\t%6\&.4f\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%6\&.4f\\t%6\&.4f\\t%6\&.4f\\t%6\&.4f\\t%d\\t%d\\t%d\\t%d\\t%d',\&.\&.\&.simDirs(IDF)\&.name, rct, ecc, idOt, realSccs, prod_inSCC, prod_bySCC, prod_chain, prod_overlap, autocatalysis, prod_inSCC_weight,\&.\&.\&.prod_bySCC_weight, prod_chain_weight, prod_overlap_weight, self_loop_weight, conc_inSCC, conc_bySCC, conc_chain, conc_selfCat, endo_condensation_counter,\&.\&.\&.condensation_counter, endo_cleavage_counter, cleavage_counter, wasteSpecies)"
+.br
+.ti -1c
+.RI "\fBdisp\fP (\fBfprintf\fP('\\n ANALYSIS of the SIMULATION%s IS FINISHED\\n', \fBsimDirs\fP(\fBIDF\fP)\&.\fBname\fP))"
+.br
+.ti -1c
+.RI "\fBcd\fP (\fBcurrentDir\fP)"
+.br
+.ti -1c
+.RI "tmpl, tmpL \fBstrZero\fP ()"
+.br
+.ti -1c
+.RI "\fBcd\fP ('\&./res')"
+.br
+.ti -1c
+.RI "\fBend\fP \fBfunction\fP \fBsaveGraphToFile\fP (tmpDir, tmpRct, tmprTime, tmpRcts, tmpGraph, tmpFilextPre) \fBcurrentDir\fP"
+.br
+.ti -1c
+.RI "\fBcd\fP (strcat('\&.\&./\&.\&./', tmpDir))"
+.br
+.ti -1c
+.RI "\fBif\fP \fBexist\fP (\fBoutFname\fP,'\fBfile\fP') delete(\fBoutFname\fP)"
+.br
+.ti -1c
+.RI "\fBend\fP \fBfclose\fP (\fBfid1\fP)"
+.br
+.ti -1c
+.RI "\fBend\fP \fBfunction\fP \fBsaveGraphSUBToFile\fP (tmpDir, tmpRct, tmprTime, tmpRcts, tmpGraph, tmpFilextPre) \fBcurrentDir\fP"
+.br
+.ti -1c
+.RI "while \fBischar\fP (\fBtline\fP) \fBtline\fP"
+.br
+.ti -1c
+.RI "\fBif\fP \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'\fBnSeconds\fP') \fBconfparams\&.nSeconds\fP"
+.br
+.ti -1c
+.RI "elseif \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'\fBnGEN\fP') \fBconfparams\&.nGEN\fP"
+.br
+.ti -1c
+.RI "elseif \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'\fBnSIM\fP') \fBconfparams\&.nSIM\fP"
+.br
+.ti -1c
+.RI "elseif \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'\fBnReactions\fP') \fBconfparams\&.nReactions\fP"
+.br
+.ti -1c
+.RI "elseif \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'\fBtimeStructuresSavingInterval\fP') \fBconfparams\&.timeStructuresSavingInterval\fP"
+.br
+.ti -1c
+.RI "elseif \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'\fBreactionProbability\fP') \fBconfparams\&.reactionProbability\fP"
+.br
+.ti -1c
+.RI "elseif \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'\fBenergy\fP') \fBconfparams\&.energy\fP"
+.br
+.ti -1c
+.RI "elseif \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'ECConcentration') confparams\&.ECConcentration = str2num(\fBtline\fP(\fBparam\fP+1:length(\fBtline\fP)))"
+.br
+.ti -1c
+.RI "elseif \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'\fBinflux_rate\fP') \fBconfparams\&.influx_rate\fP"
+.br
+.ti -1c
+.RI "elseif \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'\fBmaxLOut\fP') \fBconfparams\&.maxLOut\fP"
+.br
+.ti -1c
+.RI "elseif \fBisequal\fP (\fBtline\fP(1:\fBparam\fP-1),'\fBvolume\fP') \fBconfparams\&.volume\fP"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP \fBfclose\fP (fidConf)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBfunction\fP \fBout\fP"
+.br
+.ti -1c
+.RI "params \fBthreshold\fP = 0"
+.br
+.ti -1c
+.RI "params \fBdecayTime\fP = 100"
+.br
+.ti -1c
+.RI "params \fBsimFolder\fP = 'K_cpx5_rete_n_'"
+.br
+.ti -1c
+.RI "params \fBtmpRctFileToLoad\fP = ''"
+.br
+.ti -1c
+.RI "params \fBtmpRctSUBFileToLoad\fP = ''"
+.br
+.ti -1c
+.RI "params \fBfigureVisible\fP = 0"
+.br
+.ti -1c
+.RI "params \fBinterval\fP = 10"
+.br
+.ti -1c
+.RI "\fBend\fP Set current date \fBand\fP 
+.br
+current directory \fBcurrentDate\fP = date()"
+.br
+.ti -1c
+.RI "\fBcurrentDir\fP = \fBcd\fP()"
+.br
+.ti -1c
+.RI "\fBend\fP \fBfidFINAL\fP = fopen(outFilenName,'w')"
+.br
+.ti -1c
+.RI "Come back \fBto\fP the original 
+.br
+folder READ ALL THE DIRECTORY 
+.br
+CONTAINING SIMULATIONS \fBsearch\fP = strcat('*',\fBparams\&.simFolder\fP,'*')"
+.br
+.ti -1c
+.RI "\fBsimDirs\fP = \fBdir\fP(\fBsearch\fP)"
+.br
+.ti -1c
+.RI "File Containing all Times \fBtimes\fP = 0:\fBparams\&.deltaT:params\&.totT\fP"
+.br
+.ti -1c
+.RI "\fBIDsimFOLDER\fP = 1"
+.br
+.ti -1c
+.RI "for \fBIDF\fP"
+.br
+.ti -1c
+.RI "Read \fBfile\fP conf \fBconfparams\fP = readParameters()"
+.br
+.ti -1c
+.RI "Select Times \fBand\fP \fBreactions\fP files \fBspeciesFiles\fP = \fBdir\fP('species_1*')"
+.br
+.ti -1c
+.RI "\fBif\fP \fBconfparams\fP \fBenergy\fP< 2 \fBnrg\fP=1;\fBelse\fP 
+.br
+\fBnrg\fP=0;\fBend\fP%analysisTimeInterval 
+.br
+is 1/10 of the total decay 
+.br
+time analysisTimeInterval=\fBparams\&.interval\fP;analysisTimeIntervalNoSave=confparams\&.nSeconds\&./\fBparams\&.decayTime\fP;%load 
+.br
+incoming flux \fBif\fP 
+.br
+\fBconfparams\&.influx_rate\fP > \fBinflux\fP = loadInflux()'"
+.br
+.ti -1c
+.RI "\fBfolderCat\fP = strcat('__0_iGraph_CAT_', int2str(\fBparams\&.decayTime\fP))"
+.br
+.ti -1c
+.RI "\fBfolderSub\fP = strcat('__0_iGraph_SUB_', int2str(\fBparams\&.decayTime\fP))"
+.br
+.ti -1c
+.RI "\fBend\fP ID \fBfile\fP \fBspecies\fP counter \fBfileSpeciesID\fP = 1"
+.br
+.ti -1c
+.RI "Compute \fBspecies\fP over \fBthreshold\fP \fBIDsOverThreshold\fP = tmpID(\fBand\fP(tmpConc>\fBparams\&.threshold\fP,tmpCpxCut==0))"
+.br
+.ti -1c
+.RI "\fBconcVec\fP = tmpConc"
+.br
+.ti -1c
+.RI "\fBreaction\fP parameters files \fBrcsFiles\fP = \fBdir\fP('*reactions_parameters*')"
+.br
+.ti -1c
+.RI "\fBfilextPre\fP = strcat('\fB_\fP',zeroBeforeStrNum(\fBIDsimFOLDER\fP, length(\fBsimDirs\fP)),int2str(\fBIDsimFOLDER\fP))"
+.br
+.ti -1c
+.RI "for \fBrfileID\fP"
+.br
+.ti -1c
+.RI "\fBcondensation_counter\fP = 0"
+.br
+.ti -1c
+.RI "\fBendo_cleavage_counter\fP = 0"
+.br
+.ti -1c
+.RI "\fBcleavage_counter\fP = 0"
+.br
+.ti -1c
+.RI "\fBfid\fP =fopen(\fBrcsFiles\fP(\fBrfileID\fP)\&.\fBname\fP,'\fBr\fP')"
+.br
+.ti -1c
+.RI "apro il primo \fBfile\fP initialize 
+.br
+useful \fBvariables\fP \fBpreviousTime\fP = 0"
+.br
+.ti -1c
+.RI "\fBrctIDshow\fP = 1"
+.br
+.ti -1c
+.RI "\fBrctIDshowNoSave\fP = 1"
+.br
+.ti -1c
+.RI "\fBrctID\fP = 1"
+.br
+.ti -1c
+.RI "\fBrline\fP = fgetl(\fBfid\fP)"
+.br
+.ti -1c
+.RI "\fBrlineb\fP = \fBrline\fP"
+.br
+.ti -1c
+.RI "\fBrlineID\fP = 1"
+.br
+.ti -1c
+.RI "FOR EACH REACTION \fBfluxEconomy\fP = 0"
+.br
+.ti -1c
+.RI "\fBfluxPlus\fP = 0"
+.br
+.ti -1c
+.RI "\fBfluxMinus\fP = 0"
+.br
+.ti -1c
+.RI "\fBfluxEconomyArray\fP = []"
+.br
+.ti -1c
+.RI "while \fBcntrl\fP"
+.br
+.ti -1c
+.RI "Craete different \fBvariables\fP \fBreaction\fP = \fBrline\fP(1)"
+.br
+.ti -1c
+.RI "\fBrtime\fP = \fBrline\fP(2)"
+.br
+.ti -1c
+.RI "\fBcc\fP = \fBrline\fP(3)"
+.br
+.ti -1c
+.RI "\fBcat\fP = \fBrline\fP(4)"
+.br
+.ti -1c
+.RI "\fBmol_I\fP = \fBrline\fP(5)"
+.br
+.ti -1c
+.RI "\fBmol_II\fP = \fBrline\fP(6)"
+.br
+.ti -1c
+.RI "\fBmol_III\fP = \fBrline\fP(7)"
+.br
+.ti -1c
+.RI "\fBloadedMolsConc\fP = \fBrline\fP(8)"
+.br
+.ti -1c
+.RI "\fBloadedMols\fP = \fBrline\fP(9)"
+.br
+.ti -1c
+.RI "\fBgillMean\fP = \fBrline\fP(10)"
+.br
+.ti -1c
+.RI "\fBgillSD\fP = \fBrline\fP(11)"
+.br
+.ti -1c
+.RI "\fBgillEntropy\fP = \fBrline\fP(12)"
+.br
+.ti -1c
+.RI "\fBnewSpeciesProb\fP = \fBrline\fP(13)"
+.br
+.ti -1c
+.RI "\fBratioBackForward\fP = \fBrline\fP(14)"
+.br
+.ti -1c
+.RI "\fBend\fP \fBif\fP \fBnrg\fP"
+.br
+.ti -1c
+.RI "\fBprintTemporalMessage\fP = 1"
+.br
+.ti -1c
+.RI "If the time is \fBrighe\fP save 
+.br
+iGraph structures \fBto\fP \fBfile\fP \fBif\fP(\fBrtime\fP >
+.br
+ \fBrctIDshow\fP 
+.br
+*analysisTimeInterval) \fBdisp\fP(sprintf('|-%s|Reaction%d-time \fBsaveGraphToFile\fP (\fBfolderCat\fP, \fBreaction\fP, \fBrtime\fP, \fBconfparams\&.nReactions\fP, \fBgraph\fP, \fBfilextPre\fP)"
+.br
+.ti -1c
+.RI "\fBend\fP update time intervals \fBtimeInterval\fP = \fBrtime\fP - \fBpreviousTime\fP"
+.br
+.ti -1c
+.RI "\fBgraph\fP = graph(graph(:,5)>0,:)"
+.br
+.ti -1c
+.RI "\fBgraphSUB\fP = graphSUB(graphSUB(:,5)>0,:)"
+.br
+.ti -1c
+.RI "\fBelse\fP \fBendo_condensation_counter\fP = endo_condensation_counter + 1"
+.br
+.ti -1c
+.RI "\fBcurrentFolder\fP = \fBcd\fP()"
+.br
+.ti -1c
+.RI "\fBfileName\fP = strcat('25_gilleMean_',strZero,int2str(IDF),'\&.eps')"
+.br
+.ti -1c
+.RI "\fBfigure1\fP = gcf"
+.br
+.ti -1c
+.RI "\fBfigure2\fP = gcf"
+.br
+.ti -1c
+.RI "\fBfigure3\fP = gcf"
+.br
+.ti -1c
+.RI "\fBfigure4\fP = gcf"
+.br
+.ti -1c
+.RI "\fBfigure5\fP = gcf"
+.br
+.ti -1c
+.RI "\fBfigure6\fP = gcf"
+.br
+.ti -1c
+.RI "\fBfigure7\fP = gcf"
+.br
+.ti -1c
+.RI "SAVE THE GILLESPIE MATRXI ON FILE \fBfilename\fP = strcat('0_gillespie_',strZero,int2str(IDF),'\&.txt')"
+.br
+.ti -1c
+.RI "\fBfluxEconomyMatrix\fP = [\fBgillTimeSeries\fP(:,1), \fBfluxEconomyArray\fP]"
+.br
+.ti -1c
+.RI "Computing actual number od 
+.br
+strongly connected components \fBfrom\fP = \fBgraph\fP(:,1)+1"
+.br
+.ti -1c
+.RI "\fBto\fP = \fBgraph\fP(:,2)+1"
+.br
+.ti -1c
+.RI "\fBprod_inSCC\fP = 0"
+.br
+.ti -1c
+.RI "\fBprod_chain\fP = 0"
+.br
+.ti -1c
+.RI "\fBprod_bySCC\fP = 0"
+.br
+.ti -1c
+.RI "\fBprod_overlap\fP = 0"
+.br
+.ti -1c
+.RI "\fBsccID\fP = 0"
+.br
+.ti -1c
+.RI "\fBautocatalysis\fP = 0"
+.br
+.ti -1c
+.RI "\fBprod_inSCC_weight\fP = 0"
+.br
+.ti -1c
+.RI "\fBprod_chain_weight\fP = 0"
+.br
+.ti -1c
+.RI "\fBprod_bySCC_weight\fP = 0"
+.br
+.ti -1c
+.RI "\fBprod_overlap_weight\fP = 0"
+.br
+.ti -1c
+.RI "\fBself_loop_weight\fP = 0"
+.br
+.ti -1c
+.RI "\fBconc_inSCC\fP = 0"
+.br
+.ti -1c
+.RI "\fBconc_chain\fP = 0"
+.br
+.ti -1c
+.RI "\fBconc_bySCC\fP = 0"
+.br
+.ti -1c
+.RI "\fBconc_selfCat\fP = 0"
+.br
+.ti -1c
+.RI "\fBwasteSpecies\fP = 0"
+.br
+.ti -1c
+.RI "\fBcatSparse\fP = sparse(\fBfrom\fP,\fBto\fP,true,\fBmax\fP(\fBmax\fP(\fBfrom\fP,\fBto\fP)),\fBmax\fP(\fBmax\fP(\fBfrom\fP,\fBto\fP)))"
+.br
+.ti -1c
+.RI "\fBnumScc\fP = histc(scc,1:\fBmax\fP(scc))"
+.br
+.ti -1c
+.RI "\fBrealSccs\fP = 0"
+.br
+.ti -1c
+.RI "for \fBc\fP"
+.br
+.ti -1c
+.RI "\fBalreadyAdded_leaves\fP = 0"
+.br
+.ti -1c
+.RI "\fBalreadyAdded_chain\fP = 0"
+.br
+.ti -1c
+.RI "\fBtmpProd_chain\fP = 0"
+.br
+.ti -1c
+.RI "\fBincomingNodes\fP = \fBgraph\fP(\fBgraph\fP(:,2)==\fBIDsOverThreshold\fP(idot),1)"
+.br
+.ti -1c
+.RI "\fBtempProd_chain_weight\fP = 0"
+.br
+.ti -1c
+.RI "\fBwasteSpeciesFLAG\fP = 0"
+.br
+.ti -1c
+.RI "for \fBinnode\fP"
+.br
+.ti -1c
+.RI "\fBnoInAcs\fP = 1"
+.br
+.ti -1c
+.RI "\fBif\fP \fBalreadyAdded_ACS\fP"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP Reactions \fBto\fP 
+.br
+distribuite in the different 
+.br
+nature of the \fBreactions\fP \fBweightToDistribute\fP = \fBgraph\fP(\fBand\fP((\fBgraph\fP(:,1) == \fBincomingNodes\fP(\fBinnode\fP)),(\fBgraph\fP(:,2) == \fBIDsOverThreshold\fP(idot))),6)"
+.br
+.ti -1c
+.RI "\fBif\fP \fBinSCCFlag\fP == 1 % If the node is in an \fBACS\fP"
+.br
+.ti -1c
+.RI "\fBelse\fP Otherwise it has been 
+.br
+produced by an \fBACS\fP"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP If the \fBspecies\fP 
+.br
+concentration but the \fBspecies\fP 
+.br
+is not produced by other \fBspecies\fP"
+.br
+.ti -1c
+.RI "\fBrct\fP = \fBconfparams\&.reactionProbability\fP"
+.br
+.ti -1c
+.RI "\fBecc\fP = confparams\&.ECConcentration"
+.br
+.ti -1c
+.RI "\fBidOt\fP = length(\fBIDsOverThreshold\fP)"
+.br
+.ti -1c
+.RI "clear \fBnrgTimeSeries\fP"
+.br
+.ti -1c
+.RI "clear \fBgillTimeSeries\fP = [\fBrtime\fP,\fBgillMean\fP,\fBgillSD\fP,\fBgillEntropy\fP,\fBnewSpeciesProb\fP]"
+.br
+.ti -1c
+.RI "\fBnZeros\fP = length(\fBnum2str\fP(tmpL)) - length(\fBnum2str\fP(tmpl))"
+.br
+.ti -1c
+.RI "\fBif\fP \fBnZeros\fP for \fBp\fP"
+.br
+.ti -1c
+.RI "\fBtmpStrZeros\fP = zeroBeforeStrNum(tmpRct, tmpRcts)"
+.br
+.ti -1c
+.RI "\fBoutFname\fP = strcat('_iGraph_CAT',tmpFilextPre,'\fB_\fP',\fBtmpStrZeros\fP,\fBnum2str\fP(tmpRct),'\fB_\fP',\fBnum2str\fP(tmprTime),'\&.csv')"
+.br
+.ti -1c
+.RI "\fBend\fP \fBfid1\fP = fopen(\fBoutFname\fP,'\fBa\fP')"
+.br
+.ti -1c
+.RI "for \fBj\fP"
+.br
+.ti -1c
+.RI "\fBend\fP \fBfunction\fP [N, \fBids\fP]"
+.br
+.ti -1c
+.RI "\fBids\fP = \fBgraph\fP(\fBgraph\fP(:,1)==\fBgraph\fP(:,2),1)"
+.br
+.ti -1c
+.RI "\fBtline\fP = fgets(fidConf)"
+.br
+.ti -1c
+.RI "\fBparam\fP = findstr(\fBtline\fP,'=')"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBend\fP If the prompt time is \fBrighe\fP \fBa\fP message on the screen indicating the \fBreaction\fP number and the time is shown \fBif\fP and ((\fBrtime\fP > \fBrctIDshowNoSave\fP *analysisTimeIntervalNoSave), (\fBprintTemporalMessage\fP==1))"
+
+.SS "cd (params\&.tmpPath)"
+
+.SS "\fBend\fP cd ('0_statistics')"
+
+.SS "Go into the results folder cd (strcat(\fBsimDirs\fP(\fBIDF\fP)\&.\fBname\fP,'/res'))"
+
+.SS "cd ('\&.\&./\&.\&./0_statistics')"
+
+.SS "cd (\fBcurrentDir\fP)"
+
+.SS "cd ('\&./res')"
+
+.SS "cd (strcat('\&.\&./\&.\&./', tmpDir))"
+
+.SS "disp ('start analysis\&.\&.\&.')"
+
+.SS "For each folder the necessary computations are performed disp ('*********************************************************************************')"
+
+.SS "disp ('*NEW SIMULATION ANALYSIS PROCESS')"
+
+.SS "\fBend\fP If there are \fBspecies\fP over theshold network \fBanalysis\fP is performed disp ('|-Graph Creation')"
+
+.SS "disp (strcat('|-File ', \fBrcsFiles\fP(\fBrfileID\fP)\&.\fBname\fP, 'processing\&.\&.\&.'))"
+
+.SS "disp (msg)"
+
+.SS "NET ANALYSIS disp ('|-*******NETWORK ANALYSIS *******')"
+
+.SS "disp ('|-Strongly connected components analysis\&.\&.\&. ')"
+
+.SS "disp (sprintf('<> SCC n\&.%d', \fBc\fP))"
+
+.SS "\fBend\fP \fBend\fP disp (sprintf('|-Number of ACS:%d', \fBrealSccs\fP))"
+
+.SS "disp (sprintf('|-Number of \fBACS\fP(length 1):%d', self))"
+
+.SS "disp (sprintf('|-Species over threshold:%d', length(\fBIDsOverThreshold\fP)))"
+
+.SS "disp (\fBfprintf\fP('\\t Within Acs%d->%d#%d-[%d]%d%6\&.4f', incomingNodes(innode), IDsOverThreshold(idot), weightToDistribute,\&.\&.\&.IDsOverThreshold(idot), IDsOverThreshold(idot), concVec(idot)))"
+
+.SS "disp (\fBfprintf\fP('\\t From Acs%d->%d#%d-[%d]%d%6\&.4f', incomingNodes(innode), IDsOverThreshold(idot), weightToDistribute,\&.\&.\&.IDsOverThreshold(idot), IDsOverThreshold(idot), concVec(idot)))"
+
+.SS "\fBend\fP \fBend\fP disp (\fBfprintf\fP('\\t\\t<> Number of Structural Autocatalytic \fBset\fP of molecules:%d', \fBrealSccs\fP))"
+
+.SS "\fBend\fP disp (\fBfprintf\fP('\\t\\t<>-----------------------------------------------'))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced by \fBa\fP CHAIN:%d', \fBprod_chain\fP))"
+
+.SS "\fBif\fP \fBrealSccs\fP disp (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced INTO an ACS:%d', \fBprod_inSCC\fP))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced INTO an \fBACS\fP(weigthed):%d', \fBprod_inSCC_weight\fP))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced BY an ACS:%d', \fBprod_bySCC\fP))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced BY an \fBACS\fP(weigthed):%d', \fBprod_bySCC_weight\fP))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced by an overlap:%d', \fBprod_overlap\fP))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced by an overlap(weigthed):%d', \fBprod_overlap_weight\fP))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced by itself:%d', \fBautocatalysis\fP))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Species over \fBthreshold\fP produced by itself(weigthed):%d', \fBself_loop_weight\fP))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Concentration in ACSs:%6\&.4f', conc_inSCC))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Concentration in ACSs leaves:%6\&.4f', conc_bySCC))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Concentration in chains:%6\&.4f', conc_chain))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Concentration of autocatalyst:%6\&.4f', conc_selfCat))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Number of endo condensations:%6\&.4f', endo_condensation_counter))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Number of condensations:%6\&.4f', condensation_counter))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Number of endo cleavages:%6\&.4f', endo_cleavage_counter))"
+
+.SS "disp (\fBfprintf\fP('\\t\\t<> Number of cleavages:%6\&.4f', cleavage_counter))"
+
+.SS "disp (\fBfprintf\fP('\\n ANALYSIS of the SIMULATION%s IS FINISHED\\n', \fBsimDirs\fP(\fBIDF\fP)\&.\fBname\fP))"
+
+.SS "eval ()"
+
+.SS "\fBif\fP exist (outFilenName, '\fBfile\fP')"
+
+.SS "\fBif\fP exist (\fBoutFname\fP, '\fBfile\fP')"
+
+.SS "fclose (\fBfidFINAL\fP)"
+
+.SS "\fBend\fP fclose (\fBfid\fP)"
+
+.SS "\fBend\fP fclose (\fBfid1\fP)"
+
+.SS "\fBend\fP \fBend\fP fclose (fidConf)"
+
+.SS "fprintf (\fBfidFINAL\fP, '\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\n', \&.\&.\&. 'Reaction Probability', 'Energy Concentration', 'Tot over Threshold', 'Real ACSs', 'in ACSs', \&.\&.\&. 'Leaves', 'by Chain', 'Overlap', 'Autocatalysis', 'in ACSs(W)', 'Leaves(W)', 'by Chain(W)', 'Overlap(W)', 'Autocatalysis(W)', \&.\&.\&. ''[ACS], ''[Leaves], ''[Chains], ''[Self], 'Endo Cond', 'Cond', 'Endo Cleavage', 'Cleavage', 'Wasted \fBspecies\fP')"
+
+.SS "fprintf (\fBfidFINAL\fP, '\\n%s\\t%6\&.4f\\t%6\&.4f\\t%6\&.4f\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%d\\t%6\&.4f\\t%6\&.4f\\t%6\&.4f\\t%6\&.4f\\t%d\\t%d\\t%d\\t%d\\t%d', \&.\&.\&.\fBsimDirs\fP(\fBIDF\fP)\&.name, \fBrct\fP, \fBecc\fP, \fBidOt\fP, \fBrealSccs\fP, \fBprod_inSCC\fP, \fBprod_bySCC\fP, \fBprod_chain\fP, \fBprod_overlap\fP, \fBautocatalysis\fP, \fBprod_inSCC_weight\fP, prod_bySCC_weight, \fBprod_chain_weight\fP, \fBprod_overlap_weight\fP, \fBself_loop_weight\fP, \fBconc_inSCC\fP, \fBconc_bySCC\fP, \fBconc_chain\fP, \fBconc_selfCat\fP, \fBendo_condensation_counter\fP, condensation_counter, \fBendo_cleavage_counter\fP, \fBcleavage_counter\fP, \fBwasteSpecies\fP)"
+
+.SS "\fBend\fP gillTimeSeries (\fBrlineID\fP, :)"
+
+.SS "graph (:, 5)"
+
+.SS "graph (position, :)"
+
+.SS "graphSUB (:, 5)"
+
+.SS "graphSUB (position, :)"
+
+.SS "\fBend\fP \fBend\fP if (\fBcc\fP = \fC=0\fP)"
+
+.SS "while ischar (\fBrlineb\fP)"
+
+.SS "while ischar (\fBtline\fP)"
+
+.SS "\fBif\fP isequal (\fBtline\fP(1:\fBparam\fP-1), '\fBnSeconds\fP')"
+
+.SS "elseif isequal (\fBtline\fP(1:\fBparam\fP-1), '\fBnGEN\fP')"
+
+.SS "elseif isequal (\fBtline\fP(1:\fBparam\fP-1), '\fBnSIM\fP')"
+
+.SS "elseif isequal (\fBtline\fP(1:\fBparam\fP-1), '\fBnReactions\fP')"
+
+.SS "elseif isequal (\fBtline\fP(1:\fBparam\fP-1), '\fBtimeStructuresSavingInterval\fP')"
+
+.SS "elseif isequal (\fBtline\fP(1:\fBparam\fP-1), '\fBreactionProbability\fP')"
+
+.SS "elseif isequal (\fBtline\fP(1:\fBparam\fP-1), '\fBenergy\fP')"
+
+.SS "elseif isequal (\fBtline\fP(1:\fBparam\fP-1), 'ECConcentration') = str2num(\fBtline\fP(\fBparam\fP+1:length(\fBtline\fP)))"
+
+.SS "elseif isequal (\fBtline\fP(1:\fBparam\fP-1), '\fBinflux_rate\fP')"
+
+.SS "elseif isequal (\fBtline\fP(1:\fBparam\fP-1), '\fBmaxLOut\fP')"
+
+.SS "elseif isequal (\fBtline\fP(1:\fBparam\fP-1), '\fBvolume\fP')"
+
+.SS "legend ('Added', 'Removed')"
+
+.SS ":,2 mol_I ()\fC [virtual]\fP"
+
+.SS ":,2 mol_II ()\fC [virtual]\fP"
+
+.SS "e\&.g\&. sim 1 of 10 \fBsims\fP, \fBstrZero\fP will be '0' in order \fBto\fP create \fBa\fP % \fBfile\fP named XXX_01_XXX \fBstrZero\fP = zeroBeforeStrNum(\fBIDF\fP,length(\fBsimDirs\fP names ()\fC [virtual]\fP"
+
+.SS "while rline (\fBend\fP)"
+
+.SS "saveas (\fBfigure1\fP, \fBfileName\fP)"
+
+.SS "saveas (\fBfigure2\fP, \fBfileName\fP)"
+
+.SS "saveas (\fBfigure3\fP, \fBfileName\fP)"
+
+.SS "saveas (\fBfigure4\fP, \fBfileName\fP)"
+
+.SS "saveas (\fBfigure5\fP, \fBfileName\fP)"
+
+.SS "saveas (\fBfigure6\fP, \fBfileName\fP)"
+
+.SS "saveas (\fBfigure7\fP, \fBfileName\fP)"
+
+.SS "saveGraphSUBToFile (\fBfolderSub\fP, \fBreaction\fP, \fBrtime\fP, confparams\&.nReactions, \fBgraphSUB\fP, \fBfilextPre\fP)"
+
+.SS "\fBend\fP \fBfunction\fP saveGraphSUBToFile (tmpDir, tmpRct, tmprTime, tmpRcts, tmpGraph, tmpFilextPre)"
+
+.SS "\fBend\fP \fBfunction\fP saveGraphToFile (tmpDir, tmpRct, tmprTime, tmpRcts, tmpGraph, tmpFilextPre)"
+
+.SS "grid on set (gca, 'fontsize', 15, 'fontname', '\fBtimes\fP')"
+
+.SS "tmpl, tmpL strZero ()\fC [virtual]\fP"
+
+.SS "params params Substrate (If different \fBfrom\fP1) ->  PRO, Otherwise \fBif\fP the \fBreaction\fP is already present its parameters are updatedif \fBsum\fP(\fBand\fP((\fBgraph\fP(:, 1)==\fBcat\fP), \fBgraph\fP(:, 2)==\fBmol_I\fP))==1position=and((graph(:, 1)==cat), graph(:, 2)==mol_I)"
+
+.SS "\fBend\fP \fBif\fP sum (\fBinflux\fP = \fC=\fBmol_I\fP\fP)"
+\fBInitial value:\fP
+.PP
+.nf
+= 1
+                        fluxEconomy = fluxEconomy + 1
+.fi
+.SS "\fBif\fP sum (find(scc==\fBc\fP) = \fC=\fBIDsOverThreshold\fP(idot)\fP)"
+
+.SS "\fBend\fP \fBend\fP \fBend\fP \fBend\fP \fBif\fP self \fBif\fP sum (selfID = \fC=idot\fP)"
+
+.SS ":,4 timeInterval ()\fC [virtual]\fP"
+
+.SS "xlabel ('Time', 'Interpreter', 'latex', 'fontsize', 15)"
+
+.SS "ylabel ('Gillespie Mean', 'Interpreter', 'latex', 'fontsize', 15)"
+
+.SS "ylabel ('Gillespie SD', 'Interpreter', 'latex', 'fontsize', 15)"
+
+.SS "ylabel ('Entropy', 'Interpreter', 'latex', 'fontsize', 15)"
+
+.SS "ylabel ('New \fBspecies\fP Probability', 'Interpreter', 'latex', 'fontsize', 15)"
+
+.SS "ylabel ('Flux Molecules Balance', 'Interpreter', 'latex', 'fontsize', 15)"
+
+.SS "ylabel ('Ratio of backward \fBreactions\fP', 'Interpreter', 'latex', 'fontsize', 15)"
+
+.SS "ylabel ('Flux Molecules', 'Interpreter', 'latex', 'fontsize', 15)"
+
+.SS "\fBif\fP ~isdir (strcat('\&.\&./\&.\&./', \fBfolderCat\fP))"
+
+.SS "\fBend\fP \fBif\fP ~isdir (strcat('\&.\&./\&.\&./', \fBfolderSub\fP))"
+
+.SS "\fBif\fP ~\fBisempty\fP (\fBIDsOverThreshold\fP)"
+
+.SS "\fBif\fP ~\fBisempty\fP (\fBincomingNodes\fP)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "\fBelse\fP Otherwise it has been produced by an ACS"
+
+.PP
+Definition at line 567 of file generalConcentrationOverThreshold\&.m\&.
+.SS "alreadyAdded_ACS"
+\fBInitial value:\fP
+.PP
+.nf
+== 0 % Add concentration to conc of ACSs
+                                                conc_inSCC = conc_inSCC + concVec(idot)
+.fi
+.PP
+Definition at line 551 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBif\fP alreadyAdded_chain = 0"
+
+.PP
+Definition at line 533 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBelse\fP Otherwise it has been produced by an so it is \fBa\fP first layer leaf \fBif\fP alreadyAdded_leaves = 0"
+
+.PP
+Definition at line 532 of file generalConcentrationOverThreshold\&.m\&.
+.SS "autocatalysis = 0"
+
+.PP
+Definition at line 501 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBif\fP \fBrealSccs\fP If there are \fBACS\fP for c"
+\fBInitial value:\fP
+.PP
+.nf
+= 1 : length(numScc)
+                if numScc(c) > 1
+                    sccID = sccID + 1
+.fi
+.PP
+Definition at line 518 of file generalConcentrationOverThreshold\&.m\&.
+.SS "cat = \fBrline\fP(4)"
+
+.PP
+Definition at line 162 of file generalConcentrationOverThreshold\&.m\&.
+.SS "catSparse = sparse(\fBfrom\fP,\fBto\fP,true,\fBmax\fP(\fBmax\fP(\fBfrom\fP,\fBto\fP)),\fBmax\fP(\fBmax\fP(\fBfrom\fP,\fBto\fP)))"
+
+.PP
+Definition at line 513 of file generalConcentrationOverThreshold\&.m\&.
+.SS "params params \fBend\fP \fBend\fP \fBend\fP \fBelse\fP \fBif\fP cc = \fBrline\fP(3)"
+
+.PP
+Definition at line 161 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBelse\fP cleavage_counter = 0"
+
+.PP
+Definition at line 131 of file generalConcentrationOverThreshold\&.m\&.
+.SS "while cntrl"
+
+.PP
+Definition at line 156 of file generalConcentrationOverThreshold\&.m\&.
+.SS "conc_bySCC = 0"
+
+.PP
+Definition at line 509 of file generalConcentrationOverThreshold\&.m\&.
+.SS "conc_chain = 0"
+
+.PP
+Definition at line 508 of file generalConcentrationOverThreshold\&.m\&.
+.SS "conc_inSCC = 0"
+
+.PP
+Definition at line 507 of file generalConcentrationOverThreshold\&.m\&.
+.SS "conc_selfCat = 0"
+
+.PP
+Definition at line 510 of file generalConcentrationOverThreshold\&.m\&.
+.SS "concVec = tmpConc"
+
+.PP
+Definition at line 117 of file generalConcentrationOverThreshold\&.m\&.
+.SS "condensation_counter = 0"
+
+.PP
+Definition at line 129 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP \fBfunction\fP confparams = readParameters()"
+
+.PP
+Definition at line 71 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP Set current date \fBand\fP current directory currentDate = date()"
+
+.PP
+Definition at line 21 of file generalConcentrationOverThreshold\&.m\&.
+.SS "currentDir = \fBcd\fP()"
+
+.PP
+Definition at line 22 of file generalConcentrationOverThreshold\&.m\&.
+.SS "currentFolder = \fBcd\fP()"
+
+.PP
+Definition at line 352 of file generalConcentrationOverThreshold\&.m\&.
+.SS "params params decayTime = 100"
+
+.PP
+Definition at line 12 of file generalConcentrationOverThreshold\&.m\&.
+.SS "ecc = confparams\&.ECConcentration"
+
+.PP
+Definition at line 640 of file generalConcentrationOverThreshold\&.m\&.
+.SS "endo_cleavage_counter = 0"
+
+.PP
+Definition at line 130 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBelse\fP endo_condensation_counter = endo_condensation_counter + 1"
+
+.PP
+Definition at line 227 of file generalConcentrationOverThreshold\&.m\&.
+.SS "fid =fopen(\fBrcsFiles\fP(\fBrfileID\fP)\&.\fBname\fP,'\fBr\fP')"
+
+.PP
+Definition at line 135 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP fid1 = fopen(\fBoutFname\fP,'\fBa\fP')"
+
+.PP
+Definition at line 696 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP fidFINAL = fopen(outFilenName,'w')"
+
+.PP
+Definition at line 38 of file generalConcentrationOverThreshold\&.m\&.
+.SS "figure1 = gcf"
+
+.PP
+Definition at line 374 of file generalConcentrationOverThreshold\&.m\&.
+.SS "figure2 = gcf"
+
+.PP
+Definition at line 390 of file generalConcentrationOverThreshold\&.m\&.
+.SS "figure3 = gcf"
+
+.PP
+Definition at line 406 of file generalConcentrationOverThreshold\&.m\&.
+.SS "figure4 = gcf"
+
+.PP
+Definition at line 422 of file generalConcentrationOverThreshold\&.m\&.
+.SS "figure5 = gcf"
+
+.PP
+Definition at line 438 of file generalConcentrationOverThreshold\&.m\&.
+.SS "figure6 = gcf"
+
+.PP
+Definition at line 454 of file generalConcentrationOverThreshold\&.m\&.
+.SS "figure7 = gcf"
+
+.PP
+Definition at line 471 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBif\fP params figureVisible = 0"
+
+.PP
+Definition at line 16 of file generalConcentrationOverThreshold\&.m\&.
+.SS "fileName = strcat('25_gilleMean_',strZero,int2str(IDF),'\&.eps')"
+
+.PP
+Definition at line 372 of file generalConcentrationOverThreshold\&.m\&.
+.SS "SAVE THE GILLESPIE MATRXI ON FILE filename = strcat('0_gillespie_',strZero,int2str(IDF),'\&.txt')"
+
+.PP
+Definition at line 476 of file generalConcentrationOverThreshold\&.m\&.
+.SS "fileSpeciesID = 1"
+
+.PP
+Definition at line 107 of file generalConcentrationOverThreshold\&.m\&.
+.SS "filextPre = strcat('\fB_\fP',zeroBeforeStrNum(\fBIDsimFOLDER\fP, length(\fBsimDirs\fP)),int2str(\fBIDsimFOLDER\fP))"
+
+.PP
+Definition at line 122 of file generalConcentrationOverThreshold\&.m\&.
+.SS "fluxEconomy = 0"
+
+.PP
+Definition at line 148 of file generalConcentrationOverThreshold\&.m\&.
+.SS "params params \fBend\fP \fBend\fP \fBend\fP \fBend\fP fluxEconomyArray = []"
+
+.PP
+Definition at line 151 of file generalConcentrationOverThreshold\&.m\&.
+.SS "fluxEconomyMatrix = [\fBgillTimeSeries\fP(:,1), \fBfluxEconomyArray\fP]"
+
+.PP
+Definition at line 479 of file generalConcentrationOverThreshold\&.m\&.
+.SS "fluxMinus = 0"
+
+.PP
+Definition at line 150 of file generalConcentrationOverThreshold\&.m\&.
+.SS "fluxPlus = 0"
+
+.PP
+Definition at line 149 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBif\fP folderCat = strcat('__0_iGraph_CAT_', int2str(\fBparams\&.decayTime\fP))"
+
+.PP
+Definition at line 95 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP \fBif\fP folderSub = strcat('__0_iGraph_SUB_', int2str(\fBparams\&.decayTime\fP))"
+
+.PP
+Definition at line 96 of file generalConcentrationOverThreshold\&.m\&.
+.SS "Computing actual number od strongly connected components from = \fBgraph\fP(:,1)+1"
+
+.PP
+Definition at line 493 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP function[N, \fBids\fP]"
+\fBInitial value:\fP
+.PP
+.nf
+= self_loops(graph)
+    %Compute self-loop
+    N = sum(graph(:,1)==graph(:,2))
+.fi
+.PP
+Definition at line 722 of file generalConcentrationOverThreshold\&.m\&.
+.SS "gillEntropy = \fBrline\fP(12)"
+
+.PP
+Definition at line 170 of file generalConcentrationOverThreshold\&.m\&.
+.SS "gillMean = \fBrline\fP(10)"
+
+.PP
+Definition at line 168 of file generalConcentrationOverThreshold\&.m\&.
+.SS "gillSD = \fBrline\fP(11)"
+
+.PP
+Definition at line 169 of file generalConcentrationOverThreshold\&.m\&.
+.SS "gillTimeSeries = [\fBrtime\fP,\fBgillMean\fP,\fBgillSD\fP,\fBgillEntropy\fP,\fBnewSpeciesProb\fP]"
+
+.PP
+Definition at line 649 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBelse\fP graph = graph(graph(:,5)>0,:)"
+
+.PP
+Definition at line 214 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBelse\fP graphSUB = graphSUB(graphSUB(:,5)>0,:)"
+
+.PP
+Definition at line 220 of file generalConcentrationOverThreshold\&.m\&.
+.SS "for IDF"
+\fBInitial value:\fP
+.PP
+.nf
+=1:length(simDirs)
+    
+    if isdir(strcat(simDirs(IDF)\&.name))
+        
+        disp(sprintf('|- Processing dir %s',simDirs(IDF)\&.name))
+.fi
+.PP
+Definition at line 61 of file generalConcentrationOverThreshold\&.m\&.
+.SS "idOt = length(\fBIDsOverThreshold\fP)"
+
+.PP
+Definition at line 641 of file generalConcentrationOverThreshold\&.m\&.
+.SS "ids = \fBgraph\fP(\fBgraph\fP(:,1)==\fBgraph\fP(:,2),1)"
+
+.PP
+Definition at line 725 of file generalConcentrationOverThreshold\&.m\&.
+.SS "IDsimFOLDER = 1"
+
+.PP
+Definition at line 59 of file generalConcentrationOverThreshold\&.m\&.
+.SS "Compute \fBspecies\fP over \fBthreshold\fP IDsOverThreshold = tmpID(\fBand\fP(tmpConc>\fBparams\&.threshold\fP,tmpCpxCut==0))"
+
+.PP
+Definition at line 116 of file generalConcentrationOverThreshold\&.m\&.
+.SS "incomingNodes = \fBgraph\fP(\fBgraph\fP(:,2)==\fBIDsOverThreshold\fP(idot),1)"
+
+.PP
+Definition at line 535 of file generalConcentrationOverThreshold\&.m\&.
+.SS "controllo che non ci siano cicli nell influx = loadInflux()'"
+
+.PP
+Definition at line 88 of file generalConcentrationOverThreshold\&.m\&.
+.SS "for innode"
+\fBInitial value:\fP
+.PP
+.nf
+= 1 : length(incomingNodes)
+                            alreadyAdded_ACS = 0
+.fi
+.PP
+Definition at line 541 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBif\fP inSCCFlag == 1 % If the node is in an \fBACS\fP"
+
+.PP
+Definition at line 561 of file generalConcentrationOverThreshold\&.m\&.
+.SS "params interval = 10"
+
+.PP
+Definition at line 17 of file generalConcentrationOverThreshold\&.m\&.
+.SS "clear j"
+\fBInitial value:\fP
+.PP
+.nf
+= 1 : r
+        fprintf(fid1,'%d\t%d\t%d\t%6\&.4f\t%6\&.4f\t%d\n',tmpGraph(j,1),tmpGraph(j,2),tmpGraph(j,3),tmpGraph(j,4),tmpGraph(j,5),tmpGraph(j,6))
+.fi
+.PP
+Definition at line 698 of file generalConcentrationOverThreshold\&.m\&.
+.SS "loadedMols = \fBrline\fP(9)"
+
+.PP
+Definition at line 167 of file generalConcentrationOverThreshold\&.m\&.
+.SS "loadedMolsConc = \fBrline\fP(8)"
+
+.PP
+Definition at line 166 of file generalConcentrationOverThreshold\&.m\&.
+.SS "mol_I = \fBrline\fP(5)"
+
+.PP
+Definition at line 163 of file generalConcentrationOverThreshold\&.m\&.
+.SS "params params \fBend\fP \fBif\fP mol_II = \fBrline\fP(6)"
+
+.PP
+Definition at line 164 of file generalConcentrationOverThreshold\&.m\&.
+.SS "mol_III = \fBrline\fP(7)"
+
+.PP
+Definition at line 165 of file generalConcentrationOverThreshold\&.m\&.
+.SS "newSpeciesProb = \fBrline\fP(13)"
+
+.PP
+Definition at line 171 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP \fBend\fP \fBend\fP \fBend\fP \fBend\fP If both the \fBspecies\fP over \fBthreshold\fP \fBand\fP the incoming node are not belonging \fBto\fP an \fBACS\fP \fBif\fP noInAcs = 1"
+
+.PP
+Definition at line 544 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP \fBif\fP nrg"
+\fBInitial value:\fP
+.PP
+.nf
+== 1
+                    nrgTimeSeries(rlineID,:) = [rtime,loadedMolsConc,loadedMols]
+.fi
+.PP
+Definition at line 175 of file generalConcentrationOverThreshold\&.m\&.
+.SS "clear nrgTimeSeries"
+
+.PP
+Definition at line 648 of file generalConcentrationOverThreshold\&.m\&.
+.SS "numScc = histc(scc,1:\fBmax\fP(scc))"
+
+.PP
+Definition at line 515 of file generalConcentrationOverThreshold\&.m\&.
+.SS "nZeros = length(\fBnum2str\fP(tmpL)) - length(\fBnum2str\fP(tmpl))"
+
+.PP
+Definition at line 673 of file generalConcentrationOverThreshold\&.m\&.
+.SS "Come back \fBto\fP the original folder \fBend\fP \fBend\fP out"
+\fBInitial value:\fP
+.PP
+.nf
+= generalConcentrationOverThreshold(params)
+
+% param\&.threshold               # Theshold above which the concentration has to be 
+% param\&.decayTime               # Reaction decay time
+% param\&.simFolder               # Subtring identifycating the folders containing sims
+% param\&.tmpRctFileToLoad        # Reaction file to load
+% param\&.tmpRctSUBFileToLoad     # Reaction SUB file to load
+
+if nargin < 1
+    params\&.tmpPath = '~/Documents/simChiara/variaK_cpx/K_cpx_05'
+.fi
+.PP
+Definition at line 1 of file generalConcentrationOverThreshold\&.m\&.
+.SS "outFname = strcat('_iGraph_CAT',tmpFilextPre,'\fB_\fP',\fBtmpStrZeros\fP,\fBnum2str\fP(tmpRct),'\fB_\fP',\fBnum2str\fP(tmprTime),'\&.csv')"
+
+.PP
+Definition at line 692 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBif\fP \fBnZeros\fP for p"
+\fBInitial value:\fP
+.PP
+.nf
+=1:nZeros
+            strZero = strcat(strZero,'0')
+.fi
+.PP
+Definition at line 675 of file generalConcentrationOverThreshold\&.m\&.
+.SS "param = findstr(\fBtline\fP,'=')"
+
+.PP
+Definition at line 736 of file generalConcentrationOverThreshold\&.m\&.
+.SS "previousTime = 0"
+
+.PP
+Definition at line 138 of file generalConcentrationOverThreshold\&.m\&.
+.SS "printTemporalMessage = 1"
+
+.PP
+Definition at line 182 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP prod_bySCC = 0"
+
+.PP
+Definition at line 498 of file generalConcentrationOverThreshold\&.m\&.
+.SS "prod_bySCC_weight = 0"
+
+.PP
+Definition at line 504 of file generalConcentrationOverThreshold\&.m\&.
+.SS "prod_chain = 0"
+
+.PP
+Definition at line 497 of file generalConcentrationOverThreshold\&.m\&.
+.SS "prod_chain_weight = 0"
+
+.PP
+Definition at line 503 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBif\fP then it has been produced within an \fBACS\fP prod_inSCC = 0"
+
+.PP
+Definition at line 496 of file generalConcentrationOverThreshold\&.m\&.
+.SS "prod_inSCC_weight = 0"
+
+.PP
+Definition at line 502 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP Compute the overlap between the different counter prod_overlap = 0"
+
+.PP
+Definition at line 499 of file generalConcentrationOverThreshold\&.m\&.
+.SS "prod_overlap_weight = 0"
+
+.PP
+Definition at line 505 of file generalConcentrationOverThreshold\&.m\&.
+.SS "ratioBackForward = \fBrline\fP(14)"
+
+.PP
+Definition at line 172 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBreaction\fP parameters files rcsFiles = \fBdir\fP('*reactions_parameters*')"
+
+.PP
+Definition at line 120 of file generalConcentrationOverThreshold\&.m\&.
+.SS "rct = \fBconfparams\&.reactionProbability\fP"
+
+.PP
+Definition at line 639 of file generalConcentrationOverThreshold\&.m\&.
+.SS "rctID = 1"
+
+.PP
+Definition at line 141 of file generalConcentrationOverThreshold\&.m\&.
+.SS "rctIDshow = 1"
+
+.PP
+Definition at line 139 of file generalConcentrationOverThreshold\&.m\&.
+.SS "rctIDshowNoSave = 1"
+
+.PP
+Definition at line 140 of file generalConcentrationOverThreshold\&.m\&.
+.SS "Craete different \fBvariables\fP reaction = \fBrline\fP(1)"
+
+.PP
+Definition at line 159 of file generalConcentrationOverThreshold\&.m\&.
+.SS "realSccs = 0"
+
+.PP
+Definition at line 517 of file generalConcentrationOverThreshold\&.m\&.
+.SS "for rfileID"
+\fBInitial value:\fP
+.PP
+.nf
+=1:length(rcsFiles)
+            % read species file
+            
+            %Initialize reaction type counter
+            endo_condensation_counter = 0
+.fi
+.PP
+Definition at line 124 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP rline = fgetl(\fBfid\fP)"
+
+.PP
+Definition at line 143 of file generalConcentrationOverThreshold\&.m\&.
+.SS "rlineb = \fBrline\fP"
+
+.PP
+Definition at line 144 of file generalConcentrationOverThreshold\&.m\&.
+.SS "Update rlineID rlineID = 1"
+
+.PP
+Definition at line 145 of file generalConcentrationOverThreshold\&.m\&.
+.SS "rtime = \fBrline\fP(2)"
+
+.PP
+Definition at line 160 of file generalConcentrationOverThreshold\&.m\&.
+.SS "If the time is \fBrighe\fP save iGraph structures \fBto\fP \fBfile\fP \fBif\fP (\fBrtime\fP > \fBrctIDshow\fP * analysisTimeInterval) \fBdisp\fP(sprintf(' |- %s | Reaction %d - time saveGraphToFile(\fBfolderCat\fP, \fBreaction\fP, \fBrtime\fP, \fBconfparams\&.nReactions\fP, \fBgraph\fP, \fBfilextPre\fP)"
+
+.PP
+Definition at line 186 of file generalConcentrationOverThreshold\&.m\&.
+.SS "sccID = 0"
+
+.PP
+Definition at line 500 of file generalConcentrationOverThreshold\&.m\&.
+.SS "Come back \fBto\fP the original folder READ ALL THE DIRECTORY CONTAINING SIMULATIONS search = strcat('*',\fBparams\&.simFolder\fP,'*')"
+
+.PP
+Definition at line 48 of file generalConcentrationOverThreshold\&.m\&.
+.SS "self_loop_weight = 0"
+
+.PP
+Definition at line 506 of file generalConcentrationOverThreshold\&.m\&.
+.SS "simDirs = \fBdir\fP(\fBsearch\fP)"
+
+.PP
+Definition at line 49 of file generalConcentrationOverThreshold\&.m\&.
+.SS "params simFolder = 'K_cpx5_rete_n_'"
+
+.PP
+Definition at line 13 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP \fBend\fP If the \fBspecies\fP concentration but the \fBspecies\fP is not produced by other \fBspecies\fP"
+
+.PP
+Definition at line 602 of file generalConcentrationOverThreshold\&.m\&.
+.SS "LOAD FIRST SPECIES FILE speciesFiles = \fBdir\fP('species_1*')"
+
+.PP
+Definition at line 74 of file generalConcentrationOverThreshold\&.m\&.
+.SS "tempProd_chain_weight = 0"
+
+.PP
+Definition at line 537 of file generalConcentrationOverThreshold\&.m\&.
+.SS "params threshold = 0"
+
+.PP
+Definition at line 11 of file generalConcentrationOverThreshold\&.m\&.
+.SS ": timeInterval = \fBrtime\fP - \fBpreviousTime\fP"
+
+.PP
+Definition at line 201 of file generalConcentrationOverThreshold\&.m\&.
+.SS "File Containing all Times times = 0:\fBparams\&.deltaT:params\&.totT\fP"
+
+.PP
+Definition at line 52 of file generalConcentrationOverThreshold\&.m\&.
+.SS "tline = fgets(fidConf)"
+
+.PP
+Definition at line 732 of file generalConcentrationOverThreshold\&.m\&.
+.SS "tmpProd_chain = 0"
+
+.PP
+Definition at line 534 of file generalConcentrationOverThreshold\&.m\&.
+.SS "params tmpRctFileToLoad = ''"
+
+.PP
+Definition at line 14 of file generalConcentrationOverThreshold\&.m\&.
+.SS "params tmpRctSUBFileToLoad = ''"
+
+.PP
+Definition at line 15 of file generalConcentrationOverThreshold\&.m\&.
+.SS "tmpStrZeros = zeroBeforeStrNum(tmpRct, tmpRcts)"
+
+.PP
+Definition at line 691 of file generalConcentrationOverThreshold\&.m\&.
+.SS "to = \fBgraph\fP(:,2)+1"
+
+.PP
+Definition at line 494 of file generalConcentrationOverThreshold\&.m\&.
+.SS "wasteSpecies = 0"
+
+.PP
+Definition at line 511 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP \fBend\fP If the \fBspecies\fP concentration but the \fBspecies\fP is not produced by other so it is waste \fBif\fP wasteSpeciesFLAG = 0"
+
+.PP
+Definition at line 538 of file generalConcentrationOverThreshold\&.m\&.
+.SS "\fBend\fP \fBend\fP Reactions \fBto\fP distribuite in the different nature of the \fBreactions\fP weightToDistribute = \fBgraph\fP(\fBand\fP((\fBgraph\fP(:,1) == \fBincomingNodes\fP(\fBinnode\fP)),(\fBgraph\fP(:,2) == \fBIDsOverThreshold\fP(idot))),6)"
+
+.PP
+Definition at line 558 of file generalConcentrationOverThreshold\&.m\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

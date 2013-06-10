@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="namespacefilisetti_library" kind="namespace">
+    <compoundname>filisettiLibrary</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacefilisetti_library_1a5a12655d430f8c004af413e255dff4bc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int filisettiLibrary::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="17" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefilisetti_library_1a0dd9d0f4fa4bf1c5453ff6955bbdeb28" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int filisettiLibrary::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="18" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacefilisetti_library_1a3c260c8d11db02499778f164fa3ccfe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.PlotMatrix</definition>
+        <argsstring></argsstring>
+        <name>PlotMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont&apos;t need legend 
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="23" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="23" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefilisetti_library_1a6a1c8b5bfe837ac12fd6b41c4c9fecb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.PlotMatrixLOGY</definition>
+        <argsstring></argsstring>
+        <name>PlotMatrixLOGY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont&apos;t need legend 
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="46" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="46" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefilisetti_library_1a0eb17f6682fabd10acb1025a96040fe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.PlotMatrixSingleSpeciesAmounts</definition>
+        <argsstring></argsstring>
+        <name>PlotMatrixSingleSpeciesAmounts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont&apos;t need legend 
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="69" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="69" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefilisetti_library_1ae2e921c1fc30e80a555d96e5cf659ff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.PlotMatrixML</definition>
+        <argsstring></argsstring>
+        <name>PlotMatrixML</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont&apos;t need legend 
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="91" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="91" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefilisetti_library_1abb475acf40c8f60da991013d7ddbee5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.PlotMatrixErrorBar</definition>
+        <argsstring></argsstring>
+        <name>PlotMatrixErrorBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont&apos;t need legend 
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="110" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="110" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefilisetti_library_1a22c71b74962e8175c0b00f0dab69f15b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.PlotMatrix3D</definition>
+        <argsstring></argsstring>
+        <name>PlotMatrix3D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont&apos;t need legend 
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="133" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="133" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefilisetti_library_1ae73db200d1863cd8be0c73c61d114bb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.PlotIMSHOWoverThreshold</definition>
+        <argsstring></argsstring>
+        <name>PlotIMSHOWoverThreshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="159" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="159" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefilisetti_library_1a5bcbb5145bed412a2bce9627e70b1aee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.PlotIMSHOW</definition>
+        <argsstring></argsstring>
+        <name>PlotIMSHOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="184" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="184" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefilisetti_library_1a014dd4c50d3cbc2cf0a3c11f9b8de5ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.zeroBeforeStrNum</definition>
+        <argsstring></argsstring>
+        <name>zeroBeforeStrNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="212" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="212" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefilisetti_library_1ae3ba725da6eaf6bcf202c0dafc445414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.writeOverallStatOnFile</definition>
+        <argsstring></argsstring>
+        <name>writeOverallStatOnFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="222" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="222" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefilisetti_library_1a296429c499a8e6125c0f5d63eebe71a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def filisettiLibrary.writeOverallStatOnFileWhereISay</definition>
+        <argsstring></argsstring>
+        <name>writeOverallStatOnFileWhereISay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="234" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" bodystart="234" bodyend="246"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/filisettiLibrary.py" line="1"/>
+  </compounddef>
+</doxygen>

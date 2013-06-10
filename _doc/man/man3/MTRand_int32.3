@@ -1,0 +1,87 @@
+.TH "MTRand_int32" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MTRand_int32 \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mtrand\&.h>\fP
+.PP
+Inherited by \fBMTRand\fP, \fBMTRand53\fP, \fBMTRand_closed\fP, and \fBMTRand_open\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMTRand_int32\fP ()"
+.br
+.ti -1c
+.RI "\fBMTRand_int32\fP (unsigned long s)"
+.br
+.ti -1c
+.RI "\fBMTRand_int32\fP (const unsigned long *array, int \fBsize\fP)"
+.br
+.ti -1c
+.RI "void \fBseed\fP (unsigned long)"
+.br
+.ti -1c
+.RI "void \fBseed\fP (const unsigned long *, int \fBsize\fP)"
+.br
+.ti -1c
+.RI "unsigned long \fBoperator()\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~MTRand_int32\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "unsigned long \fBrand_int32\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 48 of file mtrand\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MTRand_int32::MTRand_int32 ()\fC [inline]\fP"
+
+.PP
+Definition at line 51 of file mtrand\&.h\&.
+.SS "MTRand_int32::MTRand_int32 (unsigned longs)\fC [inline]\fP"
+
+.PP
+Definition at line 53 of file mtrand\&.h\&.
+.SS "MTRand_int32::MTRand_int32 (const unsigned long *array, intsize)\fC [inline]\fP"
+
+.PP
+Definition at line 55 of file mtrand\&.h\&.
+.SS "virtual MTRand_int32::~MTRand_int32 ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 62 of file mtrand\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "unsigned long MTRand_int32::operator() ()\fC [inline]\fP"
+
+.PP
+Definition at line 60 of file mtrand\&.h\&.
+.SS "unsigned long MTRand_int32::rand_int32 ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 85 of file mtrand\&.h\&.
+.SS "void MTRand_int32::seed (unsigned longs)"
+
+.PP
+Definition at line 23 of file mtrand\&.cpp\&.
+.SS "void MTRand_int32::seed (const unsigned long *array, intsize)"
+
+.PP
+Definition at line 35 of file mtrand\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

@@ -1,0 +1,803 @@
+.TH "generalStatistics" 3 "Mon Mar 12 2012" "Version 3.2 (20120312.46)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+generalStatistics \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBinitTime\fP = time\&.time()"
+.br
+.ti -1c
+.RI "list \fBStrPath\fP = sys\&.argv[1]"
+.br
+.ti -1c
+.RI "tuple \fBthreshold\fP = float(sys\&.argv[2])"
+.br
+.ti -1c
+.RI "list \fBsingleGraphCreation\fP = sys\&.argv[3]"
+.br
+.ti -1c
+.RI "tuple \fBspeciesToObserve\fP = np\&.array([[1,2,3,4]])"
+.br
+.ti -1c
+.RI "tuple \fBtmpDirs\fP = sort(os\&.listdir(\fBStrPath\fP))"
+.br
+.ti -1c
+.RI "int \fBsamples\fP = 0"
+.br
+.ti -1c
+.RI "int \fBnFolders\fP = 0"
+.br
+.ti -1c
+.RI "string \fBspeciesFilesInThisSim\fP = 'species_*'"
+.br
+.ti -1c
+.RI "tuple \fBspeciesfileslist\fP = sorted(glob\&.glob(\fBspeciesFilesInThisSim\fP))"
+.br
+.ti -1c
+.RI "string \fBparamFile\fP = 'acsm2s\&.conf'"
+.br
+.ti -1c
+.RI "tuple \fBfid\fP = open(\fBparamFile\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "tuple \fBstrLine\fP = line\&.split('=')"
+.br
+.ti -1c
+.RI "tuple \fBgens\fP = int(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBsims\fP = int(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBrcts\fP = int(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBnsec\fP = int(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBoverallTimes\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBtimesFrames\fP = range(0,\fBsamples\fP)"
+.br
+.ti -1c
+.RI "tuple \fBoverallLivSpe\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallMols\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallCpx\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallCpxCopies\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallDeath\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallnewSpecies\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallmaxAmount\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallminAmount\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallmeanAmount\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallmedianAmount\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallmaxL\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallminL\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallmeanL\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallmedianL\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallLoadedSpecies\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.br
+.ti -1c
+.RI "string \fBndn\fP = '_0_allStatResults_'"
+.br
+.ti -1c
+.RI "tuple \fBnewdirAllResults\fP = os\&.path\&.join(os\&.curdir, \fBndn\fP)"
+.br
+.ti -1c
+.RI "int \fBdirCount\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBrgens\fP = fl\&.zeroBeforeStrNum(1, 1)"
+.br
+.ti -1c
+.RI "tuple \fBrsims\fP = fl\&.zeroBeforeStrNum(1, 1)"
+.br
+.ti -1c
+.RI "string \fBndnII\fP = '__10_stastisticFiles_'"
+.br
+.ti -1c
+.RI "tuple \fBnewdir\fP = os\&.path\&.join(os\&.curdir, \fBndnII\fP)"
+.br
+.ti -1c
+.RI "string \fBinfluxSpeciesFile\fP = '_acsinflux\&.csv'"
+.br
+.ti -1c
+.RI "tuple \fBfidflux\fP = open(\fBinfluxSpeciesFile\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "list \fBindexIn\fP = []"
+.br
+.ti -1c
+.RI "tuple \fBtimesfileslist\fP = sorted(glob\&.glob('times_*'))"
+.br
+.ti -1c
+.RI "int \fBsimulationID\fP = 1"
+.br
+.ti -1c
+.RI "tuple \fBrrcts\fP = fl\&.zeroBeforeStrNum(0, \fBrcts\fP)"
+.br
+.ti -1c
+.RI "tuple \fBrgen\fP = fl\&.zeroBeforeStrNum(genID, \fBgens\fP)"
+.br
+.ti -1c
+.RI "tuple \fBspecies3DSIZEamountLAST\fP = np\&.array([[int(0), int(0), float(0), int(0)]])"
+.br
+.ti -1c
+.RI "int \fBspeciesFileID\fP = 1"
+.br
+.ti -1c
+.RI "tuple \fBrsim\fP = fl\&.zeroBeforeStrNum(\fBsimulationID\fP, \fBsims\fP)"
+.br
+.ti -1c
+.RI "tuple \fBorigDir\fP = os\&.getcwd()"
+.br
+.ti -1c
+.RI "tuple \fBstatDir\fP = os\&.path\&.join(os\&.curdir, \fBnewdir\fP)"
+.br
+.ti -1c
+.RI "string \fBoutFnameStat\fP = '\fB_\fP'"
+.br
+.ti -1c
+.RI "tuple \fBstatfilesFlag\fP = os\&.path\&.isfile(\fBoutFnameStat\fP)"
+.br
+.ti -1c
+.RI "float \fBrctIDshow\fP = 1\&.0"
+.br
+.ti -1c
+.RI "float \fBrctIDshowNoSave\fP = 1\&.0"
+.br
+.ti -1c
+.RI "int \fBrctID\fP = 1"
+.br
+.ti -1c
+.RI "int \fBpreviousTime\fP = 0"
+.br
+.ti -1c
+.RI "string \fBfilename\fP = '01_gillespie_'"
+.br
+.ti -1c
+.RI "list \fBstat\fP = []"
+.br
+.ti -1c
+.RI "list \fBspecies3Damount\fP = []"
+.br
+.ti -1c
+.RI "list \fBspecies3DSIZEamount\fP = []"
+.br
+.ti -1c
+.RI "tuple \fBconcSpeciesHystory\fP = np\&.zeros((\fBsamples\fP,\fBsize\fP(\fBspeciesToObserve\fP)))"
+.br
+.ti -1c
+.RI "tuple \fBconcSpeciesRelativeHystory\fP = np\&.zeros((\fBsamples\fP,\fBsize\fP(\fBspeciesToObserve\fP)))"
+.br
+.ti -1c
+.RI "tuple \fBtotTimes\fP = np\&.zeros((\fBsamples\fP,\fBsize\fP(\fBspeciesToObserve\fP)))"
+.br
+.ti -1c
+.RI "tuple \fBstrs\fP = string\&.split(root, '\fB_\fP')"
+.br
+.ti -1c
+.RI "tuple \fBrctNumber\fP = int(\fBstrs\fP[len(\fBstrs\fP)-1])"
+.br
+.ti -1c
+.RI "tuple \fBsngSpFileFid\fP = open(sngSpFile, '\fBr\fP')"
+.br
+.ti -1c
+.RI "tuple \fBspeciesTable\fP = sngSpFileFid\&.readlines()"
+.br
+.ti -1c
+.RI "list \fBsID\fP = []"
+.br
+.ti -1c
+.RI "list \fBloadedSpecies\fP = []"
+.br
+.ti -1c
+.RI "tuple \fBKdeg\fP = array(\fBKdeg\fP)"
+.br
+.ti -1c
+.RI "list \fBsizes\fP = []"
+.br
+.ti -1c
+.RI "int \fBseqID\fP = 0"
+.br
+.ti -1c
+.RI "\fBrealTheshold\fP = \fBthreshold\fP"
+.br
+.ti -1c
+.RI "int \fBtotAmount\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBeqLen\fP = where(\fBspecies3DSIZEamount\fP[:,0] == len(seq))"
+.br
+.ti -1c
+.RI "tuple \fBeqLenLAST\fP = where(\fBspecies3DSIZEamountLAST\fP[:,0] == len(seq))"
+.br
+.ti -1c
+.RI "list \fBstoPosition\fP = \fBspeciesToObserve\fP[0,:]"
+.br
+.ti -1c
+.RI "tuple \fBMSizes\fP = int(\fBmax\fP(\fBsizes\fP))"
+.br
+.ti -1c
+.RI "tuple \fBmSizes\fP = int(min(\fBsizes\fP))"
+.br
+.ti -1c
+.RI "tuple \fBavSizes\fP = float(mean(\fBsizes\fP))"
+.br
+.ti -1c
+.RI "tuple \fBmeSizes\fP = float(median(\fBsizes\fP))"
+.br
+.ti -1c
+.RI "tuple \fBoverallControlledSpecies\fP = float(\fBsum\fP(\fBconcSpeciesHystory\fP[\fBspeciesFileID\fP-1,:]))"
+.br
+.ti -1c
+.RI "tuple \fBoverallControlledSpeciesOverTotConc\fP = \fBoverallControlledSpecies\fP/float(\fBsum\fP(amount[cutPnt==0]))"
+.br
+.ti -1c
+.RI "tuple \fBoverallControlledSpeciesOverTotPlusCpxConc\fP = \fBoverallControlledSpecies\fP/float(\fBsum\fP(amount[:]))"
+.br
+.ti -1c
+.RI "tuple \fBstatControlled\fP = np\&.vstack([\fBstatControlled\fP,(\fBoverallControlledSpecies\fP,\fBoverallControlledSpeciesOverTotConc\fP,\fBoverallControlledSpeciesOverTotPlusCpxConc\fP)])"
+.br
+.ti -1c
+.RI "string \fBfinalStatDir\fP = '__10_stastisticFiles_'"
+.br
+.ti -1c
+.RI "\fBspecies3DNoInflux\fP = \fBspecies3Damount\fP"
+.br
+.ti -1c
+.RI "\fBspecies3DSIZEnoInflux\fP = \fBspecies3DSIZEamount\fP"
+.br
+.ti -1c
+.RI "string \fBoutFname3DSize\fP = '\fB_\fP'"
+.br
+.ti -1c
+.RI "string \fBoutFname3DSizeGrouped\fP = '\fB_\fP'"
+.br
+.ti -1c
+.RI "string \fBoutFname3DSizeGroupedLAST\fP = '\fB_\fP'"
+.br
+.ti -1c
+.RI "string \fBoutFname3DSizeGroupedLASTtot\fP = '\fB_\fP'"
+.br
+.ti -1c
+.RI "tuple \fBsaveFileStat\fP = open(\fBoutFnameStat\fP, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBsaveFile3Dsize\fP = open(\fBoutFname3DSize\fP, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBsaveFile3DsizeGR\fP = open(\fBoutFname3DSizeGrouped\fP, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBsaveFile3DsizeGRLAST\fP = open(\fBoutFname3DSizeGroupedLAST\fP, 'w')"
+.br
+.ti -1c
+.RI "string \fBoutFnameStatToObserve\fP = '\fB_\fP'"
+.br
+.ti -1c
+.RI "string \fBoutFnameToObserve\fP = '\fB_\fP'"
+.br
+.ti -1c
+.RI "string \fBoutFnameRatioToObserve\fP = '\fB_\fP'"
+.br
+.ti -1c
+.RI "tuple \fBsaveFileStatKeepInEye\fP = open(\fBoutFnameStatToObserve\fP, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBsaveFileKeepInEye\fP = open(\fBoutFnameToObserve\fP, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBsaveFileRatioKeepInEye\fP = open(\fBoutFnameRatioToObserve\fP, 'w')"
+.br
+.ti -1c
+.RI "string \fBsngStatFile\fP = '\fB_\fP'"
+.br
+.ti -1c
+.RI "tuple \fBsngStatFileFid\fP = open(\fBsngStatFile\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "int \fBlinesID\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBTime\fP = float(tmpTime)"
+.br
+.ti -1c
+.RI "tuple \fBLivSpe\fP = int(tmpLivSpe)"
+.br
+.ti -1c
+.RI "tuple \fBMols\fP = float(tmpMols)"
+.br
+.ti -1c
+.RI "tuple \fBDeath\fP = int(tmpDeath)"
+.br
+.ti -1c
+.RI "tuple \fBNewS\fP = int(tmpNewS)"
+.br
+.ti -1c
+.RI "tuple \fBMaxA\fP = float(tmpMaxA)"
+.br
+.ti -1c
+.RI "tuple \fBMinA\fP = float(tmpMinA)"
+.br
+.ti -1c
+.RI "tuple \fBMeanA\fP = float(tmpMeanA)"
+.br
+.ti -1c
+.RI "tuple \fBMedianA\fP = float(tmpMedianA)"
+.br
+.ti -1c
+.RI "tuple \fBCpx\fP = int(tmpCpx)"
+.br
+.ti -1c
+.RI "tuple \fBCpxCopies\fP = float(tmpCpxCopies)"
+.br
+.ti -1c
+.RI "tuple \fBMaxL\fP = int(tmpMaxL)"
+.br
+.ti -1c
+.RI "tuple \fBMinL\fP = int(tmpMinL)"
+.br
+.ti -1c
+.RI "tuple \fBMeanL\fP = float(tmpMeanL)"
+.br
+.ti -1c
+.RI "tuple \fBMedianL\fP = float(tmpMedianL)"
+.br
+.ti -1c
+.RI "tuple \fBloadedConc\fP = float(tmpLoadedConc)"
+.br
+.ti -1c
+.RI "tuple \fBstatfileslastFID\fP = open(\fBoutFname3DSizeGroupedLAST\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "tuple \fBnormTimes\fP = np\&.mean(\fBoverallTimes\fP,1)"
+.br
+.ti -1c
+.RI "tuple \fBnormTimesStd\fP = np\&.std(\fBoverallTimes\fP,1)"
+.br
+.ti -1c
+.RI "tuple \fBnormY\fP = np\&.mean(\fBoverallLivSpe\fP,1)"
+.br
+.ti -1c
+.RI "tuple \fBnormYstd\fP = np\&.std(\fBoverallLivSpe\fP,1)"
+.br
+.ti -1c
+.RI "tuple \fBendTime\fP = time\&.time()"
+.br
+.ti -1c
+.RI "int \fBminutes\fP = 60"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "tuple \fBgeneralStatistics::avSizes\fP = float(mean(\fBsizes\fP))"
+.PP
+Definition at line 450 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::concSpeciesHystory\fP = np\&.zeros((\fBsamples\fP,\fBsize\fP(\fBspeciesToObserve\fP)))"
+.PP
+Definition at line 330 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::concSpeciesRelativeHystory\fP = np\&.zeros((\fBsamples\fP,\fBsize\fP(\fBspeciesToObserve\fP)))"
+.PP
+Definition at line 331 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::Cpx\fP = int(tmpCpx)"
+.PP
+Definition at line 646 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::CpxCopies\fP = float(tmpCpxCopies)"
+.PP
+Definition at line 647 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::Death\fP = int(tmpDeath)"
+.PP
+Definition at line 640 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::dirCount\fP = 0"
+.PP
+Definition at line 213 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::endTime\fP = time\&.time()"
+.PP
+Definition at line 826 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::eqLen\fP = where(\fBspecies3DSIZEamount\fP[:,0] == len(seq))"
+.PP
+Definition at line 400 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::eqLenLAST\fP = where(\fBspecies3DSIZEamountLAST\fP[:,0] == len(seq))"
+.PP
+Definition at line 418 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::fid\fP = open(\fBparamFile\fP, '\fBr\fP')"
+.PP
+Definition at line 156 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::fidflux\fP = open(\fBinfluxSpeciesFile\fP, '\fBr\fP')"
+.PP
+Definition at line 240 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::filename\fP = '01_gillespie_'"
+.PP
+Definition at line 295 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::finalStatDir\fP = '__10_stastisticFiles_'"
+.PP
+Definition at line 524 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::gens\fP = int(\fBstrLine\fP[1])"
+.PP
+Definition at line 164 of file generalStatistics\&.py\&.
+.SS "list \fBgeneralStatistics::indexIn\fP = []"
+.PP
+Definition at line 241 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::influxSpeciesFile\fP = '_acsinflux\&.csv'"
+.PP
+Definition at line 238 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::initTime\fP = time\&.time()"
+.PP
+Definition at line 102 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::Kdeg\fP = array(\fBKdeg\fP)"
+.PP
+Definition at line 368 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::linesID\fP = 0"
+.PP
+Definition at line 633 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::LivSpe\fP = int(tmpLivSpe)"
+.PP
+Definition at line 638 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::loadedConc\fP = float(tmpLoadedConc)"
+.PP
+Definition at line 652 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::loadedSpecies\fP = []"
+.PP
+Definition at line 356 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::MaxA\fP = float(tmpMaxA)"
+.PP
+Definition at line 642 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::MaxL\fP = int(tmpMaxL)"
+.PP
+Definition at line 648 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::MeanA\fP = float(tmpMeanA)"
+.PP
+Definition at line 644 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::MeanL\fP = float(tmpMeanL)"
+.PP
+Definition at line 650 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::MedianA\fP = float(tmpMedianA)"
+.PP
+Definition at line 645 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::MedianL\fP = float(tmpMedianL)"
+.PP
+Definition at line 651 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::meSizes\fP = float(median(\fBsizes\fP))"
+.PP
+Definition at line 451 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::MinA\fP = float(tmpMinA)"
+.PP
+Definition at line 643 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::MinL\fP = int(tmpMinL)"
+.PP
+Definition at line 649 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::minutes\fP = 60"
+.PP
+Definition at line 827 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::Mols\fP = float(tmpMols)"
+.PP
+Definition at line 639 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::MSizes\fP = int(\fBmax\fP(\fBsizes\fP))"
+.PP
+Definition at line 448 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::mSizes\fP = int(min(\fBsizes\fP))"
+.PP
+Definition at line 449 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::ndn\fP = '_0_allStatResults_'"
+.PP
+Definition at line 204 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::ndnII\fP = '__10_stastisticFiles_'"
+.PP
+Definition at line 229 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::newdir\fP = os\&.path\&.join(os\&.curdir, \fBndnII\fP)"
+.PP
+Definition at line 230 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::newdirAllResults\fP = os\&.path\&.join(os\&.curdir, \fBndn\fP)"
+.PP
+Definition at line 205 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::NewS\fP = int(tmpNewS)"
+.PP
+Definition at line 641 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::nFolders\fP = 0"
+.PP
+Definition at line 137 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::normTimes\fP = np\&.mean(\fBoverallTimes\fP,1)"
+.PP
+Definition at line 721 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::normTimesStd\fP = np\&.std(\fBoverallTimes\fP,1)"
+.PP
+Definition at line 722 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::normY\fP = np\&.mean(\fBoverallLivSpe\fP,1)"
+.PP
+Definition at line 723 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::normYstd\fP = np\&.std(\fBoverallLivSpe\fP,1)"
+.PP
+Definition at line 724 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::nsec\fP = int(\fBstrLine\fP[1])"
+.PP
+Definition at line 170 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::origDir\fP = os\&.getcwd()"
+.PP
+Definition at line 274 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::outFname3DSize\fP = '\fB_\fP'"
+.PP
+Definition at line 564 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::outFname3DSizeGrouped\fP = '\fB_\fP'"
+.PP
+Definition at line 565 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::outFname3DSizeGroupedLAST\fP = '\fB_\fP'"
+.PP
+Definition at line 566 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::outFname3DSizeGroupedLASTtot\fP = '\fB_\fP'"
+.PP
+Definition at line 567 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::outFnameRatioToObserve\fP = '\fB_\fP'"
+.PP
+Definition at line 594 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::outFnameStat\fP = '\fB_\fP'"
+.PP
+Definition at line 276 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::outFnameStatToObserve\fP = '\fB_\fP'"
+.PP
+Definition at line 592 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::outFnameToObserve\fP = '\fB_\fP'"
+.PP
+Definition at line 593 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallControlledSpecies\fP = float(\fBsum\fP(\fBconcSpeciesHystory\fP[\fBspeciesFileID\fP-1,:]))"
+.PP
+Definition at line 468 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallControlledSpeciesOverTotConc\fP = \fBoverallControlledSpecies\fP/float(\fBsum\fP(amount[cutPnt==0]))"
+.PP
+Definition at line 469 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallControlledSpeciesOverTotPlusCpxConc\fP = \fBoverallControlledSpecies\fP/float(\fBsum\fP(amount[:]))"
+.PP
+Definition at line 470 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallCpx\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 188 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallCpxCopies\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 189 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallDeath\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 190 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallLivSpe\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 186 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallLoadedSpecies\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 200 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallmaxAmount\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 192 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallmaxL\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 196 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallmeanAmount\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 194 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallmeanL\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 198 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallmedianAmount\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 195 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallmedianL\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 199 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallminAmount\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 193 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallminL\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 197 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallMols\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 187 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallnewSpecies\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 191 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::overallTimes\fP = np\&.zeros((\fBsamples\fP,\fBnFolders\fP))"
+.PP
+Definition at line 175 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::paramFile\fP = 'acsm2s\&.conf'"
+.PP
+Definition at line 153 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::previousTime\fP = 0"
+.PP
+Definition at line 286 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::rctID\fP = 1"
+.PP
+Definition at line 285 of file generalStatistics\&.py\&.
+.SS "float \fBgeneralStatistics::rctIDshow\fP = 1\&.0"
+.PP
+Definition at line 283 of file generalStatistics\&.py\&.
+.SS "float \fBgeneralStatistics::rctIDshowNoSave\fP = 1\&.0"
+.PP
+Definition at line 284 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::rctNumber\fP = int(\fBstrs\fP[len(\fBstrs\fP)-1])"
+.PP
+Definition at line 338 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::rcts\fP = int(\fBstrLine\fP[1])"
+.PP
+Definition at line 168 of file generalStatistics\&.py\&.
+.SS "\fBgeneralStatistics::realTheshold\fP = \fBthreshold\fP"
+.PP
+Definition at line 377 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::rgen\fP = fl\&.zeroBeforeStrNum(genID, \fBgens\fP)"
+.PP
+Definition at line 265 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::rgens\fP = fl\&.zeroBeforeStrNum(1, 1)"
+.PP
+Definition at line 214 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::rrcts\fP = fl\&.zeroBeforeStrNum(0, \fBrcts\fP)"
+.PP
+Definition at line 263 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::rsim\fP = fl\&.zeroBeforeStrNum(\fBsimulationID\fP, \fBsims\fP)"
+.PP
+Definition at line 272 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::rsims\fP = fl\&.zeroBeforeStrNum(1, 1)"
+.PP
+Definition at line 215 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::samples\fP = 0"
+.PP
+Definition at line 135 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::saveFile3Dsize\fP = open(\fBoutFname3DSize\fP, 'w')"
+.PP
+Definition at line 569 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::saveFile3DsizeGR\fP = open(\fBoutFname3DSizeGrouped\fP, 'w')"
+.PP
+Definition at line 570 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::saveFile3DsizeGRLAST\fP = open(\fBoutFname3DSizeGroupedLAST\fP, 'w')"
+.PP
+Definition at line 571 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::saveFileKeepInEye\fP = open(\fBoutFnameToObserve\fP, 'w')"
+.PP
+Definition at line 596 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::saveFileRatioKeepInEye\fP = open(\fBoutFnameRatioToObserve\fP, 'w')"
+.PP
+Definition at line 597 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::saveFileStat\fP = open(\fBoutFnameStat\fP, 'w')"
+.PP
+Definition at line 568 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::saveFileStatKeepInEye\fP = open(\fBoutFnameStatToObserve\fP, 'w')"
+.PP
+Definition at line 595 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::seqID\fP = 0"
+.PP
+Definition at line 376 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::sID\fP = []"
+.PP
+Definition at line 355 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::sims\fP = int(\fBstrLine\fP[1])"
+.PP
+Definition at line 166 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::simulationID\fP = 1"
+.PP
+Definition at line 262 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::singleGraphCreation\fP = sys\&.argv[3]"
+.PP
+Definition at line 116 of file generalStatistics\&.py\&.
+.SS "list \fBgeneralStatistics::sizes\fP = []"
+.PP
+Definition at line 375 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::sngSpFileFid\fP = open(sngSpFile, '\fBr\fP')"
+.PP
+Definition at line 343 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::sngStatFile\fP = '\fB_\fP'"
+.PP
+Definition at line 624 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::sngStatFileFid\fP = open(\fBsngStatFile\fP, '\fBr\fP')"
+.PP
+Definition at line 628 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::species3Damount\fP = []"
+.PP
+Definition at line 325 of file generalStatistics\&.py\&.
+.SS "list \fBgeneralStatistics::species3DNoInflux\fP = \fBspecies3Damount\fP"
+.PP
+Definition at line 531 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::species3DSIZEamount\fP = []"
+.PP
+Definition at line 326 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::species3DSIZEamountLAST\fP = np\&.array([[int(0), int(0), float(0), int(0)]])"
+.PP
+Definition at line 267 of file generalStatistics\&.py\&.
+.SS "list \fBgeneralStatistics::species3DSIZEnoInflux\fP = \fBspecies3DSIZEamount\fP"
+.PP
+Definition at line 532 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::speciesFileID\fP = 1"
+.PP
+Definition at line 271 of file generalStatistics\&.py\&.
+.SS "string \fBgeneralStatistics::speciesFilesInThisSim\fP = 'species_*'"
+.PP
+Definition at line 147 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::speciesfileslist\fP = sorted(glob\&.glob(\fBspeciesFilesInThisSim\fP))"
+.PP
+Definition at line 148 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::speciesTable\fP = sngSpFileFid\&.readlines()"
+.PP
+Definition at line 344 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::speciesToObserve\fP = np\&.array([[1,2,3,4]])"
+.PP
+Definition at line 123 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::stat\fP = []"
+.PP
+Definition at line 324 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::statControlled\fP = np\&.vstack([\fBstatControlled\fP,(\fBoverallControlledSpecies\fP,\fBoverallControlledSpeciesOverTotConc\fP,\fBoverallControlledSpeciesOverTotPlusCpxConc\fP)])"
+.PP
+Definition at line 472 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::statDir\fP = os\&.path\&.join(os\&.curdir, \fBnewdir\fP)"
+.PP
+Definition at line 275 of file generalStatistics\&.py\&.
+.SS "\fBgeneralStatistics::statfilesFlag\fP = os\&.path\&.isfile(\fBoutFnameStat\fP)"
+.PP
+Definition at line 278 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::statfileslastFID\fP = open(\fBoutFname3DSizeGroupedLAST\fP, '\fBr\fP')"
+.PP
+Definition at line 678 of file generalStatistics\&.py\&.
+.SS "list \fBgeneralStatistics::stoPosition\fP = \fBspeciesToObserve\fP[0,:]"
+.PP
+Definition at line 432 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::strLine\fP = line\&.split('=')"
+.PP
+Definition at line 162 of file generalStatistics\&.py\&.
+.SS "list \fBgeneralStatistics::StrPath\fP = sys\&.argv[1]"
+.PP
+Definition at line 110 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::strs\fP = string\&.split(root, '\fB_\fP')"
+.PP
+Definition at line 337 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::threshold\fP = float(sys\&.argv[2])"
+.PP
+Definition at line 111 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::Time\fP = float(tmpTime)"
+.PP
+Definition at line 637 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::timesfileslist\fP = sorted(glob\&.glob('times_*'))"
+.PP
+Definition at line 261 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::timesFrames\fP = range(0,\fBsamples\fP)"
+.PP
+Definition at line 176 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::tmpDirs\fP = sort(os\&.listdir(\fBStrPath\fP))"
+.PP
+Definition at line 127 of file generalStatistics\&.py\&.
+.SS "int \fBgeneralStatistics::totAmount\fP = 0"
+.PP
+Definition at line 378 of file generalStatistics\&.py\&.
+.SS "tuple \fBgeneralStatistics::totTimes\fP = np\&.zeros((\fBsamples\fP,\fBsize\fP(\fBspeciesToObserve\fP)))"
+.PP
+Definition at line 332 of file generalStatistics\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

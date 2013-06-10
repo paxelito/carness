@@ -1,0 +1,104 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/main.cpp" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/main.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'acs_headers\&.h'\fP
+.br
+\fC#include 'environment\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsaveToFile\fP (QString tmpSavingPath, \fBenvironment\fP *tmpEnvironment, \fBacs_int\fP tmpGen, \fBacs_int\fP tmpSim, \fBacs_int\fP tmpStep)"
+.br
+.ti -1c
+.RI "void \fBsaveTimesToFile\fP (QString tmpSavingPath, \fBenvironment\fP *tmpEnvironment, \fBacs_int\fP tmpGen, \fBacs_int\fP tmpSim, \fBacs_int\fP tmpStep)"
+.br
+.ti -1c
+.RI "void \fBsaveInitialConditionsToFile\fP (QString tmpSavingPath, \fBenvironment\fP *tmpEnvironment, \fBacs_int\fP tmpGen, \fBacs_int\fP tmpSim, \fBacs_int\fP tmpStep)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (intargc, char *argv[])"
+double random number generator 
+.PP
+Definition at line 325 of file main\&.cpp\&.
+.SS "void saveInitialConditionsToFile (QStringtmpSavingPath, \fBenvironment\fP *tmpEnvironment, \fBacs_int\fPtmpGen, \fBacs_int\fPtmpSim, \fBacs_int\fPtmpStep)"
+Save to file all the INITIAL structures 
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIQString\fP tmpSavingPath Saving files path 
+.br
+\fIenvironment\fP *tmpEnvironment environment instance reference 
+.br
+\fItmpSim\fP Current simulation 
+.br
+\fIacs_int\fP Current step 
+.RE
+.PP
+
+.PP
+Definition at line 630 of file main\&.cpp\&.
+.SS "void saveTimesToFile (QStringtmpSavingPath, \fBenvironment\fP *tmpEnvironment, \fBacs_int\fPtmpGen, \fBacs_int\fPtmpSim, \fBacs_int\fPtmpStep)"
+Save TIMES to file 
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIQString\fP tmpSavingPath Saving files path 
+.br
+\fIenvironment\fP *tmpEnvironment environment instance reference 
+.br
+\fItmpSim\fP Current simulation 
+.br
+\fIacs_int\fP Current step 
+.RE
+.PP
+
+.PP
+Definition at line 614 of file main\&.cpp\&.
+.SS "void saveToFile (QStringtmpSavingPath, \fBenvironment\fP *tmpEnvironment, \fBacs_int\fPtmpGen, \fBacs_int\fPtmpSim, \fBacs_int\fPtmpStep)"
+Save to file structures at step tmpStep 
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIQString\fP tmpSavingPath Saving files path 
+.br
+\fIenvironment\fP *tmpEnvironment environment instance reference 
+.br
+\fItmpSim\fP Current simulation 
+.br
+\fIacs_int\fP Current step 
+.RE
+.PP
+
+.PP
+Definition at line 594 of file main\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

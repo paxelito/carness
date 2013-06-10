@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="crea__influx__semplice_8m" kind="file">
+    <compoundname>crea_influx_semplice.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="crea__influx__semplice_8m_1a9e9d25cb3f9488c7e910885a0eed2ffa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>function[influx]</definition>
+        <argsstring>[influx]</argsstring>
+        <name>function</name>
+        <initializer>= crea_influx_semplice(<ref refid="start_8m_1a5b50e4bf0f01cb1e2d8bdf9494493579" kindref="member">lMaxInflux</ref>,<ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)
+
+% total Number of <ref refid="classspecies" kindref="compound">species</ref>
+sn = 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx_semplice.m" line="6" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx_semplice.m" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx__semplice_8m_1a6f6ccfcf58b31cb6412107d9d5281426" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <initializer>= 1:<ref refid="start_8m_1a5b50e4bf0f01cb1e2d8bdf9494493579" kindref="member">lMaxInflux</ref>
+   sn = sn + length(<ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)^i</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx_semplice.m" line="8" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx_semplice.m" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx__semplice_8m_1ae426dd61c2988c7949ce81e0d7e08634" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end influx</definition>
+        <argsstring></argsstring>
+        <name>influx</name>
+        <initializer>= zeros(sn,2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx_semplice.m" line="11" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx_semplice.m" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__influx__semplice_8m_1ac86694252f8dfdb19aaeadc4b7c342c6" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for j</definition>
+        <argsstring></argsstring>
+        <name>j</name>
+        <initializer>= 1:sn
+   <ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>(j,1)=j</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx_semplice.m" line="13" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx_semplice.m" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>influx</definition>
+        <argsstring>(j, 2)</argsstring>
+        <name>influx</name>
+        <param>
+          <type><ref refid="inizializzatore___a_c_s_8m_1ac86694252f8dfdb19aaeadc4b7c342c6" kindref="member">j</ref></type>
+        </param>
+        <param>
+          <type>2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx_semplice.m" line="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="crea__influx__semplice_8m_1a9e9d25cb3f9488c7e910885a0eed2ffa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[influx]<sp/>=<sp/>crea_influx_semplice(<ref refid="start_8m_1a5b50e4bf0f01cb1e2d8bdf9494493579" kindref="member">lMaxInflux</ref>,<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">%<sp/>total<sp/>Number<sp/>of<sp/><ref refid="classspecies" kindref="compound" tooltip="This class contains declarations of the species class.">species</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">sn<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="7" refid="crea__influx__semplice_8m_1a6f6ccfcf58b31cb6412107d9d5281426" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>1:<ref refid="start_8m_1a5b50e4bf0f01cb1e2d8bdf9494493579" kindref="member">lMaxInflux</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/>sn<sp/>=<sp/>sn<sp/>+<sp/>length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)^<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="crea__influx__semplice_8m_1ae426dd61c2988c7949ce81e0d7e08634" refkind="member"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref><sp/>=<sp/>zeros(sn,2);</highlight></codeline>
+<codeline lineno="12" refid="crea__influx__semplice_8m_1ac86694252f8dfdb19aaeadc4b7c342c6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref><sp/>=<sp/>1:sn</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>(<ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>,1)=<ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>(<ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>,2)=1./sn;<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/crea_influx_semplice.m"/>
+  </compounddef>
+</doxygen>

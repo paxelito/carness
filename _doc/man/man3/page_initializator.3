@@ -1,0 +1,23 @@
+.TH "page_initializator" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+page_initializator \- The initializator (a very brief description) 
+The initializator provided with the simulator is located in the \fCinitializator\fP folder (within the source code folder) and it is developed in Matlab code\&. All the parameters are set in the \fC\fBstart\&.m\fP\fP file (from line 22 to line 63)\&. In addition you find the parameters related to the name of the folder that will contain the simulation (\fCsimFolder\&.name\fP), the path where that folder will be created (\fCsimFolder\&.path\fP) and the number of different network ensambles to create (\fCsimFolder\&.nets\fP)\&. It is important to notice that the initializator has not been thought to be shared, so it is not too much user friendly to be manipulated\&. Nevertheless it could be very useful with a little bit of practice\&. 
+.SH "Screening Parameter"
+.PP
+To initialize structures to perform a sensitivity analysis of a specific parameters follow the following instruction:
+.IP "\(bu" 2
+Change the name of the array at row 13 with the name of the parameter you want analyze\&. This array contains the values of the paramter\&. Remember to insert the old parameter you are changing in the parameters list with its single value, otherwise it would be a missing parameter\&.
+.IP "\(bu" 2
+In the array at row 14 (\fCnome_folder\fP) you have put the same number of elements of the array containing the screening values\&. This array contains a numeric tag of the values (used to create the simulations folder names) contained in the values array\&.
+.IP "\(bu" 2
+In the code of the \fC\fBstart\&.m\fP\fP file (rows 122 to 150) you must change:
+.IP "  \(bu" 4
+row 121: \fC\fP[rows,b]=size(reactionProbability); --> [rows,b]=size(name_of_the_parameter_you_have_trasformed_in_array);
+.IP "  \(bu" 4
+row 146: \fCinizializzatore_ACS\fP(\&.\&.\&. reactionProbability(i), \&.\&.\&.); -> inizializzatore_ACS(\&.\&.\&. name_of_the_parameter_you_have_trasformed_in_array(i), \&.\&.\&.); (remember to remove the index to the reactionProbability parameter 
+.PP
+
+.PP
+

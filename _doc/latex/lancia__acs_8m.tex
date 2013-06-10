@@ -1,0 +1,133 @@
+\hypertarget{lancia__acs_8m}{\section{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-matlabinitializator/lancia\-\_\-acs.m File Reference}
+\label{lancia__acs_8m}\index{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-matlabinitializator/lancia\-\_\-acs.\-m@{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-matlabinitializator/lancia\-\_\-acs.\-m}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lancia__acs_8m_af7113c457c6779161b052400fad75b12}{Keq} (\hyperlink{inizializzatore___a_c_s_8m_abf70355c2e58f64c6b18bda1b9bccfd7}{k}, \hyperlink{inizializzatore___a_c_s_8m_ac86694252f8dfdb19aaeadc4b7c342c6}{j})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+lancia\-\_\-acs m clear all close \\*
+all parametri \hyperlink{lancia__acs_8m_aa3a014475bd24120996191acceaa4f3d}{kdiss} = 0
+\item 
+\hyperlink{lancia__acs_8m_a9cf172af920b969c5411ac19e5e13e22}{kcomplex} = 1e6
+\item 
+\hyperlink{lancia__acs_8m_af49f64b0687f4e269a7dc8e56ca82772}{kcond} = 6e8
+\item 
+\hyperlink{lancia__acs_8m_ad821064ff58d369f2a880dc5bf3db527}{k\-\_\-complex} = 1e-\/4
+\item 
+\hyperlink{lancia__acs_8m_abfef5bcdab19147dbfbb68112da17044}{A\-B} = 0
+\item 
+\hyperlink{lancia__acs_8m_aaa53ca0b650dfd85c4f59fa156f7a2cc}{C} = 2e-\/7
+\item 
+\hyperlink{lancia__acs_8m_afb377083e62f3bde1716905353335a78}{C\-A} = 0
+\item 
+\hyperlink{lancia__acs_8m_adc468c70fb574ebd07287b38d0d0676d}{k} = 0
+\item 
+for \hyperlink{lancia__acs_8m_ab4f8a2431d9ad6efec44b47971737c52}{A}
+\item 
+for \hyperlink{lancia__acs_8m_afb39b9efa52a33745c5e622fa358a97f}{B}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lancia__acs_8m_af7113c457c6779161b052400fad75b12}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!Keq@{Keq}}
+\index{Keq@{Keq}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{Keq}]{\setlength{\rightskip}{0pt plus 5cm}Keq (
+\begin{DoxyParamCaption}
+\item[{{\bf k}}]{, }
+\item[{{\bf j}}]{}
+\end{DoxyParamCaption}
+)}}\label{lancia__acs_8m_af7113c457c6779161b052400fad75b12}
+
+
+\subsection{Variable Documentation}
+\hypertarget{lancia__acs_8m_ab4f8a2431d9ad6efec44b47971737c52}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!A@{A}}
+\index{A@{A}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{A}]{\setlength{\rightskip}{0pt plus 5cm}for A}}\label{lancia__acs_8m_ab4f8a2431d9ad6efec44b47971737c52}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 10e-7:10e-7:10e-6
+    
+    k=k+1
+    j=0
+\end{DoxyCode}
+
+
+Definition at line 17 of file lancia\-\_\-acs.\-m.
+
+\hypertarget{lancia__acs_8m_abfef5bcdab19147dbfbb68112da17044}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!A\-B@{A\-B}}
+\index{A\-B@{A\-B}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{A\-B}]{\setlength{\rightskip}{0pt plus 5cm}A\-B = 0}}\label{lancia__acs_8m_abfef5bcdab19147dbfbb68112da17044}
+
+
+Definition at line 12 of file lancia\-\_\-acs.\-m.
+
+\hypertarget{lancia__acs_8m_afb39b9efa52a33745c5e622fa358a97f}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!B@{B}}
+\index{B@{B}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{B}]{\setlength{\rightskip}{0pt plus 5cm}for B}}\label{lancia__acs_8m_afb39b9efa52a33745c5e622fa358a97f}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 10e-7:10e-7:10e-6
+        
+        j=j+1
+        
+        
+        [t y] = ACS\_reverse\_reaction\_con\_input(\hyperlink{lancia__acs_8m_ab4f8a2431d9ad6efec44b47971737c52}{A},\hyperlink{lancia__acs_8m_afb39b9efa52a33745c5e622fa358a97f}{B},\hyperlink{lancia__acs_8m_abfef5bcdab19147dbfbb68112da17044}{AB},\hyperlink{lancia__acs_8m_aaa53ca0b650dfd85c4f59fa156f7a2cc}{C},\hyperlink{lancia__acs_8m_afb377083e62f3bde1716905353335a78}{CA},\hyperlink{lancia__acs_8m_aa3a014475bd24120996191acceaa4f3d}{kdiss},
+      \hyperlink{lancia__acs_8m_a9cf172af920b969c5411ac19e5e13e22}{kcomplex},\hyperlink{lancia__acs_8m_af49f64b0687f4e269a7dc8e56ca82772}{kcond},\hyperlink{lancia__acs_8m_ad821064ff58d369f2a880dc5bf3db527}{k\_complex})
+\end{DoxyCode}
+
+
+Definition at line 21 of file lancia\-\_\-acs.\-m.
+
+\hypertarget{lancia__acs_8m_aaa53ca0b650dfd85c4f59fa156f7a2cc}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!C@{C}}
+\index{C@{C}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{C}]{\setlength{\rightskip}{0pt plus 5cm}C = 2e-\/7}}\label{lancia__acs_8m_aaa53ca0b650dfd85c4f59fa156f7a2cc}
+
+
+Definition at line 13 of file lancia\-\_\-acs.\-m.
+
+\hypertarget{lancia__acs_8m_afb377083e62f3bde1716905353335a78}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!C\-A@{C\-A}}
+\index{C\-A@{C\-A}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{C\-A}]{\setlength{\rightskip}{0pt plus 5cm}C\-A = 0}}\label{lancia__acs_8m_afb377083e62f3bde1716905353335a78}
+
+
+Definition at line 14 of file lancia\-\_\-acs.\-m.
+
+\hypertarget{lancia__acs_8m_adc468c70fb574ebd07287b38d0d0676d}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!k@{k}}
+\index{k@{k}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{k}]{\setlength{\rightskip}{0pt plus 5cm}k = 0}}\label{lancia__acs_8m_adc468c70fb574ebd07287b38d0d0676d}
+
+
+Definition at line 16 of file lancia\-\_\-acs.\-m.
+
+\hypertarget{lancia__acs_8m_ad821064ff58d369f2a880dc5bf3db527}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!k\-\_\-complex@{k\-\_\-complex}}
+\index{k\-\_\-complex@{k\-\_\-complex}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{k\-\_\-complex}]{\setlength{\rightskip}{0pt plus 5cm}k\-\_\-complex = 1e-\/4}}\label{lancia__acs_8m_ad821064ff58d369f2a880dc5bf3db527}
+
+
+Definition at line 10 of file lancia\-\_\-acs.\-m.
+
+\hypertarget{lancia__acs_8m_a9cf172af920b969c5411ac19e5e13e22}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!kcomplex@{kcomplex}}
+\index{kcomplex@{kcomplex}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{kcomplex}]{\setlength{\rightskip}{0pt plus 5cm}kcomplex = 1e6}}\label{lancia__acs_8m_a9cf172af920b969c5411ac19e5e13e22}
+
+
+Definition at line 8 of file lancia\-\_\-acs.\-m.
+
+\hypertarget{lancia__acs_8m_af49f64b0687f4e269a7dc8e56ca82772}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!kcond@{kcond}}
+\index{kcond@{kcond}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{kcond}]{\setlength{\rightskip}{0pt plus 5cm}kcond = 6e8}}\label{lancia__acs_8m_af49f64b0687f4e269a7dc8e56ca82772}
+
+
+Definition at line 9 of file lancia\-\_\-acs.\-m.
+
+\hypertarget{lancia__acs_8m_aa3a014475bd24120996191acceaa4f3d}{\index{lancia\-\_\-acs.\-m@{lancia\-\_\-acs.\-m}!kdiss@{kdiss}}
+\index{kdiss@{kdiss}!lancia_acs.m@{lancia\-\_\-acs.\-m}}
+\subsubsection[{kdiss}]{\setlength{\rightskip}{0pt plus 5cm}lancia\-\_\-acs m clear all close all parametri kdiss = 0}}\label{lancia__acs_8m_aa3a014475bd24120996191acceaa4f3d}
+
+
+Definition at line 7 of file lancia\-\_\-acs.\-m.
+

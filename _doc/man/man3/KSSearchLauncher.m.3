@@ -1,0 +1,160 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/KSSearchLauncher.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/KSSearchLauncher.m \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfclose\fP (\fBfid\fP)"
+.br
+.ti -1c
+.RI "\fBcd\fP (\fBcurrentDir\fP)"
+.br
+.ti -1c
+.RI "\fBfprintf\fP (\fBfid\fP,'NET%d\\n\\n', \fBx\fP)"
+.br
+.ti -1c
+.RI "\fBfprintf\fP (\fBfid\fP,'KILLERS\\n\\n')"
+.br
+.ti -1c
+.RI "\fBend\fP \fBfprintf\fP (\fBfid\fP,'\\n\\n')"
+.br
+.ti -1c
+.RI "\fBfprintf\fP (\fBfid\fP,'KILLERS-SPAMMERS\\n\\n')"
+.br
+.ti -1c
+.RI "\fBfprintf\fP (\fBfid\fP,'SPAMMERS\\n\\n')"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBcurrentDir\fP = \fBcd\fP()"
+.br
+.ti -1c
+.RI "\fBsimDirs\fP = \fBdir\fP('sim_*')"
+.br
+.ti -1c
+.RI "\fBfid\fP = fopen('results\&.txt','w')"
+.br
+.ti -1c
+.RI "for \fBx\fP"
+.br
+.ti -1c
+.RI "\fBKSSearch\fP"
+.br
+.ti -1c
+.RI "\fBcheckKM\fP = \fBisempty\fP(\fBkillersMatrix\fP)"
+.br
+.ti -1c
+.RI "\fBelse\fP [\fBr\fP \fBc\fP] = \fBsize\fP(\fBkillersMatrix\fP)"
+.br
+.ti -1c
+.RI "for \fBi\fP"
+.br
+.ti -1c
+.RI "clear \fBj\fP"
+.br
+.ti -1c
+.RI "clear \fBr\fP"
+.br
+.ti -1c
+.RI "clear \fBc\fP"
+.br
+.ti -1c
+.RI "\fBcheckKSM\fP = \fBisempty\fP(\fBKSMatrix\fP)"
+.br
+.ti -1c
+.RI "\fBcheckSM\fP = \fBisempty\fP(\fBSpammersMatrix\fP)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "cd (\fBcurrentDir\fP)"
+
+.SS "fclose (\fBfid\fP)"
+
+.SS "fprintf (\fBfid\fP, 'NET%d\\n\\n', \fBx\fP)"
+
+.SS "fprintf (\fBfid\fP, 'KILLERS\\n\\n')"
+
+.SS "\fBend\fP fprintf (\fBfid\fP, '\\n\\n')"
+
+.SS "fprintf (\fBfid\fP, 'KILLERS-SPAMMERS\\n\\n')"
+
+.SS "fprintf (\fBfid\fP, 'SPAMMERS\\n\\n')"
+
+.SH "Variable Documentation"
+.PP 
+.SS "clear c"
+
+.PP
+Definition at line 27 of file KSSearchLauncher\&.m\&.
+.SS "\fBif\fP checkKM = \fBisempty\fP(\fBkillersMatrix\fP)"
+
+.PP
+Definition at line 12 of file KSSearchLauncher\&.m\&.
+.SS "\fBif\fP checkKSM = \fBisempty\fP(\fBKSMatrix\fP)"
+
+.PP
+Definition at line 29 of file KSSearchLauncher\&.m\&.
+.SS "\fBif\fP checkSM = \fBisempty\fP(\fBSpammersMatrix\fP)"
+
+.PP
+Definition at line 46 of file KSSearchLauncher\&.m\&.
+.SS "currentDir = \fBcd\fP()"
+
+.PP
+Definition at line 1 of file KSSearchLauncher\&.m\&.
+.SS "else[\fBr\fP \fBc\fP] = \fBsize\fP(\fBkillersMatrix\fP)"
+
+.PP
+Definition at line 16 of file KSSearchLauncher\&.m\&.
+.SS "fid = fopen('results\&.txt','w')"
+
+.PP
+Definition at line 3 of file KSSearchLauncher\&.m\&.
+.SS "\fBend\fP \fBend\fP clear i"
+\fBInitial value:\fP
+.PP
+.nf
+= 1:r
+            for j = 1:c
+                fprintf(fid,'%d\t',killersMatrix(i,j))
+.fi
+.PP
+Definition at line 17 of file KSSearchLauncher\&.m\&.
+.SS "clear j"
+
+.PP
+Definition at line 25 of file KSSearchLauncher\&.m\&.
+.SS "KSSearch"
+
+.PP
+Definition at line 7 of file KSSearchLauncher\&.m\&.
+.SS "clear r"
+
+.PP
+Definition at line 26 of file KSSearchLauncher\&.m\&.
+.SS "simDirs = \fBdir\fP('sim_*')"
+
+.PP
+Definition at line 2 of file KSSearchLauncher\&.m\&.
+.SS "for x"
+\fBInitial value:\fP
+.PP
+.nf
+= 1:length(simDirs)
+    cd(strcat(simDirs(x)\&.name,'/res'))
+.fi
+.PP
+Definition at line 5 of file KSSearchLauncher\&.m\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

@@ -1,0 +1,369 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_inizializzatore_acs.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/lancia_inizializzatore_acs.m \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "lancia_inizializzatore_acs m 
+.br
+script che lancia l 
+.br
+inizializzatore per il 
+.br
+simulatore ACSM2M e in cui 
+.br
+sono contenuti tutti \fBi\fP 
+.br
+parametri dell 
+.br
+inizializzazione comandi di 
+.br
+sistema clear all close all 
+.br
+seme random \fBrand\fP ('state', \fBsum\fP(100 *clock)) rand%--------------------------------------------------------------------------%PARAMETRI%--------------------------------------------------------------------------\fBnGEN\fP"
+.br
+.ti -1c
+.RI "experiment all condensation are \fBeso\fP (\fBand\fP cleavage endo)) \fBenergy\fP"
+.br
+.ti -1c
+.RI "id \fBratio_firing_disk\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBnSIM\fP =1"
+.br
+.ti -1c
+.RI "\fBnSeconds\fP =400"
+.br
+.ti -1c
+.RI "\fBnReactions\fP =200000000"
+.br
+.ti -1c
+.RI "\fBinitialPopulationNumber\fP =0"
+.br
+.ti -1c
+.RI "\fBinitialMaxLength\fP =3"
+.br
+.ti -1c
+.RI "\fBmassima_lunghezza_su_cui_calcolare_le_reazioni\fP = 3"
+.br
+.ti -1c
+.RI "experiment \fB__pad1__\fP"
+.br
+.ti -1c
+.RI "\fBalphabet\fP = ['\fBAB\fP']"
+.br
+.ti -1c
+.RI "\fBlastFiringDiskSpeciesID\fP = 0"
+.br
+.ti -1c
+.RI "for \fBi\fP"
+.br
+.ti -1c
+.RI "\fBoverallConcentration\fP =1e-4"
+.br
+.ti -1c
+.RI "\fBvolume\fP =1e-15"
+.br
+.ti -1c
+.RI "experiment \fB__pad2__\fP"
+.br
+.ti -1c
+.RI "\fBenergyTarget\fP =0"
+.br
+.ti -1c
+.RI "\fBcomplexFormationSymmetry\fP =0"
+.br
+.ti -1c
+.RI "**NEW ** \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP = 2"
+.br
+.ti -1c
+.RI "\fBreactionProbability\fP =0\&.004"
+.br
+.ti -1c
+.RI "experiment \fB__pad3__\fP"
+.br
+.ti -1c
+.RI "\fBreverseReactions\fP =0"
+.br
+.ti -1c
+.RI "costanti CINETICHE \fBK_eq\fP =1000"
+.br
+.ti -1c
+.RI "parte da rivedere e correggere \fBKass_o_Kdiss\fP = 0"
+.br
+.ti -1c
+.RI "\fBse\fP è un cleavage \fBkdiss\fP = 100"
+.br
+.ti -1c
+.RI "\fBse\fP è un cleavage \fBse\fP è una 
+.br
+condensazione \fBkass\fP =100"
+.br
+.ti -1c
+.RI "\fBrapporto_Kfor_Kback\fP = 0"
+.br
+.ti -1c
+.RI "e g \fBKass\fP"
+.br
+.ti -1c
+.RI "\fBK_cpxDiss\fP =0"
+.br
+.ti -1c
+.RI "coefficiente di \fBfosforilazione\fP"
+.br
+.ti -1c
+.RI "\fBK_nrg\fP = 0"
+.br
+.ti -1c
+.RI "\fBK_irrad\fP = 0"
+.br
+.ti -1c
+.RI "altri parametri \fBmoleculeDecay_KineticConstant\fP =0\&.02"
+.br
+.ti -1c
+.RI "\fBdiffusion_contribute\fP =0"
+.br
+.ti -1c
+.RI "\fBsolubility_threshold\fP =0"
+.br
+.ti -1c
+.RI "experimentveri \fBinflux\fP =2"
+.br
+.ti -1c
+.RI "\fBinflux_rate\fP =1e-6"
+.br
+.ti -1c
+.RI "percentuale di specie da 
+.br
+cancellare rispetto \fBa\fP tutte 
+.br
+quelle che restano dopo aver 
+.br
+conservato \fBi\fP polimeri fino \fBa\fP 
+.br
+lunghezzamaxfd \fBlunghezza_max_fd\fP = 1"
+.br
+.ti -1c
+.RI "\fBlunghezza\fP dei monomeri 
+.br
+polimeri da conservare \fBscelta_concentrazioni\fP =1"
+.br
+.ti -1c
+.RI "parametro \fBswitch\fP"
+.br
+.ti -1c
+.RI "parametro uniforme sulle \fBlunghezze\fP"
+.br
+.ti -1c
+.RI "parametro uniforme sulle 
+.br
+powerlaw con esponente gamma \fBgamma_powerlaw_concentrazioni\fP = 2\&.1"
+.br
+.ti -1c
+.RI "esponente della powerlaw in 
+.br
+caso parametri per la 
+.br
+distribuzione dei \fBcatalizzatori\fP"
+.br
+.ti -1c
+.RI "richiamo la funzione \fBinizializzatore_ACS\fP [fd concentrazioni \fBspecie_def\fP \fBinflux\fP \fBcatalizzatore\fP \fBreazione\fP \fBspecie_non_esistenti\fP \fBmatrice_adiacenza_sub_prod\fP \fBmatrice_adiacenza_cat_prod\fP] = inizializzatore_ACS(\fBnGEN\fP, \fBnSIM\fP, \fBnSeconds\fP, \fBnReactions\fP, \fBinitialPopulationNumber\fP, \fBinitialMaxLength\fP, \fBmassima_lunghezza_su_cui_calcolare_le_reazioni\fP, \fBoverallConcentration\fP, \fBalphabet\fP, \fBcomplexFormationSymmetry\fP, \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP, \fBreactionProbability\fP, \fBcleavageProbability\fP, \fBdiffusion_contribute\fP, \fBsolubility_threshold\fP, \fBinflux\fP, \fBinflux_rate\fP, \fBreverseReactions\fP, \fBKass_o_Kdiss\fP,\fBrapporto_Kfor_Kback\fP,rapporto_Kcpx_K_ass,\fBK_cpxDiss\fP, \fBK_nrg\fP, \fBmoleculeDecay_KineticConstant\fP, \fBratio_firing_disk\fP, \fBlunghezza_max_fd\fP, \fBscelta_concentrazioni\fP, \fBgamma_powerlaw_concentrazioni\fP,\fBdecisione_catalizzatori\fP, \fBlastFiringDiskSpeciesID\fP, ECConcentration, \fBvolume\fP, \fBenergy\fP, \fBenergyTarget\fP, controllo_ACS_nel_ciclo, \fBK_irrad\fP)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "experiment all condensation are eso (\fBand\fP cleavageendo)"
+
+.SS "lancia_inizializzatore_acs m script che lancia l inizializzatore per il simulatore ACSM2M e in cui sono contenuti tutti \fBi\fP parametri dell inizializzazione comandi di sistema clear all close all seme random rand ('state', \fBsum\fP(100 *clock))"
+
+.SS "id ratio_firing_disk ()\fC [virtual]\fP"
+
+.SH "Variable Documentation"
+.PP 
+.SS "experiment __pad1__"
+
+.PP
+Definition at line 27 of file lancia_inizializzatore_acs\&.m\&.
+.SS "experiment __pad2__"
+
+.PP
+Definition at line 45 of file lancia_inizializzatore_acs\&.m\&.
+.SS "experiment __pad3__"
+
+.PP
+Definition at line 57 of file lancia_inizializzatore_acs\&.m\&.
+.SS "alphabet = ['\fBAB\fP']"
+
+.PP
+Definition at line 29 of file lancia_inizializzatore_acs\&.m\&.
+.SS "esponente della powerlaw in caso parametri per la distribuzione dei catalizzatori"
+
+.PP
+Definition at line 89 of file lancia_inizializzatore_acs\&.m\&.
+.SS "complexFormationSymmetry =0"
+
+.PP
+Definition at line 51 of file lancia_inizializzatore_acs\&.m\&.
+.SS "diffusion_contribute =0"
+
+.PP
+Definition at line 75 of file lancia_inizializzatore_acs\&.m\&.
+.SS "energyTarget =0"
+
+.PP
+Definition at line 49 of file lancia_inizializzatore_acs\&.m\&.
+.SS "** NEW** fino_a_che_lunghezza_i_polimeri_non_catalizzano = 2"
+
+.PP
+Definition at line 54 of file lancia_inizializzatore_acs\&.m\&.
+.SS "coefficiente di fosforilazione"
+
+.PP
+Definition at line 68 of file lancia_inizializzatore_acs\&.m\&.
+.SS "parametro uniforme sulle powerlaw con esponente gamma gamma_powerlaw_concentrazioni = 2\&.1"
+
+.PP
+Definition at line 85 of file lancia_inizializzatore_acs\&.m\&.
+.SS "for i"
+\fBInitial value:\fP
+.PP
+.nf
+= 1:massima_lunghezza_su_cui_calcolare_le_reazioni
+    lastFiringDiskSpeciesID = lastFiringDiskSpeciesID + length(alphabet)^i
+.fi
+.PP
+Definition at line 33 of file lancia_inizializzatore_acs\&.m\&.
+.SS "controllo che non ci siano cicli nell influx =2"
+
+.PP
+Definition at line 77 of file lancia_inizializzatore_acs\&.m\&.
+.SS "influx_rate =1e-6"
+
+.PP
+Definition at line 78 of file lancia_inizializzatore_acs\&.m\&.
+.SS "initialMaxLength =3"
+
+.PP
+Definition at line 23 of file lancia_inizializzatore_acs\&.m\&.
+.SS "initialPopulationNumber =0"
+
+.PP
+Definition at line 21 of file lancia_inizializzatore_acs\&.m\&.
+.SS "richiamo la funzione inizializzatore_ACS[fd concentrazioni \fBspecie_def\fP \fBinflux\fP \fBcatalizzatore\fP \fBreazione\fP \fBspecie_non_esistenti\fP \fBmatrice_adiacenza_sub_prod\fP \fBmatrice_adiacenza_cat_prod\fP] = inizializzatore_ACS(\fBnGEN\fP, \fBnSIM\fP, \fBnSeconds\fP, \fBnReactions\fP, \fBinitialPopulationNumber\fP, \fBinitialMaxLength\fP, \fBmassima_lunghezza_su_cui_calcolare_le_reazioni\fP, \fBoverallConcentration\fP, \fBalphabet\fP, \fBcomplexFormationSymmetry\fP, \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP, \fBreactionProbability\fP, \fBcleavageProbability\fP, \fBdiffusion_contribute\fP, \fBsolubility_threshold\fP, \fBinflux\fP, \fBinflux_rate\fP, \fBreverseReactions\fP, \fBKass_o_Kdiss\fP,\fBrapporto_Kfor_Kback\fP,rapporto_Kcpx_K_ass,\fBK_cpxDiss\fP, \fBK_nrg\fP, \fBmoleculeDecay_KineticConstant\fP, \fBratio_firing_disk\fP, \fBlunghezza_max_fd\fP, \fBscelta_concentrazioni\fP, \fBgamma_powerlaw_concentrazioni\fP,\fBdecisione_catalizzatori\fP, \fBlastFiringDiskSpeciesID\fP, ECConcentration, \fBvolume\fP, \fBenergy\fP, \fBenergyTarget\fP, controllo_ACS_nel_ciclo, \fBK_irrad\fP)"
+
+.PP
+Definition at line 100 of file lancia_inizializzatore_acs\&.m\&.
+.SS "K_cpxDiss =0"
+
+.PP
+Definition at line 66 of file lancia_inizializzatore_acs\&.m\&.
+.SS "costanti CINETICHE K_eq =1000"
+
+.PP
+Definition at line 61 of file lancia_inizializzatore_acs\&.m\&.
+.SS "K_irrad = 0"
+
+.PP
+Definition at line 71 of file lancia_inizializzatore_acs\&.m\&.
+.SS "K_nrg = 0"
+
+.PP
+Definition at line 69 of file lancia_inizializzatore_acs\&.m\&.
+.SS "\fBse\fP è un cleavage \fBse\fP è una condensazione kass =100"
+
+.PP
+Definition at line 63 of file lancia_inizializzatore_acs\&.m\&.
+.SS "e g Kass"
+\fBInitial value:\fP
+.PP
+.nf
+= 100 --> Kdiss = 100/100 = 1
+rapporto_Kcpx_K_ass = 0
+.fi
+.PP
+Definition at line 64 of file lancia_inizializzatore_acs\&.m\&.
+.SS "parte da rivedere e correggere Kass_o_Kdiss = 0"
+
+.PP
+Definition at line 63 of file lancia_inizializzatore_acs\&.m\&.
+.SS "\fBse\fP è un cleavage kdiss = 100"
+
+.PP
+Definition at line 63 of file lancia_inizializzatore_acs\&.m\&.
+.SS "\fBend\fP lastFiringDiskSpeciesID = 0"
+
+.PP
+Definition at line 32 of file lancia_inizializzatore_acs\&.m\&.
+.SS "percentuale di specie da cancellare rispetto \fBa\fP tutte quelle che restano dopo aver conservato \fBi\fP polimeri fino \fBa\fP lunghezzamaxfd lunghezza_max_fd = 1"
+
+.PP
+Definition at line 83 of file lancia_inizializzatore_acs\&.m\&.
+.SS "parametro uniforme sulle lunghezze"
+
+.PP
+Definition at line 84 of file lancia_inizializzatore_acs\&.m\&.
+.SS "massima_lunghezza_su_cui_calcolare_le_reazioni = 3"
+
+.PP
+Definition at line 24 of file lancia_inizializzatore_acs\&.m\&.
+.SS "altri parametri moleculeDecay_KineticConstant =0\&.02"
+
+.PP
+Definition at line 74 of file lancia_inizializzatore_acs\&.m\&.
+.SS "nReactions =200000000"
+
+.PP
+Definition at line 20 of file lancia_inizializzatore_acs\&.m\&.
+.SS "nSeconds =400"
+
+.PP
+Definition at line 19 of file lancia_inizializzatore_acs\&.m\&.
+.SS "nSIM =1"
+
+.PP
+Definition at line 18 of file lancia_inizializzatore_acs\&.m\&.
+.SS "overallConcentration =1e-4"
+
+.PP
+Definition at line 38 of file lancia_inizializzatore_acs\&.m\&.
+.SS "rapporto_Kfor_Kback = 0"
+
+.PP
+Definition at line 64 of file lancia_inizializzatore_acs\&.m\&.
+.SS "reactionProbability =0\&.004"
+
+.PP
+Definition at line 56 of file lancia_inizializzatore_acs\&.m\&.
+.SS "reverseReactions =0"
+
+.PP
+Definition at line 58 of file lancia_inizializzatore_acs\&.m\&.
+.SS "\fBlunghezza\fP dei monomeri polimeri da conservare scelta_concentrazioni =1"
+
+.PP
+Definition at line 84 of file lancia_inizializzatore_acs\&.m\&.
+.SS "solubility_threshold =0"
+
+.PP
+Definition at line 76 of file lancia_inizializzatore_acs\&.m\&.
+.SS "parametro switch"
+
+.PP
+Definition at line 84 of file lancia_inizializzatore_acs\&.m\&.
+.SS "volume =1e-15"
+
+.PP
+Definition at line 40 of file lancia_inizializzatore_acs\&.m\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

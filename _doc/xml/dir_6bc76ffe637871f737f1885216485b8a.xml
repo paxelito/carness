@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="dir_6bc76ffe637871f737f1885216485b8a" kind="dir">
+    <compoundname>/home/ale/Dropbox/ACS_SVN/</compoundname>
+    <innerdir refid="dir_c192cee3b8188d2894487c99273d8022">/home/ale/Dropbox/ACS_SVN/carness/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ale/Dropbox/ACS_SVN/"/>
+  </compounddef>
+</doxygen>

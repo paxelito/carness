@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="page_initializator" kind="page">
+    <compoundname>pageInitializator</compoundname>
+    <title>The initializator (a very brief description)</title>
+    <detaileddescription>
+<para>The initializator provided with the simulator is located in the <computeroutput>initializator</computeroutput> folder (within the source code folder) and it is developed in Matlab code. All the parameters are set in the <computeroutput><ref refid="start_8m" kindref="compound">start.m</ref></computeroutput> file (from line 22 to line 63). In addition you find the parameters related to the name of the folder that will contain the simulation (<computeroutput>simFolder.name</computeroutput>), the path where that folder will be created (<computeroutput>simFolder.path</computeroutput>) and the number of different network ensambles to create (<computeroutput>simFolder.nets</computeroutput>). It is important to notice that the initializator has not been thought to be shared, so it is not too much user friendly to be manipulated. Nevertheless it could be very useful with a little bit of practice. </para><sect1 id="page_initializator_1initSensitivity">
+<title>Screening Parameter</title>
+<para>To initialize structures to perform a sensitivity analysis of a specific parameters follow the following instruction:<itemizedlist>
+<listitem><para>Change the name of the array at row 13 with the name of the parameter you want analyze. This array contains the values of the paramter. Remember to insert the old parameter you are changing in the parameters list with its single value, otherwise it would be a missing parameter.</para></listitem><listitem><para>In the array at row 14 (<computeroutput>nome_folder</computeroutput>) you have put the same number of elements of the array containing the screening values. This array contains a numeric tag of the values (used to create the simulations folder names) contained in the values array.</para></listitem><listitem><para>In the code of the <computeroutput><ref refid="start_8m" kindref="compound">start.m</ref></computeroutput> file (rows 122 to 150) you must change:<itemizedlist>
+<listitem><para>row 121: <computeroutput></computeroutput>[rows,b]=size(reactionProbability); <ndash/>&gt; [rows,b]=size(name_of_the_parameter_you_have_trasformed_in_array);</para></listitem><listitem><para>row 146: <computeroutput>inizializzatore_ACS</computeroutput>(... reactionProbability(i), ...); -&gt; inizializzatore_ACS(... name_of_the_parameter_you_have_trasformed_in_array(i), ...); (remember to remove the index to the reactionProbability parameter </para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

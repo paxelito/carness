@@ -1,0 +1,16 @@
+\begin{DoxyAuthor}{Author}
+Alessandro Filisetti 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.2 (20120114.39) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2012-\/01-\/14 sourceforge repository -\/-\/ \href{https://carness.svn.sourceforge.net/svnroot/carness/}{\tt https://carness.svn.sourceforge.net/svnroot/carness/}
+\end{DoxyDate}
+This manual is divided in the following sections:
+\begin{DoxyItemize}
+\item \hyperlink{intro}{Essential informations}
+\item \hyperlink{page_init_str}{Initial Data Structures}
+\item \hyperlink{pageoutcomes}{Outcomes}
+\item \hyperlink{page_initializator}{The initializator (a very brief description)} 
+\end{DoxyItemize}

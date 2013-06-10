@@ -1,0 +1,921 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="inizializzatore___a_c_s_8m" kind="file">
+    <compoundname>inizializzatore_ACS.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a4b4c670b101bf7a838f775e008fa6255" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>function[firing_disk concentrazioni_iniziali specie_def influx catalizzatore reazione specie_non_esistenti matrice_adiacenza_sub_prod matrice_adiacenza_cat_prod]</definition>
+        <argsstring>[firing_disk concentrazioni_iniziali specie_def influx catalizzatore reazione specie_non_esistenti matrice_adiacenza_sub_prod matrice_adiacenza_cat_prod]</argsstring>
+        <name>function</name>
+        <initializer>= <ref refid="start_8m_1a8a726216ff46a409fe160de06ac1e317" kindref="member">inizializzatore_ACS</ref>(<ref refid="start_8m_1a4af22ee598eb5fcc4d0ff8439823e600" kindref="member">nGEN</ref>, <ref refid="start_8m_1a2b9b3728c03157895f28160b24f4c572" kindref="member">nSIM</ref>, <ref refid="lancia__inizializzatore__acs_8m_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>, <ref refid="start_8m_1a8d704532b4b419f1428cb078bb5c7ffe" kindref="member">nReactions</ref>, <ref refid="lancia__inizializzatore__acs_8m_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref>, <ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>, <ref refid="start_8m_1a59597688ed79473c0234f45eb9167574" kindref="member">overallConcentration</ref>, <ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>, <ref refid="start_8m_1ac5d9cfec5453da5efc3e8d574b455833" kindref="member">complexFormationSymmetry</ref>, <ref refid="start_8m_1ab6966d9ee620bc7376dc41a38352b948" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>, <ref refid="start_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>, <ref refid="start_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>, <ref refid="start_8m_1a9341167cb56ed18499df723220990b9c" kindref="member">diffusion_contribute</ref>, <ref refid="start_8m_1acbefa7c9bfd826fec9b32fa3bd29c288" kindref="member">solubility_threshold</ref>, <ref refid="start_8m_1ad795c71664f3161dc8f7a769341daadf" kindref="member">influx_rate</ref>, <ref refid="start_8m_1a650532b3a3c04865cc35cff6d567c5c0" kindref="member">reverseReactions</ref>,<ref refid="start_8m_1ac8f2b2a8d859ca2b7cf056575c7b0538" kindref="member">K_nrg</ref>, <ref refid="start_8m_1a5feeae2bacd93807ef83114349bb4080" kindref="member">moleculeDecay_KineticConstant</ref>, <ref refid="lancia__inizializzatore__acs_8m_1acd685f63a27f53fc049aff633634ddd6" kindref="member">ratio_firing_disk</ref>, <ref refid="start_8m_1a7c974cc56015b6503e0619d32ebd4180" kindref="member">lunghezza_max_fd</ref>, <ref refid="start_8m_1ac60b74a4c1b8bc23e64008ba1e0c41a8" kindref="member">scelta_concentrazioni</ref>, <ref refid="start_8m_1a7cd0915d7542523abc226a8eecf67ecf" kindref="member">gamma_powerlaw_concentrazioni</ref>,<ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>, <ref refid="start_8m_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref>, ECConcentration, <ref refid="start_8m_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>, <ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>, controllo_ACS_nel_ciclo, <ref refid="start_8m_1abd02c282e86e2173abc6daed03f73584" kindref="member">K_nrg_decay</ref>, nome_cartella, <ref refid="start_8m_1aa053e90bd0493b6b9dfbb0e8febbee0e" kindref="member">funzioni_booleane_in_dec</ref>,<ref refid="start_8m_1a1fa680d8b3a4f885d99f56fef41d2c37" kindref="member">ratioSpeciesEnergizable</ref>,<ref refid="start_8m_1a484afe97369bc993daaa71613dd2a665" kindref="member">Kass</ref>,<ref refid="start_8m_1a51a314f9df0eaa4488a1b264d1de0173" kindref="member">Kdiss</ref>,<ref refid="start_8m_1aaea32371e0f1645dcea44ce4d4a3d147" kindref="member">Kcpx</ref>,<ref refid="start_8m_1a26dbdfeb290332837753db666ee56981" kindref="member">K_cpx</ref>, <ref refid="start_8m_1a422f03a95f0b273407ed13891d8d9f4d" kindref="member">randomSeed</ref>, <ref refid="start_8m_1a08ef28bc85447e904ca9ea64de89b676" kindref="member">debugLevel</ref>, <ref refid="start_8m_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref>,<ref refid="start_8m_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref>,<ref refid="overall_stats_8m_1aa671e3345005bd599e662bcaa115b18a" kindref="member">simFolder</ref>,<ref refid="start_8m_1a5b50e4bf0f01cb1e2d8bdf9494493579" kindref="member">lMaxInflux</ref>,<ref refid="start_8m_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref>,nHours,nAttempts,<ref refid="start_8m_1aa7d97d27bd1a172a2f0ad49ef13ef8ac" kindref="member">revRctRatio</ref>)
+%function [<ref refid="crea__concentrazioni__iniziali_8m_1acb72987b5000cf59c6f81c482e2ac8ac" kindref="member">firing_disk</ref> <ref refid="crea__concentrazioni__iniziali_8m_1a89801fa89eee3ba40f6610f290d6f6c3" kindref="member">concentrazioni_iniziali</ref> <ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref> <ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref> <ref refid="crea__catalizzatori_8m_1a14959eaa108dcffcec704a207775f7e8" kindref="member">catalizzatore</ref> <ref refid="inizializzatore___a_c_s_8m_1a65cf6e12ba9a8c10222f3f1f71f7c95f" kindref="member">reazione</ref> <ref refid="inizializzatore___a_c_s_8m_1adfcfd2749a68fa87ece8ec3caa194b3d" kindref="member">specie_non_esistenti</ref> <ref refid="crea__e__controlla__i__catalizzatori_8m_1a3568a7566d3871de5460f8fe96044c26" kindref="member">matrice_adiacenza_sub_prod</ref> <ref refid="crea__e__controlla__i__catalizzatori_8m_1a23c87a364bec91d4eb554b9eabe0b767" kindref="member">matrice_adiacenza_cat_prod</ref>] = <ref refid="start_8m_1a8a726216ff46a409fe160de06ac1e317" kindref="member">inizializzatore_ACS</ref>(<ref refid="start_8m_1a4af22ee598eb5fcc4d0ff8439823e600" kindref="member">nGEN</ref>, <ref refid="start_8m_1a2b9b3728c03157895f28160b24f4c572" kindref="member">nSIM</ref>, <ref refid="lancia__inizializzatore__acs_8m_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>, <ref refid="start_8m_1a8d704532b4b419f1428cb078bb5c7ffe" kindref="member">nReactions</ref>, <ref refid="lancia__inizializzatore__acs_8m_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref>, <ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>, <ref refid="start_8m_1a59597688ed79473c0234f45eb9167574" kindref="member">overallConcentration</ref>, <ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>, <ref refid="start_8m_1ac5d9cfec5453da5efc3e8d574b455833" kindref="member">complexFormationSymmetry</ref>, <ref refid="start_8m_1ab6966d9ee620bc7376dc41a38352b948" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>, <ref refid="start_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>, <ref refid="start_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>, <ref refid="start_8m_1a9341167cb56ed18499df723220990b9c" kindref="member">diffusion_contribute</ref>, <ref refid="start_8m_1acbefa7c9bfd826fec9b32fa3bd29c288" kindref="member">solubility_threshold</ref>, <ref refid="start_8m_1ad795c71664f3161dc8f7a769341daadf" kindref="member">influx_rate</ref>, <ref refid="start_8m_1a650532b3a3c04865cc35cff6d567c5c0" kindref="member">reverseReactions</ref>,<ref refid="start_8m_1ac8f2b2a8d859ca2b7cf056575c7b0538" kindref="member">K_nrg</ref>, <ref refid="start_8m_1a5feeae2bacd93807ef83114349bb4080" kindref="member">moleculeDecay_KineticConstant</ref>, <ref refid="lancia__inizializzatore__acs_8m_1acd685f63a27f53fc049aff633634ddd6" kindref="member">ratio_firing_disk</ref>, <ref refid="start_8m_1a7c974cc56015b6503e0619d32ebd4180" kindref="member">lunghezza_max_fd</ref>, <ref refid="start_8m_1ac60b74a4c1b8bc23e64008ba1e0c41a8" kindref="member">scelta_concentrazioni</ref>, <ref refid="start_8m_1a7cd0915d7542523abc226a8eecf67ecf" kindref="member">gamma_powerlaw_concentrazioni</ref>,<ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>, <ref refid="start_8m_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref>, ECConcentration, <ref refid="start_8m_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>, <ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>, controllo_ACS_nel_ciclo, <ref refid="start_8m_1abd02c282e86e2173abc6daed03f73584" kindref="member">K_nrg_decay</ref>, nome_cartella, <ref refid="start_8m_1aa053e90bd0493b6b9dfbb0e8febbee0e" kindref="member">funzioni_booleane_in_dec</ref>,<ref refid="start_8m_1a1fa680d8b3a4f885d99f56fef41d2c37" kindref="member">ratioSpeciesEnergizable</ref>,<ref refid="start_8m_1a484afe97369bc993daaa71613dd2a665" kindref="member">Kass</ref>,<ref refid="start_8m_1a51a314f9df0eaa4488a1b264d1de0173" kindref="member">Kdiss</ref>,<ref refid="start_8m_1aaea32371e0f1645dcea44ce4d4a3d147" kindref="member">Kcpx</ref>,<ref refid="start_8m_1a26dbdfeb290332837753db666ee56981" kindref="member">K_cpx</ref>,onlyEnvironmentCreation, <ref refid="start_8m_1a422f03a95f0b273407ed13891d8d9f4d" kindref="member">randomSeed</ref>, <ref refid="start_8m_1a08ef28bc85447e904ca9ea64de89b676" kindref="member">debugLevel</ref>, <ref refid="start_8m_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref>,<ref refid="start_8m_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref>)
+
+ <ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>(&apos;state&apos;,<ref refid="crea__influx_8m_1a59a869fb2b28d56dacd91c09e1dffc8d" kindref="member">sum</ref>(100*clock))
+ <ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>
+ 
+%--------------------------------------------------------------------------
+%apertura <ref refid="inizializzatore___a_c_s_8m_1ab790e1eaff8d62837eb7fe789b2b52c6" kindref="member">file</ref>
+%--------------------------------------------------------------------------
+<ref refid="start_8m_1a2d4125646b62462ce279d82913125ccf" kindref="member">thisFolder</ref> = pwd</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="10" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>fid2</definition>
+        <argsstring></argsstring>
+        <name>fid2</name>
+        <initializer>= fopen(&apos;_acsspecies.csv&apos;,&apos;<ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="20" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>fid3</definition>
+        <argsstring></argsstring>
+        <name>fid3</name>
+        <initializer>= fopen(&apos;_acsreactions.csv&apos;,&apos;<ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="21" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>fid4</definition>
+        <argsstring></argsstring>
+        <name>fid4</name>
+        <initializer>= fopen(&apos;_acscatalysis.csv&apos;,&apos;<ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="22" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1af5f7ad66ed343bca8289a4d44dbff04f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>fid5</definition>
+        <argsstring></argsstring>
+        <name>fid5</name>
+        <initializer>= fopen(&apos;_acsinflux.csv&apos;,&apos;<ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="23" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1aadad4fd2d661ea2b9f0c3a95e3f7b4ba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>fid10</definition>
+        <argsstring></argsstring>
+        <name>fid10</name>
+        <initializer>= fopen(&apos;_acsnrgbooleanfunctions.csv&apos;,&apos;<ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="24" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>k_fosforilazione velocità con cui l atp count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="general_concentration_over_threshold_8m_1ae941ef58ebac7f05a8095badde51c07b" kindref="member">fid1</ref>,&apos;%d\n&apos;,<ref refid="start_8m_1a4af22ee598eb5fcc4d0ff8439823e600" kindref="member">nGEN</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="35" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1afbed6b4ecdae7969c5b47d7d4e71495f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>inserisco il numero decimale relativo alla funzione booleana della reazione end end st</definition>
+        <argsstring></argsstring>
+        <name>st</name>
+        <initializer>= <ref refid="read_parameters_8m_1a66a54a4db5a27a03991b5f3034bbc6a4" kindref="member">fclose</ref>(<ref refid="general_concentration_over_threshold_8m_1ae941ef58ebac7f05a8095badde51c07b" kindref="member">fid1</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="119" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a6f6ccfcf58b31cb6412107d9d5281426" prot="public" static="no" mutable="no">
+        <type>counter id specie for</type>
+        <definition>for i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <initializer>= massima_lunghezza_su_cui_calcolare_le_reazioni:-1:1
+    specie_temp=crea_tutte_le_combinazioni_di_elementi(<ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,i)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="167" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1ac86694252f8dfdb19aaeadc4b7c342c6" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for j</definition>
+        <argsstring></argsstring>
+        <name>j</name>
+        <initializer>= length(specie_temp(:,1)):-1:1
+        <ref refid="inizializzatore___a_c_s_8m_1abf70355c2e58f64c6b18bda1b9bccfd7" kindref="member">k</ref> = <ref refid="inizializzatore___a_c_s_8m_1abf70355c2e58f64c6b18bda1b9bccfd7" kindref="member">k</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="170" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a4bfd41b9edb31803d68f4f6362ec4cd7" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <initializer>= 1:length(specie_temp(1,:))
+           <ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>(<ref refid="inizializzatore___a_c_s_8m_1abf70355c2e58f64c6b18bda1b9bccfd7" kindref="member">k</ref>,z)=specie_temp(<ref refid="inizializzatore___a_c_s_8m_1ac86694252f8dfdb19aaeadc4b7c342c6" kindref="member">j</ref>,z)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="172" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a86ba369ab5ba926c9fd83f4375efab4f" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> clear specie_temp <ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end end clear specie_temp end k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="180" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end specie_def</definition>
+        <argsstring></argsstring>
+        <name>specie_def</name>
+        <initializer>=<ref refid="inizializzatore___a_c_s_8m_1a206c02e53d19e1a7f6c297114dd5becb" kindref="member">specie_def_2</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="185" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1ae129addc69eba3abcebf1a644e2f3132" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tmpStr</definition>
+        <argsstring></argsstring>
+        <name>tmpStr</name>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,:)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="203" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a14b0effe88b0b31bfb9d8268de6e5e35" prot="public" static="no" mutable="no">
+        <type>Coefficiente di <ref refid="inizializzatore___a_c_s_8m_1a43a55a4e9faae78b56ddd9e7ca41ba42" kindref="member">degradazione</ref> del</type>
+        <definition>Punto di tagli del complesso</definition>
+        <argsstring></argsstring>
+        <name>complesso</name>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,&apos;%d\t&apos;,0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="211" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1a4ac535f433360d1fc7c40f462e2a4ea3" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1a816e2260bf1c36cbca7ade7517c19b07" kindref="member">concentrazione</ref> molecole cariche <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>&lt; <ref refid="start_8m_1a1fa680d8b3a4f885d99f56fef41d2c37" kindref="member">ratioSpeciesEnergizable</ref>%<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,&apos;%d\n&apos;, 1);%specie energizzabile%<ref refid="_k_s_search_launcher_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref>%<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,&apos;%d\n&apos;, 0);%specie NON energizzabile%<ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="start_8m_1ad795c71664f3161dc8f7a769341daadf" kindref="member">influx_rate</ref>==0 <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="start_8m_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref> &gt; <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>&lt;=(2^(<ref refid="start_8m_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref>+1)-2) <ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,&apos;%d\n&apos;, 1);<ref refid="_k_s_search_launcher_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref> <ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,&apos;%d\n&apos;, 0);<ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="_k_s_search_launcher_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref> <ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,&apos;%d\n&apos;, 0);<ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="_k_s_search_launcher_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref> <ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,&apos;%d\n&apos;, 0);endend%--------------------------------------------------------------------------%inizializzazione del <ref refid="inizializzatore___a_c_s_8m_1ab790e1eaff8d62837eb7fe789b2b52c6" kindref="member">file</ref> dell&apos;<ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>&quot;_influx.csv&quot;%--------------------------------------------------------------------------for <ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>=1:length(<ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>(:, 1)) <ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1af5f7ad66ed343bca8289a4d44dbff04f" kindref="member">fid5</ref>,&apos;%d\t&apos;, <ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 1)-1);<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1af5f7ad66ed343bca8289a4d44dbff04f" kindref="member">fid5</ref>,&apos;%d\n&apos;, <ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 2));endst=<ref refid="read_parameters_8m_1a66a54a4db5a27a03991b5f3034bbc6a4" kindref="member">fclose</ref>(<ref refid="inizializzatore___a_c_s_8m_1af5f7ad66ed343bca8289a4d44dbff04f" kindref="member">fid5</ref>);%--------------------------------------------------------------------------%inizializzazione del <ref refid="inizializzatore___a_c_s_8m_1ab790e1eaff8d62837eb7fe789b2b52c6" kindref="member">file</ref> delle <ref refid="start_8m_1a69962f56e60d0c88abc5d4b6839c2886" kindref="member">reazioni</ref> e dei <ref refid="start_8m_1a5a2da1d1b50e51c66813f40da0d9d0d1" kindref="member">catalizzatori</ref>%--------------------------------------------------------------------------<ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="crea__catalizzatori_8m_1a14959eaa108dcffcec704a207775f7e8" kindref="member">catalizzatore</ref>(1, 1)==-9999;<ref refid="_k_s_search_launcher_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref> for <ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>=1:length(<ref refid="crea__catalizzatori_8m_1a14959eaa108dcffcec704a207775f7e8" kindref="member">catalizzatore</ref>(:, 1)) <ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%d\t&apos;, <ref refid="crea__catalizzatori_8m_1a14959eaa108dcffcec704a207775f7e8" kindref="member">catalizzatore</ref>(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 1)-1);<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%d\t&apos;, <ref refid="crea__catalizzatori_8m_1a14959eaa108dcffcec704a207775f7e8" kindref="member">catalizzatore</ref>(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 2)-1);<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%d\t&apos;, <ref refid="crea__catalizzatori_8m_1a14959eaa108dcffcec704a207775f7e8" kindref="member">catalizzatore</ref>(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 3)-1);<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%d\t&apos;, 0);%quante volte <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="crea__catalizzatori_8m_1a14959eaa108dcffcec704a207775f7e8" kindref="member">catalizzatore</ref>(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 4)==0 tmpKdiss=<ref refid="start_8m_1a51a314f9df0eaa4488a1b264d1de0173" kindref="member">Kdiss</ref>/<ref refid="start_8m_1aa7d97d27bd1a172a2f0ad49ef13ef8ac" kindref="member">revRctRatio</ref>;<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%g\t&apos;, <ref refid="start_8m_1a484afe97369bc993daaa71613dd2a665" kindref="member">Kass</ref>);%<ref refid="lancia__inizializzatore__acs_8m_1a8d22b96a5ece64359002562ebc1fbfc5" kindref="member">kass</ref> <ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%g\t&apos;, tmpKdiss);%<ref refid="lancia__inizializzatore__acs_8m_1acb874616f80abe1a595c7c9e12040cd5" kindref="member">kdiss</ref> <ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%g\n&apos;, <ref refid="start_8m_1aaea32371e0f1645dcea44ce4d4a3d147" kindref="member">Kcpx</ref>);%<ref refid="inizializzatore___a_c_s_8m_1abf70355c2e58f64c6b18bda1b9bccfd7" kindref="member">k</ref> complex <ref refid="_k_s_search_launcher_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref> tmpKass=<ref refid="start_8m_1a484afe97369bc993daaa71613dd2a665" kindref="member">Kass</ref>/<ref refid="start_8m_1aa7d97d27bd1a172a2f0ad49ef13ef8ac" kindref="member">revRctRatio</ref>;tmpKcpx=<ref refid="start_8m_1aaea32371e0f1645dcea44ce4d4a3d147" kindref="member">Kcpx</ref>/<ref refid="start_8m_1aa7d97d27bd1a172a2f0ad49ef13ef8ac" kindref="member">revRctRatio</ref>;<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%g\t&apos;, tmpKass);%<ref refid="lancia__inizializzatore__acs_8m_1a8d22b96a5ece64359002562ebc1fbfc5" kindref="member">kass</ref> <ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%g\t&apos;, <ref refid="start_8m_1a51a314f9df0eaa4488a1b264d1de0173" kindref="member">Kdiss</ref>);%<ref refid="lancia__inizializzatore__acs_8m_1acb874616f80abe1a595c7c9e12040cd5" kindref="member">kdiss</ref> <ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%g\n&apos;, tmpKcpx);%<ref refid="inizializzatore___a_c_s_8m_1abf70355c2e58f64c6b18bda1b9bccfd7" kindref="member">k</ref> complex <ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref>[righe_xx colonne_xx]=<ref refid="crea__e__controlla__i__catalizzatori_8m_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="start_8m_1aa053e90bd0493b6b9dfbb0e8febbee0e" kindref="member">funzioni_booleane_in_dec</ref>);for <ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>=1:length(reazione(:, 1)) indexx=ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref> *righe_xx);funzione_giusta=<ref refid="start_8m_1aa053e90bd0493b6b9dfbb0e8febbee0e" kindref="member">funzioni_booleane_in_dec</ref>(indexx);<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" kindref="member">fid3</ref>,&apos;%d\t&apos;, reazione(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 1)-1);<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" kindref="member">fid3</ref>,&apos;%d\t&apos;, reazione(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 2));<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" kindref="member">fid3</ref>,&apos;%d\t&apos;, reazione(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 3)-1);<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" kindref="member">fid3</ref>,&apos;%d\t&apos;, reazione(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 4)-1);<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" kindref="member">fid3</ref>,&apos;%d\t&apos;, reazione(<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 5)-1);<ref refid="start_8m_1ae11b3deb3de3df7dc48e439074023e35" kindref="member">count</ref>=<ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" kindref="member">fid3</ref>,&apos;%d\t&apos;, 0);<ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>==2 <ref refid="inizializzatore___a_c_s_8m_1aad3b1a68f41f4a6fa247c1cf8e1d450a" kindref="member">eso_endo</ref>=1;%perchè <ref refid="start_8m_1a99032f27eaf45da350b544c68aa6467c" kindref="member">se</ref> non <ref refid="somma_8m_1a6be92348ba85ef257b11d06209e1d7b6" kindref="member">c</ref>&apos;è l&apos;energia sono tutte <ref refid="lancia__inizializzatore__acs_8m_1a5b5a345da13951297f4d3ad31f76a87a" kindref="member">eso</ref> <ref refid="_k_s_search_launcher_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref> <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref> &gt; <ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref> <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>concentrazione molecole cariche if rand&lt; ratioSpeciesEnergizable% count = fprintf(fid2,&apos;%d\n&apos;,1); % specie energizzabile% else% count = fprintf(fid2,&apos;%d\n&apos;,0); % specie NON energizzabile% end if influx_rate == 0 if maxLOut &gt; if i&lt;= (2^(maxLOut+1)-2) count = fprintf(fid2,&apos;%d\n&apos;,1); else count = fprintf(fid2,&apos;%d\n&apos;,0); end else count = fprintf(fid2,&apos;%d\n&apos;,0); end else count = fprintf(fid2,&apos;%d\n&apos;,0); endend%--------------------------------------------------------------------------%inizializzazione del file dell&apos;influx &quot;_influx.csv&quot;%--------------------------------------------------------------------------for i = 1:length(influx(:,1)) count = fprintf(fid5,&apos;%d \t&apos;, influx(i,1)-1); count = fprintf(fid5,&apos;%d \n&apos;, influx(i,2));endst = fclose(fid5);%--------------------------------------------------------------------------%inizializzazione del file delle reazioni e dei catalizzatori%--------------------------------------------------------------------------if catalizzatore(1,1) == -9999;else for i=1:length(catalizzatore(:,1)) count = fprintf(fid4,&apos;%d\t&apos;,catalizzatore(i,1)-1); count = fprintf(fid4,&apos;%d\t&apos;,catalizzatore(i,2)-1); count = fprintf(fid4,&apos;%d\t&apos;,catalizzatore(i,3)-1); count = fprintf(fid4,&apos;%d\t&apos;,0); %quante volte if catalizzatore(i,4)==0 tmpKdiss = Kdiss / revRctRatio; count = fprintf(fid4,&apos;%g\t&apos;,Kass); %kass count = fprintf(fid4,&apos;%g\t&apos;,tmpKdiss); %kdiss count = fprintf(fid4,&apos;%g\n&apos;,Kcpx); %k complex else tmpKass = Kass / revRctRatio; tmpKcpx = Kcpx / revRctRatio; count = fprintf(fid4,&apos;%g\t&apos;,tmpKass); %kass count = fprintf(fid4,&apos;%g\t&apos;,Kdiss); %kdiss count = fprintf(fid4,&apos;%g\n&apos;,tmpKcpx); %k complex end end [righe_xx colonne_xx]=size(funzioni_booleane_in_dec); for i=1:length(reazione(:,1)) indexx = ceil(rand*righe_xx); funzione_giusta = funzioni_booleane_in_dec(indexx); count = fprintf(fid3,&apos;%d\t&apos;,reazione(i,1)-1); count = fprintf(fid3,&apos;%d\t&apos;,reazione(i,2)); count = fprintf(fid3,&apos;%d\t&apos;,reazione(i,3)-1); count = fprintf(fid3,&apos;%d\t&apos;,reazione(i,4)-1); count = fprintf(fid3,&apos;%d\t&apos;,reazione(i,5)-1); count = fprintf(fid3,&apos;%d\t&apos;,0); if energy == 2 eso_endo = 1; %perchè se non c&apos;è l&apos;energia sono tutte eso else if rand &gt; energy if reazione(i, 2)</definition>
+        <argsstring>(i, 2)</argsstring>
+        <name>reazione</name>
+        <initializer>==1
+                                <ref refid="inizializzatore___a_c_s_8m_1aad3b1a68f41f4a6fa247c1cf8e1d450a" kindref="member">eso_endo</ref> =1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="302" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1aad3b1a68f41f4a6fa247c1cf8e1d450a" prot="public" static="no" mutable="no">
+        <type><ref refid="_k_s_search_launcher_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></type>
+        <definition>else eso_endo</definition>
+        <argsstring></argsstring>
+        <name>eso_endo</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="304" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="inizializzatore___a_c_s_8m_1ae51c8aaf978db2e5d5f076fca5b3d6fd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>temporal</definition>
+        <argsstring></argsstring>
+        <name>temporal</name>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1adfcfd2749a68fa87ece8ec3caa194b3d" kindref="member">specie_non_esistenti</ref>{<ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="332" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1ab526c3939d1049806db989cf3095fc9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>end cd</definition>
+        <argsstring>(simFolder.path) cd(simFolder.name) mkdir(nome_cartella)</argsstring>
+        <name>cd</name>
+        <param>
+          <type>simFolder.</type>
+          <declname>path</declname>
+        </param>
+        <initializer>= fopen(&apos;lanciatore.sh&apos;,&apos;w&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="16"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1a778632868660bf2a5fb3a44735cfc066" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cd</definition>
+        <argsstring>(nome_cartella) fid1</argsstring>
+        <name>cd</name>
+        <param>
+          <type>nome_cartella</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="19"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mkdir</definition>
+        <argsstring>(&apos;res&apos;)</argsstring>
+        <name>mkdir</name>
+        <param>
+          <type>&apos;res&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="25"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cd</definition>
+        <argsstring>(thisFolder)</argsstring>
+        <name>cd</name>
+        <param>
+          <type><ref refid="start_8m_1a2d4125646b62462ce279d82913125ccf" kindref="member">thisFolder</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="27"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="general_concentration_over_threshold_8m_1ae941ef58ebac7f05a8095badde51c07b" kindref="member">fid1</ref>,&apos;<ref refid="start_8m_1a4af22ee598eb5fcc4d0ff8439823e600" kindref="member">nGEN</ref>=&apos;</type>
+        <definition>fid2 d t fprintf</definition>
+        <argsstring>()</argsstring>
+        <name>fprintf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1ab790e1eaff8d62837eb7fe789b2b52c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>perchè sono input da</type>
+        <definition>perchè sono input da file</definition>
+        <argsstring>(i prossimi 4) count</argsstring>
+        <name>file</name>
+        <param>
+          <type><ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref> prossimi</type>
+          <declname>4</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1ab5fb59cb99841dd445fbd224275fa226" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id i:</definition>
+        <argsstring>(fid10,&apos;%d\t&apos;, funzioni_booleane_in_dec(i, 1 fprintf)</argsstring>
+        <name>i:</name>
+        <param>
+          <type><ref refid="inizializzatore___a_c_s_8m_1aadad4fd2d661ea2b9f0c3a95e3f7b4ba" kindref="member">fid10</ref></type>
+          <defname>fprintf</defname>
+        </param>
+        <param>
+          <type>&apos;%d\t&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="128"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1a9436783422a447fac5122c24d195e61d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>, <ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref></type>
+        <definition>alphabet,massima_lunghezza_su_cui_calcolare_le_reazioni crea_firing_disk</definition>
+        <argsstring>()</argsstring>
+        <name>crea_firing_disk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1a46820e2abe661887eb3c03ebcdd5aa14" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>, <ref refid="crea__concentrazioni__iniziali_8m_1acb72987b5000cf59c6f81c482e2ac8ac" kindref="member">firing_disk</ref>, <ref refid="lancia__inizializzatore__acs_8m_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref>, <ref refid="start_8m_1a7c974cc56015b6503e0619d32ebd4180" kindref="member">lunghezza_max_fd</ref>, <ref refid="lancia__inizializzatore__acs_8m_1acd685f63a27f53fc049aff633634ddd6" kindref="member">ratio_firing_disk</ref>, <ref refid="start_8m_1ac60b74a4c1b8bc23e64008ba1e0c41a8" kindref="member">scelta_concentrazioni</ref>, <ref refid="start_8m_1a59597688ed79473c0234f45eb9167574" kindref="member">overallConcentration</ref>, <ref refid="start_8m_1a7cd0915d7542523abc226a8eecf67ecf" kindref="member">gamma_powerlaw_concentrazioni</ref></type>
+        <definition>alphabet,firing_disk,initialMaxLength,lunghezza_max_fd,ratio_firing_disk, scelta_concentrazioni, overallConcentration, gamma_powerlaw_concentrazioni crea_concentrazioni_iniziali</definition>
+        <argsstring>()</argsstring>
+        <name>crea_concentrazioni_iniziali</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="147"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1aedefd8a9b5b6248834cd58472da4be7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="crea__concentrazioni__iniziali_8m_1a89801fa89eee3ba40f6610f290d6f6c3" kindref="member">concentrazioni_iniziali</ref></type>
+        <definition>concentrazioni_iniziali crea_influx</definition>
+        <argsstring>()</argsstring>
+        <name>crea_influx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="154"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1abf70355c2e58f64c6b18bda1b9bccfd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id k</definition>
+        <argsstring>()</argsstring>
+        <name>k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="165"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1a206c02e53d19e1a7f6c297114dd5becb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>specie_def_2</definition>
+        <argsstring>(k,:)</argsstring>
+        <name>specie_def_2</name>
+        <param>
+          <type><ref refid="inizializzatore___a_c_s_8m_1abf70355c2e58f64c6b18bda1b9bccfd7" kindref="member">k</ref></type>
+        </param>
+        <param>
+          <type>:</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="183"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1a369160212da6ddc667d7c8e245ed8b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>controllo_ACS_nel_ciclo, <ref refid="crea__concentrazioni__iniziali_8m_1acb72987b5000cf59c6f81c482e2ac8ac" kindref="member">firing_disk</ref>, <ref refid="start_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>, <ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>, <ref refid="start_8m_1ab6966d9ee620bc7376dc41a38352b948" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>, <ref refid="start_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>, <ref refid="start_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>, <ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>, <ref refid="crea__influx__semplice_8m_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref></type>
+        <definition>controllo_ACS_nel_ciclo, firing_disk, reactionProbability, decisione_catalizzatori, fino_a_che_lunghezza_i_polimeri_non_catalizzano, alphabet, cleavageProbability, specie_def, influx crea_e_controlla_i_catalizzatori</definition>
+        <argsstring>()</argsstring>
+        <name>crea_e_controlla_i_catalizzatori</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="192"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1a262053c6a2b2b257b33309d12f8f7ba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id kk</definition>
+        <argsstring>()</argsstring>
+        <name>kk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="199"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1ad4d1a2311b23c0f860b99297ddc57214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Punto di tagli del</type>
+        <definition>Punto di tagli del complesso</definition>
+        <argsstring>(1--L-1) if concentrazioni_iniziali(i) &gt; 0||sum(i</argsstring>
+        <name>complesso</name>
+        <param>
+          <type>1--L-</type>
+          <declname>1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="214"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1a65cf6e12ba9a8c10222f3f1f71f7c95f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="_k_s_search_launcher_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref> <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>end else if reazione</definition>
+        <argsstring>(i, 2)</argsstring>
+        <name>reazione</name>
+        <param>
+          <type><ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
+        </param>
+        <param>
+          <type>2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="308"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1adfcfd2749a68fa87ece8ec3caa194b3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id specie_non_esistenti</definition>
+        <argsstring>()</argsstring>
+        <name>specie_non_esistenti</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="326" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" bodystart="322" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="inizializzatore___a_c_s_8m_1a43a55a4e9faae78b56ddd9e7ca41ba42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Coefficiente di</type>
+        <definition>Coefficiente di degradazione</definition>
+        <argsstring>(per complessi) count</argsstring>
+        <name>degradazione</name>
+        <param>
+          <type>per</type>
+          <declname>complessi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" line="340"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="inizializzatore___a_c_s_8m_1a4b4c670b101bf7a838f775e008fa6255" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[firing_disk<sp/>concentrazioni_iniziali<sp/>specie_def<sp/>influx<sp/>catalizzatore<sp/>reazione<sp/>specie_non_esistenti<sp/>matrice_adiacenza_sub_prod<sp/>matrice_adiacenza_cat_prod]<sp/>=<sp/><ref refid="lancia__inizializzatore__acs_8m_1ada2b06fc2d132c7a047984505d3bad7c" kindref="member">inizializzatore_ACS</ref>(<ref refid="start_8m_1a4af22ee598eb5fcc4d0ff8439823e600" kindref="member">nGEN</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a68c8b36ce2387749248f566faa108e45" kindref="member">nSIM</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a59597688ed79473c0234f45eb9167574" kindref="member">overallConcentration</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ad4d86c1b55f9f76727181b05251ab7b1" kindref="member">complexFormationSymmetry</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9341167cb56ed18499df723220990b9c" kindref="member">diffusion_contribute</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1acbefa7c9bfd826fec9b32fa3bd29c288" kindref="member">solubility_threshold</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ad795c71664f3161dc8f7a769341daadf" kindref="member">influx_rate</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a650532b3a3c04865cc35cff6d567c5c0" kindref="member">reverseReactions</ref>,<ref refid="lancia__inizializzatore__acs_8m_1ac8f2b2a8d859ca2b7cf056575c7b0538" kindref="member">K_nrg</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1aef2ea28de56b86a577b3c6fa0220926c" kindref="member">moleculeDecay_KineticConstant</ref>,<sp/><ref refid="start_8m_1a83c1660d71068ae836121af0890bb3dd" kindref="member">ratio_firing_disk</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a7c974cc56015b6503e0619d32ebd4180" kindref="member">lunghezza_max_fd</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ac60b74a4c1b8bc23e64008ba1e0c41a8" kindref="member">scelta_concentrazioni</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a7cd0915d7542523abc226a8eecf67ecf" kindref="member">gamma_powerlaw_concentrazioni</ref>,<ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref>,<sp/>ECConcentration,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>,<sp/><ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>,<sp/>controllo_ACS_nel_ciclo,<sp/><ref refid="start_8m_1abd02c282e86e2173abc6daed03f73584" kindref="member">K_nrg_decay</ref>,<sp/>nome_cartella,<sp/><ref refid="start_8m_1a116958824076bbd8ba3a094b73919de4" kindref="member">funzioni_booleane_in_dec</ref>,<ref refid="start_8m_1a1fa680d8b3a4f885d99f56fef41d2c37" kindref="member">ratioSpeciesEnergizable</ref>,<ref refid="lancia__inizializzatore__acs_8m_1a74947b8f8ce132902a228628db296032" kindref="member">Kass</ref>,<ref refid="start_8m_1a51a314f9df0eaa4488a1b264d1de0173" kindref="member">Kdiss</ref>,<ref refid="start_8m_1aaea32371e0f1645dcea44ce4d4a3d147" kindref="member">Kcpx</ref>,<ref refid="start_8m_1a26dbdfeb290332837753db666ee56981" kindref="member">K_cpx</ref>,<sp/><ref refid="start_8m_1a422f03a95f0b273407ed13891d8d9f4d" kindref="member">randomSeed</ref>,<sp/><ref refid="start_8m_1a08ef28bc85447e904ca9ea64de89b676" kindref="member">debugLevel</ref>,<sp/><ref refid="start_8m_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref>,<ref refid="start_8m_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref>,<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>,<ref refid="start_8m_1a5b50e4bf0f01cb1e2d8bdf9494493579" kindref="member">lMaxInflux</ref>,<ref refid="start_8m_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref>,nHours,nAttempts,<ref refid="start_8m_1aa7d97d27bd1a172a2f0ad49ef13ef8ac" kindref="member">revRctRatio</ref>)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">%</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[firing_disk<sp/>concentrazioni_iniziali<sp/>specie_def<sp/>influx<sp/>catalizzatore<sp/>reazione<sp/>specie_non_esistenti<sp/>matrice_adiacenza_sub_prod<sp/>matrice_adiacenza_cat_prod]<sp/>=<sp/><ref refid="lancia__inizializzatore__acs_8m_1ada2b06fc2d132c7a047984505d3bad7c" kindref="member">inizializzatore_ACS</ref>(<ref refid="start_8m_1a4af22ee598eb5fcc4d0ff8439823e600" kindref="member">nGEN</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a68c8b36ce2387749248f566faa108e45" kindref="member">nSIM</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a59597688ed79473c0234f45eb9167574" kindref="member">overallConcentration</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ad4d86c1b55f9f76727181b05251ab7b1" kindref="member">complexFormationSymmetry</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9341167cb56ed18499df723220990b9c" kindref="member">diffusion_contribute</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1acbefa7c9bfd826fec9b32fa3bd29c288" kindref="member">solubility_threshold</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ad795c71664f3161dc8f7a769341daadf" kindref="member">influx_rate</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a650532b3a3c04865cc35cff6d567c5c0" kindref="member">reverseReactions</ref>,<ref refid="lancia__inizializzatore__acs_8m_1ac8f2b2a8d859ca2b7cf056575c7b0538" kindref="member">K_nrg</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1aef2ea28de56b86a577b3c6fa0220926c" kindref="member">moleculeDecay_KineticConstant</ref>,<sp/><ref refid="start_8m_1a83c1660d71068ae836121af0890bb3dd" kindref="member">ratio_firing_disk</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a7c974cc56015b6503e0619d32ebd4180" kindref="member">lunghezza_max_fd</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ac60b74a4c1b8bc23e64008ba1e0c41a8" kindref="member">scelta_concentrazioni</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a7cd0915d7542523abc226a8eecf67ecf" kindref="member">gamma_powerlaw_concentrazioni</ref>,<ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref>,<sp/>ECConcentration,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>,<sp/><ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>,<sp/>controllo_ACS_nel_ciclo,<sp/><ref refid="start_8m_1abd02c282e86e2173abc6daed03f73584" kindref="member">K_nrg_decay</ref>,<sp/>nome_cartella,<sp/><ref refid="start_8m_1a116958824076bbd8ba3a094b73919de4" kindref="member">funzioni_booleane_in_dec</ref>,<ref refid="start_8m_1a1fa680d8b3a4f885d99f56fef41d2c37" kindref="member">ratioSpeciesEnergizable</ref>,<ref refid="lancia__inizializzatore__acs_8m_1a74947b8f8ce132902a228628db296032" kindref="member">Kass</ref>,<ref refid="start_8m_1a51a314f9df0eaa4488a1b264d1de0173" kindref="member">Kdiss</ref>,<ref refid="start_8m_1aaea32371e0f1645dcea44ce4d4a3d147" kindref="member">Kcpx</ref>,<ref refid="start_8m_1a26dbdfeb290332837753db666ee56981" kindref="member">K_cpx</ref>,onlyEnvironmentCreation,<sp/><ref refid="start_8m_1a422f03a95f0b273407ed13891d8d9f4d" kindref="member">randomSeed</ref>,<sp/><ref refid="start_8m_1a08ef28bc85447e904ca9ea64de89b676" kindref="member">debugLevel</ref>,<sp/><ref refid="start_8m_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref>,<ref refid="start_8m_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref>)</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>(&apos;state&apos;,<ref refid="general_concentration_over_threshold_8m_1a576bebae86b11914280920c448def53d" kindref="member">sum</ref>(100*clock))</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">%apertura<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="start_8m_1a2d4125646b62462ce279d82913125ccf" kindref="member">thisFolder</ref><sp/>=<sp/>pwd;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>.<ref refid="start_8m_1af28466084b87af2cdc5c7b48f4661f2d" kindref="member">path</ref>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>.<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(nome_cartella);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(nome_cartella)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1ae941ef58ebac7f05a8095badde51c07b" kindref="member">fid1</ref><sp/>=<sp/>fopen(&apos;acsm2s.conf&apos;,&apos;w&apos;);</highlight></codeline>
+<codeline lineno="20" refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" refkind="member"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref><sp/>=<sp/>fopen(&apos;_acsspecies.csv&apos;,&apos;<ref refid="conc_analysis_8m_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref>&apos;);</highlight></codeline>
+<codeline lineno="21" refid="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" refkind="member"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" kindref="member">fid3</ref><sp/>=<sp/>fopen(&apos;_acsreactions.csv&apos;,&apos;a&apos;);</highlight></codeline>
+<codeline lineno="22" refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" refkind="member"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref><sp/>=<sp/>fopen(&apos;_acscatalysis.csv&apos;,&apos;a&apos;);</highlight></codeline>
+<codeline lineno="23" refid="inizializzatore___a_c_s_8m_1af5f7ad66ed343bca8289a4d44dbff04f" refkind="member"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1af5f7ad66ed343bca8289a4d44dbff04f" kindref="member">fid5</ref><sp/>=<sp/>fopen(&apos;_acsinflux.csv&apos;,&apos;a&apos;);</highlight></codeline>
+<codeline lineno="24" refid="inizializzatore___a_c_s_8m_1aadad4fd2d661ea2b9f0c3a95e3f7b4ba" refkind="member"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1aadad4fd2d661ea2b9f0c3a95e3f7b4ba" kindref="member">fid10</ref><sp/>=<sp/>fopen(&apos;_acsnrgbooleanfunctions.csv&apos;,&apos;a&apos;);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(&apos;res&apos;);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(<ref refid="start_8m_1a2d4125646b62462ce279d82913125ccf" kindref="member">thisFolder</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">%inizializzazione<sp/>del<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>di<sp/>configurazione<sp/>&quot;acsm2s.conf&quot;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="general_concentration_over_threshold_8m_1ae941ef58ebac7f05a8095badde51c07b" kindref="member">fid1</ref>,&apos;<ref refid="start_8m_1a4af22ee598eb5fcc4d0ff8439823e600" kindref="member">nGEN</ref>=&apos;);</highlight></codeline>
+<codeline lineno="35" refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" refkind="member"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,nGEN);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1a68c8b36ce2387749248f566faa108e45" kindref="member">nSIM</ref>=&apos;);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,nSIM);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>=&apos;);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,nSeconds);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref>=&apos;);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,nReactions);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1a422f03a95f0b273407ed13891d8d9f4d" kindref="member">randomSeed</ref>=&apos;);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,randomSeed);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1a08ef28bc85447e904ca9ea64de89b676" kindref="member">debugLevel</ref>=&apos;);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,debugLevel);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref>=&apos;);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,timeStructuresSavingInterval);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref>=&apos;);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,fileTimesSaveInterval);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;nHours=&apos;);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,nHours);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;nAttempts=&apos;);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,nAttempts);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref>=&apos;);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,lastFiringDiskSpeciesID);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref>=&apos;);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,<sp/>maxLOut);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1a59597688ed79473c0234f45eb9167574" kindref="member">overallConcentration</ref>=&apos;);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,overallConcentration);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;ECConcentration=&apos;);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,ECConcentration);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>=&apos;);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%s\n&apos;,alphabet);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>=&apos;);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,volume);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>=&apos;);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,energy);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1a1fa680d8b3a4f885d99f56fef41d2c37" kindref="member">ratioSpeciesEnergizable</ref>=&apos;);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,ratioSpeciesEnergizable);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1ad4d86c1b55f9f76727181b05251ab7b1" kindref="member">complexFormationSymmetry</ref>=&apos;);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,complexFormationSymmetry);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;nonCatalyticMaxLength=&apos;);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,<ref refid="crea__catalizzatori_8m_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>=&apos;);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,reactionProbability);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>=&apos;);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,cleavageProbability);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1a650532b3a3c04865cc35cff6d567c5c0" kindref="member">reverseReactions</ref>=&apos;);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,reverseReactions);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1aa7d97d27bd1a172a2f0ad49ef13ef8ac" kindref="member">revRctRatio</ref>=&apos;);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,revRctRatio);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;K_ass=&apos;);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,<ref refid="lancia__inizializzatore__acs_8m_1a74947b8f8ce132902a228628db296032" kindref="member">Kass</ref>);<sp/>%perchè<sp/>sono<sp/>input<sp/>da<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>prossimi<sp/>4)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;K_diss=&apos;);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,<ref refid="start_8m_1a51a314f9df0eaa4488a1b264d1de0173" kindref="member">Kdiss</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1a26dbdfeb290332837753db666ee56981" kindref="member">K_cpx</ref>=&apos;);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,<ref refid="start_8m_1aaea32371e0f1645dcea44ce4d4a3d147" kindref="member">Kcpx</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1ab2422609d179c881c72aced926f83e6f" kindref="member">K_cpxDiss</ref>=&apos;);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,K_cpx);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1ac8f2b2a8d859ca2b7cf056575c7b0538" kindref="member">K_nrg</ref>=&apos;);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,K_nrg);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1abd02c282e86e2173abc6daed03f73584" kindref="member">K_nrg_decay</ref>=&apos;);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,K_nrg_decay);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1aef2ea28de56b86a577b3c6fa0220926c" kindref="member">moleculeDecay_KineticConstant</ref>=&apos;);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,moleculeDecay_KineticConstant);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1a9341167cb56ed18499df723220990b9c" kindref="member">diffusion_contribute</ref>=&apos;);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,diffusion_contribute);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1acbefa7c9bfd826fec9b32fa3bd29c288" kindref="member">solubility_threshold</ref>=&apos;);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,solubility_threshold);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1ad795c71664f3161dc8f7a769341daadf" kindref="member">influx_rate</ref>=&apos;);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n\n&apos;,influx_rate);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1a83c1660d71068ae836121af0890bb3dd" kindref="member">ratio_firing_disk</ref>=&apos;);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,ratio_firing_disk);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1a7c974cc56015b6503e0619d32ebd4180" kindref="member">lunghezza_max_fd</ref>=&apos;);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,lunghezza_max_fd);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1ac60b74a4c1b8bc23e64008ba1e0c41a8" kindref="member">scelta_concentrazioni</ref>=&apos;);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,scelta_concentrazioni);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1a7cd0915d7542523abc226a8eecf67ecf" kindref="member">gamma_powerlaw_concentrazioni</ref>=&apos;);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,gamma_powerlaw_concentrazioni);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>=&apos;);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,decisione_catalizzatori);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="lancia__inizializzatore__acs_8m_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>=&apos;);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,massima_lunghezza_su_cui_calcolare_le_reazioni);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;controllo_ACS_nel_ciclo=&apos;);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,controllo_ACS_nel_ciclo);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;<ref refid="start_8m_1a5b50e4bf0f01cb1e2d8bdf9494493579" kindref="member">lMaxInflux</ref>=&apos;);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid1,&apos;%d\n&apos;,lMaxInflux);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="inizializzatore___a_c_s_8m_1afbed6b4ecdae7969c5b47d7d4e71495f" refkind="member"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1afbed6b4ecdae7969c5b47d7d4e71495f" kindref="member">st</ref><sp/>=<sp/><ref refid="conc_analysis_8m_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid1);<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">%inizializzazione<sp/>del<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>_acs_nrg_booleanfunctions.csv</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">for<sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>1:length(<ref refid="start_8m_1a116958824076bbd8ba3a094b73919de4" kindref="member">funzioni_booleane_in_dec</ref>(:,1))</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1aadad4fd2d661ea2b9f0c3a95e3f7b4ba" kindref="member">fid10</ref>,&apos;%d\t&apos;,funzioni_booleane_in_dec(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,1));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid10,&apos;%d\n&apos;,funzioni_booleane_in_dec(i,2));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1afbed6b4ecdae7969c5b47d7d4e71495f" kindref="member">st</ref><sp/>=<sp/><ref refid="conc_analysis_8m_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid10);<sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">%inizializzazione<sp/>del<sp/>firing<sp/><ref refid="crea__concentrazioni__iniziali_8m_1a74f35d11ff0800cc575f55351e084a1f" kindref="member">disk</ref><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">%so<sp/>che<sp/>il<sp/>numero<sp/>di<sp/>combinazioni<sp/>possibili<sp/>per<sp/><ref refid="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref><sp/>monomenri<sp/>è<sp/><ref refid="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>^1<sp/>+<sp/><ref refid="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref><sp/>^2<sp/>+</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">%...<sp/>+<sp/><ref refid="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>^<ref refid="lancia__inizializzatore__acs_8m_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">[<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>]<sp/>=<sp/><ref refid="inizializzatore___a_c_s_8m_1a9436783422a447fac5122c24d195e61d" kindref="member">crea_firing_disk</ref>(alphabet,massima_lunghezza_su_cui_calcolare_le_reazioni);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">%inizializzazione<sp/>delle<sp/>concentrazioni<sp/>iniziali</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">[<ref refid="crea__concentrazioni__iniziali_8m_1a409d61ee8298ee18e20b19b5bd3f7abc" kindref="member">concentrazioni_iniziali</ref>]<sp/>=<sp/><ref refid="inizializzatore___a_c_s_8m_1a46820e2abe661887eb3c03ebcdd5aa14" kindref="member">crea_concentrazioni_iniziali</ref>(alphabet,<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>,<ref refid="lancia__inizializzatore__acs_8m_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref>,lunghezza_max_fd,ratio_firing_disk,<sp/><sp/>scelta_concentrazioni,<sp/>overallConcentration,<sp/>gamma_powerlaw_concentrazioni);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">%inizializzazione<sp/>dell&apos;<ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">%[<ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>]<sp/>=<sp/><ref refid="inizializzatore___a_c_s_8m_1aedefd8a9b5b6248834cd58472da4be7d" kindref="member">crea_influx</ref>(<ref refid="crea__concentrazioni__iniziali_8m_1a409d61ee8298ee18e20b19b5bd3f7abc" kindref="member">concentrazioni_iniziali</ref>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">[<ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>]<sp/>=<sp/>crea_influx_semplice(lMaxInflux,alphabet);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">%inizializzazione<sp/>del<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>delle<sp/>specie<sp/>&quot;_acsspecies.csv&quot;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">%----------------------</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">%combinazioni<sp/>possibili</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">%----------------------</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><ref refid="conc_analysis_8m_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref><sp/>=<sp/>0;%counter<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>specie</highlight></codeline>
+<codeline lineno="166" refid="inizializzatore___a_c_s_8m_1a6f6ccfcf58b31cb6412107d9d5281426" refkind="member"><highlight class="normal">for<sp/>i<sp/>=<sp/>massima_lunghezza_su_cui_calcolare_le_reazioni:-1:1</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>specie_temp=crea_tutte_le_combinazioni_di_elementi(alphabet,i);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="inizializzatore___a_c_s_8m_1ac86694252f8dfdb19aaeadc4b7c342c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/><ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref><sp/>=<sp/>length(specie_temp(:,1)):-1:1</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k<sp/>=<sp/>k+1;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171" refid="inizializzatore___a_c_s_8m_1a4bfd41b9edb31803d68f4f6362ec4cd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/><ref refid="inizializzatore___a_c_s_8m_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref><sp/>=<sp/>1:length(specie_temp(1,:))</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>(k,<ref refid="inizializzatore___a_c_s_8m_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref>)=specie_temp(<ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>,<ref refid="inizializzatore___a_c_s_8m_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>specie_temp</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="inizializzatore___a_c_s_8m_1a86ba369ab5ba926c9fd83f4375efab4f" refkind="member"><highlight class="normal">k<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">for<sp/>i=length(<ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>(:,1)):-1:1</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>k<sp/>=<sp/>k+1;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a206c02e53d19e1a7f6c297114dd5becb" kindref="member">specie_def_2</ref>(k,:)=specie_def(i,:);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="185" refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" refkind="member"><highlight class="normal">specie_def<sp/>=<ref refid="inizializzatore___a_c_s_8m_1a206c02e53d19e1a7f6c297114dd5becb" kindref="member">specie_def_2</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">%<sp/>creazione<sp/><ref refid="start_8m_1a69962f56e60d0c88abc5d4b6839c2886" kindref="member">reazioni</ref><sp/>e<sp/><ref refid="lancia__inizializzatore__acs_8m_1a089ff88e71c60b850d67fa1c891af4ab" kindref="member">catalizzatori</ref></highlight></codeline>
+<codeline lineno="190"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal">[<ref refid="crea__catalizzatori_8m_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref><sp/><ref refid="crea__catalizzatori_8m_1a84d78e886b9f683403579e3911e7f046" kindref="member">reazione</ref><sp/><ref refid="crea__catalizzatori_8m_1a7d0cebfb5c7f7b090c85e1373242e49b" kindref="member">specie_non_esistenti</ref><sp/><ref refid="crea__e__controlla__i__catalizzatori_8m_1a75ff61c394ad5be40e5084b8b794e2b2" kindref="member">matrice_adiacenza_sub_prod</ref><sp/><ref refid="crea__e__controlla__i__catalizzatori_8m_1ad1daeea59ae47471f5f47c01a2cfde03" kindref="member">matrice_adiacenza_cat_prod</ref>]<sp/>=<sp/><ref refid="inizializzatore___a_c_s_8m_1a369160212da6ddc667d7c8e245ed8b24" kindref="member">crea_e_controlla_i_catalizzatori</ref><sp/>(controllo_ACS_nel_ciclo,<sp/>firing_disk,<sp/>reactionProbability,<sp/>decisione_catalizzatori,<sp/>fino_a_che_lunghezza_i_polimeri_non_catalizzano,<sp/>alphabet,<sp/>cleavageProbability,<sp/>specie_def,<sp/><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal">%-------------------------------------------------</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">%scrittura<sp/>a<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
+<codeline lineno="197"><highlight class="normal">%-------------------------------------------------</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><ref refid="crea__catalizzatori_8m_1afa7f08233358e9b466effa1328168527" kindref="member">kk</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">for<sp/>i=1:length(specie_def(:,1))</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kk<sp/>=<sp/>kk+1;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,&apos;%d\t&apos;,kk);</highlight></codeline>
+<codeline lineno="203" refid="inizializzatore___a_c_s_8m_1ae129addc69eba3abcebf1a644e2f3132" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1ae129addc69eba3abcebf1a644e2f3132" kindref="member">tmpStr</ref><sp/>=<sp/>specie_def(i,:);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<ref refid="inizializzatore___a_c_s_8m_1ae129addc69eba3abcebf1a644e2f3132" kindref="member">tmpStr</ref><sp/>=<sp/><ref refid="inizializzatore___a_c_s_8m_1ae129addc69eba3abcebf1a644e2f3132" kindref="member">tmpStr</ref>(1:<ref refid="general_concentration_over_threshold_8m_1a576bebae86b11914280920c448def53d" kindref="member">sum</ref>(not(isspace(tmpstr))));</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1ae129addc69eba3abcebf1a644e2f3132" kindref="member">tmpStr</ref><sp/>=<sp/>strtrim(<ref refid="inizializzatore___a_c_s_8m_1ae129addc69eba3abcebf1a644e2f3132" kindref="member">tmpStr</ref>);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%s&apos;,tmpStr);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;\t&apos;);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,concentrazioni_iniziali(i));<sp/>%Concentrazioni</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,1);<sp/>%Coefficiente<sp/>di<sp/>diffusione<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,1);<sp/>%Coefficiente<sp/>di<sp/>precipitazione<sp/>o<sp/>solubilità</highlight></codeline>
+<codeline lineno="211" refid="inizializzatore___a_c_s_8m_1a14b0effe88b0b31bfb9d8268de6e5e35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%Coefficiente<sp/>di<sp/><ref refid="inizializzatore___a_c_s_8m_1a43a55a4e9faae78b56ddd9e7ca41ba42" kindref="member">degradazione</ref><sp/>del<sp/><ref refid="inizializzatore___a_c_s_8m_1a14b0effe88b0b31bfb9d8268de6e5e35" kindref="member">complesso</ref>,<sp/>ex<sp/>k<sp/>-complex<sp/>*****<sp/>!!!!!!!*****</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%Punto<sp/>di<sp/>tagli<sp/>del<sp/>complesso<sp/>(1<sp/>--<sp/>L-1)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>concentrazioni_iniziali(i)<sp/>&gt;<sp/>0<sp/>||<sp/><ref refid="general_concentration_over_threshold_8m_1a576bebae86b11914280920c448def53d" kindref="member">sum</ref>(i==<ref refid="crea__catalizzatori_8m_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref>(:,2))&gt;0</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,1);%Se<sp/>esiste.<sp/>esiste<sp/><ref refid="start_8m_1a99032f27eaf45da350b544c68aa6467c" kindref="member">se</ref><sp/>la<sp/>concentraizone<sp/>è<sp/>maggiore<sp/>di<sp/>0<sp/>oppure<sp/><ref refid="start_8m_1a99032f27eaf45da350b544c68aa6467c" kindref="member">se</ref><sp/>è<sp/>catalizzatore<sp/>di<sp/>qualche<sp/><ref refid="crea__catalizzatori_8m_1a84d78e886b9f683403579e3911e7f046" kindref="member">reazione</ref></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,1);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%Età<sp/>in<sp/>secondi</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%Reborn</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%Catalyst<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%substrate<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,K_nrg);<sp/>%k_fosforilazione<sp/>velocità<sp/>con<sp/>cui<sp/>l&apos;atp<sp/></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%<sp/><ref refid="conc_analysis_8m_1a5acf1fa9f8d0cb2ab8b1505ffd4dce5b" kindref="member">concentrazione</ref><sp/>molecole<sp/>cariche</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref><sp/>&lt;<sp/>ratioSpeciesEnergizable</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\n&apos;,1);<sp/>%<sp/>specie<sp/>energizzabile</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="227"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\n&apos;,0);<sp/>%<sp/>specie<sp/>NON<sp/>energizzabile</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>influx_rate<sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>maxLOut<sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>i<sp/>&lt;=<sp/>(2^(maxLOut+1)-2)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\n&apos;,1);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\n&apos;,0);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\n&apos;,0);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\n&apos;,0);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">%inizializzazione<sp/>del<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>dell&apos;influx<sp/>&quot;_influx.csv&quot;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">for<sp/>i<sp/>=<sp/>1:length(influx(:,1))</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1af5f7ad66ed343bca8289a4d44dbff04f" kindref="member">fid5</ref>,&apos;%d<sp/>\t&apos;,<sp/>influx(i,1)-1);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid5,&apos;%d<sp/>\n&apos;,<sp/>influx(i,2));</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1afbed6b4ecdae7969c5b47d7d4e71495f" kindref="member">st</ref><sp/>=<sp/><ref refid="conc_analysis_8m_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid5);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">%inizializzazione<sp/>del<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>delle<sp/><ref refid="start_8m_1a69962f56e60d0c88abc5d4b6839c2886" kindref="member">reazioni</ref><sp/>e<sp/>dei<sp/><ref refid="lancia__inizializzatore__acs_8m_1a089ff88e71c60b850d67fa1c891af4ab" kindref="member">catalizzatori</ref></highlight></codeline>
+<codeline lineno="258"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><sp/>catalizzatore(1,1)<sp/>==<sp/>-9999;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i=1:length(catalizzatore(:,1))</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kindref="member">fid4</ref>,&apos;%d\t&apos;,catalizzatore(i,1)-1);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid4,&apos;%d\t&apos;,catalizzatore(i,2)-1);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid4,&apos;%d\t&apos;,catalizzatore(i,3)-1);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid4,&apos;%d\t&apos;,0);<sp/>%quante<sp/>volte</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>catalizzatore(i,4)==0</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpKdiss<sp/>=<sp/>Kdiss<sp/>/<sp/>revRctRatio;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid4,&apos;%g\t&apos;,Kass);<sp/>%<ref refid="lancia__inizializzatore__acs_8m_1a8d22b96a5ece64359002562ebc1fbfc5" kindref="member">kass</ref></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid4,&apos;%g\t&apos;,tmpKdiss);<sp/>%<ref refid="lancia__acs_8m_1aa3a014475bd24120996191acceaa4f3d" kindref="member">kdiss</ref></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid4,&apos;%g\n&apos;,Kcpx);<sp/>%k<sp/>complex</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpKass<sp/>=<sp/>Kass<sp/>/<sp/>revRctRatio;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpKcpx<sp/>=<sp/>Kcpx<sp/>/<sp/>revRctRatio;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid4,&apos;%g\t&apos;,tmpKass);<sp/>%<ref refid="lancia__inizializzatore__acs_8m_1a8d22b96a5ece64359002562ebc1fbfc5" kindref="member">kass</ref></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid4,&apos;%g\t&apos;,Kdiss);<sp/>%<ref refid="lancia__acs_8m_1aa3a014475bd24120996191acceaa4f3d" kindref="member">kdiss</ref></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid4,&apos;%g\n&apos;,tmpKcpx);<sp/>%k<sp/>complex</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[righe_xx<sp/>colonne_xx]=<ref refid="crea__e__controlla__i__catalizzatori_8m_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(funzioni_booleane_in_dec);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i=1:length(<ref refid="crea__catalizzatori_8m_1a84d78e886b9f683403579e3911e7f046" kindref="member">reazione</ref>(:,1))</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>indexx<sp/>=<sp/>ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*righe_xx);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>funzione_giusta<sp/>=<sp/>funzioni_booleane_in_dec(indexx);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" kindref="member">fid3</ref>,&apos;%d\t&apos;,reazione(i,1)-1);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid3,&apos;%d\t&apos;,reazione(i,2));</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid3,&apos;%d\t&apos;,reazione(i,3)-1);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid3,&apos;%d\t&apos;,reazione(i,4)-1);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid3,&apos;%d\t&apos;,reazione(i,5)-1);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid3,&apos;%d\t&apos;,0);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>energy<sp/>==<sp/>2</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1aad3b1a68f41f4a6fa247c1cf8e1d450a" kindref="member">eso_endo</ref><sp/>=<sp/>1;<sp/>%perchè<sp/><ref refid="start_8m_1a99032f27eaf45da350b544c68aa6467c" kindref="member">se</ref><sp/>non<sp/><ref refid="garbage_search_8m_1a8e54ca14679a1ce9245a3b7d55d95570" kindref="member">c</ref>&apos;è<sp/>l&apos;energia<sp/>sono<sp/>tutte<sp/><ref refid="lancia__inizializzatore__acs_8m_1a5b5a345da13951297f4d3ad31f76a87a" kindref="member">eso</ref></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref><sp/>&gt;<sp/>energy</highlight></codeline>
+<codeline lineno="301" refid="inizializzatore___a_c_s_8m_1a4ac535f433360d1fc7c40f462e2a4ea3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>reazione(i,2)==1</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eso_endo<sp/>=1;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="304" refid="inizializzatore___a_c_s_8m_1aad3b1a68f41f4a6fa247c1cf8e1d450a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eso_endo<sp/>=0;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>reazione(i,2)==1</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eso_endo<sp/>=0;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eso_endo<sp/>=1;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid3,&apos;%d\n&apos;,funzione_giusta);<sp/>%inserisco<sp/>il<sp/>numero<sp/>decimale<sp/>relativo<sp/>alla<sp/>funzione<sp/>booleana<sp/>della<sp/>reazione</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1afbed6b4ecdae7969c5b47d7d4e71495f" kindref="member">st</ref><sp/>=<sp/><ref refid="conc_analysis_8m_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid3);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1afbed6b4ecdae7969c5b47d7d4e71495f" kindref="member">st</ref><sp/>=<sp/><ref refid="conc_analysis_8m_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid4);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="inizializzatore___a_c_s_8m_1adfcfd2749a68fa87ece8ec3caa194b3d" refkind="member"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">%<sp/>aggiunta<sp/>delle<sp/>specie<sp/>nuove<sp/>al<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>delle<sp/>specie</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="crea__catalizzatori_8m_1a7d0cebfb5c7f7b090c85e1373242e49b" kindref="member">specie_non_esistenti</ref>{1,1}==-9999</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>=1:length(<ref refid="crea__catalizzatori_8m_1a7d0cebfb5c7f7b090c85e1373242e49b" kindref="member">specie_non_esistenti</ref>(:,1))</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kk<sp/>=<sp/>kk+1;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,</highlight><highlight class="stringliteral">&apos;%d\t&apos;</highlight><highlight class="normal">,<ref refid="crea__catalizzatori_8m_1afa7f08233358e9b466effa1328168527" kindref="member">kk</ref>);</highlight></codeline>
+<codeline lineno="332" refid="inizializzatore___a_c_s_8m_1ae51c8aaf978db2e5d5f076fca5b3d6fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1ae51c8aaf978db2e5d5f076fca5b3d6fd" kindref="member">temporal</ref><sp/>=<sp/><ref refid="crea__catalizzatori_8m_1a7d0cebfb5c7f7b090c85e1373242e49b" kindref="member">specie_non_esistenti</ref>{<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>};</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,</highlight><highlight class="stringliteral">&apos;%s&apos;</highlight><highlight class="normal">,<ref refid="inizializzatore___a_c_s_8m_1ae51c8aaf978db2e5d5f076fca5b3d6fd" kindref="member">temporal</ref>);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/><ref refid="inizializzatore___a_c_s_8m_1ae51c8aaf978db2e5d5f076fca5b3d6fd" kindref="member">temporal</ref></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,</highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,</highlight><highlight class="stringliteral">&apos;%d\t&apos;</highlight><highlight class="normal">,0);<sp/>%Concentrazioni</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,</highlight><highlight class="stringliteral">&apos;%d\t&apos;</highlight><highlight class="normal">,0);<sp/>%Coefficiente<sp/>di<sp/>diffusione<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,</highlight><highlight class="stringliteral">&apos;%d\t&apos;</highlight><highlight class="normal">,0);<sp/>%Coefficiente<sp/>di<sp/>precipitazione<sp/>o<sp/>solubilità</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,</highlight><highlight class="stringliteral">&apos;%d\t&apos;</highlight><highlight class="normal">,0);<sp/>%Coefficiente<sp/>di<sp/><ref refid="inizializzatore___a_c_s_8m_1a43a55a4e9faae78b56ddd9e7ca41ba42" kindref="member">degradazione</ref><sp/>(per<sp/>complessi)</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,</highlight><highlight class="stringliteral">&apos;%d\t&apos;</highlight><highlight class="normal">,0);<sp/>%Punto<sp/>di<sp/>tagli<sp/>del<sp/><ref refid="inizializzatore___a_c_s_8m_1a14b0effe88b0b31bfb9d8268de6e5e35" kindref="member">complesso</ref><sp/>(1<sp/>--<sp/>L-1)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kindref="member">fid2</ref>,&apos;%d\t&apos;,0);<sp/>%Se<sp/>esiste</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%Età<sp/>in<sp/>secondi</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%Reborn</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%Catalyst<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%substrate<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,<ref refid="lancia__inizializzatore__acs_8m_1ac8f2b2a8d859ca2b7cf056575c7b0538" kindref="member">K_nrg</ref>);<sp/>%k_fosforilazione<sp/>velocità<sp/>con<sp/>cui<sp/>l&apos;atp<sp/></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\t&apos;,0);<sp/>%<sp/><ref refid="conc_analysis_8m_1a5acf1fa9f8d0cb2ab8b1505ffd4dce5b" kindref="member">concentrazione</ref><sp/>molecole<sp/>cariche</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref><sp/>&lt;<sp/><ref refid="start_8m_1a1fa680d8b3a4f885d99f56fef41d2c37" kindref="member">ratioSpeciesEnergizable</ref></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\n&apos;,1);<sp/>%<sp/>specie<sp/>energizzabile</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid2,&apos;%d\n&apos;,0);<sp/>%<sp/>specie<sp/>NON<sp/>energizzabile</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><ref refid="inizializzatore___a_c_s_8m_1afbed6b4ecdae7969c5b47d7d4e71495f" kindref="member">st</ref><sp/>=<sp/><ref refid="conc_analysis_8m_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid2);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="358"><highlight class="normal">clear<sp/>all</highlight></codeline>
+<codeline lineno="359"><highlight class="normal">close<sp/>all</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m"/>
+  </compounddef>
+</doxygen>

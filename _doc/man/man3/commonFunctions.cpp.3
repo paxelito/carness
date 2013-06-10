@@ -1,0 +1,144 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'commonFunctions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBreturnSelectionIdFromAWeightProbVector\fP (\fBacs_double\fP *tmpArray, \fBMTRand\fP &tmpRandomGenerator)"
+.br
+.RI "\fIThis funtion returns a random position in a probability weight array of N elements\&. \fP"
+.ti -1c
+.RI "\fBacs_longInt\fP \fBreturnSelectionIdFromAWeightProbVector\fP (vector< \fBacs_double\fP > &tmpVector, \fBacs_double\fP tmpMaxValue, \fBMTRand\fP &tmpRandomGenerator)"
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBreturnSelectionIdFromAWeightProbVectorAlreadyNormalized\fP (vector< \fBacs_double\fP > &tmpVector, \fBMTRand\fP &tmpRandomGenerator)"
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBreturnUniformSelection_LONG_IdFromVector\fP (vector< \fBacs_longInt\fP > &tmpVector, \fBMTRand\fP &tmpRandomGenerator)"
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBgetIntRandom\fP (\fBacs_longInt\fP tmpFromNum, \fBacs_longInt\fP tmpToNum, \fBMTRand\fP &tmpRandomGenerator)"
+.br
+.ti -1c
+.RI "\fBacs_double\fP \fBgetDoubleRandom\fP (\fBacs_double\fP tmpFromNum, \fBacs_double\fP tmpToNum, \fBMTRand\fP &tmpRandomGenerator)"
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBrandom_poisson\fP (\fBacs_double\fP tmpLambda, \fBMTRand\fP &tmpRandomGenerator)"
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBrandom_binomial\fP (\fBacs_longInt\fP n, \fBacs_double\fP tmpP, \fBMTRand\fP &tmpRandomGenerator)"
+.br
+.ti -1c
+.RI "\fBacs_double\fP \fBround\fP (\fBacs_double\fP tmpX)"
+.br
+.ti -1c
+.RI "string \fBdec2bin\fP (\fBacs_int\fP tmpInt)"
+.br
+.ti -1c
+.RI "bool \fBExitWithError\fP (string strFunctionName, string strError)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "string dec2bin (\fBacs_int\fPtmpInt)"
+Function to convert a decimal number in a binary string composed of 12 bit such Example -> input: 10, binary 1010 --> 000000001010 
+.PP
+Definition at line 241 of file commonFunctions\&.cpp\&.
+.SS "bool ExitWithError (stringstrFunctionName, stringstrError)"
+Function to close the program after having en error 
+.PP
+Definition at line 269 of file commonFunctions\&.cpp\&.
+.SS "\fBacs_double\fP getDoubleRandom (\fBacs_double\fPtmpFromNum, \fBacs_double\fPtmpToNum, \fBMTRand\fP &tmpRandomGenerator)"
+
+.PP
+Definition at line 151 of file commonFunctions\&.cpp\&.
+.SS "\fBacs_longInt\fP getIntRandom (\fBacs_longInt\fPtmpFromNum, \fBacs_longInt\fPtmpToNum, \fBMTRand\fP &tmpRandomGenerator)"
+
+.PP
+Definition at line 131 of file commonFunctions\&.cpp\&.
+.SS "\fBacs_longInt\fP random_binomial (\fBacs_longInt\fPn, \fBacs_double\fPtmpP, \fBMTRand\fP &tmpRandomGenerator)"
+Function to return a number from a binomial distribution 
+.PP
+Definition at line 203 of file commonFunctions\&.cpp\&.
+.SS "\fBacs_longInt\fP random_poisson (\fBacs_double\fPtmpLambda, \fBMTRand\fP &tmpRandomGenerator)"
+Function to return a number from a poisson random distribution 
+.PP
+Definition at line 183 of file commonFunctions\&.cpp\&.
+.SS "int returnSelectionIdFromAWeightProbVector (\fBacs_double\fP *tmpArray, \fBMTRand\fP &tmpRandomGenerator)"
+
+.PP
+This funtion returns a random position in a probability weight array of N elements\&. 
+.PP
+Definition at line 15 of file commonFunctions\&.cpp\&.
+.SS "\fBacs_longInt\fP returnSelectionIdFromAWeightProbVector (vector< \fBacs_double\fP > &tmpVector, \fBacs_double\fPtmpMaxValue, \fBMTRand\fP &tmpRandomGenerator)"
+Return position of a randomly selected element from a vector containing cumulative values for each element 
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvector<acs_double>&\fP tmpVector 
+.br
+\fIacs_double\fP MAX VALUE contained within the QList (being a cumulative list this is the last value) 
+.br
+\fIMTRand&\fP tmpRandomGenerator 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file commonFunctions\&.cpp\&.
+.SS "\fBacs_longInt\fP returnSelectionIdFromAWeightProbVectorAlreadyNormalized (vector< \fBacs_double\fP > &tmpVector, \fBMTRand\fP &tmpRandomGenerator)"
+Return position of a randomly selected element from a normalized vector containing cumulative values for each element 
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvector<acs_double>&\fP tmpQList 
+.br
+\fIMTRand&\fP tmpRandomGenerator 
+.RE
+.PP
+
+.PP
+Definition at line 72 of file commonFunctions\&.cpp\&.
+.SS "\fBacs_longInt\fP returnUniformSelection_LONG_IdFromVector (vector< \fBacs_longInt\fP > &tmpVector, \fBMTRand\fP &tmpRandomGenerator)"
+Return position of a LONG INT randomly selected element from a normalized vector containing cumulative values for each element 
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvector<acs_double>&\fP tmpVector 
+.br
+\fIMTRand&\fP tmpRandomGenerator 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file commonFunctions\&.cpp\&.
+.SS "\fBacs_double\fP round (\fBacs_double\fPtmpX)"
+Function to round double numbers in integers 
+.PP
+Definition at line 229 of file commonFunctions\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

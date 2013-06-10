@@ -1,0 +1,161 @@
+.TH "filisettiLibrary" 3 "Mon Mar 12 2012" "Version 3.2 (20120312.46)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+filisettiLibrary \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBPlotMatrix\fP"
+.br
+.ti -1c
+.RI "def \fBPlotMatrixLOGY\fP"
+.br
+.ti -1c
+.RI "def \fBPlotMatrixSingleSpeciesAmounts\fP"
+.br
+.ti -1c
+.RI "def \fBPlotMatrixML\fP"
+.br
+.ti -1c
+.RI "def \fBPlotMatrixErrorBar\fP"
+.br
+.ti -1c
+.RI "def \fBPlotMatrix3D\fP"
+.br
+.ti -1c
+.RI "def \fBPlotIMSHOWoverThreshold\fP"
+.br
+.ti -1c
+.RI "def \fBPlotIMSHOW\fP"
+.br
+.ti -1c
+.RI "def \fBzeroBeforeStrNum\fP"
+.br
+.ti -1c
+.RI "def \fBwriteOverallStatOnFile\fP"
+.br
+.ti -1c
+.RI "def \fBwriteOverallStatOnFileWhereISay\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBwidth\fP = 8"
+.br
+.ti -1c
+.RI "int \fBheight\fP = 6"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def \fBfilisettiLibrary\&.PlotIMSHOW\fP (tmpFilename, tmpData, tmpThreshold, tmpDirSuffix)"
+.PP
+Definition at line 184 of file filisettiLibrary\&.py\&.
+.SS "def \fBfilisettiLibrary\&.PlotIMSHOWoverThreshold\fP (tmpFilename, tmpData, tmpThreshold, tmpDirSuffix)"
+.PP
+Definition at line 159 of file filisettiLibrary\&.py\&.
+.SS "def \fBfilisettiLibrary\&.PlotMatrix\fP (tmpFilename, tmpX, tmpY, tmpXlabel, tmpYlabel, tmpLegend, tmpDirSuffix = \fC''\fP)".PP
+.nf
+PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont't need legend 
+.fi
+.PP
+ 
+.PP
+Definition at line 23 of file filisettiLibrary\&.py\&.
+.SS "def \fBfilisettiLibrary\&.PlotMatrix3D\fP (tmpFilename, tmpX, tmpY, tmpZ, tmpXlabel, tmpYlabel, tmpZlabel)".PP
+.nf
+PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont't need legend 
+.fi
+.PP
+ 
+.PP
+Definition at line 133 of file filisettiLibrary\&.py\&.
+.SS "def \fBfilisettiLibrary\&.PlotMatrixErrorBar\fP (tmpFilename, tmpX, tmpY, errX, errY, tmpXlabel, tmpYlabel, tmpLegend, tmpFolder = \fC'__10_stastisticFiles'\fP)".PP
+.nf
+PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont't need legend 
+.fi
+.PP
+ 
+.PP
+Definition at line 110 of file filisettiLibrary\&.py\&.
+.SS "def \fBfilisettiLibrary\&.PlotMatrixLOGY\fP (tmpFilename, tmpX, tmpY, tmpXlabel, tmpYlabel, tmpLegend, tmpDirSuffix = \fC''\fP)".PP
+.nf
+PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont't need legend 
+.fi
+.PP
+ 
+.PP
+Definition at line 46 of file filisettiLibrary\&.py\&.
+.SS "def \fBfilisettiLibrary\&.PlotMatrixML\fP (tmpFilename, tmpX, tmpY, tmpXlabel, tmpYlabel, tmpLegend, tmpFolder = \fC'__10_stastisticFiles_'\fP)".PP
+.nf
+PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont't need legend 
+.fi
+.PP
+ 
+.PP
+Definition at line 91 of file filisettiLibrary\&.py\&.
+.SS "def \fBfilisettiLibrary\&.PlotMatrixSingleSpeciesAmounts\fP (tmpFilename, tmpX, tmpY, tmpA, tmpXlabel, tmpYlabel, tmpDirSuffix = \fC''\fP)".PP
+.nf
+PlotMatrix is a function for plotting one or more lines.
+        - tmpFilename is the path + file name of the file to save
+        - tmpX can be a matrix column or a vector
+        - tmpY can be a matrix or a vector
+        - tmpTitle, tmpXlabel and tmpYlabel are a strings
+        - tmpLegend can be a set of strings or can be set to None value if you dont't need legend 
+.fi
+.PP
+ 
+.PP
+Definition at line 69 of file filisettiLibrary\&.py\&.
+.SS "def \fBfilisettiLibrary\&.writeOverallStatOnFile\fP (tmpRgen, tmpGenID, tmpName, tmpStats, tmpFormat, tmpSims)"
+.PP
+Definition at line 222 of file filisettiLibrary\&.py\&.
+.SS "def \fBfilisettiLibrary\&.writeOverallStatOnFileWhereISay\fP (tmpRgen, tmpGenID, tmpName, tmpStats, tmpFormat, tmpSims, tmpFolder)"
+.PP
+Definition at line 234 of file filisettiLibrary\&.py\&.
+.SS "def \fBfilisettiLibrary\&.zeroBeforeStrNum\fP (tmpl, tmpL)"
+.PP
+Definition at line 212 of file filisettiLibrary\&.py\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int \fBfilisettiLibrary::height\fP = 6"
+.PP
+Definition at line 18 of file filisettiLibrary\&.py\&.
+.SS "int \fBfilisettiLibrary::width\fP = 8"
+.PP
+Definition at line 17 of file filisettiLibrary\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

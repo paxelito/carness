@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="reactions_8cpp" kind="file">
+    <compoundname>reactions.cpp</compoundname>
+    <includes refid="reactions_8h" local="yes">reactions.h</includes>
+    <incdepgraph>
+      <node id="303">
+        <label>QtCore/QCoreApplication</label>
+      </node>
+      <node id="317">
+        <label>commonFunctions.h</label>
+        <link refid="common_functions_8h"/>
+        <childnode refid="302" relation="include">
+        </childnode>
+      </node>
+      <node id="307">
+        <label>QList</label>
+      </node>
+      <node id="313">
+        <label>cmath</label>
+      </node>
+      <node id="310">
+        <label>string</label>
+      </node>
+      <node id="301">
+        <label>reactions.h</label>
+        <link refid="reactions_8h"/>
+        <childnode refid="302" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+      </node>
+      <node id="300">
+        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/reactions.cpp</label>
+        <link refid="reactions.cpp"/>
+        <childnode refid="301" relation="include">
+        </childnode>
+      </node>
+      <node id="308">
+        <label>QTime</label>
+      </node>
+      <node id="311">
+        <label>vector</label>
+      </node>
+      <node id="306">
+        <label>QFile</label>
+      </node>
+      <node id="316">
+        <label>time.h</label>
+      </node>
+      <node id="314">
+        <label>cstdlib</label>
+      </node>
+      <node id="309">
+        <label>iostream</label>
+      </node>
+      <node id="312">
+        <label>deque</label>
+      </node>
+      <node id="305">
+        <label>QTextStream</label>
+      </node>
+      <node id="302">
+        <label>acs_headers.h</label>
+        <link refid="acs__headers_8h"/>
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="304" relation="include">
+        </childnode>
+        <childnode refid="305" relation="include">
+        </childnode>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="307" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+        <childnode refid="309" relation="include">
+        </childnode>
+        <childnode refid="310" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+        <childnode refid="312" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="316" relation="include">
+        </childnode>
+      </node>
+      <node id="304">
+        <label>QStringList</label>
+      </node>
+      <node id="315">
+        <label>mtrand.h</label>
+        <link refid="mtrand_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>reactions.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>acsm2s</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by<sp/>Alessandro<sp/>Filisetti<sp/>on<sp/>31/03/09.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>2009<sp/>__MyCompanyName__.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="reactions_8h" kindref="compound">reactions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classreactions_1a496de9cbc128b98213ded20b936752c2" refkind="member"><highlight class="normal"><ref refid="classreactions_1a496de9cbc128b98213ded20b936752c2" kindref="member" tooltip="Constructor.">reactions::reactions</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpType,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_I,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_II,<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_III,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvents,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergyType)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id_reaction<sp/>=<sp/>tmpID;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/>tmpType;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>species_I<sp/>=<sp/>tmpM_I;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>species_II<sp/>=<sp/>tmpM_II;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>species_III<sp/>=<sp/>tmpM_III;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events<sp/>=<sp/>tmpEvents;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energyType<sp/>=<sp/>tmpEnergyType;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/reactions.cpp"/>
+  </compounddef>
+</doxygen>

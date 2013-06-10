@@ -1,0 +1,148 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/overallStats.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/overallStats.m \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfunction\fP \fBoverallStats\fP () close all clear all \fBp\&.tmpAnalysis\fP"
+.br
+.ti -1c
+.RI "Used in KillSpan it represents 
+.br
+the last \fBinflux\fP \fBspecies\fP LATEST 
+.br
+FILES ANALYSIS \fBif\fP \fBp\fP \fBtmpAnalysis\fP (1)"
+.br
+.ti -1c
+.RI "\fBend\fP \fBif\fP \fBp\fP \fBtmpAnalysis\fP (2)"
+.br
+.ti -1c
+.RI "\fBend\fP \fBif\fP \fBp\fP \fBtmpAnalysis\fP (3)"
+.br
+.ti -1c
+.RI "\fBend\fP \fBif\fP \fBp\fP \fBtmpAnalysis\fP (4)"
+.br
+.ti -1c
+.RI "\fBif\fP \fBp\fP \fBtmpAnalysis\fP (6)"
+.br
+.ti -1c
+.RI "\fBgeneralConcentrationOverThreshold\fP (\fBp\fP) \fBend\fP%Need \fBp\&.tmpAnalysis\fP(6) in order \fBto\fP be performed \fBif\fP \fBp\&.tmpAnalysis\fP(7)"
+.br
+.ti -1c
+.RI "\fBif\fP \fBexist\fP ('MATLAB2R\&.Rout','\fBfile\fP') delete('MATLAB2R\&.Rout')"
+.br
+.ti -1c
+.RI "\fBeval\fP (['!R CMD BATCH--no-save--no-restore--slave'--args sf=''',\fBscriptAnalDir\fP,''' ls=',\fBnum2str\fP(\fBp\&.lastSpecies\fP),\&.\&.\&.
+        ' sss=''',\fBp\&.simFolder\fP,''' \fBgfs\fP=''',\fBgfs\fP,''' sd=''',\fBp\&.tmpPath\fP,''''MATLAB2R\&.R'])"
+.br
+.ti -1c
+.RI "\fBcd\fP (crtDir)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBp\fP \fBtmpPath\fP = '/Users/alessandrofilisetti/Documents/results/VILLANI/'"
+.br
+.ti -1c
+.RI "\fBp\fP \fBfigureVisible\fP = 0"
+.br
+.ti -1c
+.RI "\fBp\fP \fBsimFolder\fP = 'ACS2'"
+.br
+.ti -1c
+.RI "\fBp\fP \fBlastSpecies\fP = 2"
+.br
+.ti -1c
+.RI "Used in KillSpan \fBanalysis\fP"
+.br
+.ti -1c
+.RI "\fBp\fP \fBthreshold\fP = 0"
+.br
+.ti -1c
+.RI "\fBp\fP \fBtmpRctFileToLoad\fP = ''"
+.br
+.ti -1c
+.RI "\fBp\fP \fBtmpRctSUBFileToLoad\fP = ''"
+.br
+.ti -1c
+.RI "\fBend\fP \fBscriptAnalDir\fP = \fBcd\fP()"
+.br
+.ti -1c
+.RI "\fBgfs\fP = strcat('\fB_\fP',\fBnum2str\fP(\fBp\&.decayTime\fP))"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "cd (crtDir)"
+
+.SS "eval ()"
+
+.SS "\fBif\fP exist ('MATLAB2R\&.Rout', '\fBfile\fP')"
+
+.SS "generalConcentrationOverThreshold (\fBp\fP)"
+
+.SS "\fBfunction\fP overallStats ()"
+
+.SS "Used in KillSpan it represents the last \fBinflux\fP \fBspecies\fP LATEST FILES ANALYSIS \fBif\fP \fBp\fP tmpAnalysis (1)"
+
+.SS "\fBend\fP \fBif\fP \fBp\fP tmpAnalysis (2)"
+
+.SS "\fBend\fP \fBif\fP \fBp\fP tmpAnalysis (3)"
+
+.SS "\fBend\fP \fBif\fP \fBp\fP tmpAnalysis (4)"
+
+.SS "\fBif\fP \fBp\fP tmpAnalysis (6)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "Used in KillSpan analysis"
+
+.PP
+Definition at line 10 of file overallStats\&.m\&.
+.SS "\fBp\fP figureVisible = 0"
+
+.PP
+Definition at line 8 of file overallStats\&.m\&.
+.SS "gfs = strcat('\fB_\fP',\fBnum2str\fP(\fBp\&.decayTime\fP))"
+
+.PP
+Definition at line 50 of file overallStats\&.m\&.
+.SS "\fBp\fP lastSpecies = 2"
+
+.PP
+Definition at line 10 of file overallStats\&.m\&.
+.SS "\fBend\fP scriptAnalDir = \fBcd\fP()"
+
+.PP
+Definition at line 49 of file overallStats\&.m\&.
+.SS "\fBp\fP simFolder = 'ACS2'"
+
+.PP
+Definition at line 9 of file overallStats\&.m\&.
+.SS "\fBp\fP threshold = 0"
+
+.PP
+Definition at line 36 of file overallStats\&.m\&.
+.SS "\fBconcAnalysis\fP(params) clear all close all tmpPath = '/Users/alessandrofilisetti/Documents/results/VILLANI/'"
+
+.PP
+Definition at line 7 of file overallStats\&.m\&.
+.SS "\fBp\fP tmpRctFileToLoad = ''"
+
+.PP
+Definition at line 37 of file overallStats\&.m\&.
+.SS "\fBp\fP tmpRctSUBFileToLoad = ''"
+
+.PP
+Definition at line 38 of file overallStats\&.m\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

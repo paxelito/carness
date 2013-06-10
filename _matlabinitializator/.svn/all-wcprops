@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/carness/!svn/ver/112/carness_simulator/_matlabinitializator
+END
+lancia_inizializzatore_acs.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/carness/!svn/ver/7/carness_simulator/_matlabinitializator/lancia_inizializzatore_acs.m
+END
+.directory
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/carness/!svn/ver/7/carness_simulator/_matlabinitializator/.directory
+END
+crea_concentrazioni_iniziali.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/carness/!svn/ver/7/carness_simulator/_matlabinitializator/crea_concentrazioni_iniziali.m
+END
+initial_distribution.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/carness/!svn/ver/7/carness_simulator/_matlabinitializator/initial_distribution.m
+END
+crea_catalizzatori.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/carness/!svn/ver/7/carness_simulator/_matlabinitializator/crea_catalizzatori.m
+END
+inizializzatore_ACS.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/carness/!svn/ver/75/carness_simulator/_matlabinitializator/inizializzatore_ACS.m
+END
+lancia_acs.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/carness/!svn/ver/7/carness_simulator/_matlabinitializator/lancia_acs.m
+END
+start.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/carness/!svn/ver/112/carness_simulator/_matlabinitializator/start.m
+END
+crea_tutte_le_combinazioni_di_elementi.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/carness/!svn/ver/7/carness_simulator/_matlabinitializator/crea_tutte_le_combinazioni_di_elementi.m
+END
+crea_influx.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/carness/!svn/ver/7/carness_simulator/_matlabinitializator/crea_influx.m
+END
+crea_influx_semplice.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/carness/!svn/ver/7/carness_simulator/_matlabinitializator/crea_influx_semplice.m
+END
+crea_firing_disk.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/carness/!svn/ver/7/carness_simulator/_matlabinitializator/crea_firing_disk.m
+END
+crea_e_controlla_i_catalizzatori.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/carness/!svn/ver/90/carness_simulator/_matlabinitializator/crea_e_controlla_i_catalizzatori.m
+END

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="dir_66d9cdb3e61def3d2cde060ed5e9af4b" kind="dir">
+    <compoundname>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness</compoundname>
+    <innerdir refid="dir_267fc3b06fe444aaa33f493314d6f106">/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/"/>
+  </compounddef>
+</doxygen>

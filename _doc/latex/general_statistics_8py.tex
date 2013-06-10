@@ -1,0 +1,273 @@
+\hypertarget{general_statistics_8py}{\section{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-analysis/general\-Statistics.py \-File \-Reference}
+\label{general_statistics_8py}\index{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-analysis/general\-Statistics.\-py@{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-analysis/general\-Statistics.\-py}}
+}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacegeneral_statistics}{general\-Statistics}
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa46cfad394454af6b0edb80b804912c4}{general\-Statistics.\-init\-Time} = time.\-time()
+\item 
+list \hyperlink{namespacegeneral_statistics_a6f9e03e2d193c637dbe6f1f499a2f2ca}{general\-Statistics.\-Str\-Path} = sys.\-argv\mbox{[}1\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a155d64c28850cab0f82a1476f73c376d}{general\-Statistics.\-threshold} = float(sys.\-argv\mbox{[}2\mbox{]})
+\item 
+list \hyperlink{namespacegeneral_statistics_ab5f0084f0bffc62955b6478be2d9c9b2}{general\-Statistics.\-single\-Graph\-Creation} = sys.\-argv\mbox{[}3\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_acfada06fea0c10e3f1eea8b9cdde37e3}{general\-Statistics.\-species\-To\-Observe} = np.\-array(\mbox{[}\mbox{[}1,2,3,4\mbox{]}\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aab694ae45f6a40a105eee68bffad9bc2}{general\-Statistics.\-tmp\-Dirs} = sort(os.\-listdir(\-Str\-Path))
+\item 
+int \hyperlink{namespacegeneral_statistics_a0f3c6fa133cfbef06ffd82dfbef8ace4}{general\-Statistics.\-samples} = 0
+\item 
+int \hyperlink{namespacegeneral_statistics_ad418d91181efd01508f2b136166cd854}{general\-Statistics.\-n\-Folders} = 0
+\item 
+string \hyperlink{namespacegeneral_statistics_abb8208696dc18d1afb27e8c01a0c0a58}{general\-Statistics.\-species\-Files\-In\-This\-Sim} = 'species\-\_\-$\ast$'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa0ecc1dfa89ff9c9f241affd61ada255}{general\-Statistics.\-speciesfileslist} = sorted(glob.\-glob(species\-Files\-In\-This\-Sim))
+\item 
+string \hyperlink{namespacegeneral_statistics_a84a4d4e74b9c4bceedf625a578c8ddec}{general\-Statistics.\-param\-File} = \char`\"{}acsm2s.\-conf\char`\"{}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a6d04dfb31ad3b33487a80fa7ba0ad5f2}{general\-Statistics.\-fid} = open(param\-File, '\hyperlink{_k_s_search_launcher_8m_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa452571aa8a33f2385c9129c6957624f}{general\-Statistics.\-str\-Line} = line.\-split('=')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a973d65dc8f8e3c00253543a466ec0482}{general\-Statistics.\-gens} = int(str\-Line\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab1c429f24e411b4f961a86e7a3f53cf1}{general\-Statistics.\-sims} = int(str\-Line\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a96c2985cd728ad6a5b6b5da7ae6d410e}{general\-Statistics.\-rcts} = int(str\-Line\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a87e08b22001c9743c83dc51acc3ca722}{general\-Statistics.\-nsec} = int(str\-Line\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7a09c1a430c7f4d0a7a65e70d54651a0}{general\-Statistics.\-overall\-Times} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a30aa594476bc94ecfb8620527263a5eb}{general\-Statistics.\-times\-Frames} = range(0,samples)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a4df112574861c37c17c7a7c842bdd4e0}{general\-Statistics.\-overall\-Liv\-Spe} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_afab120e1b028a2a67fde971820733047}{general\-Statistics.\-overall\-Mols} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a0377ba0e73cecde3c76c99eafd076d0a}{general\-Statistics.\-overall\-Cpx} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7752c6b40eefef937d0b9e67726c8f6c}{general\-Statistics.\-overall\-Cpx\-Copies} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_abef0fa683159357a302601cdd6580039}{general\-Statistics.\-overall\-Death} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ad59fdb746c72780e836c7a5fcf5bf619}{general\-Statistics.\-overallnew\-Species} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aca7914003b583bc82be1810eb5316e0e}{general\-Statistics.\-overallmax\-Amount} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa560b60037e1f655bcbcb7a8e2e243f9}{general\-Statistics.\-overallmin\-Amount} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a1ef9cf11c214d55261a4911942c1a1f4}{general\-Statistics.\-overallmean\-Amount} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7900c747a30a58e5997f39d32538c071}{general\-Statistics.\-overallmedian\-Amount} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a611c6d1d277f96f931197de89b125c88}{general\-Statistics.\-overallmax\-L} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_acfe28cce0c9a412ed8f1fa674038556e}{general\-Statistics.\-overallmin\-L} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa01431c8721236c3a11784408d939414}{general\-Statistics.\-overallmean\-L} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a1d0f3d0b25c12aa4a05ab9f543edf8c7}{general\-Statistics.\-overallmedian\-L} = np.\-zeros((samples,n\-Folders))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ada024998af2caa201a94d7a571747842}{general\-Statistics.\-overall\-Loaded\-Species} = np.\-zeros((samples,n\-Folders))
+\item 
+string \hyperlink{namespacegeneral_statistics_aab80dabdb4bf7e3d9600c16118a88f98}{general\-Statistics.\-ndn} = '\-\_\-0\-\_\-all\-Stat\-Results\-\_\-'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a467e98804f050cc4600b0705a664fea1}{general\-Statistics.\-newdir\-All\-Results} = os.\-path.\-join(os.\-curdir, ndn)
+\item 
+int \hyperlink{namespacegeneral_statistics_a5193f44043d24342fab95fb5d704a20f}{general\-Statistics.\-dir\-Count} = 0
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aae4999d25c34936e487c12f7b967e638}{general\-Statistics.\-rgens} = fl.\-zero\-Before\-Str\-Num(1, 1)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a67c2e718220e1b11a31ed770b5a97f94}{general\-Statistics.\-rsims} = fl.\-zero\-Before\-Str\-Num(1, 1)
+\item 
+string \hyperlink{namespacegeneral_statistics_a7ccf9a2d306ba41029a6c988dea19484}{general\-Statistics.\-ndn\-I\-I} = '\-\_\-\-\_\-10\-\_\-stastistic\-Files\-\_\-'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a862af869b2c09a9bcb32f2c159d387e8}{general\-Statistics.\-newdir} = os.\-path.\-join(os.\-curdir, ndn\-I\-I)
+\item 
+string \hyperlink{namespacegeneral_statistics_adfaa9da42539b29b71a53ddb2da53688}{general\-Statistics.\-influx\-Species\-File} = '\-\_\-acsinflux.\-csv'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a709d2fc5d6a459dbc9c4a04023635a20}{general\-Statistics.\-fidflux} = open(influx\-Species\-File, '\hyperlink{_k_s_search_launcher_8m_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+list \hyperlink{namespacegeneral_statistics_a5182af5b7ba2ac034a2be23a49197e8e}{general\-Statistics.\-index\-In} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a999cd7acfeb999ca44418154c38bd0f6}{general\-Statistics.\-timesfileslist} = sorted(glob.\-glob('times\-\_\-$\ast$'))
+\item 
+int \hyperlink{namespacegeneral_statistics_a6f463c2d878793522d2ac91f1aaa8bc2}{general\-Statistics.\-simulation\-I\-D} = 1
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a6cf3e4aec08e23edc7453e9dc795360e}{general\-Statistics.\-rrcts} = fl.\-zero\-Before\-Str\-Num(0, rcts)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a9f0e3da38cc8d932786debb2d495a13b}{general\-Statistics.\-rgen} = fl.\-zero\-Before\-Str\-Num(gen\-I\-D, gens)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a34b463634037dcf1dff3e5c03eb9d169}{general\-Statistics.\-species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T} = np.\-array(\mbox{[}\mbox{[}int(0), int(0), float(0), int(0)\mbox{]}\mbox{]})
+\item 
+int \hyperlink{namespacegeneral_statistics_a6b94bc4781eb4017a82145d7e6260e61}{general\-Statistics.\-species\-File\-I\-D} = 1
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a2dfa50767faeb2e6493518af2b17dec0}{general\-Statistics.\-rsim} = fl.\-zero\-Before\-Str\-Num(simulation\-I\-D, \hyperlink{start_8m_a577b8d3679c2346bceb19c754b5bf403}{sims})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ae6314a6ebdb4acc22a09fa68ca70565d}{general\-Statistics.\-orig\-Dir} = os.\-getcwd()
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a6267f224190a3e4cc4743c3c3710fe0a}{general\-Statistics.\-stat\-Dir} = os.\-path.\-join(os.\-curdir, newdir)
+\item 
+string \hyperlink{namespacegeneral_statistics_a3395f09c196abc5195fcdd3d4e04b564}{general\-Statistics.\-out\-Fname\-Stat} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a54d5cb035107bb188a78056c1f62ef26}{general\-Statistics.\-statfiles\-Flag} = os.\-path.\-isfile(out\-Fname\-Stat)
+\item 
+float \hyperlink{namespacegeneral_statistics_ad203c6e593d0dda94aa3de01f64438f1}{general\-Statistics.\-rct\-I\-Dshow} = 1.\-0
+\item 
+float \hyperlink{namespacegeneral_statistics_a18f6111b43faa560d8b42f29ec031377}{general\-Statistics.\-rct\-I\-Dshow\-No\-Save} = 1.\-0
+\item 
+int \hyperlink{namespacegeneral_statistics_a1d30aa03b17d083ca247d3fc75d12882}{general\-Statistics.\-rct\-I\-D} = 1
+\item 
+int \hyperlink{namespacegeneral_statistics_af0ac4abd35899cf6efdc0422a6d97c35}{general\-Statistics.\-previous\-Time} = 0
+\item 
+string \hyperlink{namespacegeneral_statistics_a9834b16ec1ee9c5bf0835e87b4c41108}{general\-Statistics.\-filename} = '01\-\_\-gillespie\-\_\-'
+\item 
+list \hyperlink{namespacegeneral_statistics_a2d95f5d313dd8da87f5b5be5b4326a03}{general\-Statistics.\-stat} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacegeneral_statistics_a717d9bbd4459fc3d0c6d358cdbdc3287}{general\-Statistics.\-species3\-Damount} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacegeneral_statistics_a49505b471d187739723d5212c07a7a0a}{general\-Statistics.\-species3\-D\-S\-I\-Z\-Eamount} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a900d9e27b938468e0d244dbb49d7111c}{general\-Statistics.\-conc\-Species\-Hystory} = np.\-zeros((samples,\hyperlink{crea__e__controlla__i__catalizzatori_8m_ae113ea7f9e515a12ac4b5595c6faf61e}{size}(species\-To\-Observe)))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ae67f4c2cba55845d070f6b0c783ad6fb}{general\-Statistics.\-conc\-Species\-Relative\-Hystory} = np.\-zeros((samples,\hyperlink{crea__e__controlla__i__catalizzatori_8m_ae113ea7f9e515a12ac4b5595c6faf61e}{size}(species\-To\-Observe)))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a0478def357ccc1565f0e5749605a7f7f}{general\-Statistics.\-tot\-Times} = np.\-zeros((samples,\hyperlink{crea__e__controlla__i__catalizzatori_8m_ae113ea7f9e515a12ac4b5595c6faf61e}{size}(species\-To\-Observe)))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab65e4a0772acf69489feaf7a723dd18a}{general\-Statistics.\-strs} = string.\-split(root, '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab24b721d76ddf791f3097efe4da17080}{general\-Statistics.\-rct\-Number} = int(strs\mbox{[}len(strs)-\/1\mbox{]})
+\item 
+tuple \hyperlink{namespacegeneral_statistics_abc048a358e184e9fb3b68f18c254a5f0}{general\-Statistics.\-sng\-Sp\-File\-Fid} = open(sng\-Sp\-File, '\hyperlink{_k_s_search_launcher_8m_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a1ae65ffff7c2a91a33059633266d7b4c}{general\-Statistics.\-species\-Table} = sng\-Sp\-File\-Fid.\-readlines()
+\item 
+list \hyperlink{namespacegeneral_statistics_a3796f56e86ab8d479fbfeb68a5f67b01}{general\-Statistics.\-s\-I\-D} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{namespacegeneral_statistics_af29ad6a22b3f3465af2fe01a8e83b7e5}{general\-Statistics.\-loaded\-Species} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ac869e7a93953327296c2c2840049f28b}{general\-Statistics.\-Kdeg} = array(\-Kdeg)
+\item 
+list \hyperlink{namespacegeneral_statistics_a2ddfeb15247fcd76c5799776c251d274}{general\-Statistics.\-sizes} = \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{namespacegeneral_statistics_a7f7cffe1bc7c0281cbf5c6c41582d50d}{general\-Statistics.\-seq\-I\-D} = 0
+\item 
+\hyperlink{namespacegeneral_statistics_a4403e02b267a59338d77f9a53f9893c2}{general\-Statistics.\-real\-Theshold} = \hyperlink{stats_8m_aa022cbb28f80299d572def08e7a5ccfd}{threshold}
+\item 
+int \hyperlink{namespacegeneral_statistics_a5d195c38bf488e92ee6250184c903b13}{general\-Statistics.\-tot\-Amount} = 0
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ad6743c4b3941567c5169875b866b00ea}{general\-Statistics.\-eq\-Len} = where(species3\-D\-S\-I\-Z\-Eamount\mbox{[}\-:,0\mbox{]} == len(seq))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7b6c4c854f530c8f42d2e6cf8c76d40f}{general\-Statistics.\-eq\-Len\-L\-A\-S\-T} = where(species3\-D\-S\-I\-Z\-Eamount\-L\-A\-S\-T\mbox{[}\-:,0\mbox{]} == len(seq))
+\item 
+list \hyperlink{namespacegeneral_statistics_ad6f78bf5f1f1301baa9e3ecd82fe10c1}{general\-Statistics.\-sto\-Position} = species\-To\-Observe\mbox{[}0,\-:\mbox{]}
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a72c855982b631ffb69610244f533662e}{general\-Statistics.\-M\-Sizes} = int(\hyperlink{crea__e__controlla__i__catalizzatori_8m_a6d9c24e62aee61f54530163edf684ae2}{max}(sizes))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a0e29f06b06068607b9235006b7b63367}{general\-Statistics.\-m\-Sizes} = int(min(sizes))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ad7622b488c1a4fa5f072b59f0bdd0f51}{general\-Statistics.\-av\-Sizes} = float(mean(sizes))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a1cadfe43529f9c53e77c9b1371463c0b}{general\-Statistics.\-me\-Sizes} = float(median(sizes))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a329d09d383e53e22ade6723b35e103d8}{general\-Statistics.\-overall\-Controlled\-Species} = float(\hyperlink{crea__influx_8m_a59a869fb2b28d56dacd91c09e1dffc8d}{sum}(conc\-Species\-Hystory\mbox{[}species\-File\-I\-D-\/1,\-:\mbox{]}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a1aa6e06b015adb6e6c1462d23ac27fdc}{general\-Statistics.\-overall\-Controlled\-Species\-Over\-Tot\-Conc} = overall\-Controlled\-Species/float(\hyperlink{crea__influx_8m_a59a869fb2b28d56dacd91c09e1dffc8d}{sum}(amount\mbox{[}cut\-Pnt==0\mbox{]}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ae4d5f219fa4de0de3ad4968fd52b4e61}{general\-Statistics.\-overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc} = overall\-Controlled\-Species/float(\hyperlink{crea__influx_8m_a59a869fb2b28d56dacd91c09e1dffc8d}{sum}(amount\mbox{[}\-:\mbox{]}))
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ac380b2dd5c569341f6295d2e8e7337f0}{general\-Statistics.\-stat\-Controlled} = np.\-vstack(\mbox{[}stat\-Controlled,(overall\-Controlled\-Species,overall\-Controlled\-Species\-Over\-Tot\-Conc,overall\-Controlled\-Species\-Over\-Tot\-Plus\-Cpx\-Conc)\mbox{]})
+\item 
+string \hyperlink{namespacegeneral_statistics_a4f197037332b3c3891277d8becc9fb92}{general\-Statistics.\-final\-Stat\-Dir} = '\-\_\-\-\_\-10\-\_\-stastistic\-Files\-\_\-'
+\item 
+\hyperlink{namespacegeneral_statistics_ab0b7c4a5bea76a8e43a176a8438cdb81}{general\-Statistics.\-species3\-D\-No\-Influx} = species3\-Damount
+\item 
+\hyperlink{namespacegeneral_statistics_a16af43c0053996886f2c1f6f0d99fae2}{general\-Statistics.\-species3\-D\-S\-I\-Z\-Eno\-Influx} = species3\-D\-S\-I\-Z\-Eamount
+\item 
+string \hyperlink{namespacegeneral_statistics_af956e5e24f6fb8519c5142bd589caeca}{general\-Statistics.\-out\-Fname3\-D\-Size} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+string \hyperlink{namespacegeneral_statistics_a0f53a86c9390e90115eaa38967ac1eab}{general\-Statistics.\-out\-Fname3\-D\-Size\-Grouped} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+string \hyperlink{namespacegeneral_statistics_a41b8a01562c7b02335cd9693c3e23742}{general\-Statistics.\-out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+string \hyperlink{namespacegeneral_statistics_ade201b7fa63723879eab1912ec6e0f48}{general\-Statistics.\-out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-Ttot} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a5db80fc99086fc28f22bf3c86c99ea41}{general\-Statistics.\-save\-File\-Stat} = open(out\-Fname\-Stat, 'w')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aab92303ab2917a1f41abe3a499f353dc}{general\-Statistics.\-save\-File3\-Dsize} = open(out\-Fname3\-D\-Size, 'w')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_acebe9590443db7047d11646821848b6c}{general\-Statistics.\-save\-File3\-Dsize\-G\-R} = open(out\-Fname3\-D\-Size\-Grouped, 'w')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7dff4431bede759c68f27cb8b8ca3030}{general\-Statistics.\-save\-File3\-Dsize\-G\-R\-L\-A\-S\-T} = open(out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T, 'w')
+\item 
+string \hyperlink{namespacegeneral_statistics_aa2ed0468341b598ff719c6a531cd44c1}{general\-Statistics.\-out\-Fname\-Stat\-To\-Observe} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+string \hyperlink{namespacegeneral_statistics_a26991f5cc2efbf935f14d32cea1991fc}{general\-Statistics.\-out\-Fname\-To\-Observe} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+string \hyperlink{namespacegeneral_statistics_a208835711455a9a3ef08807b9d561de5}{general\-Statistics.\-out\-Fname\-Ratio\-To\-Observe} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a6d34190172987c2f4683421687406e59}{general\-Statistics.\-save\-File\-Stat\-Keep\-In\-Eye} = open(out\-Fname\-Stat\-To\-Observe, 'w')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_acdda9c45b9c93c48ec480c6aeb1a5f57}{general\-Statistics.\-save\-File\-Keep\-In\-Eye} = open(out\-Fname\-To\-Observe, 'w')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ad9c5a196f37842caca2ecf19f8f1c6db}{general\-Statistics.\-save\-File\-Ratio\-Keep\-In\-Eye} = open(out\-Fname\-Ratio\-To\-Observe, 'w')
+\item 
+string \hyperlink{namespacegeneral_statistics_a2b6dc22bc04220d81b7bb62826f0a5ad}{general\-Statistics.\-sng\-Stat\-File} = '\hyperlink{start_8m_a280c5f85d1264d1df5d06bc5ea8b550c}{\-\_\-}'
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa6bcf857bdf3f6f2f12ca093f0e59297}{general\-Statistics.\-sng\-Stat\-File\-Fid} = open(sng\-Stat\-File, '\hyperlink{_k_s_search_launcher_8m_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+int \hyperlink{namespacegeneral_statistics_aabdf31c148d67f609f1ba9a84c9239a6}{general\-Statistics.\-lines\-I\-D} = 0
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a2755d118509228a47dd95be4a18734bb}{general\-Statistics.\-Time} = float(tmp\-Time)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a3d0e4581ae576e909d1449f0fe6ce4ec}{general\-Statistics.\-Liv\-Spe} = int(tmp\-Liv\-Spe)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_afdf7a7822139d1447506bf98127d29d1}{general\-Statistics.\-Mols} = float(tmp\-Mols)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_adf189f2548701e50989d743b810b998d}{general\-Statistics.\-Death} = int(tmp\-Death)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a0418b52e2bcb77390b50c70b94197f48}{general\-Statistics.\-New\-S} = int(tmp\-New\-S)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a8c7eaceb16faabc2452eb6ec26a244ce}{general\-Statistics.\-Max\-A} = float(tmp\-Max\-A)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_af6172dcd5abbc1704a9159c48df2627c}{general\-Statistics.\-Min\-A} = float(tmp\-Min\-A)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a7401b301b0d33e936b080290d6c24800}{general\-Statistics.\-Mean\-A} = float(tmp\-Mean\-A)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab5588d21a923247b4daefa52d179fca5}{general\-Statistics.\-Median\-A} = float(tmp\-Median\-A)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a01c3b02ff04ff7cd0ac095d94ce2158c}{general\-Statistics.\-Cpx} = int(tmp\-Cpx)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab0724b4ad6530b45535743fb7939fd5a}{general\-Statistics.\-Cpx\-Copies} = float(tmp\-Cpx\-Copies)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a06985566d39675323e33de90bd0a73d7}{general\-Statistics.\-Max\-L} = int(tmp\-Max\-L)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a9d940b683251a6dc9ff0313a5f931da1}{general\-Statistics.\-Min\-L} = int(tmp\-Min\-L)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab88669192815a1e37e03baefc3417e75}{general\-Statistics.\-Mean\-L} = float(tmp\-Mean\-L)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a3c165f47efb809460b0169ceb049ed52}{general\-Statistics.\-Median\-L} = float(tmp\-Median\-L)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a6b5cf2698396af31b36f7dbd4743164a}{general\-Statistics.\-loaded\-Conc} = float(tmp\-Loaded\-Conc)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a3ce9d5db09e5f3011e0b7b2375b4e702}{general\-Statistics.\-statfileslast\-F\-I\-D} = open(out\-Fname3\-D\-Size\-Grouped\-L\-A\-S\-T, '\hyperlink{_k_s_search_launcher_8m_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aa828d0bb88c0d1db3d8477b2452d8e25}{general\-Statistics.\-norm\-Times} = np.\-mean(overall\-Times,1)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aed3e07509d7b31285bf3975023e243e1}{general\-Statistics.\-norm\-Times\-Std} = np.\-std(overall\-Times,1)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_a9693505ac595a3847a5d258750c5b115}{general\-Statistics.\-norm\-Y} = np.\-mean(overall\-Liv\-Spe,1)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_ab775e3e84f49c48bb285c0713d55a6cd}{general\-Statistics.\-norm\-Ystd} = np.\-std(overall\-Liv\-Spe,1)
+\item 
+tuple \hyperlink{namespacegeneral_statistics_aeb767013d3dae060634c685e388ffd5c}{general\-Statistics.\-end\-Time} = time.\-time()
+\item 
+int \hyperlink{namespacegeneral_statistics_ac4f1304faada68628850abb2e6101b10}{general\-Statistics.\-minutes} = 60
+\end{DoxyCompactItemize}

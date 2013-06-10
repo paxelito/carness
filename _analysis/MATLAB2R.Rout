@@ -1,0 +1,33 @@
+Carico il pacchetto richiesto: Hmisc
+Carico il pacchetto richiesto: survival
+Carico il pacchetto richiesto: splines
+Hmisc library by Frank E Harrell Jr
+
+Type library(help='Hmisc'), ?Overview, or ?Hmisc.Overview')
+to see overall documentation.
+
+NOTE:Hmisc no longer redefines [.factor to drop unused levels when
+subsetting.  To get the old behavior of Hmisc type dropUnusedLevels().
+
+
+Attaching package: 'Hmisc'
+
+The following object(s) are masked from 'package:survival':
+
+    untangle.specials
+
+The following object(s) are masked from 'package:base':
+
+    format.pval, round.POSIXt, trunc.POSIXt, units
+
+[1] "  |- Folder:  /Users/laleli/Documents/lavoro/panini/0_REVERSE_DEF/1e-0/CONTINUING/simu_12_01  ---------------"
+[1] "reactions_parameters_1_1"
+[1] "           |- Load graph..."
+[1] "          |- Load Reactions data file reactions_parameters_1_1.csv ..."
+[1] "          |- done!"
+[1] "          |- Influx species loading process..."
+[1] "          |- done!"
+Errore in dimnames(finalNetAnalysis)[2] <- list(c("time", "ELRP_LIFETIME",  : 
+  oggetto "finalNetAnalysis" non trovato
+Calls: allNETgss -> gssNET
+Esecuzione interrotta

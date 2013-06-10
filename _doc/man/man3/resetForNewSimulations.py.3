@@ -1,0 +1,71 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/resetForNewSimulations.py" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/resetForNewSimulations.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBresetForNewSimulations\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBresetForNewSimulations\&.zeroBeforeStrNum\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBresetForNewSimulations\&.foldersSIMS\fP 10"
+.br
+.ti -1c
+.RI "int \fBresetForNewSimulations\&.foldersREP\fP 10"
+.br
+.ti -1c
+.RI "tuple \fBresetForNewSimulations\&.zerosSIMS\fP zeroBeforeStrNum(\fBi\fP,foldersSIMS)"
+.br
+.ti -1c
+.RI "tuple \fBresetForNewSimulations\&.zerosREPS\fP zeroBeforeStrNum(\fBj\fP,foldersREP)"
+.br
+.ti -1c
+.RI "string \fBresetForNewSimulations\&.folderName\fP 's_inv_1e-2_'"
+.br
+.ti -1c
+.RI "string \fBresetForNewSimulations\&.folderNew\fP 's_inv_1e-1_'"
+.br
+.ti -1c
+.RI "tuple \fBresetForNewSimulations\&.resdir\fP os\&.path\&.join(os\&.curdir, 'res')"
+.br
+.ti -1c
+.RI "tuple \fBresetForNewSimulations\&.crtSimFolder\fP os\&.path\&.join(StrTo,folderName)"
+.br
+.ti -1c
+.RI "tuple \fBresetForNewSimulations\&.fileDest\fP os\&.path\&.join(StrTo,folderNew,'_acsinflux\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBresetForNewSimulations\&.speciesFiles\fP sorted(glob\&.glob('species_1_*'))"
+.br
+.ti -1c
+.RI "tuple \fBresetForNewSimulations\&.mod\fP open('_acsspecies\&.csv')"
+.br
+.ti -1c
+.RI "int \fBresetForNewSimulations\&.id\fP 0"
+.br
+.ti -1c
+.RI "tuple \fBresetForNewSimulations\&.linesplitted\fP line\&.split('\\t')"
+.br
+.ti -1c
+.RI "tuple \fBresetForNewSimulations\&.file\fP open('_acsspecies\&.csv', 'w')"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

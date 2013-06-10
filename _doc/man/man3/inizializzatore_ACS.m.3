@@ -1,0 +1,386 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/inizializzatore_ACS.m \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcd\fP (\fBsimFolder\&.path\fP) cd(\fBsimFolder\&.name\fP) \fBmkdir\fP(nome_cartella) = fopen('lanciatore\&.sh','w')"
+.br
+.ti -1c
+.RI "\fBcd\fP (nome_cartella) \fBfid1\fP"
+.br
+.ti -1c
+.RI "\fBmkdir\fP ('res')"
+.br
+.ti -1c
+.RI "\fBcd\fP (\fBthisFolder\fP)"
+.br
+.ti -1c
+.RI "\fBfid1\fP,'\fBnGEN\fP=' \fBfprintf\fP ()"
+.br
+.ti -1c
+.RI "perchè sono input da \fBfile\fP (\fBi\fP prossimi 4) \fBcount\fP"
+.br
+.ti -1c
+.RI "id \fBi:\fP (\fBfid10\fP,'%d\\t', \fBfunzioni_booleane_in_dec\fP(\fBi\fP, 1 \fBfprintf\fP)"
+.br
+.ti -1c
+.RI "\fBalphabet\fP, 
+.br
+\fBmassima_lunghezza_su_cui_calcolare_le_reazioni\fP \fBcrea_firing_disk\fP ()"
+.br
+.ti -1c
+.RI "\fBalphabet\fP, \fBfiring_disk\fP, 
+.br
+\fBinitialMaxLength\fP, 
+.br
+\fBlunghezza_max_fd\fP, 
+.br
+\fBratio_firing_disk\fP, 
+.br
+\fBscelta_concentrazioni\fP, 
+.br
+\fBoverallConcentration\fP, 
+.br
+\fBgamma_powerlaw_concentrazioni\fP \fBcrea_concentrazioni_iniziali\fP ()"
+.br
+.ti -1c
+.RI "\fBconcentrazioni_iniziali\fP \fBcrea_influx\fP ()"
+.br
+.ti -1c
+.RI "id \fBk\fP ()"
+.br
+.ti -1c
+.RI "\fBspecie_def_2\fP (\fBk\fP,:)"
+.br
+.ti -1c
+.RI "controllo_ACS_nel_ciclo, 
+.br
+\fBfiring_disk\fP, 
+.br
+\fBreactionProbability\fP, 
+.br
+\fBdecisione_catalizzatori\fP, 
+.br
+\fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP, 
+.br
+\fBalphabet\fP, \fBcleavageProbability\fP, 
+.br
+\fBspecie_def\fP, \fBinflux\fP \fBcrea_e_controlla_i_catalizzatori\fP ()"
+.br
+.ti -1c
+.RI "id \fBkk\fP ()"
+.br
+.ti -1c
+.RI "Punto di tagli del \fBcomplesso\fP (1--L-1) \fBif\fP \fBconcentrazioni_iniziali\fP(\fBi\fP) > 0||\fBsum\fP(\fBi\fP"
+.br
+.ti -1c
+.RI "\fBend\fP \fBelse\fP \fBif\fP \fBreazione\fP (\fBi\fP, 2)"
+.br
+.ti -1c
+.RI "id \fBspecie_non_esistenti\fP ()"
+.br
+.ti -1c
+.RI "Coefficiente di \fBdegradazione\fP (per complessi) \fBcount\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBfunction\fP [\fBfiring_disk\fP \fBconcentrazioni_iniziali\fP \fBspecie_def\fP \fBinflux\fP \fBcatalizzatore\fP \fBreazione\fP \fBspecie_non_esistenti\fP \fBmatrice_adiacenza_sub_prod\fP \fBmatrice_adiacenza_cat_prod\fP]"
+.br
+.ti -1c
+.RI "\fBfid2\fP = fopen('_acsspecies\&.csv','\fBa\fP')"
+.br
+.ti -1c
+.RI "\fBfid3\fP = fopen('_acsreactions\&.csv','\fBa\fP')"
+.br
+.ti -1c
+.RI "\fBfid4\fP = fopen('_acscatalysis\&.csv','\fBa\fP')"
+.br
+.ti -1c
+.RI "\fBfid5\fP = fopen('_acsinflux\&.csv','\fBa\fP')"
+.br
+.ti -1c
+.RI "\fBfid10\fP = fopen('_acsnrgbooleanfunctions\&.csv','\fBa\fP')"
+.br
+.ti -1c
+.RI "\fBcount\fP = \fBfprintf\fP(\fBfid1\fP,'%d\\n',\fBnGEN\fP)"
+.br
+.ti -1c
+.RI "\fBst\fP = \fBfclose\fP(\fBfid1\fP)"
+.br
+.ti -1c
+.RI "counter id specie for \fBi\fP"
+.br
+.ti -1c
+.RI "for \fBj\fP"
+.br
+.ti -1c
+.RI "for \fBz\fP"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP clear specie_temp \fBend\fP \fBk\fP = 0"
+.br
+.ti -1c
+.RI "\fBend\fP \fBspecie_def\fP =\fBspecie_def_2\fP"
+.br
+.ti -1c
+.RI "\fBtmpStr\fP = \fBspecie_def\fP(\fBi\fP,:)"
+.br
+.ti -1c
+.RI "Coefficiente di \fBdegradazione\fP del \fBcomplesso\fP = \fBfprintf\fP(\fBfid2\fP,'%d\\t',0)"
+.br
+.ti -1c
+.RI "\fBconcentrazione\fP molecole 
+.br
+cariche \fBif\fP \fBrand\fP
+.br
+< \fBratioSpeciesEnergizable\fP%\fBcount\fP=\fBfprintf\fP(\fBfid2\fP,'%d\\n', 
+.br
+1);%specie energizzabile%\fBelse\fP%\fBcount\fP=\fBfprintf\fP(\fBfid2\fP,'%d\\n', 
+.br
+0);%specie NON energizzabile%\fBend\fP 
+.br
+\fBif\fP \fBinflux_rate\fP==0 \fBif\fP \fBmaxLOut\fP >
+.br
+ \fBif\fP \fBi\fP<=(2^(\fBmaxLOut\fP+1)-2) \fBcount\fP=\fBfprintf\fP(\fBfid2\fP,'%d\\n', 
+.br
+1);\fBelse\fP \fBcount\fP=\fBfprintf\fP(\fBfid2\fP,'%d\\n', 
+.br
+0);\fBend\fP \fBelse\fP \fBcount\fP=\fBfprintf\fP(\fBfid2\fP,'%d\\n', 
+.br
+0);\fBend\fP \fBelse\fP \fBcount\fP=\fBfprintf\fP(\fBfid2\fP,'%d\\n', 
+.br
+0);endend%--------------------------------------------------------------------------%inizializzazione 
+.br
+del \fBfile\fP dell'\fBinflux\fP'_influx\&.csv'%--------------------------------------------------------------------------for 
+.br
+\fBi\fP=1:length(\fBinflux\fP(:, 1)) \fBcount\fP=\fBfprintf\fP(\fBfid5\fP,'%d\\t', 
+.br
+\fBinflux\fP(\fBi\fP, 1)-1);\fBcount\fP=\fBfprintf\fP(\fBfid5\fP,'%d\\n', 
+.br
+\fBinflux\fP(\fBi\fP, 2));endst=\fBfclose\fP(\fBfid5\fP);%--------------------------------------------------------------------------%inizializzazione 
+.br
+del \fBfile\fP delle \fBreazioni\fP e dei 
+.br
+\fBcatalizzatori\fP%--------------------------------------------------------------------------\fBif\fP 
+.br
+\fBcatalizzatore\fP(1, 
+.br
+1)==-9999;\fBelse\fP for \fBi\fP=1:length(\fBcatalizzatore\fP(:, 
+.br
+1)) \fBcount\fP=\fBfprintf\fP(\fBfid4\fP,'%d\\t', 
+.br
+\fBcatalizzatore\fP(\fBi\fP, 1)-1);\fBcount\fP=\fBfprintf\fP(\fBfid4\fP,'%d\\t', 
+.br
+\fBcatalizzatore\fP(\fBi\fP, 2)-1);\fBcount\fP=\fBfprintf\fP(\fBfid4\fP,'%d\\t', 
+.br
+\fBcatalizzatore\fP(\fBi\fP, 3)-1);\fBcount\fP=\fBfprintf\fP(\fBfid4\fP,'%d\\t', 
+.br
+0);%quante volte \fBif\fP 
+.br
+\fBcatalizzatore\fP(\fBi\fP, 
+.br
+4)==0 tmpKdiss=\fBKdiss\fP/\fBrevRctRatio\fP;\fBcount\fP=\fBfprintf\fP(\fBfid4\fP,'%g\\t', 
+.br
+\fBKass\fP);%\fBkass\fP \fBcount\fP=\fBfprintf\fP(\fBfid4\fP,'%g\\t', 
+.br
+tmpKdiss);%\fBkdiss\fP \fBcount\fP=\fBfprintf\fP(\fBfid4\fP,'%g\\n', 
+.br
+\fBKcpx\fP);%\fBk\fP complex \fBelse\fP tmpKass=\fBKass\fP/\fBrevRctRatio\fP;tmpKcpx=\fBKcpx\fP/\fBrevRctRatio\fP;\fBcount\fP=\fBfprintf\fP(\fBfid4\fP,'%g\\t', 
+.br
+tmpKass);%\fBkass\fP \fBcount\fP=\fBfprintf\fP(\fBfid4\fP,'%g\\t', 
+.br
+\fBKdiss\fP);%\fBkdiss\fP \fBcount\fP=\fBfprintf\fP(\fBfid4\fP,'%g\\n', 
+.br
+tmpKcpx);%\fBk\fP complex \fBend\fP \fBend\fP[righe_xx 
+.br
+colonne_xx]=\fBsize\fP(\fBfunzioni_booleane_in_dec\fP);for 
+.br
+\fBi\fP=1:length(reazione(:, 
+.br
+1)) indexx=ceil(\fBrand\fP *righe_xx);funzione_giusta=\fBfunzioni_booleane_in_dec\fP(indexx);\fBcount\fP=\fBfprintf\fP(\fBfid3\fP,'%d\\t', 
+.br
+reazione(\fBi\fP, 1)-1);\fBcount\fP=\fBfprintf\fP(\fBfid3\fP,'%d\\t', 
+.br
+reazione(\fBi\fP, 2));\fBcount\fP=\fBfprintf\fP(\fBfid3\fP,'%d\\t', 
+.br
+reazione(\fBi\fP, 3)-1);\fBcount\fP=\fBfprintf\fP(\fBfid3\fP,'%d\\t', 
+.br
+reazione(\fBi\fP, 4)-1);\fBcount\fP=\fBfprintf\fP(\fBfid3\fP,'%d\\t', 
+.br
+reazione(\fBi\fP, 5)-1);\fBcount\fP=\fBfprintf\fP(\fBfid3\fP,'%d\\t', 
+.br
+0);\fBif\fP \fBenergy\fP==2 \fBeso_endo\fP=1;%perchè 
+.br
+\fBse\fP non \fBc\fP'è l'energia sono 
+.br
+tutte \fBeso\fP \fBelse\fP \fBif\fP \fBrand\fP >
+.br
+ \fBenergy\fP \fBif\fP \fBreazione\fP (\fBi\fP, 2)"
+.br
+.ti -1c
+.RI "\fBelse\fP \fBeso_endo\fP =0"
+.br
+.ti -1c
+.RI "\fBtemporal\fP = \fBspecie_non_esistenti\fP{\fBi\fP}"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBend\fP cd (simFolder\&.path) = fopen('lanciatore\&.sh','w')"
+
+.SS "cd (nome_cartella)"
+
+.SS "cd (\fBthisFolder\fP)"
+
+.SS "Punto di tagli del complesso (1--L-1)"
+
+.SS "\fBalphabet\fP,\fBfiring_disk\fP,\fBinitialMaxLength\fP,\fBlunghezza_max_fd\fP,\fBratio_firing_disk\fP, \fBscelta_concentrazioni\fP, \fBoverallConcentration\fP, \fBgamma_powerlaw_concentrazioni\fP crea_concentrazioni_iniziali ()\fC [virtual]\fP"
+
+.SS "controllo_ACS_nel_ciclo, \fBfiring_disk\fP, \fBreactionProbability\fP, \fBdecisione_catalizzatori\fP, \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP, \fBalphabet\fP, \fBcleavageProbability\fP, \fBspecie_def\fP, \fBinflux\fP crea_e_controlla_i_catalizzatori ()\fC [virtual]\fP"
+
+.SS "\fBalphabet\fP,\fBmassima_lunghezza_su_cui_calcolare_le_reazioni\fP crea_firing_disk ()\fC [virtual]\fP"
+
+.SS "\fBconcentrazioni_iniziali\fP crea_influx ()\fC [virtual]\fP"
+
+.SS "Coefficiente di degradazione (percomplessi)"
+
+.SS "perchè sono input da file (\fBi\fP prossimi4)"
+
+.SS "\fBfid2\fP d t fprintf ()\fC [virtual]\fP"
+
+.SS "id i: (\fBfid10\fP, '%d\\t')\fC [virtual]\fP"
+
+.SS "id k ()\fC [virtual]\fP"
+
+.SS "id kk ()\fC [virtual]\fP"
+
+.SS "mkdir ('res')"
+
+.SS "\fBend\fP \fBelse\fP \fBif\fP reazione (\fBi\fP, 2)"
+
+.SS "specie_def_2 (\fBk\fP, :)"
+
+.SS "id specie_non_esistenti ()\fC [virtual]\fP"
+
+.PP
+Definition at line 322 of file inizializzatore_ACS\&.m\&.
+.SH "Variable Documentation"
+.PP 
+.SS "Punto di tagli del complesso = \fBfprintf\fP(\fBfid2\fP,'%d\\t',0)"
+
+.PP
+Definition at line 211 of file inizializzatore_ACS\&.m\&.
+.SS "k_fosforilazione velocità con cui l atp count = \fBfprintf\fP(\fBfid1\fP,'%d\\n',\fBnGEN\fP)"
+
+.PP
+Definition at line 35 of file inizializzatore_ACS\&.m\&.
+.SS "\fBelse\fP eso_endo =0"
+
+.PP
+Definition at line 304 of file inizializzatore_ACS\&.m\&.
+.SS "fid10 = fopen('_acsnrgbooleanfunctions\&.csv','\fBa\fP')"
+
+.PP
+Definition at line 24 of file inizializzatore_ACS\&.m\&.
+.SS "fid2 = fopen('_acsspecies\&.csv','\fBa\fP')"
+
+.PP
+Definition at line 20 of file inizializzatore_ACS\&.m\&.
+.SS "fid3 = fopen('_acsreactions\&.csv','\fBa\fP')"
+
+.PP
+Definition at line 21 of file inizializzatore_ACS\&.m\&.
+.SS "fid4 = fopen('_acscatalysis\&.csv','\fBa\fP')"
+
+.PP
+Definition at line 22 of file inizializzatore_ACS\&.m\&.
+.SS "fid5 = fopen('_acsinflux\&.csv','\fBa\fP')"
+
+.PP
+Definition at line 23 of file inizializzatore_ACS\&.m\&.
+.SS "function[\fBfiring_disk\fP \fBconcentrazioni_iniziali\fP \fBspecie_def\fP \fBinflux\fP \fBcatalizzatore\fP \fBreazione\fP \fBspecie_non_esistenti\fP \fBmatrice_adiacenza_sub_prod\fP \fBmatrice_adiacenza_cat_prod\fP]"
+\fBInitial value:\fP
+.PP
+.nf
+= inizializzatore_ACS(nGEN, nSIM, nSeconds, nReactions, initialMaxLength, massima_lunghezza_su_cui_calcolare_le_reazioni, overallConcentration, alphabet, complexFormationSymmetry, fino_a_che_lunghezza_i_polimeri_non_catalizzano, reactionProbability, cleavageProbability, diffusion_contribute, solubility_threshold, influx_rate, reverseReactions,K_nrg, moleculeDecay_KineticConstant, ratio_firing_disk, lunghezza_max_fd, scelta_concentrazioni, gamma_powerlaw_concentrazioni,decisione_catalizzatori, lastFiringDiskSpeciesID, ECConcentration, volume, energy, controllo_ACS_nel_ciclo, K_nrg_decay, nome_cartella, funzioni_booleane_in_dec,ratioSpeciesEnergizable,Kass,Kdiss,Kcpx,K_cpx, randomSeed, debugLevel, timeStructuresSavingInterval,maxLOut,simFolder,lMaxInflux,fileTimesSaveInterval,nHours,nAttempts,revRctRatio)
+%function [firing_disk concentrazioni_iniziali specie_def influx catalizzatore reazione specie_non_esistenti matrice_adiacenza_sub_prod matrice_adiacenza_cat_prod] = inizializzatore_ACS(nGEN, nSIM, nSeconds, nReactions, initialMaxLength, massima_lunghezza_su_cui_calcolare_le_reazioni, overallConcentration, alphabet, complexFormationSymmetry, fino_a_che_lunghezza_i_polimeri_non_catalizzano, reactionProbability, cleavageProbability, diffusion_contribute, solubility_threshold, influx_rate, reverseReactions,K_nrg, moleculeDecay_KineticConstant, ratio_firing_disk, lunghezza_max_fd, scelta_concentrazioni, gamma_powerlaw_concentrazioni,decisione_catalizzatori, lastFiringDiskSpeciesID, ECConcentration, volume, energy, controllo_ACS_nel_ciclo, K_nrg_decay, nome_cartella, funzioni_booleane_in_dec,ratioSpeciesEnergizable,Kass,Kdiss,Kcpx,K_cpx,onlyEnvironmentCreation, randomSeed, debugLevel, timeStructuresSavingInterval,maxLOut)
+
+ rand('state',sum(100*clock))
+ rand
+ 
+%--------------------------------------------------------------------------
+%apertura file
+%--------------------------------------------------------------------------
+thisFolder = pwd
+.fi
+.PP
+Definition at line 1 of file inizializzatore_ACS\&.m\&.
+.SS "for i"
+\fBInitial value:\fP
+.PP
+.nf
+= massima_lunghezza_su_cui_calcolare_le_reazioni:-1:1
+    specie_temp=crea_tutte_le_combinazioni_di_elementi(alphabet,i)
+.fi
+.PP
+Definition at line 166 of file inizializzatore_ACS\&.m\&.
+.SS "for j"
+\fBInitial value:\fP
+.PP
+.nf
+= length(specie_temp(:,1)):-1:1
+        k = k+1
+.fi
+.PP
+Definition at line 169 of file inizializzatore_ACS\&.m\&.
+.SS "\fBend\fP \fBend\fP clear specie_temp \fBend\fP k = 0"
+
+.PP
+Definition at line 180 of file inizializzatore_ACS\&.m\&.
+.SS "\fBconcentrazione\fP molecole cariche \fBif\fP \fBrand\fP< \fBratioSpeciesEnergizable\fP% \fBcount\fP = \fBfprintf\fP(\fBfid2\fP,'%d\\n',1); % specie energizzabile% \fBelse\fP% \fBcount\fP = \fBfprintf\fP(\fBfid2\fP,'%d\\n',0); % specie NON energizzabile% \fBend\fP \fBif\fP \fBinflux_rate\fP == 0 \fBif\fP \fBmaxLOut\fP > \fBif\fP \fBi\fP<= (2^(\fBmaxLOut\fP+1)-2) \fBcount\fP = \fBfprintf\fP(\fBfid2\fP,'%d\\n',1); \fBelse\fP \fBcount\fP = \fBfprintf\fP(\fBfid2\fP,'%d\\n',0); \fBend\fP \fBelse\fP \fBcount\fP = \fBfprintf\fP(\fBfid2\fP,'%d\\n',0); \fBend\fP \fBelse\fP \fBcount\fP = \fBfprintf\fP(\fBfid2\fP,'%d\\n',0); endend%--------------------------------------------------------------------------%inizializzazione del \fBfile\fP dell'\fBinflux\fP '_influx\&.csv'%--------------------------------------------------------------------------for \fBi\fP = 1:length(\fBinflux\fP(:,1)) \fBcount\fP = \fBfprintf\fP(\fBfid5\fP,'%d \\t', \fBinflux\fP(\fBi\fP,1)-1); \fBcount\fP = \fBfprintf\fP(\fBfid5\fP,'%d \\n', \fBinflux\fP(\fBi\fP,2));endst = \fBfclose\fP(\fBfid5\fP);%--------------------------------------------------------------------------%inizializzazione del \fBfile\fP delle \fBreazioni\fP e dei \fBcatalizzatori\fP%--------------------------------------------------------------------------\fBif\fP \fBcatalizzatore\fP(1,1) == -9999;\fBelse\fP for \fBi\fP=1:length(\fBcatalizzatore\fP(:,1)) \fBcount\fP = \fBfprintf\fP(\fBfid4\fP,'%d\\t',\fBcatalizzatore\fP(\fBi\fP,1)-1); \fBcount\fP = \fBfprintf\fP(\fBfid4\fP,'%d\\t',\fBcatalizzatore\fP(\fBi\fP,2)-1); \fBcount\fP = \fBfprintf\fP(\fBfid4\fP,'%d\\t',\fBcatalizzatore\fP(\fBi\fP,3)-1); \fBcount\fP = \fBfprintf\fP(\fBfid4\fP,'%d\\t',0); %quante volte \fBif\fP \fBcatalizzatore\fP(\fBi\fP,4)==0 tmpKdiss = \fBKdiss\fP / \fBrevRctRatio\fP; \fBcount\fP = \fBfprintf\fP(\fBfid4\fP,'%g\\t',\fBKass\fP); %\fBkass\fP \fBcount\fP = \fBfprintf\fP(\fBfid4\fP,'%g\\t',tmpKdiss); %\fBkdiss\fP \fBcount\fP = \fBfprintf\fP(\fBfid4\fP,'%g\\n',\fBKcpx\fP); %\fBk\fP complex \fBelse\fP tmpKass = \fBKass\fP / \fBrevRctRatio\fP; tmpKcpx = \fBKcpx\fP / \fBrevRctRatio\fP; \fBcount\fP = \fBfprintf\fP(\fBfid4\fP,'%g\\t',tmpKass); %\fBkass\fP \fBcount\fP = \fBfprintf\fP(\fBfid4\fP,'%g\\t',\fBKdiss\fP); %\fBkdiss\fP \fBcount\fP = \fBfprintf\fP(\fBfid4\fP,'%g\\n',tmpKcpx); %\fBk\fP complex \fBend\fP \fBend\fP [righe_xx colonne_xx]=\fBsize\fP(\fBfunzioni_booleane_in_dec\fP); for \fBi\fP=1:length(reazione(:,1)) indexx = ceil(\fBrand\fP*righe_xx); funzione_giusta = \fBfunzioni_booleane_in_dec\fP(indexx); \fBcount\fP = \fBfprintf\fP(\fBfid3\fP,'%d\\t',reazione(\fBi\fP,1)-1); \fBcount\fP = \fBfprintf\fP(\fBfid3\fP,'%d\\t',reazione(\fBi\fP,2)); \fBcount\fP = \fBfprintf\fP(\fBfid3\fP,'%d\\t',reazione(\fBi\fP,3)-1); \fBcount\fP = \fBfprintf\fP(\fBfid3\fP,'%d\\t',reazione(\fBi\fP,4)-1); \fBcount\fP = \fBfprintf\fP(\fBfid3\fP,'%d\\t',reazione(\fBi\fP,5)-1); \fBcount\fP = \fBfprintf\fP(\fBfid3\fP,'%d\\t',0); \fBif\fP \fBenergy\fP == 2 \fBeso_endo\fP = 1; %perchè \fBse\fP non \fBc\fP'è l'energia sono tutte \fBeso\fP \fBelse\fP \fBif\fP \fBrand\fP > \fBenergy\fP \fBif\fP reazione(\fBi\fP, 2)"
+\fBInitial value:\fP
+.PP
+.nf
+==1
+                                eso_endo =1
+.fi
+.PP
+Definition at line 301 of file inizializzatore_ACS\&.m\&.
+.SS "\fBend\fP specie_def =\fBspecie_def_2\fP"
+
+.PP
+Definition at line 185 of file inizializzatore_ACS\&.m\&.
+.SS "inserisco il numero decimale relativo alla funzione booleana della \fBreazione\fP \fBend\fP \fBend\fP st = \fBfclose\fP(\fBfid1\fP)"
+
+.PP
+Definition at line 119 of file inizializzatore_ACS\&.m\&.
+.SS "temporal = \fBspecie_non_esistenti\fP{\fBi\fP}"
+
+.PP
+Definition at line 332 of file inizializzatore_ACS\&.m\&.
+.SS "tmpStr = \fBspecie_def\fP(\fBi\fP,:)"
+
+.PP
+Definition at line 203 of file inizializzatore_ACS\&.m\&.
+.SS "for z"
+\fBInitial value:\fP
+.PP
+.nf
+= 1:length(specie_temp(1,:))
+           specie_def(k,z)=specie_temp(j,z)
+.fi
+.PP
+Definition at line 171 of file inizializzatore_ACS\&.m\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

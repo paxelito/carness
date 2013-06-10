@@ -1,0 +1,364 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/KSSearch.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/KSSearch.m \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBbreak\fP \fBend\fP \fBreactionsMatrix\fP (\fBcontinua\fP, 1:6)"
+.br
+.ti -1c
+.RI "\fBend\fP \fBfclose\fP (\fBfid\fP)"
+.br
+.ti -1c
+.RI "\fBcleavagesMatrix\fP (\fBi\fP, 1:6)"
+.br
+.ti -1c
+.RI "\fBcondensationsMatrix\fP (\fBi\fP, 1:6)"
+.br
+.ti -1c
+.RI "\fBbreak\fP \fBend\fP \fBcatalysisMatrix\fP (\fBcontinua\fP, 1:7)"
+.br
+.ti -1c
+.RI "\fBoutliersMatrix\fP (\fBoutRows\fP, 1:6)"
+.br
+.ti -1c
+.RI "\fBif\fP ((\fBoutliersMatrix\fP(\fBi\fP, 2)==0)&&(\fBcheck2\fP==1 &&\fBcheck3\fP==1))||(\fBoutliersMatrix\fP(\fBi\fP"
+.br
+.ti -1c
+.RI "\fBkillersMatrix\fP (\fBkillRows\fP, 1:6)"
+.br
+.ti -1c
+.RI "id \fBKSRows\fP ()"
+.br
+.ti -1c
+.RI "\fBif\fP \fBoutliersMatrix\fP (\fBi\fP, 2)"
+.br
+.ti -1c
+.RI "\fBKSMatrix\fP (\fBKSRows\fP, 1:6)"
+.br
+.ti -1c
+.RI "\fBKSMatrix\fP (\fBi\fP,:)"
+.br
+.ti -1c
+.RI "\fBif\fP ((\fBoutliersMatrix\fP(\fBi\fP, 2)==0)&&(\fBcheck2\fP==0 &&\fBcheck3\fP==0))||(\fBoutliersMatrix\fP(\fBi\fP"
+.br
+.ti -1c
+.RI "\fBSpammersMatrix\fP (\fBSpamRows\fP, 1:6)"
+.br
+.ti -1c
+.RI "\fBif\fP \fBSpamRows\fP \fBSpammersMatrix\fP (:, 7)"
+.br
+.ti -1c
+.RI "\fBSpammersMatrix\fP (\fBi\fP,:)"
+.br
+.ti -1c
+.RI "\fBelse\fP \fBSpammersMatrix\fP (\fBi\fP, 7)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBblocked\fP = 0:5"
+.br
+.ti -1c
+.RI "creating \fBreactions\fP matrix \fBrFiles\fP = \fBdir\fP('\fBreactions\fP*')"
+.br
+.ti -1c
+.RI "\fBreactionsFile\fP = \fBrFiles\fP(length(\fBrFiles\fP)-1)\&.\fBname\fP"
+.br
+.ti -1c
+.RI "\fBfid\fP = fopen(\fBreactionsFile\fP)"
+.br
+.ti -1c
+.RI "\fBcontinua\fP = 1"
+.br
+.ti -1c
+.RI "\fBreactionsMatrix\fP = 0"
+.br
+.ti -1c
+.RI "while \fBcontinua\fP \fBrValues\fP = \fBfscanf\fP(\fBfid\fP,'%d',7)"
+.br
+.ti -1c
+.RI "\fBstop\fP = \fBisempty\fP(\fBrValues\fP)"
+.br
+.ti -1c
+.RI "dividing into condensations 
+.br
+\fBand\fP \fBcleavages\fP \fBcondensations\fP = 0"
+.br
+.ti -1c
+.RI "\fBcleavages\fP = 0"
+.br
+.ti -1c
+.RI "\fBcleavagesMatrix\fP = 0"
+.br
+.ti -1c
+.RI "\fBcondensationsMatrix\fP = 0"
+.br
+.ti -1c
+.RI "for \fBi\fP"
+.br
+.ti -1c
+.RI "creating \fBcatalysis\fP matrix \fBcFiles\fP = \fBdir\fP('\fBcatalysis\fP*')"
+.br
+.ti -1c
+.RI "\fBcatalysisFile\fP = \fBcFiles\fP(length(\fBcFiles\fP))\&.\fBname\fP"
+.br
+.ti -1c
+.RI "\fBcatalysisMatrix\fP = 0"
+.br
+.ti -1c
+.RI "while \fBcontinua\fP \fBcValues\fP = \fBfscanf\fP(\fBfid\fP,'%\fBf\fP',7)"
+.br
+.ti -1c
+.RI "identifying outliers \fBreactionsCounters\fP = sort(\fBreactionsMatrix\fP(:,6))'"
+.br
+.ti -1c
+.RI "\fBfpc\fP = ceil(rrm/20*19)"
+.br
+.ti -1c
+.RI "\fBoutliersCounter\fP = \fBreactionsCounters\fP(fpc:rrm)"
+.br
+.ti -1c
+.RI "\fBoutRows\fP = 0"
+.br
+.ti -1c
+.RI "\fBoutliersMatrix\fP = 0"
+.br
+.ti -1c
+.RI "\fBif\fP \fBpossible\fP"
+.br
+.ti -1c
+.RI "identifying killers \fBkillRows\fP = 0"
+.br
+.ti -1c
+.RI "\fBkillersMatrix\fP = 0"
+.br
+.ti -1c
+.RI "\fBcheck2\fP = ismember(\fBoutliersMatrix\fP(\fBi\fP,4),\fBblocked\fP)"
+.br
+.ti -1c
+.RI "\fBcheck3\fP = ismember(\fBoutliersMatrix\fP(\fBi\fP,5),\fBblocked\fP)"
+.br
+.ti -1c
+.RI "\fBKSMatrix\fP = 0"
+.br
+.ti -1c
+.RI "\fBcheck4\fP = xor(\fBcheck2\fP,\fBcheck3\fP)"
+.br
+.ti -1c
+.RI "\fBcheck6\fP = ismember(\fBKSMatrix\fP(\fBi\fP,5),\fBcleavagesMatrix\fP(:,3))"
+.br
+.ti -1c
+.RI "\fBcheck7\fP = ismember(\fBKSMatrix\fP(\fBi\fP,5),\fBcatalysisMatrix\fP(:,2))"
+.br
+.ti -1c
+.RI "\fBif\fP \fBcheck5\fP"
+.br
+.ti -1c
+.RI "identifying spammers \fBSpamRows\fP = 0"
+.br
+.ti -1c
+.RI "\fBSpammersMatrix\fP = 0"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBbreak\fP \fBend\fP catalysisMatrix (\fBcontinua\fP, 1:7)"
+
+.SS "cleavagesMatrix (\fBi\fP, 1:6)"
+
+.SS "condensationsMatrix (\fBi\fP, 1:6)"
+
+.SS "\fBend\fP fclose (\fBfid\fP)"
+
+.SS "if ((\fBoutliersMatrix\fP(\fBi\fP, 2)==0)&&(\fBcheck2\fP==1 &&\fBcheck3\fP==1))"
+
+.SS "if ((\fBoutliersMatrix\fP(\fBi\fP, 2)==0)&&(\fBcheck2\fP==0 &&\fBcheck3\fP==0))"
+
+.SS "killersMatrix (\fBkillRows\fP, 1:6)"
+
+.SS "KSMatrix (\fBKSRows\fP, 1:6)"
+
+.SS "KSMatrix (\fBi\fP, :)"
+
+.SS "id KSRows ()\fC [virtual]\fP"
+
+.SS "outliersMatrix (\fBoutRows\fP, 1:6)"
+
+.SS "\fBif\fP outliersMatrix (\fBi\fP, 2)"
+
+.SS "\fBbreak\fP \fBend\fP reactionsMatrix (\fBcontinua\fP, 1:6)"
+
+.SS "SpammersMatrix (\fBSpamRows\fP, 1:6)"
+
+.SS "\fBif\fP \fBSpamRows\fP SpammersMatrix (:, 7)"
+
+.SS "SpammersMatrix (\fBi\fP, :)"
+
+.SS "\fBelse\fP SpammersMatrix (\fBi\fP, 7)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "blocked = 0:5"
+
+.PP
+Definition at line 1 of file KSSearch\&.m\&.
+.SS "catalysisFile = \fBcFiles\fP(length(\fBcFiles\fP))\&.\fBname\fP"
+
+.PP
+Definition at line 40 of file KSSearch\&.m\&.
+.SS "catalysisMatrix = 0"
+
+.PP
+Definition at line 43 of file KSSearch\&.m\&.
+.SS "creating \fBcatalysis\fP matrix cFiles = \fBdir\fP('\fBcatalysis\fP*')"
+
+.PP
+Definition at line 39 of file KSSearch\&.m\&.
+.SS "check2 = ismember(\fBoutliersMatrix\fP(\fBi\fP,4),\fBblocked\fP)"
+
+.PP
+Definition at line 82 of file KSSearch\&.m\&.
+.SS "check3 = ismember(\fBoutliersMatrix\fP(\fBi\fP,5),\fBblocked\fP)"
+
+.PP
+Definition at line 83 of file KSSearch\&.m\&.
+.SS "check4 = xor(\fBcheck2\fP,\fBcheck3\fP)"
+
+.PP
+Definition at line 97 of file KSSearch\&.m\&.
+.SS "\fBif\fP check5"
+\fBInitial value:\fP
+.PP
+.nf
+== 1 || check6 == 1 || check7 == 1
+                KSRows = KSRows-1
+.fi
+.PP
+Definition at line 110 of file KSSearch\&.m\&.
+.SS "check6 = ismember(\fBKSMatrix\fP(\fBi\fP,5),\fBcleavagesMatrix\fP(:,3))"
+
+.PP
+Definition at line 108 of file KSSearch\&.m\&.
+.SS "check7 = ismember(\fBKSMatrix\fP(\fBi\fP,5),\fBcatalysisMatrix\fP(:,2))"
+
+.PP
+Definition at line 109 of file KSSearch\&.m\&.
+.SS "cleavages = 0"
+
+.PP
+Definition at line 23 of file KSSearch\&.m\&.
+.SS "cleavagesMatrix = 0"
+
+.PP
+Definition at line 25 of file KSSearch\&.m\&.
+.SS "\fBelse\fP condensations = 0"
+
+.PP
+Definition at line 22 of file KSSearch\&.m\&.
+.SS "condensationsMatrix = 0"
+
+.PP
+Definition at line 26 of file KSSearch\&.m\&.
+.SS "continua = 1"
+
+.PP
+Definition at line 7 of file KSSearch\&.m\&.
+.SS "while \fBcontinua\fP cValues = \fBfscanf\fP(\fBfid\fP,'%\fBf\fP',7)"
+
+.PP
+Definition at line 45 of file KSSearch\&.m\&.
+.SS "fid = fopen(\fBreactionsFile\fP)"
+
+.PP
+Definition at line 6 of file KSSearch\&.m\&.
+.SS "fpc = ceil(rrm/20*19)"
+
+.PP
+Definition at line 58 of file KSSearch\&.m\&.
+.SS "\fBend\fP \fBend\fP \fBend\fP clear i"
+\fBInitial value:\fP
+.PP
+.nf
+= 1:rrm
+    if reactionsMatrix(i,2) == 0
+        cleavages = cleavages+1
+.fi
+.PP
+Definition at line 27 of file KSSearch\&.m\&.
+.SS "killersMatrix = 0"
+
+.PP
+Definition at line 79 of file KSSearch\&.m\&.
+.SS "identifying killers killRows = 0"
+
+.PP
+Definition at line 78 of file KSSearch\&.m\&.
+.SS "KSMatrix = 0"
+
+.PP
+Definition at line 93 of file KSSearch\&.m\&.
+.SS "outliersCounter = \fBreactionsCounters\fP(fpc:rrm)"
+
+.PP
+Definition at line 59 of file KSSearch\&.m\&.
+.SS "outliersMatrix = 0"
+
+.PP
+Definition at line 67 of file KSSearch\&.m\&.
+.SS "outRows = 0"
+
+.PP
+Definition at line 66 of file KSSearch\&.m\&.
+.SS "\fBif\fP possible"
+\fBInitial value:\fP
+.PP
+.nf
+== 1
+        outRows = outRows+1
+.fi
+.PP
+Definition at line 70 of file KSSearch\&.m\&.
+.SS "identifying outliers reactionsCounters = sort(\fBreactionsMatrix\fP(:,6))'"
+
+.PP
+Definition at line 57 of file KSSearch\&.m\&.
+.SS "reactionsFile = \fBrFiles\fP(length(\fBrFiles\fP)-1)\&.\fBname\fP"
+
+.PP
+Definition at line 5 of file KSSearch\&.m\&.
+.SS "reactionsMatrix = 0"
+
+.PP
+Definition at line 8 of file KSSearch\&.m\&.
+.SS "creating \fBreactions\fP matrix rFiles = \fBdir\fP('\fBreactions\fP*')"
+
+.PP
+Definition at line 4 of file KSSearch\&.m\&.
+.SS "while \fBcontinua\fP rValues = \fBfscanf\fP(\fBfid\fP,'%d',7)"
+
+.PP
+Definition at line 10 of file KSSearch\&.m\&.
+.SS "SpammersMatrix = 0"
+
+.PP
+Definition at line 129 of file KSSearch\&.m\&.
+.SS "identifying spammers SpamRows = 0"
+
+.PP
+Definition at line 128 of file KSSearch\&.m\&.
+.SS "\fBif\fP stop = \fBisempty\fP(\fBrValues\fP)"
+
+.PP
+Definition at line 11 of file KSSearch\&.m\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

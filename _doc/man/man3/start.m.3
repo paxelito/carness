@@ -1,0 +1,786 @@
+.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/start.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/start.m \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "Numero di \fBsimulazioni\fP (diversi semi random) \fBnSeconds\fP"
+.br
+.ti -1c
+.RI "Numero massimo di \fBreazioni\fP (secondo parametro di \fBstop\fP oltre al numero di secondi) nHours=0"
+.br
+.ti -1c
+.RI "Numero massimo di ore per la \fBsimulazione\fP (=0 no vincolo) nAttempts=0"
+.br
+.ti -1c
+.RI "Numero di volte in cui sistema 
+.br
+ritenta la stessa \fBrete\fP (=0 no vincolo) \fBinitialMaxLength\fP"
+.br
+.ti -1c
+.RI "Number of different networks 
+.br
+for every network will be 
+.br
+performed nSim different \fBsimulation\fP (differnt random seeds) \fBsimFolder\&.name\fP"
+.br
+.ti -1c
+.RI "\fBcd\fP (\fBsimFolder\&.path\fP) \fBif\fP \fBexist\fP(\fBsimFolder\&.name\fP"
+.br
+.ti -1c
+.RI "converto in decimale for per 
+.br
+default è uniforme \fBfunzioni_booleane_in_dec\fP (\fBi\fP, 2)"
+.br
+.ti -1c
+.RI "\fBif\fP \fBz\fP< 10 parte_a=num2str(0);parte_b=num2str(\fBz\fP);parte4_nome_cartella=strcat(parte_a, 
+.br
+parte_b);\fBelse\fP 
+.br
+parte4_nome_cartella=num2str(\fBz\fP);\fBend\fP 
+.br
+nome_cartella=strcat(parte1_nome_cartella, 
+.br
+\fBparte2_nome_cartella\fP, 
+.br
+\fBparte3_nome_cartella\fP, 
+.br
+parte4_nome_cartella);%scrivo 
+.br
+il lanciatore\&.sh 
+.br
+riga_lanciatore=strcat('nice\&./acsm2s\&./', 
+.br
+nome_cartella,'/\&./', 
+.br
+nome_cartella,'/res/\&./', 
+.br
+nome_cartella,'/ > \fBnum2str\fP (\fBz\fP)"
+.br
+.ti -1c
+.RI "clear riga_lanciatore lancio 
+.br
+il vero e proprio 
+.br
+inizializzatore \fBinizializzatore_ACS\fP (\fBnGEN\fP, \fBnSIM\fP, \fBnSeconds\fP, \fBnReactions\fP, \fBinitialMaxLength\fP, \fBvirtual_fd_max_length\fP, \fBoverallConcentration\fP,\&.\&.\&.\fBalphabet\fP, \fBcomplexFormationSymmetry\fP, \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP, \fBreactionProbability\fP, \fBcleavageProbability\fP,\&.\&.\&.\fBdiffusion_contribute\fP, \fBsolubility_threshold\fP, \fBinflux_rate\fP, \fBreverseReactions\fP, \fBK_nrg\fP, \fBmoleculeDecay_KineticConstant\fP, \fBratio_firing_disk\fP,\&.\&.\&.\fBlunghezza_max_fd\fP, \fBscelta_concentrazioni\fP, \fBgamma_powerlaw_concentrazioni\fP, \fBdecisione_catalizzatori\fP, \fBlastFiringDiskSpeciesID\fP, ECConcentration,\&.\&.\&.\fBvolume\fP, \fBenergy\fP, controllo_ACS_nel_ciclo, \fBK_nrg_decay\fP, nome_cartella, \fBfunzioni_booleane_in_dec\fP, \fBratioSpeciesEnergizable\fP, \fBKass\fP, \fBKdiss\fP, \fBKcpx\fP, \fBK_cpx\fP,\&.\&.\&.\fBrandomSeed\fP, \fBdebugLevel\fP, \fBtimeStructuresSavingInterval\fP, \fBmaxLOut\fP, \fBsimFolder\fP, \fBlMaxInflux\fP(\fBi\fP), \fBfileTimesSaveInterval\fP, nHours, nAttempts, \fBrevRctRatio\fP)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "lancia_serie_di_inizializzatore 
+.br
+m clear all close all 
+.br
+**************************************************************************Inserimento 
+.br
+dei PARAMETRI VARIABILI sui 
+.br
+quali fare lo \fBSCREENING\fP"
+.br
+.ti -1c
+.RI "lancia_serie_di_inizializzatore 
+.br
+m clear all close all 
+.br
+**************************************************************************Inserimento 
+.br
+dei PARAMETRI VARIABILI sui 
+.br
+quali fare lo sottoforma di 
+.br
+matrici o vettori \fBreactionProbability\fP = [0\&.000516529"
+.br
+.ti -1c
+.RI "\fBnome_prob\fP = [0\&.125"
+.br
+.ti -1c
+.RI "\fBlMaxInflux\fP = [4]"
+.br
+.ti -1c
+.RI "\fBparametro_screening\fP = \fBlMaxInflux\fP"
+.br
+.ti -1c
+.RI "\fBnome_folder\fP = [4]"
+.br
+.ti -1c
+.RI "****************************************************************************************************************************************************Inserimento 
+.br
+dei PARAMETRI \fBFISSI\fP"
+.br
+.ti -1c
+.RI "****************************************************************************************************************************************************Inserimento 
+.br
+dei PARAMETRI quelli che 
+.br
+restano cioè costanti in tutti 
+.br
+gli esperimenti della serie \fBnSIM\fP =1"
+.br
+.ti -1c
+.RI "Numero di secondi \fBrandomSeed\fP =0"
+.br
+.ti -1c
+.RI "lasciare \fBa\fP \fBdebugLevel\fP =0"
+.br
+.ti -1c
+.RI "livello di dettaglio messaggi 
+.br
+durante \fBsimulazione\fP"
+.br
+.ti -1c
+.RI "livello di dettaglio messaggi 
+.br
+durante lasciare \fBa\fP"
+.br
+.ti -1c
+.RI "livello di dettaglio messaggi 
+.br
+durante lasciare per debug 
+.br
+software \fBtimeStructuresSavingInterval\fP =\fBnSeconds\fP/100"
+.br
+.ti -1c
+.RI "definisce il tempo in cui 
+.br
+vengono salvati \fBi\fP \fBfile\fP durante 
+.br
+la \fBsimulazione\fP \fBfileTimesSaveInterval\fP =0"
+.br
+.ti -1c
+.RI "Definisce il tempo in cui 
+.br
+vengono salvati \fBi\fP dati sui 
+.br
+\fBfile\fP \fBtimes\fP"
+.br
+.ti -1c
+.RI "Definisce il tempo in cui 
+.br
+vengono salvati \fBi\fP dati sui 
+.br
+\fBfile\fP reaction_parameter e \fBi\fP 
+.br
+vari living \fBnReactions\fP =200000000"
+.br
+.ti -1c
+.RI "Lunghezza massima delle specie 
+.br
+da creare \fBvirtual_fd_max_length\fP = 4"
+.br
+.ti -1c
+.RI "Lunghezza massima fino alla 
+.br
+quale creare le \fBreazioni\fP \fBmaxLOut\fP = 0"
+.br
+.ti -1c
+.RI "\fBse\fP =0 non viene considerato"
+.br
+.ti -1c
+.RI "altrimenti Quando \fBinflux_rate\fP 
+.br
+indica la \fBlunghezza\fP massima 
+.br
+delle molecole che possono 
+.br
+uscire dal \fBcontenitore\fP"
+.br
+.ti -1c
+.RI "altrimenti Quando influx_rate 
+.br
+indica la \fBlunghezza\fP massima 
+.br
+delle molecole che possono 
+.br
+uscire dal quando \fBinflux_rate\fP"
+.br
+.ti -1c
+.RI "\fBalphabet\fP = ['\fBAB\fP']"
+.br
+.ti -1c
+.RI "\fBoverallConcentration\fP =0\&.0333"
+.br
+.ti -1c
+.RI "\fBvolume\fP =1e-18"
+.br
+.ti -1c
+.RI "\fBenergy\fP =0"
+.br
+.ti -1c
+.RI "energia \fBconsiderata\fP"
+.br
+.ti -1c
+.RI "energia non \fBconsiderata\fP \fBcomplexFormationSymmetry\fP =0"
+.br
+.ti -1c
+.RI "\fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP = 2"
+.br
+.ti -1c
+.RI "\fBcleavageProbability\fP =0\&.5"
+.br
+.ti -1c
+.RI "\fBreverseReactions\fP =0"
+.br
+.ti -1c
+.RI "\fBKass\fP = 50"
+.br
+.ti -1c
+.RI "\fBKdiss\fP = 25"
+.br
+.ti -1c
+.RI "\fBKcpx\fP = 50"
+.br
+.ti -1c
+.RI "\fBK_cpx\fP = 1"
+.br
+.ti -1c
+.RI "\fBK_nrg\fP = 0"
+.br
+.ti -1c
+.RI "\fBK_nrg_decay\fP =0"
+.br
+.ti -1c
+.RI "coefficiente di decadimento 
+.br
+delle molecole o dei carrier 
+.br
+dalla propria componente 
+.br
+energetica \fBrevRctRatio\fP = 10"
+.br
+.ti -1c
+.RI "\fBratioSpeciesEnergizable\fP = 0"
+.br
+.ti -1c
+.RI "percentuale di specie presenti 
+.br
+nel sistema che possono essere 
+.br
+energizzate per ogni specie 
+.br
+create \fBc\fP è una certa 
+.br
+probabilità di essere 
+.br
+energizzabile o meno \fBmoleculeDecay_KineticConstant\fP =0\&.02"
+.br
+.ti -1c
+.RI "\fBdiffusion_contribute\fP =0"
+.br
+.ti -1c
+.RI "\fBsolubility_threshold\fP =0"
+.br
+.ti -1c
+.RI "\fBlunghezza\fP massima delle 
+.br
+molecole presenti nell \fBinflux\fP \fBratio_firing_disk\fP =0"
+.br
+.ti -1c
+.RI "percentuale di specie da 
+.br
+cancellare rispetto \fBa\fP tutte 
+.br
+quelle che restano dopo aver 
+.br
+conservato \fBi\fP polimeri fino \fBa\fP 
+.br
+lunghezzamaxfd \fBlunghezza_max_fd\fP = 4"
+.br
+.ti -1c
+.RI "\fBlunghezza\fP dei monomeri 
+.br
+polimeri da conservare \fBscelta_concentrazioni\fP =1"
+.br
+.ti -1c
+.RI "parametro \fBswitch\fP"
+.br
+.ti -1c
+.RI "parametro uniforme sulle \fBlunghezze\fP"
+.br
+.ti -1c
+.RI "parametro uniforme sulle 
+.br
+powerlaw con esponente gamma \fBgamma_powerlaw_concentrazioni\fP = 2\&.1"
+.br
+.ti -1c
+.RI "esponente della powerlaw in caso \fBdecisione_catalizzatori\fP =1"
+.br
+.ti -1c
+.RI "parametri per la distribuzione dei \fBcatalizzatori\fP"
+.br
+.ti -1c
+.RI "controllo che non ci siano 
+.br
+cicli nell \fBinflux\fP"
+.br
+.ti -1c
+.RI "Number of different networks \fBensambles\fP"
+.br
+.ti -1c
+.RI "Nome della cartella dove verrˆ 
+.br
+salvata la \fBsimulazione\fP 
+.br
+\fBsimFolder\fP \fBpath\fP = '~/Documents/init/'"
+.br
+.ti -1c
+.RI "Percorso dove verrˆ creata la 
+.br
+cartella \fBsimFolder\fP dove 
+.br
+verranno salvati tutti \fBi\fP \fBfile\fP ********************************************************************** \fBnGEN\fP =10"
+.br
+.ti -1c
+.RI "Numero di \fBgenerazioni\fP"
+.br
+.ti -1c
+.RI "Numero di al momento significa 
+.br
+che alla fine di ogni 
+.br
+generazione da ogni \fBfile\fP di 
+.br
+fine sim partono altre \fBNsim\fP"
+.br
+.ti -1c
+.RI "Numero di al momento significa 
+.br
+che alla fine di ogni 
+.br
+generazione da ogni \fBfile\fP di 
+.br
+fine sim partono altre 
+.br
+lasciare ad \fB!lastFiringDiskSpeciesID\fP = 0"
+.br
+.ti -1c
+.RI "calcolata in automatico for \fBi\fP"
+.br
+.ti -1c
+.RI "\fBend\fP \fBlastFiringDiskSpeciesID\fP = lastFiringDiskSpeciesID -1"
+.br
+.ti -1c
+.RI "\fBthisFolder\fP = pwd"
+.br
+.ti -1c
+.RI "\fBdir\fP"
+.br
+.ti -1c
+.RI "\fBcd\fP(\fBthisFolder\fP)%introduzione 
+.br
+delle FUNZIONI BOOLEANE nell'energia \fBfunzioni_booleane_in_dec\fP = bi2de(funzioni_booleane,'left-msb')"
+.br
+.ti -1c
+.RI "\fBparte2_nome_cartella\fP = \fBnum2str\fP(\fBnome_folder\fP(\fBi\fP))"
+.br
+.ti -1c
+.RI "\fBparte3_nome_cartella\fP = ('_rete_n_')"
+.br
+.ti -1c
+.RI "\fBif\fP \fBz\fP< 10 parte_a=\fBnum2str\fP(0);parte_b=\fBnum2str\fP(\fBz\fP);parte4_nome_cartella=strcat(parte_a, 
+.br
+parte_b);\fBelse\fP 
+.br
+parte4_nome_cartella=\fBnum2str\fP(\fBz\fP);\fBend\fP 
+.br
+nome_cartella=strcat(parte1_nome_cartella, 
+.br
+\fBparte2_nome_cartella\fP, 
+.br
+\fBparte3_nome_cartella\fP, 
+.br
+parte4_nome_cartella);%scrivo 
+.br
+il lanciatore\&.sh 
+.br
+riga_lanciatore=strcat('nice\&./acsm2s\&./', 
+.br
+nome_cartella,'/\&./', 
+.br
+nome_cartella,'/res/\&./', 
+.br
+nome_cartella,'/ > \fBsims\fP"
+.br
+.ti -1c
+.RI "\fBif\fP \fBz\fP< 10 parte_a=\fBnum2str\fP(0);parte_b=\fBnum2str\fP(\fBz\fP);parte4_nome_cartella=strcat(parte_a, 
+.br
+parte_b);\fBelse\fP 
+.br
+parte4_nome_cartella=\fBnum2str\fP(\fBz\fP);\fBend\fP 
+.br
+nome_cartella=strcat(parte1_nome_cartella, 
+.br
+\fBparte2_nome_cartella\fP, 
+.br
+\fBparte3_nome_cartella\fP, 
+.br
+parte4_nome_cartella);%scrivo 
+.br
+il lanciatore\&.sh 
+.br
+riga_lanciatore=strcat('nice\&./acsm2s\&./', 
+.br
+nome_cartella,'/\&./', 
+.br
+nome_cartella,'/res/\&./', 
+.br
+nome_cartella,'/ > \fB_\fP"
+.br
+.ti -1c
+.RI "\fBif\fP \fBz\fP< 10 parte_a=\fBnum2str\fP(0);parte_b=\fBnum2str\fP(\fBz\fP);parte4_nome_cartella=strcat(parte_a, 
+.br
+parte_b);\fBelse\fP 
+.br
+parte4_nome_cartella=\fBnum2str\fP(\fBz\fP);\fBend\fP 
+.br
+nome_cartella=strcat(parte1_nome_cartella, 
+.br
+\fBparte2_nome_cartella\fP, 
+.br
+\fBparte3_nome_cartella\fP, 
+.br
+parte4_nome_cartella);%scrivo 
+.br
+il lanciatore\&.sh 
+.br
+riga_lanciatore=strcat('nice\&./acsm2s\&./', 
+.br
+nome_cartella,'/\&./', 
+.br
+nome_cartella,'/res/\&./', 
+.br
+nome_cartella,'/ > \fBlog\fP"
+.br
+.ti -1c
+.RI "\fBriga_lanciatore_2\fP = strcat('echo 'Reverse/',nome_cartella,'' ;',riga_lanciatore)"
+.br
+.ti -1c
+.RI "\fBcount\fP = \fBfprintf\fP(fid20,'%s\\n ',\fBriga_lanciatore_2\fP)"
+.br
+.ti -1c
+.RI "\fBend\fP \fBend\fP \fBst\fP = \fBfclose\fP(fid20)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "cd (simFolder\&.path)"
+
+.SS "converto in decimale for per default è uniforme funzioni_booleane_in_dec (\fBi\fP, 2)"
+
+.SS "clear riga_lanciatore lancio il vero e proprio inizializzatore inizializzatore_ACS (\fBnGEN\fP, \fBnSIM\fP, \fBnSeconds\fP, \fBnReactions\fP, \fBinitialMaxLength\fP, \fBvirtual_fd_max_length\fP, \fBoverallConcentration\fP, alphabet, \fBcomplexFormationSymmetry\fP, \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP, \fBreactionProbability\fP, \fBcleavageProbability\fP, diffusion_contribute, \fBsolubility_threshold\fP, \fBinflux_rate\fP, \fBreverseReactions\fP, \fBK_nrg\fP, \fBmoleculeDecay_KineticConstant\fP, \fBratio_firing_disk\fP, lunghezza_max_fd, \fBscelta_concentrazioni\fP, \fBgamma_powerlaw_concentrazioni\fP, \fBdecisione_catalizzatori\fP, \fBlastFiringDiskSpeciesID\fP, ECConcentration, volume, \fBenergy\fP, controllo_ACS_nel_ciclo, \fBK_nrg_decay\fP, nome_cartella, \fBfunzioni_booleane_in_dec\fP, \fBratioSpeciesEnergizable\fP, \fBKass\fP, \fBKdiss\fP, \fBKcpx\fP, \fBK_cpx\fP, randomSeed, \fBdebugLevel\fP, \fBtimeStructuresSavingInterval\fP, \fBmaxLOut\fP, \fBsimFolder\fP, \fBlMaxInflux\fP(\fBi\fP), \fBfileTimesSaveInterval\fP, nHours, nAttempts, \fBrevRctRatio\fP)"
+
+.SS "\fBif\fP \fBz\fP<10 parte_a=num2str(0); parte_b=num2str(\fBz\fP); parte4_nome_cartella = strcat(parte_a,parte_b); \fBelse\fP parte4_nome_cartella = num2str(\fBz\fP); \fBend\fP nome_cartella= strcat(parte1_nome_cartella,\fBparte2_nome_cartella\fP,\fBparte3_nome_cartella\fP,parte4_nome_cartella); %scrivo il lanciatore\&.sh riga_lanciatore = strcat(' nice \&./acsm2s \&./',nome_cartella,'/ \&./',nome_cartella,'/res/ \&./', nome_cartella,'/ > num2str (\fBz\fP)"
+
+.SS "Numero massimo di reazioni (secondo parametro di \fBstop\fP oltre al numero disecondi)\fC [pure virtual]\fP"
+
+.SS "Numero di volte in cui sistema ritenta la stessa rete ()"
+
+.SS "Number of different networks for every network will be performed nSim different simulation (differnt randomseeds)"
+
+.SS "Numero massimo di ore per la simulazione ()\fC [pure virtual]\fP"
+
+.SS "Numero di simulazioni (diversi semirandom)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "Numero di al momento significa che alla fine di ogni generazione da ogni \fBfile\fP di fine sim partono altre lasciare ad !\fBlastFiringDiskSpeciesID\fP = 0"
+
+.PP
+Definition at line 76 of file start\&.m\&.
+.SS "\fBif\fP \fBz\fP< 10 parte_a=\fBnum2str\fP(0) parte_b=\fBnum2str\fP(\fBz\fP) parte4_nome_cartella=strcat(parte_a, parte_b) \fBelse\fP parte4_nome_cartella=\fBnum2str\fP(\fBz\fP) \fBend\fP nome_cartella=strcat(parte1_nome_cartella, \fBparte2_nome_cartella\fP, \fBparte3_nome_cartella\fP, parte4_nome_cartella)%scrivo il lanciatore\&.sh riga_lanciatore=strcat('nice\&./acsm2s\&./', nome_cartella,'/\&./', nome_cartella,'/res/\&./', nome_cartella,'/ > _"
+
+.PP
+Definition at line 151 of file start\&.m\&.
+.SS "livello di dettaglio messaggi durante lasciare a"
+
+.PP
+Definition at line 26 of file start\&.m\&.
+.SS "alphabet = ['\fBAB\fP']"
+
+.PP
+Definition at line 36 of file start\&.m\&.
+.SS "parametri per la distribuzione dei catalizzatori"
+
+.PP
+Definition at line 63 of file start\&.m\&.
+.SS "cleavageProbability =0\&.5"
+
+.PP
+Definition at line 42 of file start\&.m\&.
+.SS "energia non \fBconsiderata\fP complexFormationSymmetry =0"
+
+.PP
+Definition at line 40 of file start\&.m\&.
+.SS "energia considerata"
+
+.PP
+Definition at line 39 of file start\&.m\&.
+.SS "altrimenti Quando \fBinflux_rate\fP indica la \fBlunghezza\fP massima delle molecole che possono uscire dal contenitore"
+
+.PP
+Definition at line 34 of file start\&.m\&.
+.SS "count = \fBfprintf\fP(fid20,'%s\\n ',\fBriga_lanciatore_2\fP)"
+
+.PP
+Definition at line 153 of file start\&.m\&.
+.SS "lasciare \fBa\fP debugLevel =0"
+
+.PP
+Definition at line 26 of file start\&.m\&.
+.SS "esponente della powerlaw in caso decisione_catalizzatori =1"
+
+.PP
+Definition at line 62 of file start\&.m\&.
+.SS "diffusion_contribute =0"
+
+.PP
+Definition at line 54 of file start\&.m\&.
+.SS "dir"
+\fBInitial value:\fP
+.PP
+.nf
+== 0
+    mkdir(simFolder\&.name)
+.fi
+.PP
+Definition at line 85 of file start\&.m\&.
+.SS "energy =0"
+
+.PP
+Definition at line 39 of file start\&.m\&.
+.SS "Number of different networks ensambles"
+
+.PP
+Definition at line 69 of file start\&.m\&.
+.SS "definisce il tempo in cui vengono salvati \fBi\fP \fBfile\fP durante la \fBsimulazione\fP fileTimesSaveInterval =0"
+
+.PP
+Definition at line 28 of file start\&.m\&.
+.SS "fino_a_che_lunghezza_i_polimeri_non_catalizzano = 2"
+
+.PP
+Definition at line 41 of file start\&.m\&.
+.SS "************************************************************************** ************************************************************************** Inserimento dei PARAMETRI FISSI"
+
+.PP
+Definition at line 20 of file start\&.m\&.
+.SS "\fBcd\fP (\fBthisFolder\fP) %introduzione delle FUNZIONI BOOLEANE nell'energia funzioni_booleane_in_dec = bi2de(funzioni_booleane,'left-msb')"
+
+.PP
+Definition at line 116 of file start\&.m\&.
+.SS "parametro uniforme sulle powerlaw con esponente gamma gamma_powerlaw_concentrazioni = 2\&.1"
+
+.PP
+Definition at line 61 of file start\&.m\&.
+.SS "Numero di generazioni"
+
+.PP
+Definition at line 75 of file start\&.m\&.
+.SS "\fBend\fP************************************************************************** ********************* ***** S T \fBA\fP R T***** ********************* for i"
+\fBInitial value:\fP
+.PP
+.nf
+= 1:virtual_fd_max_length
+    lastFiringDiskSpeciesID = lastFiringDiskSpeciesID + length(alphabet)^i
+.fi
+.PP
+Definition at line 77 of file start\&.m\&.
+.SS "controllo che non ci siano cicli nell influx"
+
+.PP
+Definition at line 69 of file start\&.m\&.
+.SS "influx_rate"
+\fBInitial value:\fP
+.PP
+.nf
+= 0 indica fino a quale lunghezza le molecole non variano in quantita' (simulazione membrana permeabile)
+ECConcentration=0
+.fi
+.PP
+Definition at line 34 of file start\&.m\&.
+.SS "K_cpx = 1"
+
+.PP
+Definition at line 48 of file start\&.m\&.
+.SS "K_nrg = 0"
+
+.PP
+Definition at line 49 of file start\&.m\&.
+.SS "K_nrg_decay =0"
+
+.PP
+Definition at line 50 of file start\&.m\&.
+.SS "Kass = 50"
+
+.PP
+Definition at line 45 of file start\&.m\&.
+.SS "Kcpx = 50"
+
+.PP
+Definition at line 47 of file start\&.m\&.
+.SS "Kdiss = 25"
+
+.PP
+Definition at line 46 of file start\&.m\&.
+.SS "\fBend\fP lastFiringDiskSpeciesID = lastFiringDiskSpeciesID -1"
+
+.PP
+Definition at line 80 of file start\&.m\&.
+.SS "\fBse\fP è il sistema è chiuso lMaxInflux = [4]"
+
+.PP
+Definition at line 13 of file start\&.m\&.
+.SS "\fBif\fP \fBz\fP<10 parte_a=\fBnum2str\fP(0); parte_b=\fBnum2str\fP(\fBz\fP); parte4_nome_cartella = strcat(parte_a,parte_b); \fBelse\fP parte4_nome_cartella = \fBnum2str\fP(\fBz\fP); \fBend\fP nome_cartella= strcat(parte1_nome_cartella,\fBparte2_nome_cartella\fP,\fBparte3_nome_cartella\fP,parte4_nome_cartella); %scrivo il lanciatore\&.sh riga_lanciatore = strcat(' nice \&./acsm2s \&./',nome_cartella,'/ \&./',nome_cartella,'/res/ \&./', nome_cartella,'/ > log"
+
+.PP
+Definition at line 151 of file start\&.m\&.
+.SS "percentuale di specie da cancellare rispetto \fBa\fP tutte quelle che restano dopo aver conservato \fBi\fP polimeri fino \fBa\fP lunghezzamaxfd lunghezza_max_fd = 4"
+
+.PP
+Definition at line 59 of file start\&.m\&.
+.SS "parametro uniforme sulle lunghezze"
+
+.PP
+Definition at line 60 of file start\&.m\&.
+.SS "Lunghezza massima fino alla quale creare le \fBreazioni\fP maxLOut = 0"
+
+.PP
+Definition at line 34 of file start\&.m\&.
+.SS "percentuale di specie presenti nel sistema che possono essere energizzate per ogni specie create \fBc\fP è una certa probabilità di essere energizzabile o meno moleculeDecay_KineticConstant =0\&.02"
+
+.PP
+Definition at line 53 of file start\&.m\&.
+.SS "Percorso dove verrˆ creata la cartella \fBsimFolder\fP dove verranno salvati tutti \fBi\fP \fBfile\fP********************************************************************** nGEN =10"
+
+.PP
+Definition at line 75 of file start\&.m\&.
+.SS "nome_folder = [4]"
+
+.PP
+Definition at line 15 of file start\&.m\&.
+.SS "nome_prob = [0\&.125"
+
+.PP
+Definition at line 12 of file start\&.m\&.
+.SS "Definisce il tempo in cui vengono salvati \fBi\fP dati sui \fBfile\fP reaction_parameter e \fBi\fP vari living nReactions =200000000"
+
+.PP
+Definition at line 29 of file start\&.m\&.
+.SS "************************************************************************** ************************************************************************** Inserimento dei PARAMETRI quelli che restano cioè costanti in tutti gli esperimenti della serie nSIM =1"
+
+.PP
+Definition at line 23 of file start\&.m\&.
+.SS "Numero di al momento significa che alla fine di ogni generazione da ogni \fBfile\fP di fine sim partono altre Nsim"
+
+.PP
+Definition at line 75 of file start\&.m\&.
+.SS "overallConcentration =0\&.0333"
+
+.PP
+Definition at line 37 of file start\&.m\&.
+.SS "parametro_screening = \fBlMaxInflux\fP"
+
+.PP
+Definition at line 14 of file start\&.m\&.
+.SS "\fBif\fP \fBz\fP< 10 parte_a=\fBnum2str\fP(0) parte_b=\fBnum2str\fP(\fBz\fP) parte4_nome_cartella=strcat(parte_a, parte_b) \fBelse\fP parte4_nome_cartella=\fBnum2str\fP(\fBz\fP) \fBend\fP nome_cartella=strcat(parte1_nome_cartella, parte2_nome_cartella, \fBparte3_nome_cartella\fP, parte4_nome_cartella)%scrivo il lanciatore\&.sh riga_lanciatore=strcat('nice\&./acsm2s\&./', nome_cartella,'/\&./', nome_cartella,'/res/\&./', nome_cartella,'/ > parte2_nome_cartella = \fBnum2str\fP(\fBnome_folder\fP(\fBi\fP))"
+
+.PP
+Definition at line 138 of file start\&.m\&.
+.SS "parte3_nome_cartella = ('_rete_n_')"
+
+.PP
+Definition at line 139 of file start\&.m\&.
+.SS "\fBconcAnalysis\fP(params) clear all close all params path = '~/Documents/init/'"
+
+.PP
+Definition at line 71 of file start\&.m\&.
+.SS "Numero di secondi randomSeed =0"
+
+.PP
+Definition at line 25 of file start\&.m\&.
+.SS "\fBlunghezza\fP massima delle molecole presenti nell \fBinflux\fP ratio_firing_disk =0"
+
+.PP
+Definition at line 58 of file start\&.m\&.
+.SS "ratioSpeciesEnergizable = 0"
+
+.PP
+Definition at line 52 of file start\&.m\&.
+.SS "reactionProbability = [0\&.000516529"
+
+.PP
+Definition at line 11 of file start\&.m\&.
+.SS "reverseReactions =0"
+
+.PP
+Definition at line 43 of file start\&.m\&.
+.SS "coefficiente di decadimento delle molecole o dei carrier dalla propria componente energetica revRctRatio = 10"
+
+.PP
+Definition at line 51 of file start\&.m\&.
+.SS "riga_lanciatore_2 = strcat('echo 'Reverse/',nome_cartella,'' ;',riga_lanciatore)"
+
+.PP
+Definition at line 152 of file start\&.m\&.
+.SS "\fBlunghezza\fP dei monomeri polimeri da conservare scelta_concentrazioni =1"
+
+.PP
+Definition at line 60 of file start\&.m\&.
+.SS "lancia_serie_di_inizializzatore m clear all close all************************************************************************** Inserimento dei PARAMETRI VARIABILI sui quali fare lo SCREENING"
+
+.PP
+Definition at line 8 of file start\&.m\&.
+.SS "se =0 non viene considerato"
+
+.PP
+Definition at line 34 of file start\&.m\&.
+.SS "\fBif\fP \fBz\fP<10 parte_a=\fBnum2str\fP(0); parte_b=\fBnum2str\fP(\fBz\fP); parte4_nome_cartella = strcat(parte_a,parte_b); \fBelse\fP parte4_nome_cartella = \fBnum2str\fP(\fBz\fP); \fBend\fP nome_cartella= strcat(parte1_nome_cartella,\fBparte2_nome_cartella\fP,\fBparte3_nome_cartella\fP,parte4_nome_cartella); %scrivo il lanciatore\&.sh riga_lanciatore = strcat(' nice \&./acsm2s \&./',nome_cartella,'/ \&./',nome_cartella,'/res/ \&./', nome_cartella,'/ > sims"
+
+.PP
+Definition at line 151 of file start\&.m\&.
+.SS "livello di dettaglio messaggi durante simulazione"
+
+.PP
+Definition at line 26 of file start\&.m\&.
+.SS "solubility_threshold =0"
+
+.PP
+Definition at line 55 of file start\&.m\&.
+.SS "\fBend\fP \fBend\fP st = \fBfclose\fP(fid20)"
+
+.PP
+Definition at line 167 of file start\&.m\&.
+.SS "parametro switch"
+
+.PP
+Definition at line 60 of file start\&.m\&.
+.SS "thisFolder = pwd"
+
+.PP
+Definition at line 83 of file start\&.m\&.
+.SS "Definisce il tempo in cui vengono salvati \fBi\fP dati sui \fBfile\fP times"
+
+.PP
+Definition at line 28 of file start\&.m\&.
+.SS "livello di dettaglio messaggi durante lasciare per debug software timeStructuresSavingInterval =\fBnSeconds\fP/100"
+
+.PP
+Definition at line 27 of file start\&.m\&.
+.SS "Lunghezza massima delle specie da creare virtual_fd_max_length = 4"
+
+.PP
+Definition at line 33 of file start\&.m\&.
+.SS "volume =1e-18"
+
+.PP
+Definition at line 38 of file start\&.m\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.
