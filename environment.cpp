@@ -842,7 +842,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                             }
                             // IF IT IS NOT PRESENT THE VECTOR ALLREACTIONS AND THE VECTOR ALLCATALYSIS ARE UPDATED
                             allReactions.push_back(reactions(id_reaction, reactionType, ids_I, ids_II, ids_III, 0, tempEnergyRctType));
-                            if(reverseReactions == TRUE)
+                            if(reverseReactions == true)
                             {
                                 if(reactionType == CONDENSATION)
                                 {
@@ -861,7 +861,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                             }
                             allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpsID, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx));
                         }else{ // OTHERWISE ONLY THE VECTOR ALLCATALYSIS IS UPDATED
-                            if(reverseReactions == TRUE)
+                            if(reverseReactions == true)
                             {
                                 if(reactionType == CONDENSATION)
                                 {
@@ -3410,7 +3410,7 @@ void environment::setLivingSpeciesIDsAndAmounts()
     livingSpeciesIDsList.clear(); // Clean the livingSpeciesIDs list
     cumLivingAmountsList.clear(); // Clean living Species Amount
     acs_longInt cumulativeNumberOfSpecies = 0; // Initialise the cumulative number of species
-	bool toBeInserted = TRUE;
+    bool toBeInserted = true;
 	
 	// cout << ".................." << endl;
 
@@ -3418,8 +3418,8 @@ void environment::setLivingSpeciesIDsAndAmounts()
     {
         for(vector<species>::iterator tmpAllSpeciesIter = allSpecies.begin(); tmpAllSpeciesIter != allSpecies.end(); tmpAllSpeciesIter++)
         {
-			toBeInserted = TRUE;
-			if(maxLOut > 0){if(tmpAllSpeciesIter->getSequenceLength() <= maxLOut) toBeInserted = TRUE; else toBeInserted = FALSE;}
+            toBeInserted = true;
+            if(maxLOut > 0){if(tmpAllSpeciesIter->getSequenceLength() <= maxLOut) toBeInserted = true; else toBeInserted = false;}
 			
 			if(toBeInserted)
 			{
