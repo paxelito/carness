@@ -919,6 +919,84 @@ acs_int environment::selectWhetherCleavageOrCond(MTRand& tmp__RndDoubleGen)
 	return tmpReactionType;
 }
 
+/**
+ Initial molecule population creation from file using standard C++ libraries
+ @version 1.0
+ @param string tmpSpeciesFilePath file path
+ */
+bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath)
+{
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialMoleculesPopulationFromFileSTD start" << endl;
+    // SPECIES FILE PATH CREATION
+    string SpeciesFilePath = tmpSpeciesFilePath + "_acsspecies.csv";
+    ifstream myfile;
+    myfile.open(SpeciesFilePath.c_str());
+    string strID, strCod, strConc, strDiff, strPrec, strK_cpx, strCpxBin, strEval, strAge, strReb, strCatID, strCpxID, strPho, strChar, strLock;
+    while (myfile.good())
+    {
+        getline(myfile, strID, '\t');
+        getline(myfile, strCod, '\t');
+        getline(myfile, strConc, '\t');
+        getline(myfile, strDiff, '\t');
+        getline(myfile, strPrec, '\t');
+        getline(myfile, strK_cpx, '\t');
+        getline(myfile, strCpxBin, '\t');
+        getline(myfile, strEval, '\t');
+        getline(myfile, strAge, '\t');
+        getline(myfile, strReb, '\t');
+        getline(myfile, strCatID, '\t');
+        getline(myfile, strCpxID, '\t');
+        getline(myfile, strPho, '\t');
+        getline(myfile, strChar, '\t');
+        getline(myfile, strLock, '\n');
+
+        cout << strID << " "<< strCod<<  " "<< strConc<< " "<<  strDiff<< " "<<  strPrec<< " "<<  strK_cpx<<" "<<  strCpxBin<< " "<<
+                strEval<<  " "<< strAge<<  " "<< strReb<< " "<<  strCatID<<  " "<< strCpxID<<  " "<< strPho<< " "<<  strChar<<  " "<< strLock << endl;
+
+        cout << (acs_double)atof(strConc.c_str()) << "rere" << endl;
+        allSpecies.push_back(species((acs_longInt)atol(strID.c_str()), strCod, (acs_double)atof(strConc.c_str()),
+                                     (acs_double)atof(strDiff.c_str()),(acs_int)atoi(strPrec.c_str()),
+                                     (acs_double)atof(strK_cpx.c_str()), (acs_int)atoi(strCpxBin.c_str()),
+                                     (acs_int)atoi(strEval.c_str()), (acs_double)atof(strAge.c_str()),atoi(strReb.c_str()), volume,
+                                     (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
+                                     (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
+                                     (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut));
+        try{
+            if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getComplexCutPnt() == 0)
+            {
+                if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0)
+                    numberOfSpecies++;
+
+                numberOfMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+                if(((acs_longInt)atoi(strID.c_str()) > lastFiringDiskSpeciesID) &&
+                   (allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0))
+                {
+                    numberOfNewSpecies++;
+                    numberOfNewMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+                }
+            }else{ // If the species is a complex
+                incNumberOfCpx();
+                numberOfCpxMols += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+            }
+        }catch(exception&e){
+            cout << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt()..." << endl;
+            cout << "Vectorsize " << allSpecies.size() << " - position "<< (acs_longInt)atoi(strID.c_str()) << endl;
+            cerr << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt().."<<e.what()<<endl;
+            ExitWithError("createInitialMoleculesPopulationFromFile","exceptionerrorthrown");
+        }
+    }
+    myfile.close();
+    // FIRING DISK STORING, NUTRIENTS CREATION AND PROBABILITY VECTOR FOR A NUTRIENT TO BE SELECTED IS CREATED
+    for(acs_int singleSpecies = 0; singleSpecies < (acs_int)allSpecies.size(); singleSpecies++)
+    {
+        if(allSpecies.at(singleSpecies).getID() <= getLastFiringDiskSpeciesID())
+            firingDisk.push_back(allSpecies.at(singleSpecies));
+    }
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialMoleculesPopulationFromFile end" << endl;
+
+    return true;
+}//eof createInitialPopulationFromFileSTD
+
 
 
 /**
@@ -4137,6 +4215,7 @@ bool environment::performCondensation(acs_longInt tmpCatalyst, acs_longInt tmpSu
 	
     // REACTION!!!
     try{
+        // concentration fixed is checked within the function
         allSpecies.at(tmpCatalyst).increment(volume);
     }
     catch(exception&e)
@@ -4158,11 +4237,11 @@ bool environment::performCondensation(acs_longInt tmpCatalyst, acs_longInt tmpSu
 	{
 		// REACTION!!!
 		
-                allSpecies.at(tmpSubstrate).decrement(volume);
+        allSpecies.at(tmpSubstrate).decrement(volume);
         if(!allSpecies.at(tmpSubstrate).getConcentrationFixed())
             decMolSpeciesProcedure(tmpSubstrate); // decrement total number of molecules and, if so, species
 	
-                allSpecies.at(tmpComplex).decrement(volume);
+        allSpecies.at(tmpComplex).decrement(volume);
         if(!allSpecies.at(tmpComplex).getConcentrationFixed())
             decCpxProcedure(tmpComplex); // decrement total number of complexes token and, if so, types
 		

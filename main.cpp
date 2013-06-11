@@ -338,7 +338,7 @@ int main (int argc, char *argv[]) {
 		CREATE ENVIRONMENT
 		-----------------*/ 
 
-                // Declare and inizialize the environment
+        // Declare and inizialize the environment
 		environment* puddle = new environment(a.arguments().at(1));
 	
 		//INITIZIALIZE PSEUDO RANDOM NUMBER GENERATOR
@@ -349,9 +349,13 @@ int main (int argc, char *argv[]) {
 		----------------------------------*/
 	
 			//LOAD SPECIES FROM FILE
-			if(!puddle->createInitialMoleculesPopulationFromFile(a.arguments().at(3)))
-				ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species loading process");
-                        // LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
+            //if(!puddle->createInitialMoleculesPopulationFromFile(a.arguments().at(3)))
+                //ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species loading process");
+            // LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
+
+            if(!puddle->createInitialMoleculesPopulationFromFileSTD(argv[3]))
+                ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species STANDARD loading process");
+            // LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
 			if(puddle->getInflux() > 0)
 			{
 				if(!puddle->createInfluxLayersFromFile(a.arguments().at(3)))

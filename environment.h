@@ -144,11 +144,11 @@ private:
 	acs_double getActualTime()const{return actualTime;}
 	acs_double getNseconds()const{return nSeconds;}
 	acs_int getNreactions()const{return nReactions;}
-        acs_int getMAXhours()const{return nHours;}
-        acs_int getMAXattempts()const{return nAttempts;}
-        acs_int getCurrentAttempts()const{return Currentattempts;}
+    acs_int getMAXhours()const{return nHours;}
+    acs_int getMAXattempts()const{return nAttempts;}
+    acs_int getCurrentAttempts()const{return Currentattempts;}
 	acs_double getTimeStructuresSavingInterval()const{return timeStructuresSavingInterval;}
-        acs_double getFileTimesSavingInterval()const{return fileTimesSaveInterval;}
+    acs_double getFileTimesSavingInterval()const{return fileTimesSaveInterval;}
 	acs_int getLastFiringDiskSpeciesID()const{return lastFiringDiskSpeciesID;}
 	acs_double getOverallConcentration()const{return overallConcentration;}
 	bool getComplexFormationSymmetry()const{return complexFormationSymmetry;}
@@ -170,7 +170,7 @@ private:
 	acs_double getGillespieMean()const{return gillespieMean;}
 	acs_double getgillespieSD()const{return gillespieSD;}
 	acs_double getgillespieEntropy()const{return gillespieEntropy;}
-        acs_double getRatioBetweenNewGillTotGill()const{return ratioBetweenNewGillTotGill;}
+    acs_double getRatioBetweenNewGillTotGill()const{return ratioBetweenNewGillTotGill;}
         acs_double getRatioBetweenBackandForw()const{return ratioBetweenReverseAndTotalScore;}
 	
 	// Kinetic Constants -----------------------------
@@ -196,13 +196,13 @@ private:
 	string getAlphabet()const{return alphabet;}
 	acs_double getVolume()const{return volume;}
 	acs_double getRandomSeed()const{return randomSeed;}
-        vector<species> getMoleculesPopulation()const{return allSpecies;}
+    vector<species> getMoleculesPopulation()const{return allSpecies;}
 	acs_longInt getTotalNumberOfSpecies();
 	acs_longInt getTotalNumberOfMolecules();
 	acs_longInt getTotalNumberOfComplexSpecies();
 	acs_longInt getTotalNumberOfComplexes();
 	acs_longInt getTotalNumberOfMonomers();
-        vector<reactions> getReactionsLayer()const{return allReactions;}
+    vector<reactions> getReactionsLayer()const{return allReactions;}
 	int getDebugLevel()const{return debugLevel;}
 	acs_longInt getNumberOfTheoreticalSpecies()const{return (acs_longInt)allSpecies.size();}
 	acs_longInt getNumberOfReactions()const{return (acs_longInt)allReactions.size();}
@@ -228,10 +228,11 @@ private:
 	
 	// FILE STRUCTURE UPLOAD FUNCTION
 	bool createInitialMoleculesPopulationFromFile(QString tmpSpeciesFilePath);
+    bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath);
 	bool createInitialReactionsLayerFromFile(QString tmpReactionsFilePath);
 	bool createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePath);
 	bool createInfluxLayersFromFile(QString tmpInfluxFilePath);
-        bool createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath);
+    bool createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath);
 	bool createInitialMoleculesPopulationFromSpecificFile(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
 	bool createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
 	bool createInitialCatalysisLayerFromSpecificFile(QString tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
@@ -242,18 +243,18 @@ private:
 	void nutrientsAmountsFixing();
 	acs_int computeSngSpeciesRctsNumber(acs_longInt tmpTotalNumberOfReactions, MTRand& tmpRndDoubleGen);
 	acs_int selectWhetherCleavageOrCond(MTRand& tmp__RndDoubleGen);
-        bool createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpReactionsForThisSpecies, MTRand& tmp_RndDoubleGen, vector<acs_longInt>& tmpIDOfCandidateSpecies, acs_int tmpRctCreationType);
+    bool createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpReactionsForThisSpecies, MTRand& tmp_RndDoubleGen, vector<acs_longInt>& tmpIDOfCandidateSpecies, acs_int tmpRctCreationType);
 	acs_double createDiffusionRenforcement(acs_double tmpDiffEnh, acs_int tmpNewSpeciesLength);
 	bool setSolubility(acs_int tmpNewSpeciesLength, MTRand& tmpRndDoubleGen);
 	//TR acs_longInt createInitialAmount(int tmpAlphabetLength, int tmpSpeciesLength);
 	//TR acs_double createInitialConcentration(int tmpAlphabetLength, int tmpSpeciesLength);
-        acs_longInt returnPosSpeciesAlreadyPresent(string tmpNewSequence); //return vector species size if it doesn't
-        acs_longInt returnPosReactionAlreadyPresent(acs_int tmpReactionType, acs_longInt tmpIds_I, acs_longInt tmpIds_II, acs_longInt tmpIds_III); //return vector allReactions size if it doesn't
+    acs_longInt returnPosSpeciesAlreadyPresent(string tmpNewSequence); //return vector species size if it doesn't
+    acs_longInt returnPosReactionAlreadyPresent(acs_int tmpReactionType, acs_longInt tmpIds_I, acs_longInt tmpIds_II, acs_longInt tmpIds_III); //return vector allReactions size if it doesn't
 	bool checkIfTheReactionIsAlreadyCatalyzedByThisSpecies(acs_longInt tmpSPeciesID, acs_longInt tmpIdReaction);
-        bool performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, QString tmpStoringPath);
-        bool performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleGen, acs_int tmp_ActGEN, acs_int tmp_ActSIM, acs_int tmp_ActSTEP, QString tmp_StoringPath);
+    bool performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, QString tmpStoringPath);
+    bool performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleGen, acs_int tmp_ActGEN, acs_int tmp_ActSIM, acs_int tmp_ActSTEP, QString tmp_StoringPath);
 	bool newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDoubleGen);
-        bool complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGen, acs_int tmpCuttingPnt, acs_int tmpCatalyst_ID, acs_int tmpSubstrate_ID, bool tmpCpxType);
+    bool complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGen, acs_int tmpCuttingPnt, acs_int tmpCatalyst_ID, acs_int tmpSubstrate_ID, bool tmpCpxType);
 	acs_double computeSinglGilScore(acs_longInt tmpAmountI, acs_double tmpDifI, acs_int tmpSolI,acs_longInt tmpAmountII, acs_double tmpDifII, acs_int tmpSolII, acs_double tmpK, bool tmpSameMol);
 	void performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs_longInt tmpAmountII, acs_longInt tmpIDI, acs_longInt tmpIDII, acs_longInt tmpIDCatalysis, acs_int tmp__rctType,
 											acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III, acs_longInt tmpMol_IV, acs_int tmpNRGDirection, acs_longInt tmpRctID,
@@ -279,7 +280,7 @@ private:
 	void incMolProcedure(acs_int tmp_ID){incNumberOfMols();incNumberOfNewMols(tmp_ID);}
 	void incSpeciesProcedure(acs_int tmp_ID){if(allSpecies.at(tmp_ID).getAmount() == 1){incNumberOfNewSpecies(tmp_ID); incNumberOfSpecies();}}
 	//void chargeMolProcess(acs_int tmp_ID){}
-        void unchargeMolProcess(acs_int tmp_ID){allSpecies[tmp_ID].unchargeMol();decOverallLoadedMolsCounter();}// removeChargeMolFromList(tmp_ID);}
+    void unchargeMolProcess(acs_int tmp_ID){allSpecies[tmp_ID].unchargeMol();decOverallLoadedMolsCounter();}// removeChargeMolFromList(tmp_ID);}
 	
 	void incCleavageCounter(){cleavageCounter++;}
 	void incEndoCleavageCounter(){endoCleavageCounter++;}
