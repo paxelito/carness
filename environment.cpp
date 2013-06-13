@@ -58,11 +58,11 @@ environment::environment()
 	numberOfCpxMols = 0;
 	gillespieTotalScore = 0;
 	maxLOut = 0;
-        internalTimesStoredCounter = 0;
-        nHours = 5;
-        nAttempts = 5;
-        Currentattempts = 0;
-        revRctRatio = 1000;
+    internalTimesStoredCounter = 0;
+    nHours = 5;
+    nAttempts = 5;
+    Currentattempts = 0;
+    revRctRatio = 1000;
 }
 
 /**
@@ -950,14 +950,15 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
         getline(myfile, strChar, '\t');
         getline(myfile, strLock, '\n');
 
-        cout << strID << " "<< strCod<<  " "<< strConc<< " "<<  strDiff<< " "<<  strPrec<< " "<<  strK_cpx<<" "<<  strCpxBin<< " "<<
+        cout << strID << " "<< strCod<<  " |"<< strConc<< "| "<<  strDiff<< " "<<  strPrec<< " "<<  strK_cpx<<" "<<  strCpxBin<< " "<<
                 strEval<<  " "<< strAge<<  " "<< strReb<< " "<<  strCatID<<  " "<< strCpxID<<  " "<< strPho<< " "<<  strChar<<  " "<< strLock << endl;
 
+        string prova;
+        prova = "3.333333e-06";
+        cout << "test " << prova << " " << prova.c_str() << " " << atof(prova.c_str()) << endl;
         cout << strConc.c_str() << " 1st" << endl;
         cout << atof(strConc.c_str()) << " 2nd" << endl;
         cout << (acs_double)atof(strConc.c_str()) << " 3rd" << endl;
-        acs_double testScienctific = atof(strConc.c_str());
-        cout << testScienctific << " 4th" << endl;
         allSpecies.push_back(species((acs_longInt)atol(strID.c_str()), strCod, (acs_double)atof(strConc.c_str()),
                                      (acs_double)atof(strDiff.c_str()),(acs_int)atoi(strPrec.c_str()),
                                      (acs_double)atof(strK_cpx.c_str()), (acs_int)atoi(strCpxBin.c_str()),
