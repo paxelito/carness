@@ -25,6 +25,7 @@
 #include <fstream>
 #include <string>
 #include <cstring>
+#include <sstream>
 #include <vector>
 #include <deque>
 #include <cmath>

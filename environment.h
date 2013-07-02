@@ -229,7 +229,9 @@ private:
 	// FILE STRUCTURE UPLOAD FUNCTION
 	bool createInitialMoleculesPopulationFromFile(QString tmpSpeciesFilePath);
     bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath);
-	bool createInitialReactionsLayerFromFile(QString tmpReactionsFilePath);
+    //bool createInitialReactionsLayerFromFile(QString tmpReactionsFilePath);
+    bool createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePath);
+    bool createInitialReactionsLayerFromSpecificFileSTD(string tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
 	bool createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePath);
 	bool createInfluxLayersFromFile(QString tmpInfluxFilePath);
     bool createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath);
@@ -341,8 +343,9 @@ private:
 	// SAVE TO FILE FUNCTIONS
 	bool saveConfigurationFile(QString tmpStoringPath);
 	bool saveInfluxStructure(QString tmpStoringPath);
-        bool saveNrgBoolFncStructure(QString tmpStoringPath);
-        QString zeroBeforeStringNumber(acs_int tmpTotN, acs_int tmpCurrentN);
+    bool saveNrgBoolFncStructure(QString tmpStoringPath);
+    QString zeroBeforeStringNumber(acs_int tmpTotN, acs_int tmpCurrentN);
+    string zeroBeforeStringNumberSTD(acs_int tmpTotN, acs_int tmpCurrentN);
 	bool saveSpeciesStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
 	bool saveReactionsStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
 	bool saveCatalysisStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);

@@ -923,6 +923,7 @@ acs_int environment::selectWhetherCleavageOrCond(MTRand& tmp__RndDoubleGen)
  Initial molecule population creation from file using standard C++ libraries
  @version 1.0
  @param string tmpSpeciesFilePath file path
+ @date 20130702
  */
 bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath)
 {
@@ -1221,11 +1222,49 @@ bool environment::createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath)
 }
 
 /**
+ Reactions from file using standard C++ libraries
+ @version 1.0
+ @param string tmpSpeciesFilePath file path
+ @date 20130702
+ */
+bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePath)
+{
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromFileSTD start" << endl;
+    // SPECIES FILE PATH CREATION
+    string FilePath = tmpSpeciesFilePath + "_acsreactions.csv";
+    ifstream myfile;
+    myfile.open(FilePath.c_str());
+    string strID, strType, strMolsI, strMolsII, strMolsIII, strCnt, strNrg;
+    while (myfile.good())
+    {
+        getline(myfile, strID, '\t');
+        getline(myfile, strType, '\t');
+        getline(myfile, strMolsI, '\t');
+        getline(myfile, strMolsII, '\t');
+        getline(myfile, strMolsIII, '\t');
+        getline(myfile, strCnt, '\t');
+        getline(myfile, strNrg, '\n');
+
+        cout << strID << " "<< strType <<  " |"<< strMolsI<< "| "<<  strMolsII << " "<<  strMolsIII << " "<<  strCnt <<" "<<  strNrg << endl;
+
+        allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
+                                         (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
+                                         (acs_double)atof(strNrg.c_str())));
+
+    }
+
+    myfile.close();
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromFileSTD end" << endl;
+    return true;
+}//eof createInitialReactionsLayerFromFileSTD
+
+
+/**
  Initial reactions layer creation from file
  @version 1.0
  @param QString tmpSpeciesFilePath file path
  */
-bool environment::createInitialReactionsLayerFromFile(QString tmpReactionsFilePath)
+/*bool environment::createInitialReactionsLayerFromFile(QString tmpReactionsFilePath)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromFile start" << endl;
 
@@ -1257,7 +1296,7 @@ bool environment::createInitialReactionsLayerFromFile(QString tmpReactionsFilePa
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromFile end" << endl;
 
 	return true;
-}//eof createInitialPopulationFromFile
+}//eof createInitialPopulationFromFile*/
 
 /**
  Initial reactions layer creation from SPECIFIC file
@@ -1309,6 +1348,56 @@ bool environment::createInitialReactionsLayerFromSpecificFile(QString tmpReactio
 	
 	return true;
 }//eof createInitialreactionsLayerFromSpecificFile
+
+/**
+ Reactions from file using standard C++ libraries
+ @version 1.0
+ @param string tmpSpeciesFilePath file path
+ @date 20130702
+ */
+bool environment::createInitialReactionsLayerFromSpecificFileSTD(string tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM)
+{
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromSpecificFileSTD start" << endl;
+    // CONFIGURATION FILE PATH CREATION
+    stringstream strCurrentGen;
+    stringstream strCurrentSim;
+    stringstream strCurrentStep;
+    string strZeroGenBefore = zeroBeforeStringNumberSTD(nGEN, tmpActGEN);
+    string strZeroSimBefore = zeroBeforeStringNumberSTD(pow(double(nSIM), double(tmpActGEN)), tmpActSIM);
+    string strZeroStepBefore = zeroBeforeStringNumberSTD(nReactions, 0);
+
+    strCurrentGen << tmpActGEN;
+    strCurrentSim << tmpActSIM;
+    strCurrentStep << 0;
+    string ReactionsFilePath = tmpReactionsFilePath + "reactions_" + strZeroGenBefore + strCurrentGen.str() +
+            "_" +  strZeroSimBefore + strCurrentSim.str() +
+            "_" +  strZeroStepBefore + strCurrentStep.str()	+ ".csv";
+
+    ifstream myfile;
+    myfile.open(ReactionsFilePath.c_str());
+    string strID, strType, strMolsI, strMolsII, strMolsIII, strCnt, strNrg;
+    while (myfile.good())
+    {
+        getline(myfile, strID, '\t');
+        getline(myfile, strType, '\t');
+        getline(myfile, strMolsI, '\t');
+        getline(myfile, strMolsII, '\t');
+        getline(myfile, strMolsIII, '\t');
+        getline(myfile, strCnt, '\t');
+        getline(myfile, strNrg, '\n');
+
+        cout << strID << " "<< strType <<  " |"<< strMolsI<< "| "<<  strMolsII << " "<<  strMolsIII << " "<<  strCnt <<" "<<  strNrg << endl;
+
+        allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
+                                         (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
+                                         (acs_double)atof(strNrg.c_str())));
+
+    }
+
+    myfile.close();
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromSpecificFileSTD end" << endl;
+    return true;
+}//eof createInitialReactionsLayerFromSpecificFileSTD
 
 /**
  Initial catalysis layer creation from file
@@ -5603,7 +5692,6 @@ void environment::clearAllStructures()
  set the concentrations to the initial values and reset internal statistics and counter
  @version 1.0
  */
-//void environment::resetConcentrationToInitialConditions(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM)
 void environment::resetConcentrationToInitialConditions()
 {
     if(debugLevel >= RUNNING_VERSION)
@@ -5724,10 +5812,10 @@ void environment::storeInitialStructures()
 QString environment::zeroBeforeStringNumber(acs_int tmpTotN, acs_int tmpCurrentN)
 {
 	QString strZeroReturned = "";
-	QString tempQStrTmpTotN;
-	QString tempQStrtmpCurrentN;	
-	QString QStrTmpTotN = tempQStrTmpTotN.setNum(tmpTotN);
-	QString QStrtmpCurrentN = tempQStrtmpCurrentN.setNum(tmpCurrentN);
+    QString tempQStrTmpTotN;
+    QString tempQStrtmpCurrentN;
+    QString QStrTmpTotN = tempQStrTmpTotN.setNum(tmpTotN);
+    QString QStrtmpCurrentN = tempQStrtmpCurrentN.setNum(tmpCurrentN);
 	
 	for(int i = 0; i < QStrTmpTotN.length() - QStrtmpCurrentN.length(); i++)
 	{
@@ -5735,6 +5823,31 @@ QString environment::zeroBeforeStringNumber(acs_int tmpTotN, acs_int tmpCurrentN
 	}
 	
 	return strZeroReturned;
+}
+
+/**
+ This function creates a chain of zero as STRING according to tmpTotN and tmpCurrent N in order to make possible a sorting
+ (e.g. tmpTotN = 1000, tmpCurrentN = 3, return 0003
+ @version 1.0
+ @param acs_int tmpTotN Total N
+ @param acs_int tmpCurrentN current N
+ */
+string environment::zeroBeforeStringNumberSTD(acs_int tmpTotN, acs_int tmpCurrentN)
+{
+    string strZeroReturned = "";
+    stringstream tempStrTmpTotN;
+    tempStrTmpTotN << tmpTotN;
+    stringstream tempStrtmpCurrentN;
+    tempStrtmpCurrentN << tmpCurrentN;
+    string QStrTmpTotN = tempStrTmpTotN.str();
+    string QStrtmpCurrentN = tempStrtmpCurrentN.str();
+
+    for(int i = 0; (unsigned)i < (unsigned)QStrTmpTotN.size() - (unsigned)QStrtmpCurrentN.size(); i++)
+    {
+        strZeroReturned += "0";
+    }
+
+    return strZeroReturned;
 }
 
 /**

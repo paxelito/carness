@@ -367,8 +367,8 @@ int main (int argc, char *argv[]) {
 				if(!puddle->createNrgBooleanFunctionsFromFile(a.arguments().at(3)))
 						ExitWithError("createNrgBooleanFunctionsFromFile", "Problem with rct Bool fncs loading process");
 			}
-                        //LOAD REACTIONS STRUCTURE FROM FILE
-			if(!puddle->createInitialReactionsLayerFromFile(a.arguments().at(3)))
+           //LOAD REACTIONS STRUCTURE FROM FILE (standard C++ libraries)
+           if(!puddle->createInitialReactionsLayerFromFileSTD(argv[3]))
 				ExitWithError("createInitialReactionLayerFromFile", "Problem with the reactions loading process");
                         //LOAD CATALYSIS STRUCTURE FROM FILE (catalysis links species with reactions catalyzed)
 			if(!puddle->createInitialCatalysisLayerFromFile(a.arguments().at(3)))
