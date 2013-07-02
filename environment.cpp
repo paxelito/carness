@@ -1001,7 +1001,7 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
  @version 1.0
  @param QString tmpSpeciesFilePath file path
  */
-bool environment::createInitialMoleculesPopulationFromFile(QString tmpSpeciesFilePath)
+/*bool environment::createInitialMoleculesPopulationFromFile(QString tmpSpeciesFilePath)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialMoleculesPopulationFromFile start" << endl;
 
@@ -1065,7 +1065,7 @@ bool environment::createInitialMoleculesPopulationFromFile(QString tmpSpeciesFil
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialMoleculesPopulationFromFile end" << endl;
 	
 	return true;
-}//eof createInitialPopulationFromFile
+}//eof createInitialPopulationFromFile*/
 
 /**
  Initial molecule population creation. Species are uploaed from a SPECIFIC file created using actual generation and simuation
@@ -1229,7 +1229,7 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
  @date 2010-05-18
  
 */
-bool environment::createInfluxLayersFromFile(QString tmpInfluxFilePath)
+/*bool environment::createInfluxLayersFromFile(QString tmpInfluxFilePath) //TR
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFile start" << endl;
 	// INFLUX FILE PATH CREATION
@@ -1259,7 +1259,36 @@ bool environment::createInfluxLayersFromFile(QString tmpInfluxFilePath)
 	
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFile end" << endl;
 	return true;
-}
+}*/
+
+/**
+ Create influx layer from file C++ libraries
+ @version 1.0
+ @param string tmpInfluxFilePath file path
+ @date 20130702
+ */
+bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath)
+{
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFileSTD start" << endl;
+    // SPECIES FILE PATH CREATION
+    string FilePath = tmpInfluxFilePath + "_acsinflux.csv";
+    ifstream myfile;
+    myfile.open(FilePath.c_str());
+    string strFeedID, strFeedProb;
+    while (myfile.good())
+    {
+        getline(myfile, strFeedID, '\t');
+        getline(myfile, strFeedProb, '\n');
+
+        nutrientsForInflux.push_back((acs_int)atoi(strFeedID.c_str()));
+        nutrientsProb2BeSelected.push_back((acs_double)atof(strFeedProb.c_str()));
+
+    }
+
+    myfile.close();
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFileSTD end" << endl;
+    return true;
+}//eof createInfluxLayersFromFileSTD
 
 /**
  load energy boolean function (in decimal format)
@@ -1268,7 +1297,7 @@ bool environment::createInfluxLayersFromFile(QString tmpInfluxFilePath)
  @date 2011-04-13
 
 */
-bool environment::createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath)
+/*bool environment::createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath) //TR
 {
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createNrgBooleanFunctionsFromFile start" << endl;
     // INFLUX FILE PATH CREATION
@@ -1298,7 +1327,36 @@ bool environment::createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath)
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createNrgBooleanFunctionsFromFile end" << endl;
     return true;
-}
+}*/
+
+/**
+ load energy boolean function (in decimal format) - Standard C++
+ @version 1.0
+ @param string tmpBoolNrgFilePath file path
+ @date 20130702
+ */
+bool environment::createNrgBooleanFunctionsFromFileSTD(string tmpBoolNrgFilePath)
+{
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createNrgBooleanFunctionsFromFileSTD start" << endl;
+    // SPECIES FILE PATH CREATION
+    string FilePath = tmpBoolNrgFilePath + "_acsnrgbooleanfunctions.csv";
+    ifstream myfile;
+    myfile.open(FilePath.c_str());
+    string strBoolNrgID, strBoolNrgProb;
+    while (myfile.good())
+    {
+        getline(myfile, strBoolNrgID, '\t');
+        getline(myfile, strBoolNrgProb, '\n');
+
+        nrgBooleanFunctions.push_back((acs_int)atoi(strBoolNrgID.c_str()));
+        nrgBoolFncsProb2BeSelected.push_back((acs_double)atof(strBoolNrgProb.c_str()));
+
+    }
+
+    myfile.close();
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createNrgBooleanFunctionsFromFileSTD end" << endl;
+    return true;
+}//eof createNrgBooleanFunctionsFromFileSTD
 
 /**
  Reactions from file using standard C++ libraries
@@ -1341,7 +1399,7 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
  @version 1.0
  @param QString tmpSpeciesFilePath file path
  */
-/*bool environment::createInitialReactionsLayerFromFile(QString tmpReactionsFilePath)
+/*bool environment::createInitialReactionsLayerFromFile(QString tmpReactionsFilePath)  //TR
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromFile start" << endl;
 
@@ -1380,7 +1438,7 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
  @version 1.0
  @param QString tmpSpeciesFilePath file path
  */
-/*bool environment::createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM)
+/*bool environment::createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM)  //TR
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromSpecificFile start" << endl;
 	
@@ -1474,12 +1532,14 @@ bool environment::createInitialReactionsLayerFromSpecificFileSTD(string tmpReact
     return true;
 }//eof createInitialReactionsLayerFromSpecificFileSTD
 
+
+
 /**
  Initial catalysis layer creation from file
  @version 1.0
  @param QString tmpSpeciesFilePath file path
  */
-bool environment::createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePath)
+/*bool environment::createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePath) //TR
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromFile start" << endl;
 
@@ -1513,7 +1573,7 @@ bool environment::createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePa
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromFile end" << endl;
 
 	return true;
-}//eof createInitialPopulationFromFile
+}//eof createInitialPopulationFromFile*/
 
 /**
  Catalysis from file using standard C++ libraries
@@ -1551,11 +1611,59 @@ bool environment::createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFile
 }//eof createInitialCatalysisLayerFromFileSTD
 
 /**
+ catalysis from file using standard C++ libraries
+ @version 1.0
+ @param string tmpSpeciesFilePath file path
+ @date 20130702
+ */
+bool environment::createInitialCatalysisLayerFromSpecificFileSTD(string tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM)
+{
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromSpecificFileSTD start" << endl;
+    // CONFIGURATION FILE PATH CREATION
+    stringstream strCurrentGen;
+    stringstream strCurrentSim;
+    stringstream strCurrentStep;
+    string strZeroGenBefore = zeroBeforeStringNumberSTD(nGEN, tmpActGEN);
+    string strZeroSimBefore = zeroBeforeStringNumberSTD(pow(double(nSIM), double(tmpActGEN)), tmpActSIM);
+    string strZeroStepBefore = zeroBeforeStringNumberSTD(nReactions, 0);
+
+    strCurrentGen << tmpActGEN;
+    strCurrentSim << tmpActSIM;
+    strCurrentStep << 0;
+    string catalysisFilePath = tmpCatalysisFilePath + "catalysis_" + strZeroGenBefore + strCurrentGen.str() +
+            "_" +  strZeroSimBefore + strCurrentSim.str() +
+            "_" +  strZeroStepBefore + strCurrentStep.str()	+ ".csv";
+
+    ifstream myfile;
+    myfile.open(catalysisFilePath.c_str());
+    string strID, strCatalyst, strReaction, strCounter, strKcond, strKcleav, strKcpx;
+    while (myfile.good())
+    {
+        getline(myfile, strID, '\t');
+        getline(myfile, strCatalyst, '\t');
+        getline(myfile, strReaction, '\t');
+        getline(myfile, strCounter, '\t');
+        getline(myfile, strKcond, '\t');
+        getline(myfile, strKcleav, '\t');
+        getline(myfile, strKcpx, '\n');
+
+        allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
+                                         (acs_longInt)atol(strCounter.c_str()), (acs_double)atof(strKcond.c_str()), (acs_double)atof(strKcleav.c_str()),
+                                         (acs_double)atof(strKcpx.c_str())));
+
+    }
+
+    myfile.close();
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromSpecificFileSTD end" << endl;
+    return true;
+}//eof createInitialCatalysisLayerFromSpecificFileSTD
+
+/**
  Initial catalysis layer creation from SPECIFIC file
  @version 1.0
  @param QString tmpSpeciesFilePath file path
  */
-bool environment::createInitialCatalysisLayerFromSpecificFile(QString tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM)
+/*bool environment::createInitialCatalysisLayerFromSpecificFile(QString tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM)  //TR
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromSpecificFile start" << endl;
 	
@@ -1602,7 +1710,7 @@ bool environment::createInitialCatalysisLayerFromSpecificFile(QString tmpCatalys
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromSpecificFile end" << endl;
 	
 	return true;
-}//eof createInitialCatalysisLayerFromSpecificFile
+}//eof createInitialCatalysisLayerFromSpecificFile*/
 
 /**
  Create the initial amount of the molecules belonging to a particular species according to the species length
@@ -1610,7 +1718,7 @@ bool environment::createInitialCatalysisLayerFromSpecificFile(QString tmpCatalys
  @param tmpAlphabetLength Number of symbols in the alphabet
  @param tmpSpeciesLength Lenght of the species
  */
-//TR acs_longInt environment::createInitialAmount(int tmpAlphabetLength, int tmpSpeciesLength)
+//TR acs_longInt environment::createInitialAmount(int tmpAlphabetLength, int tmpSpeciesLength)  //TR
 //{
 //	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::createInitialAmount start" << endl;
 //	
@@ -2404,11 +2512,11 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tm
 	bool flagControl = true; //Check flag
 	bool sameSpecies = false; // true if I'm computing the score of a reaction involving the same species as catalyst and substrate
 	acs_double temp_score; // Gillespie score
-        gillespieTotalScore = 0; // Initialize (or reset) the overall Gillespie score
-        gillespieNewSpeciesScore = 0; // Initialize (or reset) the sum of the Gillespie scores creating new species
-        ratioBetweenNewGillTotGill = 0;
-        reverseReactionsGillScore = 0; // the sum of the gillespie scores related to the reverse reactions
-        ratioBetweenReverseAndTotalScore = 0; // Ratio between the reverse reaction scores and all the reaction scores
+    gillespieTotalScore = 0; // Initialize (or reset) the overall Gillespie score
+    gillespieNewSpeciesScore = 0; // Initialize (or reset) the sum of the Gillespie scores creating new species
+    ratioBetweenNewGillTotGill = 0;
+    reverseReactionsGillScore = 0; // the sum of the gillespie scores related to the reverse reactions
+    ratioBetweenReverseAndTotalScore = 0; // Ratio between the reverse reaction scores and all the reaction scores
 	acs_longInt temp_mol_I; // temp_mol_I II III and IV will contain the molecules IDs according to the different reactions
 	acs_longInt temp_mol_II;
 	acs_longInt temp_mol_III;

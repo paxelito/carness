@@ -359,13 +359,15 @@ int main (int argc, char *argv[]) {
             // LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
 			if(puddle->getInflux() > 0)
 			{
-				if(!puddle->createInfluxLayersFromFile(a.arguments().at(3)))
+                //TR if(!puddle->createInfluxLayersFromFile(a.arguments().at(3)))
+                if(!puddle->createInfluxLayersFromFileSTD(argv[3]))
 					ExitWithError("CreateInfluxLayersFromFile", "Problem with influx layers loading process");
 			}
                         // LOAD BOOLEAN FUNCTION CONCERNING THE ENERGY CONFIGURATION
 			if(puddle->getEnergy() <= 1)
 			{
-				if(!puddle->createNrgBooleanFunctionsFromFile(a.arguments().at(3)))
+                //if(!puddle->createNrgBooleanFunctionsFromFile(a.arguments().at(3)))
+                if(!puddle->createNrgBooleanFunctionsFromFileSTD(argv[3]))
 						ExitWithError("createNrgBooleanFunctionsFromFile", "Problem with rct Bool fncs loading process");
 			}
            //LOAD REACTIONS STRUCTURE FROM FILE (standard C++ libraries)
@@ -402,7 +404,7 @@ int main (int argc, char *argv[]) {
 		//STORE INITIAL STRUCTURES DATA IN ORDER TO REINITIALIZE THE STRUCTURE AFTER EACH SIMULATION
 		puddle->storeInitialStructures();
 		
-                QTime timeElapsed; // timer creation
+        QTime timeElapsed; // timer creation
 		timeElapsed.start();
 		
 		if(puddle->getDebugLevel() >= RUNNING_VERSION)

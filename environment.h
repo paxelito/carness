@@ -117,13 +117,13 @@ private:
 	
     // STATISTICAL VARIABLES ------------------------
 	acs_double gillespieMean;       // Mean of all the Gillespie Scores
-        acs_double gillespieSD;         // Standard deviation of all the Gillespie Scores
-        acs_double gillespieEntropy;    // sum of all the p(log(p)) of the Gillespie Scores
+    acs_double gillespieSD;         // Standard deviation of all the Gillespie Scores
+    acs_double gillespieEntropy;    // sum of all the p(log(p)) of the Gillespie Scores
 	acs_double gillespieTotalScore; // Gillespie total score to reset at each gillespie computation
-        acs_double gillespieNewSpeciesScore; // The sum of the gillespie scores creating only new species
-        acs_double ratioBetweenNewGillTotGill; // gillespieNewSpeciesScore / gillespieTotalScore
-        acs_double reverseReactionsGillScore; // the sum of the gillespie scores related to the reverse reactions
-        acs_double ratioBetweenReverseAndTotalScore; // Ratio between the reverse reaction scores and all the reaction scores
+    acs_double gillespieNewSpeciesScore; // The sum of the gillespie scores creating only new species
+    acs_double ratioBetweenNewGillTotGill; // gillespieNewSpeciesScore / gillespieTotalScore
+    acs_double reverseReactionsGillScore; // the sum of the gillespie scores related to the reverse reactions
+    acs_double ratioBetweenReverseAndTotalScore; // Ratio between the reverse reaction scores and all the reaction scores
 	QTime gillespiePartialTimer; // Gillespie algorithm computational time
         vector<acs_int> gillespiePartialTimes;
 	QTime performReactionPartialTimer; // The time necessary for the evaluation of a new species
@@ -227,20 +227,23 @@ private:
 	void printAllChargeMols();
 	
 	// FILE STRUCTURE UPLOAD FUNCTION
-	bool createInitialMoleculesPopulationFromFile(QString tmpSpeciesFilePath);
-    bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath);
+    //TR bool createInitialMoleculesPopulationFromFile(QString tmpSpeciesFilePath);
     //TR bool createInitialReactionsLayerFromFile(QString tmpReactionsFilePath);
+    //TR bool createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePath);
+    //TR bool createInfluxLayersFromFile(QString tmpInfluxFilePath);
+    //TR bool createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath);
+    bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath);
     bool createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePath);
-	bool createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePath);
     bool createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFilePath);
-	bool createInfluxLayersFromFile(QString tmpInfluxFilePath);
-    bool createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath);
+    bool createInfluxLayersFromFileSTD(string tmpInfluxFilePath);
+    bool createNrgBooleanFunctionsFromFileSTD(string tmpBoolNrgFilePath);
 
     //TR bool createInitialMoleculesPopulationFromSpecificFile(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
     //TR bool createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
+    //TR bool createInitialCatalysisLayerFromSpecificFile(QString tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
     bool createInitialMoleculesPopulationFromSpecificFileSTD(string tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
     bool createInitialReactionsLayerFromSpecificFileSTD(string tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
-	bool createInitialCatalysisLayerFromSpecificFile(QString tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
+    bool createInitialCatalysisLayerFromSpecificFileSTD(string tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
 	
 	// OPERATIVE FUNCTIONS
 	//TR void createInitialMoleculesPopulation(MTRand& tmpRndDoubleGen);
