@@ -231,12 +231,12 @@ private:
     bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath);
     //bool createInitialReactionsLayerFromFile(QString tmpReactionsFilePath);
     bool createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePath);
-    bool createInitialReactionsLayerFromSpecificFileSTD(string tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
 	bool createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePath);
 	bool createInfluxLayersFromFile(QString tmpInfluxFilePath);
     bool createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath);
 	bool createInitialMoleculesPopulationFromSpecificFile(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
-	bool createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
+    //bool createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
+    bool createInitialReactionsLayerFromSpecificFileSTD(string tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
 	bool createInitialCatalysisLayerFromSpecificFile(QString tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
 	
 	// OPERATIVE FUNCTIONS

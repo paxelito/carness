@@ -1303,7 +1303,7 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
  @version 1.0
  @param QString tmpSpeciesFilePath file path
  */
-bool environment::createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM)
+/*bool environment::createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromSpecificFile start" << endl;
 	
@@ -1347,7 +1347,7 @@ bool environment::createInitialReactionsLayerFromSpecificFile(QString tmpReactio
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromSpecificFile end" << endl;
 	
 	return true;
-}//eof createInitialreactionsLayerFromSpecificFile
+}//eof createInitialreactionsLayerFromSpecificFile*/
 
 /**
  Reactions from file using standard C++ libraries
