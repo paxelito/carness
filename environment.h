@@ -229,13 +229,16 @@ private:
 	// FILE STRUCTURE UPLOAD FUNCTION
 	bool createInitialMoleculesPopulationFromFile(QString tmpSpeciesFilePath);
     bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath);
-    //bool createInitialReactionsLayerFromFile(QString tmpReactionsFilePath);
+    //TR bool createInitialReactionsLayerFromFile(QString tmpReactionsFilePath);
     bool createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePath);
 	bool createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePath);
+    bool createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFilePath);
 	bool createInfluxLayersFromFile(QString tmpInfluxFilePath);
     bool createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath);
-	bool createInitialMoleculesPopulationFromSpecificFile(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
-    //bool createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
+
+    //TR bool createInitialMoleculesPopulationFromSpecificFile(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
+    //TR bool createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
+    bool createInitialMoleculesPopulationFromSpecificFileSTD(string tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
     bool createInitialReactionsLayerFromSpecificFileSTD(string tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
 	bool createInitialCatalysisLayerFromSpecificFile(QString tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
 	

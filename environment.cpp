@@ -951,15 +951,6 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
         getline(myfile, strChar, '\t');
         getline(myfile, strLock, '\n');
 
-        cout << strID << " "<< strCod<<  " |"<< strConc<< "| "<<  strDiff<< " "<<  strPrec<< " "<<  strK_cpx<<" "<<  strCpxBin<< " "<<
-                strEval<<  " "<< strAge<<  " "<< strReb<< " "<<  strCatID<<  " "<< strCpxID<<  " "<< strPho<< " "<<  strChar<<  " "<< strLock << endl;
-
-        string prova;
-        prova = "3.333333e-06";
-        cout << "test " << prova << " " << prova.c_str() << " " << atof(prova.c_str()) << endl;
-        cout << strConc.c_str() << " 1st" << endl;
-        cout << atof(strConc.c_str()) << " 2nd" << endl;
-        cout << (acs_double)atof(strConc.c_str()) << " 3rd" << endl;
         allSpecies.push_back(species((acs_longInt)atol(strID.c_str()), strCod, (acs_double)atof(strConc.c_str()),
                                      (acs_double)atof(strDiff.c_str()),(acs_int)atoi(strPrec.c_str()),
                                      (acs_double)atof(strK_cpx.c_str()), (acs_int)atoi(strCpxBin.c_str()),
@@ -1081,7 +1072,7 @@ bool environment::createInitialMoleculesPopulationFromFile(QString tmpSpeciesFil
  @version 1.0
  @param QString tmpSpeciesFilePath file path
  */
-bool environment::createInitialMoleculesPopulationFromSpecificFile(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM)
+/*bool environment::createInitialMoleculesPopulationFromSpecificFile(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialMoleculesPopulationFromSpecificFile start" << endl;
 	
@@ -1141,7 +1132,95 @@ bool environment::createInitialMoleculesPopulationFromSpecificFile(QString tmpSp
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialMoleculesPopulationFromSpecificFile end" << endl;
 	
 	return true;
-}//eof createInitialPopulationFromFile
+}//eof createInitialPopulationFromFile*/
+
+/**
+ Initial molecule population creation. Species are uploaed from a SPECIFIC file created using actual generation and simuation (standard C++ libraries)
+ @version 1.0
+ @param QString tmpSpeciesFilePath file path
+ */
+bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM)
+{
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialMoleculesPopulationFromSpecificFileSTD start" << endl;
+
+    stringstream strCurrentGen;
+    stringstream strCurrentSim;
+    stringstream strCurrentStep;
+    string strZeroGenBefore = zeroBeforeStringNumberSTD(nGEN, tmpActGEN);
+    string strZeroSimBefore = zeroBeforeStringNumberSTD(pow(double(nSIM), double(tmpActGEN)), tmpActSIM);
+    string strZeroStepBefore = zeroBeforeStringNumberSTD(nReactions, 0);
+
+    strCurrentGen << tmpActGEN;
+    strCurrentSim << tmpActSIM;
+    strCurrentStep << 0;
+    string SpeciesFilePath = tmpSpeciesFilePath + "species_" + strZeroGenBefore + strCurrentGen.str() +
+            "_" +  strZeroSimBefore + strCurrentSim.str() +
+            "_" +  strZeroStepBefore + strCurrentStep.str()	+ ".csv";
+
+    ifstream myfile;
+    myfile.open(SpeciesFilePath.c_str());
+    string strID, strCod, strConc, strDiff, strPrec, strK_cpx, strCpxBin, strEval, strAge, strReb, strCatID, strCpxID, strPho, strChar, strLock;
+    while (myfile.good())
+    {
+        getline(myfile, strID, '\t');
+        getline(myfile, strCod, '\t');
+        getline(myfile, strConc, '\t');
+        getline(myfile, strDiff, '\t');
+        getline(myfile, strPrec, '\t');
+        getline(myfile, strK_cpx, '\t');
+        getline(myfile, strCpxBin, '\t');
+        getline(myfile, strEval, '\t');
+        getline(myfile, strAge, '\t');
+        getline(myfile, strReb, '\t');
+        getline(myfile, strCatID, '\t');
+        getline(myfile, strCpxID, '\t');
+        getline(myfile, strPho, '\t');
+        getline(myfile, strChar, '\t');
+        getline(myfile, strLock, '\n');
+
+        allSpecies.push_back(species((acs_longInt)atol(strID.c_str()), strCod, (acs_double)atof(strConc.c_str()),
+                                     (acs_double)atof(strDiff.c_str()),(acs_int)atoi(strPrec.c_str()),
+                                     (acs_double)atof(strK_cpx.c_str()), (acs_int)atoi(strCpxBin.c_str()),
+                                     (acs_int)atoi(strEval.c_str()), (acs_double)atof(strAge.c_str()),atoi(strReb.c_str()), volume,
+                                     (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
+                                     (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
+                                     (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut));
+        try{
+            if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getComplexCutPnt() == 0)
+            {
+                if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0)
+                    numberOfSpecies++;
+
+                numberOfMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+                if(((acs_longInt)atoi(strID.c_str()) > lastFiringDiskSpeciesID) &&
+                   (allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0))
+                {
+                    numberOfNewSpecies++;
+                    numberOfNewMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+                }
+            }else{ // If the species is a complex
+                incNumberOfCpx();
+                numberOfCpxMols += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+            }
+        }catch(exception&e){
+            cout << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt()..." << endl;
+            cout << "Vectorsize " << allSpecies.size() << " - position "<< (acs_longInt)atoi(strID.c_str()) << endl;
+            cerr << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt().."<<e.what()<<endl;
+            ExitWithError("createInitialMoleculesPopulationFromFile","exceptionerrorthrown");
+        }
+    }
+    myfile.close();
+    // FIRING DISK STORING, NUTRIENTS CREATION AND PROBABILITY VECTOR FOR A NUTRIENT TO BE SELECTED IS CREATED
+    for(acs_int singleSpecies = 0; singleSpecies < (acs_int)allSpecies.size(); singleSpecies++)
+    {
+        if(allSpecies.at(singleSpecies).getID() <= getLastFiringDiskSpeciesID())
+            firingDisk.push_back(allSpecies.at(singleSpecies));
+    }
+
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialMoleculesPopulationFromSpecificFileSTD end" << endl;
+
+    return true;
+}//eof createInitialMoleculesPopulationFromSpecificFileSTD
 
 /**
  Create influx layer from file
@@ -1244,8 +1323,6 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
         getline(myfile, strMolsIII, '\t');
         getline(myfile, strCnt, '\t');
         getline(myfile, strNrg, '\n');
-
-        cout << strID << " "<< strType <<  " |"<< strMolsI<< "| "<<  strMolsII << " "<<  strMolsIII << " "<<  strCnt <<" "<<  strNrg << endl;
 
         allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
                                          (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
@@ -1386,8 +1463,6 @@ bool environment::createInitialReactionsLayerFromSpecificFileSTD(string tmpReact
         getline(myfile, strCnt, '\t');
         getline(myfile, strNrg, '\n');
 
-        cout << strID << " "<< strType <<  " |"<< strMolsI<< "| "<<  strMolsII << " "<<  strMolsIII << " "<<  strCnt <<" "<<  strNrg << endl;
-
         allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
                                          (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
                                          (acs_double)atof(strNrg.c_str())));
@@ -1439,6 +1514,41 @@ bool environment::createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePa
 
 	return true;
 }//eof createInitialPopulationFromFile
+
+/**
+ Catalysis from file using standard C++ libraries
+ @version 1.0
+ @param string tmpSpeciesFilePath file path
+ @date 20130702
+ */
+bool environment::createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFilePath)
+{
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromFileSTD start" << endl;
+    // SPECIES FILE PATH CREATION
+    string FilePath = tmpCatalysisFilePath + "_acscatalysis.csv";
+    ifstream myfile;
+    myfile.open(FilePath.c_str());
+    string strID, strCatalyst, strReaction, strCounter, strKcond, strKcleav, strKcpx;
+    while (myfile.good())
+    {
+        getline(myfile, strID, '\t');
+        getline(myfile, strCatalyst, '\t');
+        getline(myfile, strReaction, '\t');
+        getline(myfile, strCounter, '\t');
+        getline(myfile, strKcond, '\t');
+        getline(myfile, strKcleav, '\t');
+        getline(myfile, strKcpx, '\n');
+
+        allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
+                                         (acs_longInt)atol(strCounter.c_str()), (acs_double)atof(strKcond.c_str()), (acs_double)atof(strKcleav.c_str()),
+                                         (acs_double)atof(strKcpx.c_str())));
+
+    }
+
+    myfile.close();
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromFileSTD end" << endl;
+    return true;
+}//eof createInitialCatalysisLayerFromFileSTD
 
 /**
  Initial catalysis layer creation from SPECIFIC file

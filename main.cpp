@@ -166,11 +166,10 @@
  *			<td>Identificator</td><td>Catalyst ID</td><td>Reaction ID</td><td>Catalysis counter</td><td>K condensation</td><td>K cleavage</td><td>K Complex Association</td>
  *		</tr>
  *	  </table>
- *		- <i>Identificator</i>: Reaction ID
+ *		- <i>Identificator</i>: Catalysis ID
  *		- <i>Catalyst ID</i>: species (as catalyst) ID
  *		- <i>Reaction ID</i>: Reaction ID
  *		- <i>Catalysis counter</i>: Catalysis counter
- *		- <i>Identificator</i>: Reaction ID
  *		- <i>K final step end condensation kinetic constant</i>: Final step end condensation kinetic constant
  *		- <i>K Cleavage</i>: Cleavage Kinetic constant
  *		- <i>K complex association</i>: Complex association kinetic constant
@@ -325,6 +324,8 @@ void saveInitialConditionsToFile(QString tmpSavingPath, environment *tmpEnvironm
 int main (int argc, char *argv[]) {
 	
 	QCoreApplication a(argc, argv);
+
+    setlocale(LC_NUMERIC,"en_US"); //TR Check whether or not it can be removed when C++ standard
 	
 	MTRand rndDoubleGen; /// double random number generator
 	
@@ -349,7 +350,7 @@ int main (int argc, char *argv[]) {
 		----------------------------------*/
 	
 			//LOAD SPECIES FROM FILE
-            //if(!puddle->createInitialMoleculesPopulationFromFile(a.arguments().at(3)))
+            //TR if(!puddle->createInitialMoleculesPopulationFromFile(a.arguments().at(3)))
                 //ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species loading process");
             // LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
 
@@ -370,8 +371,9 @@ int main (int argc, char *argv[]) {
            //LOAD REACTIONS STRUCTURE FROM FILE (standard C++ libraries)
            if(!puddle->createInitialReactionsLayerFromFileSTD(argv[3]))
 				ExitWithError("createInitialReactionLayerFromFile", "Problem with the reactions loading process");
-                        //LOAD CATALYSIS STRUCTURE FROM FILE (catalysis links species with reactions catalyzed)
-			if(!puddle->createInitialCatalysisLayerFromFile(a.arguments().at(3)))
+
+           //LOAD CATALYSIS STRUCTURE FROM FILE (catalysis links species with reactions catalyzed)
+            if(!puddle->createInitialCatalysisLayerFromFileSTD(argv[3]))
 				ExitWithError("createInitialCatalysisLayerFromFile", "Problem with the catalysis loading process");
 		
 		if(puddle->getDebugLevel() >= MEDIUM_DEBUG){puddle->printInitialCondition();}
