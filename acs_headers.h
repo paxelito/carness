@@ -20,7 +20,6 @@
 #include <QTextStream>
 #include <QFile>
 #include <QList>
-#include <QTime>
 #include <iostream>
 #include <fstream>
 #include <string>

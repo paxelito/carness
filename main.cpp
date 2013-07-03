@@ -215,7 +215,7 @@
  *  during the simulation. <br>Columns description (each field is delimited using "\t"):
  *	  <table>
  *		<tr>
- *			<td>Identificator (reaction)</td><td>Reaction Time</td><td>Gillespie ID selected</td><td>Reaction Type</td><td>Number of possible reactions</td><td>Computational Time (ms)</td>
+ *			<td>Identificator (reaction)</td><td>Reaction Time</td><td>Gillespie ID selected</td><td>Reaction Type</td><td>Number of possible reactions</td><td>Computational Time (sec)</td>
  *			<td>Number of Species</td><td>Number of Molecules</td><td>Number of complex species</td><td>Number of complexes</td>
  *                      <td>Number of bricks</td><td>Gillespie Computational Time</td><td>Reaction Process Computational Time</td><td>Various Processes Computational Time</td><td>New species creation probability</td>
  *		</tr>
@@ -404,8 +404,8 @@ int main (int argc, char *argv[]) {
 		//STORE INITIAL STRUCTURES DATA IN ORDER TO REINITIALIZE THE STRUCTURE AFTER EACH SIMULATION
 		puddle->storeInitialStructures();
 		
-        QTime timeElapsed; // timer creation
-		timeElapsed.start();
+        //TR QTime timeElapsed; // timer creation
+        //TR timeElapsed.start();
         clock_t tStart = clock();
 		
 		if(puddle->getDebugLevel() >= RUNNING_VERSION)
@@ -458,7 +458,7 @@ int main (int argc, char *argv[]) {
                         }
 
 
-                        timeElapsed.restart(); // Timer is restarted after each simulation
+                        //TR timeElapsed.restart(); // Timer is restarted after each simulation
                         tStart = clock();
                         actSTEP = 1;
                         previousStepLastStructuresSaving = 1;
@@ -475,7 +475,7 @@ int main (int argc, char *argv[]) {
                             if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
                             {
                                 //GILLESPIE COMPUTATION
-                                if(!puddle->performGillespieComputation(rndDoubleGen, timeElapsed, actGEN, actSIM, actSTEP, a.arguments().at(2)))
+                                if(!puddle->performGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, a.arguments().at(2)))
                                         ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
 
                                 // DISPLAY SIMULATION CONTROL VARIABLES

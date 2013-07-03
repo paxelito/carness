@@ -98,7 +98,7 @@ private:
     vector<acs_double> gillespieCumulativeStepScoreList; // List containing cumulative gillespie score values
     vector<acs_double> reactionsTime; // List of all reaction time
     vector<acs_longInt> gillespieReactionsSelected; // List of the reactions selected by means of the Gillespie algorithm
-    vector<acs_int> allTimes; // List of the computational times of each reaction
+    vector<acs_double> allTimes; // List of the computational times of each reaction
     int debugLevel; // level of message details show during the simution
     vector<acs_int> livingSpeciesIDsList; // this list contains all the living species ID. It will be updated after each efflux action
     vector<acs_double> cumLivingAmountsList; // this list contains the cumulative number of molecules according to the LivingSpeciesIDslist
@@ -259,7 +259,7 @@ private:
     acs_longInt returnPosSpeciesAlreadyPresent(string tmpNewSequence); //return vector species size if it doesn't
     acs_longInt returnPosReactionAlreadyPresent(acs_int tmpReactionType, acs_longInt tmpIds_I, acs_longInt tmpIds_II, acs_longInt tmpIds_III); //return vector allReactions size if it doesn't
 	bool checkIfTheReactionIsAlreadyCatalyzedByThisSpecies(acs_longInt tmpSPeciesID, acs_longInt tmpIdReaction);
-    bool performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, QString tmpStoringPath);
+    bool performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, QString tmpStoringPath);
     bool performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleGen, acs_int tmp_ActGEN, acs_int tmp_ActSIM, acs_int tmp_ActSTEP, QString tmp_StoringPath);
 	bool newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDoubleGen);
     bool complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGen, acs_int tmpCuttingPnt, acs_int tmpCatalyst_ID, acs_int tmpSubstrate_ID, bool tmpCpxType);

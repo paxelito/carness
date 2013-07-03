@@ -2506,7 +2506,7 @@ bool environment::checkAvailability(acs_longInt tmpMI, acs_longInt tmpMII, acs_l
  @param tmpActSTEP actual step (reaction)
  @param tmpStoringPath path where results are stored
 */
-bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, QString tmpStoringPath)
+bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, QString tmpStoringPath)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::performGillespieComputation start" << endl;
 	
@@ -3011,7 +3011,7 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tm
                 reactionsTime.push_back(tempTime);
                 setActualTime(tempTime);
                 gillespieReactionsSelected.push_back(reaction_u);
-                allTimes.push_back(tmpTimeElapsed.elapsed());
+                allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
                 // =^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^
                 // PERFORM REACTION SELECTED BEFORE
@@ -3043,7 +3043,7 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tm
                     reactionsTime.push_back(tempTime);
                     setActualTime(tempTime);
                     gillespieReactionsSelected.push_back(0);
-                    allTimes.push_back(tmpTimeElapsed.elapsed());
+                    allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
                     if(debugLevel >= RUNNING_VERSION)
                                     cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
@@ -3067,7 +3067,7 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tm
             reactionsTime.push_back(tempTime);
             setActualTime(tempTime);
             gillespieReactionsSelected.push_back(0);
-            allTimes.push_back(tmpTimeElapsed.elapsed());
+            allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
             if(debugLevel >= RUNNING_VERSION)
                     cout << "\t\t\t|- NO REACTIONS AT THIS STEP" << endl;
@@ -6466,7 +6466,7 @@ bool environment::saveTimes(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_in
                 << gillespieReactionsSelected.at(tmpCurrentStep-1) << "\t"
                 << COPYOFallGillespieScores.at(gillespieReactionsSelected.at(tmpCurrentStep-1)).getIdReactionType() << "\t"
                 << COPYOFallGillespieScores.size() << "\t"
-                << allTimes.at(tmpCurrentStep-1) << "\t"
+                << (double)allTimes.at(tmpCurrentStep-1) << "\t"
                 << getTotalNumberOfSpecies() << "\t"
                 << getTotalNumberOfMolecules() << "\t"
                 << getTotalNumberOfComplexSpecies() << "\t"
