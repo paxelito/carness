@@ -330,9 +330,9 @@ int main (int argc, char *argv[]) {
 	MTRand rndDoubleGen; /// double random number generator
 	
 	/*---------------\
-        |                |
+    |                |
 	| INITIALIZATION |
-        |		 |
+    |       		 |
 	\ --------------*/ 
 	
 		/*----------------
@@ -386,7 +386,7 @@ int main (int argc, char *argv[]) {
 		if(!puddle->structureCoherenceCheckUp())
 		{
 			cout << endl;
-                        ExitWithError("structureCoherenceCheckUp", "PROBLEM WITH STRUCTURE COHERENCE... THE SIMULATION WILL BE ABORTED!!!");
+            ExitWithError("structureCoherenceCheckUp", "PROBLEM WITH STRUCTURE COHERENCE... THE SIMULATION WILL BE ABORTED!!!");
 		}
 	
 	
@@ -406,6 +406,7 @@ int main (int argc, char *argv[]) {
 		
         QTime timeElapsed; // timer creation
 		timeElapsed.start();
+        clock_t tStart = clock();
 		
 		if(puddle->getDebugLevel() >= RUNNING_VERSION)
 		{
@@ -458,6 +459,7 @@ int main (int argc, char *argv[]) {
 
 
                         timeElapsed.restart(); // Timer is restarted after each simulation
+                        tStart = clock();
                         actSTEP = 1;
                         previousStepLastStructuresSaving = 1;
                         previousStepLastTimesSaving = 1;
@@ -470,8 +472,7 @@ int main (int argc, char *argv[]) {
                         while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions())	)
                         {
                             // IF NUMBER OF MILLISECONDS IS LESS THAN THE MAX NUMBER
-                            if(( (acs_int)timeElapsed.elapsed() < (puddle->getMAXhours()*60*60*1000)) || (puddle->getMAXhours() == 0))
-                            //if(( (acs_int)timeElapsed.elapsed() < 1000) && (puddle->getMAXhours()>0))
+                            if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
                             {
                                 //GILLESPIE COMPUTATION
                                 if(!puddle->performGillespieComputation(rndDoubleGen, timeElapsed, actGEN, actSIM, actSTEP, a.arguments().at(2)))
@@ -489,7 +490,7 @@ int main (int argc, char *argv[]) {
                                                     << " - S: " << actSIM << "/" << totalNumberOfSimulations
                                                     << " - T: " << puddle->getActualTime() << "/" << puddle->getNseconds()
                                                     << " - R: " << actSTEP // << "/" << puddle->getNreactions()
-                                                    << " - CT: " << timeElapsed.elapsed()
+                                                    << " - CT (seconds): " << ((float)clock() - tStart) / CLOCKS_PER_SEC
                                                     << " - Gill: " << puddle->getNumberOfGillespieCOPYpossibleRcts() << endl
                                                     << "\t- ENVIRONMENT" << endl
                                                     << "\t\t|- S: " << puddle->getNspecies()
@@ -542,7 +543,7 @@ int main (int argc, char *argv[]) {
 
                                 actSTEP++; // step update
 
-                            }else{ // if(timeElapsed.elapsed() < (puddle->getMAXhours()*60*60*1000))
+                            }else{ // if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
                                 // Increase number of attempts
                                 puddle->increaseAttempts();
                                 puddle->resetConcentrationToInitialConditions();
@@ -602,7 +603,6 @@ int main (int argc, char *argv[]) {
 void saveToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
 {
 	// SAVE TO FILE INITIAL CONDITIONS
-	QString savingPath = tmpSavingPath;
 	if(!tmpEnvironment->saveSpeciesStructure(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveSpeciesStructure", "PROBLEM WITH SAVING SPECIES STRUCTURE TO FILE");
 	if(!tmpEnvironment->saveReactionsStructure(tmpGen, tmpSim, tmpStep, tmpSavingPath))
@@ -622,7 +622,6 @@ void saveToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int tmpG
 void saveTimesToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
 {
     // SAVE TO FILE INITIAL CONDITIONS
-    QString savingPath = tmpSavingPath;
     if(!tmpEnvironment->saveTimes(tmpGen, tmpSim, tmpStep, tmpSavingPath))
         ExitWithError("saveTimes", "PROBLEM WITH SAVING TIMES");
 }
@@ -638,7 +637,6 @@ void saveTimesToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int
 void saveInitialConditionsToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
 {
 	// SAVE TO FILE INITIAL CONDITIONS
-	QString savingPath = tmpSavingPath;
 	if(!tmpEnvironment->saveConfigurationFile(tmpSavingPath))
 		ExitWithError("saveConfigurationFile", "PROBLEM WITH SAVING CONFIGURATION FILE");	
 	if (tmpEnvironment->getInflux() > 0)

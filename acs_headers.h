@@ -30,9 +30,10 @@
 #include <deque>
 #include <cmath>
 #include <cstdlib>
+#include <clocale> // Probably this library can be removed after QT removing process will be finished
+#include <ctime>
 #include "mtrand.h"
-#include <locale.h> // Probably this library can be removed after QT removing process will be finished
-#include <time.h> // This include is necessary to compile on Windows 7
+
 
 // TYPEDEF
 

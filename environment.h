@@ -25,7 +25,7 @@ private:
     acs_double actualTime; // Total Simulation Real Time
     acs_double nSeconds; // Number of physical seconds
     acs_int nReactions; // MAX Number of reactions
-    acs_int nHours; // MAX number of hours
+    acs_double nHours; // MAX number of hours
     acs_int nAttempts; // MAX number of attempts for simulation
     acs_int Currentattempts; // Current number of temptatives
     acs_double timeStructuresSavingInterval; // Time between two successive files storing procedure
@@ -124,12 +124,12 @@ private:
     acs_double ratioBetweenNewGillTotGill; // gillespieNewSpeciesScore / gillespieTotalScore
     acs_double reverseReactionsGillScore; // the sum of the gillespie scores related to the reverse reactions
     acs_double ratioBetweenReverseAndTotalScore; // Ratio between the reverse reaction scores and all the reaction scores
-	QTime gillespiePartialTimer; // Gillespie algorithm computational time
-        vector<acs_int> gillespiePartialTimes;
-	QTime performReactionPartialTimer; // The time necessary for the evaluation of a new species
-        vector<acs_int> performReactionPartialTimes;
-	QTime remainingProcessesPartialTimer; // THe time needed for all the other procedure
-        vector<acs_int> remainingProcessesPartialTimes;
+    clock_t gillespiePartialTimer; // Gillespie algorithm computational time
+    vector<acs_double> gillespiePartialTimes;
+    clock_t performReactionPartialTimer; // The time necessary for the evaluation of a new species
+    vector<acs_double> performReactionPartialTimes;
+    clock_t remainingProcessesPartialTimer; // THe time needed for all the other procedure
+    vector<acs_double> remainingProcessesPartialTimes;
 
 	// METHODS ---------------------------|
 	
@@ -144,7 +144,7 @@ private:
 	acs_double getActualTime()const{return actualTime;}
 	acs_double getNseconds()const{return nSeconds;}
 	acs_int getNreactions()const{return nReactions;}
-    acs_int getMAXhours()const{return nHours;}
+    acs_double getMAXhours()const{return nHours;}
     acs_int getMAXattempts()const{return nAttempts;}
     acs_int getCurrentAttempts()const{return Currentattempts;}
 	acs_double getTimeStructuresSavingInterval()const{return timeStructuresSavingInterval;}

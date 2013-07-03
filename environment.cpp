@@ -100,7 +100,7 @@ environment::environment(QString tmpInitialPath)
             if(strLineSpletted[0] == "debugLevel") debugLevel = strLineSpletted[1].toInt();
 			if(strLineSpletted[0] == "timeStructuresSavingInterval") timeStructuresSavingInterval = strLineSpletted[1].toDouble();
             if(strLineSpletted[0] == "fileTimesSaveInterval") fileTimesSaveInterval = strLineSpletted[1].toDouble();
-            if(strLineSpletted[0] == "nHours") nHours = strLineSpletted[1].toInt();
+            if(strLineSpletted[0] == "nHours") nHours = strLineSpletted[1].toDouble();
             if(strLineSpletted[0] == "nAttempts") nAttempts = strLineSpletted[1].toInt();
 			
 			// ENVIRONMENTAL PARAMETERS
@@ -1382,7 +1382,8 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
         getline(myfile, strCnt, '\t');
         getline(myfile, strNrg, '\n');
 
-        allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
+        if(!strID.empty())
+            allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
                                          (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
                                          (acs_double)atof(strNrg.c_str())));
 
@@ -2553,7 +2554,7 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tm
 	// FOR EACH SINGLE SPECIES ALL POSSIBLE REACTIONS INVOLVING IT IS COMPUTED.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 	
 	// Initialize Time for the Gillespie Algorithm
-	gillespiePartialTimer.start();
+    gillespiePartialTimer = clock();
 	
 	for(acs_longInt mid = 0; mid < (acs_longInt)allSpecies.size(); mid++)
 	{
@@ -2965,9 +2966,9 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tm
 		} //end if total amount greater than 0
 	} // end for each species
 	
-	// Store gillespie computational time and start performReaction Times
-	gillespiePartialTimes.push_back(gillespiePartialTimer.elapsed());
-	performReactionPartialTimer.start();
+    // Store gillespie computational time and start performReaction Times
+    gillespiePartialTimes.push_back(((float)clock() - gillespiePartialTimer) / CLOCKS_PER_SEC);
+    performReactionPartialTimer = clock();
 
 	bool goReaction = true;
 	acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
@@ -3073,8 +3074,8 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tm
         } // end if((acs_longInt)allGillespieScores.size() > 0)
 
         // Store perform reaction time and start remaining processes timer
-        performReactionPartialTimes.push_back(performReactionPartialTimer.elapsed());
-        remainingProcessesPartialTimer.start();
+        performReactionPartialTimes.push_back(((float)clock() - performReactionPartialTimer) / CLOCKS_PER_SEC);
+        remainingProcessesPartialTimer = clock();
 
         // If the system is open influx and efflux processes are performed
         if(influx_rate > 0)
@@ -3113,7 +3114,7 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, QTime& tm
     gillespieCumulativeStepScoreList.clear();
 
     // Store remaining processes time
-    remainingProcessesPartialTimes.push_back(remainingProcessesPartialTimer.elapsed());
+    remainingProcessesPartialTimes.push_back(((float)clock() - remainingProcessesPartialTimer) / CLOCKS_PER_SEC);
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::performGillespieComputation end" << endl;
 
@@ -5599,8 +5600,6 @@ bool environment::complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGe
 void environment::updateSpeciesAges()
 {
     try{
-
-
         if((acs_longInt)allSpecies.size() > 0)
         {
             for(vector<species>::iterator tmpAllSpeciesIter = allSpecies.begin(); tmpAllSpeciesIter != allSpecies.end(); tmpAllSpeciesIter++)
@@ -5661,12 +5660,12 @@ void environment::showGlobalParameter()
 		out << "\t|- Number of Simulations: " << nSIM << endl;
 		out << "\t|- Number of Seconds: " << (double)nSeconds << endl;
 		out << "\t|- Number of Reactions Permitted: " << nReactions << endl;
-                out << "\t|- Max number of temptative in simulating the same network with different random seeds" << nAttempts << endl;
-                out << "\t|- Max number of hours of the simulation (computational time)" << nHours << endl;
+        out << "\t|- Max number of attempts in simulating the same network with different random seeds: " << nAttempts << endl;
+        out << "\t|- Max number of hours of the simulation (computational time): " << (double)nHours << endl;
 		out << "\t|- Last Firing disk species ID (in structure files upload configuration): " << lastFiringDiskSpeciesID << endl;
 		out << "\t|- time Structures Saving Interval: " << (double)timeStructuresSavingInterval << endl;
-                out << "\t|- file times Saving Interval: " << (double)fileTimesSaveInterval << endl;
-                out << "\t|- Complex Formation Simmetry: " << complexFormationSymmetry << endl;
+        out << "\t|- file times Saving Interval: " << (double)fileTimesSaveInterval << endl;
+        out << "\t|- Complex Formation Simmetry: " << complexFormationSymmetry << endl;
 		out << "\t|- Max lenght of non catalytic species: " << nonCatalyticMaxLength << endl;
 		cout << "\t|- Overall initial concentration: " << overallConcentration << endl;
 		cout << "\t|- Energy Carriers concentration: " << ECConcentration << endl;
@@ -6107,11 +6106,11 @@ bool environment::saveConfigurationFile(QString tmpStoringPath)
 	out << "# Number of max reactions permitted (step)" << endl;
 	out << "nReactions=" << nReactions << endl << endl;
 
-        out << "# Max number of hours (computational time) of the simulation (if 0 no limits are set)" << endl;
-        out << "nHours=" << nHours << endl << endl;
+    out << "# Max number of hours (computational time) of the simulation (if 0 no limits are set)" << endl;
+    out << "nHours=" << (double)nHours << endl << endl;
 
-        out << "# Number of attempts in same network / different random seed (if 0 no limits are set) " << endl;
-        out << "nAttempts=" << nAttempts << endl << endl;
+    out << "# Number of attempts in same network / different random seed (if 0 no limits are set) " << endl;
+    out << "nAttempts=" << nAttempts << endl << endl;
 	
 	out << "# random seed (random if 0)" << endl;
 	out << "randomSeed=" << (int)randomSeed << endl << endl;
@@ -6122,8 +6121,8 @@ bool environment::saveConfigurationFile(QString tmpStoringPath)
 	out << "# Save structures to file every..." << endl; 
 	out << "timeStructuresSavingInterval=" << (double)timeStructuresSavingInterval << endl << endl;
 
-        out << "# Save file times avery..." << endl;
-        out << "fileTimesSaveInterval=" << (double)fileTimesSaveInterval << endl << endl;
+    out << "# Save file times avery..." << endl;
+    out << "fileTimesSaveInterval=" << (double)fileTimesSaveInterval << endl << endl;
 	
 	out << "# ------------------------" << endl;
 	out << "# ENVIRONMENTAL PARAMETERS" << endl;
@@ -6473,9 +6472,9 @@ bool environment::saveTimes(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_in
                 << getTotalNumberOfComplexSpecies() << "\t"
                 << getTotalNumberOfComplexes() << "\t"
                 << getTotalNumberOfMonomers() << "\t"
-                << gillespiePartialTimes.at(tmpCurrentStep-1) << "\t"
-                << performReactionPartialTimes.at(tmpCurrentStep-1) << "\t"
-                << remainingProcessesPartialTimes.at(tmpCurrentStep-1) << "\t"
+                << (double)gillespiePartialTimes.at(tmpCurrentStep-1) << "\t"
+                << (double)performReactionPartialTimes.at(tmpCurrentStep-1) << "\t"
+                << (double)remainingProcessesPartialTimes.at(tmpCurrentStep-1) << "\t"
                 << (double)getRatioBetweenNewGillTotGill() << endl;
         }else{
             out << tmpCurrentStep << "\t"
