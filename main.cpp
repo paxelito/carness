@@ -317,9 +317,9 @@
 #include "acs_headers.h"
 #include "environment.h"
 
-void saveToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
-void saveTimesToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
-void saveInitialConditionsToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
+void saveToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
+void saveTimesToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
+void saveInitialConditionsToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
 
 int main (int argc, char *argv[]) {
 	
@@ -381,7 +381,7 @@ int main (int argc, char *argv[]) {
 		if(puddle->getDebugLevel() >= MEDIUM_DEBUG){puddle->printInitialCondition();}
 	
                 // SAVE TO FILE INITIAL CONDITIONS
-		saveInitialConditionsToFile(a.arguments().at(2), puddle, 0, 0, 0);
+        saveInitialConditionsToFile(argv[2], puddle, 0, 0, 0);
 		
 		if(!puddle->structureCoherenceCheckUp())
 		{
@@ -446,7 +446,7 @@ int main (int argc, char *argv[]) {
                     {
                         // Reset structures stats and set concentrations to initial values
                         puddle->resetConcentrationToInitialConditions();
-                        saveToFile(a.arguments().at(2), puddle, actGEN, actSIM, 0);
+                        saveToFile(argv[2], puddle, actGEN, actSIM, 0);
 
                     }
                         acs_double dataStoredCounter = 0;
@@ -523,7 +523,7 @@ int main (int argc, char *argv[]) {
                                 // SAVE STRUCTURES TO FILE EVERY puddle->getTimeStructuresSavingInterval() SECONDS
                                 if(puddle->getActualTime() >= (puddle->getTimeStructuresSavingInterval() + dataStoredCounter))
                                 {
-                                        saveToFile(a.arguments().at(2), puddle, actGEN, actSIM, actSTEP);
+                                        saveToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
                                         dataStoredCounter = dataStoredCounter + puddle->getTimeStructuresSavingInterval();                                        
                                         previousStepLastStructuresSaving = actSTEP; // save last step moment
                                 }
@@ -533,7 +533,7 @@ int main (int argc, char *argv[]) {
                                         (puddle->getActualTime() == 0) || (puddle->getFileTimesSavingInterval() == 0))
                                 {
                                     //cout << puddle->getActualTime() << " " << puddle->getFileTimesSavingInterval() << " " << TimesStoredCounter << endl;
-                                    saveTimesToFile(a.arguments().at(2), puddle, actGEN, actSIM, actSTEP);
+                                    saveTimesToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
                                     if(puddle->getActualTime() > 0)
                                     {
                                         TimesStoredCounter = TimesStoredCounter + puddle->getFileTimesSavingInterval();
@@ -560,10 +560,10 @@ int main (int argc, char *argv[]) {
                         // SAVE FINAL STRUCTURES TO FILE if actSTEP is different from the previous one
 
                         if(previousStepLastStructuresSaving < actSTEP-1)
-                            saveToFile(a.arguments().at(2), puddle, actGEN, actSIM, actSTEP);
+                            saveToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
 
                         if(previousStepLastTimesSaving < actSTEP-1)
-                            saveTimesToFile(a.arguments().at(2), puddle, actGEN, actSIM, actSTEP);
+                            saveTimesToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
 
                         //CHECK STRUCTURES, THE COHERENCE OF THE INTERNAL STRUCTURES ARE CONTROLLED
                         if(!puddle->structureCoherenceCheckUp())
@@ -594,65 +594,68 @@ int main (int argc, char *argv[]) {
 
 /**
  Save to file structures at step tmpStep
- @version 1.0
- @param QString tmpSavingPath Saving files path
+ @version 2.0
+ @param string tmpSavingPath Saving files path
  @param environment *tmpEnvironment environment instance reference
  @param tmpSim Current simulation
  @param acs_int Current step
+ @date 2013/07/13
  */
-void saveToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
+void saveToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
 {
 	// SAVE TO FILE INITIAL CONDITIONS
-	if(!tmpEnvironment->saveSpeciesStructure(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+    if(!tmpEnvironment->saveSpeciesStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveSpeciesStructure", "PROBLEM WITH SAVING SPECIES STRUCTURE TO FILE");
-	if(!tmpEnvironment->saveReactionsStructure(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+    if(!tmpEnvironment->saveReactionsStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveReactionsStructure", "PROBLEM WITH SAVING REACTIONS STRUCTURE TO FILE");
-	if(!tmpEnvironment->saveCatalysisStructure(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+    if(!tmpEnvironment->saveCatalysisStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveCatalysisStructure", "PROBLEM WITH SAVING CATALYSIS STRUCTURE TO FILE");	
 }
 
 /**
  Save TIMES to file
- @version 1.0
- @param QString tmpSavingPath Saving files path
+ @version 2.0
+ @param string tmpSavingPath Saving files path
  @param environment *tmpEnvironment environment instance reference
  @param tmpSim Current simulation
  @param acs_int Current step
+ @date 2013/07/03
  */
-void saveTimesToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
+void saveTimesToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
 {
     // SAVE TO FILE INITIAL CONDITIONS
-    if(!tmpEnvironment->saveTimes(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+    if(!tmpEnvironment->saveTimesSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
         ExitWithError("saveTimes", "PROBLEM WITH SAVING TIMES");
 }
 
 /**
  Save to file all the INITIAL structures
- @version 1.0
- @param QString tmpSavingPath Saving files path
+ @version 2.0
+ @param string tmpSavingPath Saving files path
  @param environment *tmpEnvironment environment instance reference
  @param tmpSim Current simulation
  @param acs_int Current step
+ @date 2013/07/03
  */
-void saveInitialConditionsToFile(QString tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
+void saveInitialConditionsToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
 {
 	// SAVE TO FILE INITIAL CONDITIONS
-	if(!tmpEnvironment->saveConfigurationFile(tmpSavingPath))
+    if(!tmpEnvironment->saveConfigurationFileSTD(tmpSavingPath))
 		ExitWithError("saveConfigurationFile", "PROBLEM WITH SAVING CONFIGURATION FILE");	
 	if (tmpEnvironment->getInflux() > 0)
 	{
-		if(!tmpEnvironment->saveInfluxStructure(tmpSavingPath))
+        if(!tmpEnvironment->saveInfluxStructureSTD(tmpSavingPath))
 			ExitWithError("saveInfluxStructure", "PROBLM WITH SAVING SPECIES INFLUX FILE");
 	}
         if(tmpEnvironment->getEnergy() <= 1)
         {
-            if(!tmpEnvironment->saveNrgBoolFncStructure(tmpSavingPath))
+            if(!tmpEnvironment->saveNrgBoolFncStructureSTD(tmpSavingPath))
                     ExitWithError("saveNrgBoolFncStructure", "PROBLM WITH SAVING ENERGY BOOLEAN FUNCTIONS FILE");
         }
-	if(!tmpEnvironment->saveSpeciesStructure(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+    if(!tmpEnvironment->saveSpeciesStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveSpeciesStructure", "PROBLEM WITH SAVING INITIAL SPECIES STRUCTURE TO FILE");
-	if(!tmpEnvironment->saveReactionsStructure(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+    if(!tmpEnvironment->saveReactionsStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveReactionsStructure", "PROBLEM WITH SAVING INITIAL REACTIONS STRUCTURE TO FILE");
-	if(!tmpEnvironment->saveCatalysisStructure(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+    if(!tmpEnvironment->saveCatalysisStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveCatalysisStructure", "PROBLEM WITH SAVING INITIAL CATALYSIS STRUCTURE TO FILE");
 }

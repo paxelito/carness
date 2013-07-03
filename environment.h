@@ -333,11 +333,11 @@ private:
 						 acs_longInt tmpIdReaction, acs_longInt tmpIdCatalysis, MTRand& tmp__RndDoubleGen);
 	bool perform_endo_Cleavage(acs_longInt tmpSubstrate, acs_longInt tmpProduct_I, acs_longInt tmpProduct_II,
 							   acs_int tmpNRGside, acs_longInt tmpIdReaction, acs_longInt tmpIdCatalysis, MTRand& tmp__RndDoubleGen);
-        bool performComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, MTRand& tmp__RndDoubleGen);
-        bool perform_endo_ComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, acs_int tmpNRGSide, MTRand& tmp__RndDoubleGen);
+    bool performComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, MTRand& tmp__RndDoubleGen);
+    bool perform_endo_ComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, acs_int tmpNRGSide, MTRand& tmp__RndDoubleGen);
 	bool performComplexDissociation(acs_longInt tmpComplex, acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, MTRand& tmp__RndDoubleGen);
 	bool performMoleculeEfflux(acs_longInt tmpSpecies, MTRand& tmp__RndDoubleGen);
-        //TR bool performPhosphorilation(acs_longInt tmpSpecies);
+    //TR bool performPhosphorilation(acs_longInt tmpSpecies);
 	bool performEnergyEfflux(MTRand& tmp__RndDoubleGen);
 	
 	// COHERENCE CONTROL FUNCTION
@@ -347,19 +347,29 @@ private:
         bool checkAvailability(acs_longInt tmpMI, acs_longInt tmpMII, acs_longInt tmpQI, acs_longInt tmpQII);
 	
 	// SAVE TO FILE FUNCTIONS
-	bool saveConfigurationFile(QString tmpStoringPath);
-	bool saveInfluxStructure(QString tmpStoringPath);
-    bool saveNrgBoolFncStructure(QString tmpStoringPath);
+    //TR bool saveConfigurationFile(QString tmpStoringPath);
+    //TR bool saveInfluxStructure(QString tmpStoringPath);
+    //TR bool saveNrgBoolFncStructure(QString tmpStoringPath);
+    //TR bool saveSpeciesStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
+    //TR bool saveReactionsStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
+    //TR bool saveCatalysisStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
+    //TR bool saveReactionsParameters(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, QString tmp__StoringPath, acs_int tmpRctType, acs_longInt tmpCat, acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III);
+    //TR bool saveLivingSpeciesID(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, QString tmp__StoringPath);
+
+    bool saveConfigurationFileSTD(string tmpStoringPath);
+    bool saveInfluxStructureSTD(string tmpStoringPath);
+    bool saveNrgBoolFncStructureSTD(string tmpStoringPath);
     QString zeroBeforeStringNumber(acs_int tmpTotN, acs_int tmpCurrentN);
     string zeroBeforeStringNumberSTD(acs_int tmpTotN, acs_int tmpCurrentN);
-	bool saveSpeciesStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
-	bool saveReactionsStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
-	bool saveCatalysisStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
+    bool saveSpeciesStructureSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, string tmpStoringPath);
+    bool saveReactionsStructureSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, string tmpStoringPath);
+    bool saveCatalysisStructureSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, string tmpStoringPath);
 	bool saveTimes(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
-	bool saveReactionsParameters(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, QString tmp__StoringPath, acs_int tmpRctType, 
-								 acs_longInt tmpCat, acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III);
-	bool saveLivingSpeciesID(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, QString tmp__StoringPath);
-	bool saveLivingSpeciesAmount(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath);
+    bool saveTimesSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, string tmpStoringPath);
+    bool saveReactionsParametersSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, string tmp__StoringPath, acs_int tmpRctType,
+                                 acs_longInt tmpCat, acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III);
+    bool saveLivingSpeciesIDSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, string tmp__StoringPath);
+    bool saveLivingSpeciesAmount(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath);
 	bool saveLivingSpeciesConcentration(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath);
 	//bool saveGillespieStructure(acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
 	//bool saveAdjacentStructures(acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
