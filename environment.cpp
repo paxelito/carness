@@ -70,21 +70,21 @@ environment::environment()
  @version 1.0
  @param tmpInitialPath
  */
-environment::environment(QString tmpInitialPath)
+/*environment::environment(QString tmpInitialPath) //TR
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment start" << endl;
 
 	// CONFIGURATION FILE PATH CREATION
-	QString confFilePath = tmpInitialPath + "acsm2s.conf";
-	QTextStream prompt(stdout);
-	if(debugLevel >= RUNNING_VERSION){prompt << "|- Configuration File path --> " << confFilePath << endl;}
+    QString confFilePath = tmpInitialPath + "acsm2s.conf";
+    QTextStream prompt(stdout);
+    if(debugLevel >= RUNNING_VERSION){prompt << "|- Configuration File path --> " << confFilePath << endl;}
 	//OPEN FILE
-	QFile fid(confFilePath);
-	if(!fid.open(QIODevice::ReadOnly | QIODevice::Text))
+    QFile fid(confFilePath);
+    if(!fid.open(QIODevice::ReadOnly | QIODevice::Text))
 		ExitWithError("environment", "ERROR: Configuration file has not been found, please check path!!!");
 //	   exit(EXIT_FAILURE);
-	
-	QTextStream in(&fid);
+
+    QTextStream in(&fid);
 	while(!in.atEnd())
 	{
 		QString strLine = in.readLine();
@@ -132,7 +132,7 @@ environment::environment(QString tmpInitialPath)
 			if(strLineSpletted[0] == "influx_rate") influx_rate = strLineSpletted[1].toDouble();
 						
 		}
-	}
+    }
 
         if(nSeconds < timeStructuresSavingInterval)
             ExitWithError("environment::environment","No Structures will be saved during the simulation");
@@ -177,9 +177,125 @@ environment::environment(QString tmpInitialPath)
         internalTimesStoredCounter = 0;
         // TO BE PARAMETRIZED
         Currentattempts = 0;
-	resetReactionsCounter();
+    resetReactionsCounter();
 		
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment end" << endl;
+
+}*/
+
+/**
+ Environment Constructor
+ @version 1.0
+ @param tmpInitialPath
+ @date 2013/07/04
+ */
+environment::environment(string tmpInitialPath)
+{
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment start" << endl;
+
+    // CONFIGURATION FILE PATH CREATION
+    string confFilePath = tmpInitialPath + "acsm2s.conf";
+
+    ifstream myfile;
+    myfile.open(confFilePath.c_str());
+    string strID;
+    vector<string> linered;
+    while (myfile.good())
+    {
+        getline(myfile, strID);
+        if(!strID.empty())
+            if(strID.c_str()[0] != '#'){
+                cout << strID << endl;
+                linered = split(strID, "=");
+                if(linered[0] == "nGEN") nGEN = atoi(linered[1].c_str());
+                if(linered[0] == "nSIM") nSIM = atoi(linered[1].c_str());
+                if(linered[0] == "nSeconds") nSeconds = atof(linered[1].c_str());
+                if(linered[0] == "nReactions") nReactions = atoi(linered[1].c_str());
+                if(linered[0] == "randomSeed") randomSeed = atoi(linered[1].c_str());
+                if(linered[0] == "debugLevel") debugLevel = atoi(linered[1].c_str());
+                if(linered[0] == "timeStructuresSavingInterval") timeStructuresSavingInterval = atof(linered[1].c_str());
+                if(linered[0] == "fileTimesSaveInterval") fileTimesSaveInterval = atof(linered[1].c_str());
+                if(linered[0] == "nHours") nHours = atof(linered[1].c_str());
+                if(linered[0] == "nAttempts") nAttempts = atoi(linered[1].c_str());
+
+                // ENVIRONMENTAL PARAMETERS
+                if(linered[0] == "lastFiringDiskSpeciesID") lastFiringDiskSpeciesID = atoi(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE
+                if(linered[0] == "overallConcentration") overallConcentration = atof(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE
+                if(linered[0] == "ECConcentration") ECConcentration = atof(linered[1].c_str()); // DA TRASFORMARE NELLA VARIABILE INDICANTE LA QUANTITA DI CARRIER SEMPRE PRESENTI
+                if(linered[0] == "alphabet") alphabet = linered[1];
+                if(linered[0] == "volume") volume = atof(linered[1].c_str());
+
+                // DYNAMIC PARAMETERS
+                if(linered[0] == "energy") energy = atoi(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE, IL TUTTO VERRA' SOSTITUITO DALLA FUNZIONE BOOLEANA
+                if(linered[0] == "ratioSpeciesEnergizable") ratioSpeciesEnergizable = atof(linered[1].c_str());
+                if(linered[0] == "complexFormationSymmetry") complexFormationSymmetry = atoi(linered[1].c_str());
+                if(linered[0] == "nonCatalyticMaxLength") nonCatalyticMaxLength = atoi(linered[1].c_str());
+                if(linered[0] == "reactionProbability") reactionProbability = atof(linered[1].c_str());
+                if(linered[0] == "cleavageProbability") cleavageProbability = atof(linered[1].c_str());
+                if(linered[0] == "reverseReactions") reverseReactions = atoi(linered[1].c_str());
+                if(linered[0] == "revRctRatio") revRctRatio = atof(linered[1].c_str());
+                if(linered[0] == "K_ass") K_ass = atof(linered[1].c_str());
+                if(linered[0] == "K_diss") K_diss = atof(linered[1].c_str());
+                if(linered[0] == "K_cpx") K_cpx = atof(linered[1].c_str());
+                if(linered[0] == "K_cpxDiss") K_cpxDiss = atof(linered[1].c_str());
+                if(linered[0] == "K_nrg") K_nrg = atof(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE
+                if(linered[0] == "K_nrg_decay") K_nrg_decay = atof(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE
+                if(linered[0] == "moleculeDecay_KineticConstant") moleculeDecay_KineticConstant = atof(linered[1].c_str());
+                if(linered[0] == "maxLOut") maxLOut = atoi(linered[1].c_str());
+                if(linered[0] == "solubility_threshold") solubility_threshold = atoi(linered[1].c_str());
+                if(linered[0] == "diffusion_contribute") diffusion_contribute = atof(linered[1].c_str());
+                if(linered[0] == "influx_rate") influx_rate = atof(linered[1].c_str());
+            }
+    }
+    myfile.close();
+    //OPEN FILE
+
+    if(nSeconds < timeStructuresSavingInterval)
+        ExitWithError("environment::environment","No Structures will be saved during the simulation");
+
+    if(nSeconds < fileTimesSaveInterval)
+        ExitWithError("environment::environment","No times file will be saved during the simulation");
+
+    if(debugLevel >= RUNNING_VERSION)
+        showGlobalParameter();
+    //IF RANDOM SEED IS 0 IT HAS TO BE CREATED RANDOMLY
+    if(randomSeed == 0)
+    {
+        //randomSeed = getIntRandom(1, RANDOMRANGE, tmpRndDoubleGen);
+        srand(time(0));
+        randomSeed = rand();
+        if(debugLevel >= RUNNING_VERSION)
+            cout << "|- New random seed -> " << randomSeed << endl;
+    }
+
+    if(energy == 1)
+        nrgBoolFlag = ENERGYBASED;
+    else
+        nrgBoolFlag = ENERGYFREE;
+
+    // INITIALIZE THE REFILL TIMER
+    timeSinceTheLastInFlux = 0;
+    // INITIALIZE TIME TO 0
+    actualTime = 0;
+
+    numberOfSpecies = 0;
+    numberOfNewSpecies = 0;
+    numberOfMolecules = 0;
+    numberOfNewMolecules = 0;
+    numberOfCpx = 0;
+    numberOfCpxMols = 0;
+    decimalMoleculesToEfflux = 0;
+    decimalMoleculesToLoad = 0;
+    decimalMoleculesToUNLOAD = 0;
+    gillespieTotalScore = 0;
+    gillespieNewSpeciesScore = 0;
+    ratioBetweenNewGillTotGill = 0;
+    internalTimesStoredCounter = 0;
+    // TO BE PARAMETRIZED
+    Currentattempts = 0;
+    resetReactionsCounter();
+
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment end" << endl;
 
 }
 
@@ -2506,7 +2622,7 @@ bool environment::checkAvailability(acs_longInt tmpMI, acs_longInt tmpMII, acs_l
  @param tmpActSTEP actual step (reaction)
  @param tmpStoringPath path where results are stored
 */
-bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, QString tmpStoringPath)
+bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::performGillespieComputation start" << endl;
 	
@@ -4281,11 +4397,9 @@ bool environment::performEnergyEfflux(MTRand& tmp__RndDoubleGen)
  @param MTRand& tmp_RndDoubleGen random generator
  */
 bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleGen, acs_int tmp_ActGEN, acs_int tmp_ActSIM,
-                                  acs_int tmp_ActSTEP, QString tmp_StoringPath)
+                                  acs_int tmp_ActSTEP, string tmp_StoringPath)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performReaction start" << endl;
-
-    string temporaryStrPath = tmp_StoringPath.toStdString();
 
 	bool reactionFlag = true;
 	
@@ -4321,13 +4435,13 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
                         if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
                                 (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
                         {
-                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, temporaryStrPath, allGillespieScores.at(reaction_u).getIdReactionType(),
+                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
                                                     allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),
                                                     allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());
 
-                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, temporaryStrPath);
-                            saveLivingSpeciesAmount(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            saveLivingSpeciesConcentration(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+                            saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+                            saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
                             if(getActualTime() > 0)
                             {
                                 internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
@@ -4351,7 +4465,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
                            (getActualTime() == 0))
                         {
                             try{
-                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, temporaryStrPath, allGillespieScores.at(reaction_u).getIdReactionType(),
+                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
                                                     allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),
                                                     allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());
                             }
@@ -4362,9 +4476,9 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
                             ExitWithError("","exceptionerrorthrown");
                             }
 
-                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, temporaryStrPath);
-                            saveLivingSpeciesAmount(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            saveLivingSpeciesConcentration(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+                            saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+                            saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
                             if(getActualTime() > 0)
                             {
                                 internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
@@ -4383,13 +4497,13 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
                         if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
                            (getActualTime() == 0))
                         {
-                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, temporaryStrPath, allGillespieScores.at(reaction_u).getIdReactionType(),
+                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
                                                                             allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
                                                                             allGillespieScores.at(reaction_u).getMolIII());
 
-                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, temporaryStrPath);
-                            saveLivingSpeciesAmount(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            saveLivingSpeciesConcentration(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+                            saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+                            saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
                             if(getActualTime() > 0)
                             {
                                 internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
@@ -4409,13 +4523,13 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
                         if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
                            (getActualTime() == 0))
                         {
-                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, temporaryStrPath, allGillespieScores.at(reaction_u).getIdReactionType(),
+                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
                                                                             allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
                                                                             allGillespieScores.at(reaction_u).getMolIII());
 
-                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, temporaryStrPath);
-                            saveLivingSpeciesAmount(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            saveLivingSpeciesConcentration(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+                            saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+                            saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
                             if(getActualTime() > 0)
                             {
                                 internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
@@ -5639,51 +5753,50 @@ void environment::showGlobalParameter()
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::showGlobalParameter start" << endl;
 
-	QTextStream out(stdout);
 	if(debugLevel >= RUNNING_VERSION)
 	{ 
-		out << endl << endl;
-        out << "|---------------------------------------------------------------------------------|" << endl;
-        out << "|   ****         ***   *     *          *****   *****                             |" << endl;
-        out << "|  *            *   *  **    *         *       *                                  |" << endl;
-        out << "| *        ***  *   *  * *   *  ****   *       *                                  |" << endl;
-        out << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 3.2b20130403.51   |" << endl;
-        out << "| *       ****  **     *   * *  ****        *       *                             |" << endl;
-        out << "|  *      *  *  * *    *    **  *           *       *                             |"  << endl;
-        out << "|   ****  ****  *  *   *     *   ***   *****   *****                              |" << endl;
-        out << "|---------------------------------------------------------------------------------|" << endl;
-		out << endl << endl;
+        cout << endl << endl;
+        cout << "|---------------------------------------------------------------------------------|" << endl;
+        cout << "|   ****         ***   *     *          *****   *****                             |" << endl;
+        cout << "|  *            *   *  **    *         *       *                                  |" << endl;
+        cout << "| *        ***  *   *  * *   *  ****   *       *                                  |" << endl;
+        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 3.2b20130403.51   |" << endl;
+        cout << "| *       ****  **     *   * *  ****        *       *                             |" << endl;
+        cout << "|  *      *  *  * *    *    **  *           *       *                             |"  << endl;
+        cout << "|   ****  ****  *  *   *     *   ***   *****   *****                              |" << endl;
+        cout << "|---------------------------------------------------------------------------------|" << endl;
+        cout << endl << endl;
 
 		//TR if(onlyEnvironmentCreation)
 		//TR 	out << "\t|-ONLY THE ENVIRONMENT WILL BE CREATED..." << endl; 
-		out << "|- GLOBAL PARAMETERS" << endl;
-		out << "\t|- Number of Generations: " << nGEN << endl;
-		out << "\t|- Number of Simulations: " << nSIM << endl;
-		out << "\t|- Number of Seconds: " << (double)nSeconds << endl;
-		out << "\t|- Number of Reactions Permitted: " << nReactions << endl;
-        out << "\t|- Max number of attempts in simulating the same network with different random seeds: " << nAttempts << endl;
-        out << "\t|- Max number of hours of the simulation (computational time): " << (double)nHours << endl;
-		out << "\t|- Last Firing disk species ID (in structure files upload configuration): " << lastFiringDiskSpeciesID << endl;
-		out << "\t|- time Structures Saving Interval: " << (double)timeStructuresSavingInterval << endl;
-        out << "\t|- file times Saving Interval: " << (double)fileTimesSaveInterval << endl;
-        out << "\t|- Complex Formation Simmetry: " << complexFormationSymmetry << endl;
-		out << "\t|- Max lenght of non catalytic species: " << nonCatalyticMaxLength << endl;
+        cout << "|- GLOBAL PARAMETERS" << endl;
+        cout << "\t|- Number of Generations: " << nGEN << endl;
+        cout << "\t|- Number of Simulations: " << nSIM << endl;
+        cout << "\t|- Number of Seconds: " << (double)nSeconds << endl;
+        cout << "\t|- Number of Reactions Permitted: " << nReactions << endl;
+        cout << "\t|- Max number of attempts in simulating the same network with different random seeds: " << nAttempts << endl;
+        cout << "\t|- Max number of hours of the simulation (computational time): " << (double)nHours << endl;
+        cout << "\t|- Last Firing disk species ID (in structure files upload configuration): " << lastFiringDiskSpeciesID << endl;
+        cout << "\t|- time Structures Saving Interval: " << (double)timeStructuresSavingInterval << endl;
+        cout << "\t|- file times Saving Interval: " << (double)fileTimesSaveInterval << endl;
+        cout << "\t|- Complex Formation Simmetry: " << complexFormationSymmetry << endl;
+        cout << "\t|- Max lenght of non catalytic species: " << nonCatalyticMaxLength << endl;
 		cout << "\t|- Overall initial concentration: " << overallConcentration << endl;
 		cout << "\t|- Energy Carriers concentration: " << ECConcentration << endl;
 		cout << "\t|- Reaction Probability: " << reactionProbability << endl;
 		cout << "\t|- cleavage Probability: " << cleavageProbability << endl;
 		cout << "\t|- Reverse Reactions: " << reverseReactions << endl;
-                cout << "\t|- Ratio between forward and backward reactions: " << revRctRatio << endl;
+        cout << "\t|- Ratio between forward and backward reactions: " << revRctRatio << endl;
 		cout << "\t|- ASSOCIATION kinetic constant: " << K_ass << endl;
 		cout << "\t|- DISSOCIATION kinetic constant: " << K_diss << endl;
 		cout << "\t|- COMPLEX FORMATION kinetic constant: " << K_cpx << endl;
 		cout << "\t|- COMPLEX dissociation : " << K_cpxDiss << endl;
 		cout << "\t|- ENERGY PHOSFORILATION constant: " << K_nrg << endl;
-                cout << "\t|- ENERGY DECAY CONSTANT: " << K_nrg_decay << endl;
+        cout << "\t|- ENERGY DECAY CONSTANT: " << K_nrg_decay << endl;
 		cout << "\t|- SOLUBILITY THRESHOLD: " << solubility_threshold << endl;
         if(influx_rate > 0)
 		{
-			out << "\t|- The system is OPEN" << endl;
+            cout << "\t|- The system is OPEN" << endl;
 			cout << "\t|- Max out length: " << maxLOut << endl;
 			cout << "\t|- MOLECULE DECAY kinetic constant: " << moleculeDecay_KineticConstant << endl;
 			cout << "\t|- Refill rate: " << influx_rate << " conc/sec" << endl;
@@ -6027,7 +6140,7 @@ void environment::storeInitialStructures()
  @param acs_int tmpTotN Total N
  @param acs_int tmpCurrentN current N
  */
-QString environment::zeroBeforeStringNumber(acs_int tmpTotN, acs_int tmpCurrentN)
+/*QString environment::zeroBeforeStringNumber(acs_int tmpTotN, acs_int tmpCurrentN) //TR
 {
 	QString strZeroReturned = "";
     QString tempQStrTmpTotN;
@@ -6041,7 +6154,7 @@ QString environment::zeroBeforeStringNumber(acs_int tmpTotN, acs_int tmpCurrentN
 	}
 	
 	return strZeroReturned;
-}
+}*/
 
 /**
  This function creates a chain of zero as STRING according to tmpTotN and tmpCurrent N in order to make possible a sorting
@@ -6848,7 +6961,7 @@ bool environment::saveCatalysisStructureSTD(acs_int tmpCurrentGen, acs_int tmpCu
  The file is saved in the directory indicated as a second parameter in the run command
  @version 1.0
  */
-bool environment::saveTimes(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath)
+/*bool environment::saveTimes(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath)  //TR
 {
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveTimes start" << endl;
     if(debugLevel >= SMALL_DEBUG)
@@ -6917,7 +7030,7 @@ bool environment::saveTimes(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_in
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveTimes end" << endl;
 
     return true;
-}
+}*/
 
 /**
  Save the reactions times in a file named times_[currentSim].csv. Standard C++
@@ -7232,7 +7345,7 @@ bool environment::saveLivingSpeciesIDSTD(acs_int tmp__CurrentGen, acs_int tmp__C
  The file is saved in the directory indicated as a second parameter in the run command
  @version 1.0
  */
-bool environment::saveLivingSpeciesAmount(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath)
+/*bool environment::saveLivingSpeciesAmount(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath) //TR
 {
     try{
 
@@ -7284,6 +7397,72 @@ bool environment::saveLivingSpeciesAmount(acs_int tmp__CurrentGen, acs_int tmp__
     }
 
 	return true;
+}*/
+
+/**
+ Save living species total AMOUNT in a file named livingAmount_[CurrentGen]_[currentSim].csv.
+ The file is saved in the directory indicated as a second parameter in the run command - Standard C++
+ @version 1.0
+ @date 2013/07/03
+ */
+bool environment::saveLivingSpeciesAmountSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath)
+{
+    try{
+        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveLivingSpeciesAmountSTD start" << endl;
+        if(debugLevel >= SMALL_DEBUG)
+            cout << "\t|- Saving reaction parameters to file...";
+
+        stringstream strCurrentGen;
+        stringstream strCurrentSim;
+        string strZeroGenBefore = zeroBeforeStringNumberSTD(nGEN, tmp__CurrentGen);
+        string strZeroSimBefore = zeroBeforeStringNumberSTD(pow(double(nSIM), double(tmp__CurrentGen)), tmp__CurrentSim);
+        strCurrentGen << tmp__CurrentGen;
+        strCurrentSim << tmp__CurrentSim;
+
+        string strFilelivingSpecies = tmp__StoringPath + "/livingAmount_" + strZeroGenBefore + strCurrentGen.str() + "_" +
+                strZeroSimBefore + strCurrentSim.str() + ".csv";
+
+        ofstream fidFile;
+        try{
+            fidFile.open(strFilelivingSpecies.c_str(), ios::out | ios::app);
+        }
+        catch(exception&e)
+        {
+            cerr << "exceptioncaught:" << e.what() << endl;
+            ExitWithError("error in method saveTimesSTD","exceptionerrorthrown");
+        }
+
+        acs_int firstSpeciesControl = 0;
+        for(acs_longInt i = 0; i < (acs_longInt)allSpecies.size(); i++)
+        {
+            if((allSpecies.at(i).getAmount() > 0) & (allSpecies.at(i).getComplexCutPnt() == 0))
+            {
+                if(firstSpeciesControl != 0)
+                {
+                    fidFile << "\t" << allSpecies.at(i).getAmount();
+                }else{
+                    fidFile << allSpecies.at(i).getAmount();
+                    firstSpeciesControl++;
+                }
+            }
+        }
+        fidFile << endl;
+        fidFile.close();
+        if(debugLevel >= SMALL_DEBUG)
+            cout << "OK" << endl;
+
+        COPYOFallGillespieScores.clear();
+
+        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveLivingSpeciesAmountSTD end" << endl;
+
+    }
+    catch(exception&e)
+    {
+        cerr << "exceptioncaught:" << e.what() << endl;
+        ExitWithError("error in saveLivingSpeciesAmount method","exceptionerrorthrown");
+    }
+
+    return true;
 }
 
 /**
@@ -7291,7 +7470,7 @@ bool environment::saveLivingSpeciesAmount(acs_int tmp__CurrentGen, acs_int tmp__
  The file is saved in the directory indicated as a second parameter in the run command
  @version 1.0
  */
-bool environment::saveLivingSpeciesConcentration(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath)
+/*bool environment::saveLivingSpeciesConcentration(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath) //TR
 {
     try{
 
@@ -7343,6 +7522,70 @@ bool environment::saveLivingSpeciesConcentration(acs_int tmp__CurrentGen, acs_in
     }
 
 	return true;
+}*/
+
+/**
+ Save living species total CONCENTRATION in a file named livingAmount_[CurrentGen]_[currentSim].csv.
+ The file is saved in the directory indicated as a second parameter in the run command
+ @version 1.0
+ @date 2013/07/03
+ */
+bool environment::saveLivingSpeciesConcentrationSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath)
+{
+    try{
+        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveLivingSpeciesConcentrationSTD start" << endl;
+        if(debugLevel >= SMALL_DEBUG)
+            cout << "\t|- Saving reaction parameters to file...";
+
+        stringstream strCurrentGen;
+        stringstream strCurrentSim;
+        string strZeroGenBefore = zeroBeforeStringNumberSTD(nGEN, tmp__CurrentGen);
+        string strZeroSimBefore = zeroBeforeStringNumberSTD(pow(double(nSIM), double(tmp__CurrentGen)), tmp__CurrentSim);
+        strCurrentGen << tmp__CurrentGen;
+        strCurrentSim << tmp__CurrentSim;
+        string strFilelivingSpecies = tmp__StoringPath + "/livingConcentration_" + strZeroGenBefore + strCurrentGen.str() + "_" +
+                strZeroSimBefore + strCurrentSim.str() + ".csv";
+
+        ofstream fidFile;
+        try{
+            fidFile.open(strFilelivingSpecies.c_str(), ios::out | ios::app);
+        }
+        catch(exception&e)
+        {
+            cerr << "exceptioncaught:" << e.what() << endl;
+            ExitWithError("error in method saveTimesSTD","exceptionerrorthrown");
+        }
+        acs_int firstSpeciesControl = 0;
+        for(acs_longInt i = 0; i < (acs_longInt)allSpecies.size(); i++)
+        {
+            if((allSpecies.at(i).getAmount() > 0) & (allSpecies.at(i).getComplexCutPnt() == 0))
+            {
+                if(firstSpeciesControl != 0)
+                {
+                    fidFile << "\t" << (double)allSpecies.at(i).getConcentration();
+                }else{
+                    fidFile << (double)allSpecies.at(i).getConcentration();
+                    firstSpeciesControl++;
+                }
+            }
+        }
+        fidFile << endl;
+        fidFile.close();
+        if(debugLevel >= SMALL_DEBUG)
+            cout << "OK" << endl;
+
+        COPYOFallGillespieScores.clear();
+
+        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveLivingSpeciesConcentrationSTD end" << endl;
+
+    }
+    catch(exception&e)
+    {
+        cerr << "exceptioncaught:" << e.what() << endl;
+        ExitWithError("error in saveLivingSpeciesConcentration method","exceptionerrorthrown");
+    }
+
+    return true;
 }
 
 ///////////////////////////////////

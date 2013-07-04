@@ -273,4 +273,27 @@ bool ExitWithError(string strFunctionName, string strError) {
         return true;
 }
 
+/**
+  Function to split a string and save tokens in a vector
+  */
+vector<string> split(string str,const char* delim)
+{
+    char * writable = new char[str.size() + 1];
+    std::copy(str.begin(), str.end(), writable);
+    writable[str.size()] = '\0'; // don't forget the terminating 0
+
+    char* token = strtok(writable,delim);
+
+    vector<string> result;
+
+    while(token != NULL)
+    {
+        result.push_back(token);
+        token = strtok(NULL,delim);
+    }
+
+    delete[] writable;
+    return result;
+}
+
 

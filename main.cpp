@@ -323,7 +323,7 @@ void saveInitialConditionsToFile(string tmpSavingPath, environment *tmpEnvironme
 
 int main (int argc, char *argv[]) {
 	
-	QCoreApplication a(argc, argv);
+    //TR QCoreApplication a(argc, argv);
 
     setlocale(LC_NUMERIC,"en_US"); //TR Check whether or not it can be removed when C++ standard
 	
@@ -340,7 +340,8 @@ int main (int argc, char *argv[]) {
 		-----------------*/ 
 
         // Declare and inizialize the environment
-		environment* puddle = new environment(a.arguments().at(1));
+        //environment* puddle = new environment(a.arguments().at(1));
+        environment* puddle = new environment(argv[1]);
 	
 		//INITIZIALIZE PSEUDO RANDOM NUMBER GENERATOR
 		rndDoubleGen.seed(puddle->getRandomSeed());
@@ -475,7 +476,7 @@ int main (int argc, char *argv[]) {
                             if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
                             {
                                 //GILLESPIE COMPUTATION
-                                if(!puddle->performGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, a.arguments().at(2)))
+                                if(!puddle->performGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
                                         ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
 
                                 // DISPLAY SIMULATION CONTROL VARIABLES
@@ -584,7 +585,8 @@ int main (int argc, char *argv[]) {
 					
 	//DELETE ALL MAIN HEAP OBJECTS
 	delete puddle;
-	a.quit();
+    //TR a.quit();
+    return 0;
  }
 
 

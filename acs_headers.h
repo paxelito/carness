@@ -13,12 +13,8 @@
 #define ACS_HEADERS
 
 // LIBRARIES
-//prova svn QT cretor
 
-#include <QtCore/QCoreApplication>
-#include <QStringList>
-#include <QTextStream>
-#include <QFile>
+#include <stdio.h>
 #include <iostream>
 #include <fstream>
 #include <string>
