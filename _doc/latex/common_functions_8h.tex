@@ -1,5 +1,5 @@
-\hypertarget{common_functions_8h}{\section{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/common\-Functions.h File Reference}
-\label{common_functions_8h}\index{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/common\-Functions.\-h@{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/common\-Functions.\-h}}
+\hypertarget{common_functions_8h}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/common\-Functions.h File Reference}
+\label{common_functions_8h}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/common\-Functions.\-h@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/common\-Functions.\-h}}
 }
 {\ttfamily \#include \char`\"{}acs\-\_\-headers.\-h\char`\"{}}\\*
 \subsection*{Functions}
@@ -24,6 +24,8 @@ int \hyperlink{common_functions_8h_ab210458a0dbaa0cc2f245926c7aa82ef}{return\-Se
 \hyperlink{acs__headers_8h_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{common_functions_8h_aaaa7233fe68b91b6333e2729a2d619a1}{round} (\hyperlink{acs__headers_8h_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} tmp\-X)
 \item 
 string \hyperlink{common_functions_8h_a1a13653eb649b6fc74090deecddf1028}{dec2bin} (\hyperlink{acs__headers_8h_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-Int)
+\item 
+vector$<$ string $>$ \hyperlink{common_functions_8h_a4d1aa74fac80ae0275c056575fdb6626}{split} (string str, const char $\ast$delim)
 \item 
 bool \hyperlink{common_functions_8h_aa678d0a98232158c48108227b98de4b6}{Exit\-With\-Error} (string str\-Function\-Name, string str\-Error)
 \end{DoxyCompactItemize}
@@ -199,4 +201,16 @@ Definition at line 124 of file common\-Functions.\-cpp.
 Function to round double numbers in integers 
 
 Definition at line 229 of file common\-Functions.\-cpp.
+
+\hypertarget{common_functions_8h_a4d1aa74fac80ae0275c056575fdb6626}{\index{common\-Functions.\-h@{common\-Functions.\-h}!split@{split}}
+\index{split@{split}!commonFunctions.h@{common\-Functions.\-h}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ split (
+\begin{DoxyParamCaption}
+\item[{string}]{str, }
+\item[{const char $\ast$}]{delim}
+\end{DoxyParamCaption}
+)}}\label{common_functions_8h_a4d1aa74fac80ae0275c056575fdb6626}
+Function to split a string and save tokens in a vector 
+
+Definition at line 279 of file common\-Functions.\-cpp.
 

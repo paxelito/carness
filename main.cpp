@@ -1,7 +1,7 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 3.2 (20130403.51)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4 (20130705.52)
  * \author Alessandro Filisetti
- * \version 3.2 (20130403.51)
- * \date 2013-04-13
+ * \version 4.0 (20130705.52)
+ * \date 2013-07-05
  * sourceforge repository -- https://carness.svn.sourceforge.net/svnroot/carness/
  *
  *
@@ -31,14 +31,9 @@
  * <hr>
  * In order to have the simulator run correctly the recommended staff is reported:
  *		- MacOsX 10.4 or later, Linux (or in general a system UNIX based) or Windows OS (tests have been performed on Win7 and win Vista) as well
- *		- QT4 library installed (you can download them from http://qt.nokia.com/downloads, the download is a little bit large)
- *		- GCC compiler, or similar, installed (if you need to compile the software on your machine)
+ *		- GCC (G++) compiler, or similar, installed (if you need to compile the software on your machine)
+ *      - On MacOs system compile using \c g++ -Wall -ansi -lm -o CaRNeSS *.cpp
  *<br><br>
- * \section ide IDEs
- * <hr>
- * The QT package contains a very useful and powerful IDE called QT creator in which you can compile and develop your code. Alternatively on Mac Os sytems you can use xCode (http://developer.apple.com/xcode/). To create a valid xCode project it is sufficient, once you have installed the QT libraries, to open the terminal, go into the source code folder and type "qmake -spec macx-xcode QT_acs.pro".<br>
- * <b>ATTENTION!!! A version of the QT libraries specific for MaxOsX Lion (10.7) has not been yet released so it is not possible to create a valid xCode project, nonetheless you can always work on code by means of QT creator software paying attention to add the line "QMAKE_MAC_SDK = /Developer/SDKs/MacOSX10.6.sdk" in the QT_acs.pro file</b>
- * <br><br>
  * \section parameters Input Parameters :: acsm2s.conf
  * <hr>
  * All the system parameters are stored in a file called <b>acsm2s.conf</b>. Anyone can create his own configuration file paying attention to put "=" char between the parameter name and the the parameter value (NO SPACE BETWEEN THEM).<br>
@@ -93,12 +88,14 @@
  *		@param solubility_threshold (> 0) Solubility Threshold, all the species longer than solubility_threshold precipitate
  *
  *<br><br>
- * \section Aknowledgments
+ * \section Acknowledgments
  * <hr>
  *- University of Bologna, Interdepartment of industrial research (C.I.R.I)
  *- European Centre for Living Technology http://www.ecltech.org/
  *- Fondazione Venezia http://www.fondazionevenezia.it
- *- Roberto Serra, Marco Villani, Timoteo Carletti, Alex Graudenzi, Norman Packard, Ruedi Fuchslin and Stuart Kauffman for the essential hints.
+ *- Alex Graudenzi to take care of the initilizator.
+ *- Chiara Damiani to contribute to the development of the software.
+ *- Roberto Serra, Marco Villani, Timoteo Carletti, Norman Packard, Ruedi Fuchslin and Stuart Kauffman for the essential hints.
  *- http://www.bedaux.net/mtrand/ for the pseudo-random Marseinne-Twister library for C++.
  *- http://perso.wanadoo.es/antlarr/otherapps.html for the poisson distribution generator numbers (acs_longInt random_poisson(acs_double tmpLambda, MTRand& tmpRandomGenerator)).
  *- Dr. Luca Ansaloni (luca.ansaloni@unimore.it) for the support but especially for the file handling functions and new Python development.
@@ -323,8 +320,6 @@ void saveInitialConditionsToFile(string tmpSavingPath, environment *tmpEnvironme
 
 int main (int argc, char *argv[]) {
 	
-    //TR QCoreApplication a(argc, argv);
-
     setlocale(LC_NUMERIC,"en_US"); //TR Check whether or not it can be removed when C++ standard
 	
 	MTRand rndDoubleGen; /// double random number generator
@@ -340,7 +335,6 @@ int main (int argc, char *argv[]) {
 		-----------------*/ 
 
         // Declare and inizialize the environment
-        //environment* puddle = new environment(a.arguments().at(1));
         environment* puddle = new environment(argv[1]);
 	
 		//INITIZIALIZE PSEUDO RANDOM NUMBER GENERATOR
@@ -350,17 +344,12 @@ int main (int argc, char *argv[]) {
 		CREATE INITIAL MOLECULE POPULATION
 		----------------------------------*/
 	
-			//LOAD SPECIES FROM FILE
-            //TR if(!puddle->createInitialMoleculesPopulationFromFile(a.arguments().at(3)))
-                //ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species loading process");
-            // LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
-
+            //LOAD SPECIES FROM FILE
             if(!puddle->createInitialMoleculesPopulationFromFileSTD(argv[3]))
                 ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species STANDARD loading process");
             // LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
 			if(puddle->getInflux() > 0)
 			{
-                //TR if(!puddle->createInfluxLayersFromFile(a.arguments().at(3)))
                 if(!puddle->createInfluxLayersFromFileSTD(argv[3]))
 					ExitWithError("CreateInfluxLayersFromFile", "Problem with influx layers loading process");
 			}
@@ -405,8 +394,6 @@ int main (int argc, char *argv[]) {
 		//STORE INITIAL STRUCTURES DATA IN ORDER TO REINITIALIZE THE STRUCTURE AFTER EACH SIMULATION
 		puddle->storeInitialStructures();
 		
-        //TR QTime timeElapsed; // timer creation
-        //TR timeElapsed.start();
         clock_t tStart = clock();
 		
 		if(puddle->getDebugLevel() >= RUNNING_VERSION)
@@ -458,8 +445,6 @@ int main (int argc, char *argv[]) {
                              << " - SIM NUMBER " << actSIM << " OF " << totalNumberOfSimulations << endl;
                         }
 
-
-                        //TR timeElapsed.restart(); // Timer is restarted after each simulation
                         tStart = clock();
                         actSTEP = 1;
                         previousStepLastStructuresSaving = 1;
@@ -585,7 +570,6 @@ int main (int argc, char *argv[]) {
 					
 	//DELETE ALL MAIN HEAP OBJECTS
 	delete puddle;
-    //TR a.quit();
     return 0;
  }
 

@@ -1,59 +1,35 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="common_functions_8h" kind="file">
     <compoundname>commonFunctions.h</compoundname>
     <includes refid="acs__headers_8h" local="yes">acs_headers.h</includes>
-    <includedby refid="catalysis_8h" local="yes">/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h</includedby>
-    <includedby refid="common_functions_8cpp" local="yes">/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp</includedby>
-    <includedby refid="species_8h" local="yes">/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/species.h</includedby>
-    <includedby refid="reactions_8h" local="yes">/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/reactions.h</includedby>
-    <includedby refid="environment_8h" local="yes">/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/environment.h</includedby>
+    <includedby refid="catalysis_8h" local="yes">/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h</includedby>
+    <includedby refid="common_functions_8cpp" local="yes">/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp</includedby>
+    <includedby refid="species_8h" local="yes">/Users/alessandrofilisetti/Documents/GIT/carness/species.h</includedby>
+    <includedby refid="reactions_8h" local="yes">/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h</includedby>
+    <includedby refid="environment_8h" local="yes">/Users/alessandrofilisetti/Documents/GIT/carness/environment.h</includedby>
     <incdepgraph>
-      <node id="146">
-        <label>QtCore/QCoreApplication</label>
-      </node>
-      <node id="144">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h</label>
-        <link refid="commonFunctions.h"/>
-        <childnode refid="145" relation="include">
-        </childnode>
+      <node id="154">
+        <label>mtrand.h</label>
+        <link refid="mtrand_8h"/>
       </node>
       <node id="150">
-        <label>QList</label>
-      </node>
-      <node id="156">
         <label>cmath</label>
       </node>
-      <node id="153">
+      <node id="145">
         <label>string</label>
       </node>
-      <node id="151">
-        <label>QTime</label>
-      </node>
-      <node id="154">
-        <label>vector</label>
-      </node>
-      <node id="149">
-        <label>QFile</label>
-      </node>
-      <node id="159">
-        <label>time.h</label>
-      </node>
-      <node id="157">
-        <label>cstdlib</label>
-      </node>
-      <node id="152">
-        <label>iostream</label>
-      </node>
-      <node id="155">
-        <label>deque</label>
-      </node>
-      <node id="148">
-        <label>QTextStream</label>
-      </node>
-      <node id="145">
+      <node id="141">
         <label>acs_headers.h</label>
         <link refid="acs__headers_8h"/>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
         <childnode refid="146" relation="include">
         </childnode>
         <childnode refid="147" relation="include">
@@ -72,95 +48,114 @@
         </childnode>
         <childnode refid="154" relation="include">
         </childnode>
-        <childnode refid="155" relation="include">
+      </node>
+      <node id="144">
+        <label>fstream</label>
+      </node>
+      <node id="153">
+        <label>ctime</label>
+      </node>
+      <node id="140">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h</label>
+        <link refid="commonFunctions.h"/>
+        <childnode refid="141" relation="include">
         </childnode>
-        <childnode refid="156" relation="include">
-        </childnode>
+      </node>
+      <node id="148">
+        <label>vector</label>
+      </node>
+      <node id="147">
+        <label>sstream</label>
+      </node>
+      <node id="151">
+        <label>cstdlib</label>
+      </node>
+      <node id="152">
+        <label>clocale</label>
+      </node>
+      <node id="143">
+        <label>iostream</label>
+      </node>
+      <node id="149">
+        <label>deque</label>
+      </node>
+      <node id="142">
+        <label>stdio.h</label>
+      </node>
+      <node id="146">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="165">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/reactions.cpp</label>
+        <link refid="reactions_8cpp"/>
+      </node>
+      <node id="156">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h</label>
+        <link refid="catalysis_8h"/>
         <childnode refid="157" relation="include">
         </childnode>
         <childnode refid="158" relation="include">
         </childnode>
-        <childnode refid="159" relation="include">
-        </childnode>
       </node>
-      <node id="147">
-        <label>QStringList</label>
-      </node>
-      <node id="158">
-        <label>mtrand.h</label>
-        <link refid="mtrand_8h"/>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="163">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/environment.h</label>
-        <link refid="environment_8h"/>
-        <childnode refid="164" relation="include">
+      <node id="164">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h</label>
+        <link refid="reactions_8h"/>
+        <childnode refid="158" relation="include">
         </childnode>
         <childnode refid="165" relation="include">
         </childnode>
       </node>
       <node id="160">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h</label>
-        <link refid="commonFunctions.h"/>
-        <childnode refid="161" relation="include">
-        </childnode>
-        <childnode refid="166" relation="include">
-        </childnode>
-        <childnode refid="167" relation="include">
-        </childnode>
-        <childnode refid="169" relation="include">
-        </childnode>
-        <childnode refid="163" relation="include">
-        </childnode>
-      </node>
-      <node id="169">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/reactions.h</label>
-        <link refid="reactions_8h"/>
-        <childnode refid="163" relation="include">
-        </childnode>
-        <childnode refid="170" relation="include">
-        </childnode>
-      </node>
-      <node id="170">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/reactions.cpp</label>
-        <link refid="reactions_8cpp"/>
-      </node>
-      <node id="165">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/main.cpp</label>
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="166">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp</label>
-        <link refid="common_functions_8cpp"/>
-      </node>
-      <node id="164">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/environment.cpp</label>
-        <link refid="environment_8cpp"/>
-      </node>
-      <node id="168">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/species.cpp</label>
-        <link refid="species_8cpp"/>
-      </node>
-      <node id="167">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/species.h</label>
+      <node id="162">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/species.h</label>
         <link refid="species_8h"/>
+        <childnode refid="158" relation="include">
+        </childnode>
         <childnode refid="163" relation="include">
         </childnode>
-        <childnode refid="168" relation="include">
-        </childnode>
-      </node>
-      <node id="162">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.cpp</label>
-        <link refid="catalysis_8cpp"/>
       </node>
       <node id="161">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h</label>
-        <link refid="catalysis_8h"/>
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp</label>
+        <link refid="common_functions_8cpp"/>
+      </node>
+      <node id="158">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/environment.h</label>
+        <link refid="environment_8h"/>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h</label>
+        <link refid="commonFunctions.h"/>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
         <childnode refid="162" relation="include">
         </childnode>
-        <childnode refid="163" relation="include">
+        <childnode refid="164" relation="include">
         </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.cpp</label>
+        <link refid="catalysis_8cpp"/>
+      </node>
+      <node id="159">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp</label>
+        <link refid="environment_8cpp"/>
+      </node>
+      <node id="163">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp</label>
+        <link refid="species_8cpp"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -183,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="16" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="15" bodyend="31"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="16" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="15" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="common_functions_8h_1ab037fdfaa93ee6a0fe3f624b791204cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -231,7 +226,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="18" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="40" bodyend="64"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="18" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="40" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="common_functions_8h_1a4135ff15fd24eb8fbfee3d00e1cfbf20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -268,7 +263,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="19" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="72" bodyend="116"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="19" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="72" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="common_functions_8h_1a1cb9cc6ac8ec2ef62b8eb1970e73a11b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -305,7 +300,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="20" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="124" bodyend="129"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="20" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="124" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="common_functions_8h_1a6d28311eff309499e66efb5d39a035f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -330,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="22" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="131" bodyend="149"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="22" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="131" bodyend="149"/>
       </memberdef>
       <memberdef kind="function" id="common_functions_8h_1aed308af1d3ee40e106e4e23e78644d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -355,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="23" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="151" bodyend="178"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="23" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="151" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="common_functions_8h_1a22cddb6ffcf2250e0c90bc913728350f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -376,7 +371,7 @@
 <para>Function to return a number from a poisson random distribution </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="24" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="183" bodyend="198"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="24" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="183" bodyend="198"/>
       </memberdef>
       <memberdef kind="function" id="common_functions_8h_1a78d5b4a67b6e66b8ceaa85874a2a12b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -401,7 +396,7 @@
 <para>Function to return a number from a binomial distribution </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="25" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="203" bodyend="224"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="25" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="203" bodyend="224"/>
       </memberdef>
       <memberdef kind="function" id="common_functions_8h_1aaaa7233fe68b91b6333e2729a2d619a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -418,7 +413,7 @@
 <para>Function to round double numbers in integers </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="26" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="229" bodyend="235"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="26" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="229" bodyend="235"/>
       </memberdef>
       <memberdef kind="function" id="common_functions_8h_1a1a13653eb649b6fc74090deecddf1028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -435,7 +430,28 @@
 <para>Function to convert a decimal number in a binary string composed of 12 bit such Example -&gt; input: 10, binary 1010 <ndash/>&gt; 000000001010 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="27" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="241" bodyend="263"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="27" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="241" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="common_functions_8h_1a4d1aa74fac80ae0275c056575fdb6626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt;string&gt; split</definition>
+        <argsstring>(string str, const char *delim)</argsstring>
+        <name>split</name>
+        <param>
+          <type>string</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>delim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to split a string and save tokens in a vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="28" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="279" bodyend="297"/>
       </memberdef>
       <memberdef kind="function" id="common_functions_8h_1aa678d0a98232158c48108227b98de4b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -456,7 +472,7 @@
 <para>Function to close the program after having en error </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" line="28" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.cpp" bodystart="269" bodyend="274"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" line="29" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="269" bodyend="274"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -471,9 +487,9 @@
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="acs__headers_8h" kindref="compound">acs_headers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//FUNCTIONS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="common_functions_8cpp_1ab210458a0dbaa0cc2f245926c7aa82ef" kindref="member" tooltip="This funtion returns a random position in a probability weight array of N elements.">returnSelectionIdFromAWeightProbVector</ref>(<ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>*tmpArray,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="common_functions_8cpp_1ab210458a0dbaa0cc2f245926c7aa82ef" kindref="member" tooltip="This funtion returns a random position in a probability weight array of N elements. ">returnSelectionIdFromAWeightProbVector</ref>(<ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>*tmpArray,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="common_functions_8cpp_1ab210458a0dbaa0cc2f245926c7aa82ef" kindref="member" tooltip="This funtion returns a random position in a probability weight array of N elements.">returnSelectionIdFromAWeightProbVector</ref>(vector&lt;acs_double&gt;&amp;<sp/>tmpVector,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpMaxValue,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="common_functions_8cpp_1ab210458a0dbaa0cc2f245926c7aa82ef" kindref="member" tooltip="This funtion returns a random position in a probability weight array of N elements. ">returnSelectionIdFromAWeightProbVector</ref>(vector&lt;acs_double&gt;&amp;<sp/>tmpVector,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpMaxValue,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="common_functions_8cpp_1a4135ff15fd24eb8fbfee3d00e1cfbf20" kindref="member">returnSelectionIdFromAWeightProbVectorAlreadyNormalized</ref>(vector&lt;acs_double&gt;&amp;<sp/>tmpVector,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="common_functions_8cpp_1a1cb9cc6ac8ec2ef62b8eb1970e73a11b" kindref="member">returnUniformSelection_LONG_IdFromVector</ref>(vector&lt;acs_longInt&gt;&amp;<sp/>tmpVector,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
@@ -483,10 +499,11 @@
 <codeline lineno="25"><highlight class="normal"><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="common_functions_8cpp_1a78d5b4a67b6e66b8ceaa85874a2a12b7" kindref="member">random_binomial</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>n,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpP,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(<ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpX);</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="common_functions_8cpp_1a1a13653eb649b6fc74090deecddf1028" kindref="member">dec2bin</ref>(<ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpInt);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="common_functions_8cpp_1aa678d0a98232158c48108227b98de4b6" kindref="member">ExitWithError</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>strFunctionName,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>strError);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">vector&lt;string&gt;<sp/><ref refid="common_functions_8cpp_1a4d1aa74fac80ae0275c056575fdb6626" kindref="member">split</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>str,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>delim);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="common_functions_8cpp_1aa678d0a98232158c48108227b98de4b6" kindref="member">ExitWithError</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>strFunctionName,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>strError);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h"/>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h"/>
   </compounddef>
 </doxygen>

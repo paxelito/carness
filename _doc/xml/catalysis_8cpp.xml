@@ -1,54 +1,32 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="catalysis_8cpp" kind="file">
     <compoundname>catalysis.cpp</compoundname>
     <includes refid="catalysis_8h" local="yes">catalysis.h</includes>
     <incdepgraph>
-      <node id="88">
-        <label>QtCore/QCoreApplication</label>
-      </node>
-      <node id="102">
-        <label>commonFunctions.h</label>
-        <link refid="common_functions_8h"/>
-        <childnode refid="87" relation="include">
+      <node id="85">
+        <label>catalysis.h</label>
+        <link refid="catalysis_8h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
         </childnode>
       </node>
-      <node id="92">
-        <label>QList</label>
-      </node>
-      <node id="98">
-        <label>cmath</label>
+      <node id="99">
+        <label>mtrand.h</label>
+        <link refid="mtrand_8h"/>
       </node>
       <node id="95">
-        <label>string</label>
-      </node>
-      <node id="93">
-        <label>QTime</label>
-      </node>
-      <node id="96">
-        <label>vector</label>
-      </node>
-      <node id="91">
-        <label>QFile</label>
-      </node>
-      <node id="101">
-        <label>time.h</label>
-      </node>
-      <node id="99">
-        <label>cstdlib</label>
-      </node>
-      <node id="94">
-        <label>iostream</label>
-      </node>
-      <node id="97">
-        <label>deque</label>
+        <label>cmath</label>
       </node>
       <node id="90">
-        <label>QTextStream</label>
+        <label>string</label>
       </node>
-      <node id="87">
+      <node id="86">
         <label>acs_headers.h</label>
         <link refid="acs__headers_8h"/>
+        <childnode refid="87" relation="include">
+        </childnode>
         <childnode refid="88" relation="include">
         </childnode>
         <childnode refid="89" relation="include">
@@ -73,31 +51,48 @@
         </childnode>
         <childnode refid="99" relation="include">
         </childnode>
-        <childnode refid="100" relation="include">
-        </childnode>
-        <childnode refid="101" relation="include">
-        </childnode>
       </node>
-      <node id="85">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.cpp</label>
-        <link refid="catalysis.cpp"/>
+      <node id="89">
+        <label>fstream</label>
+      </node>
+      <node id="98">
+        <label>ctime</label>
+      </node>
+      <node id="100">
+        <label>commonFunctions.h</label>
+        <link refid="common_functions_8h"/>
         <childnode refid="86" relation="include">
         </childnode>
       </node>
-      <node id="89">
-        <label>QStringList</label>
+      <node id="93">
+        <label>vector</label>
       </node>
-      <node id="86">
-        <label>catalysis.h</label>
-        <link refid="catalysis_8h"/>
-        <childnode refid="87" relation="include">
-        </childnode>
-        <childnode refid="102" relation="include">
+      <node id="92">
+        <label>sstream</label>
+      </node>
+      <node id="96">
+        <label>cstdlib</label>
+      </node>
+      <node id="97">
+        <label>clocale</label>
+      </node>
+      <node id="88">
+        <label>iostream</label>
+      </node>
+      <node id="84">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.cpp</label>
+        <link refid="catalysis.cpp"/>
+        <childnode refid="85" relation="include">
         </childnode>
       </node>
-      <node id="100">
-        <label>mtrand.h</label>
-        <link refid="mtrand_8h"/>
+      <node id="94">
+        <label>deque</label>
+      </node>
+      <node id="87">
+        <label>stdio.h</label>
+      </node>
+      <node id="91">
+        <label>cstring</label>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -131,6 +126,6 @@
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TR<sp/>k_cpxDiss<sp/>=<sp/>tmpK_cpxDiss;<sp/><sp/>//<sp/>COMPLEX<sp/>DISSOCIATION<sp/>KINETIC<sp/>CONSTANT</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.cpp"/>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.cpp"/>
   </compounddef>
 </doxygen>

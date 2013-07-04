@@ -17,7 +17,7 @@ var searchData=
   ['energytarget',['energyTarget',['../lancia__inizializzatore__acs_8m.html#aa25e2dab413d379872aab3c4023d62f7',1,'lancia_inizializzatore_acs.m']]],
   ['ensambles',['ensambles',['../start_8m.html#a450b0c257ca2430779e4244700c076e7',1,'start.m']]],
   ['entropy',['entropy',['../classenvironment.html#a4e9b60ec8b05e888cf0e55def03ee906',1,'environment']]],
-  ['environment',['environment',['../classenvironment.html',1,'environment'],['../classenvironment.html#aaff2c2f57d25e0af6981a673e0b85045',1,'environment::environment()'],['../classenvironment.html#a8a0e8b366ee4d950d60a048312d33c5c',1,'environment::environment(QString tmpInitialPath)']]],
+  ['environment',['environment',['../classenvironment.html',1,'environment'],['../classenvironment.html#aaff2c2f57d25e0af6981a673e0b85045',1,'environment::environment()'],['../classenvironment.html#aa44bbabec52bf2d61a19685a30e68de1',1,'environment::environment(string tmpInitialPath)']]],
   ['environment_2ecpp',['environment.cpp',['../environment_8cpp.html',1,'']]],
   ['environment_2eh',['environment.h',['../environment_8h.html',1,'']]],
   ['eso',['eso',['../lancia__inizializzatore__acs_8m.html#a5b5a345da13951297f4d3ad31f76a87a',1,'lancia_inizializzatore_acs.m']]],

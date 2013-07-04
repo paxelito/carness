@@ -48,7 +48,7 @@ var searchData=
   ['contenitore',['contenitore',['../start_8m.html#a8fcf98921930aa3720acdd081c5b0c2f',1,'start.m']]],
   ['continua',['continua',['../garbage_search_8m.html#a9c951ebd5bc3f1adce943bee1255f4d6',1,'continua():&#160;garbageSearch.m'],['../_kill_spam_8m.html#a9c951ebd5bc3f1adce943bee1255f4d6',1,'continua():&#160;KillSpam.m'],['../_k_s_search_8m.html#a9c951ebd5bc3f1adce943bee1255f4d6',1,'continua():&#160;KSSearch.m']]],
   ['cossfrominit',['cossFromInit',['../conc_analysis_8m.html#a547b10724f74451f717078739944cc74',1,'concAnalysis.m']]],
-  ['count',['count',['../inizializzatore___a_c_s_8m.html#a3a41d504a4fcdc069bbb2c33cbb75376',1,'count():&#160;inizializzatore_ACS.m'],['../start_8m.html#ae11b3deb3de3df7dc48e439074023e35',1,'count():&#160;start.m']]],
+  ['count',['count',['../inizializzatore___a_c_s_8m.html#a3a41d504a4fcdc069bbb2c33cbb75376',1,'inizializzatore_ACS.m']]],
   ['counter_5fcicli',['counter_cicli',['../crea__e__controlla__i__catalizzatori_8m.html#a8b5c7ae18fb63e6cb42a3eac42f1f29e',1,'crea_e_controlla_i_catalizzatori.m']]],
   ['crtsimfolder',['crtSimFolder',['../namespacereset_for_new_simulations.html#ad71f20889e7a6394d3c15e5e9381394d',1,'resetForNewSimulations']]],
   ['currentdate',['currentDate',['../general_concentration_over_threshold_8m.html#a54768c0405781065cb2f7a16ab8e7d31',1,'generalConcentrationOverThreshold.m']]],

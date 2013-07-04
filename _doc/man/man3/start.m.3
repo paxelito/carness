@@ -1,8 +1,8 @@
-.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/start.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" 3 "Thu Jul 4 2013" "Version 4.0 (20130705.52)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/start.m \- 
+/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -37,38 +37,6 @@ performed nSim different \fBsimulation\fP (differnt random seeds) \fBsimFolder\&
 .RI "converto in decimale for per 
 .br
 default è uniforme \fBfunzioni_booleane_in_dec\fP (\fBi\fP, 2)"
-.br
-.ti -1c
-.RI "\fBif\fP \fBz\fP< 10 parte_a=num2str(0);parte_b=num2str(\fBz\fP);parte4_nome_cartella=strcat(parte_a, 
-.br
-parte_b);\fBelse\fP 
-.br
-parte4_nome_cartella=num2str(\fBz\fP);\fBend\fP 
-.br
-nome_cartella=strcat(parte1_nome_cartella, 
-.br
-\fBparte2_nome_cartella\fP, 
-.br
-\fBparte3_nome_cartella\fP, 
-.br
-parte4_nome_cartella);%scrivo 
-.br
-il lanciatore\&.sh 
-.br
-riga_lanciatore=strcat('nice\&./acsm2s\&./', 
-.br
-nome_cartella,'/\&./', 
-.br
-nome_cartella,'/res/\&./', 
-.br
-nome_cartella,'/ > \fBnum2str\fP (\fBz\fP)"
-.br
-.ti -1c
-.RI "clear riga_lanciatore lancio 
-.br
-il vero e proprio 
-.br
-inizializzatore \fBinizializzatore_ACS\fP (\fBnGEN\fP, \fBnSIM\fP, \fBnSeconds\fP, \fBnReactions\fP, \fBinitialMaxLength\fP, \fBvirtual_fd_max_length\fP, \fBoverallConcentration\fP,\&.\&.\&.\fBalphabet\fP, \fBcomplexFormationSymmetry\fP, \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP, \fBreactionProbability\fP, \fBcleavageProbability\fP,\&.\&.\&.\fBdiffusion_contribute\fP, \fBsolubility_threshold\fP, \fBinflux_rate\fP, \fBreverseReactions\fP, \fBK_nrg\fP, \fBmoleculeDecay_KineticConstant\fP, \fBratio_firing_disk\fP,\&.\&.\&.\fBlunghezza_max_fd\fP, \fBscelta_concentrazioni\fP, \fBgamma_powerlaw_concentrazioni\fP, \fBdecisione_catalizzatori\fP, \fBlastFiringDiskSpeciesID\fP, ECConcentration,\&.\&.\&.\fBvolume\fP, \fBenergy\fP, controllo_ACS_nel_ciclo, \fBK_nrg_decay\fP, nome_cartella, \fBfunzioni_booleane_in_dec\fP, \fBratioSpeciesEnergizable\fP, \fBKass\fP, \fBKdiss\fP, \fBKcpx\fP, \fBK_cpx\fP,\&.\&.\&.\fBrandomSeed\fP, \fBdebugLevel\fP, \fBtimeStructuresSavingInterval\fP, \fBmaxLOut\fP, \fBsimFolder\fP, \fBlMaxInflux\fP(\fBi\fP), \fBfileTimesSaveInterval\fP, nHours, nAttempts, \fBrevRctRatio\fP)"
 .br
 .in -1c
 .SS "Variables"
@@ -378,94 +346,10 @@ lasciare ad \fB!lastFiringDiskSpeciesID\fP = 0"
 delle FUNZIONI BOOLEANE nell'energia \fBfunzioni_booleane_in_dec\fP = bi2de(funzioni_booleane,'left-msb')"
 .br
 .ti -1c
-.RI "\fBparte2_nome_cartella\fP = \fBnum2str\fP(\fBnome_folder\fP(\fBi\fP))"
+.RI "\fBparte2_nome_cartella\fP = num2str(\fBnome_folder\fP(\fBi\fP))"
 .br
 .ti -1c
 .RI "\fBparte3_nome_cartella\fP = ('_rete_n_')"
-.br
-.ti -1c
-.RI "\fBif\fP \fBz\fP< 10 parte_a=\fBnum2str\fP(0);parte_b=\fBnum2str\fP(\fBz\fP);parte4_nome_cartella=strcat(parte_a, 
-.br
-parte_b);\fBelse\fP 
-.br
-parte4_nome_cartella=\fBnum2str\fP(\fBz\fP);\fBend\fP 
-.br
-nome_cartella=strcat(parte1_nome_cartella, 
-.br
-\fBparte2_nome_cartella\fP, 
-.br
-\fBparte3_nome_cartella\fP, 
-.br
-parte4_nome_cartella);%scrivo 
-.br
-il lanciatore\&.sh 
-.br
-riga_lanciatore=strcat('nice\&./acsm2s\&./', 
-.br
-nome_cartella,'/\&./', 
-.br
-nome_cartella,'/res/\&./', 
-.br
-nome_cartella,'/ > \fBsims\fP"
-.br
-.ti -1c
-.RI "\fBif\fP \fBz\fP< 10 parte_a=\fBnum2str\fP(0);parte_b=\fBnum2str\fP(\fBz\fP);parte4_nome_cartella=strcat(parte_a, 
-.br
-parte_b);\fBelse\fP 
-.br
-parte4_nome_cartella=\fBnum2str\fP(\fBz\fP);\fBend\fP 
-.br
-nome_cartella=strcat(parte1_nome_cartella, 
-.br
-\fBparte2_nome_cartella\fP, 
-.br
-\fBparte3_nome_cartella\fP, 
-.br
-parte4_nome_cartella);%scrivo 
-.br
-il lanciatore\&.sh 
-.br
-riga_lanciatore=strcat('nice\&./acsm2s\&./', 
-.br
-nome_cartella,'/\&./', 
-.br
-nome_cartella,'/res/\&./', 
-.br
-nome_cartella,'/ > \fB_\fP"
-.br
-.ti -1c
-.RI "\fBif\fP \fBz\fP< 10 parte_a=\fBnum2str\fP(0);parte_b=\fBnum2str\fP(\fBz\fP);parte4_nome_cartella=strcat(parte_a, 
-.br
-parte_b);\fBelse\fP 
-.br
-parte4_nome_cartella=\fBnum2str\fP(\fBz\fP);\fBend\fP 
-.br
-nome_cartella=strcat(parte1_nome_cartella, 
-.br
-\fBparte2_nome_cartella\fP, 
-.br
-\fBparte3_nome_cartella\fP, 
-.br
-parte4_nome_cartella);%scrivo 
-.br
-il lanciatore\&.sh 
-.br
-riga_lanciatore=strcat('nice\&./acsm2s\&./', 
-.br
-nome_cartella,'/\&./', 
-.br
-nome_cartella,'/res/\&./', 
-.br
-nome_cartella,'/ > \fBlog\fP"
-.br
-.ti -1c
-.RI "\fBriga_lanciatore_2\fP = strcat('echo 'Reverse/',nome_cartella,'' ;',riga_lanciatore)"
-.br
-.ti -1c
-.RI "\fBcount\fP = \fBfprintf\fP(fid20,'%s\\n ',\fBriga_lanciatore_2\fP)"
-.br
-.ti -1c
-.RI "\fBend\fP \fBend\fP \fBst\fP = \fBfclose\fP(fid20)"
 .br
 .in -1c
 .SH "Function Documentation"
@@ -473,10 +357,6 @@ nome_cartella,'/ > \fBlog\fP"
 .SS "cd (simFolder\&.path)"
 
 .SS "converto in decimale for per default è uniforme funzioni_booleane_in_dec (\fBi\fP, 2)"
-
-.SS "clear riga_lanciatore lancio il vero e proprio inizializzatore inizializzatore_ACS (\fBnGEN\fP, \fBnSIM\fP, \fBnSeconds\fP, \fBnReactions\fP, \fBinitialMaxLength\fP, \fBvirtual_fd_max_length\fP, \fBoverallConcentration\fP, alphabet, \fBcomplexFormationSymmetry\fP, \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP, \fBreactionProbability\fP, \fBcleavageProbability\fP, diffusion_contribute, \fBsolubility_threshold\fP, \fBinflux_rate\fP, \fBreverseReactions\fP, \fBK_nrg\fP, \fBmoleculeDecay_KineticConstant\fP, \fBratio_firing_disk\fP, lunghezza_max_fd, \fBscelta_concentrazioni\fP, \fBgamma_powerlaw_concentrazioni\fP, \fBdecisione_catalizzatori\fP, \fBlastFiringDiskSpeciesID\fP, ECConcentration, volume, \fBenergy\fP, controllo_ACS_nel_ciclo, \fBK_nrg_decay\fP, nome_cartella, \fBfunzioni_booleane_in_dec\fP, \fBratioSpeciesEnergizable\fP, \fBKass\fP, \fBKdiss\fP, \fBKcpx\fP, \fBK_cpx\fP, randomSeed, \fBdebugLevel\fP, \fBtimeStructuresSavingInterval\fP, \fBmaxLOut\fP, \fBsimFolder\fP, \fBlMaxInflux\fP(\fBi\fP), \fBfileTimesSaveInterval\fP, nHours, nAttempts, \fBrevRctRatio\fP)"
-
-.SS "\fBif\fP \fBz\fP<10 parte_a=num2str(0); parte_b=num2str(\fBz\fP); parte4_nome_cartella = strcat(parte_a,parte_b); \fBelse\fP parte4_nome_cartella = num2str(\fBz\fP); \fBend\fP nome_cartella= strcat(parte1_nome_cartella,\fBparte2_nome_cartella\fP,\fBparte3_nome_cartella\fP,parte4_nome_cartella); %scrivo il lanciatore\&.sh riga_lanciatore = strcat(' nice \&./acsm2s \&./',nome_cartella,'/ \&./',nome_cartella,'/res/ \&./', nome_cartella,'/ > num2str (\fBz\fP)"
 
 .SS "Numero massimo di reazioni (secondo parametro di \fBstop\fP oltre al numero disecondi)\fC [pure virtual]\fP"
 
@@ -494,10 +374,6 @@ nome_cartella,'/ > \fBlog\fP"
 
 .PP
 Definition at line 76 of file start\&.m\&.
-.SS "\fBif\fP \fBz\fP< 10 parte_a=\fBnum2str\fP(0) parte_b=\fBnum2str\fP(\fBz\fP) parte4_nome_cartella=strcat(parte_a, parte_b) \fBelse\fP parte4_nome_cartella=\fBnum2str\fP(\fBz\fP) \fBend\fP nome_cartella=strcat(parte1_nome_cartella, \fBparte2_nome_cartella\fP, \fBparte3_nome_cartella\fP, parte4_nome_cartella)%scrivo il lanciatore\&.sh riga_lanciatore=strcat('nice\&./acsm2s\&./', nome_cartella,'/\&./', nome_cartella,'/res/\&./', nome_cartella,'/ > _"
-
-.PP
-Definition at line 151 of file start\&.m\&.
 .SS "livello di dettaglio messaggi durante lasciare a"
 
 .PP
@@ -526,10 +402,6 @@ Definition at line 39 of file start\&.m\&.
 
 .PP
 Definition at line 34 of file start\&.m\&.
-.SS "count = \fBfprintf\fP(fid20,'%s\\n ',\fBriga_lanciatore_2\fP)"
-
-.PP
-Definition at line 153 of file start\&.m\&.
 .SS "lasciare \fBa\fP debugLevel =0"
 
 .PP
@@ -637,10 +509,6 @@ Definition at line 80 of file start\&.m\&.
 
 .PP
 Definition at line 13 of file start\&.m\&.
-.SS "\fBif\fP \fBz\fP<10 parte_a=\fBnum2str\fP(0); parte_b=\fBnum2str\fP(\fBz\fP); parte4_nome_cartella = strcat(parte_a,parte_b); \fBelse\fP parte4_nome_cartella = \fBnum2str\fP(\fBz\fP); \fBend\fP nome_cartella= strcat(parte1_nome_cartella,\fBparte2_nome_cartella\fP,\fBparte3_nome_cartella\fP,parte4_nome_cartella); %scrivo il lanciatore\&.sh riga_lanciatore = strcat(' nice \&./acsm2s \&./',nome_cartella,'/ \&./',nome_cartella,'/res/ \&./', nome_cartella,'/ > log"
-
-.PP
-Definition at line 151 of file start\&.m\&.
 .SS "percentuale di specie da cancellare rispetto \fBa\fP tutte quelle che restano dopo aver conservato \fBi\fP polimeri fino \fBa\fP lunghezzamaxfd lunghezza_max_fd = 4"
 
 .PP
@@ -689,7 +557,7 @@ Definition at line 37 of file start\&.m\&.
 
 .PP
 Definition at line 14 of file start\&.m\&.
-.SS "\fBif\fP \fBz\fP< 10 parte_a=\fBnum2str\fP(0) parte_b=\fBnum2str\fP(\fBz\fP) parte4_nome_cartella=strcat(parte_a, parte_b) \fBelse\fP parte4_nome_cartella=\fBnum2str\fP(\fBz\fP) \fBend\fP nome_cartella=strcat(parte1_nome_cartella, parte2_nome_cartella, \fBparte3_nome_cartella\fP, parte4_nome_cartella)%scrivo il lanciatore\&.sh riga_lanciatore=strcat('nice\&./acsm2s\&./', nome_cartella,'/\&./', nome_cartella,'/res/\&./', nome_cartella,'/ > parte2_nome_cartella = \fBnum2str\fP(\fBnome_folder\fP(\fBi\fP))"
+.SS "parte2_nome_cartella = num2str(\fBnome_folder\fP(\fBi\fP))"
 
 .PP
 Definition at line 138 of file start\&.m\&.
@@ -725,10 +593,6 @@ Definition at line 43 of file start\&.m\&.
 
 .PP
 Definition at line 51 of file start\&.m\&.
-.SS "riga_lanciatore_2 = strcat('echo 'Reverse/',nome_cartella,'' ;',riga_lanciatore)"
-
-.PP
-Definition at line 152 of file start\&.m\&.
 .SS "\fBlunghezza\fP dei monomeri polimeri da conservare scelta_concentrazioni =1"
 
 .PP
@@ -741,10 +605,6 @@ Definition at line 8 of file start\&.m\&.
 
 .PP
 Definition at line 34 of file start\&.m\&.
-.SS "\fBif\fP \fBz\fP<10 parte_a=\fBnum2str\fP(0); parte_b=\fBnum2str\fP(\fBz\fP); parte4_nome_cartella = strcat(parte_a,parte_b); \fBelse\fP parte4_nome_cartella = \fBnum2str\fP(\fBz\fP); \fBend\fP nome_cartella= strcat(parte1_nome_cartella,\fBparte2_nome_cartella\fP,\fBparte3_nome_cartella\fP,parte4_nome_cartella); %scrivo il lanciatore\&.sh riga_lanciatore = strcat(' nice \&./acsm2s \&./',nome_cartella,'/ \&./',nome_cartella,'/res/ \&./', nome_cartella,'/ > sims"
-
-.PP
-Definition at line 151 of file start\&.m\&.
 .SS "livello di dettaglio messaggi durante simulazione"
 
 .PP
@@ -753,10 +613,6 @@ Definition at line 26 of file start\&.m\&.
 
 .PP
 Definition at line 55 of file start\&.m\&.
-.SS "\fBend\fP \fBend\fP st = \fBfclose\fP(fid20)"
-
-.PP
-Definition at line 167 of file start\&.m\&.
 .SS "parametro switch"
 
 .PP

@@ -80,7 +80,7 @@ public:
 	// GETTING FUNCTIONS
 	acs_longInt getID()const{return id;}
 	string getSequence()const{ return sequence;}
-	acs_int getSequenceLength()const{return sequence.length();}
+	acs_int getSequenceLength()const{return (unsigned)sequence.length();}
 	acs_longInt getAmount()const{return amount;}
 	acs_longInt getNOTchargeMols()const{return amount - chargedMols;}
 	acs_longInt getChargeMols()const{return chargedMols;}

@@ -1,4 +1,4 @@
-.TH "pageoutcomes" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.TH "pageoutcomes" 3 "Thu Jul 4 2013" "Version 4.0 (20130705.52)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,7 +23,7 @@ Columns description (each field is delimited using '\\t')is the same described a
 .PP
 Every simulation generates a times file called times_<generationNumber>_<simulationNumber>\&.csv (e\&.g\&. \fBtimes_1_03\&.csv\fP means times file, generation 1, simulation 3) containing values concerning \fBeach events\fP occurred during the simulation\&. This file is \fBcreated at the beginning of the simulation\fP and it is \fBupdated after each event\fP, hence this file will contain a number of rows equal to the number of reaction (of any type) occurred during the simulation\&. 
 .br
-Columns description (each field is delimited using '\\t'): Identificator (reaction)Reaction TimeGillespie ID selectedReaction TypeNumber of possible reactionsComputational Time (ms) Number of SpeciesNumber of MoleculesNumber of complex speciesNumber of complexes Number of bricksGillespie Computational TimeReaction Process Computational TimeVarious Processes Computational TimeNew species creation probability  
+Columns description (each field is delimited using '\\t'): Identificator (reaction)Reaction TimeGillespie ID selectedReaction TypeNumber of possible reactionsComputational Time (sec) Number of SpeciesNumber of MoleculesNumber of complex speciesNumber of complexes Number of bricksGillespie Computational TimeReaction Process Computational TimeVarious Processes Computational TimeNew species creation probability  
 .IP "\(bu" 2
 \fIIdentificator (reaction)\fP: Number of the reaction (STEP)
 .IP "\(bu" 2

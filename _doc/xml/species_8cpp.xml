@@ -1,103 +1,98 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="species_8cpp" kind="file">
     <compoundname>species.cpp</compoundname>
     <includes refid="species_8h" local="yes">species.h</includes>
     <incdepgraph>
       <node id="344">
-        <label>QtCore/QCoreApplication</label>
+        <label>mtrand.h</label>
+        <link refid="mtrand_8h"/>
       </node>
-      <node id="358">
-        <label>commonFunctions.h</label>
-        <link refid="common_functions_8h"/>
-        <childnode refid="343" relation="include">
-        </childnode>
-      </node>
-      <node id="348">
-        <label>QList</label>
-      </node>
-      <node id="354">
+      <node id="340">
         <label>cmath</label>
       </node>
-      <node id="351">
+      <node id="335">
         <label>string</label>
       </node>
-      <node id="349">
-        <label>QTime</label>
-      </node>
-      <node id="352">
-        <label>vector</label>
-      </node>
-      <node id="347">
-        <label>QFile</label>
-      </node>
-      <node id="357">
-        <label>time.h</label>
-      </node>
-      <node id="355">
-        <label>cstdlib</label>
-      </node>
-      <node id="350">
-        <label>iostream</label>
-      </node>
-      <node id="353">
-        <label>deque</label>
-      </node>
-      <node id="341">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/species.cpp</label>
-        <link refid="species.cpp"/>
-        <childnode refid="342" relation="include">
-        </childnode>
-      </node>
-      <node id="346">
-        <label>QTextStream</label>
-      </node>
-      <node id="342">
-        <label>species.h</label>
-        <link refid="species_8h"/>
-        <childnode refid="343" relation="include">
-        </childnode>
-        <childnode refid="358" relation="include">
-        </childnode>
-      </node>
-      <node id="343">
+      <node id="331">
         <label>acs_headers.h</label>
         <link refid="acs__headers_8h"/>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+        <childnode refid="339" relation="include">
+        </childnode>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+        <childnode refid="343" relation="include">
+        </childnode>
         <childnode refid="344" relation="include">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>species.h</label>
+        <link refid="species_8h"/>
+        <childnode refid="331" relation="include">
         </childnode>
         <childnode refid="345" relation="include">
         </childnode>
-        <childnode refid="346" relation="include">
-        </childnode>
-        <childnode refid="347" relation="include">
-        </childnode>
-        <childnode refid="348" relation="include">
-        </childnode>
-        <childnode refid="349" relation="include">
-        </childnode>
-        <childnode refid="350" relation="include">
-        </childnode>
-        <childnode refid="351" relation="include">
-        </childnode>
-        <childnode refid="352" relation="include">
-        </childnode>
-        <childnode refid="353" relation="include">
-        </childnode>
-        <childnode refid="354" relation="include">
-        </childnode>
-        <childnode refid="355" relation="include">
-        </childnode>
-        <childnode refid="356" relation="include">
-        </childnode>
-        <childnode refid="357" relation="include">
-        </childnode>
+      </node>
+      <node id="334">
+        <label>fstream</label>
+      </node>
+      <node id="343">
+        <label>ctime</label>
       </node>
       <node id="345">
-        <label>QStringList</label>
+        <label>commonFunctions.h</label>
+        <link refid="common_functions_8h"/>
+        <childnode refid="331" relation="include">
+        </childnode>
       </node>
-      <node id="356">
-        <label>mtrand.h</label>
-        <link refid="mtrand_8h"/>
+      <node id="338">
+        <label>vector</label>
+      </node>
+      <node id="337">
+        <label>sstream</label>
+      </node>
+      <node id="341">
+        <label>cstdlib</label>
+      </node>
+      <node id="342">
+        <label>clocale</label>
+      </node>
+      <node id="333">
+        <label>iostream</label>
+      </node>
+      <node id="339">
+        <label>deque</label>
+      </node>
+      <node id="332">
+        <label>stdio.h</label>
+      </node>
+      <node id="336">
+        <label>cstring</label>
+      </node>
+      <node id="329">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp</label>
+        <link refid="species.cpp"/>
+        <childnode refid="330" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -108,7 +103,7 @@
 <codeline lineno="1"></codeline>
 <codeline lineno="12"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="species_8h" kindref="compound">species.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT)">species::species</ref>()</highlight></codeline>
+<codeline lineno="16" refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT) ">species::species</ref>()</highlight></codeline>
 <codeline lineno="17"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequence<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;NRG&quot;</highlight><highlight class="normal">;</highlight></codeline>
@@ -130,7 +125,7 @@
 <codeline lineno="35"><highlight class="normal"><sp/></highlight></codeline>
 <codeline lineno="36"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="classspecies_1a2c407091ff53f0d508b7b9ed8230eee4" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT)">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpAmount,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="51" refid="classspecies_1a2c407091ff53f0d508b7b9ed8230eee4" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT) ">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpAmount,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpComplexDegEnh,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpComplexCuttingPoint,<sp/></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvalueted,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergizable,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpInflux_rate,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpMaxLOut)</highlight></codeline>
 <codeline lineno="54"><highlight class="normal">{</highlight></codeline>
@@ -162,7 +157,7 @@
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96" refid="classspecies_1a0c91a8b735cb484bff240ba5049f6af3" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT)">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpConcentration,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="96" refid="classspecies_1a0c91a8b735cb484bff240ba5049f6af3" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT) ">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpConcentration,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpComplexDegEnh,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpComplexCuttingPoint,<sp/></highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvalueted,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergizable,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpInflux_rate,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpMaxLOut)</highlight></codeline>
 <codeline lineno="99"><highlight class="normal">{</highlight></codeline>
@@ -194,7 +189,7 @@
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>firstConcentration<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>0<sp/>because<sp/>the<sp/>species<sp/>is<sp/>created<sp/>during<sp/>on<sp/>run</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="134" refid="classspecies_1a9476b35ac9fe80d8cafdda98782eafcf" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT)">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpAmount,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="134" refid="classspecies_1a9476b35ac9fe80d8cafdda98782eafcf" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT) ">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpAmount,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpComplexDegEnh,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpComplexCuttingPoint,<sp/></highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvalueted,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpAge,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpReborns,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/></highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpNotUsedCatID,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpNotUsedSubID,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,</highlight></codeline>
@@ -229,7 +224,7 @@
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="167"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="175" refid="classspecies_1a26eba3e8d86938ad8b2b6b284e9f010f" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT)">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpConcentration,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="175" refid="classspecies_1a26eba3e8d86938ad8b2b6b284e9f010f" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT) ">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpConcentration,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpComplexDegEnh,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpComplexCuttingPoint,<sp/></highlight></codeline>
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvalueted,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpAge,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpReborns,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/></highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpNotUsedCatID,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpNotUsedSubID,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,</highlight></codeline>
@@ -265,7 +260,7 @@
 <codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>firstConcentration<sp/>=<sp/>tmpConcentration;<sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>species<sp/>is<sp/>loaded<sp/>from<sp/>file<sp/>that&apos;s<sp/>the<sp/>very<sp/>initial<sp/>concentration</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="209"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"></highlight></codeline>
-<codeline lineno="222" refid="classspecies_1a59cb623199b038029a7d63a720408cf5" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT)">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpAmount,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="222" refid="classspecies_1a59cb623199b038029a7d63a720408cf5" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT) ">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpAmount,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
 <codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpComplexProb,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpMaxComplexDegKinetic,<sp/></highlight></codeline>
 <codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmp_RandomGenerator,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergizable)</highlight></codeline>
 <codeline lineno="225"><highlight class="normal">{</highlight></codeline>
@@ -298,7 +293,7 @@
 <codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>firstConcentration<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>0<sp/>because<sp/>the<sp/>species<sp/>is<sp/>created<sp/>during<sp/>on<sp/>run</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="253"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="254"><highlight class="normal"></highlight></codeline>
-<codeline lineno="267" refid="classspecies_1ae0502a70e156c48b917ef2dadf72a859" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT)">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="267" refid="classspecies_1ae0502a70e156c48b917ef2dadf72a859" refkind="member"><highlight class="normal"><ref refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member" tooltip="&amp;lt; New species constructor (IN AMOUNT) ">species::species</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
 <codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpMaxComplexDegKinetic,<sp/></highlight></codeline>
 <codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpCuttingPoint,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmp_RandomGenerator,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpCatalyst_ID,<sp/></highlight></codeline>
 <codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpSubstrate_ID,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergizable)</highlight></codeline>
@@ -393,6 +388,6 @@
 <codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmpConc;</highlight></codeline>
 <codeline lineno="374"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/species.cpp"/>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp"/>
   </compounddef>
 </doxygen>

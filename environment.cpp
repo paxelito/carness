@@ -69,124 +69,6 @@ environment::environment()
  Environment Constructor
  @version 1.0
  @param tmpInitialPath
- */
-/*environment::environment(QString tmpInitialPath) //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment start" << endl;
-
-	// CONFIGURATION FILE PATH CREATION
-    QString confFilePath = tmpInitialPath + "acsm2s.conf";
-    QTextStream prompt(stdout);
-    if(debugLevel >= RUNNING_VERSION){prompt << "|- Configuration File path --> " << confFilePath << endl;}
-	//OPEN FILE
-    QFile fid(confFilePath);
-    if(!fid.open(QIODevice::ReadOnly | QIODevice::Text))
-		ExitWithError("environment", "ERROR: Configuration file has not been found, please check path!!!");
-//	   exit(EXIT_FAILURE);
-
-    QTextStream in(&fid);
-	while(!in.atEnd())
-	{
-		QString strLine = in.readLine();
-		if((strLine.contains("#") == false) && (strLine.isEmpty() == false) && (strLine.isNull() == false))
-		{
-			QStringList strLineSpletted = strLine.split("=");
-			// SYSTEM PARAMETERS
-            if(strLineSpletted[0] == "nGEN") nGEN = strLineSpletted[1].toInt();
-			if(strLineSpletted[0] == "nSIM") nSIM = strLineSpletted[1].toInt();
-            if(strLineSpletted[0] == "nSeconds") nSeconds = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "nReactions") nReactions = strLineSpletted[1].toInt();
-			if(strLineSpletted[0] == "randomSeed") randomSeed = strLineSpletted[1].toInt();
-            if(strLineSpletted[0] == "debugLevel") debugLevel = strLineSpletted[1].toInt();
-			if(strLineSpletted[0] == "timeStructuresSavingInterval") timeStructuresSavingInterval = strLineSpletted[1].toDouble();
-            if(strLineSpletted[0] == "fileTimesSaveInterval") fileTimesSaveInterval = strLineSpletted[1].toDouble();
-            if(strLineSpletted[0] == "nHours") nHours = strLineSpletted[1].toDouble();
-            if(strLineSpletted[0] == "nAttempts") nAttempts = strLineSpletted[1].toInt();
-			
-			// ENVIRONMENTAL PARAMETERS
-			if(strLineSpletted[0] == "lastFiringDiskSpeciesID") lastFiringDiskSpeciesID = strLineSpletted[1].toInt(); // DA ELIMINARE CON ATTENZIONE
-            if(strLineSpletted[0] == "overallConcentration") overallConcentration = strLineSpletted[1].toDouble(); // DA ELIMINARE CON ATTENZIONE
-			if(strLineSpletted[0] == "ECConcentration") ECConcentration = strLineSpletted[1].toDouble(); // DA TRASFORMARE NELLA VARIABILE INDICANTE LA QUANTITA DI CARRIER SEMPRE PRESENTI
-			if(strLineSpletted[0] == "alphabet") alphabet = strLineSpletted[1].QString::toStdString();
-			if(strLineSpletted[0] == "volume") volume = strLineSpletted[1].toDouble();
-			
-			// DYNAMIC PARAMETERS
-			if(strLineSpletted[0] == "energy") energy = strLineSpletted[1].toInt(); // DA ELIMINARE CON ATTENZIONE, IL TUTTO VERRA' SOSTITUITO DALLA FUNZIONE BOOLEANA
-			if(strLineSpletted[0] == "ratioSpeciesEnergizable") ratioSpeciesEnergizable = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "complexFormationSymmetry") complexFormationSymmetry = strLineSpletted[1].toInt();	
-			if(strLineSpletted[0] == "nonCatalyticMaxLength") nonCatalyticMaxLength = strLineSpletted[1].toInt();	
-			if(strLineSpletted[0] == "reactionProbability") reactionProbability = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "cleavageProbability") cleavageProbability = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "reverseReactions") reverseReactions = strLineSpletted[1].toInt();
-            if(strLineSpletted[0] == "revRctRatio") revRctRatio = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "K_ass") K_ass = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "K_diss") K_diss = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "K_cpx") K_cpx = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "K_cpxDiss") K_cpxDiss = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "K_nrg") K_nrg = strLineSpletted[1].toDouble(); // DA ELIMINARE CON ATTENZIONE
-			if(strLineSpletted[0] == "K_nrg_decay") K_nrg_decay = strLineSpletted[1].toDouble(); // DA ELIMINARE CON ATTENZIONE
-			if(strLineSpletted[0] == "moleculeDecay_KineticConstant") moleculeDecay_KineticConstant = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "maxLOut") maxLOut = strLineSpletted[1].toInt();
-			if(strLineSpletted[0] == "solubility_threshold") solubility_threshold = strLineSpletted[1].toInt();
-			if(strLineSpletted[0] == "diffusion_contribute") diffusion_contribute = strLineSpletted[1].toDouble();
-			if(strLineSpletted[0] == "influx_rate") influx_rate = strLineSpletted[1].toDouble();
-						
-		}
-    }
-
-        if(nSeconds < timeStructuresSavingInterval)
-            ExitWithError("environment::environment","No Structures will be saved during the simulation");
-
-        if(nSeconds < fileTimesSaveInterval)
-            ExitWithError("environment::environment","No times file will be saved during the simulation");
-	
-	if(debugLevel >= RUNNING_VERSION)
-		showGlobalParameter();
-	//IF RANDOM SEED IS 0 IT HAS TO BE CREATED RANDOMLY 
-	if(randomSeed == 0)
-	{
-		//randomSeed = getIntRandom(1, RANDOMRANGE, tmpRndDoubleGen);
-		srand(time(0));
-		randomSeed = rand();
-		if(debugLevel >= RUNNING_VERSION)
-			cout << "|- New random seed -> " << randomSeed << endl;
-        }
-	
-	if(energy == 1) 
-            nrgBoolFlag = ENERGYBASED;
-        else
-            nrgBoolFlag = ENERGYFREE;
-	
-	// INITIALIZE THE REFILL TIMER
-	timeSinceTheLastInFlux = 0;
-	// INITIALIZE TIME TO 0
-	actualTime = 0;
-	
-	numberOfSpecies = 0;
-	numberOfNewSpecies = 0;
-	numberOfMolecules = 0;
-	numberOfNewMolecules = 0;
-	numberOfCpx = 0;
-	numberOfCpxMols = 0;
-	decimalMoleculesToEfflux = 0;
-	decimalMoleculesToLoad = 0;
-	decimalMoleculesToUNLOAD = 0;
-	gillespieTotalScore = 0;
-        gillespieNewSpeciesScore = 0;
-        ratioBetweenNewGillTotGill = 0;
-        internalTimesStoredCounter = 0;
-        // TO BE PARAMETRIZED
-        Currentattempts = 0;
-    resetReactionsCounter();
-		
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment end" << endl;
-
-}*/
-
-/**
- Environment Constructor
- @version 1.0
- @param tmpInitialPath
  @date 2013/07/04
  */
 environment::environment(string tmpInitialPath)
@@ -1339,45 +1221,6 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
 }//eof createInitialMoleculesPopulationFromSpecificFileSTD
 
 /**
- Create influx layer from file
- @version 1.0
- @param QString tmpInfluxFilePath file path
- @date 2010-05-18
- 
-*/
-/*bool environment::createInfluxLayersFromFile(QString tmpInfluxFilePath) //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFile start" << endl;
-	// INFLUX FILE PATH CREATION
-	QString InfluxFilePath = tmpInfluxFilePath + "_acsinflux.csv";
-	QTextStream prompt(stdout);
-	prompt << "Loading influx layer from " << InfluxFilePath << endl;
-	//OPEN FILE
-	QFile fid(InfluxFilePath);
-	if(!fid.open(QIODevice::ReadOnly | QIODevice::Text))
-		ExitWithError("createInfluxLayersFromFile", "File _influx.csv has not been found");
-	
-	QTextStream in(&fid);
-	while(!in.atEnd())
-	{
-		QString strLine = in.readLine();
-		if((strLine.contains("#") == false) && (strLine.isEmpty() == false) && (strLine.isNull() == false))
-		{
-			QStringList strLineSpletted = strLine.split("\t");
-			nutrientsForInflux.push_back(strLineSpletted[0].toInt());
-            nutrientsProb2BeSelected.push_back(strLineSpletted[1].toDouble());
-		}
-	}	
-	
-	fid.close();
-	
-	if(debugLevel >= SMALL_DEBUG){printNutrientsAndProbability();}
-	
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFile end" << endl;
-	return true;
-}*/
-
-/**
  Create influx layer from file C++ libraries
  @version 1.0
  @param string tmpInfluxFilePath file path
@@ -1405,45 +1248,6 @@ bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath)
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFileSTD end" << endl;
     return true;
 }//eof createInfluxLayersFromFileSTD
-
-/**
- load energy boolean function (in decimal format)
- @version 1.0
- @param QString tmpInfluxFilePath file path
- @date 2011-04-13
-
-*/
-/*bool environment::createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath) //TR
-{
-    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createNrgBooleanFunctionsFromFile start" << endl;
-    // INFLUX FILE PATH CREATION
-    QString InfluxFilePath = tmpInfluxFilePath + "_acsnrgbooleanfunctions.csv";
-    QTextStream prompt(stdout);
-    prompt << "Loading energy Boolean functions from " << InfluxFilePath << endl;
-    //OPEN FILE
-    QFile fid(InfluxFilePath);
-    if(!fid.open(QIODevice::ReadOnly | QIODevice::Text))
-            ExitWithError("createNrgBooleanFunctionsFromFile", "File _acsnrgbooleanfunctions.csv has not been found");
-
-    QTextStream in(&fid);
-    while(!in.atEnd())
-    {
-            QString strLine = in.readLine();
-            if((strLine.contains("#") == false) && (strLine.isEmpty() == false) && (strLine.isNull() == false))
-            {
-                    QStringList strLineSpletted = strLine.split("\t");
-                    nrgBooleanFunctions.push_back(strLineSpletted[0].toInt());
-                    nrgBoolFncsProb2BeSelected.push_back(strLineSpletted[1].toDouble());
-            }
-    }
-
-    fid.close();
-
-    if(debugLevel >= SMALL_DEBUG){printNutrientsAndProbability();}
-
-    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createNrgBooleanFunctionsFromFile end" << endl;
-    return true;
-}*/
 
 /**
  load energy boolean function (in decimal format) - Standard C++
@@ -1510,97 +1314,6 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
     return true;
 }//eof createInitialReactionsLayerFromFileSTD
 
-
-/**
- Initial reactions layer creation from file
- @version 1.0
- @param QString tmpSpeciesFilePath file path
- */
-/*bool environment::createInitialReactionsLayerFromFile(QString tmpReactionsFilePath)  //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromFile start" << endl;
-
-	// CONFIGURATION FILE PATH CREATION
-	QString ReactionsFilePath = tmpReactionsFilePath + "_acsreactions.csv";
-	QTextStream prompt(stdout);
-	prompt << "Loading reactions layer from " << ReactionsFilePath << endl;
-	//OPEN FILE
-	QFile fid(ReactionsFilePath);
-	if(!fid.open(QIODevice::ReadOnly | QIODevice::Text))
-		ExitWithError("createInitialMoleculesPopulationFromSpecificFile", "File has not been found");
-	
-	QTextStream in(&fid);
-	while(!in.atEnd())
-	{
-		QString strLine = in.readLine();
-		if((strLine.contains("#") == false) && (strLine.isEmpty() == false) && (strLine.isNull() == false))
-		{
-			QStringList strLineSpletted = strLine.split("\t");
-			allReactions.push_back(reactions((acs_longInt)strLineSpletted[0].toInt(), (acs_longInt)strLineSpletted[1].toInt(), 
-											 (acs_longInt)strLineSpletted[2].toInt(), (acs_longInt)strLineSpletted[3].toInt(), 
-											 (acs_longInt)strLineSpletted[4].toInt(), (acs_longInt)strLineSpletted[5].toInt(),
-                                                                                         (acs_double)strLineSpletted[6].toInt()));
-		}
-	}
-	
-	fid.close();
-	
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromFile end" << endl;
-
-	return true;
-}//eof createInitialPopulationFromFile*/
-
-/**
- Initial reactions layer creation from SPECIFIC file
- @version 1.0
- @param QString tmpSpeciesFilePath file path
- */
-/*bool environment::createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM)  //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromSpecificFile start" << endl;
-	
-	// CONFIGURATION FILE PATH CREATION
-	QString strCurrentGen;
-	QString strCurrentSim;
-	QString strCurrentStep;
-	QString strZeroGenBefore = zeroBeforeStringNumber(nGEN, tmpActGEN);
-	QString strZeroSimBefore = zeroBeforeStringNumber(pow(double(nSIM), double(tmpActGEN)), tmpActSIM);
-	QString strZeroStepBefore = zeroBeforeStringNumber(nReactions, 0);
-	// CONFIGURATION FILE PATH CREATION
-	QString ReactionsFilePath = tmpReactionsFilePath + "reactions_" + strZeroGenBefore + strCurrentGen.setNum(tmpActGEN) + 
-													"_" +  strZeroSimBefore + strCurrentSim.setNum(tmpActSIM) + 
-													"_" +  strZeroStepBefore + strCurrentStep.setNum(0)	+ ".csv";
-	QTextStream prompt(stdout);
-	if(debugLevel >= MINIMAL_PROMPT)
-	{
-		prompt << "\t\t|- Loading reactions layer from " << ReactionsFilePath << endl;
-	}
-	//OPEN FILE
-	QFile fid(ReactionsFilePath);
-	if(!fid.open(QIODevice::ReadOnly | QIODevice::Text))
-		ExitWithError("createInitialMoleculesPopulationFromSpecificFile", "File has not been found");
-	
-	QTextStream in(&fid);
-	while(!in.atEnd())
-	{
-		QString strLine = in.readLine();
-		if((strLine.contains("#") == false) && (strLine.isEmpty() == false) && (strLine.isNull() == false))
-		{
-			QStringList strLineSpletted = strLine.split("\t");
-			allReactions.push_back(reactions((acs_longInt)strLineSpletted[0].toInt(), (acs_longInt)strLineSpletted[1].toInt(), 
-											 (acs_longInt)strLineSpletted[2].toInt(), (acs_longInt)strLineSpletted[3].toInt(), 
-											 (acs_longInt)strLineSpletted[4].toInt(), (acs_longInt)strLineSpletted[5].toInt(),
-                                                                                         (acs_double)strLineSpletted[6].toInt()));
-		}
-	}
-	
-	fid.close();
-	
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromSpecificFile end" << endl;
-	
-	return true;
-}//eof createInitialreactionsLayerFromSpecificFile*/
-
 /**
  Reactions from file using standard C++ libraries
  @version 1.0
@@ -1648,49 +1361,6 @@ bool environment::createInitialReactionsLayerFromSpecificFileSTD(string tmpReact
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromSpecificFileSTD end" << endl;
     return true;
 }//eof createInitialReactionsLayerFromSpecificFileSTD
-
-
-
-/**
- Initial catalysis layer creation from file
- @version 1.0
- @param QString tmpSpeciesFilePath file path
- */
-/*bool environment::createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePath) //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromFile start" << endl;
-
-	// CONFIGURATION FILE PATH CREATION
-	QString CatalysisFilePath = tmpCatalysisFilePath + "_acscatalysis.csv";
-	QTextStream prompt(stdout);
-	prompt << "Loading catalysis layer from " << CatalysisFilePath << endl;
-	//OPEN FILE
-	QFile fid(CatalysisFilePath);
-	if(!fid.open(QIODevice::ReadOnly | QIODevice::Text))
-		ExitWithError("createInitialMoleculesPopulationFromSpecificFile", "File has not been found");
-	
-	QTextStream in(&fid);
-	int catalysisID = 1;
-	while(!in.atEnd())
-	{
-		QString strLine = in.readLine();
-		if((strLine.contains("#") == false) && (strLine.isEmpty() == false) && (strLine.isNull() == false))
-		{
-			QStringList strLineSpletted = strLine.split("\t");
-			allCatalysis.push_back(catalysis((acs_longInt)strLineSpletted[0].toInt(), (acs_longInt)strLineSpletted[1].toInt(), 
-											 (acs_longInt)strLineSpletted[2].toInt(), (acs_longInt)strLineSpletted[3].toInt(),
-											 (acs_double)strLineSpletted[4].toDouble(), (acs_double)strLineSpletted[5].toDouble(), 
-											 (acs_double)strLineSpletted[6].toDouble()));
-			catalysisID++;
-		}
-	}
-	
-	fid.close();
-	
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromFile end" << endl;
-
-	return true;
-}//eof createInitialPopulationFromFile*/
 
 /**
  Catalysis from file using standard C++ libraries
@@ -1775,136 +1445,6 @@ bool environment::createInitialCatalysisLayerFromSpecificFileSTD(string tmpCatal
     return true;
 }//eof createInitialCatalysisLayerFromSpecificFileSTD
 
-/**
- Initial catalysis layer creation from SPECIFIC file
- @version 1.0
- @param QString tmpSpeciesFilePath file path
- */
-/*bool environment::createInitialCatalysisLayerFromSpecificFile(QString tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM)  //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromSpecificFile start" << endl;
-	
-	// CONFIGURATION FILE PATH CREATION
-	QString strCurrentGen;
-	QString strCurrentSim;
-	QString strCurrentStep;
-	QString strZeroGenBefore = zeroBeforeStringNumber(nGEN, tmpActGEN);
-	QString strZeroSimBefore = zeroBeforeStringNumber(pow(double(nSIM), double(tmpActGEN)), tmpActSIM);
-	QString strZeroStepBefore = zeroBeforeStringNumber(nReactions, 0);
-	// CONFIGURATION FILE PATH CREATION
-	QString CatalysisFilePath = tmpCatalysisFilePath + "catalysis_" + strZeroGenBefore + strCurrentGen.setNum(tmpActGEN) + 
-                                                                "_" +  strZeroSimBefore + strCurrentSim.setNum(tmpActSIM) +
-                                                                "_" +  strZeroStepBefore + strCurrentStep.setNum(0)	+ ".csv";
-	
-	QTextStream prompt(stdout);
-	if(debugLevel >= MINIMAL_PROMPT)
-	{
-		prompt << "\t\t|- Loading catalysis layer from " << CatalysisFilePath << endl;
-	}
-	//OPEN FILE
-	QFile fid(CatalysisFilePath);
-	if(!fid.open(QIODevice::ReadOnly | QIODevice::Text))
-		ExitWithError("createInitialMoleculesPopulationFromSpecificFile", "File has not been found");
-	
-	QTextStream in(&fid);
-	int catalysisID = 1;
-	while(!in.atEnd())
-	{
-		QString strLine = in.readLine();
-		if((strLine.contains("#") == false) && (strLine.isEmpty() == false) && (strLine.isNull() == false))
-		{
-			QStringList strLineSpletted = strLine.split("\t");
-			allCatalysis.push_back(catalysis((acs_longInt)strLineSpletted[0].toInt(), (acs_longInt)strLineSpletted[1].toInt(), 
-                                                         (acs_longInt)strLineSpletted[2].toInt(), (acs_longInt)strLineSpletted[3].toInt(),
-                                                         (acs_double)strLineSpletted[4].toDouble(), (acs_double)strLineSpletted[5].toDouble(),
-                                                         (acs_double)strLineSpletted[6].toDouble()));
-			catalysisID++;
-		}
-	}
-	
-	fid.close();
-	
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromSpecificFile end" << endl;
-	
-	return true;
-}//eof createInitialCatalysisLayerFromSpecificFile*/
-
-/**
- Create the initial amount of the molecules belonging to a particular species according to the species length
- @version 1.0
- @param tmpAlphabetLength Number of symbols in the alphabet
- @param tmpSpeciesLength Lenght of the species
- */
-//TR acs_longInt environment::createInitialAmount(int tmpAlphabetLength, int tmpSpeciesLength)  //TR
-//{
-//	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::createInitialAmount start" << endl;
-//	
-//	acs_longInt tmpInitialAmount;
-//	if(initialAmountDistribution == PROPORTIONALMOLECULEAMOUNT)
-//	{
-//		tmpInitialAmount = overallConcentration / totalPossibleNumberOfSpecies;
-//		
-//	}else if(initialAmountDistribution == UNIFORMMOLECULEAMOUNT)
-//	{
-//		// tmpInitialAmount = Al^{Lmax-Ls}
-//		tmpInitialAmount = pow(acs_double(tmpAlphabetLength), int(initialMaxLength - tmpSpeciesLength)) * overallConcentration;
-//	
-//	}else{ // INVPROPORTIONALMOLECULEAMOUNT
-//		
-//		// tmpInitialAmount = Al^2{Lmax-Ls}
-//		tmpInitialAmount = pow(acs_double(tmpAlphabetLength), 2 * int(initialMaxLength - tmpSpeciesLength)) * overallConcentration;
-//
-//	}
-//	
-//	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::createInitialAmount end" << endl;
-//
-//	return tmpInitialAmount;
-//}
-
-/**
- Create the initial concentration of the species according to the species length, the alphabet and the overall concentration
- @version 1.0
- @param tmpAlphabetLength Number of symbols in the alphabet
- @param tmpSpeciesLength Lenght of the species
- */
-//TR acs_double environment::createInitialConcentration(int tmpAlphabetLength, int tmpSpeciesLength)
-//{
-//	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::createInitialConcentration start" << endl;
-//	
-//	acs_double tmpInitialConcentration;
-//	
-//	if(initialAmountDistribution == PROPORTIONALMOLECULEAMOUNT)
-//	{
-//		tmpInitialConcentration = overallConcentration / (lastFiringDiskSpeciesID + 1);
-//		
-//	}else if(initialAmountDistribution == UNIFORMMOLECULEAMOUNT)
-//	{
-//		// The overall concentration is uniformly distributed between the different lengths
-//		acs_double tmpSngLengthConcentration = overallConcentration / initialMaxLength;
-//	    acs_double numberOfSpeciesOfLengthL = pow(acs_double(tmpAlphabetLength), tmpSpeciesLength);
-//		tmpInitialConcentration = tmpSngLengthConcentration / numberOfSpeciesOfLengthL;
-//		
-//	}else{ // INVPROPORTIONALMOLECULEAMOUNT
-//		
-//		// Starting from length 1, each length use the 2/3 of the reamining concentration
-//		acs_double numberOfSpeciesOfLengthL = pow(acs_double(tmpAlphabetLength), tmpSpeciesLength);
-//		if((unsigned)tmpSpeciesLength == initialMaxLength)
-//		{
-//			tmpInitialConcentration = (overallConcentration * pow(pow(double(3), double(-1)), double(tmpSpeciesLength - 1))) / numberOfSpeciesOfLengthL;
-//		}else {
-//			tmpInitialConcentration = (overallConcentration * 
-//									  (pow(pow(double(3), double(-1)), double(tmpSpeciesLength - 1)) - 
-//									  pow(pow(double(3), double(-1)),double(tmpSpeciesLength)))) / numberOfSpeciesOfLengthL;
-//
-//		}		
-//	}
-//	
-//	
-//	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::createInitialConcentration end" << endl;
-//	
-//	return tmpInitialConcentration;
-//	
-//}
 
 /**
  Create the diffusion constant renforcement according to the species length
@@ -5760,7 +5300,7 @@ void environment::showGlobalParameter()
         cout << "|   ****         ***   *     *          *****   *****                             |" << endl;
         cout << "|  *            *   *  **    *         *       *                                  |" << endl;
         cout << "| *        ***  *   *  * *   *  ****   *       *                                  |" << endl;
-        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 3.2b20130403.51   |" << endl;
+        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 4.0b20130705.52   |" << endl;
         cout << "| *       ****  **     *   * *  ****        *       *                             |" << endl;
         cout << "|  *      *  *  * *    *    **  *           *       *                             |"  << endl;
         cout << "|   ****  ****  *  *   *     *   ***   *****   *****                              |" << endl;
@@ -6134,29 +5674,6 @@ void environment::storeInitialStructures()
  *************************/
 
 /**
- This function creates a chain of zero as QString according to tmpTotN and tmpCurrent N in order to make possible a sorting
- (e.g. tmpTotN = 1000, tmpCurrentN = 3, return 0003
- @version 1.0
- @param acs_int tmpTotN Total N
- @param acs_int tmpCurrentN current N
- */
-/*QString environment::zeroBeforeStringNumber(acs_int tmpTotN, acs_int tmpCurrentN) //TR
-{
-	QString strZeroReturned = "";
-    QString tempQStrTmpTotN;
-    QString tempQStrtmpCurrentN;
-    QString QStrTmpTotN = tempQStrTmpTotN.setNum(tmpTotN);
-    QString QStrtmpCurrentN = tempQStrtmpCurrentN.setNum(tmpCurrentN);
-	
-	for(int i = 0; i < QStrTmpTotN.length() - QStrtmpCurrentN.length(); i++)
-	{
-		strZeroReturned += "0";
-	}
-	
-	return strZeroReturned;
-}*/
-
-/**
  This function creates a chain of zero as STRING according to tmpTotN and tmpCurrent N in order to make possible a sorting
  (e.g. tmpTotN = 1000, tmpCurrentN = 3, return 0003
  @version 1.0
@@ -6180,168 +5697,6 @@ string environment::zeroBeforeStringNumberSTD(acs_int tmpTotN, acs_int tmpCurren
 
     return strZeroReturned;
 }
-
-/**
- Save a file with the configuration parameters
- @version 1.0
- */
-/*bool environment::saveConfigurationFile(QString tmpStoringPath) //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveConfigurationFile start" << endl;
-
-	cout << "Saving configuration file... ";
-	QString strConfigurationFile = tmpStoringPath + "/acsm2s.conf";
-	QFile fid(strConfigurationFile);
-	if(!fid.open(QIODevice::WriteOnly | QIODevice::Text))
-		exit(EXIT_FAILURE);
-	
-	QTextStream out(&fid);
-
-	out << "# =================" << endl;
-	out << "# ACSM2S PARAMETERS" << endl;
-	out << "# =================" << endl << endl;
-
-	out << "# -----------------" << endl;
-	out << "# SYSTEM PARAMETERS" << endl;
-	out << "# -----------------" << endl << endl;
-	
-	//TR out << "# Limit the work of the software to the environment creation" << endl;
-	//TR out << "onlyEnvironmentCreation=" << onlyEnvironmentCreation << endl << endl;
-	
-	out << "# Number of Generations" << endl;
-	out << "nGEN=" << nGEN << endl << endl;
-	
-	out << "# Number of Simulations per generation (after noMultipleSimsGens generations)" << endl;
-	out << "nSIM=" << nSIM << endl << endl;
-	
-	out << "# Number of seconds" << endl;
-	out << "nSeconds=" << (double)nSeconds << endl << endl;
-	
-	out << "# Number of max reactions permitted (step)" << endl;
-	out << "nReactions=" << nReactions << endl << endl;
-
-    out << "# Max number of hours (computational time) of the simulation (if 0 no limits are set)" << endl;
-    out << "nHours=" << (double)nHours << endl << endl;
-
-    out << "# Number of attempts in same network / different random seed (if 0 no limits are set) " << endl;
-    out << "nAttempts=" << nAttempts << endl << endl;
-	
-	out << "# random seed (random if 0)" << endl;
-	out << "randomSeed=" << (int)randomSeed << endl << endl;
-	
-	out << "# Debug Level: Runtime number of prompted messages level" << endl; 
-	out << "debugLevel=" << debugLevel << endl << endl;
-	
-	out << "# Save structures to file every..." << endl; 
-	out << "timeStructuresSavingInterval=" << (double)timeStructuresSavingInterval << endl << endl;
-
-    out << "# Save file times avery..." << endl;
-    out << "fileTimesSaveInterval=" << (double)fileTimesSaveInterval << endl << endl;
-	
-	out << "# ------------------------" << endl;
-	out << "# ENVIRONMENTAL PARAMETERS" << endl;
-	out << "# ------------------------" << endl << endl;
-	
-	out << "# Total number of species in the initial population" << endl;
-	out << "# 	If The number is greater than the theoretical number" << endl; 
-	out << "#	according to initial max length and the alphabet all species" << endl;
-	out << "#	will be created, otherwise if it is equal to 0 the system will be" << endl;
-	out << "#	upload from file." << endl << endl;
-	//TR out << "initialPopulationNumber=" << initialPopulationNumber << endl;
-	
-	out << "# Identificator of the last firing disk species" << endl;
-	out << "lastFiringDiskSpeciesID=" << lastFiringDiskSpeciesID << endl << endl;
-	
-	out << "# Initial distribution" << endl;
-	out << "# 1- Proportional: Same number of molecules for each species" << endl;
-	out << "# 2- Uniform: Same number of molecules for each length" << endl;
-	out << "# 3- inversely proportional: more morecules for the short species" << endl << endl;
-	//TR out << "initialAmountDistribution=" << initialAmountDistribution << endl << endl;
-	
-	//TR out << "# Initial maximum length" << endl;
-	//TR out << "initialMaxLength=" << initialMaxLength << endl << endl;
-	
-	out << "# Overall initial concentration" << endl;
-	out << "overallConcentration=" << (double)overallConcentration << endl << endl;
-	
-	out << "# Overall energy carriers concentration" << endl;
-	out << "ECConcentration=" << (double)ECConcentration << endl << endl;
-	
-	out << "# Alphabet (e.g. AGCT for DNA)" << endl;
-	out << "alphabet=" << alphabet.c_str() << endl << endl;
-	
-	out << "# Volume (dm^3)" << endl;
-	out << "volume=" << (double)volume << endl << endl;
-	
-	out << "# ------------------" << endl;
-	out << "# DYNAMIC PARAMETERS" << endl;
-	out << "# ------------------" << endl << endl;	
-	
-	out << "# Energy introduction" << endl; 
-	out << "#	0: Not energy in the system" << endl;
-	out << "#	1: Energy is present" << endl;
-	out << "energy=" << (double)energy << endl << endl;
-
-	out << "# Ratio of energizable species" << endl;
-	out << "ratioSpeciesEnergizable=" << (double)ratioSpeciesEnergizable << endl << endl;
-
-	//TR out << "# Energy target (0=substrate, 1=catalsyt, 2=both)" << endl << endl;
-	//TR out << "energyTarget=" <<  energyTarget << endl << endl;
-
-	//TR out << "# Percentage of loaded energy carriers in the incoming flux" << endl;
-	//TR out << "percLoadedECInflux=" <<  (double)percLoadedECInflux << endl << endl;
-	
-	out << "# Complex Formation Symmetry (GILLESPIE computation: if equal to 1, one complex" << endl;
-	out << "#	formation reaction for each substrate will be created, otherwise only" << endl;
-	out << "#	complex formation reaction with the first substrate will be considered" << endl;
-	out << "complexFormationSymmetry=" << complexFormationSymmetry << endl << endl;
-
-	out << "# IF 1 also monomers can catalyze reactions, otherwise reactions are catalyzed" << endl;
-	out << "# starting from dimers" << endl;
-	out << "nonCatalyticMaxLength=" << nonCatalyticMaxLength << endl << endl;
-	
-	out << "# Catalysis probability" << endl;
-	out << "reactionProbability=" << (double)reactionProbability << endl << endl;
-	
-	out << "# Cleavage probability (Condensation Probability is 1 - cleavage probability)" << endl;
-	out << "cleavageProbability=" << (double)cleavageProbability << endl << endl;
-	
-	out << "# Enable reverse reactions" << endl;
-	out << "reverseReactions=" << reverseReactions << endl << endl;
-
-    out << "# Ratio between forward and backward reactions (if reverseReactions = TRUE)" << endl;
-    out << "revRctRatio=" << (double)revRctRatio << endl << endl;
-	
-	out << "# kinetic constants" << endl;
-	out << "K_ass=" << (double)K_ass << endl;
-	out << "K_diss=" << (double)K_diss << endl;
-	out << "K_cpx=" << (double)K_cpx << endl;
-	out << "K_cpxDiss=" << (double)K_cpxDiss << endl;
-	out << "K_nrg=" << (double)K_nrg << endl;
-	out << "K_nrg_decay=" << (double)K_nrg_decay << endl;
-	out << "moleculeDecay_KineticConstant=" << (double)moleculeDecay_KineticConstant << endl << endl;
-	
-	out << "# (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length" << endl;
-	out << "diffusion_contribute=" << (double)diffusion_contribute << endl << endl;
-	
-	out << "# Solubility Threshold (The threshold set the centre of the logistic curve, 0 to exclude precipitation)" << endl;
-	out << "solubility_threshold=" << solubility_threshold << endl << endl;
-	
-    //TR out << "# 0 (Close System) - Max length of the influx" << endl;
-    //TR out << "influx=" << influx << endl << endl;
-	
-	out << "# Overall influx (moles per second) and maximum length of the species passing the filter in the outflow process" << endl;
-	out << "influx_rate=" << (double)influx_rate << endl;
-	out << "maxLOut=" << maxLOut << endl << endl;
-
-	
-	fid.close();
-	cout << "done." << endl;
-	
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveConfigurationFile end" << endl;
-	
-	return true;
-}*/
 
 /**
  Save a file with the configuration parameters
@@ -6499,37 +5854,6 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
 }
 
 /**
- Save influx structures in a file named
- @param bool saveInfluxStructure(QString tmpStoringPath);
- @version 1.0
- @date 2010-04-04
-*/
-/*bool environment::saveInfluxStructure(QString tmpStoringPath) //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveInfluxStructure start" << endl;
-	cout << "Saving Influx file...";
-	
-	QString strConfigurationFile = tmpStoringPath + "/_acsinflux.csv";
-	QFile fid(strConfigurationFile);
-	if(!fid.open(QIODevice::WriteOnly | QIODevice::Text))
-		exit(EXIT_FAILURE);
-	
-	QTextStream out(&fid);	
-	acs_int influxSpeciesID = 0;
-    for(vector<acs_int>::iterator tmpAllInfluxIter = nutrientsForInflux.begin(); tmpAllInfluxIter != nutrientsForInflux.end(); tmpAllInfluxIter++)
-	{
-		out << *tmpAllInfluxIter << "\t" << (double)nutrientsProb2BeSelected.at(influxSpeciesID) << endl;
-		influxSpeciesID++;
-	}
-	fid.close();
-	cout << "done." << endl;
-
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveInfluxStructure end" << endl;	
-	return true;
-
-}*/
-
-/**
  Save influx structure on file, standard C++
  @param bool saveInfluxStructure(QString tmpStoringPath);
  @version 1.0
@@ -6568,37 +5892,6 @@ bool environment::saveInfluxStructureSTD(string tmpStoringPath)
 }
 
 /**
- Save Energetic Boolean Function on a file named _acsnrgbooleanfunctions.csv
- @version 1.0
- @date 2011-04-15
- @param QString tmpStoringPath Path of the saving folder
-*/
-/*bool environment::saveNrgBoolFncStructure(QString tmpStoringPath) //TR
-{
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveNrgBoolFncStructure start" << endl;
-        cout << "Saving Influx file...";
-
-        QString strConfigurationFile = tmpStoringPath + "/_acsnrgbooleanfunctions.csv";
-        QFile fid(strConfigurationFile);
-        if(!fid.open(QIODevice::WriteOnly | QIODevice::Text))
-                exit(EXIT_FAILURE);
-
-        QTextStream out(&fid);
-        acs_int influxNrgBoolID = 0;
-        for(vector<acs_int>::iterator tmpAllNrgBoolIter = nrgBooleanFunctions.begin(); tmpAllNrgBoolIter != nrgBooleanFunctions.end(); tmpAllNrgBoolIter++)
-        {
-                out << *tmpAllNrgBoolIter << "\t" << (double)nrgBoolFncsProb2BeSelected.at(influxNrgBoolID) << endl;
-                influxNrgBoolID++;
-        }
-        fid.close();
-        cout << "done." << endl;
-
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveNrgBoolFncStructure end" << endl;
-        return true;
-
-}*/
-
-/**
  Save Energetic Boolean Function on file, standard C++
  @param bool saveInfluxStructure(QString tmpStoringPath);
  @version 1.0
@@ -6635,61 +5928,6 @@ bool environment::saveNrgBoolFncStructureSTD(string tmpStoringPath)
     return true;
 
 }
-
-
-/**
- Save the species structures in a file named species_[currentSims]_[currentStep].csv. This is file is equal to the acs_species.csv input file. 
- The file is saved in the directory indicated as a second parameter in the run command
- @version 1.0
- */
-/*bool environment::saveSpeciesStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath) //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveSpeciesStructure start" << endl;
-
-	if(debugLevel >= SMALL_DEBUG)
-            cout << "Saving species structure...";
-	QString strCurrenGen;
-	QString strCurrentSim;
-	QString strCurrentStep;
-	QString strZeroGenBefore = zeroBeforeStringNumber(nGEN, tmpCurrentGen);
-	QString strZeroSimBefore = zeroBeforeStringNumber(pow(double(nSIM), double(tmpCurrentGen)), tmpCurrentSim);
-	QString strZeroStepBefore = zeroBeforeStringNumber(nReactions, tmpCurrentStep);
-	QString strFileSpeciesStructure = tmpStoringPath + "/species_" + strZeroGenBefore + strCurrenGen.setNum(tmpCurrentGen) + "_" +
-									strZeroSimBefore + strCurrentSim.setNum(tmpCurrentSim) + "_" + 
-									strZeroStepBefore + strCurrentStep.setNum(tmpCurrentStep) + ".csv";
-	QFile fid(strFileSpeciesStructure);
-	if(!fid.open(QIODevice::WriteOnly | QIODevice::Text))
-		exit(EXIT_FAILURE);
-	
-	QTextStream out(&fid);
-        for(vector<species>::iterator tmpAllSpeciesIter = allSpecies.begin(); tmpAllSpeciesIter != allSpecies.end(); tmpAllSpeciesIter++)
-	{
-		out << (acs_longInt)tmpAllSpeciesIter->getID() << "\t"
-		<< tmpAllSpeciesIter->getSequence().c_str() << "\t"
-		//<< (acs_longInt)tmpAllSpeciesIter->getAmount() << "\t"
-		<< (double)tmpAllSpeciesIter->getConcentration() << "\t"
-		<< (double)tmpAllSpeciesIter->getDiffusionEnh() << "\t"
-		<< (acs_int)tmpAllSpeciesIter->getSolubility() << "\t"
-		<< (double)tmpAllSpeciesIter->getComplexDegEnh() << "\t"
-		<< tmpAllSpeciesIter->getComplexCutPnt() << "\t"
-		<< tmpAllSpeciesIter->getEvaluated() << "\t"
-		<< (double)tmpAllSpeciesIter->getAge() << "\t"
-		<< tmpAllSpeciesIter->getReborns() << "\t" 
-		<< tmpAllSpeciesIter->getCatalyst_ID()  << "\t"
-		<< tmpAllSpeciesIter->getSubstrate_ID() <<	"\t"
-		<< (double)tmpAllSpeciesIter->getK_phospho() << "\t"
-        << (double)tmpAllSpeciesIter->getLoadedConcentration(volume) << "\t"
-        << tmpAllSpeciesIter->getConcentrationFixed() << endl;
-	}
-	fid.close();
-	
-	if(debugLevel >= SMALL_DEBUG)
-		cout << "done." << endl;
-	
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveSpeciesStructure end" << endl;
-	
-	return true;
-}*/
 
 /**
  Save the species structures in a file named species_[currentSims]_[currentStep].csv. This is file is equal to the acs_species.csv input file. C++ standard
@@ -6758,50 +5996,6 @@ bool environment::saveSpeciesStructureSTD(acs_int tmpCurrentGen, acs_int tmpCurr
 }
 
 /**
- Save the reactions structures in a file named reactions_[currentSims]_[currentStep].csv. This is file is equal to the acs_reactions.csv input file. 
- The file is saved in the directory indicated as a second parameter in the run command
- @version 1.0
- */
-/*bool environment::saveReactionsStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath) //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsStructure start" << endl;
-
-	if(debugLevel >= SMALL_DEBUG)
-		cout << "Saving reactions structure...";
-	QString strCurrenGen;
-	QString strCurrentSim;
-	QString strCurrentStep;
-	QString strZeroGenBefore = zeroBeforeStringNumber(nGEN, tmpCurrentGen);
-	QString strZeroSimBefore = zeroBeforeStringNumber(pow(double(nSIM), double(tmpCurrentGen)), tmpCurrentSim);
-	QString strZeroStepBefore = zeroBeforeStringNumber(nReactions, tmpCurrentStep);
-	QString strFileReactionsStructure = tmpStoringPath + "/reactions_" + strZeroGenBefore + strCurrenGen.setNum(tmpCurrentGen) + "_" +
-										strZeroSimBefore + strCurrentSim.setNum(tmpCurrentSim) + "_" + 
-										strZeroStepBefore + strCurrentStep.setNum(tmpCurrentStep) + ".csv";
-	QFile fid(strFileReactionsStructure);
-	if(!fid.open(QIODevice::WriteOnly | QIODevice::Text))
-		exit(EXIT_FAILURE);
-	
-	QTextStream out(&fid);
-        for(vector<reactions>::iterator tmpAllReactionsIter = allReactions.begin(); tmpAllReactionsIter != allReactions.end(); tmpAllReactionsIter++)
-	{
-		out << tmpAllReactionsIter->getID() << "\t"
-		<< tmpAllReactionsIter->getType() << "\t"
-		<< tmpAllReactionsIter->getSpecies_I() << "\t"
-		<< tmpAllReactionsIter->getSpecies_II() << "\t"
-		<< tmpAllReactionsIter->getSpecies_III() << "\t"
-        << tmpAllReactionsIter->getEvents() << "\t"
-		<< tmpAllReactionsIter->getEnergyType() << endl;
-	}
-	fid.close();
-	if(debugLevel >= SMALL_DEBUG)
-		cout << "done." << endl;
-
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsStructure end" << endl;
-
-	return true;
-}*/
-
-/**
  Save the reactions structures in a file named reactions_[currentSims]_[currentStep].csv. This is file is equal to the acs_reactions.csv input file.
  The file is saved in the directory indicated as a second parameter in the run command
  @version 1.0
@@ -6853,52 +6047,6 @@ bool environment::saveReactionsStructureSTD(acs_int tmpCurrentGen, acs_int tmpCu
 
     return true;
 }
-
-
-/**
- Save the catalysis structures in a file named catalysis_[currentSims]_[currentStep].csv. This is file is equal to the acs_catalysis.csv input file. 
- The file is saved in the directory indicated as a second parameter in the run command
- @version 1.0
- */
-/*bool environment::saveCatalysisStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath) //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveCatalysisStructure start" << endl;
-
-	if(debugLevel >= SMALL_DEBUG)
-		cout << "Saving catalysis structure...";
-	QString strCurrenGen;
-	QString strCurrentSim;
-	QString strCurrentStep;
-	QString strZeroGenBefore = zeroBeforeStringNumber(nGEN, tmpCurrentGen);
-	QString strZeroSimBefore = zeroBeforeStringNumber(pow(double(nSIM), double(tmpCurrentGen)), tmpCurrentSim);
-	QString strZeroStepBefore = zeroBeforeStringNumber(nReactions, tmpCurrentStep);
-	QString strFileCatalysisStructure = tmpStoringPath + "/catalysis_" + strZeroGenBefore + strCurrenGen.setNum(tmpCurrentGen) + "_" +
-										strZeroSimBefore + strCurrentSim.setNum(tmpCurrentSim) + "_" + 
-										strZeroStepBefore + strCurrentStep.setNum(tmpCurrentStep) + ".csv";
-	QFile fid(strFileCatalysisStructure);
-	if(!fid.open(QIODevice::WriteOnly | QIODevice::Text))
-		exit(EXIT_FAILURE);
-	
-	QTextStream out(&fid);
-        for(vector<catalysis>::iterator tmpAllCatalysisIter = allCatalysis.begin(); tmpAllCatalysisIter != allCatalysis.end(); tmpAllCatalysisIter++)
-	{
-		out << tmpAllCatalysisIter->getCatId() << "\t"
-		<< tmpAllCatalysisIter->getCat() << "\t"
-		<< tmpAllCatalysisIter->getReactionID() << "\t"
-		<< tmpAllCatalysisIter->getTotAmount() << "\t"
-		<< (double)tmpAllCatalysisIter->getKass() << "\t"
-		<< (double)tmpAllCatalysisIter->getKdiss() << "\t"
-		<< (double)tmpAllCatalysisIter->getK_cpx() << endl;
-		//TR << (double)tmpAllCatalysisIter->getK_cpxDiss() << endl;
-	}
-	fid.close();
-	if(debugLevel >= SMALL_DEBUG)
-		cout << "done." << endl;
-
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveCatalysisStructure end" << endl;
-
-	return true;
-}*/
 
 /**
  Save the catalysis structures in a file named catalysis_[currentSims]_[currentStep].csv. This is file is equal to the acs_catalysis.csv input file. Standard C++
@@ -6955,82 +6103,6 @@ bool environment::saveCatalysisStructureSTD(acs_int tmpCurrentGen, acs_int tmpCu
 
     return true;
 }
-
-/**
- Save the reactions times in a file named times_[currentSim].csv. 
- The file is saved in the directory indicated as a second parameter in the run command
- @version 1.0
- */
-/*bool environment::saveTimes(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath)  //TR
-{
-    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveTimes start" << endl;
-    if(debugLevel >= SMALL_DEBUG)
-        cout << "\t|- Saving Times to file...";
-
-    try{
-
-        QString strCurrentGen;
-        QString strCurrentSim;
-        QString strZeroGenBefore = zeroBeforeStringNumber(nGEN, tmpCurrentGen);
-        QString strZeroSimBefore = zeroBeforeStringNumber(pow(double(nSIM), double(tmpCurrentGen)), tmpCurrentSim);
-        QString strFileCatalysisStructure = tmpStoringPath + "/times_" + strZeroGenBefore + strCurrentGen.setNum(tmpCurrentGen) + "_" +
-                strZeroSimBefore + strCurrentSim.setNum(tmpCurrentSim) + ".csv";
-        QFile fid(strFileCatalysisStructure);
-        if(!fid.open(QIODevice::Append | QIODevice::Text))
-            exit(EXIT_FAILURE);
-
-        QTextStream out(&fid);
-        if(COPYOFallGillespieScores.size() > 0)
-        {
-            out << tmpCurrentStep << "\t"
-                << (double)reactionsTime.at(tmpCurrentStep-1) << "\t"
-                << gillespieReactionsSelected.at(tmpCurrentStep-1) << "\t"
-                << COPYOFallGillespieScores.at(gillespieReactionsSelected.at(tmpCurrentStep-1)).getIdReactionType() << "\t"
-                << COPYOFallGillespieScores.size() << "\t"
-                << (double)allTimes.at(tmpCurrentStep-1) << "\t"
-                << getTotalNumberOfSpecies() << "\t"
-                << getTotalNumberOfMolecules() << "\t"
-                << getTotalNumberOfComplexSpecies() << "\t"
-                << getTotalNumberOfComplexes() << "\t"
-                << getTotalNumberOfMonomers() << "\t"
-                << (double)gillespiePartialTimes.at(tmpCurrentStep-1) << "\t"
-                << (double)performReactionPartialTimes.at(tmpCurrentStep-1) << "\t"
-                << (double)remainingProcessesPartialTimes.at(tmpCurrentStep-1) << "\t"
-                << (double)getRatioBetweenNewGillTotGill() << endl;
-        }else{
-            out << tmpCurrentStep << "\t"
-                << (double)reactionsTime.at(tmpCurrentStep-1) << "\t"
-                << gillespieReactionsSelected.at(tmpCurrentStep-1) << "\t"
-                << 0 << "\t"
-                << 0 << "\t"
-                << 0 << "\t"
-                << getTotalNumberOfSpecies() << "\t"
-                << getTotalNumberOfMolecules() << "\t"
-                << getTotalNumberOfComplexSpecies() << "\t"
-                << getTotalNumberOfComplexes() << "\t"
-                << getTotalNumberOfMonomers() << "\t"
-                << 0 << "\t"
-                << 0 << "\t"
-                << 0 << "\t"
-                << 0 << endl;
-        }
-        fid.close();
-        if(debugLevel >= SMALL_DEBUG)
-            cout << "OK" << endl;
-
-        COPYOFallGillespieScores.clear();
-
-    }
-    catch(exception&e)
-    {
-        cerr << "exceptioncaught:" << e.what() << endl;
-        ExitWithError("error in method saveTimes","exceptionerrorthrown");
-    }
-
-    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveTimes end" << endl;
-
-    return true;
-}*/
 
 /**
  Save the reactions times in a file named times_[currentSim].csv. Standard C++
@@ -7120,54 +6192,6 @@ bool environment::saveTimesSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs
 }
 
 /**
- Save the reactions parameters in a file named reactions_parameters_[currentSim].csv. 
- The file is saved in the directory indicated as a second parameter in the run command
- @version 1.0
- */
-/*bool environment::saveReactionsParameters(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, QString tmp__StoringPath,
-                                          acs_int tmpRctType, acs_longInt tmpCat, acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III) //TR
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsParameters start" << endl;
-	if(debugLevel >= HIGH_DEBUG)
-            cout << "\t|- Saving reaction parameters to file...";
-	
-	QString strCurrentGen;
-	QString strCurrentSim;
-	QString strZeroGenBefore = zeroBeforeStringNumber(nGEN, tmp__CurrentGen);
-	QString strZeroSimBefore = zeroBeforeStringNumber(pow(double(nSIM), double(tmp__CurrentGen)), tmp__CurrentSim);
-	QString strFileReactionsParameters = tmp__StoringPath + "/reactions_parameters_" + strZeroGenBefore + strCurrentGen.setNum(tmp__CurrentGen) + "_" +
-											strZeroSimBefore + strCurrentSim.setNum(tmp__CurrentSim) + ".csv";
-	QFile fid(strFileReactionsParameters);
-	if(!fid.open(QIODevice::Append | QIODevice::Text))
-		exit(EXIT_FAILURE);
-	
-	QTextStream out(&fid);
-	out << tmp__CurrentStep << "\t"
-	<< (double)reactionsTime.at(tmp__CurrentStep-1) << "\t" 
-	<< tmpRctType << "\t"
-	<< tmpCat << "\t"
-	<< tmpMol_I << "\t"
-	<< tmpMol_II << "\t"
-	<< tmpMol_III << "\t"
-	<< overallLoadedMolsCounter << "\t"
-    << (double)(overallLoadedMolsCounter / (AVO * volume)) << "\t"
-	<< (double)gillespieMean << "\t"
-	<< (double)gillespieSD << "\t"
-    << (double)gillespieEntropy << "\t"
-    << (double)ratioBetweenNewGillTotGill << "\t"
-    << (double)ratioBetweenReverseAndTotalScore << endl;
-	fid.close();
-	if(debugLevel >= HIGH_DEBUG)
-		cout << "OK" << endl;
-	
-	COPYOFallGillespieScores.clear();
-	
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsParameters end" << endl;
-	
-	return true;
-}*/
-
-/**
  Save the reactions parameters in a file named reactions_parameters_[currentSim].csv.
  The file is saved in the directory indicated as a second parameter in the run command
  @version 1.0
@@ -7225,59 +6249,6 @@ bool environment::saveReactionsParametersSTD(acs_int tmp__CurrentGen, acs_int tm
 
     return true;
 }
-
-/**
- Save living species in a file named living_species_[currentSim].csv. 
- The file is saved in the directory indicated as a second parameter in the run command
- @version 1.0
- */
-/*bool environment::saveLivingSpeciesID(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, QString tmp__StoringPath) //TR
-{
-    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveLivingSpeciesID start" << endl;
-    try{
-
-
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsParamters start" << endl;
-        if(debugLevel >= SMALL_DEBUG)
-            cout << "\t|- Saving reaction parameters to file...";
-
-        QString strCurrentGen;
-        QString strCurrentSim;
-        QString strZeroGenBefore = zeroBeforeStringNumber(nGEN, tmp__CurrentGen);
-        QString strZeroSimBefore = zeroBeforeStringNumber(pow(double(nSIM), double(tmp__CurrentGen)), tmp__CurrentSim);
-        QString strFilelivingSpecies = tmp__StoringPath + "/livingSpecies_" + strZeroGenBefore + strCurrentGen.setNum(tmp__CurrentGen) + "_" +
-                strZeroSimBefore + strCurrentSim.setNum(tmp__CurrentSim) + ".csv";
-
-        QFile fid(strFilelivingSpecies);
-        if(!fid.open(QIODevice::Append | QIODevice::Text))
-            exit(EXIT_FAILURE);
-
-        QTextStream out(&fid);
-        out << tmp__CurrentStep << "\t"
-            << (double)reactionsTime.at(tmp__CurrentStep-1);
-        for(acs_longInt i = 0; i < (acs_longInt)allSpecies.size(); i++)
-        {
-            if((allSpecies.at(i).getAmount() > 0) & (allSpecies.at(i).getComplexCutPnt() == 0))
-                out << "\t" << allSpecies.at(i).getID();
-        }
-        out << endl;
-        fid.close();
-        if(debugLevel >= SMALL_DEBUG)
-            cout << "OK" << endl;
-
-        COPYOFallGillespieScores.clear();
-
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsParamters end" << endl;
-
-    }
-    catch(exception&e)
-    {
-        cerr << "exceptioncaught:" << e.what() << endl;
-        ExitWithError("error in saveLivingSpeciesID method","exceptionerrorthrown");
-    }
-
-    return true;
-}*/
 
 /**
  Save living species in a file named living_species_[currentSim].csv. Standard C++
@@ -7339,65 +6310,6 @@ bool environment::saveLivingSpeciesIDSTD(acs_int tmp__CurrentGen, acs_int tmp__C
 
     return true;
 }
-
-/**
- Save living species total AMOUNT in a file named livingAmount_[CurrentGen]_[currentSim].csv. 
- The file is saved in the directory indicated as a second parameter in the run command
- @version 1.0
- */
-/*bool environment::saveLivingSpeciesAmount(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath) //TR
-{
-    try{
-
-
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsParamters start" << endl;
-        if(debugLevel >= SMALL_DEBUG)
-            cout << "\t|- Saving reaction parameters to file...";
-
-        QString strCurrentGen;
-        QString strCurrentSim;
-        QString strZeroGenBefore = zeroBeforeStringNumber(nGEN, tmp__CurrentGen);
-        QString strZeroSimBefore = zeroBeforeStringNumber(pow(double(nSIM), double(tmp__CurrentGen)), tmp__CurrentSim);
-        QString strFilelivingSpecies = tmp__StoringPath + "/livingAmount_" + strZeroGenBefore + strCurrentGen.setNum(tmp__CurrentGen) + "_" +
-                strZeroSimBefore + strCurrentSim.setNum(tmp__CurrentSim) + ".csv";
-
-        QFile fid(strFilelivingSpecies);
-        if(!fid.open(QIODevice::Append | QIODevice::Text))
-            exit(EXIT_FAILURE);
-
-        QTextStream out(&fid);
-        acs_int firstSpeciesControl = 0;
-        for(acs_longInt i = 0; i < (acs_longInt)allSpecies.size(); i++)
-        {
-            if((allSpecies.at(i).getAmount() > 0) & (allSpecies.at(i).getComplexCutPnt() == 0))
-            {
-                if(firstSpeciesControl != 0)
-                {
-                    out << "\t" << allSpecies.at(i).getAmount();
-                }else{
-                    out << allSpecies.at(i).getAmount();
-                    firstSpeciesControl++;
-                }
-            }
-        }
-        out << endl;
-        fid.close();
-        if(debugLevel >= SMALL_DEBUG)
-            cout << "OK" << endl;
-
-        COPYOFallGillespieScores.clear();
-
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsParamters end" << endl;
-
-    }
-    catch(exception&e)
-    {
-        cerr << "exceptioncaught:" << e.what() << endl;
-        ExitWithError("error in saveLivingSpeciesAmount method","exceptionerrorthrown");
-    }
-
-	return true;
-}*/
 
 /**
  Save living species total AMOUNT in a file named livingAmount_[CurrentGen]_[currentSim].csv.
@@ -7464,65 +6376,6 @@ bool environment::saveLivingSpeciesAmountSTD(acs_int tmp__CurrentGen, acs_int tm
 
     return true;
 }
-
-/**
- Save living species total CONCENTRATION in a file named livingAmount_[CurrentGen]_[currentSim].csv. 
- The file is saved in the directory indicated as a second parameter in the run command
- @version 1.0
- */
-/*bool environment::saveLivingSpeciesConcentration(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath) //TR
-{
-    try{
-
-
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsParamters start" << endl;
-        if(debugLevel >= SMALL_DEBUG)
-            cout << "\t|- Saving reaction parameters to file...";
-
-        QString strCurrentGen;
-        QString strCurrentSim;
-        QString strZeroGenBefore = zeroBeforeStringNumber(nGEN, tmp__CurrentGen);
-        QString strZeroSimBefore = zeroBeforeStringNumber(pow(double(nSIM), double(tmp__CurrentGen)), tmp__CurrentSim);
-        QString strFilelivingSpecies = tmp__StoringPath + "/livingConcentration_" + strZeroGenBefore + strCurrentGen.setNum(tmp__CurrentGen) + "_" +
-                strZeroSimBefore + strCurrentSim.setNum(tmp__CurrentSim) + ".csv";
-
-        QFile fid(strFilelivingSpecies);
-        if(!fid.open(QIODevice::Append | QIODevice::Text))
-            exit(EXIT_FAILURE);
-
-        QTextStream out(&fid);
-        acs_int firstSpeciesControl = 0;
-        for(acs_longInt i = 0; i < (acs_longInt)allSpecies.size(); i++)
-        {
-            if((allSpecies.at(i).getAmount() > 0) & (allSpecies.at(i).getComplexCutPnt() == 0))
-            {
-                if(firstSpeciesControl != 0)
-                {
-                    out << "\t" << (double)allSpecies.at(i).getConcentration();
-                }else{
-                    out << (double)allSpecies.at(i).getConcentration();
-                    firstSpeciesControl++;
-                }
-            }
-        }
-        out << endl;
-        fid.close();
-        if(debugLevel >= SMALL_DEBUG)
-            cout << "OK" << endl;
-
-        COPYOFallGillespieScores.clear();
-
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsParamters end" << endl;
-
-    }
-    catch(exception&e)
-    {
-        cerr << "exceptioncaught:" << e.what() << endl;
-        ExitWithError("error in saveLivingSpeciesConcentration method","exceptionerrorthrown");
-    }
-
-	return true;
-}*/
 
 /**
  Save living species total CONCENTRATION in a file named livingAmount_[CurrentGen]_[currentSim].csv.

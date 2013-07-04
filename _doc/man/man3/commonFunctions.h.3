@@ -1,8 +1,8 @@
-.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" 3 "Thu Jul 4 2013" "Version 4.0 (20130705.52)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/commonFunctions.h \- 
+/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -42,6 +42,9 @@
 .br
 .ti -1c
 .RI "string \fBdec2bin\fP (\fBacs_int\fP tmpInt)"
+.br
+.ti -1c
+.RI "vector< string > \fBsplit\fP (string str, const char *delim)"
 .br
 .ti -1c
 .RI "bool \fBExitWithError\fP (string strFunctionName, string strError)"
@@ -139,6 +142,10 @@ Definition at line 124 of file commonFunctions\&.cpp\&.
 Function to round double numbers in integers 
 .PP
 Definition at line 229 of file commonFunctions\&.cpp\&.
+.SS "vector<string> split (stringstr, const char *delim)"
+Function to split a string and save tokens in a vector 
+.PP
+Definition at line 279 of file commonFunctions\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for CaRNeSS from the source code\&.

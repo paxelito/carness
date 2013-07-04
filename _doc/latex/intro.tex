@@ -20,15 +20,10 @@ To run the simulator open a terminal shell and type\-:\par
  In order to have the simulator run correctly the recommended staff is reported\-:
 \begin{DoxyItemize}
 \item Mac\-Os\-X 10.\-4 or later, Linux (or in general a system U\-N\-I\-X based) or Windows O\-S (tests have been performed on Win7 and win Vista) as well
-\item Q\-T4 library installed (you can download them from \href{http://qt.nokia.com/downloads,}{\tt http\-://qt.\-nokia.\-com/downloads,} the download is a little bit large)
-\item G\-C\-C compiler, or similar, installed (if you need to compile the software on your machine) \par
-\par
- 
-\end{DoxyItemize}\hypertarget{intro_ide}{}\section{I\-D\-Es}\label{intro_ide}
+\item G\-C\-C (G++) compiler, or similar, installed (if you need to compile the software on your machine)
+\end{DoxyItemize}
 
-
- The Q\-T package contains a very useful and powerful I\-D\-E called Q\-T creator in which you can compile and develop your code. Alternatively on Mac Os sytems you can use x\-Code (\href{http://developer.apple.com/xcode/}{\tt http\-://developer.\-apple.\-com/xcode/}). To create a valid x\-Code project it is sufficient, once you have installed the Q\-T libraries, to open the terminal, go into the source code folder and type \char`\"{}qmake -\/spec macx-\/xcode Q\-T\-\_\-acs.\-pro\char`\"{}.\par
- {\bfseries A\-T\-T\-E\-N\-T\-I\-O\-N!!! A version of the Q\-T libraries specific for Max\-Os\-X Lion (10.\-7) has not been yet released so it is not possible to create a valid x\-Code project, nonetheless you can always work on code by means of Q\-T creator software paying attention to add the line \char`\"{}\-Q\-M\-A\-K\-E\-\_\-\-M\-A\-C\-\_\-\-S\-D\-K = /\-Developer/\-S\-D\-Ks/\-Mac\-O\-S\-X10.\-6.\-sdk\char`\"{} in the Q\-T\-\_\-acs.\-pro file} \par
+On Mac\-Os system compile using {\ttfamily g++} -\/\-Wall -\/ansi -\/lm -\/o Ca\-R\-Ne\-S\-S $\ast$.cpp \par
 \par
  \hypertarget{intro_parameters}{}\section{Input Parameters \-:: acsm2s.\-conf}\label{intro_parameters}
 
@@ -40,51 +35,94 @@ To run the simulator open a terminal shell and type\-:\par
 
           Categories are useful only to help users in the parameter recognition within the configuration file. They are not handled from the software, if you like you can rearrange configuration file as you prefer, notice only that comments have to start with character <i>"#"</i>. Within the source code folder an example of the acsm2s.conf file is provided.<br>
  The following parameters are used both by the initializator and the simulator. Nvertheless it is ALWAYS necessary having a complete configuration file even if the structures have been already created.
-          @subsection paramsystem System
-          @param nGen (> 0) Number of generations. This parameter indicate how many times the simulation is stopped, concentration are set to the initial ones and the simulazion restart for other nSeconds seconds.
-          @param nSIM (> 0) Number of simulations per generation starting with the same initial conditions (same data structures) but different random seed
-          @param nSeconds (> 0) Number of seconds
-          @param nReactions (> 0) Max number of reactions (the system will be stopped after nSeconds or after nReactions)
-          @param randomSeed (>= 0) Random seed (if 0 the random seed is randomly created and the it is stored in the acsm2s.conf file saved in the results folder)
-          @param nHours (>=0) Runtime limit (hours)
- @param nAttempts (>=0) Number of temptative in simulating the same network structure different random seed
- @param debugLevel (>= -1) Debug Level Runtime: different runTime message amounts (from -1 to 4, 0 is suggested)
-          @param timeStructuresSavingInterval (> 0) All system structures (species, catalysis and reactions) are saved every <i>timeStructuresSavingInterval</i> seconds (simulation time)
- @param fileTimesSaveInterval (>= 0) Times data are stored in file times.csv every <i>fileTimesSaveInterval</i> seconds (If 0 reactions are stored continually)
-          @subsection paramenv Environment
-          @param lastFiringDiskSpeciesID (> 0) The ID of the last firing disk species.
-          @param overallConcentration (> 0) The overall initial concentration that will be divided between all the initial species according to the selected initial distribution.
-          @param ECConcentration (> 0) Incoming concentration of charged molecules per second.
-          @param alphabet (string) Alphabet used in the simulation (e.g. <i>AGCT</i> for DNA, <i>ADEGFLYCWPHQIMTNKSRV</i> for proteins)
-          @param volume (> 0) Volume of the container or protocell
-          @subsection paramdyn Dynamic
-          @param energy (0 or 1) 0 no energy in the system, 1 energy constraints are applied
- @param ratioSpeciesEnergizable (%) The probability for a species to be potentially energized by the energy carriers
-          @param complexFormationSymmetry (0 or 1) Complex Formation Symmetry
-                          - <b>1</b>: the catalyst can bound both substrates
-                          - <b>0 (default)</b>: catalyst binds only with the first substrate of the reaction
-          @param nonCatalyticMaxLength (>= 0) Max length of non catalytic species
-          @param reactionProbability (from 0 to 1) Probability for a species to catalyze a reaction
-          @param cleavageProbability (from 0 to 1) Cleavage probability (Condensation probability is 1 - cleavage probability)
-          @param reverseReaction (0 or 1) Set to 1 to enable reverse reactions, 0 otherwise
- @param revRctRatio (>0) Ratio between forward and backward reactions, it is used in the creation of new reactions only (if reverseReactions = TRUE)
-          @param K_ass (> 0) Final Condensation kinetic constant (C.A + B --> AB + C) where A.C is the molecular complex composed of C (the catalyst) and A (the first substrate)
-          @param K_diss (> 0) Cleavage kinetic constant (AB --> A + B)
-          @param K_cpx (> 0) Complex formation kinetic constant (A + C(catalyst) --> C.A)
-          @param K_cpxDiss (> 0) Complex Dissociation kinetic constant (C.A --> A + C)
-          @param K_nrg (> 0) species phosphorilation kinetic constant
-          @param K_nrg_decay (> 0) de-energization kinetic constant
-          @param moleculeDecay_KineticConstant (> 0) Molecule decay (efflux) kinetic Constant (Disregarded if the system is closed)
-          @param influx_rate (>= 0) Concentration per seconds (The species to insert in the system will be randomly chosen according to the _acsinflux.csv file). If equal to 0 the system is closed (maxLOut=0) or only the species that can cross the membrane come in and go out (maxLOut>0).
-          @param maxLOut Maximum lenght of the species involved in the efflux process (\c influx_rate  > 0), equal to 0 indicates that all the species can be involved in the efflux process (no filter). If influx_rate = 0 the parameter indicates the species that can cross the semipermeable membrane of the protocell. <b>THE COUPLING BETWEEN INFLUX_RATE AND MAXLOUT INDICATES IF WE ARE SIMULATING A PROTOCELL OR A FLOW REACTOR</b>
-          @param diffusion_contribute (KD) (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length, L^{-KD}
-          @param solubility_threshold (> 0) Solubility Threshold, all the species longer than solubility_threshold precipitate
 \end{DoxyVerb}
+ \hypertarget{intro_paramsystem}{}\subsection{System}\label{intro_paramsystem}
 
+\begin{DoxyParams}{Parameters}
+{\em n\-Gen} & ($>$ 0) Number of generations. This parameter indicate how many times the simulation is stopped, concentration are set to the initial ones and the simulazion restart for other n\-Seconds seconds. \\
+\hline
+{\em n\-S\-I\-M} & ($>$ 0) Number of simulations per generation starting with the same initial conditions (same data structures) but different random seed \\
+\hline
+{\em n\-Seconds} & ($>$ 0) Number of seconds \\
+\hline
+{\em n\-Reactions} & ($>$ 0) Max number of reactions (the system will be stopped after n\-Seconds or after n\-Reactions) \\
+\hline
+{\em random\-Seed} & ($>$= 0) Random seed (if 0 the random seed is randomly created and the it is stored in the acsm2s.\-conf file saved in the results folder) \\
+\hline
+{\em n\-Hours} & ($>$=0) Runtime limit (hours) \\
+\hline
+{\em n\-Attempts} & ($>$=0) Number of temptative in simulating the same network structure different random seed \\
+\hline
+{\em debug\-Level} & ($>$= -\/1) Debug Level Runtime\-: different run\-Time message amounts (from -\/1 to 4, 0 is suggested) \\
+\hline
+{\em time\-Structures\-Saving\-Interval} & ($>$ 0) All system structures (species, catalysis and reactions) are saved every {\itshape time\-Structures\-Saving\-Interval} seconds (simulation time) \\
+\hline
+{\em file\-Times\-Save\-Interval} & ($>$= 0) Times data are stored in file times.\-csv every {\itshape file\-Times\-Save\-Interval} seconds (If 0 reactions are stored continually) \\
+\hline
+\end{DoxyParams}
+\hypertarget{intro_paramenv}{}\subsection{Environment}\label{intro_paramenv}
 
+\begin{DoxyParams}{Parameters}
+{\em last\-Firing\-Disk\-Species\-I\-D} & ($>$ 0) The I\-D of the last firing disk species. \\
+\hline
+{\em overall\-Concentration} & ($>$ 0) The overall initial concentration that will be divided between all the initial species according to the selected initial distribution. \\
+\hline
+{\em E\-C\-Concentration} & ($>$ 0) Incoming concentration of charged molecules per second. \\
+\hline
+{\em alphabet} & (string) Alphabet used in the simulation (e.\-g. {\itshape A\-G\-C\-T} for D\-N\-A, {\itshape A\-D\-E\-G\-F\-L\-Y\-C\-W\-P\-H\-Q\-I\-M\-T\-N\-K\-S\-R\-V} for proteins) \\
+\hline
+{\em volume} & ($>$ 0) Volume of the container or protocell \\
+\hline
+\end{DoxyParams}
+\hypertarget{intro_paramdyn}{}\subsection{Dynamic}\label{intro_paramdyn}
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & (0 or 1) 0 no energy in the system, 1 energy constraints are applied \\
+\hline
+{\em ratio\-Species\-Energizable} & (\%) The probability for a species to be potentially energized by the energy carriers \\
+\hline
+{\em complex\-Formation\-Symmetry} & (0 or 1) Complex Formation Symmetry
+\begin{DoxyItemize}
+\item {\bfseries 1}\-: the catalyst can bound both substrates
+\item {\bfseries 0 (default)}\-: catalyst binds only with the first substrate of the reaction 
+\end{DoxyItemize}\\
+\hline
+{\em non\-Catalytic\-Max\-Length} & ($>$= 0) Max length of non catalytic species \\
+\hline
+{\em reaction\-Probability} & (from 0 to 1) Probability for a species to catalyze a reaction \\
+\hline
+{\em cleavage\-Probability} & (from 0 to 1) Cleavage probability (Condensation probability is 1 -\/ cleavage probability) \\
+\hline
+{\em reverse\-Reaction} & (0 or 1) Set to 1 to enable reverse reactions, 0 otherwise \\
+\hline
+{\em rev\-Rct\-Ratio} & ($>$0) Ratio between forward and backward reactions, it is used in the creation of new reactions only (if reverse\-Reactions = T\-R\-U\-E) \\
+\hline
+{\em K\-\_\-ass} & ($>$ 0) Final Condensation kinetic constant (C.\-A + B --$>$ A\-B + C) where A.\-C is the molecular complex composed of C (the catalyst) and A (the first substrate) \\
+\hline
+{\em K\-\_\-diss} & ($>$ 0) Cleavage kinetic constant (A\-B --$>$ A + B) \\
+\hline
+{\em K\-\_\-cpx} & ($>$ 0) Complex formation kinetic constant (A + C(catalyst) --$>$ C.\-A) \\
+\hline
+{\em K\-\_\-cpx\-Diss} & ($>$ 0) Complex Dissociation kinetic constant (C.\-A --$>$ A + C) \\
+\hline
+{\em K\-\_\-nrg} & ($>$ 0) species phosphorilation kinetic constant \\
+\hline
+{\em K\-\_\-nrg\-\_\-decay} & ($>$ 0) de-\/energization kinetic constant \\
+\hline
+{\em molecule\-Decay\-\_\-\-Kinetic\-Constant} & ($>$ 0) Molecule decay (efflux) kinetic Constant (Disregarded if the system is closed) \\
+\hline
+{\em influx\-\_\-rate} & ($>$= 0) Concentration per seconds (The species to insert in the system will be randomly chosen according to the \-\_\-acsinflux.\-csv file). If equal to 0 the system is closed (max\-L\-Out=0) or only the species that can cross the membrane come in and go out (max\-L\-Out$>$0). \\
+\hline
+{\em max\-L\-Out} & Maximum lenght of the species involved in the efflux process ({\ttfamily influx\-\_\-rate} $>$ 0), equal to 0 indicates that all the species can be involved in the efflux process (no filter). If influx\-\_\-rate = 0 the parameter indicates the species that can cross the semipermeable membrane of the protocell. {\bfseries T\-H\-E C\-O\-U\-P\-L\-I\-N\-G B\-E\-T\-W\-E\-E\-N I\-N\-F\-L\-U\-X\-\_\-\-R\-A\-T\-E A\-N\-D M\-A\-X\-L\-O\-U\-T I\-N\-D\-I\-C\-A\-T\-E\-S I\-F W\-E A\-R\-E S\-I\-M\-U\-L\-A\-T\-I\-N\-G A P\-R\-O\-T\-O\-C\-E\-L\-L O\-R A F\-L\-O\-W R\-E\-A\-C\-T\-O\-R} \\
+\hline
+{\em diffusion\-\_\-contribute} & (K\-D) (0 or 0.\-5) if set to 0.\-5 the speed of molecules goes with the inverse of the square of the length, L$^\wedge$\{-\/\-K\-D\} \\
+\hline
+{\em solubility\-\_\-threshold} & ($>$ 0) Solubility Threshold, all the species longer than solubility\-\_\-threshold precipitate\\
+\hline
+\end{DoxyParams}
 \par
 \par
- \hypertarget{intro_Aknowledgments}{}\section{Aknowledgments}\label{intro_Aknowledgments}
+ \hypertarget{intro_Acknowledgments}{}\section{Acknowledgments}\label{intro_Acknowledgments}
 
 
 
@@ -92,7 +130,9 @@ To run the simulator open a terminal shell and type\-:\par
 \item University of Bologna, Interdepartment of industrial research (C.\-I.\-R.\-I)
 \item European Centre for Living Technology \href{http://www.ecltech.org/}{\tt http\-://www.\-ecltech.\-org/}
 \item Fondazione Venezia \href{http://www.fondazionevenezia.it}{\tt http\-://www.\-fondazionevenezia.\-it}
-\item Roberto Serra, Marco Villani, Timoteo Carletti, Alex Graudenzi, Norman Packard, Ruedi Fuchslin and Stuart Kauffman for the essential hints.
+\item Alex Graudenzi to take care of the initilizator.
+\item Chiara Damiani to contribute to the development of the software.
+\item Roberto Serra, Marco Villani, Timoteo Carletti, Norman Packard, Ruedi Fuchslin and Stuart Kauffman for the essential hints.
 \item \href{http://www.bedaux.net/mtrand/}{\tt http\-://www.\-bedaux.\-net/mtrand/} for the pseudo-\/random Marseinne-\/\-Twister library for C++.
 \item \href{http://perso.wanadoo.es/antlarr/otherapps.html}{\tt http\-://perso.\-wanadoo.\-es/antlarr/otherapps.\-html} for the poisson distribution generator numbers (acs\-\_\-long\-Int \hyperlink{common_functions_8h_a22cddb6ffcf2250e0c90bc913728350f}{random\-\_\-poisson(acs\-\_\-double tmp\-Lambda, M\-T\-Rand\& tmp\-Random\-Generator)}).
 \item Dr. Luca Ansaloni (\href{mailto:luca.ansaloni@unimore.it}{\tt luca.\-ansaloni@unimore.\-it}) for the support but especially for the file handling functions and new Python development. 

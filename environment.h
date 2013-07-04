@@ -72,12 +72,9 @@ private:
 
     acs_int energy; // Energy control variable
     acs_double ratioSpeciesEnergizable; // Proabability for a species to be energizable.
-    //TR acs_int energyTarget; // energy target variable
-    //TR acs_double percLoadedECInflux; // percentage of loaded carriers in the influx
     acs_int nrgBoolFlag; // variable indicating the presence (1) or not (0) of the energy
     acs_int solubility_threshold;
     acs_double diffusion_contribute;
-    //TR acs_int influx;
     acs_double influx_rate; // how many molecules per second are introduced in the system
     acs_double timeSinceTheLastInFlux; // Time elapsed from the previous injection of nutrients
     string alphabet; // Alphabet (e.g. AB, RNA, DNA, Proteins)
@@ -227,21 +224,13 @@ private:
 	void printNutrientsAndProbability();
 	void printAllChargeMols();
 	
-	// FILE STRUCTURE UPLOAD FUNCTION
-    //TR bool createInitialMoleculesPopulationFromFile(QString tmpSpeciesFilePath);
-    //TR bool createInitialReactionsLayerFromFile(QString tmpReactionsFilePath);
-    //TR bool createInitialCatalysisLayerFromFile(QString tmpCatalysisFilePath);
-    //TR bool createInfluxLayersFromFile(QString tmpInfluxFilePath);
-    //TR bool createNrgBooleanFunctionsFromFile(QString tmpInfluxFilePath);
+    // FILE STRUCTURE UPLOAD FUNCTION
     bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath);
     bool createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePath);
     bool createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFilePath);
     bool createInfluxLayersFromFileSTD(string tmpInfluxFilePath);
     bool createNrgBooleanFunctionsFromFileSTD(string tmpBoolNrgFilePath);
 
-    //TR bool createInitialMoleculesPopulationFromSpecificFile(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
-    //TR bool createInitialReactionsLayerFromSpecificFile(QString tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
-    //TR bool createInitialCatalysisLayerFromSpecificFile(QString tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
     bool createInitialMoleculesPopulationFromSpecificFileSTD(string tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
     bool createInitialReactionsLayerFromSpecificFileSTD(string tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
     bool createInitialCatalysisLayerFromSpecificFileSTD(string tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
@@ -347,19 +336,7 @@ private:
 	bool checkIfOnlyMutualCatalysis(acs_int tmpCat, acs_int tmpCandidateProduct);
         bool checkAvailability(acs_longInt tmpMI, acs_longInt tmpMII, acs_longInt tmpQI, acs_longInt tmpQII);
 	
-	// SAVE TO FILE FUNCTIONS
-    //TR bool saveConfigurationFile(QString tmpStoringPath);
-    //TR bool saveInfluxStructure(QString tmpStoringPath);
-    //TR bool saveNrgBoolFncStructure(QString tmpStoringPath);
-    //TR bool saveSpeciesStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
-    //TR bool saveReactionsStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
-    //TR bool saveCatalysisStructure(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
-    //TR bool saveTimes(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
-    //TR bool saveReactionsParameters(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, QString tmp__StoringPath, acs_int tmpRctType, acs_longInt tmpCat, acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III);
-    //TR bool saveLivingSpeciesID(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, QString tmp__StoringPath);
-    //TR bool saveLivingSpeciesAmount(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath);
-    //TR bool saveLivingSpeciesConcentration(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, QString tmp__StoringPath);
-    //TR QString zeroBeforeStringNumber(acs_int tmpTotN, acs_int tmpCurrentN);
+    // SAVE TO FILE FUNCTIONS
 
     bool saveConfigurationFileSTD(string tmpStoringPath);
     bool saveInfluxStructureSTD(string tmpStoringPath);

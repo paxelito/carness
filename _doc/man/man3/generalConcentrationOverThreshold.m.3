@@ -1,8 +1,8 @@
-.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/generalConcentrationOverThreshold.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" 3 "Thu Jul 4 2013" "Version 4.0 (20130705.52)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/generalConcentrationOverThreshold.m \- 
+/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -115,7 +115,7 @@ and the time is shown \fBif\fP \fBand\fP ((\fBrtime\fP > \fBrctIDshowNoSave\fP *
 .RI "\fBcd\fP ('\&.\&./\&.\&./0_statistics')"
 .br
 .ti -1c
-.RI "e\&.g\&.sim 1 of 10 \fBsims\fP, \fBstrZero\fP 
+.RI "e\&.g\&.sim 1 of 10 sims, \fBstrZero\fP 
 .br
 will be '0'in order \fBto\fP create 
 .br
@@ -437,7 +437,7 @@ incoming flux \fBif\fP
 .RI "\fBreaction\fP parameters files \fBrcsFiles\fP = \fBdir\fP('*reactions_parameters*')"
 .br
 .ti -1c
-.RI "\fBfilextPre\fP = strcat('\fB_\fP',zeroBeforeStrNum(\fBIDsimFOLDER\fP, length(\fBsimDirs\fP)),int2str(\fBIDsimFOLDER\fP))"
+.RI "\fBfilextPre\fP = strcat('_',zeroBeforeStrNum(\fBIDsimFOLDER\fP, length(\fBsimDirs\fP)),int2str(\fBIDsimFOLDER\fP))"
 .br
 .ti -1c
 .RI "for \fBrfileID\fP"
@@ -727,7 +727,7 @@ is not produced by other \fBspecies\fP"
 .RI "clear \fBgillTimeSeries\fP = [\fBrtime\fP,\fBgillMean\fP,\fBgillSD\fP,\fBgillEntropy\fP,\fBnewSpeciesProb\fP]"
 .br
 .ti -1c
-.RI "\fBnZeros\fP = length(\fBnum2str\fP(tmpL)) - length(\fBnum2str\fP(tmpl))"
+.RI "\fBnZeros\fP = length(num2str(tmpL)) - length(num2str(tmpl))"
 .br
 .ti -1c
 .RI "\fBif\fP \fBnZeros\fP for \fBp\fP"
@@ -736,7 +736,7 @@ is not produced by other \fBspecies\fP"
 .RI "\fBtmpStrZeros\fP = zeroBeforeStrNum(tmpRct, tmpRcts)"
 .br
 .ti -1c
-.RI "\fBoutFname\fP = strcat('_iGraph_CAT',tmpFilextPre,'\fB_\fP',\fBtmpStrZeros\fP,\fBnum2str\fP(tmpRct),'\fB_\fP',\fBnum2str\fP(tmprTime),'\&.csv')"
+.RI "\fBoutFname\fP = strcat('_iGraph_CAT',tmpFilextPre,'_',\fBtmpStrZeros\fP,num2str(tmpRct),'_',num2str(tmprTime),'\&.csv')"
 .br
 .ti -1c
 .RI "\fBend\fP \fBfid1\fP = fopen(\fBoutFname\fP,'\fBa\fP')"
@@ -905,7 +905,7 @@ is not produced by other \fBspecies\fP"
 
 .SS ":,2 mol_II ()\fC [virtual]\fP"
 
-.SS "e\&.g\&. sim 1 of 10 \fBsims\fP, \fBstrZero\fP will be '0' in order \fBto\fP create \fBa\fP % \fBfile\fP named XXX_01_XXX \fBstrZero\fP = zeroBeforeStrNum(\fBIDF\fP,length(\fBsimDirs\fP names ()\fC [virtual]\fP"
+.SS "e\&.g\&. sim 1 of 10 sims, \fBstrZero\fP will be '0' in order \fBto\fP create \fBa\fP % \fBfile\fP named XXX_01_XXX \fBstrZero\fP = zeroBeforeStrNum(\fBIDF\fP,length(\fBsimDirs\fP names ()\fC [virtual]\fP"
 
 .SS "while rline (\fBend\fP)"
 
@@ -1141,7 +1141,7 @@ Definition at line 476 of file generalConcentrationOverThreshold\&.m\&.
 
 .PP
 Definition at line 107 of file generalConcentrationOverThreshold\&.m\&.
-.SS "filextPre = strcat('\fB_\fP',zeroBeforeStrNum(\fBIDsimFOLDER\fP, length(\fBsimDirs\fP)),int2str(\fBIDsimFOLDER\fP))"
+.SS "filextPre = strcat('_',zeroBeforeStrNum(\fBIDsimFOLDER\fP, length(\fBsimDirs\fP)),int2str(\fBIDsimFOLDER\fP))"
 
 .PP
 Definition at line 122 of file generalConcentrationOverThreshold\&.m\&.
@@ -1318,7 +1318,7 @@ Definition at line 648 of file generalConcentrationOverThreshold\&.m\&.
 
 .PP
 Definition at line 515 of file generalConcentrationOverThreshold\&.m\&.
-.SS "nZeros = length(\fBnum2str\fP(tmpL)) - length(\fBnum2str\fP(tmpl))"
+.SS "nZeros = length(num2str(tmpL)) - length(num2str(tmpl))"
 
 .PP
 Definition at line 673 of file generalConcentrationOverThreshold\&.m\&.
@@ -1339,7 +1339,7 @@ if nargin < 1
 .fi
 .PP
 Definition at line 1 of file generalConcentrationOverThreshold\&.m\&.
-.SS "outFname = strcat('_iGraph_CAT',tmpFilextPre,'\fB_\fP',\fBtmpStrZeros\fP,\fBnum2str\fP(tmpRct),'\fB_\fP',\fBnum2str\fP(tmprTime),'\&.csv')"
+.SS "outFname = strcat('_iGraph_CAT',tmpFilextPre,'_',\fBtmpStrZeros\fP,num2str(tmpRct),'_',num2str(tmprTime),'\&.csv')"
 
 .PP
 Definition at line 692 of file generalConcentrationOverThreshold\&.m\&.

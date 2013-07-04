@@ -10,5 +10,6 @@ var common_functions_8cpp =
     [ "returnSelectionIdFromAWeightProbVector", "common_functions_8cpp.html#ab037fdfaa93ee6a0fe3f624b791204cd", null ],
     [ "returnSelectionIdFromAWeightProbVectorAlreadyNormalized", "common_functions_8cpp.html#a4135ff15fd24eb8fbfee3d00e1cfbf20", null ],
     [ "returnUniformSelection_LONG_IdFromVector", "common_functions_8cpp.html#a1cb9cc6ac8ec2ef62b8eb1970e73a11b", null ],
-    [ "round", "common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1", null ]
+    [ "round", "common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1", null ],
+    [ "split", "common_functions_8cpp.html#a4d1aa74fac80ae0275c056575fdb6626", null ]
 ];

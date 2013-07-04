@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="initial__distribution_8m" kind="file">
     <compoundname>initial_distribution.m</compoundname>
     <briefdescription>
@@ -16,6 +16,6 @@
 <codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/>3-<sp/>inversely<sp/>proportional:<sp/>more<sp/>morecules<sp/>for<sp/>the<sp/>short<sp/>species</highlight></codeline>
 <codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="normal">initialAmountDistribution=2</highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_matlabinitializator/initial_distribution.m"/>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/initial_distribution.m"/>
   </compounddef>
 </doxygen>

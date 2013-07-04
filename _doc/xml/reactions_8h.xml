@@ -1,129 +1,124 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="reactions_8h" kind="file">
     <compoundname>reactions.h</compoundname>
     <includes refid="acs__headers_8h" local="yes">acs_headers.h</includes>
     <includes refid="common_functions_8h" local="yes">commonFunctions.h</includes>
-    <includedby refid="environment_8h" local="yes">/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/environment.h</includedby>
-    <includedby refid="reactions_8cpp" local="yes">/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/reactions.cpp</includedby>
+    <includedby refid="environment_8h" local="yes">/Users/alessandrofilisetti/Documents/GIT/carness/environment.h</includedby>
+    <includedby refid="reactions_8cpp" local="yes">/Users/alessandrofilisetti/Documents/GIT/carness/reactions.cpp</includedby>
     <incdepgraph>
-      <node id="321">
-        <label>QtCore/QCoreApplication</label>
+      <node id="322">
+        <label>mtrand.h</label>
+        <link refid="mtrand_8h"/>
       </node>
-      <node id="335">
-        <label>commonFunctions.h</label>
-        <link refid="common_functions_8h"/>
-        <childnode refid="320" relation="include">
+      <node id="308">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h</label>
+        <link refid="reactions.h"/>
+        <childnode refid="309" relation="include">
+        </childnode>
+        <childnode refid="323" relation="include">
         </childnode>
       </node>
-      <node id="325">
-        <label>QList</label>
-      </node>
-      <node id="331">
+      <node id="318">
         <label>cmath</label>
       </node>
-      <node id="328">
+      <node id="313">
         <label>string</label>
       </node>
-      <node id="319">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/reactions.h</label>
-        <link refid="reactions.h"/>
-        <childnode refid="320" relation="include">
-        </childnode>
-        <childnode refid="335" relation="include">
-        </childnode>
-      </node>
-      <node id="326">
-        <label>QTime</label>
-      </node>
-      <node id="329">
-        <label>vector</label>
-      </node>
-      <node id="324">
-        <label>QFile</label>
-      </node>
-      <node id="334">
-        <label>time.h</label>
-      </node>
-      <node id="332">
-        <label>cstdlib</label>
-      </node>
-      <node id="327">
-        <label>iostream</label>
-      </node>
-      <node id="330">
-        <label>deque</label>
-      </node>
-      <node id="323">
-        <label>QTextStream</label>
-      </node>
-      <node id="320">
+      <node id="309">
         <label>acs_headers.h</label>
         <link refid="acs__headers_8h"/>
+        <childnode refid="310" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+        <childnode refid="312" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="316" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+        <childnode refid="318" relation="include">
+        </childnode>
+        <childnode refid="319" relation="include">
+        </childnode>
+        <childnode refid="320" relation="include">
+        </childnode>
         <childnode refid="321" relation="include">
         </childnode>
         <childnode refid="322" relation="include">
         </childnode>
-        <childnode refid="323" relation="include">
+      </node>
+      <node id="312">
+        <label>fstream</label>
+      </node>
+      <node id="321">
+        <label>ctime</label>
+      </node>
+      <node id="323">
+        <label>commonFunctions.h</label>
+        <link refid="common_functions_8h"/>
+        <childnode refid="309" relation="include">
         </childnode>
-        <childnode refid="324" relation="include">
-        </childnode>
+      </node>
+      <node id="316">
+        <label>vector</label>
+      </node>
+      <node id="315">
+        <label>sstream</label>
+      </node>
+      <node id="319">
+        <label>cstdlib</label>
+      </node>
+      <node id="320">
+        <label>clocale</label>
+      </node>
+      <node id="311">
+        <label>iostream</label>
+      </node>
+      <node id="317">
+        <label>deque</label>
+      </node>
+      <node id="310">
+        <label>stdio.h</label>
+      </node>
+      <node id="314">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="328">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/reactions.cpp</label>
+        <link refid="reactions_8cpp"/>
+      </node>
+      <node id="324">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h</label>
+        <link refid="reactions.h"/>
         <childnode refid="325" relation="include">
         </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+      </node>
+      <node id="327">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="325">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/environment.h</label>
+        <link refid="environment_8h"/>
         <childnode refid="326" relation="include">
         </childnode>
         <childnode refid="327" relation="include">
         </childnode>
-        <childnode refid="328" relation="include">
-        </childnode>
-        <childnode refid="329" relation="include">
-        </childnode>
-        <childnode refid="330" relation="include">
-        </childnode>
-        <childnode refid="331" relation="include">
-        </childnode>
-        <childnode refid="332" relation="include">
-        </childnode>
-        <childnode refid="333" relation="include">
-        </childnode>
-        <childnode refid="334" relation="include">
-        </childnode>
       </node>
-      <node id="322">
-        <label>QStringList</label>
-      </node>
-      <node id="333">
-        <label>mtrand.h</label>
-        <link refid="mtrand_8h"/>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="337">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/environment.h</label>
-        <link refid="environment_8h"/>
-        <childnode refid="338" relation="include">
-        </childnode>
-        <childnode refid="339" relation="include">
-        </childnode>
-      </node>
-      <node id="336">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/reactions.h</label>
-        <link refid="reactions.h"/>
-        <childnode refid="337" relation="include">
-        </childnode>
-        <childnode refid="340" relation="include">
-        </childnode>
-      </node>
-      <node id="340">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/reactions.cpp</label>
-        <link refid="reactions_8cpp"/>
-      </node>
-      <node id="339">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-      <node id="338">
-        <label>/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/environment.cpp</label>
+      <node id="326">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp</label>
         <link refid="environment_8cpp"/>
       </node>
     </invincdepgraph>
@@ -160,7 +155,7 @@
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>events;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>energyType;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="29"><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classreactions_1a496de9cbc128b98213ded20b936752c2" kindref="member" tooltip="Constructor.">reactions</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpType,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_I,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_II,<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classreactions_1a496de9cbc128b98213ded20b936752c2" kindref="member" tooltip="Constructor. ">reactions</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpType,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_I,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_II,<sp/></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_III,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvents,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergyType);</highlight></codeline>
 <codeline lineno="32" refid="classreactions_1ad0c79e56e87891c502d8fcd6c4005987" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classreactions_1ad0c79e56e87891c502d8fcd6c4005987" kindref="member">~reactions</ref>()<sp/>{}</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -180,6 +175,6 @@
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/reactions.h"/>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h"/>
   </compounddef>
 </doxygen>

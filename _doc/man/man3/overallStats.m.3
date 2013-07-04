@@ -1,8 +1,8 @@
-.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/overallStats.m" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/overallStats.m" 3 "Thu Jul 4 2013" "Version 4.0 (20130705.52)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/overallStats.m \- 
+/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/overallStats.m \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -38,7 +38,7 @@ FILES ANALYSIS \fBif\fP \fBp\fP \fBtmpAnalysis\fP (1)"
 .RI "\fBif\fP \fBexist\fP ('MATLAB2R\&.Rout','\fBfile\fP') delete('MATLAB2R\&.Rout')"
 .br
 .ti -1c
-.RI "\fBeval\fP (['!R CMD BATCH--no-save--no-restore--slave'--args sf=''',\fBscriptAnalDir\fP,''' ls=',\fBnum2str\fP(\fBp\&.lastSpecies\fP),\&.\&.\&.
+.RI "\fBeval\fP (['!R CMD BATCH--no-save--no-restore--slave'--args sf=''',\fBscriptAnalDir\fP,''' ls=',num2str(\fBp\&.lastSpecies\fP),\&.\&.\&.
         ' sss=''',\fBp\&.simFolder\fP,''' \fBgfs\fP=''',\fBgfs\fP,''' sd=''',\fBp\&.tmpPath\fP,''''MATLAB2R\&.R'])"
 .br
 .ti -1c
@@ -76,7 +76,7 @@ FILES ANALYSIS \fBif\fP \fBp\fP \fBtmpAnalysis\fP (1)"
 .RI "\fBend\fP \fBscriptAnalDir\fP = \fBcd\fP()"
 .br
 .ti -1c
-.RI "\fBgfs\fP = strcat('\fB_\fP',\fBnum2str\fP(\fBp\&.decayTime\fP))"
+.RI "\fBgfs\fP = strcat('_',num2str(\fBp\&.decayTime\fP))"
 .br
 .in -1c
 .SH "Function Documentation"
@@ -111,7 +111,7 @@ Definition at line 10 of file overallStats\&.m\&.
 
 .PP
 Definition at line 8 of file overallStats\&.m\&.
-.SS "gfs = strcat('\fB_\fP',\fBnum2str\fP(\fBp\&.decayTime\fP))"
+.SS "gfs = strcat('_',num2str(\fBp\&.decayTime\fP))"
 
 .PP
 Definition at line 50 of file overallStats\&.m\&.

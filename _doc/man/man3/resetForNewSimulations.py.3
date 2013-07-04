@@ -1,8 +1,8 @@
-.TH "/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/resetForNewSimulations.py" 3 "Wed Apr 3 2013" "Version 3.2 (20130403.51)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/resetForNewSimulations.py" 3 "Thu Jul 4 2013" "Version 4.0 (20130705.52)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/resetForNewSimulations.py \- 
+/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/resetForNewSimulations.py \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -10,7 +10,14 @@
 
 .in +1c
 .ti -1c
-.RI "namespace \fBresetForNewSimulations\fP"
+.RI "\fBresetForNewSimulations\fP"
+.br
+.in -1c
+.SS "Constant Groups"
+
+.in +1c
+.ti -1c
+.RI "\fBresetForNewSimulations\fP"
 .br
 .in -1c
 .SS "Functions"
@@ -24,46 +31,46 @@
 
 .in +1c
 .ti -1c
-.RI "int \fBresetForNewSimulations\&.foldersSIMS\fP 10"
+.RI "int \fBresetForNewSimulations\&.foldersSIMS\fP = 10"
 .br
 .ti -1c
-.RI "int \fBresetForNewSimulations\&.foldersREP\fP 10"
+.RI "int \fBresetForNewSimulations\&.foldersREP\fP = 10"
 .br
 .ti -1c
-.RI "tuple \fBresetForNewSimulations\&.zerosSIMS\fP zeroBeforeStrNum(\fBi\fP,foldersSIMS)"
+.RI "tuple \fBresetForNewSimulations\&.zerosSIMS\fP = zeroBeforeStrNum(\fBi\fP,foldersSIMS)"
 .br
 .ti -1c
-.RI "tuple \fBresetForNewSimulations\&.zerosREPS\fP zeroBeforeStrNum(\fBj\fP,foldersREP)"
+.RI "tuple \fBresetForNewSimulations\&.zerosREPS\fP = zeroBeforeStrNum(\fBj\fP,foldersREP)"
 .br
 .ti -1c
-.RI "string \fBresetForNewSimulations\&.folderName\fP 's_inv_1e-2_'"
+.RI "string \fBresetForNewSimulations\&.folderName\fP = 's_inv_1e-2_'"
 .br
 .ti -1c
-.RI "string \fBresetForNewSimulations\&.folderNew\fP 's_inv_1e-1_'"
+.RI "string \fBresetForNewSimulations\&.folderNew\fP = 's_inv_1e-1_'"
 .br
 .ti -1c
-.RI "tuple \fBresetForNewSimulations\&.resdir\fP os\&.path\&.join(os\&.curdir, 'res')"
+.RI "tuple \fBresetForNewSimulations\&.resdir\fP = os\&.path\&.join(os\&.curdir, 'res')"
 .br
 .ti -1c
-.RI "tuple \fBresetForNewSimulations\&.crtSimFolder\fP os\&.path\&.join(StrTo,folderName)"
+.RI "tuple \fBresetForNewSimulations\&.crtSimFolder\fP = os\&.path\&.join(StrTo,folderName)"
 .br
 .ti -1c
-.RI "tuple \fBresetForNewSimulations\&.fileDest\fP os\&.path\&.join(StrTo,folderNew,'_acsinflux\&.csv')"
+.RI "tuple \fBresetForNewSimulations\&.fileDest\fP = os\&.path\&.join(StrTo,folderNew,'_acsinflux\&.csv')"
 .br
 .ti -1c
-.RI "tuple \fBresetForNewSimulations\&.speciesFiles\fP sorted(glob\&.glob('species_1_*'))"
+.RI "tuple \fBresetForNewSimulations\&.speciesFiles\fP = sorted(glob\&.glob('species_1_*'))"
 .br
 .ti -1c
-.RI "tuple \fBresetForNewSimulations\&.mod\fP open('_acsspecies\&.csv')"
+.RI "tuple \fBresetForNewSimulations\&.mod\fP = open('_acsspecies\&.csv')"
 .br
 .ti -1c
-.RI "int \fBresetForNewSimulations\&.id\fP 0"
+.RI "int \fBresetForNewSimulations\&.id\fP = 0"
 .br
 .ti -1c
-.RI "tuple \fBresetForNewSimulations\&.linesplitted\fP line\&.split('\\t')"
+.RI "tuple \fBresetForNewSimulations\&.linesplitted\fP = \fBline\&.split\fP('\\t')"
 .br
 .ti -1c
-.RI "tuple \fBresetForNewSimulations\&.file\fP open('_acsspecies\&.csv', 'w')"
+.RI "tuple \fBresetForNewSimulations\&.file\fP = open('_acsspecies\&.csv', 'w')"
 .br
 .in -1c
 .SH "Author"

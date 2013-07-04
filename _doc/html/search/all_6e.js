@@ -21,7 +21,6 @@ var searchData=
   ['nrgtimeseries',['nrgTimeSeries',['../general_concentration_over_threshold_8m.html#ad5f4092827ae220bd7c53532aaaa0590',1,'generalConcentrationOverThreshold.m']]],
   ['nseconds',['nSeconds',['../lancia__inizializzatore__acs_8m.html#aaded2f2d61413dc4bddf805e9be03ded',1,'lancia_inizializzatore_acs.m']]],
   ['nsim',['nSIM',['../lancia__inizializzatore__acs_8m.html#a68c8b36ce2387749248f566faa108e45',1,'nSIM():&#160;lancia_inizializzatore_acs.m'],['../start_8m.html#a2b9b3728c03157895f28160b24f4c572',1,'nSIM():&#160;start.m'],['../start_8m.html#af882a6050e97fe1c6cc2bb391ea57479',1,'Nsim():&#160;start.m']]],
-  ['num2str',['num2str',['../start_8m.html#a98a8912cc0fff468250472cd41281c51',1,'start.m']]],
   ['numero_5felementi',['numero_elementi',['../crea__tutte__le__combinazioni__di__elementi_8m.html#a071e4a20ed3694e1603406261e60409a',1,'crea_tutte_le_combinazioni_di_elementi.m']]],
   ['numero_5fmolecole',['numero_molecole',['../crea__concentrazioni__iniziali_8m.html#a88a0f7d52768638928258ed8900a4a30',1,'crea_concentrazioni_iniziali.m']]],
   ['numero_5fspecie',['numero_specie',['../crea__catalizzatori_8m.html#ab5807df6e5701d7529696a19c65fab49',1,'crea_catalizzatori.m']]],

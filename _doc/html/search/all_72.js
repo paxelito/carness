@@ -56,7 +56,6 @@ var searchData=
   ['revrctratio',['revRctRatio',['../start_8m.html#aa7d97d27bd1a172a2f0ad49ef13ef8ac',1,'start.m']]],
   ['rfileid',['rfileID',['../general_concentration_over_threshold_8m.html#a2773ef160060ce8adead229154219112',1,'generalConcentrationOverThreshold.m']]],
   ['rfiles',['rFiles',['../garbage_search_8m.html#ad75735665492cabd747370126464fddf',1,'rFiles():&#160;garbageSearch.m'],['../_kill_spam_8m.html#ad75735665492cabd747370126464fddf',1,'rFiles():&#160;KillSpam.m'],['../_k_s_search_8m.html#ad75735665492cabd747370126464fddf',1,'rFiles():&#160;KSSearch.m']]],
-  ['riga_5flanciatore_5f2',['riga_lanciatore_2',['../start_8m.html#ac9a4176e3fc6f6d186c4f5c573b8a617',1,'start.m']]],
   ['righe',['righe',['../crea__tutte__le__combinazioni__di__elementi_8m.html#abdf49e297e2c121f2d09f075ac3d518a',1,'crea_tutte_le_combinazioni_di_elementi.m']]],
   ['rline',['rline',['../general_concentration_over_threshold_8m.html#a81318310a01613185f6a3e6183230bd0',1,'rline():&#160;generalConcentrationOverThreshold.m'],['../general_concentration_over_threshold_8m.html#ab5b947e1a8b7cf496ffd4eb21317052e',1,'rline(end):&#160;generalConcentrationOverThreshold.m']]],
   ['rlineb',['rlineb',['../general_concentration_over_threshold_8m.html#a8df79027fd85d4a3668754f36e9e88c1',1,'generalConcentrationOverThreshold.m']]],

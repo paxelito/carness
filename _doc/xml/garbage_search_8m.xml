@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="garbage_search_8m" kind="file">
     <compoundname>garbageSearch.m</compoundname>
       <sectiondef kind="var">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="16" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="16" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="16" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" prot="public" static="no" mutable="no">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="17" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="17" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="17" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1ae9011d40c6f13e68e6f07156e0da7c5d" prot="public" static="no" mutable="no">
         <type></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="20" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="20" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="20" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" prot="public" static="no" mutable="no">
         <type>for</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="25" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="24" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="24" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a0cf551ea63e8b67362ae2ab776072d1f" prot="public" static="no" mutable="no">
         <type>creating <ref refid="classspecies" kindref="compound">species</ref> matrix</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="29" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="29" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="29" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a7da0c82834970c5f3c3d9224ab832577" prot="public" static="no" mutable="no">
         <type></type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="30" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="30" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="30" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" prot="public" static="no" mutable="no">
         <type></type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="32" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="32" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="32" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1aaeeccb9f4fc7b14ac6b4810a4bf9f71e" prot="public" static="no" mutable="no">
         <type></type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="33" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="33" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="33" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a0cd6a44ffb07342cbc7e5ac33bfc9495" prot="public" static="no" mutable="no">
         <type>while <ref refid="_k_s_search_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="35" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="35" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="35" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a6bd08e37edf4151f5f6d1fc27a6f227a" prot="public" static="no" mutable="no">
         <type></type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="36" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="36" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="36" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" prot="public" static="no" mutable="no">
         <type><ref refid="_kill_spam_8m_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref> <ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="41" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="41" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="41" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a941dee33725f074478fdcbf15e1c35ae" prot="public" static="no" mutable="no">
         <type></type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="42" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="42" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="42" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a02a2184ac978f50472408ca644862302" prot="public" static="no" mutable="no">
         <type></type>
@@ -184,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="43" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="43" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="43" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1ad75735665492cabd747370126464fddf" prot="public" static="no" mutable="no">
         <type>creating <ref refid="classreactions" kindref="compound">reactions</ref> matrix</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="53" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="53" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="53" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a4c72dba1fe2ee2fbcc699262a8d0c624" prot="public" static="no" mutable="no">
         <type></type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="54" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="54" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="54" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1ac52097a2745fcef31eb175d2e9485845" prot="public" static="no" mutable="no">
         <type></type>
@@ -226,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="57" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="57" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="57" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a436a6968124e560649654a4abbd9dac6" prot="public" static="no" mutable="no">
         <type>while <ref refid="_k_s_search_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="59" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="59" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="59" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1ad3aa27d88a7e9d77d8334155860269bb" prot="public" static="no" mutable="no">
         <type>dividing into condensations <ref refid="general_concentration_over_threshold_8m_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref> <ref refid="_k_s_search_8m_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref></type>
@@ -254,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="71" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="71" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="71" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a89060c6979e5a4ff7b0985b35f295695" prot="public" static="no" mutable="no">
         <type></type>
@@ -268,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="72" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="72" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="72" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a1a691fb4f955887edfa538e91479fafe" prot="public" static="no" mutable="no">
         <type></type>
@@ -282,7 +282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="74" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="74" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="74" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1afaba8eef2f8f4e4dda2e893a19e55a94" prot="public" static="no" mutable="no">
         <type></type>
@@ -296,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="75" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="75" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="75" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" prot="public" static="no" mutable="no">
         <type>for</type>
@@ -312,7 +312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="78" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="76" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="76" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" prot="public" static="no" mutable="no">
         <type>creating <ref refid="classcatalysis" kindref="compound">catalysis</ref> matrix</type>
@@ -326,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="88" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="88" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="88" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a33e70cf5b45cb59005b82d30202f0b69" prot="public" static="no" mutable="no">
         <type></type>
@@ -340,7 +340,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="89" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="89" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="89" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a0810027f58d6be965e44b7b84c44ace8" prot="public" static="no" mutable="no">
         <type></type>
@@ -354,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="92" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="92" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="92" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="92" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1ad4ba7701967c1da20171228afccb7081" prot="public" static="no" mutable="no">
         <type>while <ref refid="_k_s_search_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
@@ -368,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="94" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="94" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="94" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="94" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a91cf6fbebedd86150a36e5ac3d5d3bfc" prot="public" static="no" mutable="no">
         <type></type>
@@ -381,7 +381,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="98" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="98" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="98" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="98" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1abe2562f47a009cdc636cec6fe7b1036b" prot="public" static="no" mutable="no">
         <type>identifying</type>
@@ -395,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="106" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="106" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="105" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1af33e0ef530936979d29418a30cb262d0" prot="public" static="no" mutable="no">
         <type></type>
@@ -409,7 +409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="107" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="107" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="107" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a81fbeed23d0dfd3b031fce1839f131fe" prot="public" static="no" mutable="no">
         <type></type>
@@ -423,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="108" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="108" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="108" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a98a8838a85ed24032563a44271b1525a" prot="public" static="no" mutable="no">
         <type></type>
@@ -437,7 +437,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="111" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="111" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="111" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1adfd17509248a56986475a25ee50fe488" prot="public" static="no" mutable="no">
         <type></type>
@@ -451,7 +451,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="112" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="112" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="112" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a62c10db322670bdabb633eb294c4fcec" prot="public" static="no" mutable="no">
         <type><ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
@@ -466,7 +466,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="114" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="113" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="113" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="113" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" prot="public" static="no" mutable="no">
         <type></type>
@@ -480,7 +480,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="128" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="128" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="127" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1ac862e7284527eb913b1351c8bfb8e079" prot="public" static="no" mutable="no">
         <type>clear</type>
@@ -493,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="137" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="137" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="137" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="garbage_search_8m_1a8e54ca14679a1ce9245a3b7d55d95570" prot="public" static="no" mutable="no">
         <type>clear</type>
@@ -509,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="138" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" bodystart="138" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="138" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" bodystart="138" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -527,7 +527,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="3"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="1" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1a452d57b5eb20c3e594ee8ee53155fdd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -544,7 +544,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="4"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="4" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1a42239b4891be578ad871fbcf3c713a59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -560,7 +560,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="6"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="6" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1a9024ba22a46088871be1d4ea6750fa54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -576,7 +576,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="7"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="7" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1aef429e9a25e0d4d70aa2037a59816956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>READ ALL THE DIRECTORY CONTAINING SIMULATIONS <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
@@ -592,7 +592,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="13"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="12" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1a365d011aeb5adcedc5cc75e7df629a6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -608,7 +608,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="19"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="19" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1a5e769bbbabcaddc548203741c7100228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -624,7 +624,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="21"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="21" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1a7eb00a69197e8905221801683c7ec02a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -640,7 +640,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="22"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="22" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1a609f02c862f2843febf3408f688be8e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -656,7 +656,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="26"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="26" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1ace5ed38e308fa1b7cc6487bce960dfee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="garbage_search_8m_1a941dee33725f074478fdcbf15e1c35ae" kindref="member">conc</ref> &amp;&amp;</type>
@@ -672,7 +672,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="45"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="44" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1ab9e70ab48bc489696c53ad7946d9dfd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -691,7 +691,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="46"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="46" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1af998036b749d9fa6dd2365f9937279b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_kill_spam_8m_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref> <ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
@@ -710,7 +710,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="65"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="65" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1a01fa14c111dc166a634dbb35b9cf9845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -729,7 +729,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="79"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="79" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1aa0f4762ac55d55c1b1ff073f9a5c3603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -748,7 +748,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="82"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="82" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1acd65be0940a1307851b57c0d864fd32a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
@@ -767,7 +767,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="100"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="100" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1acdc35755c8d07d7b7df426e77ae26506" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -786,7 +786,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="115"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="115" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -808,7 +808,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="124"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="124" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1ad91ce2467e4598db623dbf65f8786197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -830,7 +830,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="131"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="131" column="1"/>
       </memberdef>
       <memberdef kind="function" id="garbage_search_8m_1ad0eeb1e0227e246587ed6adcb8d829dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
@@ -846,7 +846,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m" line="141"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" line="141" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -881,8 +881,8 @@
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(strcat(<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;));</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="all_times_analysis_8m_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(strcat(&apos;<sp/><sp/>|-<sp/>Folder:<sp/>&apos;,<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>).name,&apos;/res...&apos;));</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>%creating<sp/><ref refid="classspecies" kindref="compound" tooltip="This class contains declarations of the species class.">species</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="29" refid="garbage_search_8m_1a0cf551ea63e8b67362ae2ab776072d1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a0cf551ea63e8b67362ae2ab776072d1f" kindref="member">sFiles</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;<ref refid="classspecies" kindref="compound" tooltip="This class contains declarations of the species class.">species</ref>*&apos;);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>%creating<sp/><ref refid="classspecies" kindref="compound" tooltip="This class contains declarations of the species class. ">species</ref><sp/>matrix</highlight></codeline>
+<codeline lineno="29" refid="garbage_search_8m_1a0cf551ea63e8b67362ae2ab776072d1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a0cf551ea63e8b67362ae2ab776072d1f" kindref="member">sFiles</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;<ref refid="classspecies" kindref="compound" tooltip="This class contains declarations of the species class. ">species</ref>*&apos;);</highlight></codeline>
 <codeline lineno="30" refid="garbage_search_8m_1a7da0c82834970c5f3c3d9224ab832577" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a7da0c82834970c5f3c3d9224ab832577" kindref="member">speciesFile</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a0cf551ea63e8b67362ae2ab776072d1f" kindref="member">sFiles</ref>(length(<ref refid="garbage_search_8m_1a0cf551ea63e8b67362ae2ab776072d1f" kindref="member">sFiles</ref>)).name;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(<ref refid="garbage_search_8m_1a7da0c82834970c5f3c3d9224ab832577" kindref="member">speciesFile</ref>);</highlight></codeline>
 <codeline lineno="32" refid="garbage_search_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>1;</highlight></codeline>
@@ -940,8 +940,8 @@
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>%creating<sp/><ref refid="classcatalysis" kindref="compound" tooltip="CATALYSIS class.">catalysis</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="88" refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;<ref refid="classcatalysis" kindref="compound" tooltip="CATALYSIS class.">catalysis</ref>*&apos;);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>%creating<sp/><ref refid="classcatalysis" kindref="compound" tooltip="CATALYSIS class. ">catalysis</ref><sp/>matrix</highlight></codeline>
+<codeline lineno="88" refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;<ref refid="classcatalysis" kindref="compound" tooltip="CATALYSIS class. ">catalysis</ref>*&apos;);</highlight></codeline>
 <codeline lineno="89" refid="garbage_search_8m_1a33e70cf5b45cb59005b82d30202f0b69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>(length(<ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>)).name;</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(<ref refid="garbage_search_8m_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref>);</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>1;</highlight></codeline>
@@ -998,6 +998,6 @@
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
 <codeline lineno="143"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/_analysis/garbageSearch.m"/>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m"/>
   </compounddef>
 </doxygen>

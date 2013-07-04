@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="classcatalysis" kind="class" prot="public">
     <compoundname>catalysis</compoundname>
     <includes refid="catalysis_8h" local="no">catalysis.h</includes>
@@ -15,7 +15,7 @@
 <para>catalysis ID </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="19" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="19" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="19" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcatalysis_1a13f8f20cf9acf08827e573b219a07232" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -28,7 +28,7 @@
 <para>catalyst ID </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="20" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="20" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="20" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcatalysis_1aa208dc8e0913b49abc838b81c37040ca" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -41,7 +41,7 @@
 <para>reaction ID, this reaction is catalysed by catalyst ID </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="21" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="21" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="21" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcatalysis_1a7545080aa6e75c836a12f3cd93dd1775" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -54,7 +54,7 @@
 <para>counter of reaction occurences </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="22" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="22" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="22" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcatalysis_1a7495ea3d161d54fec0ba9fdd27ae7300" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -67,7 +67,7 @@
 <para>Associative constant (CONDENSATION) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="25" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="25" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="25" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcatalysis_1a7b3d426980a6d618f14e72ae2e5af0d6" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -80,7 +80,7 @@
 <para>dissociative constant (CLEAVAGE) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="26" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="26" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="26" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcatalysis_1a727325a8968a2068c4615fb3fb653fc6" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -93,7 +93,7 @@
 <para>Kinetic constant for the complex formation </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="27" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="27" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="27" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcatalysis_1a8f87d0300c226ea1d5eb5ac601d4080b" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -106,7 +106,7 @@
 <para>Kinetic constant for the complex dissociation </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="28" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="28" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="28" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="31"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="31" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1ad512d0e2ff7cbb1b431c917f659a5395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -165,7 +165,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="33" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.cpp" bodystart="19" bodyend="30"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="32" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.cpp" bodystart="19" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a982805165c59e95ac055dc24e684fa05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="34" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="34" bodyend="34"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="34" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="34" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a85ba5bd9c758392f245f1277141a1706" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="37" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="37" bodyend="37"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="37" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="37" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a205e222dff1e80ff8f3195ab22e78726" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -204,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="38" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="38" bodyend="38"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="38" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="38" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a6e0eea2f12109b36bb522ac971d1db29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -217,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="39" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="39" bodyend="39"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="39" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a70a29d164efd7c22f56ba05da04f8c9b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="40" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="40" bodyend="40"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="40" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a471d98737d6708b3ac03efba41082d0c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="41" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="41" bodyend="41"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="41" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="41" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1ad8b0d5f6410e2256cfefe0db9a10b0af" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -256,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="42" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="42" bodyend="42"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="42" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="42" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a182bfb05b12ddd3613693f6d1f362665" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -269,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="43" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="43" bodyend="43"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="43" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="43" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a9c90e6f2cd9aafd2029ef20a09b95eb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -282,7 +282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="47" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="47" bodyend="47"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="47" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1ab8964f8ec17d677de03747520d0a9995" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="48" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="48" bodyend="48"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="48" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="48" bodyend="48"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -305,7 +305,7 @@
 <simplesect kind="version"><para>0.1 </para></simplesect>
 <simplesect kind="date"><para>2009-04-16 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" line="17" bodyfile="/Users/alessandrofilisetti/Dropbox/ACS_SVN/carness/carness_simulator/catalysis.h" bodystart="16" bodyend="50"/>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="17" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="16" bodyend="50"/>
     <listofallmembers>
       <member refid="classcatalysis_1a7c4d1a67d2745293a17a6bee0df7c5cd" prot="public" virt="non-virtual"><scope>catalysis</scope><name>catalysis</name></member>
       <member refid="classcatalysis_1ad512d0e2ff7cbb1b431c917f659a5395" prot="public" virt="non-virtual"><scope>catalysis</scope><name>catalysis</name></member>

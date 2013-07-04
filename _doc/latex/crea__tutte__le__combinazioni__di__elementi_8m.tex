@@ -1,5 +1,5 @@
-\hypertarget{crea__tutte__le__combinazioni__di__elementi_8m}{\section{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-matlabinitializator/crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.m File Reference}
-\label{crea__tutte__le__combinazioni__di__elementi_8m}\index{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-matlabinitializator/crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m@{/\-Users/alessandrofilisetti/\-Dropbox/\-A\-C\-S\-\_\-\-S\-V\-N/carness/carness\-\_\-simulator/\-\_\-matlabinitializator/crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}}
+\hypertarget{crea__tutte__le__combinazioni__di__elementi_8m}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-matlabinitializator/crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.m File Reference}
+\label{crea__tutte__le__combinazioni__di__elementi_8m}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-matlabinitializator/crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-matlabinitializator/crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}}
 }
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -23,8 +23,7 @@ for \hyperlink{crea__tutte__le__combinazioni__di__elementi_8m_a6f6ccfcf58b31cb64
 =crea\_tutte\_le\_combinazioni\_di\_elementi(vettore\_elementi,K)
 %\textcolor{keyword}{function} [specie]=crea\_tutte\_le\_combinazioni\_di\_elementi(vettore\_elementi)
 
-%dato un vettore di elementi e una \hyperlink{crea__influx_8m_a984d293145d85a936f430c0990316e51}{lunghezza} massima K restituisce 
-      tutte le
+%dato un vettore di elementi e una \hyperlink{crea__influx_8m_a984d293145d85a936f430c0990316e51}{lunghezza} massima K restituisce tutte le
 %possibili combinazioni di elementi ordinati
 
 lunghezza\_stringa = K
@@ -40,10 +39,10 @@ Definition at line 4 of file crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-
 \begin{DoxyCode}
 =1:lunghezza\_stringa %colonne
    \textcolor{keywordflow}{for} \hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j} = 1:\hyperlink{crea__tutte__le__combinazioni__di__elementi_8m_a071e4a20ed3694e1603406261e60409a}{numero\_elementi}
-       \textcolor{keywordflow}{for} \hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z} = (\hyperlink{crea__tutte__le__combinazioni__di__elementi_8m_a071e4a20ed3694e1603406261e60409a}{numero\_elementi}^(\hyperlink{garbage_search_8m_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}-1))*(\hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j}-1)+1:
-      numero\_elementi^(\hyperlink{garbage_search_8m_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}):righe
-           specie(\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z}:\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z}+\hyperlink{crea__tutte__le__combinazioni__di__elementi_8m_a071e4a20ed3694e1603406261e60409a}{numero\_elementi}^(\hyperlink{garbage_search_8m_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}-1)-1,i)=(
-      vettore\_elementi(\hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j}))
+       \textcolor{keywordflow}{for} \hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z} = (\hyperlink{crea__tutte__le__combinazioni__di__elementi_8m_a071e4a20ed3694e1603406261e60409a}{numero\_elementi}^(\hyperlink{garbage_search_8m_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}-1))*(\hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j}-1)+1:numero\_elementi^(
+      \hyperlink{garbage_search_8m_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}):righe
+           specie(\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z}:\hyperlink{inizializzatore___a_c_s_8m_a4bfd41b9edb31803d68f4f6362ec4cd7}{z}+\hyperlink{crea__tutte__le__combinazioni__di__elementi_8m_a071e4a20ed3694e1603406261e60409a}{numero\_elementi}^(\hyperlink{garbage_search_8m_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}-1)-1,i)=(vettore\_elementi(
+      \hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j}))
 \end{DoxyCode}
 
 
