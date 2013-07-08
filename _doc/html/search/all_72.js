@@ -21,6 +21,7 @@ var searchData=
   ['reactionprobability',['reactionProbability',['../lancia__inizializzatore__acs_8m.html#a9101beaeb03fddb5c6a9e68442177543',1,'reactionProbability():&#160;lancia_inizializzatore_acs.m'],['../start_8m.html#a9101beaeb03fddb5c6a9e68442177543',1,'reactionProbability():&#160;start.m']]],
   ['reactions',['reactions',['../classreactions.html',1,'reactions'],['../classreactions.html#a496de9cbc128b98213ded20b936752c2',1,'reactions::reactions()']]],
   ['reactions_2ecpp',['reactions.cpp',['../reactions_8cpp.html',1,'']]],
+  ['reactions_2ed',['reactions.d',['../reactions_8d.html',1,'']]],
   ['reactions_2eh',['reactions.h',['../reactions_8h.html',1,'']]],
   ['reactionscounters',['reactionsCounters',['../_kill_spam_8m.html#aeea253cb98a56047ef20ceed86e2f0ea',1,'reactionsCounters():&#160;KillSpam.m'],['../_k_s_search_8m.html#aeea253cb98a56047ef20ceed86e2f0ea',1,'reactionsCounters():&#160;KSSearch.m']]],
   ['reactionsfile',['reactionsFile',['../garbage_search_8m.html#a4c72dba1fe2ee2fbcc699262a8d0c624',1,'reactionsFile():&#160;garbageSearch.m'],['../_kill_spam_8m.html#a4c72dba1fe2ee2fbcc699262a8d0c624',1,'reactionsFile():&#160;KillSpam.m'],['../_k_s_search_8m.html#a4c72dba1fe2ee2fbcc699262a8d0c624',1,'reactionsFile():&#160;KSSearch.m']]],

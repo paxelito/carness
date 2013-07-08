@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CaRNeSS
-   &#160;<span id="projectnumber">4.0 (20130705.52)</span>
+   &#160;<span id="projectnumber">4.1 (20130708.53)</span>
    </div>
    <div id="projectbrief">Catalytic Reaction Networks Stochastic Simulator</div>
   </td>
@@ -121,8 +121,6 @@ $(document).ready(function(){initNavTree('classenvironment.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaff2c2f57d25e0af6981a673e0b85045"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenvironment.html#aaff2c2f57d25e0af6981a673e0b85045">environment</a> ()</td></tr>
-<tr class="separator:aaff2c2f57d25e0af6981a673e0b85045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa44bbabec52bf2d61a19685a30e68de1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenvironment.html#aa44bbabec52bf2d61a19685a30e68de1">environment</a> (string tmpInitialPath)</td></tr>
 <tr class="separator:aa44bbabec52bf2d61a19685a30e68de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae323954bd5b674bf34d954c3f7b67629"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenvironment.html#ae323954bd5b674bf34d954c3f7b67629">~environment</a> ()</td></tr>
@@ -191,6 +189,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a98a4989029d77e99cf2ca9fb0eb1c2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0e7940868932ac4b26fd61943952528"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acs__headers_8h.html#ab776853a005fcbf56af0424a2a4dd607">acs_double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenvironment.html#aa0e7940868932ac4b26fd61943952528">getRatioBetweenBackandForw</a> () const </td></tr>
 <tr class="separator:aa0e7940868932ac4b26fd61943952528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a883327bbb969164eb8b3c2d1c941ca03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenvironment.html#a883327bbb969164eb8b3c2d1c941ca03">getSystemExpFlag</a> () const </td></tr>
+<tr class="separator:a883327bbb969164eb8b3c2d1c941ca03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab429d2057ee1092bf210c29e70153f75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acs__headers_8h.html#ab776853a005fcbf56af0424a2a4dd607">acs_double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenvironment.html#ab429d2057ee1092bf210c29e70153f75">getKdiss</a> () const </td></tr>
 <tr class="separator:ab429d2057ee1092bf210c29e70153f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa862f1f98c6060747d6f1f30377671ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="acs__headers_8h.html#ab776853a005fcbf56af0424a2a4dd607">acs_double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classenvironment.html#aa862f1f98c6060747d6f1f30377671ff">getKass</a> () const </td></tr>
@@ -476,32 +476,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="environment_8h_source.html#l00020">20</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aaff2c2f57d25e0af6981a673e0b85045"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">environment::environment </td>
-          <td>(</td>
-          <td class="paramname">)</td><td></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Test environment costructor </p>
-<dl class="section version"><dt>Version</dt><dd>2.4 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2010-06-27 </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tmpRndDoubleGen</td><td>randomGenerator reference </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00020">20</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="aa44bbabec52bf2d61a19685a30e68de1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -515,7 +489,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Environment Constructor </p>
+<p>Test environment costructor </p>
+<dl class="section version"><dt>Version</dt><dd>2.4 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2010-06-27 </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tmpRndDoubleGen</td><td>randomGenerator reference Environment Constructor </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -525,7 +507,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section date"><dt>Date</dt><dd>2013/07/04 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00074">74</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00075">75</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -578,7 +560,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03588">3588</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03590">3590</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -630,7 +612,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02132">2132</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02134">2134</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -660,7 +642,7 @@ Public Member Functions</h2></td></tr>
 <p>This function return false if the tmpCandidateProduct is a catalyst of tmpCat </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 - last update 2009/10/08 - build 009 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01602">1602</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01604">1604</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -697,7 +679,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01574">1574</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01576">1576</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -716,7 +698,7 @@ Public Member Functions</h2></td></tr>
 <p>Clear all structures after each simulation </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05501">5501</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05507">5507</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -783,7 +765,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05167">5167</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05172">5172</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -850,7 +832,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>20110214 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02786">2786</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02788">2788</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -901,7 +883,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00466">466</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00468">468</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -939,7 +921,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01456">1456</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01458">1458</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -966,7 +948,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section date"><dt>Date</dt><dd>20130702 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01229">1229</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01231">1231</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -993,7 +975,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section date"><dt>Date</dt><dd>20130702 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01371">1371</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01373">1373</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -1036,7 +1018,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section date"><dt>Date</dt><dd>20130702 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01406">1406</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01408">1408</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -1063,7 +1045,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section date"><dt>Date</dt><dd>20130702 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00926">926</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00928">928</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -1119,7 +1101,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01140">1140</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01142">1142</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -1146,7 +1128,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section date"><dt>Date</dt><dd>20130702 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01287">1287</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01289">1289</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -1189,7 +1171,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section date"><dt>Date</dt><dd>20130702 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01323">1323</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01325">1325</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -1216,7 +1198,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section date"><dt>Date</dt><dd>20130702 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01258">1258</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01260">1260</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -1275,7 +1257,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00510">510</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00512">512</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -1301,7 +1283,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00277">277</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00278">278</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1327,7 +1309,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00276">276</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00277">277</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1353,7 +1335,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00267">267</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00268">268</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1378,7 +1360,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00269">269</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00270">270</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1403,7 +1385,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00265">265</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00266">266</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1429,7 +1411,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00274">274</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00275">275</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1455,7 +1437,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00272">272</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00273">273</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1481,7 +1463,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00263">263</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00264">264</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1506,7 +1488,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00288">288</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00289">289</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1523,7 +1505,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06448">6448</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06458">6458</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -1540,7 +1522,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06466">6466</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06476">6476</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -1615,7 +1597,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00194">194</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00195">195</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1665,7 +1647,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00212">212</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00213">213</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1690,7 +1672,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00182">182</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00183">183</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1740,7 +1722,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00185">185</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00186">186</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1790,7 +1772,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00183">183</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00184">184</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1815,7 +1797,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00214">214</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00215">215</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1840,7 +1822,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00184">184</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00185">185</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1890,7 +1872,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00204">204</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00205">205</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1915,7 +1897,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00191">191</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00192">192</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1940,7 +1922,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00213">213</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00214">214</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -1965,7 +1947,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00215">215</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00216">216</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2115,7 +2097,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00192">192</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00193">193</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2140,7 +2122,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00176">176</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00177">177</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2165,7 +2147,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00177">177</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00178">178</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2190,7 +2172,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00178">178</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00179">179</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2215,7 +2197,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00175">175</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00176">176</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2240,7 +2222,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00180">180</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00181">181</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2265,7 +2247,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00179">179</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00180">180</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2365,7 +2347,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00187">187</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00188">188</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2415,7 +2397,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00186">186</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00187">187</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2440,7 +2422,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00197">197</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00198">198</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2715,7 +2697,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00207">207</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00208">208</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2740,7 +2722,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00208">208</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00209">209</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2765,7 +2747,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00209">209</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00210">210</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2790,7 +2772,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00206">206</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00207">207</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2815,7 +2797,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00205">205</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00206">206</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2865,7 +2847,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00216">216</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00217">217</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -2890,7 +2872,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00196">196</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00197">197</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3015,7 +2997,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00203">203</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00204">204</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3040,7 +3022,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00193">193</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00194">194</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3090,7 +3072,32 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00188">188</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00189">189</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a883327bbb969164eb8b3c2d1c941ca03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool environment::getSystemExpFlag </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00173">173</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3139,7 +3146,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02981">2981</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02983">2983</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3163,7 +3170,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02960">2960</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02962">2962</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3187,7 +3194,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02936">2936</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02938">2938</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3211,7 +3218,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03002">3002</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03004">3004</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3235,7 +3242,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02912">2912</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02914">2914</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3253,7 +3260,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the total number of charged molecules </p>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03022">3022</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03024">3024</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3278,7 +3285,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00195">195</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00196">196</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3303,7 +3310,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00283">283</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00284">284</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3328,7 +3335,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00285">285</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00286">286</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3353,7 +3360,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00284">284</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00285">285</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3378,7 +3385,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00286">286</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00287">287</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3404,7 +3411,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00278">278</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00279">279</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3429,7 +3436,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00266">266</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00267">267</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3454,7 +3461,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00268">268</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00269">269</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3479,7 +3486,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00264">264</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00265">265</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3505,7 +3512,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00273">273</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00274">274</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3531,7 +3538,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00271">271</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00272">272</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3556,7 +3563,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00262">262</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00263">263</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3581,7 +3588,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00287">287</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00288">288</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3606,7 +3613,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00315">315</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00316">316</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3632,7 +3639,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00279">279</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00280">280</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -3669,7 +3676,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04933">4933</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04935">4935</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3705,7 +3712,7 @@ Public Member Functions</h2></td></tr>
 <p>Check if the reaction catalyze both one reaction and the inverted one </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02075">2075</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02077">2077</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3724,7 +3731,7 @@ Public Member Functions</h2></td></tr>
 <p>Nutrients amount fixing process. The amount of nutrients has to be fixed according to the initial theoretical distribution </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03088">3088</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03090">3090</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3797,7 +3804,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04493">4493</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04495">4495</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3848,7 +3855,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04698">4698</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04700">4700</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3927,7 +3934,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04254">4254</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04256">4256</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -3993,7 +4000,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04390">4390</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04392">4392</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4043,7 +4050,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04791">4791</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04793">4793</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4088,7 +4095,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04614">4614</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04616">4616</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4158,7 +4165,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04137">4137</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l04139">4139</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4196,7 +4203,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03212">3212</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03214">3214</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4223,7 +4230,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03887">3887</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03889">3889</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4289,7 +4296,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02165">2165</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02167">2167</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4327,7 +4334,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03807">3807</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03809">3809</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4365,7 +4372,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03644">3644</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03646">3646</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4426,7 +4433,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03939">3939</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03941">3941</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4471,7 +4478,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03121">3121</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03123">3123</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4568,7 +4575,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>20110222 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02811">2811</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l02813">2813</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4587,7 +4594,7 @@ Public Member Functions</h2></td></tr>
 <p>Print all the energized molecules  1.0 </p>
 <dl class="section date"><dt>Date</dt><dd>2010-11-14 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05477">5477</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05483">5483</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4606,7 +4613,7 @@ Public Member Functions</h2></td></tr>
 <p>Show all the species with their ID </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05431">5431</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05437">5437</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4625,7 +4632,7 @@ Public Member Functions</h2></td></tr>
 <p>Show all the Gillespie Structure </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05451">5451</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05457">5457</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4644,7 +4651,7 @@ Public Member Functions</h2></td></tr>
 <p>Show all initial species in table format </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05374">5374</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05380">5380</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4664,7 +4671,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2010-05-17 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03063">3063</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03065">3065</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4691,7 +4698,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03540">3540</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03542">3542</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4716,7 +4723,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00290">290</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00291">291</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -4735,7 +4742,7 @@ Public Member Functions</h2></td></tr>
 <p>set the concentrations to the initial values and reset internal statistics and counter </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05566">5566</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05572">5572</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4760,7 +4767,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00292">292</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00293">293</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -4785,7 +4792,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00291">291</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00292">292</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -4810,7 +4817,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00293">293</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00294">294</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -4835,7 +4842,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00294">294</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00295">295</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -4860,7 +4867,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00296">296</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00297">297</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -4911,7 +4918,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01541">1541</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01543">1543</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4939,7 +4946,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01511">1511</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01513">1513</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -4981,7 +4988,7 @@ Public Member Functions</h2></td></tr>
 <p>Save the catalysis structures in a file named catalysis_[currentSims]_[currentStep].csv. This is file is equal to the acs_catalysis.csv input file. Standard C++ The file is saved in the directory indicated as a second parameter in the run command </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06056">6056</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06066">6066</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5002,7 +5009,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2013/07/03 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05706">5706</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05712">5712</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5029,7 +5036,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2013-047-03 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05862">5862</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05872">5872</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5066,7 +5073,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2013/07/03 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06320">6320</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06330">6330</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5103,7 +5110,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2013/07/03 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06386">6386</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06396">6396</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5146,7 +5153,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2013/07/03 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06259">6259</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06269">6269</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5173,7 +5180,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2013-047-03 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05900">5900</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05910">5910</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5246,7 +5253,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2013/07/03 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06200">6200</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06210">6210</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5288,7 +5295,7 @@ Public Member Functions</h2></td></tr>
 <p>Save the reactions structures in a file named reactions_[currentSims]_[currentStep].csv. This is file is equal to the acs_reactions.csv input file. The file is saved in the directory indicated as a second parameter in the run command </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06003">6003</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06013">6013</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5331,7 +5338,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2013/07/03 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05938">5938</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05948">5948</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5374,7 +5381,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2013/07/03 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06113">6113</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l06123">6123</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5401,7 +5408,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00904">904</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l00906">906</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5427,7 +5434,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00312">312</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00313">313</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -5447,7 +5454,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>2.5.2 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2010-11-11 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03451">3451</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03453">3453</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5467,7 +5474,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>2.5.3 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2011-02-22 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03492">3492</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l03494">3494</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5505,7 +5512,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01477">1477</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01479">1479</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5524,7 +5531,7 @@ Public Member Functions</h2></td></tr>
 <p>Shows all parameters uploaded from the configuration file </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05292">5292</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05297">5297</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5543,7 +5550,7 @@ Public Member Functions</h2></td></tr>
 <p>Store initial structures into storing variables </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05660">5660</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05666">5666</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5563,7 +5570,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2011-04-13 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01641">1641</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l01643">1643</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5589,7 +5596,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="environment_8h_source.html#l00281">281</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
+<p>Definition at line <a class="el" href="environment_8h_source.html#l00282">282</a> of file <a class="el" href="environment_8h_source.html">environment.h</a>.</p>
 
 </div>
 </div>
@@ -5608,7 +5615,7 @@ Public Member Functions</h2></td></tr>
 <p>Update the species age </p>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05255">5255</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05260">5260</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5645,7 +5652,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05683">5683</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
+<p>Definition at line <a class="el" href="environment_8cpp_source.html#l05689">5689</a> of file <a class="el" href="environment_8cpp_source.html">environment.cpp</a>.</p>
 
 </div>
 </div>
@@ -5659,7 +5666,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classenvironment.html">environment</a></li>
-    <li class="footer">Generated on Thu Jul 4 2013 19:00:43 for CaRNeSS by
+    <li class="footer">Generated on Mon Jul 8 2013 11:25:14 for CaRNeSS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

@@ -1,8 +1,9 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4 (20130705.52)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.1 (20130708.53)
  * \author Alessandro Filisetti
- * \version 4.0 (20130705.52)
- * \date 2013-07-05
+ * \version 4.1 (20130708.53)
+ * \date 2013-07-08
  * sourceforge repository -- https://carness.svn.sourceforge.net/svnroot/carness/
+ * git repository -- https://github.com/paxelito/carness
  *
  *
 * This manual is divided in the following sections:
@@ -59,6 +60,7 @@
  *		@param timeStructuresSavingInterval (> 0) All system structures (species, catalysis and reactions) are saved every <i>timeStructuresSavingInterval</i> seconds (simulation time)
  *      @param fileTimesSaveInterval (>= 0) Times data are stored in file times.csv every <i>fileTimesSaveInterval</i> seconds (If 0 reactions are stored continually)
  *		\subsection paramenv Environment
+ *		@param newSpeciesProbMinThreshold (>=0) Minimal new species creation probability to allow system expansion
  *		@param lastFiringDiskSpeciesID (> 0) The ID of the last firing disk species.
  *		@param overallConcentration (> 0) The overall initial concentration that will be divided between all the initial species according to the selected initial distribution.
  *		@param ECConcentration (> 0) Incoming concentration of charged molecules per second.

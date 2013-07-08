@@ -1,6 +1,5 @@
 var classenvironment =
 [
-    [ "environment", "classenvironment.html#aaff2c2f57d25e0af6981a673e0b85045", null ],
     [ "environment", "classenvironment.html#aa44bbabec52bf2d61a19685a30e68de1", null ],
     [ "~environment", "classenvironment.html#ae323954bd5b674bf34d954c3f7b67629", null ],
     [ "addChargeMolToList", "classenvironment.html#a7981c34d16c0b1e9e6ca3ea69aa3a8a3", null ],
@@ -94,6 +93,7 @@ var classenvironment =
     [ "getRefillInterval", "classenvironment.html#a469a7ce80a1e9e5fae77b46b66dfee18", null ],
     [ "getReverseReactions", "classenvironment.html#a2a2ac2a8140df67688a71d3349adf04a", null ],
     [ "getSolubilityThreshold", "classenvironment.html#a6df38337d38f2f714be7058a2a31202c", null ],
+    [ "getSystemExpFlag", "classenvironment.html#a883327bbb969164eb8b3c2d1c941ca03", null ],
     [ "getTimeStructuresSavingInterval", "classenvironment.html#a892dd7bd29342c4206c39556d91a83da", null ],
     [ "getTotalNumberOfComplexes", "classenvironment.html#ab564c7ddffd3dba896d5b049e1257793", null ],
     [ "getTotalNumberOfComplexSpecies", "classenvironment.html#a453d88017912e8b5973310ea2b044266", null ],

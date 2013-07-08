@@ -30,6 +30,7 @@ private:
     acs_int Currentattempts; // Current number of temptatives
     acs_double timeStructuresSavingInterval; // Time between two successive files storing procedure
     acs_double fileTimesSaveInterval; // Time between two successive times.csv storing procedure
+    acs_double newSpeciesProbMinThreshold; // Minimal new species creation probability to allow system expansion
     acs_int lastFiringDiskSpeciesID; // ID of the last species of the firing disk
     acs_double overallConcentration; // initial overall concentration
     acs_double ECConcentration; // Energie Carriers concentration
@@ -131,8 +132,7 @@ private:
 	// METHODS ---------------------------|
 	
 	public:
-	environment();
-    //environment(QString tmpInitialPath);
+	//environment();
     environment(string tmpInitialPath);
 	~environment(){}
 	
@@ -170,6 +170,7 @@ private:
 	acs_double getgillespieEntropy()const{return gillespieEntropy;}
     acs_double getRatioBetweenNewGillTotGill()const{return ratioBetweenNewGillTotGill;}
     acs_double getRatioBetweenBackandForw()const{return ratioBetweenReverseAndTotalScore;}
+    bool getSystemExpFlag()const{return newSpeciesProbMinThreshold < ratioBetweenReverseAndTotalScore;}
 	
 	// Kinetic Constants -----------------------------
 	acs_double getKdiss()const{return K_diss;}

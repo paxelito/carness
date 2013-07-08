@@ -8,6 +8,7 @@ var searchData=
   ['catalizzatori',['catalizzatori',['../lancia__inizializzatore__acs_8m.html#a089ff88e71c60b850d67fa1c891af4ab',1,'catalizzatori():&#160;lancia_inizializzatore_acs.m'],['../start_8m.html#a5a2da1d1b50e51c66813f40da0d9d0d1',1,'catalizzatori():&#160;start.m']]],
   ['catalysis',['catalysis',['../classcatalysis.html',1,'catalysis'],['../classcatalysis.html#a7c4d1a67d2745293a17a6bee0df7c5cd',1,'catalysis::catalysis()'],['../classcatalysis.html#ad512d0e2ff7cbb1b431c917f659a5395',1,'catalysis::catalysis(acs_longInt tmpCatId, acs_longInt tmpCat, acs_longInt tmpRctId, acs_longInt tmpAmount, acs_double tmpKass, acs_double tmpKdiss, acs_double tmpK_cpx)']]],
   ['catalysis_2ecpp',['catalysis.cpp',['../catalysis_8cpp.html',1,'']]],
+  ['catalysis_2ed',['catalysis.d',['../catalysis_8d.html',1,'']]],
   ['catalysis_2eh',['catalysis.h',['../catalysis_8h.html',1,'']]],
   ['catalysisfile',['catalysisFile',['../garbage_search_8m.html#a33e70cf5b45cb59005b82d30202f0b69',1,'catalysisFile():&#160;garbageSearch.m'],['../_kill_spam_8m.html#a33e70cf5b45cb59005b82d30202f0b69',1,'catalysisFile():&#160;KillSpam.m'],['../_k_s_search_8m.html#a33e70cf5b45cb59005b82d30202f0b69',1,'catalysisFile():&#160;KSSearch.m']]],
   ['catalysismatrix',['catalysisMatrix',['../garbage_search_8m.html#a0810027f58d6be965e44b7b84c44ace8',1,'catalysisMatrix():&#160;garbageSearch.m'],['../_kill_spam_8m.html#a0810027f58d6be965e44b7b84c44ace8',1,'catalysisMatrix():&#160;KillSpam.m'],['../_k_s_search_8m.html#a0810027f58d6be965e44b7b84c44ace8',1,'catalysisMatrix():&#160;KSSearch.m'],['../garbage_search_8m.html#acd65be0940a1307851b57c0d864fd32a',1,'catalysisMatrix(continua, 1:4):&#160;garbageSearch.m'],['../_kill_spam_8m.html#acd65be0940a1307851b57c0d864fd32a',1,'catalysisMatrix(continua, 1:4):&#160;KillSpam.m'],['../_k_s_search_8m.html#a244eec8903103b5bbddef461276286ce',1,'catalysisMatrix(continua, 1:7):&#160;KSSearch.m']]],
@@ -43,6 +44,7 @@ var searchData=
   ['cntrl',['cntrl',['../general_concentration_over_threshold_8m.html#aae7c98255a05b6029bdfc5e96dc2ab88',1,'generalConcentrationOverThreshold.m']]],
   ['commonfunctions',['commonFunctions',['../classcommon_functions.html',1,'']]],
   ['commonfunctions_2ecpp',['commonFunctions.cpp',['../common_functions_8cpp.html',1,'']]],
+  ['commonfunctions_2ed',['commonFunctions.d',['../common_functions_8d.html',1,'']]],
   ['commonfunctions_2eh',['commonFunctions.h',['../common_functions_8h.html',1,'']]],
   ['complesso',['complesso',['../inizializzatore___a_c_s_8m.html#a14b0effe88b0b31bfb9d8268de6e5e35',1,'complesso():&#160;inizializzatore_ACS.m'],['../inizializzatore___a_c_s_8m.html#ad4d1a2311b23c0f860b99297ddc57214',1,'complesso(1--L-1) if concentrazioni_iniziali(i) &gt; 0||sum(i:&#160;inizializzatore_ACS.m']]],
   ['complexdegradation',['COMPLEXDEGRADATION',['../acs__headers_8h.html#ab9c64bfc35cc5e2e712759d474091c4d',1,'acs_headers.h']]],
@@ -105,5 +107,5 @@ var searchData=
   ['currentdir',['currentDir',['../all_times_analysis_8m.html#af32eb97339f1e9d37b5540de2cbc79c9',1,'currentDir():&#160;allTimesAnalysis.m'],['../conc_analysis_8m.html#afb60cd67e28ca8c9fa44e4f5452589b9',1,'currentDir():&#160;concAnalysis.m'],['../general_concentration_over_threshold_8m.html#af32eb97339f1e9d37b5540de2cbc79c9',1,'currentDir():&#160;generalConcentrationOverThreshold.m'],['../_k_s_search_launcher_8m.html#af32eb97339f1e9d37b5540de2cbc79c9',1,'currentDir():&#160;KSSearchLauncher.m']]],
   ['currentfolder',['currentFolder',['../general_concentration_over_threshold_8m.html#af393966a41271e721a03e544a1650f4a',1,'generalConcentrationOverThreshold.m']]],
   ['cvalues',['cValues',['../garbage_search_8m.html#ad4ba7701967c1da20171228afccb7081',1,'cValues():&#160;garbageSearch.m'],['../_kill_spam_8m.html#ad4ba7701967c1da20171228afccb7081',1,'cValues():&#160;KillSpam.m'],['../_k_s_search_8m.html#ad4ba7701967c1da20171228afccb7081',1,'cValues():&#160;KSSearch.m']]],
-  ['catalytic_20rections_20network_20stochastic_20simulator_20_2d_20carness_204_20_2820130705_2e52_29',['Catalytic Rections Network Stochastic Simulator - CaRNeSS 4 (20130705.52)',['../index.html',1,'']]]
+  ['catalytic_20rections_20network_20stochastic_20simulator_20_2d_20carness_204_2e1_20_2820130708_2e53_29',['Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.1 (20130708.53)',['../index.html',1,'']]]
 ];

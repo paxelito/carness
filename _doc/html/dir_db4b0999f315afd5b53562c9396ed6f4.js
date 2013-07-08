@@ -2,6 +2,7 @@ var dir_db4b0999f315afd5b53562c9396ed6f4 =
 [
     [ "_analysis", "dir_66d19001354beca3375bfcfe54fec246.html", "dir_66d19001354beca3375bfcfe54fec246" ],
     [ "_matlabinitializator", "dir_57b3bf84c49e6a30c9113636c121b1cc.html", "dir_57b3bf84c49e6a30c9113636c121b1cc" ],
+    [ "Debug", "dir_6edaaf4801aa0ea12467972748371704.html", "dir_6edaaf4801aa0ea12467972748371704" ],
     [ "acs_headers.h", "acs__headers_8h.html", "acs__headers_8h" ],
     [ "catalysis.cpp", "catalysis_8cpp.html", null ],
     [ "catalysis.h", "catalysis_8h.html", [

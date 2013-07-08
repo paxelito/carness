@@ -134,6 +134,19 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="32" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="32" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="classenvironment_1aa3c81f7be35fb7ac15b93734a39c15dc" prot="private" static="no" mutable="no">
+        <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+        <definition>acs_double environment::newSpeciesProbMinThreshold</definition>
+        <argsstring></argsstring>
+        <name>newSpeciesProbMinThreshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="33" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="classenvironment_1ae562d04f9a2b5084753304c29039d2b1" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
         <definition>acs_int environment::lastFiringDiskSpeciesID</definition>
@@ -145,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="33" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="33" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="34" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ad9013e55251c021588c991de0a2e174c" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -158,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="34" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="34" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="35" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a408122b5c383b53f0b9539f69e310b9d" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -171,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="35" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="35" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="36" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a0baadb36c19d7756b099c043e394a6f0" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -184,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="36" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="36" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="37" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1abaf3fae6060aacfa95a5881d6cef25fc" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -197,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="37" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="37" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="38" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a62592802946ed03d101f843f89fefead" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -210,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="38" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="38" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1acaf3cd03764e412ac52fcb22ab7ece05" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -223,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="39" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="40" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1acc54187b57eae193171eecc0f8d935b3" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -236,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="40" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="40" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="41" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a9f8d2a20ca205da8fa132cb29b6f3507" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -249,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="41" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="41" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="42" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a7070a2187b5b1cbb35e9d17edbee1e3d" prot="private" static="no" mutable="no">
         <type><ref refid="classspecies" kindref="compound">species</ref></type>
@@ -262,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="42" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="42" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="43" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a94b4686e121125ce1f6de3f6c8dbcf4d" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -275,7 +288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="43" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="43" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="44" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a0fa2d19ff8a38c1abb6b79d60f328a1a" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -288,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="44" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="44" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="45" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a4b37dc052d77d208919c114e3ec79afb" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -301,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="45" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="45" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="46" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a320bd41b89568ad9895c3282b7d2bdd8" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -314,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="46" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="46" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="47" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1aecf9a55a3f725afac1364655da593770" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -327,7 +340,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="47" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="47" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="48" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1acfc7d566cd5efb9d1d09ba044dcd838f" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -340,7 +353,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="48" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="48" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="49" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ac21a438c6d982bc3c88ca8908e4d6c47" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -353,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="49" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="49" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="50" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a04cce0a6b32dcd992770631b5175c72a" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -366,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="50" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="50" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="51" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1af62e4171e2cbea7ba1b06ca07b34ab4e" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -379,7 +392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="51" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="51" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="52" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ad46f3ea657f0d5ff5d88df9ea5de73de" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -392,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="52" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="52" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="53" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a020780454d503563fabbd5a4ad70633b" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -405,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="53" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="53" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="54" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a7d34a8ee0295c6055d1193efe5149c28" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -418,7 +431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="54" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="54" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="55" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a21a3d311736d7ae95e2433ce35d9f066" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -431,7 +444,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="58" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="58" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="59" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a50a5928e65632d2131cd1780dc7579ff" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -444,7 +457,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="59" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="59" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="60" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a5fa768dc84d3090fe415947f7ec3fb23" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -457,7 +470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="60" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="60" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="61" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a14fa51ec749e2a8896207be5e5fbf25c" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -470,7 +483,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="61" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="61" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="62" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1acc5ac3dc3958204843e4cd4b153337a6" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -483,7 +496,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="62" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="62" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="63" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a2b13919233351ee0283b4c50ca4c2335" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -496,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="63" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="63" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="64" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a070c5bdde6947542b87e5206e3f0b92a" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -509,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="64" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="64" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="65" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a91f74bf47cd5cc0ba95fd463c3a3bec0" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -522,7 +535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="65" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="65" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="66" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1aebee978e44b20aa27b51737fcd0a8919" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -535,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="66" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="66" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="67" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a1e46ccd6a6409f7e36db2eea514ca84c" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -548,7 +561,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="67" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="67" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="68" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ae060f8fa78b638e0c5275f072723c143" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -561,7 +574,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="68" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="68" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="69" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a72fc96eddfe3e3d8b57f49a50b86379d" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -574,7 +587,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="69" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="69" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="70" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a7cb65b93413dbf1fa09ea2bc13e562d4" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -587,7 +600,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="73" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="73" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="74" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a7a43d63293e98500c328940c0391fa26" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -600,7 +613,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="74" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="74" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="75" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ac678bf1039e1c7659b3d8af10154c81d" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -613,7 +626,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="75" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="75" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="76" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1aecb79425482d94611914ab868792ed1f" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -626,7 +639,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="76" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="76" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="77" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1aa7915fe33419f8086dd8de64def98e63" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -639,7 +652,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="77" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="77" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="78" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1acdb830df1c39b08c750383d047c85197" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -652,7 +665,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="78" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="78" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="79" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a62b303983daceb0507cb23319a0ae2cc" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -665,7 +678,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="79" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="79" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="80" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a4a3dac39816a04bb21ff3d941c02d7bf" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -678,7 +691,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="80" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="80" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="81" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a45031661384cfad1819805550e349d5f" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -691,7 +704,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="81" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="81" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="82" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a39210b2133a2a04725d22590b1c3b9c8" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -704,7 +717,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="82" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="82" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="83" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a1ada64c2cc0124f83f9112109c1bbd18" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -717,7 +730,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="83" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="83" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="84" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a087d2cc24cd71bc5a6cfb5422023da29" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classspecies" kindref="compound">species</ref> &gt;</type>
@@ -730,7 +743,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="84" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="84" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="85" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="85" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a6f1f2a3b4a7b5c7076cb8340554e284e" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classspecies" kindref="compound">species</ref> &gt;</type>
@@ -743,7 +756,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="85" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="85" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="86" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a4ea4eee3590804ec26c3a26aafbc9d5a" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref> &gt;</type>
@@ -756,7 +769,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="86" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="86" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="87" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a5851b57c3550a0866ceda16127c18936" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -769,7 +782,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="87" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="87" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="88" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a9979fde12566d25c6d169f24b6847254" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classreactions" kindref="compound">reactions</ref> &gt;</type>
@@ -782,7 +795,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="88" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="88" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="89" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1aaeeb35dde3deae54beaa553cb0a304f9" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classcatalysis" kindref="compound">catalysis</ref> &gt;</type>
@@ -795,7 +808,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="89" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="89" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="90" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a501d2ec289c2a4b626b2d8d428a4f567" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classspecies" kindref="compound">species</ref> &gt;</type>
@@ -808,7 +821,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="90" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="90" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="91" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ac0c529e3d3cfc89ab7f5c864ad7480bc" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classreactions" kindref="compound">reactions</ref> &gt;</type>
@@ -821,7 +834,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="91" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="91" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="92" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="92" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a850624b51b9cd99cc6f91daf44c09871" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classcatalysis" kindref="compound">catalysis</ref> &gt;</type>
@@ -834,7 +847,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="92" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="92" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="93" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a167ebf489bf4002ccb2f677afcf1110e" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classgillespie" kindref="compound">gillespie</ref> &gt;</type>
@@ -847,7 +860,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="93" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="93" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="94" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="94" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1aba29bc82de55164ab0458f69772bab18" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classgillespie" kindref="compound">gillespie</ref> &gt;</type>
@@ -860,7 +873,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="94" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="94" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="95" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1aa6c52cb7e7bd2786770ba8e7c1c57b49" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -873,7 +886,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="95" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="95" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="96" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ab100931f365a07fbe2504416e5000be1" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -886,7 +899,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="96" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="96" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="97" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a9a1ed7b9440b15456ed2346c3985369f" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref> &gt;</type>
@@ -899,7 +912,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="97" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="97" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="98" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="98" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1aeba1a5cacbf0dfb5fe03bcd3d2ebc51b" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -912,7 +925,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="98" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="98" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="99" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="99" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ac019eb665ccede1b0322d89b01d99182" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -925,7 +938,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="99" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="99" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="100" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a5081f77f88f64058218aa874f736e3aa" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref> &gt;</type>
@@ -938,7 +951,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="100" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="100" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="101" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a96160094a942499e47b39d5a49875176" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -951,7 +964,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="101" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="101" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="102" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="102" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a82b1d833a60ed9c69b76e6a1f8f005cd" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref> &gt;</type>
@@ -964,7 +977,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="102" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="102" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="103" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1af576c9a7449e3de16d8b26b7fb2a950e" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -977,7 +990,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="103" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="103" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="104" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ab7419b82964e9be43cd97184d62e1666" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref> &gt;</type>
@@ -990,7 +1003,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="104" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="104" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="105" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a6190125eed33157d188eb647f286728a" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -1003,7 +1016,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="105" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="105" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="106" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a3675827b6ec8885901004ac8bf61397e" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref> &gt;</type>
@@ -1016,7 +1029,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="106" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="106" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="107" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a735ebc2d26a5944bd41c12473ebb4a35" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -1029,7 +1042,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="107" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="107" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="108" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a5ad72aad8f1a3558365b96ff1e0090e2" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1042,7 +1055,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="110" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="110" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="111" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a90771fff4cdb0c1aadef204d509fc1c8" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1055,7 +1068,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="111" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="111" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="112" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ada0015e4b148b45227ffdcad63eaf389" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1068,7 +1081,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="112" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="112" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="113" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="113" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a973d3c945427e6d08521ae4ef4b19f33" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1081,7 +1094,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="113" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="113" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="114" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a5e0df47dc701f009dcc92bbe17bd299f" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1094,7 +1107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="116" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="116" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="117" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ae28e58ae543007a45edb275a615e7a26" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1107,7 +1120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="117" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="117" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="118" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="118" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ab6c610b2bd0b83c661782b8a7e8a2664" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1120,7 +1133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="118" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="118" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="119" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="119" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ad2b996f0c505798e68a769a9e70f9ef7" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1133,7 +1146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="119" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="119" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="120" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="120" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ae4d58a5b02d472e59f0da26d5a7e9ccb" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1146,7 +1159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="120" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="120" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="121" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ad9f0a98b3446a65dc19ecc8597b3c51c" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1159,7 +1172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="121" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="121" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="122" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="122" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a98f9d88a2571a97c4af17d4b533ea8b3" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1172,7 +1185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="122" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="122" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="123" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="123" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1ac900b3cdf833213a438245ca3dc2a684" prot="private" static="no" mutable="no">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1185,7 +1198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="123" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="123" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="124" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="124" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1af00dbd7d74da103460cca40a68965d61" prot="private" static="no" mutable="no">
         <type>clock_t</type>
@@ -1198,7 +1211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="124" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="124" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="125" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a863d1b31ca5e9dbe914129b2032c753d" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -1211,7 +1224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="125" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="125" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="126" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="126" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a71824d4ebf5f9b2279b4df3d444c018d" prot="private" static="no" mutable="no">
         <type>clock_t</type>
@@ -1224,7 +1237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="126" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="126" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="127" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="127" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a209d549c458453c406d6db7a3d6916ed" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -1237,7 +1250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="127" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="127" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="128" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a5323e5b2f846899b86ed66d2d56e363c" prot="private" static="no" mutable="no">
         <type>clock_t</type>
@@ -1250,7 +1263,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="128" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="128" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="129" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classenvironment_1a43728f22535ad50a45bda96a737c15d9" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt;</type>
@@ -1263,33 +1276,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="129" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="129" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="130" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="130" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classenvironment_1aaff2c2f57d25e0af6981a673e0b85045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>environment::environment</definition>
-        <argsstring>()</argsstring>
-        <name>environment</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Test environment costructor <simplesect kind="version"><para>2.4 </para></simplesect>
-<simplesect kind="date"><para>2010-06-27 </para></simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>tmpRndDoubleGen</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>randomGenerator reference </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="134" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="20" bodyend="66"/>
-      </memberdef>
       <memberdef kind="function" id="classenvironment_1aa44bbabec52bf2d61a19685a30e68de1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>environment::environment</definition>
@@ -1302,7 +1292,17 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Environment Constructor <simplesect kind="version"><para>1.0 </para></simplesect>
+<para>Test environment costructor <simplesect kind="version"><para>2.4 </para></simplesect>
+<simplesect kind="date"><para>2010-06-27 </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmpRndDoubleGen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>randomGenerator reference Environment Constructor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="version"><para>1.0 </para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tmpInitialPath</parametername>
@@ -1315,7 +1315,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="136" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="74" bodyend="182"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="136" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="75" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ae323954bd5b674bf34d954c3f7b67629" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -1746,6 +1746,19 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="172" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="172" bodyend="172"/>
       </memberdef>
+      <memberdef kind="function" id="classenvironment_1a883327bbb969164eb8b3c2d1c941ca03" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool environment::getSystemExpFlag</definition>
+        <argsstring>() const </argsstring>
+        <name>getSystemExpFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="173" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="173" bodyend="173"/>
+      </memberdef>
       <memberdef kind="function" id="classenvironment_1ab429d2057ee1092bf210c29e70153f75" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
         <definition>acs_double environment::getKdiss</definition>
@@ -1757,7 +1770,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="175" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="175" bodyend="175"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="176" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="176" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa862f1f98c6060747d6f1f30377671ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1770,7 +1783,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="176" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="176" bodyend="176"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="177" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="177" bodyend="177"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ac62c6b719db59d5829e3cc451b237f44" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1783,7 +1796,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="177" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="177" bodyend="177"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="178" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="178" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a9091c4a0fe31f6d5f5330e7ebff297a3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1796,7 +1809,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="178" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="178" bodyend="178"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="179" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="179" bodyend="179"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a7615c746521a592ff1ab2d0793b14d89" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1809,7 +1822,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="179" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="179" bodyend="179"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="180" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="180" bodyend="180"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a4c163b36e84cd8406aff4ab5d220a251" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1822,7 +1835,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="180" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="180" bodyend="180"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="181" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="181" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a771963196a27d3532cd7af4b98a5a9c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1835,7 +1848,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="182" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="182" bodyend="182"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="183" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="183" bodyend="183"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1abf3168adf05ff9fa6bab4e34b387f0a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1848,7 +1861,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="183" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="183" bodyend="183"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="184" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="184" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a7ac1b69dd38107d5c40339563969d09f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1861,7 +1874,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="184" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="184" bodyend="184"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="185" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="185" bodyend="185"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ae58bcd60ae01a8ba12f83c1328121c35" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1874,7 +1887,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="185" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="185" bodyend="185"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="186" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="186" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a4ed6ad35297e718398fb42a2b9dbe4ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1887,7 +1900,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="186" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="186" bodyend="186"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="187" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="187" bodyend="187"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a4c58b3ce555f04f009bcfb7bbc2b0000" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -1900,7 +1913,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="187" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="187" bodyend="187"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="188" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="188" bodyend="188"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a6df38337d38f2f714be7058a2a31202c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -1913,7 +1926,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="188" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="188" bodyend="188"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="189" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="189" bodyend="189"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a46193e153bd5dcc37fb35346cb7fd971" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1926,7 +1939,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="191" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="191" bodyend="191"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="192" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="192" bodyend="192"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a6f0b4481779cd12dbcd8155916c7d703" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1939,7 +1952,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="192" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="192" bodyend="192"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="193" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="193" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a469a7ce80a1e9e5fae77b46b66dfee18" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1952,7 +1965,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="193" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="193" bodyend="193"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="194" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="194" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1add8478cfc878c3aa5a57b2a71357a088" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -1965,7 +1978,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="194" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="194" bodyend="194"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="195" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="195" bodyend="195"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a355b53cbc86aaab2a6d114980162ac0e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1978,7 +1991,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="195" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="195" bodyend="195"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="196" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="196" bodyend="196"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ab6952f7f6fd971ece0a8661733cfc2b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -1991,7 +2004,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="196" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="196" bodyend="196"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="197" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="197" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1adb12eb52af74ea1fdfe0cd195109fe83" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>vector&lt; <ref refid="classspecies" kindref="compound">species</ref> &gt;</type>
@@ -2004,7 +2017,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="197" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="197" bodyend="197"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="198" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="198" bodyend="198"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a7a321296874fa1320da225cdbbf56a64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2025,7 +2038,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="198" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2912" bodyend="2929"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="199" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2914" bodyend="2931"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a57e7ac49955f4717096cb6696ee03a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2046,7 +2059,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="199" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2936" bodyend="2952"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="200" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2938" bodyend="2954"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a453d88017912e8b5973310ea2b044266" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2067,7 +2080,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="200" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2960" bodyend="2974"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="201" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2962" bodyend="2976"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ab564c7ddffd3dba896d5b049e1257793" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2088,7 +2101,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="201" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2981" bodyend="2995"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="202" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2983" bodyend="2997"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa8c94019533639038f99587fc2b029dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2109,7 +2122,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="202" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3002" bodyend="3017"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="203" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3004" bodyend="3019"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a3d44f3f4a8f9010fa99c49f5cc961416" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>vector&lt; <ref refid="classreactions" kindref="compound">reactions</ref> &gt;</type>
@@ -2122,7 +2135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="203" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="203" bodyend="203"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="204" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="204" bodyend="204"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a2de42381b0b9cba889bbb95c1456cfe5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -2135,7 +2148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="204" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="204" bodyend="204"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="205" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="205" bodyend="205"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ab98d4ad28b101f08279aa3458d5dfda3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2148,7 +2161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="205" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="205" bodyend="205"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="206" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="206" bodyend="206"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1abf45b6406f8c0e95c4c5edf6b374e112" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2161,7 +2174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="206" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="206" bodyend="206"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="207" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="207" bodyend="207"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a21609adb1a83a4cb7eaec78a90acd624" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2174,7 +2187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="207" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="207" bodyend="207"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="208" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="208" bodyend="208"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a79255c58733b08407dc81d89e306d74f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2187,7 +2200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="208" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="208" bodyend="208"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="209" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="209" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a3140242018e8232dfa89a127ac1bb282" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2200,7 +2213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="209" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="209" bodyend="209"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="210" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="210" bodyend="210"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a4fb98d7cad06ef479e2643785231feb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2215,7 +2228,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="210" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3451" bodyend="3484"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="211" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3453" bodyend="3486"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ac5528a39937cdc76f0dd23c27542110c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2230,7 +2243,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="211" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3492" bodyend="3531"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="212" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3494" bodyend="3533"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a8b9a3b5c5a2f86206c5fb124352e366e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2243,7 +2256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="212" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="212" bodyend="212"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="213" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="213" bodyend="213"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa2ded3c5ba8c4ce41ee86399dc616d4a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2256,7 +2269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="213" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="213" bodyend="213"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="214" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="214" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a0fc62131bf552c2a995c7ddc461828cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2269,7 +2282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="214" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="214" bodyend="214"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="215" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="215" bodyend="215"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aaa23d550cfa37344dd3bb4d5767e6ea0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2282,7 +2295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="215" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="215" bodyend="215"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="216" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="216" bodyend="216"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a75329459280bc79537a5c08883449a63" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2295,7 +2308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="216" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="216" bodyend="216"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="217" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="217" bodyend="217"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aadb5c442d5c9d16a0d6b2e90715dda94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -2308,7 +2321,7 @@
 <para>Get the total number of charged molecules </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="217" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3022" bodyend="3032"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="218" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3024" bodyend="3034"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1af959a6b6a72cb6226fef7f0e7fab5c0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2322,7 +2335,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="220" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5292" bodyend="5368"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="221" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5297" bodyend="5374"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a429c2529badaeda72e553f500b990e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2336,7 +2349,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="221" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5374" bodyend="5425"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="222" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5380" bodyend="5431"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a48d8fd9d8d5c9c31f0b4af87c8cbd28f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2350,7 +2363,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="222" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5431" bodyend="5445"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="223" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5437" bodyend="5451"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa3a18c59f6127c642603a98c1b3a2224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2364,7 +2377,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="223" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5451" bodyend="5469"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="224" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5457" bodyend="5475"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ad8fcefe5325382fb307627c7e8362ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2379,7 +2392,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="224" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3063" bodyend="3082"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="225" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3065" bodyend="3084"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1af579052ed051a2e3516218220d238303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2393,7 +2406,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="225" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5477" bodyend="5496"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="226" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5483" bodyend="5502"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aee77384e63261db28ef5677844bdbaf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2420,7 +2433,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="228" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="926" bodyend="993"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="229" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="928" bodyend="995"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a2f181e0d3ad1e8062ba0a8c9358ebc58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2447,7 +2460,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="229" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1287" bodyend="1315"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="230" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1289" bodyend="1317"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a29eeb7a1b4689c10fd872e82179b4d84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2474,7 +2487,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="230" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1371" bodyend="1398"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="231" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1373" bodyend="1400"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a902df40829dad9a885122082ec8fff7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2501,7 +2514,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="231" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1229" bodyend="1250"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="232" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1231" bodyend="1252"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1abe1a616460ea328067874df715679319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2528,7 +2541,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="232" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1258" bodyend="1279"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="233" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1260" bodyend="1281"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa70e1394bf2240f6e5f14d4cbf369a3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2580,7 +2593,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="234" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1140" bodyend="1221"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="235" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1142" bodyend="1223"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a743956229b11d7860dbc89a18f869586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2615,7 +2628,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="235" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1323" bodyend="1363"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="236" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1325" bodyend="1365"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a6dd31bae82367ebe7d6a6bb062b8cd07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2650,7 +2663,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="236" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1406" bodyend="1446"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="237" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1408" bodyend="1448"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a9ceec5e00b0f5a51dd125c583b8ac5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2664,7 +2677,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="241" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3088" bodyend="3110"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="242" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3090" bodyend="3112"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a0fd3cb062d35d2f6dd8961e95dd477b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -2719,7 +2732,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="242" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="466" bodyend="497"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="243" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="468" bodyend="499"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a53282cca8882e86652ab0a22e6966d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -2752,7 +2765,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="243" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="904" bodyend="918"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="244" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="906" bodyend="920"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a76794f37d6d94b7504c58f0f4a4709ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2823,7 +2836,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="244" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="510" bodyend="896"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="245" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="512" bodyend="898"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1af795a4d1f04dfbfcbdf321e20e74f9c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -2867,7 +2880,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="245" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1456" bodyend="1468"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="246" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1458" bodyend="1470"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a496ba50d3a345cd842ce42406946405c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2911,7 +2924,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="246" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1477" bodyend="1501"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="247" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1479" bodyend="1503"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a4e26cc574e20a5afcfbbe5887109c5af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2951,7 +2964,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="249" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1511" bodyend="1531"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="250" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1513" bodyend="1533"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a6feec5685b519ba0cdae0e5c59dffff0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -3010,7 +3023,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="250" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1541" bodyend="1566"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="251" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1543" bodyend="1568"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ac4c90b07b8e75ea03e2ced0ea644a69f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3047,7 +3060,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="251" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1574" bodyend="1595"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="252" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1576" bodyend="1597"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a2cb0152bf789918e7d92685f947ce48f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3129,7 +3142,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="252" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2165" bodyend="2779"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="253" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2167" bodyend="2781"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a1db4e67ba458a54f4fab3e10a203765c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3182,7 +3195,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="253" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3939" bodyend="4126"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="254" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3941" bodyend="4128"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa4b3e51bd7bbb2a287f0963e261cb79b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3219,7 +3232,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="254" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4933" bodyend="5153"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="255" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4935" bodyend="5158"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a866ffc56a30e1b2698158a5428a1de0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3308,7 +3321,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="255" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5167" bodyend="5249"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="256" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5172" bodyend="5254"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ae1270b9c235dd6b28413075197dba8e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -3355,7 +3368,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="256" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2786" bodyend="2804"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="257" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2788" bodyend="2806"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a30a0827eed2860d03d5fa5318fcf86b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3423,7 +3436,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="257" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2811" bodyend="2904"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="258" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2813" bodyend="2906"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a5c86f93c84f9931640843c38eccb9bf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3436,7 +3449,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="262" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="262" bodyend="262"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="263" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="263" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a69a926e0b9bb4f4b29876d0e45b54d84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3453,7 +3466,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="263" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="263" bodyend="263"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="264" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="264" bodyend="264"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ae356db3b6ee374b998e9f041216b4b75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3466,7 +3479,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="264" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="264" bodyend="264"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="265" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="265" bodyend="265"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1af042f7904c92fdd239995bebbab2cf60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3479,7 +3492,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="265" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="265" bodyend="265"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="266" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="266" bodyend="266"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a69ae530ef6f9298e3ab8304157709404" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3492,7 +3505,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="266" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="266" bodyend="266"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="267" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="267" bodyend="267"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aadd057e7038269e6fac314a12a3bf334" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3509,7 +3522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="267" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="267" bodyend="267"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="268" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="268" bodyend="268"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ab101d2158575829ddfe846087040f2fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3522,7 +3535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="268" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="268" bodyend="268"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="269" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="269" bodyend="269"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a756dc43b6b47498ba457613749324b15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3535,7 +3548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="269" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="269" bodyend="269"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="270" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="270" bodyend="270"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a1055886a34a9a01ec37db31c69e460e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3552,7 +3565,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="271" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="271" bodyend="271"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="272" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="272" bodyend="272"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a5fa52a4f8e73a71fa41d3a1641e50535" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3569,7 +3582,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="272" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="272" bodyend="272"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="273" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="273" bodyend="273"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a1addb84f0c8d391f97ad2347a64208bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3586,7 +3599,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="273" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="273" bodyend="273"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="274" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="274" bodyend="274"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ae9bbd78076706050ced4dd7fb99036f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3603,7 +3616,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="274" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="274" bodyend="274"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="275" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="275" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a10fad450cf5ef3a1c7cf75d616105069" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3620,7 +3633,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="276" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="276" bodyend="276"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="277" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="277" bodyend="277"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a16d09f818d3012f88e8e4c9a7759b6bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3637,7 +3650,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="277" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="277" bodyend="277"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="278" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="278" bodyend="278"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a094499a0f1bb3c2342a3b16944f5280d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3654,7 +3667,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="278" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="278" bodyend="278"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="279" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="279" bodyend="279"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a7ac85445b4710257723c581c35cc5ac8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3671,7 +3684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="279" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="279" bodyend="279"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="280" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="280" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1af21c066ce18c8a39740f66a995782fb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3688,7 +3701,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="281" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="281" bodyend="281"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="282" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="282" bodyend="282"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a480887ed06f63d34e014c19ea302d3d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3701,7 +3714,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="283" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="283" bodyend="283"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="284" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="284" bodyend="284"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ab0fc2cd6ed209d61286b837bd5460d90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3714,7 +3727,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="284" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="284" bodyend="284"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="285" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="285" bodyend="285"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a3fae8e57fad9ef5b182e32d9bb9989af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3727,7 +3740,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="285" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="285" bodyend="285"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="286" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="286" bodyend="286"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a01812d540519696ab07c9f822119cc64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3740,7 +3753,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="286" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="286" bodyend="286"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="287" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="287" bodyend="287"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a719b14624d9a2f891b8d4eb47649a00e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3753,7 +3766,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="287" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="287" bodyend="287"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="288" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="288" bodyend="288"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a6686b0489ed94f11c4b03c011978f9af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3766,7 +3779,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="288" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="288" bodyend="288"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="289" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="289" bodyend="289"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a0b1e324c651c86cb54279e022c14dc6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3779,7 +3792,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="290" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="290" bodyend="290"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="291" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="291" bodyend="291"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a3362d147de095640619d9b44f7f20bba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3792,7 +3805,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="291" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="291" bodyend="291"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="292" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="292" bodyend="292"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ac7deab8db2f581077da735c3542d8f1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3805,7 +3818,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="292" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="292" bodyend="292"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="293" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="293" bodyend="293"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a55cff0bc2f8de4d3e4db471cad580a86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3818,7 +3831,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="293" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="293" bodyend="293"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="294" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="294" bodyend="294"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1abc04de785dddab4703fdcf52ccdf85f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3831,7 +3844,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="294" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="294" bodyend="294"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="295" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="295" bodyend="295"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a5c8713237992b28c39199a7aea3f9ea0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3844,7 +3857,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="296" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="296" bodyend="297"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="297" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="297" bodyend="298"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a7981c34d16c0b1e9e6ca3ea69aa3a8a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3871,7 +3884,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="299" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3588" bodyend="3635"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="300" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3590" bodyend="3637"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa4830018af0b99eddefcdefad877b305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3898,7 +3911,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="300" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3540" bodyend="3579"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="301" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3542" bodyend="3581"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa860227725dbe5b0251a25f440773161" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3912,7 +3925,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="303" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5501" bodyend="5560"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="304" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5507" bodyend="5566"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a97305e36924f19e72bfc1c3d89e45931" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3926,7 +3939,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="305" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5566" bodyend="5654"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="306" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5572" bodyend="5660"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a7fc3937fb586db93c33f7f091dc99626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -3940,7 +3953,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="306" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5660" bodyend="5668"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="307" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5666" bodyend="5674"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a8a53821ad1675b0da50591616aac3b74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3989,7 +4002,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="309" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3121" bodyend="3203"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="310" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3123" bodyend="3205"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1acbbcdb4c77231e9ffa4c169e0caa0d0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4027,7 +4040,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="310" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3644" bodyend="3797"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="311" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3646" bodyend="3799"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1adbaf165a12edd62c614a455544807ea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4065,7 +4078,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="311" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3212" bodyend="3443"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="312" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3214" bodyend="3445"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a9bc445da3e89d09d4fce11c83f3dedb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4082,7 +4095,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="312" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="312" bodyend="312"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="313" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="313" bodyend="313"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1adab0607255ca5927b69cb6882917e031" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -4096,7 +4109,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="314" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5255" bodyend="5279"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="315" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5260" bodyend="5284"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aac3eed768b89e3a70017075b68046ede" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4109,7 +4122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="315" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="315" bodyend="315"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="316" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="316" bodyend="316"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a1baf5512b7e0a8fb6f8f890ba9f99cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4181,7 +4194,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="318" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4137" bodyend="4240"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="319" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4139" bodyend="4242"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa7a2cc95d8ba242c805a8fda063b23a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4278,7 +4291,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="320" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4254" bodyend="4377"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="321" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4256" bodyend="4379"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa4ed307a123c402166cfc7f6ed99043a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4360,7 +4373,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="322" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4390" bodyend="4479"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="323" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4392" bodyend="4481"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ade26b82a3b48a5bda7e5751cbfd31b04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4453,7 +4466,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="324" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4493" bodyend="4603"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="325" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4495" bodyend="4605"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ab50605f871505a3ab9215552cac90790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4502,7 +4515,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="326" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4614" bodyend="4688"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="327" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4616" bodyend="4690"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aa85e7ddc4de7bdfe70b3828a300edeb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4555,7 +4568,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="327" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4698" bodyend="4781"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="328" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4700" bodyend="4783"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a5c5e57b0558067cbf55c894f33d0a121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4601,7 +4614,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="328" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4791" bodyend="4872"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="329" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4793" bodyend="4874"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ad072a40a7d9521379c7ff50ed8110fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4639,7 +4652,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="329" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3807" bodyend="3878"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="330" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3809" bodyend="3880"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aff7607e0f3a74790109a7d87de3031bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4666,7 +4679,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="331" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3887" bodyend="3931"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="332" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3889" bodyend="3933"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a6606b08f25751a8796c13810962b385e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4681,7 +4694,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="334" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1641" bodyend="2069"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="335" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1643" bodyend="2071"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a5160dec152ed0369fe8af9aff3253a9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4707,7 +4720,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="335" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2075" bodyend="2120"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="336" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2077" bodyend="2122"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1abdafaeba15b5d32fd35569869c6244d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4729,7 +4742,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="336" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1602" bodyend="1632"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="337" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1604" bodyend="1634"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ad3ebcd7ab1c9ba1a0f65b264b97adf33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4789,7 +4802,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="337" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2132" bodyend="2152"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="338" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="2134" bodyend="2154"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a71f4c5ff1c11a9d61cbc818682a4a91e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4808,7 +4821,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="341" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5706" bodyend="5854"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="342" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5712" bodyend="5864"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a8f831e2db11fa5d840484345dac64fc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4835,7 +4848,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="342" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5862" bodyend="5892"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="343" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5872" bodyend="5902"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a1412b9b1c3bd3e42bcb481f5e18ea931" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4862,7 +4875,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="343" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5900" bodyend="5930"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="344" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5910" bodyend="5940"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a8699a0f85f5e8dc23eb8f78fa22c6b17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -4899,7 +4912,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="344" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5683" bodyend="5699"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="345" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5689" bodyend="5705"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a9daeb4f255100b8ad59de9ea80b19b5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4930,7 +4943,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="345" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5938" bodyend="5996"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="346" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="5948" bodyend="6006"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ad381c4ce24045d504539bb7c74800739" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4960,7 +4973,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="346" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6003" bodyend="6049"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="347" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6013" bodyend="6059"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a0a799b3a42bd90845a915298e184708c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4990,7 +5003,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="347" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6056" bodyend="6105"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="348" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6066" bodyend="6115"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a73e83c4fcfe612514714a6692270351e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -5021,7 +5034,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="348" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6113" bodyend="6192"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="349" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6123" bodyend="6202"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ad78fcf39a80e447a9aa2f84ab74335e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -5072,7 +5085,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="349" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6200" bodyend="6251"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="350" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6210" bodyend="6261"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a623c3cda23a18cb7b039c5a666408d72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -5103,7 +5116,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="351" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6259" bodyend="6312"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="352" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6269" bodyend="6322"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a26c70b0a84c37c87952628d4a328c238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -5130,7 +5143,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="352" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6320" bodyend="6378"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="353" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6330" bodyend="6388"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1aedf8d90e1fe734948bf2213489840582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -5157,7 +5170,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="353" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6386" bodyend="6442"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="354" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6396" bodyend="6452"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1ae7fd21d14f81c4854b3a6163b0278857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -5170,7 +5183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="358" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6448" bodyend="6464"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="359" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6458" bodyend="6474"/>
       </memberdef>
       <memberdef kind="function" id="classenvironment_1a4e9b60ec8b05e888cf0e55def03ee906" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -5183,7 +5196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="359" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6466" bodyend="6484"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="360" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6476" bodyend="6494"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -5196,7 +5209,7 @@ This class contains environmental proprieties and methods; within this class all
 <simplesect kind="version"><para>0.2 </para></simplesect>
 <simplesect kind="date"><para>2011-12-15 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="21" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="20" bodyend="361"/>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="21" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="20" bodyend="362"/>
     <listofallmembers>
       <member refid="classenvironment_1aa4e0aa113fbd1d3bf81fe7af4a925e3f" prot="private" virt="non-virtual"><scope>environment</scope><name>actualTime</name></member>
       <member refid="classenvironment_1a7981c34d16c0b1e9e6ca3ea69aa3a8a3" prot="public" virt="non-virtual"><scope>environment</scope><name>addChargeMolToList</name></member>
@@ -5258,7 +5271,6 @@ This class contains environmental proprieties and methods; within this class all
       <member refid="classenvironment_1ad46f3ea657f0d5ff5d88df9ea5de73de" prot="private" virt="non-virtual"><scope>environment</scope><name>endoCondensationCounter</name></member>
       <member refid="classenvironment_1a7cb65b93413dbf1fa09ea2bc13e562d4" prot="private" virt="non-virtual"><scope>environment</scope><name>energy</name></member>
       <member refid="classenvironment_1a4e9b60ec8b05e888cf0e55def03ee906" prot="public" virt="non-virtual"><scope>environment</scope><name>entropy</name></member>
-      <member refid="classenvironment_1aaff2c2f57d25e0af6981a673e0b85045" prot="public" virt="non-virtual"><scope>environment</scope><name>environment</name></member>
       <member refid="classenvironment_1aa44bbabec52bf2d61a19685a30e68de1" prot="public" virt="non-virtual"><scope>environment</scope><name>environment</name></member>
       <member refid="classenvironment_1a9e856eb47629490c0950e14b4d711b4f" prot="private" virt="non-virtual"><scope>environment</scope><name>fileTimesSaveInterval</name></member>
       <member refid="classenvironment_1a6f1f2a3b4a7b5c7076cb8340554e284e" prot="private" virt="non-virtual"><scope>environment</scope><name>firingDisk</name></member>
@@ -5324,6 +5336,7 @@ This class contains environmental proprieties and methods; within this class all
       <member refid="classenvironment_1a469a7ce80a1e9e5fae77b46b66dfee18" prot="public" virt="non-virtual"><scope>environment</scope><name>getRefillInterval</name></member>
       <member refid="classenvironment_1a2a2ac2a8140df67688a71d3349adf04a" prot="public" virt="non-virtual"><scope>environment</scope><name>getReverseReactions</name></member>
       <member refid="classenvironment_1a6df38337d38f2f714be7058a2a31202c" prot="public" virt="non-virtual"><scope>environment</scope><name>getSolubilityThreshold</name></member>
+      <member refid="classenvironment_1a883327bbb969164eb8b3c2d1c941ca03" prot="public" virt="non-virtual"><scope>environment</scope><name>getSystemExpFlag</name></member>
       <member refid="classenvironment_1a892dd7bd29342c4206c39556d91a83da" prot="public" virt="non-virtual"><scope>environment</scope><name>getTimeStructuresSavingInterval</name></member>
       <member refid="classenvironment_1ab564c7ddffd3dba896d5b049e1257793" prot="public" virt="non-virtual"><scope>environment</scope><name>getTotalNumberOfComplexes</name></member>
       <member refid="classenvironment_1a453d88017912e8b5973310ea2b044266" prot="public" virt="non-virtual"><scope>environment</scope><name>getTotalNumberOfComplexSpecies</name></member>
@@ -5372,6 +5385,7 @@ This class contains environmental proprieties and methods; within this class all
       <member refid="classenvironment_1a72fc96eddfe3e3d8b57f49a50b86379d" prot="private" virt="non-virtual"><scope>environment</scope><name>moleculeDecay_KineticConstant</name></member>
       <member refid="classenvironment_1a124800ce9984deaa05474e3b185e12d5" prot="private" virt="non-virtual"><scope>environment</scope><name>nAttempts</name></member>
       <member refid="classenvironment_1aa4b3e51bd7bbb2a287f0963e261cb79b" prot="public" virt="non-virtual"><scope>environment</scope><name>newSpeciesEvaluation</name></member>
+      <member refid="classenvironment_1aa3c81f7be35fb7ac15b93734a39c15dc" prot="private" virt="non-virtual"><scope>environment</scope><name>newSpeciesProbMinThreshold</name></member>
       <member refid="classenvironment_1aa92c1da72818aceb5d567746ea6421bd" prot="private" virt="non-virtual"><scope>environment</scope><name>nGEN</name></member>
       <member refid="classenvironment_1ad0c5436818c3a3cb45c02f63a1f81127" prot="private" virt="non-virtual"><scope>environment</scope><name>nHours</name></member>
       <member refid="classenvironment_1abaf3fae6060aacfa95a5881d6cef25fc" prot="private" virt="non-virtual"><scope>environment</scope><name>nonCatalyticMaxLength</name></member>

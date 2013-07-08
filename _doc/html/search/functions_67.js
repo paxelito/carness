@@ -105,6 +105,7 @@ var searchData=
   ['getspecies_5fii',['getSpecies_II',['../classreactions.html#ac0bdd6d9081645bf3a2c5531a71cbe40',1,'reactions']]],
   ['getspecies_5fiii',['getSpecies_III',['../classreactions.html#aaf426633019113ac4ae54cd5597920be',1,'reactions']]],
   ['getsubstrate_5fid',['getSubstrate_ID',['../classspecies.html#a3bc786de75d9c6235c75eeda10b01b8d',1,'species']]],
+  ['getsystemexpflag',['getSystemExpFlag',['../classenvironment.html#a883327bbb969164eb8b3c2d1c941ca03',1,'environment']]],
   ['gettimestructuressavinginterval',['getTimeStructuresSavingInterval',['../classenvironment.html#a892dd7bd29342c4206c39556d91a83da',1,'environment']]],
   ['gettotalnumberofcomplexes',['getTotalNumberOfComplexes',['../classenvironment.html#ab564c7ddffd3dba896d5b049e1257793',1,'environment']]],
   ['gettotalnumberofcomplexspecies',['getTotalNumberOfComplexSpecies',['../classenvironment.html#a453d88017912e8b5973310ea2b044266',1,'environment']]],

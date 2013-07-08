@@ -113,6 +113,13 @@
 <title>Environment</title>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
+<parametername>newSpeciesProbMinThreshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;=0) Minimal new species creation probability to allow system expansion </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
 <parametername>lastFiringDiskSpeciesID</parametername>
 </parameternamelist>
 <parameterdescription>

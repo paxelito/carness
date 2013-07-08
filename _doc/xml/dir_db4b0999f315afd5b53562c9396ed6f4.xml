@@ -4,6 +4,7 @@
     <compoundname>/Users/alessandrofilisetti/Documents/GIT/carness</compoundname>
     <innerdir refid="dir_66d19001354beca3375bfcfe54fec246">/Users/alessandrofilisetti/Documents/GIT/carness/_analysis</innerdir>
     <innerdir refid="dir_57b3bf84c49e6a30c9113636c121b1cc">/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator</innerdir>
+    <innerdir refid="dir_6edaaf4801aa0ea12467972748371704">/Users/alessandrofilisetti/Documents/GIT/carness/Debug</innerdir>
     <innerfile refid="acs__headers_8h">acs_headers.h</innerfile>
     <innerfile refid="catalysis_8cpp">catalysis.cpp</innerfile>
     <innerfile refid="catalysis_8h">catalysis.h</innerfile>

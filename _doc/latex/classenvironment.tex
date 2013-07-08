@@ -13,8 +13,6 @@ environment class
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classenvironment_aaff2c2f57d25e0af6981a673e0b85045}{environment} ()
-\item 
 \hyperlink{classenvironment_aa44bbabec52bf2d61a19685a30e68de1}{environment} (string tmp\-Initial\-Path)
 \item 
 \hyperlink{classenvironment_ae323954bd5b674bf34d954c3f7b67629}{$\sim$environment} ()
@@ -82,6 +80,8 @@ bool \hyperlink{classenvironment_a2a2ac2a8140df67688a71d3349adf04a}{get\-Reverse
 \hyperlink{acs__headers_8h_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{classenvironment_a98a4989029d77e99cf2ca9fb0eb1c2ab}{get\-Ratio\-Between\-New\-Gill\-Tot\-Gill} () const 
 \item 
 \hyperlink{acs__headers_8h_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{classenvironment_aa0e7940868932ac4b26fd61943952528}{get\-Ratio\-Between\-Backand\-Forw} () const 
+\item 
+bool \hyperlink{classenvironment_a883327bbb969164eb8b3c2d1c941ca03}{get\-System\-Exp\-Flag} () const 
 \item 
 \hyperlink{acs__headers_8h_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{classenvironment_ab429d2057ee1092bf210c29e70153f75}{get\-Kdiss} () const 
 \item 
@@ -385,13 +385,13 @@ Definition at line 20 of file environment.\-h.
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classenvironment_aaff2c2f57d25e0af6981a673e0b85045}{\index{environment@{environment}!environment@{environment}}
+\hypertarget{classenvironment_aa44bbabec52bf2d61a19685a30e68de1}{\index{environment@{environment}!environment@{environment}}
 \index{environment@{environment}!environment@{environment}}
 \subsubsection[{environment}]{\setlength{\rightskip}{0pt plus 5cm}environment\-::environment (
 \begin{DoxyParamCaption}
-{}
+\item[{string}]{tmp\-Initial\-Path}
 \end{DoxyParamCaption}
-)}}\label{classenvironment_aaff2c2f57d25e0af6981a673e0b85045}
+)}}\label{classenvironment_aa44bbabec52bf2d61a19685a30e68de1}
 Test environment costructor \begin{DoxyVersion}{Version}
 2.\-4 
 \end{DoxyVersion}
@@ -400,21 +400,10 @@ Test environment costructor \begin{DoxyVersion}{Version}
 \end{DoxyDate}
 
 \begin{DoxyParams}{Parameters}
-{\em tmp\-Rnd\-Double\-Gen} & random\-Generator reference \\
+{\em tmp\-Rnd\-Double\-Gen} & random\-Generator reference Environment Constructor \\
 \hline
 \end{DoxyParams}
-
-
-Definition at line 20 of file environment.\-cpp.
-
-\hypertarget{classenvironment_aa44bbabec52bf2d61a19685a30e68de1}{\index{environment@{environment}!environment@{environment}}
-\index{environment@{environment}!environment@{environment}}
-\subsubsection[{environment}]{\setlength{\rightskip}{0pt plus 5cm}environment\-::environment (
-\begin{DoxyParamCaption}
-\item[{string}]{tmp\-Initial\-Path}
-\end{DoxyParamCaption}
-)}}\label{classenvironment_aa44bbabec52bf2d61a19685a30e68de1}
-Environment Constructor \begin{DoxyVersion}{Version}
+\begin{DoxyVersion}{Version}
 1.\-0 
 \end{DoxyVersion}
 
@@ -427,7 +416,7 @@ Environment Constructor \begin{DoxyVersion}{Version}
 \end{DoxyDate}
 
 
-Definition at line 74 of file environment.\-cpp.
+Definition at line 75 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ae323954bd5b674bf34d954c3f7b67629}{\index{environment@{environment}!$\sim$environment@{$\sim$environment}}
 \index{$\sim$environment@{$\sim$environment}!environment@{environment}}
@@ -463,7 +452,7 @@ Perform vector uncharged\-I\-Dlist update adding a new charge molecule vector un
 \end{DoxyParams}
 
 
-Definition at line 3588 of file environment.\-cpp.
+Definition at line 3590 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ad3ebcd7ab1c9ba1a0f65b264b97adf33}{\index{environment@{environment}!check\-Availability@{check\-Availability}}
 \index{check\-Availability@{check\-Availability}!environment@{environment}}
@@ -494,7 +483,7 @@ Return T\-R\-U\-E if there are sufficient molecules for the reaction. It is used
 \end{DoxyParams}
 
 
-Definition at line 2132 of file environment.\-cpp.
+Definition at line 2134 of file environment.\-cpp.
 
 \hypertarget{classenvironment_abdafaeba15b5d32fd35569869c6244d5}{\index{environment@{environment}!check\-If\-Only\-Mutual\-Catalysis@{check\-If\-Only\-Mutual\-Catalysis}}
 \index{check\-If\-Only\-Mutual\-Catalysis@{check\-If\-Only\-Mutual\-Catalysis}!environment@{environment}}
@@ -509,7 +498,7 @@ This function return false if the tmp\-Candidate\-Product is a catalyst of tmp\-
 \end{DoxyVersion}
 
 
-Definition at line 1602 of file environment.\-cpp.
+Definition at line 1604 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ac4c90b07b8e75ea03e2ced0ea644a69f}{\index{environment@{environment}!check\-If\-The\-Reaction\-Is\-Already\-Catalyzed\-By\-This\-Species@{check\-If\-The\-Reaction\-Is\-Already\-Catalyzed\-By\-This\-Species}}
 \index{check\-If\-The\-Reaction\-Is\-Already\-Catalyzed\-By\-This\-Species@{check\-If\-The\-Reaction\-Is\-Already\-Catalyzed\-By\-This\-Species}!environment@{environment}}
@@ -531,7 +520,7 @@ If the reaction is not new this function checks if the reactions has been alread
 \end{DoxyParams}
 
 
-Definition at line 1574 of file environment.\-cpp.
+Definition at line 1576 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aa860227725dbe5b0251a25f440773161}{\index{environment@{environment}!clear\-All\-Structures@{clear\-All\-Structures}}
 \index{clear\-All\-Structures@{clear\-All\-Structures}!environment@{environment}}
@@ -545,7 +534,7 @@ Clear all structures after each simulation \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 5501 of file environment.\-cpp.
+Definition at line 5507 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a866ffc56a30e1b2698158a5428a1de0c}{\index{environment@{environment}!complex\-Evaluation@{complex\-Evaluation}}
 \index{complex\-Evaluation@{complex\-Evaluation}!environment@{environment}}
@@ -584,7 +573,7 @@ Evaluate new species \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 5167 of file environment.\-cpp.
+Definition at line 5172 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ae1270b9c235dd6b28413075197dba8e0}{\index{environment@{environment}!compute\-Singl\-Gil\-Score@{compute\-Singl\-Gil\-Score}}
 \index{compute\-Singl\-Gil\-Score@{compute\-Singl\-Gil\-Score}!environment@{environment}}
@@ -608,7 +597,7 @@ Compute a single gillespie score according to the amount and peoprieties of the 
 \end{DoxyDate}
 
 
-Definition at line 2786 of file environment.\-cpp.
+Definition at line 2788 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a0fd3cb062d35d2f6dd8961e95dd477b7}{\index{environment@{environment}!compute\-Sng\-Species\-Rcts\-Number@{compute\-Sng\-Species\-Rcts\-Number}}
 \index{compute\-Sng\-Species\-Rcts\-Number@{compute\-Sng\-Species\-Rcts\-Number}!environment@{environment}}
@@ -646,7 +635,7 @@ Initial molecule population creation. If the number of species stored in the con
 \end{DoxyParams}
 
 
-Definition at line 466 of file environment.\-cpp.
+Definition at line 468 of file environment.\-cpp.
 
 \hypertarget{classenvironment_af795a4d1f04dfbfcbdf321e20e74f9c2}{\index{environment@{environment}!create\-Diffusion\-Renforcement@{create\-Diffusion\-Renforcement}}
 \index{create\-Diffusion\-Renforcement@{create\-Diffusion\-Renforcement}!environment@{environment}}
@@ -670,7 +659,7 @@ Create the diffusion constant renforcement according to the species length \begi
 \end{DoxyParams}
 
 
-Definition at line 1456 of file environment.\-cpp.
+Definition at line 1458 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a902df40829dad9a885122082ec8fff7a}{\index{environment@{environment}!create\-Influx\-Layers\-From\-File\-S\-T\-D@{create\-Influx\-Layers\-From\-File\-S\-T\-D}}
 \index{create\-Influx\-Layers\-From\-File\-S\-T\-D@{create\-Influx\-Layers\-From\-File\-S\-T\-D}!environment@{environment}}
@@ -692,7 +681,7 @@ Create influx layer from file C++ libraries \begin{DoxyVersion}{Version}
 \end{DoxyDate}
 
 
-Definition at line 1229 of file environment.\-cpp.
+Definition at line 1231 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a29eeb7a1b4689c10fd872e82179b4d84}{\index{environment@{environment}!create\-Initial\-Catalysis\-Layer\-From\-File\-S\-T\-D@{create\-Initial\-Catalysis\-Layer\-From\-File\-S\-T\-D}}
 \index{create\-Initial\-Catalysis\-Layer\-From\-File\-S\-T\-D@{create\-Initial\-Catalysis\-Layer\-From\-File\-S\-T\-D}!environment@{environment}}
@@ -714,7 +703,7 @@ Catalysis from file using standard C++ libraries \begin{DoxyVersion}{Version}
 \end{DoxyDate}
 
 
-Definition at line 1371 of file environment.\-cpp.
+Definition at line 1373 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a6dd31bae82367ebe7d6a6bb062b8cd07}{\index{environment@{environment}!create\-Initial\-Catalysis\-Layer\-From\-Specific\-File\-S\-T\-D@{create\-Initial\-Catalysis\-Layer\-From\-Specific\-File\-S\-T\-D}}
 \index{create\-Initial\-Catalysis\-Layer\-From\-Specific\-File\-S\-T\-D@{create\-Initial\-Catalysis\-Layer\-From\-Specific\-File\-S\-T\-D}!environment@{environment}}
@@ -738,7 +727,7 @@ catalysis from file using standard C++ libraries \begin{DoxyVersion}{Version}
 \end{DoxyDate}
 
 
-Definition at line 1406 of file environment.\-cpp.
+Definition at line 1408 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aee77384e63261db28ef5677844bdbaf6}{\index{environment@{environment}!create\-Initial\-Molecules\-Population\-From\-File\-S\-T\-D@{create\-Initial\-Molecules\-Population\-From\-File\-S\-T\-D}}
 \index{create\-Initial\-Molecules\-Population\-From\-File\-S\-T\-D@{create\-Initial\-Molecules\-Population\-From\-File\-S\-T\-D}!environment@{environment}}
@@ -760,7 +749,7 @@ Initial molecule population creation from file using standard C++ libraries \beg
 \end{DoxyDate}
 
 
-Definition at line 926 of file environment.\-cpp.
+Definition at line 928 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aa70e1394bf2240f6e5f14d4cbf369a3b}{\index{environment@{environment}!create\-Initial\-Molecules\-Population\-From\-Specific\-File\-S\-T\-D@{create\-Initial\-Molecules\-Population\-From\-Specific\-File\-S\-T\-D}}
 \index{create\-Initial\-Molecules\-Population\-From\-Specific\-File\-S\-T\-D@{create\-Initial\-Molecules\-Population\-From\-Specific\-File\-S\-T\-D}!environment@{environment}}
@@ -797,7 +786,7 @@ Initial molecule population creation from file \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 1140 of file environment.\-cpp.
+Definition at line 1142 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a2f181e0d3ad1e8062ba0a8c9358ebc58}{\index{environment@{environment}!create\-Initial\-Reactions\-Layer\-From\-File\-S\-T\-D@{create\-Initial\-Reactions\-Layer\-From\-File\-S\-T\-D}}
 \index{create\-Initial\-Reactions\-Layer\-From\-File\-S\-T\-D@{create\-Initial\-Reactions\-Layer\-From\-File\-S\-T\-D}!environment@{environment}}
@@ -819,7 +808,7 @@ Reactions from file using standard C++ libraries \begin{DoxyVersion}{Version}
 \end{DoxyDate}
 
 
-Definition at line 1287 of file environment.\-cpp.
+Definition at line 1289 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a743956229b11d7860dbc89a18f869586}{\index{environment@{environment}!create\-Initial\-Reactions\-Layer\-From\-Specific\-File\-S\-T\-D@{create\-Initial\-Reactions\-Layer\-From\-Specific\-File\-S\-T\-D}}
 \index{create\-Initial\-Reactions\-Layer\-From\-Specific\-File\-S\-T\-D@{create\-Initial\-Reactions\-Layer\-From\-Specific\-File\-S\-T\-D}!environment@{environment}}
@@ -843,7 +832,7 @@ Reactions from file using standard C++ libraries \begin{DoxyVersion}{Version}
 \end{DoxyDate}
 
 
-Definition at line 1323 of file environment.\-cpp.
+Definition at line 1325 of file environment.\-cpp.
 
 \hypertarget{classenvironment_abe1a616460ea328067874df715679319}{\index{environment@{environment}!create\-Nrg\-Boolean\-Functions\-From\-File\-S\-T\-D@{create\-Nrg\-Boolean\-Functions\-From\-File\-S\-T\-D}}
 \index{create\-Nrg\-Boolean\-Functions\-From\-File\-S\-T\-D@{create\-Nrg\-Boolean\-Functions\-From\-File\-S\-T\-D}!environment@{environment}}
@@ -865,7 +854,7 @@ load energy boolean function (in decimal format) -\/ Standard C++ \begin{DoxyVer
 \end{DoxyDate}
 
 
-Definition at line 1258 of file environment.\-cpp.
+Definition at line 1260 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a76794f37d6d94b7504c58f0f4a4709ca}{\index{environment@{environment}!create\-Reactions\-For\-This\-Species@{create\-Reactions\-For\-This\-Species}}
 \index{create\-Reactions\-For\-This\-Species@{create\-Reactions\-For\-This\-Species}!environment@{environment}}
@@ -899,7 +888,7 @@ Creation of all the reactions related to one specific species \begin{DoxyVersion
 \end{DoxyParams}
 
 
-Definition at line 510 of file environment.\-cpp.
+Definition at line 512 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a16d09f818d3012f88e8e4c9a7759b6bd}{\index{environment@{environment}!dec\-Cpx\-Procedure@{dec\-Cpx\-Procedure}}
 \index{dec\-Cpx\-Procedure@{dec\-Cpx\-Procedure}!environment@{environment}}
@@ -910,7 +899,7 @@ Definition at line 510 of file environment.\-cpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a16d09f818d3012f88e8e4c9a7759b6bd}
 
 
-Definition at line 277 of file environment.\-h.
+Definition at line 278 of file environment.\-h.
 
 \hypertarget{classenvironment_a10fad450cf5ef3a1c7cf75d616105069}{\index{environment@{environment}!dec\-Mol\-Species\-Procedure@{dec\-Mol\-Species\-Procedure}}
 \index{dec\-Mol\-Species\-Procedure@{dec\-Mol\-Species\-Procedure}!environment@{environment}}
@@ -921,7 +910,7 @@ Definition at line 277 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a10fad450cf5ef3a1c7cf75d616105069}
 
 
-Definition at line 276 of file environment.\-h.
+Definition at line 277 of file environment.\-h.
 
 \hypertarget{classenvironment_aadd057e7038269e6fac314a12a3bf334}{\index{environment@{environment}!dec\-Number\-Of\-Cpx@{dec\-Number\-Of\-Cpx}}
 \index{dec\-Number\-Of\-Cpx@{dec\-Number\-Of\-Cpx}!environment@{environment}}
@@ -932,7 +921,7 @@ Definition at line 276 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_aadd057e7038269e6fac314a12a3bf334}
 
 
-Definition at line 267 of file environment.\-h.
+Definition at line 268 of file environment.\-h.
 
 \hypertarget{classenvironment_a756dc43b6b47498ba457613749324b15}{\index{environment@{environment}!dec\-Number\-Of\-Cpx\-Mols@{dec\-Number\-Of\-Cpx\-Mols}}
 \index{dec\-Number\-Of\-Cpx\-Mols@{dec\-Number\-Of\-Cpx\-Mols}!environment@{environment}}
@@ -943,7 +932,7 @@ Definition at line 267 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a756dc43b6b47498ba457613749324b15}
 
 
-Definition at line 269 of file environment.\-h.
+Definition at line 270 of file environment.\-h.
 
 \hypertarget{classenvironment_af042f7904c92fdd239995bebbab2cf60}{\index{environment@{environment}!dec\-Number\-Of\-Mols@{dec\-Number\-Of\-Mols}}
 \index{dec\-Number\-Of\-Mols@{dec\-Number\-Of\-Mols}!environment@{environment}}
@@ -954,7 +943,7 @@ Definition at line 269 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_af042f7904c92fdd239995bebbab2cf60}
 
 
-Definition at line 265 of file environment.\-h.
+Definition at line 266 of file environment.\-h.
 
 \hypertarget{classenvironment_ae9bbd78076706050ced4dd7fb99036f1}{\index{environment@{environment}!dec\-Number\-Of\-New\-Mols@{dec\-Number\-Of\-New\-Mols}}
 \index{dec\-Number\-Of\-New\-Mols@{dec\-Number\-Of\-New\-Mols}!environment@{environment}}
@@ -965,7 +954,7 @@ Definition at line 265 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_ae9bbd78076706050ced4dd7fb99036f1}
 
 
-Definition at line 274 of file environment.\-h.
+Definition at line 275 of file environment.\-h.
 
 \hypertarget{classenvironment_a5fa52a4f8e73a71fa41d3a1641e50535}{\index{environment@{environment}!dec\-Number\-Of\-New\-Species@{dec\-Number\-Of\-New\-Species}}
 \index{dec\-Number\-Of\-New\-Species@{dec\-Number\-Of\-New\-Species}!environment@{environment}}
@@ -976,7 +965,7 @@ Definition at line 274 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a5fa52a4f8e73a71fa41d3a1641e50535}
 
 
-Definition at line 272 of file environment.\-h.
+Definition at line 273 of file environment.\-h.
 
 \hypertarget{classenvironment_a69a926e0b9bb4f4b29876d0e45b54d84}{\index{environment@{environment}!dec\-Number\-Of\-Species@{dec\-Number\-Of\-Species}}
 \index{dec\-Number\-Of\-Species@{dec\-Number\-Of\-Species}!environment@{environment}}
@@ -987,7 +976,7 @@ Definition at line 272 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a69a926e0b9bb4f4b29876d0e45b54d84}
 
 
-Definition at line 263 of file environment.\-h.
+Definition at line 264 of file environment.\-h.
 
 \hypertarget{classenvironment_a6686b0489ed94f11c4b03c011978f9af}{\index{environment@{environment}!dec\-Overall\-Loaded\-Mols\-Counter@{dec\-Overall\-Loaded\-Mols\-Counter}}
 \index{dec\-Overall\-Loaded\-Mols\-Counter@{dec\-Overall\-Loaded\-Mols\-Counter}!environment@{environment}}
@@ -998,7 +987,7 @@ Definition at line 263 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a6686b0489ed94f11c4b03c011978f9af}
 
 
-Definition at line 288 of file environment.\-h.
+Definition at line 289 of file environment.\-h.
 
 \hypertarget{classenvironment_ae7fd21d14f81c4854b3a6163b0278857}{\index{environment@{environment}!dev\-Std@{dev\-Std}}
 \index{dev\-Std@{dev\-Std}!environment@{environment}}
@@ -1009,7 +998,7 @@ Definition at line 288 of file environment.\-h.
 )}}\label{classenvironment_ae7fd21d14f81c4854b3a6163b0278857}
 
 
-Definition at line 6448 of file environment.\-cpp.
+Definition at line 6458 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a4e9b60ec8b05e888cf0e55def03ee906}{\index{environment@{environment}!entropy@{entropy}}
 \index{entropy@{entropy}!environment@{environment}}
@@ -1020,7 +1009,7 @@ Definition at line 6448 of file environment.\-cpp.
 )}}\label{classenvironment_a4e9b60ec8b05e888cf0e55def03ee906}
 
 
-Definition at line 6466 of file environment.\-cpp.
+Definition at line 6476 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a14bad649a73246617361f0e1765f49f8}{\index{environment@{environment}!get\-Actual\-Time@{get\-Actual\-Time}}
 \index{get\-Actual\-Time@{get\-Actual\-Time}!environment@{environment}}
@@ -1053,7 +1042,7 @@ Definition at line 159 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_add8478cfc878c3aa5a57b2a71357a088}
 
 
-Definition at line 194 of file environment.\-h.
+Definition at line 195 of file environment.\-h.
 
 \hypertarget{classenvironment_a02346c5d824e83e0a76dd01f4672ad8b}{\index{environment@{environment}!get\-A\-T\-P@{get\-A\-T\-P}}
 \index{get\-A\-T\-P@{get\-A\-T\-P}!environment@{environment}}
@@ -1075,7 +1064,7 @@ Definition at line 160 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a8b9a3b5c5a2f86206c5fb124352e366e}
 
 
-Definition at line 212 of file environment.\-h.
+Definition at line 213 of file environment.\-h.
 
 \hypertarget{classenvironment_a771963196a27d3532cd7af4b98a5a9c5}{\index{environment@{environment}!get\-Cleavage\-K\-C@{get\-Cleavage\-K\-C}}
 \index{get\-Cleavage\-K\-C@{get\-Cleavage\-K\-C}!environment@{environment}}
@@ -1086,7 +1075,7 @@ Definition at line 212 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a771963196a27d3532cd7af4b98a5a9c5}
 
 
-Definition at line 182 of file environment.\-h.
+Definition at line 183 of file environment.\-h.
 
 \hypertarget{classenvironment_ac728f6ab012c42fa85a2e2f70df7dc58}{\index{environment@{environment}!get\-Cleav\-Prob@{get\-Cleav\-Prob}}
 \index{get\-Cleav\-Prob@{get\-Cleav\-Prob}!environment@{environment}}
@@ -1108,7 +1097,7 @@ Definition at line 155 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_ae58bcd60ae01a8ba12f83c1328121c35}
 
 
-Definition at line 185 of file environment.\-h.
+Definition at line 186 of file environment.\-h.
 
 \hypertarget{classenvironment_a609a22828e5f92d74d31793b907621ad}{\index{environment@{environment}!get\-Complex\-Formation\-Symmetry@{get\-Complex\-Formation\-Symmetry}}
 \index{get\-Complex\-Formation\-Symmetry@{get\-Complex\-Formation\-Symmetry}!environment@{environment}}
@@ -1130,7 +1119,7 @@ Definition at line 152 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_abf3168adf05ff9fa6bab4e34b387f0a6}
 
 
-Definition at line 183 of file environment.\-h.
+Definition at line 184 of file environment.\-h.
 
 \hypertarget{classenvironment_a0fc62131bf552c2a995c7ddc461828cd}{\index{environment@{environment}!get\-Condensation\-Counter@{get\-Condensation\-Counter}}
 \index{get\-Condensation\-Counter@{get\-Condensation\-Counter}!environment@{environment}}
@@ -1141,7 +1130,7 @@ Definition at line 183 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a0fc62131bf552c2a995c7ddc461828cd}
 
 
-Definition at line 214 of file environment.\-h.
+Definition at line 215 of file environment.\-h.
 
 \hypertarget{classenvironment_a7ac1b69dd38107d5c40339563969d09f}{\index{environment@{environment}!get\-Condensation\-K\-C@{get\-Condensation\-K\-C}}
 \index{get\-Condensation\-K\-C@{get\-Condensation\-K\-C}!environment@{environment}}
@@ -1152,7 +1141,7 @@ Definition at line 214 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a7ac1b69dd38107d5c40339563969d09f}
 
 
-Definition at line 184 of file environment.\-h.
+Definition at line 185 of file environment.\-h.
 
 \hypertarget{classenvironment_a0851e3481e6fec7f4feef126d5a6704c}{\index{environment@{environment}!get\-Current\-Attempts@{get\-Current\-Attempts}}
 \index{get\-Current\-Attempts@{get\-Current\-Attempts}!environment@{environment}}
@@ -1174,7 +1163,7 @@ Definition at line 147 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a2de42381b0b9cba889bbb95c1456cfe5}
 
 
-Definition at line 204 of file environment.\-h.
+Definition at line 205 of file environment.\-h.
 
 \hypertarget{classenvironment_a46193e153bd5dcc37fb35346cb7fd971}{\index{environment@{environment}!get\-Diffusion\-Contribute@{get\-Diffusion\-Contribute}}
 \index{get\-Diffusion\-Contribute@{get\-Diffusion\-Contribute}!environment@{environment}}
@@ -1185,7 +1174,7 @@ Definition at line 204 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a46193e153bd5dcc37fb35346cb7fd971}
 
 
-Definition at line 191 of file environment.\-h.
+Definition at line 192 of file environment.\-h.
 
 \hypertarget{classenvironment_aa2ded3c5ba8c4ce41ee86399dc616d4a}{\index{environment@{environment}!get\-Endo\-Cleavage\-Counter@{get\-Endo\-Cleavage\-Counter}}
 \index{get\-Endo\-Cleavage\-Counter@{get\-Endo\-Cleavage\-Counter}!environment@{environment}}
@@ -1196,7 +1185,7 @@ Definition at line 191 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_aa2ded3c5ba8c4ce41ee86399dc616d4a}
 
 
-Definition at line 213 of file environment.\-h.
+Definition at line 214 of file environment.\-h.
 
 \hypertarget{classenvironment_aaa23d550cfa37344dd3bb4d5767e6ea0}{\index{environment@{environment}!get\-Endo\-Condensation\-Counter@{get\-Endo\-Condensation\-Counter}}
 \index{get\-Endo\-Condensation\-Counter@{get\-Endo\-Condensation\-Counter}!environment@{environment}}
@@ -1207,7 +1196,7 @@ Definition at line 213 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_aaa23d550cfa37344dd3bb4d5767e6ea0}
 
 
-Definition at line 215 of file environment.\-h.
+Definition at line 216 of file environment.\-h.
 
 \hypertarget{classenvironment_ab463a460de102c79c1044ab8a2c176ae}{\index{environment@{environment}!get\-Energy@{get\-Energy}}
 \index{get\-Energy@{get\-Energy}!environment@{environment}}
@@ -1273,7 +1262,7 @@ Definition at line 169 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a6f0b4481779cd12dbcd8155916c7d703}
 
 
-Definition at line 192 of file environment.\-h.
+Definition at line 193 of file environment.\-h.
 
 \hypertarget{classenvironment_aa862f1f98c6060747d6f1f30377671ff}{\index{environment@{environment}!get\-Kass@{get\-Kass}}
 \index{get\-Kass@{get\-Kass}!environment@{environment}}
@@ -1284,7 +1273,7 @@ Definition at line 192 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_aa862f1f98c6060747d6f1f30377671ff}
 
 
-Definition at line 176 of file environment.\-h.
+Definition at line 177 of file environment.\-h.
 
 \hypertarget{classenvironment_ac62c6b719db59d5829e3cc451b237f44}{\index{environment@{environment}!get\-Kcpx@{get\-Kcpx}}
 \index{get\-Kcpx@{get\-Kcpx}!environment@{environment}}
@@ -1295,7 +1284,7 @@ Definition at line 176 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_ac62c6b719db59d5829e3cc451b237f44}
 
 
-Definition at line 177 of file environment.\-h.
+Definition at line 178 of file environment.\-h.
 
 \hypertarget{classenvironment_a9091c4a0fe31f6d5f5330e7ebff297a3}{\index{environment@{environment}!get\-Kcpx\-Diss@{get\-Kcpx\-Diss}}
 \index{get\-Kcpx\-Diss@{get\-Kcpx\-Diss}!environment@{environment}}
@@ -1306,7 +1295,7 @@ Definition at line 177 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a9091c4a0fe31f6d5f5330e7ebff297a3}
 
 
-Definition at line 178 of file environment.\-h.
+Definition at line 179 of file environment.\-h.
 
 \hypertarget{classenvironment_ab429d2057ee1092bf210c29e70153f75}{\index{environment@{environment}!get\-Kdiss@{get\-Kdiss}}
 \index{get\-Kdiss@{get\-Kdiss}!environment@{environment}}
@@ -1317,7 +1306,7 @@ Definition at line 178 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_ab429d2057ee1092bf210c29e70153f75}
 
 
-Definition at line 175 of file environment.\-h.
+Definition at line 176 of file environment.\-h.
 
 \hypertarget{classenvironment_a4c163b36e84cd8406aff4ab5d220a251}{\index{environment@{environment}!get\-Kirrad@{get\-Kirrad}}
 \index{get\-Kirrad@{get\-Kirrad}!environment@{environment}}
@@ -1328,7 +1317,7 @@ Definition at line 175 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a4c163b36e84cd8406aff4ab5d220a251}
 
 
-Definition at line 180 of file environment.\-h.
+Definition at line 181 of file environment.\-h.
 
 \hypertarget{classenvironment_a7615c746521a592ff1ab2d0793b14d89}{\index{environment@{environment}!get\-Knrg@{get\-Knrg}}
 \index{get\-Knrg@{get\-Knrg}!environment@{environment}}
@@ -1339,7 +1328,7 @@ Definition at line 180 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a7615c746521a592ff1ab2d0793b14d89}
 
 
-Definition at line 179 of file environment.\-h.
+Definition at line 180 of file environment.\-h.
 
 \hypertarget{classenvironment_a984f79e5f89b774b65db901899687ac0}{\index{environment@{environment}!get\-Last\-Firing\-Disk\-Species\-I\-D@{get\-Last\-Firing\-Disk\-Species\-I\-D}}
 \index{get\-Last\-Firing\-Disk\-Species\-I\-D@{get\-Last\-Firing\-Disk\-Species\-I\-D}!environment@{environment}}
@@ -1383,7 +1372,7 @@ Definition at line 145 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a4c58b3ce555f04f009bcfb7bbc2b0000}
 
 
-Definition at line 187 of file environment.\-h.
+Definition at line 188 of file environment.\-h.
 
 \hypertarget{classenvironment_aca760caf9354f541020c1db58490b18f}{\index{environment@{environment}!get\-Max\-Non\-Catalytic\-Length@{get\-Max\-Non\-Catalytic\-Length}}
 \index{get\-Max\-Non\-Catalytic\-Length@{get\-Max\-Non\-Catalytic\-Length}!environment@{environment}}
@@ -1405,7 +1394,7 @@ Definition at line 153 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a4ed6ad35297e718398fb42a2b9dbe4ae}
 
 
-Definition at line 186 of file environment.\-h.
+Definition at line 187 of file environment.\-h.
 
 \hypertarget{classenvironment_adb12eb52af74ea1fdfe0cd195109fe83}{\index{environment@{environment}!get\-Molecules\-Population@{get\-Molecules\-Population}}
 \index{get\-Molecules\-Population@{get\-Molecules\-Population}!environment@{environment}}
@@ -1416,7 +1405,7 @@ Definition at line 186 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_adb12eb52af74ea1fdfe0cd195109fe83}
 
 
-Definition at line 197 of file environment.\-h.
+Definition at line 198 of file environment.\-h.
 
 \hypertarget{classenvironment_a5a2ee72147144e7a04f4b363f1cc0914}{\index{environment@{environment}!get\-Mols@{get\-Mols}}
 \index{get\-Mols@{get\-Mols}!environment@{environment}}
@@ -1537,7 +1526,7 @@ Definition at line 163 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a21609adb1a83a4cb7eaec78a90acd624}
 
 
-Definition at line 207 of file environment.\-h.
+Definition at line 208 of file environment.\-h.
 
 \hypertarget{classenvironment_a79255c58733b08407dc81d89e306d74f}{\index{environment@{environment}!get\-Number\-Of\-Gillespie\-C\-O\-P\-Ypossible\-Rcts@{get\-Number\-Of\-Gillespie\-C\-O\-P\-Ypossible\-Rcts}}
 \index{get\-Number\-Of\-Gillespie\-C\-O\-P\-Ypossible\-Rcts@{get\-Number\-Of\-Gillespie\-C\-O\-P\-Ypossible\-Rcts}!environment@{environment}}
@@ -1548,7 +1537,7 @@ Definition at line 207 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a79255c58733b08407dc81d89e306d74f}
 
 
-Definition at line 208 of file environment.\-h.
+Definition at line 209 of file environment.\-h.
 
 \hypertarget{classenvironment_a3140242018e8232dfa89a127ac1bb282}{\index{environment@{environment}!get\-Number\-Of\-Gillespie\-Possible\-Rcts@{get\-Number\-Of\-Gillespie\-Possible\-Rcts}}
 \index{get\-Number\-Of\-Gillespie\-Possible\-Rcts@{get\-Number\-Of\-Gillespie\-Possible\-Rcts}!environment@{environment}}
@@ -1559,7 +1548,7 @@ Definition at line 208 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a3140242018e8232dfa89a127ac1bb282}
 
 
-Definition at line 209 of file environment.\-h.
+Definition at line 210 of file environment.\-h.
 
 \hypertarget{classenvironment_abf45b6406f8c0e95c4c5edf6b374e112}{\index{environment@{environment}!get\-Number\-Of\-Reactions@{get\-Number\-Of\-Reactions}}
 \index{get\-Number\-Of\-Reactions@{get\-Number\-Of\-Reactions}!environment@{environment}}
@@ -1570,7 +1559,7 @@ Definition at line 209 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_abf45b6406f8c0e95c4c5edf6b374e112}
 
 
-Definition at line 206 of file environment.\-h.
+Definition at line 207 of file environment.\-h.
 
 \hypertarget{classenvironment_ab98d4ad28b101f08279aa3458d5dfda3}{\index{environment@{environment}!get\-Number\-Of\-Theoretical\-Species@{get\-Number\-Of\-Theoretical\-Species}}
 \index{get\-Number\-Of\-Theoretical\-Species@{get\-Number\-Of\-Theoretical\-Species}!environment@{environment}}
@@ -1581,7 +1570,7 @@ Definition at line 206 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_ab98d4ad28b101f08279aa3458d5dfda3}
 
 
-Definition at line 205 of file environment.\-h.
+Definition at line 206 of file environment.\-h.
 
 \hypertarget{classenvironment_a8bea373c48982a78ee46c5c5fafcb81c}{\index{environment@{environment}!get\-Overall\-Concentration@{get\-Overall\-Concentration}}
 \index{get\-Overall\-Concentration@{get\-Overall\-Concentration}!environment@{environment}}
@@ -1603,7 +1592,7 @@ Definition at line 151 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a75329459280bc79537a5c08883449a63}
 
 
-Definition at line 216 of file environment.\-h.
+Definition at line 217 of file environment.\-h.
 
 \hypertarget{classenvironment_ab6952f7f6fd971ece0a8661733cfc2b3}{\index{environment@{environment}!get\-Random\-Seed@{get\-Random\-Seed}}
 \index{get\-Random\-Seed@{get\-Random\-Seed}!environment@{environment}}
@@ -1614,7 +1603,7 @@ Definition at line 216 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_ab6952f7f6fd971ece0a8661733cfc2b3}
 
 
-Definition at line 196 of file environment.\-h.
+Definition at line 197 of file environment.\-h.
 
 \hypertarget{classenvironment_aa0e7940868932ac4b26fd61943952528}{\index{environment@{environment}!get\-Ratio\-Between\-Backand\-Forw@{get\-Ratio\-Between\-Backand\-Forw}}
 \index{get\-Ratio\-Between\-Backand\-Forw@{get\-Ratio\-Between\-Backand\-Forw}!environment@{environment}}
@@ -1669,7 +1658,7 @@ Definition at line 154 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a3d44f3f4a8f9010fa99c49f5cc961416}
 
 
-Definition at line 203 of file environment.\-h.
+Definition at line 204 of file environment.\-h.
 
 \hypertarget{classenvironment_a469a7ce80a1e9e5fae77b46b66dfee18}{\index{environment@{environment}!get\-Refill\-Interval@{get\-Refill\-Interval}}
 \index{get\-Refill\-Interval@{get\-Refill\-Interval}!environment@{environment}}
@@ -1680,7 +1669,7 @@ Definition at line 203 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a469a7ce80a1e9e5fae77b46b66dfee18}
 
 
-Definition at line 193 of file environment.\-h.
+Definition at line 194 of file environment.\-h.
 
 \hypertarget{classenvironment_a2a2ac2a8140df67688a71d3349adf04a}{\index{environment@{environment}!get\-Reverse\-Reactions@{get\-Reverse\-Reactions}}
 \index{get\-Reverse\-Reactions@{get\-Reverse\-Reactions}!environment@{environment}}
@@ -1702,7 +1691,18 @@ Definition at line 156 of file environment.\-h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a6df38337d38f2f714be7058a2a31202c}
 
 
-Definition at line 188 of file environment.\-h.
+Definition at line 189 of file environment.\-h.
+
+\hypertarget{classenvironment_a883327bbb969164eb8b3c2d1c941ca03}{\index{environment@{environment}!get\-System\-Exp\-Flag@{get\-System\-Exp\-Flag}}
+\index{get\-System\-Exp\-Flag@{get\-System\-Exp\-Flag}!environment@{environment}}
+\subsubsection[{get\-System\-Exp\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::get\-System\-Exp\-Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a883327bbb969164eb8b3c2d1c941ca03}
+
+
+Definition at line 173 of file environment.\-h.
 
 \hypertarget{classenvironment_a892dd7bd29342c4206c39556d91a83da}{\index{environment@{environment}!get\-Time\-Structures\-Saving\-Interval@{get\-Time\-Structures\-Saving\-Interval}}
 \index{get\-Time\-Structures\-Saving\-Interval@{get\-Time\-Structures\-Saving\-Interval}!environment@{environment}}
@@ -1729,7 +1729,7 @@ This Function returns the total amount of M\-O\-L\-E\-C\-U\-L\-E\-S in the tmp\-
 \end{DoxyParams}
 
 
-Definition at line 2981 of file environment.\-cpp.
+Definition at line 2983 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a453d88017912e8b5973310ea2b044266}{\index{environment@{environment}!get\-Total\-Number\-Of\-Complex\-Species@{get\-Total\-Number\-Of\-Complex\-Species}}
 \index{get\-Total\-Number\-Of\-Complex\-Species@{get\-Total\-Number\-Of\-Complex\-Species}!environment@{environment}}
@@ -1745,7 +1745,7 @@ This Function returns the total amount of C\-O\-M\-P\-L\-E\-X S\-P\-E\-C\-I\-E\-
 \end{DoxyParams}
 
 
-Definition at line 2960 of file environment.\-cpp.
+Definition at line 2962 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a57e7ac49955f4717096cb6696ee03a61}{\index{environment@{environment}!get\-Total\-Number\-Of\-Molecules@{get\-Total\-Number\-Of\-Molecules}}
 \index{get\-Total\-Number\-Of\-Molecules@{get\-Total\-Number\-Of\-Molecules}!environment@{environment}}
@@ -1761,7 +1761,7 @@ This Function returns the total amount of M\-O\-L\-E\-C\-U\-L\-E\-S in the tmp\-
 \end{DoxyParams}
 
 
-Definition at line 2936 of file environment.\-cpp.
+Definition at line 2938 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aa8c94019533639038f99587fc2b029dc}{\index{environment@{environment}!get\-Total\-Number\-Of\-Monomers@{get\-Total\-Number\-Of\-Monomers}}
 \index{get\-Total\-Number\-Of\-Monomers@{get\-Total\-Number\-Of\-Monomers}!environment@{environment}}
@@ -1777,7 +1777,7 @@ This Function returns the total amount of M\-O\-N\-O\-M\-E\-R\-S in the tmp\-Spe
 \end{DoxyParams}
 
 
-Definition at line 3002 of file environment.\-cpp.
+Definition at line 3004 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a7a321296874fa1320da225cdbbf56a64}{\index{environment@{environment}!get\-Total\-Number\-Of\-Species@{get\-Total\-Number\-Of\-Species}}
 \index{get\-Total\-Number\-Of\-Species@{get\-Total\-Number\-Of\-Species}!environment@{environment}}
@@ -1793,7 +1793,7 @@ This Function returns the total amount of M\-O\-L\-E\-C\-U\-L\-E\-S in the tmp\-
 \end{DoxyParams}
 
 
-Definition at line 2912 of file environment.\-cpp.
+Definition at line 2914 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aadb5c442d5c9d16a0d6b2e90715dda94}{\index{environment@{environment}!get\-Tot\-Number\-Of\-Charged\-Mols@{get\-Tot\-Number\-Of\-Charged\-Mols}}
 \index{get\-Tot\-Number\-Of\-Charged\-Mols@{get\-Tot\-Number\-Of\-Charged\-Mols}!environment@{environment}}
@@ -1804,7 +1804,7 @@ Definition at line 2912 of file environment.\-cpp.
 )}}\label{classenvironment_aadb5c442d5c9d16a0d6b2e90715dda94}
 Get the total number of charged molecules 
 
-Definition at line 3022 of file environment.\-cpp.
+Definition at line 3024 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a355b53cbc86aaab2a6d114980162ac0e}{\index{environment@{environment}!get\-Volume@{get\-Volume}}
 \index{get\-Volume@{get\-Volume}!environment@{environment}}
@@ -1815,7 +1815,7 @@ Definition at line 3022 of file environment.\-cpp.
 ) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a355b53cbc86aaab2a6d114980162ac0e}
 
 
-Definition at line 195 of file environment.\-h.
+Definition at line 196 of file environment.\-h.
 
 \hypertarget{classenvironment_a480887ed06f63d34e014c19ea302d3d5}{\index{environment@{environment}!inc\-Cleavage\-Counter@{inc\-Cleavage\-Counter}}
 \index{inc\-Cleavage\-Counter@{inc\-Cleavage\-Counter}!environment@{environment}}
@@ -1826,7 +1826,7 @@ Definition at line 195 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a480887ed06f63d34e014c19ea302d3d5}
 
 
-Definition at line 283 of file environment.\-h.
+Definition at line 284 of file environment.\-h.
 
 \hypertarget{classenvironment_a3fae8e57fad9ef5b182e32d9bb9989af}{\index{environment@{environment}!inc\-Condensation\-Counter@{inc\-Condensation\-Counter}}
 \index{inc\-Condensation\-Counter@{inc\-Condensation\-Counter}!environment@{environment}}
@@ -1837,7 +1837,7 @@ Definition at line 283 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a3fae8e57fad9ef5b182e32d9bb9989af}
 
 
-Definition at line 285 of file environment.\-h.
+Definition at line 286 of file environment.\-h.
 
 \hypertarget{classenvironment_ab0fc2cd6ed209d61286b837bd5460d90}{\index{environment@{environment}!inc\-Endo\-Cleavage\-Counter@{inc\-Endo\-Cleavage\-Counter}}
 \index{inc\-Endo\-Cleavage\-Counter@{inc\-Endo\-Cleavage\-Counter}!environment@{environment}}
@@ -1848,7 +1848,7 @@ Definition at line 285 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_ab0fc2cd6ed209d61286b837bd5460d90}
 
 
-Definition at line 284 of file environment.\-h.
+Definition at line 285 of file environment.\-h.
 
 \hypertarget{classenvironment_a01812d540519696ab07c9f822119cc64}{\index{environment@{environment}!inc\-Endo\-Condensation\-Counter@{inc\-Endo\-Condensation\-Counter}}
 \index{inc\-Endo\-Condensation\-Counter@{inc\-Endo\-Condensation\-Counter}!environment@{environment}}
@@ -1859,7 +1859,7 @@ Definition at line 284 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a01812d540519696ab07c9f822119cc64}
 
 
-Definition at line 286 of file environment.\-h.
+Definition at line 287 of file environment.\-h.
 
 \hypertarget{classenvironment_a094499a0f1bb3c2342a3b16944f5280d}{\index{environment@{environment}!inc\-Mol\-Procedure@{inc\-Mol\-Procedure}}
 \index{inc\-Mol\-Procedure@{inc\-Mol\-Procedure}!environment@{environment}}
@@ -1870,7 +1870,7 @@ Definition at line 286 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a094499a0f1bb3c2342a3b16944f5280d}
 
 
-Definition at line 278 of file environment.\-h.
+Definition at line 279 of file environment.\-h.
 
 \hypertarget{classenvironment_a69ae530ef6f9298e3ab8304157709404}{\index{environment@{environment}!inc\-Number\-Of\-Cpx@{inc\-Number\-Of\-Cpx}}
 \index{inc\-Number\-Of\-Cpx@{inc\-Number\-Of\-Cpx}!environment@{environment}}
@@ -1881,7 +1881,7 @@ Definition at line 278 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a69ae530ef6f9298e3ab8304157709404}
 
 
-Definition at line 266 of file environment.\-h.
+Definition at line 267 of file environment.\-h.
 
 \hypertarget{classenvironment_ab101d2158575829ddfe846087040f2fa}{\index{environment@{environment}!inc\-Number\-Of\-Cpx\-Mols@{inc\-Number\-Of\-Cpx\-Mols}}
 \index{inc\-Number\-Of\-Cpx\-Mols@{inc\-Number\-Of\-Cpx\-Mols}!environment@{environment}}
@@ -1892,7 +1892,7 @@ Definition at line 266 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_ab101d2158575829ddfe846087040f2fa}
 
 
-Definition at line 268 of file environment.\-h.
+Definition at line 269 of file environment.\-h.
 
 \hypertarget{classenvironment_ae356db3b6ee374b998e9f041216b4b75}{\index{environment@{environment}!inc\-Number\-Of\-Mols@{inc\-Number\-Of\-Mols}}
 \index{inc\-Number\-Of\-Mols@{inc\-Number\-Of\-Mols}!environment@{environment}}
@@ -1903,7 +1903,7 @@ Definition at line 268 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_ae356db3b6ee374b998e9f041216b4b75}
 
 
-Definition at line 264 of file environment.\-h.
+Definition at line 265 of file environment.\-h.
 
 \hypertarget{classenvironment_a1addb84f0c8d391f97ad2347a64208bb}{\index{environment@{environment}!inc\-Number\-Of\-New\-Mols@{inc\-Number\-Of\-New\-Mols}}
 \index{inc\-Number\-Of\-New\-Mols@{inc\-Number\-Of\-New\-Mols}!environment@{environment}}
@@ -1914,7 +1914,7 @@ Definition at line 264 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a1addb84f0c8d391f97ad2347a64208bb}
 
 
-Definition at line 273 of file environment.\-h.
+Definition at line 274 of file environment.\-h.
 
 \hypertarget{classenvironment_a1055886a34a9a01ec37db31c69e460e0}{\index{environment@{environment}!inc\-Number\-Of\-New\-Species@{inc\-Number\-Of\-New\-Species}}
 \index{inc\-Number\-Of\-New\-Species@{inc\-Number\-Of\-New\-Species}!environment@{environment}}
@@ -1925,7 +1925,7 @@ Definition at line 273 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a1055886a34a9a01ec37db31c69e460e0}
 
 
-Definition at line 271 of file environment.\-h.
+Definition at line 272 of file environment.\-h.
 
 \hypertarget{classenvironment_a5c86f93c84f9931640843c38eccb9bf4}{\index{environment@{environment}!inc\-Number\-Of\-Species@{inc\-Number\-Of\-Species}}
 \index{inc\-Number\-Of\-Species@{inc\-Number\-Of\-Species}!environment@{environment}}
@@ -1936,7 +1936,7 @@ Definition at line 271 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a5c86f93c84f9931640843c38eccb9bf4}
 
 
-Definition at line 262 of file environment.\-h.
+Definition at line 263 of file environment.\-h.
 
 \hypertarget{classenvironment_a719b14624d9a2f891b8d4eb47649a00e}{\index{environment@{environment}!inc\-Overall\-Loaded\-Mols\-Counter@{inc\-Overall\-Loaded\-Mols\-Counter}}
 \index{inc\-Overall\-Loaded\-Mols\-Counter@{inc\-Overall\-Loaded\-Mols\-Counter}!environment@{environment}}
@@ -1947,7 +1947,7 @@ Definition at line 262 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a719b14624d9a2f891b8d4eb47649a00e}
 
 
-Definition at line 287 of file environment.\-h.
+Definition at line 288 of file environment.\-h.
 
 \hypertarget{classenvironment_aac3eed768b89e3a70017075b68046ede}{\index{environment@{environment}!increase\-Attempts@{increase\-Attempts}}
 \index{increase\-Attempts@{increase\-Attempts}!environment@{environment}}
@@ -1958,7 +1958,7 @@ Definition at line 287 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_aac3eed768b89e3a70017075b68046ede}
 
 
-Definition at line 315 of file environment.\-h.
+Definition at line 316 of file environment.\-h.
 
 \hypertarget{classenvironment_a7ac85445b4710257723c581c35cc5ac8}{\index{environment@{environment}!inc\-Species\-Procedure@{inc\-Species\-Procedure}}
 \index{inc\-Species\-Procedure@{inc\-Species\-Procedure}!environment@{environment}}
@@ -1969,7 +1969,7 @@ Definition at line 315 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a7ac85445b4710257723c581c35cc5ac8}
 
 
-Definition at line 279 of file environment.\-h.
+Definition at line 280 of file environment.\-h.
 
 \hypertarget{classenvironment_aa4b3e51bd7bbb2a287f0963e261cb79b}{\index{environment@{environment}!new\-Species\-Evaluation@{new\-Species\-Evaluation}}
 \index{new\-Species\-Evaluation@{new\-Species\-Evaluation}!environment@{environment}}
@@ -1991,7 +1991,7 @@ Evaluate new species \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 4933 of file environment.\-cpp.
+Definition at line 4935 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a5160dec152ed0369fe8af9aff3253a9e}{\index{environment@{environment}!not\-Inverse\-Reaction\-Already\-Catalyzed@{not\-Inverse\-Reaction\-Already\-Catalyzed}}
 \index{not\-Inverse\-Reaction\-Already\-Catalyzed@{not\-Inverse\-Reaction\-Already\-Catalyzed}!environment@{environment}}
@@ -2007,7 +2007,7 @@ Check if the reaction catalyze both one reaction and the inverted one \begin{Dox
 \end{DoxyVersion}
 
 
-Definition at line 2075 of file environment.\-cpp.
+Definition at line 2077 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a9ceec5e00b0f5a51dd125c583b8ac5ec}{\index{environment@{environment}!nutrients\-Amounts\-Fixing@{nutrients\-Amounts\-Fixing}}
 \index{nutrients\-Amounts\-Fixing@{nutrients\-Amounts\-Fixing}!environment@{environment}}
@@ -2021,7 +2021,7 @@ Nutrients amount fixing process. The amount of nutrients has to be fixed accordi
 \end{DoxyVersion}
 
 
-Definition at line 3088 of file environment.\-cpp.
+Definition at line 3090 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ade26b82a3b48a5bda7e5751cbfd31b04}{\index{environment@{environment}!perform\-\_\-endo\-\_\-\-Cleavage@{perform\-\_\-endo\-\_\-\-Cleavage}}
 \index{perform\-\_\-endo\-\_\-\-Cleavage@{perform\-\_\-endo\-\_\-\-Cleavage}!environment@{environment}}
@@ -2061,7 +2061,7 @@ Perform E\-N\-D\-O\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E reaction \begin{DoxyVersion}{Ve
 \end{DoxyParams}
 
 
-Definition at line 4493 of file environment.\-cpp.
+Definition at line 4495 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aa85e7ddc4de7bdfe70b3828a300edeb8}{\index{environment@{environment}!perform\-\_\-endo\-\_\-\-Complex\-Formation@{perform\-\_\-endo\-\_\-\-Complex\-Formation}}
 \index{perform\-\_\-endo\-\_\-\-Complex\-Formation@{perform\-\_\-endo\-\_\-\-Complex\-Formation}!environment@{environment}}
@@ -2090,7 +2090,7 @@ Perform E\-N\-D\-O C\-O\-M\-P\-L\-E\-X F\-O\-R\-M\-A\-T\-I\-O\-N reaction \begin
 \end{DoxyParams}
 
 
-Definition at line 4698 of file environment.\-cpp.
+Definition at line 4700 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aa7a2cc95d8ba242c805a8fda063b23a7}{\index{environment@{environment}!perform\-\_\-endo\-\_\-\-Condensation@{perform\-\_\-endo\-\_\-\-Condensation}}
 \index{perform\-\_\-endo\-\_\-\-Condensation@{perform\-\_\-endo\-\_\-\-Condensation}!environment@{environment}}
@@ -2131,7 +2131,7 @@ Perform E\-N\-D\-O C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N reaction \begin{DoxyVersio
 \end{DoxyParams}
 
 
-Definition at line 4254 of file environment.\-cpp.
+Definition at line 4256 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aa4ed307a123c402166cfc7f6ed99043a}{\index{environment@{environment}!perform\-Cleavage@{perform\-Cleavage}}
 \index{perform\-Cleavage@{perform\-Cleavage}!environment@{environment}}
@@ -2168,7 +2168,7 @@ Perform C\-L\-E\-A\-V\-A\-G\-E reaction \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 4390 of file environment.\-cpp.
+Definition at line 4392 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a5c5e57b0558067cbf55c894f33d0a121}{\index{environment@{environment}!perform\-Complex\-Dissociation@{perform\-Complex\-Dissociation}}
 \index{perform\-Complex\-Dissociation@{perform\-Complex\-Dissociation}!environment@{environment}}
@@ -2195,7 +2195,7 @@ Perform C\-O\-M\-P\-L\-E\-X D\-I\-S\-A\-S\-S\-O\-C\-I\-A\-T\-I\-O\-N reaction \b
 \end{DoxyParams}
 
 
-Definition at line 4791 of file environment.\-cpp.
+Definition at line 4793 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ab50605f871505a3ab9215552cac90790}{\index{environment@{environment}!perform\-Complex\-Formation@{perform\-Complex\-Formation}}
 \index{perform\-Complex\-Formation@{perform\-Complex\-Formation}!environment@{environment}}
@@ -2223,7 +2223,7 @@ Perform C\-O\-M\-P\-L\-E\-X F\-O\-R\-M\-A\-T\-I\-O\-N reaction \begin{DoxyVersio
 \end{DoxyParams}
 
 
-Definition at line 4614 of file environment.\-cpp.
+Definition at line 4616 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a1baf5512b7e0a8fb6f8f890ba9f99cd1}{\index{environment@{environment}!perform\-Condensation@{perform\-Condensation}}
 \index{perform\-Condensation@{perform\-Condensation}!environment@{environment}}
@@ -2257,7 +2257,7 @@ Perform C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N reaction \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 4137 of file environment.\-cpp.
+Definition at line 4139 of file environment.\-cpp.
 
 \hypertarget{classenvironment_adbaf165a12edd62c614a455544807ea3}{\index{environment@{environment}!perform\-D\-E\-T\-Molecules\-Charging@{perform\-D\-E\-T\-Molecules\-Charging}}
 \index{perform\-D\-E\-T\-Molecules\-Charging@{perform\-D\-E\-T\-Molecules\-Charging}!environment@{environment}}
@@ -2282,7 +2282,7 @@ This function perform the pseudo-\/deterministic molecules charging process \beg
 \end{DoxyParams}
 
 
-Definition at line 3212 of file environment.\-cpp.
+Definition at line 3214 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aff7607e0f3a74790109a7d87de3031bd}{\index{environment@{environment}!perform\-Energy\-Efflux@{perform\-Energy\-Efflux}}
 \index{perform\-Energy\-Efflux@{perform\-Energy\-Efflux}!environment@{environment}}
@@ -2304,7 +2304,7 @@ Perform E\-N\-E\-R\-G\-Y E\-F\-F\-L\-U\-X reaction \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 3887 of file environment.\-cpp.
+Definition at line 3889 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a2cb0152bf789918e7d92685f947ce48f}{\index{environment@{environment}!perform\-Gillespie\-Computation@{perform\-Gillespie\-Computation}}
 \index{perform\-Gillespie\-Computation@{perform\-Gillespie\-Computation}!environment@{environment}}
@@ -2341,7 +2341,7 @@ Perform all the gillespie algorithm procedure \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 2165 of file environment.\-cpp.
+Definition at line 2167 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ad072a40a7d9521379c7ff50ed8110fbe}{\index{environment@{environment}!perform\-Molecule\-Efflux@{perform\-Molecule\-Efflux}}
 \index{perform\-Molecule\-Efflux@{perform\-Molecule\-Efflux}!environment@{environment}}
@@ -2366,7 +2366,7 @@ Perform M\-O\-L\-E\-C\-U\-L\-E E\-F\-F\-L\-U\-X reaction \begin{DoxyVersion}{Ver
 \end{DoxyParams}
 
 
-Definition at line 3807 of file environment.\-cpp.
+Definition at line 3809 of file environment.\-cpp.
 
 \hypertarget{classenvironment_acbbcdb4c77231e9ffa4c169e0caa0d0c}{\index{environment@{environment}!perform\-Molecules\-Efflux@{perform\-Molecules\-Efflux}}
 \index{perform\-Molecules\-Efflux@{perform\-Molecules\-Efflux}!environment@{environment}}
@@ -2391,7 +2391,7 @@ This function perform the deterministic molecules efflux process \begin{DoxyVers
 \end{DoxyParams}
 
 
-Definition at line 3644 of file environment.\-cpp.
+Definition at line 3646 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a1db4e67ba458a54f4fab3e10a203765c}{\index{environment@{environment}!perform\-Reaction@{perform\-Reaction}}
 \index{perform\-Reaction@{perform\-Reaction}!environment@{environment}}
@@ -2417,7 +2417,7 @@ Perform the reaction after the Gillespie computation \begin{DoxyVersion}{Version
 \end{DoxyParams}
 
 
-Definition at line 3939 of file environment.\-cpp.
+Definition at line 3941 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a8a53821ad1675b0da50591616aac3b74}{\index{environment@{environment}!perform\-Refill@{perform\-Refill}}
 \index{perform\-Refill@{perform\-Refill}!environment@{environment}}
@@ -2445,7 +2445,7 @@ Perform Refill according to the time interval and the total amount of refill \be
 \end{DoxyParams}
 
 
-Definition at line 3121 of file environment.\-cpp.
+Definition at line 3123 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a30a0827eed2860d03d5fa5318fcf86b0}{\index{environment@{environment}!perform\-Single\-Gille\-Spie\-Introduction@{perform\-Single\-Gille\-Spie\-Introduction}}
 \index{perform\-Single\-Gille\-Spie\-Introduction@{perform\-Single\-Gille\-Spie\-Introduction}!environment@{environment}}
@@ -2474,7 +2474,7 @@ Compute and introduct a single Gillespie entry within the Gillespie Structure \b
 \end{DoxyDate}
 
 
-Definition at line 2811 of file environment.\-cpp.
+Definition at line 2813 of file environment.\-cpp.
 
 \hypertarget{classenvironment_af579052ed051a2e3516218220d238303}{\index{environment@{environment}!print\-All\-Charge\-Mols@{print\-All\-Charge\-Mols}}
 \index{print\-All\-Charge\-Mols@{print\-All\-Charge\-Mols}!environment@{environment}}
@@ -2488,7 +2488,7 @@ Print all the energized molecules  1.\-0 \begin{DoxyDate}{Date}
 \end{DoxyDate}
 
 
-Definition at line 5477 of file environment.\-cpp.
+Definition at line 5483 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a48d8fd9d8d5c9c31f0b4af87c8cbd28f}{\index{environment@{environment}!print\-All\-Species\-Id\-And\-Sequence@{print\-All\-Species\-Id\-And\-Sequence}}
 \index{print\-All\-Species\-Id\-And\-Sequence@{print\-All\-Species\-Id\-And\-Sequence}!environment@{environment}}
@@ -2502,7 +2502,7 @@ Show all the species with their I\-D \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 5431 of file environment.\-cpp.
+Definition at line 5437 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aa3a18c59f6127c642603a98c1b3a2224}{\index{environment@{environment}!print\-Gillespie\-Structure@{print\-Gillespie\-Structure}}
 \index{print\-Gillespie\-Structure@{print\-Gillespie\-Structure}!environment@{environment}}
@@ -2516,7 +2516,7 @@ Show all the Gillespie Structure \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 5451 of file environment.\-cpp.
+Definition at line 5457 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a429c2529badaeda72e553f500b990e11}{\index{environment@{environment}!print\-Initial\-Condition@{print\-Initial\-Condition}}
 \index{print\-Initial\-Condition@{print\-Initial\-Condition}!environment@{environment}}
@@ -2530,7 +2530,7 @@ Show all initial species in table format \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 5374 of file environment.\-cpp.
+Definition at line 5380 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ad8fcefe5325382fb307627c7e8362ba8}{\index{environment@{environment}!print\-Nutrients\-And\-Probability@{print\-Nutrients\-And\-Probability}}
 \index{print\-Nutrients\-And\-Probability@{print\-Nutrients\-And\-Probability}!environment@{environment}}
@@ -2547,7 +2547,7 @@ This Function populates two vectors containing all the nutrients and all the pro
 \end{DoxyDate}
 
 
-Definition at line 3063 of file environment.\-cpp.
+Definition at line 3065 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aa4830018af0b99eddefcdefad877b305}{\index{environment@{environment}!remove\-Charge\-Mol\-From\-List@{remove\-Charge\-Mol\-From\-List}}
 \index{remove\-Charge\-Mol\-From\-List@{remove\-Charge\-Mol\-From\-List}!environment@{environment}}
@@ -2569,7 +2569,7 @@ Perform vector uncharged\-I\-Dlist update removing a new charge molecule vectors
 \end{DoxyParams}
 
 
-Definition at line 3540 of file environment.\-cpp.
+Definition at line 3542 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a0b1e324c651c86cb54279e022c14dc6d}{\index{environment@{environment}!reset\-Cleavage\-Counter@{reset\-Cleavage\-Counter}}
 \index{reset\-Cleavage\-Counter@{reset\-Cleavage\-Counter}!environment@{environment}}
@@ -2580,7 +2580,7 @@ Definition at line 3540 of file environment.\-cpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a0b1e324c651c86cb54279e022c14dc6d}
 
 
-Definition at line 290 of file environment.\-h.
+Definition at line 291 of file environment.\-h.
 
 \hypertarget{classenvironment_a97305e36924f19e72bfc1c3d89e45931}{\index{environment@{environment}!reset\-Concentration\-To\-Initial\-Conditions@{reset\-Concentration\-To\-Initial\-Conditions}}
 \index{reset\-Concentration\-To\-Initial\-Conditions@{reset\-Concentration\-To\-Initial\-Conditions}!environment@{environment}}
@@ -2594,7 +2594,7 @@ set the concentrations to the initial values and reset internal statistics and c
 \end{DoxyVersion}
 
 
-Definition at line 5566 of file environment.\-cpp.
+Definition at line 5572 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ac7deab8db2f581077da735c3542d8f1b}{\index{environment@{environment}!reset\-Condensation\-Counter@{reset\-Condensation\-Counter}}
 \index{reset\-Condensation\-Counter@{reset\-Condensation\-Counter}!environment@{environment}}
@@ -2605,7 +2605,7 @@ Definition at line 5566 of file environment.\-cpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_ac7deab8db2f581077da735c3542d8f1b}
 
 
-Definition at line 292 of file environment.\-h.
+Definition at line 293 of file environment.\-h.
 
 \hypertarget{classenvironment_a3362d147de095640619d9b44f7f20bba}{\index{environment@{environment}!reset\-Endo\-Cleavage\-Counter@{reset\-Endo\-Cleavage\-Counter}}
 \index{reset\-Endo\-Cleavage\-Counter@{reset\-Endo\-Cleavage\-Counter}!environment@{environment}}
@@ -2616,7 +2616,7 @@ Definition at line 292 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a3362d147de095640619d9b44f7f20bba}
 
 
-Definition at line 291 of file environment.\-h.
+Definition at line 292 of file environment.\-h.
 
 \hypertarget{classenvironment_a55cff0bc2f8de4d3e4db471cad580a86}{\index{environment@{environment}!reset\-Endo\-Condensation\-Counter@{reset\-Endo\-Condensation\-Counter}}
 \index{reset\-Endo\-Condensation\-Counter@{reset\-Endo\-Condensation\-Counter}!environment@{environment}}
@@ -2627,7 +2627,7 @@ Definition at line 291 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a55cff0bc2f8de4d3e4db471cad580a86}
 
 
-Definition at line 293 of file environment.\-h.
+Definition at line 294 of file environment.\-h.
 
 \hypertarget{classenvironment_abc04de785dddab4703fdcf52ccdf85f9}{\index{environment@{environment}!reset\-Overall\-Loaded\-Mols\-Counter@{reset\-Overall\-Loaded\-Mols\-Counter}}
 \index{reset\-Overall\-Loaded\-Mols\-Counter@{reset\-Overall\-Loaded\-Mols\-Counter}!environment@{environment}}
@@ -2638,7 +2638,7 @@ Definition at line 293 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_abc04de785dddab4703fdcf52ccdf85f9}
 
 
-Definition at line 294 of file environment.\-h.
+Definition at line 295 of file environment.\-h.
 
 \hypertarget{classenvironment_a5c8713237992b28c39199a7aea3f9ea0}{\index{environment@{environment}!reset\-Reactions\-Counter@{reset\-Reactions\-Counter}}
 \index{reset\-Reactions\-Counter@{reset\-Reactions\-Counter}!environment@{environment}}
@@ -2649,7 +2649,7 @@ Definition at line 294 of file environment.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a5c8713237992b28c39199a7aea3f9ea0}
 
 
-Definition at line 296 of file environment.\-h.
+Definition at line 297 of file environment.\-h.
 
 \hypertarget{classenvironment_a6feec5685b519ba0cdae0e5c59dffff0}{\index{environment@{environment}!return\-Pos\-Reaction\-Already\-Present@{return\-Pos\-Reaction\-Already\-Present}}
 \index{return\-Pos\-Reaction\-Already\-Present@{return\-Pos\-Reaction\-Already\-Present}!environment@{environment}}
@@ -2677,7 +2677,7 @@ Return the reaction I\-D if the reaction is already present, otherwise it return
 \end{DoxyParams}
 
 
-Definition at line 1541 of file environment.\-cpp.
+Definition at line 1543 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a4e26cc574e20a5afcfbbe5887109c5af}{\index{environment@{environment}!return\-Pos\-Species\-Already\-Present@{return\-Pos\-Species\-Already\-Present}}
 \index{return\-Pos\-Species\-Already\-Present@{return\-Pos\-Species\-Already\-Present}!environment@{environment}}
@@ -2700,7 +2700,7 @@ This functions returns the I\-D of the species whether this one is already prese
 \end{DoxyParams}
 
 
-Definition at line 1511 of file environment.\-cpp.
+Definition at line 1513 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a0a799b3a42bd90845a915298e184708c}{\index{environment@{environment}!save\-Catalysis\-Structure\-S\-T\-D@{save\-Catalysis\-Structure\-S\-T\-D}}
 \index{save\-Catalysis\-Structure\-S\-T\-D@{save\-Catalysis\-Structure\-S\-T\-D}!environment@{environment}}
@@ -2717,7 +2717,7 @@ Save the catalysis structures in a file named catalysis\-\_\-\mbox{[}current\-Si
 \end{DoxyVersion}
 
 
-Definition at line 6056 of file environment.\-cpp.
+Definition at line 6066 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a71f4c5ff1c11a9d61cbc818682a4a91e}{\index{environment@{environment}!save\-Configuration\-File\-S\-T\-D@{save\-Configuration\-File\-S\-T\-D}}
 \index{save\-Configuration\-File\-S\-T\-D@{save\-Configuration\-File\-S\-T\-D}!environment@{environment}}
@@ -2734,7 +2734,7 @@ Save a file with the configuration parameters \begin{DoxyVersion}{Version}
 \end{DoxyDate}
 
 
-Definition at line 5706 of file environment.\-cpp.
+Definition at line 5712 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a8f831e2db11fa5d840484345dac64fc7}{\index{environment@{environment}!save\-Influx\-Structure\-S\-T\-D@{save\-Influx\-Structure\-S\-T\-D}}
 \index{save\-Influx\-Structure\-S\-T\-D@{save\-Influx\-Structure\-S\-T\-D}!environment@{environment}}
@@ -2756,7 +2756,7 @@ Save influx structure on file, standard C++
 \end{DoxyDate}
 
 
-Definition at line 5862 of file environment.\-cpp.
+Definition at line 5872 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a26c70b0a84c37c87952628d4a328c238}{\index{environment@{environment}!save\-Living\-Species\-Amount\-S\-T\-D@{save\-Living\-Species\-Amount\-S\-T\-D}}
 \index{save\-Living\-Species\-Amount\-S\-T\-D@{save\-Living\-Species\-Amount\-S\-T\-D}!environment@{environment}}
@@ -2775,7 +2775,7 @@ Save living species total A\-M\-O\-U\-N\-T in a file named living\-Amount\-\_\-\
 \end{DoxyDate}
 
 
-Definition at line 6320 of file environment.\-cpp.
+Definition at line 6330 of file environment.\-cpp.
 
 \hypertarget{classenvironment_aedf8d90e1fe734948bf2213489840582}{\index{environment@{environment}!save\-Living\-Species\-Concentration\-S\-T\-D@{save\-Living\-Species\-Concentration\-S\-T\-D}}
 \index{save\-Living\-Species\-Concentration\-S\-T\-D@{save\-Living\-Species\-Concentration\-S\-T\-D}!environment@{environment}}
@@ -2794,7 +2794,7 @@ Save living species total C\-O\-N\-C\-E\-N\-T\-R\-A\-T\-I\-O\-N in a file named 
 \end{DoxyDate}
 
 
-Definition at line 6386 of file environment.\-cpp.
+Definition at line 6396 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a623c3cda23a18cb7b039c5a666408d72}{\index{environment@{environment}!save\-Living\-Species\-I\-D\-S\-T\-D@{save\-Living\-Species\-I\-D\-S\-T\-D}}
 \index{save\-Living\-Species\-I\-D\-S\-T\-D@{save\-Living\-Species\-I\-D\-S\-T\-D}!environment@{environment}}
@@ -2814,7 +2814,7 @@ Save living species in a file named living\-\_\-species\-\_\-\mbox{[}current\-Si
 \end{DoxyDate}
 
 
-Definition at line 6259 of file environment.\-cpp.
+Definition at line 6269 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a1412b9b1c3bd3e42bcb481f5e18ea931}{\index{environment@{environment}!save\-Nrg\-Bool\-Fnc\-Structure\-S\-T\-D@{save\-Nrg\-Bool\-Fnc\-Structure\-S\-T\-D}}
 \index{save\-Nrg\-Bool\-Fnc\-Structure\-S\-T\-D@{save\-Nrg\-Bool\-Fnc\-Structure\-S\-T\-D}!environment@{environment}}
@@ -2836,7 +2836,7 @@ Save Energetic Boolean Function on file, standard C++
 \end{DoxyDate}
 
 
-Definition at line 5900 of file environment.\-cpp.
+Definition at line 5910 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ad78fcf39a80e447a9aa2f84ab74335e5}{\index{environment@{environment}!save\-Reactions\-Parameters\-S\-T\-D@{save\-Reactions\-Parameters\-S\-T\-D}}
 \index{save\-Reactions\-Parameters\-S\-T\-D@{save\-Reactions\-Parameters\-S\-T\-D}!environment@{environment}}
@@ -2861,7 +2861,7 @@ Save the reactions parameters in a file named reactions\-\_\-parameters\-\_\-\mb
 \end{DoxyDate}
 
 
-Definition at line 6200 of file environment.\-cpp.
+Definition at line 6210 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ad381c4ce24045d504539bb7c74800739}{\index{environment@{environment}!save\-Reactions\-Structure\-S\-T\-D@{save\-Reactions\-Structure\-S\-T\-D}}
 \index{save\-Reactions\-Structure\-S\-T\-D@{save\-Reactions\-Structure\-S\-T\-D}!environment@{environment}}
@@ -2878,7 +2878,7 @@ Save the reactions structures in a file named reactions\-\_\-\mbox{[}current\-Si
 \end{DoxyVersion}
 
 
-Definition at line 6003 of file environment.\-cpp.
+Definition at line 6013 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a9daeb4f255100b8ad59de9ea80b19b5b}{\index{environment@{environment}!save\-Species\-Structure\-S\-T\-D@{save\-Species\-Structure\-S\-T\-D}}
 \index{save\-Species\-Structure\-S\-T\-D@{save\-Species\-Structure\-S\-T\-D}!environment@{environment}}
@@ -2898,7 +2898,7 @@ Save the species structures in a file named species\-\_\-\mbox{[}current\-Sims\m
 \end{DoxyDate}
 
 
-Definition at line 5938 of file environment.\-cpp.
+Definition at line 5948 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a73e83c4fcfe612514714a6692270351e}{\index{environment@{environment}!save\-Times\-S\-T\-D@{save\-Times\-S\-T\-D}}
 \index{save\-Times\-S\-T\-D@{save\-Times\-S\-T\-D}!environment@{environment}}
@@ -2918,7 +2918,7 @@ Save the reactions times in a file named times\-\_\-\mbox{[}current\-Sim\mbox{]}
 \end{DoxyDate}
 
 
-Definition at line 6113 of file environment.\-cpp.
+Definition at line 6123 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a53282cca8882e86652ab0a22e6966d17}{\index{environment@{environment}!select\-Whether\-Cleavage\-Or\-Cond@{select\-Whether\-Cleavage\-Or\-Cond}}
 \index{select\-Whether\-Cleavage\-Or\-Cond@{select\-Whether\-Cleavage\-Or\-Cond}!environment@{environment}}
@@ -2939,7 +2939,7 @@ Select reaction type (cleavage or condensation) according to the cleavage probab
 \end{DoxyParams}
 
 
-Definition at line 904 of file environment.\-cpp.
+Definition at line 906 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a9bc445da3e89d09d4fce11c83f3dedb0}{\index{environment@{environment}!set\-Actual\-Time@{set\-Actual\-Time}}
 \index{set\-Actual\-Time@{set\-Actual\-Time}!environment@{environment}}
@@ -2950,7 +2950,7 @@ Definition at line 904 of file environment.\-cpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_a9bc445da3e89d09d4fce11c83f3dedb0}
 
 
-Definition at line 312 of file environment.\-h.
+Definition at line 313 of file environment.\-h.
 
 \hypertarget{classenvironment_a4fb98d7cad06ef479e2643785231feb9}{\index{environment@{environment}!set\-Living\-Species\-I\-Ds\-And\-Amounts@{set\-Living\-Species\-I\-Ds\-And\-Amounts}}
 \index{set\-Living\-Species\-I\-Ds\-And\-Amounts@{set\-Living\-Species\-I\-Ds\-And\-Amounts}!environment@{environment}}
@@ -2967,7 +2967,7 @@ This function populates to lists, the first containing all the living species I\
 \end{DoxyDate}
 
 
-Definition at line 3451 of file environment.\-cpp.
+Definition at line 3453 of file environment.\-cpp.
 
 \hypertarget{classenvironment_ac5528a39937cdc76f0dd23c27542110c}{\index{environment@{environment}!set\-Not\-Charged\-And\-Charged\-Species\-I\-Ds\-And\-Amounts@{set\-Not\-Charged\-And\-Charged\-Species\-I\-Ds\-And\-Amounts}}
 \index{set\-Not\-Charged\-And\-Charged\-Species\-I\-Ds\-And\-Amounts@{set\-Not\-Charged\-And\-Charged\-Species\-I\-Ds\-And\-Amounts}!environment@{environment}}
@@ -2984,7 +2984,7 @@ This function populates to lists, the first one contains the I\-Ds of the unchar
 \end{DoxyDate}
 
 
-Definition at line 3492 of file environment.\-cpp.
+Definition at line 3494 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a496ba50d3a345cd842ce42406946405c}{\index{environment@{environment}!set\-Solubility@{set\-Solubility}}
 \index{set\-Solubility@{set\-Solubility}!environment@{environment}}
@@ -3008,7 +3008,7 @@ Create the precipitation constant renforcement according to the species length \
 \end{DoxyParams}
 
 
-Definition at line 1477 of file environment.\-cpp.
+Definition at line 1479 of file environment.\-cpp.
 
 \hypertarget{classenvironment_af959a6b6a72cb6226fef7f0e7fab5c0c}{\index{environment@{environment}!show\-Global\-Parameter@{show\-Global\-Parameter}}
 \index{show\-Global\-Parameter@{show\-Global\-Parameter}!environment@{environment}}
@@ -3022,7 +3022,7 @@ Shows all parameters uploaded from the configuration file \begin{DoxyVersion}{Ve
 \end{DoxyVersion}
 
 
-Definition at line 5292 of file environment.\-cpp.
+Definition at line 5297 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a7fc3937fb586db93c33f7f091dc99626}{\index{environment@{environment}!store\-Initial\-Structures@{store\-Initial\-Structures}}
 \index{store\-Initial\-Structures@{store\-Initial\-Structures}!environment@{environment}}
@@ -3036,7 +3036,7 @@ Store initial structures into storing variables \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 5660 of file environment.\-cpp.
+Definition at line 5666 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a6606b08f25751a8796c13810962b385e}{\index{environment@{environment}!structure\-Coherence\-Check\-Up@{structure\-Coherence\-Check\-Up}}
 \index{structure\-Coherence\-Check\-Up@{structure\-Coherence\-Check\-Up}!environment@{environment}}
@@ -3053,7 +3053,7 @@ This function check the coherence of the data structures. I\-F I\-T F\-A\-U\-L\-
 \end{DoxyDate}
 
 
-Definition at line 1641 of file environment.\-cpp.
+Definition at line 1643 of file environment.\-cpp.
 
 \hypertarget{classenvironment_af21c066ce18c8a39740f66a995782fb9}{\index{environment@{environment}!uncharge\-Mol\-Process@{uncharge\-Mol\-Process}}
 \index{uncharge\-Mol\-Process@{uncharge\-Mol\-Process}!environment@{environment}}
@@ -3064,7 +3064,7 @@ Definition at line 1641 of file environment.\-cpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classenvironment_af21c066ce18c8a39740f66a995782fb9}
 
 
-Definition at line 281 of file environment.\-h.
+Definition at line 282 of file environment.\-h.
 
 \hypertarget{classenvironment_adab0607255ca5927b69cb6882917e031}{\index{environment@{environment}!update\-Species\-Ages@{update\-Species\-Ages}}
 \index{update\-Species\-Ages@{update\-Species\-Ages}!environment@{environment}}
@@ -3078,7 +3078,7 @@ Update the species age \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 5255 of file environment.\-cpp.
+Definition at line 5260 of file environment.\-cpp.
 
 \hypertarget{classenvironment_a8699a0f85f5e8dc23eb8f78fa22c6b17}{\index{environment@{environment}!zero\-Before\-String\-Number\-S\-T\-D@{zero\-Before\-String\-Number\-S\-T\-D}}
 \index{zero\-Before\-String\-Number\-S\-T\-D@{zero\-Before\-String\-Number\-S\-T\-D}!environment@{environment}}
@@ -3100,7 +3100,7 @@ This function creates a chain of zero as S\-T\-R\-I\-N\-G according to tmp\-Tot\
 \end{DoxyParams}
 
 
-Definition at line 5683 of file environment.\-cpp.
+Definition at line 5689 of file environment.\-cpp.
 
 
 
