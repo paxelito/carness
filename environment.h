@@ -258,6 +258,8 @@ private:
 	void performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs_longInt tmpAmountII, acs_longInt tmpIDI, acs_longInt tmpIDII, acs_longInt tmpIDCatalysis, acs_int tmp__rctType,
 											acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III, acs_longInt tmpMol_IV, acs_int tmpNRGDirection, acs_longInt tmpRctID,
 											bool tmpSameSpeciesControl);
+	// VOLUME OPERATIVE FUNCTIONS
+	void changeVolume(acs_int tmpTimeSinceLastReaction);
 	
 	// Change overall COUNTER number of species, molecules, complexes type and complexes token
 	void incNumberOfSpecies(){numberOfSpecies++;}

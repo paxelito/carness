@@ -486,7 +486,8 @@ int main (int argc, char *argv[]) {
                                                     << " - M: " << puddle->getMols()
                                                     << " - NM: " << puddle->getNewMols() << endl
                                                     << "\t\t|- Cp: " << puddle->getNcpx()
-                                                    << " - #Cp: " << puddle->getNcpxMols() << endl
+                                                    << " - #Cp: " << puddle->getNcpxMols()
+                                                    << " - Volume: " << puddle->getVolume() << endl
                                                     << "\t\t|- M: " << puddle->getTotalNumberOfMonomers()
                                                     << " - Mols+Complex: " << puddle->getMols()+puddle->getNcpxMols()
                                                     << " - Tot Conc: " << double(puddle->getMols()+puddle->getNcpxMols())/(puddle->getVolume()*AVO) << endl

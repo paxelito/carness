@@ -2,6 +2,7 @@
  * \author Alessandro Filisetti
  * \version 2.4
  * \date 2010-06-10
+ * *^*^*^*^* 2690
  */
 #include "environment.h"
 
@@ -2686,25 +2687,28 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
                 if(!performReaction(reaction_u, tmpRndDoubleGen, tmpActGEN, tmpActSIM, tmpActSTEP, tmpStoringPath))
                                 ExitWithError("performReaction", "Problems during the reaction computation");
 
-            }else{
-                    gillespieMean = 0;
-                    gillespieSD = 0;
-                    gillespieEntropy = 0;
-                    if(reactionsTime.size() > 0)
-                    {
-                        tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-                        timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-                        tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-                    }else{
-                        tempTime = 0.0;
-                    }
-                    reactionsTime.push_back(tempTime);
-                    setActualTime(tempTime);
-                    gillespieReactionsSelected.push_back(0);
-                    allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+                // CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
+                changeVolume(tmpDeltaT);
 
-                    if(debugLevel >= RUNNING_VERSION)
-                                    cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
+            }else{
+				gillespieMean = 0;
+				gillespieSD = 0;
+				gillespieEntropy = 0;
+				if(reactionsTime.size() > 0)
+				{
+					tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+					timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+					tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+				}else{
+					tempTime = 0.0;
+				}
+				reactionsTime.push_back(tempTime);
+				setActualTime(tempTime);
+				gillespieReactionsSelected.push_back(0);
+				allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+
+				if(debugLevel >= RUNNING_VERSION)
+								cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
             }
 
         }else{ // If there are not possible reactions
@@ -2738,28 +2742,28 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
         // If the system is open influx and efflux processes are performed
         if(influx_rate > 0)
         {
-    //     acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
-                if(debugLevel >= SMALL_DEBUG)
-                {
-                                cout << "\t\t\t|- REFILL --------" << endl;
-                                cout << "\t\t\t\t|- Minimal Time for one molecule: " << minimalTimeForOneMols <<
-                                                                " - Time since the last influx: " << timeSinceTheLastInFlux <<  endl;
-                }
-                // If the time interval betweem two successive influx is enough to introduce at least one new mol...
-                if(timeSinceTheLastInFlux > minimalTimeForOneMols)
-                {
-                                if(debugLevel >= SMALL_DEBUG)
-                                {
-                                                cout << "\t\t\t\t|- Time: " << reactionsTime.at(reactionsTime.size() - 1)
-                                                                 << " - Time needed for 1 molecule incoming: " << minimalTimeForOneMols
-                                                         << " - Time Since The Last InFlux: " << timeSinceTheLastInFlux << endl;
-                                }
-                                // PERFORM REFILL !!!
-                                if(performRefill(timeSinceTheLastInFlux, minimalTimeForOneMols, tmpRndDoubleGen))
-                                                timeSinceTheLastInFlux = 0;
-                }
-                // PERFORM EFFLUX PROCESS
-                performMoleculesEfflux(tmpDeltaT, tmpRndDoubleGen);
+        	//     acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
+			if(debugLevel >= SMALL_DEBUG)
+			{
+				cout << "\t\t\t|- REFILL --------" << endl;
+				cout << "\t\t\t\t|- Minimal Time for one molecule: " << minimalTimeForOneMols <<
+												" - Time since the last influx: " << timeSinceTheLastInFlux <<  endl;
+			}
+			// If the time interval betweem two successive influx is enough to introduce at least one new mol...
+			if(timeSinceTheLastInFlux > minimalTimeForOneMols)
+			{
+				if(debugLevel >= SMALL_DEBUG)
+				{
+								cout << "\t\t\t\t|- Time: " << reactionsTime.at(reactionsTime.size() - 1)
+												 << " - Time needed for 1 molecule incoming: " << minimalTimeForOneMols
+										 << " - Time Since The Last InFlux: " << timeSinceTheLastInFlux << endl;
+				}
+				// PERFORM REFILL !!!
+				if(performRefill(timeSinceTheLastInFlux, minimalTimeForOneMols, tmpRndDoubleGen))
+								timeSinceTheLastInFlux = 0;
+			}
+			// PERFORM EFFLUX PROCESS
+			performMoleculesEfflux(tmpDeltaT, tmpRndDoubleGen);
          }
 
     // Perform molecule charging
@@ -4066,8 +4070,8 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
                            (getActualTime() == 0))
                         {
                             saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
-                                                                            allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
-                                                                            allGillespieScores.at(reaction_u).getMolIII());
+                                                       allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
+                                                       allGillespieScores.at(reaction_u).getMolIII());
 
                             saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
                             saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
@@ -4080,7 +4084,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 			break;
 		case COMPLEXFORMATION:
 			if(!performComplexFormation(allGillespieScores.at(reaction_u).getMolI(), // Catalyst
-                                                                                allGillespieScores.at(reaction_u).getMolII(), // Substrate
+                                        allGillespieScores.at(reaction_u).getMolII(), // Substrate
 										tmp_RndDoubleGen))
 			{
 				if(debugLevel >= RUNNING_VERSION)
@@ -4092,7 +4096,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 		case ENDO_COMPLEXFORMATION:
 			if(!perform_endo_ComplexFormation(allGillespieScores.at(reaction_u).getMolI(), // Catalyst
 											  allGillespieScores.at(reaction_u).getMolII(), // Substrate
-                                                                                          allGillespieScores.at(reaction_u).getNRGside(), // Energy species side, complex, substrate or both
+                                              allGillespieScores.at(reaction_u).getNRGside(), // Energy species side, complex, substrate or both
 											  tmp_RndDoubleGen))
 			{
 				if(debugLevel >= RUNNING_VERSION)
@@ -5283,6 +5287,16 @@ void environment::updateSpeciesAges()
     }
 }
 
+/**
+ Change volume function
+ @versione 1.0
+ @date 2013/07/17
+ @author Alessandro Filisetti
+ */
+void environment::changeVolume(acs_int tmpTimeSinceLastReaction)
+{
+	volume = volume + ((volume * 0.01) * tmpTimeSinceLastReaction) ;
+}
 
 /* ************************
  |
