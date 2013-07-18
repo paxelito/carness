@@ -80,6 +80,8 @@ private:
     acs_double timeSinceTheLastInFlux; // Time elapsed from the previous injection of nutrients
     string alphabet; // Alphabet (e.g. AB, RNA, DNA, Proteins)
     acs_double volume; // Reactor volume
+    bool volumeGrowth; // Boolean variable defining the possibility for the volume to change
+    bool stochDivision; // Boolean Variable defining the division process (stochastic or deterministic)
     acs_double randomSeed; //Random seed of the simulation
     acs_double totalPossibleNumberOfSpecies; // Overall number of species in the firing disk. According to this parameters the initial set of molecules is set
     vector<species> allSpecies; // List containing all the species

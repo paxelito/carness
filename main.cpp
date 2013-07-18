@@ -1,7 +1,7 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.1 (20130708.53)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.2 (20130718.54)
  * \author Alessandro Filisetti
- * \version 4.1 (20130708.53)
- * \date 2013-07-08
+ * \version 4.2 (20130718.54)
+ * \date 2013-07-18
  * sourceforge repository -- https://carness.svn.sourceforge.net/svnroot/carness/
  * git repository -- https://github.com/paxelito/carness
  *
@@ -547,7 +547,6 @@ int main (int argc, char *argv[]) {
                         puddle->updateSpeciesAges();
 
                         // SAVE FINAL STRUCTURES TO FILE if actSTEP is different from the previous one
-
                         if(previousStepLastStructuresSaving < actSTEP-1)
                             saveToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
 

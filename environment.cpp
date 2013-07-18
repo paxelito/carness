@@ -109,6 +109,8 @@ environment::environment(string tmpInitialPath)
                 if(linered[0] == "ECConcentration") ECConcentration = atof(linered[1].c_str()); // DA TRASFORMARE NELLA VARIABILE INDICANTE LA QUANTITA DI CARRIER SEMPRE PRESENTI
                 if(linered[0] == "alphabet") alphabet = linered[1];
                 if(linered[0] == "volume") volume = atof(linered[1].c_str());
+                if(linered[0] == "volumeGrowth") volumeGrowth = fromStrToBool(linered[1]);
+                if(linered[0] == "stochDivision") stochDivision = fromStrToBool(linered[1]);
 
                 // DYNAMIC PARAMETERS
                 if(linered[0] == "energy") energy = atoi(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE, IL TUTTO VERRA' SOSTITUITO DALLA FUNZIONE BOOLEANA
@@ -2687,8 +2689,10 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
                 if(!performReaction(reaction_u, tmpRndDoubleGen, tmpActGEN, tmpActSIM, tmpActSTEP, tmpStoringPath))
                                 ExitWithError("performReaction", "Problems during the reaction computation");
 
+                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 // CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
-                changeVolume(tmpDeltaT);
+                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                if(volumeGrowth) changeVolume(tmpDeltaT);
 
             }else{
 				gillespieMean = 0;
@@ -4945,7 +4949,6 @@ bool environment::newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDo
         bool tmpAlreadyEvaluated = false; // True if the species has been already evaluated
         bool toEvaluate = true; // another control to check whether the evaluation is to do
         acs_longInt tmpIdSpeciesToEvaluate = 0;
-        acs_int tmpEnergizable = NOTENERGIZABLE;
 
         if(debugLevel >= SMALL_DEBUG)
             cout << "\t\t\t|- New Species: " << tmpNewSpecies << endl;
@@ -5489,7 +5492,8 @@ void environment::updateSpeciesAges()
  */
 void environment::changeVolume(acs_int tmpTimeSinceLastReaction)
 {
-	volume = volume + ((volume * 0.01) * tmpTimeSinceLastReaction) ;
+	//volume = volume + ((volume * 10) * tmpTimeSinceLastReaction) ;
+	volume = volume * 10 ;
 }
 
 /* ************************
@@ -5513,7 +5517,7 @@ void environment::showGlobalParameter()
         cout << "|   ****         ***   *     *          *****   *****                             |" << endl;
         cout << "|  *            *   *  **    *         *       *                                  |" << endl;
         cout << "| *        ***  *   *  * *   *  ****   *       *                                  |" << endl;
-        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 4.1b20130708.53   |" << endl;
+        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 4.2b20130718.54   |" << endl;
         cout << "| *       ****  **     *   * *  ****        *       *                             |" << endl;
         cout << "|  *      *  *  * *    *    **  *           *       *                             |"  << endl;
         cout << "|   ****  ****  *  *   *     *   ***   *****   *****                              |" << endl;
@@ -5559,6 +5563,8 @@ void environment::showGlobalParameter()
 		}
 		cout << "\t|- Alphabet: " << alphabet << endl;
 		cout << "\t|- Volume: "<< volume << endl;
+		cout << "\t|- Volume Growth: " << volumeGrowth << endl;
+		cout << "\t|- Stochastic Division: " << stochDivision << endl;
 		cout << "\t|- Random Seed: " << randomSeed << endl;	
 		cout << "\t|- NEPERO: " << NEP << endl;
 		cout << "\t|- AVOGADRO: " << AVO << endl;
@@ -6009,6 +6015,12 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
 
     fidFile << "# Volume (dm^3)" << endl;
     fidFile << "volume=" << (double)volume << endl << endl;
+
+    fidFile << "Volume growth possibility (1: volume changes, 0: volume is fixed)" << endl;
+    fidFile << "volumeGrowth=" << volumeGrowth << endl << endl;
+
+    fidFile << "# Division type (1: Stochastic, 0: deterministic)" << endl;
+    fidFile << "stochDivision=" << stochDivision << endl << endl;
 
     fidFile << "# ------------------" << endl;
     fidFile << "# DYNAMIC PARAMETERS" << endl;

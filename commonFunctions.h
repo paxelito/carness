@@ -27,5 +27,6 @@ acs_double round(acs_double tmpX);
 string dec2bin(acs_int tmpInt);
 vector<string> split(string str,const char* delim);
 bool ExitWithError(string strFunctionName, string strError);
+bool fromStrToBool(string const &string);
 
 #endif

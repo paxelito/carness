@@ -296,4 +296,14 @@ vector<string> split(string str,const char* delim)
     return result;
 }
 
+/**
+ * Function to convert from string to boolean
+ */
+bool fromStrToBool(string const &string)
+{
+	return string[0] == '1';
+}
+
+
+
 
