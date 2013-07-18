@@ -4236,8 +4236,8 @@ bool environment::performCondensation(acs_longInt tmpCatalyst, acs_longInt tmpSu
 		ExitWithError("performCondensation", "Problem with reaction ID coherence");
 	}
 	// EVALUATE PRODUCT
-	if(!newSpeciesEvaluation(allSpecies.at(tmpProduct).getSequence(), tmp__RndDoubleGen))
-		ExitWithError("newSpeciesEvaluation", "Problems during the new species evalutation");
+	if(!newSpeciesEvaluationII(tmpProduct, tmp__RndDoubleGen))
+		ExitWithError("newSpeciesEvaluationII", "Problems during the new species evalutation");
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performCondensation end" << endl;
 	
 	// Update reaction counter
@@ -4372,8 +4372,8 @@ bool environment::perform_endo_Condensation(acs_longInt tmpCatalyst, acs_longInt
             ExitWithError("performCondensation", "Problem with reaction ID coherence");
 	}
 	// EVALUATE PRODUCT
-	if(!newSpeciesEvaluation(allSpecies.at(tmpProduct).getSequence(), tmp__RndDoubleGen))
-            ExitWithError("newSpeciesEvaluation", "Problems during the new species evalutation");
+	if(!newSpeciesEvaluationII(tmpProduct, tmp__RndDoubleGen))
+            ExitWithError("newSpeciesEvaluationII", "Problems during the new species evalutation");
 	
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::perform_endo_Condensation end" << endl;
 	
@@ -4455,8 +4455,8 @@ bool environment::performCleavage(acs_longInt tmpSubstrate, acs_longInt tmpProdu
 
     try{
         // EVALUATE PRODUCT 1
-        if(!newSpeciesEvaluation(allSpecies.at(tmpProduct_I).getSequence(), tmp__RndDoubleGen))
-            ExitWithError("newSpeciesEvaluation", "Problems during the new species evalutation");
+        if(!newSpeciesEvaluationII(tmpProduct_I, tmp__RndDoubleGen))
+            ExitWithError("newSpeciesEvaluationII", "Problems during the new species evalutation");
     }
     catch(exception&e)
     {
@@ -4467,8 +4467,8 @@ bool environment::performCleavage(acs_longInt tmpSubstrate, acs_longInt tmpProdu
 
     try{
         // EVALUATE PRODUCT 2
-        if(!newSpeciesEvaluation(allSpecies.at(tmpProduct_II).getSequence(), tmp__RndDoubleGen))
-            ExitWithError("newSpeciesEvaluation", "Problems during the new species evalutation");
+        if(!newSpeciesEvaluationII(tmpProduct_II, tmp__RndDoubleGen))
+            ExitWithError("newSpeciesEvaluationII", "Problems during the new species evalutation");
     }
     catch(exception&e)
     {
@@ -4577,7 +4577,7 @@ bool environment::perform_endo_Cleavage(acs_longInt tmpSubstrate, acs_longInt tm
 
     try{
         // EVALUATE PRODUCT 1
-        if(!newSpeciesEvaluation(allSpecies.at(tmpProduct_I).getSequence(), tmp__RndDoubleGen))
+        if(!newSpeciesEvaluationII(tmpProduct_I, tmp__RndDoubleGen))
             ExitWithError("newSpeciesEvaluation", "Problems during the new species evalutation");
     }
     catch(exception&e)
@@ -4590,7 +4590,7 @@ bool environment::perform_endo_Cleavage(acs_longInt tmpSubstrate, acs_longInt tm
 
     try{
         // EVALUATE PRODUCT 2
-        if(!newSpeciesEvaluation(allSpecies.at(tmpProduct_II).getSequence(), tmp__RndDoubleGen))
+        if(!newSpeciesEvaluationII(tmpProduct_II, tmp__RndDoubleGen))
             ExitWithError("newSpeciesEvaluation", "Problems during the new species evalutation");
     }
     catch(exception&e)
@@ -4955,11 +4955,12 @@ bool environment::newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDo
         //CHECK WHETHER THE SPECIES (OR COMPLEX) IS ALREADY PRESENT
         for(acs_longInt i = 0; i < (acs_longInt)allSpecies.size(); i++)
         {
-            if((allSpecies.at(i).getSequence() == tmpNewSpecies) && (allSpecies.at(i).getComplexCutPnt() == 0)) // IF THE SPECIES IS ALREADY PRESENT
+        	// IF THE SPECIES IS ALREADY PRESENT and IT IS NOT A COMPLEX
+            if((allSpecies.at(i).getSequence() == tmpNewSpecies) && (allSpecies.at(i).getComplexCutPnt() == 0))
             {
                 if(allSpecies.at(i).getAmount() == 0)
                     allSpecies.at(i).rebornsIncrement(); // IF THE SPECIES REAPPEAR THE REBORN COUNTER IS UPDATED
-                allSpecies.at(i).increment(volume); // INCREMENT THE NUMBER OF ELEMENTS OF THIS SPECIES
+                allSpecies.at(i).increment(volume); // INCREMENT THE NUMBER OF ELEMENTS OF THIS SPECIES (conc fixed check is inside the function)
                 if(!allSpecies.at(i).getConcentrationFixed())
                 {
                     incMolProcedure(i); // Increment overall amount of species
@@ -4968,7 +4969,7 @@ bool environment::newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDo
 
                 tmpNotEqualSeqBetweenTwoSpecies = false; // IF THE SPECIES IS ALREADY PRESENT
                 tmpIdSpeciesToEvaluate = i; // SET THE ALREADY PRESENT ID OF THE SPECIES
-                if(allSpecies.at(i).getEvaluated() == 1) // IF THE SPECIES HAS BEEN ALSO EVALUATED
+                if(allSpecies.at(i).getEvaluated() == 1) // IF THE SPECIES HAS BEEN ALREADY EVALUATED TOO
                 {
                     tmpAlreadyEvaluated = true;
                 }else{
@@ -4978,25 +4979,24 @@ bool environment::newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDo
                         // PRECIPITATION AND DIFFUSION CONTRIBUTE COMPUTATION
                         acs_double tmpDiffusionContribute = createDiffusionRenforcement(diffusion_contribute, 1);
                         allSpecies.at(i).setDiffusion(tmpDiffusionContribute);
-                        bool tmpSolubilityState = setSolubility(allSpecies.at(i).getSequenceLength(), tmp___RndDoubleGen);
-
                         // IN THIS CASE SET SOLUBILITY REFERES TO THE SPECIES OBJECT
+                        bool tmpSolubilityState = setSolubility(allSpecies.at(i).getSequenceLength(), tmp___RndDoubleGen);
                         allSpecies.at(i).setSolubility(tmpSolubilityState);
                         allSpecies.at(i).setKphospho(K_nrg);
                         allSpecies.at(i).setEvaluated(); // IF the reactions have not been yet created the molecules evaluation is setting on 1 and the
                         // reactions will be created below
                     }
                 }
-                break;
+                break; // IF the species has been find the research is stopped
             }
         }
 
         //IF THE MOLECULES IS NOT YET EVALUATED
-        if(tmpAlreadyEvaluated == false)
+        if(tmpAlreadyEvaluated == false) //tmpAlreadyEvaluated = false at the beginning of the function
         {
             acs_longInt totalNumberOfConceivableReactions = 0;
             // IF THE SPECIES IS ACTUALLY NEW
-            if(tmpNotEqualSeqBetweenTwoSpecies == true)
+           /* if(tmpNotEqualSeqBetweenTwoSpecies == true)
             {
                 // PRECIPITATION AND DIFFUSION CONTRIBUTE COMPUTATION
                 acs_double tmpDiffusionContribute = createDiffusionRenforcement(diffusion_contribute, tmpNewSpecies.length());
@@ -5019,7 +5019,7 @@ bool environment::newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDo
                 if(debugLevel >= SMALL_DEBUG)
                     cout << "\t\t\t\t|- New Species " <<  tmpNewSpecies << " has been created" << endl;
 
-            }
+            }*/
 
             if(newSpeciesProbMinThreshold < ratioBetweenNewGillTotGill)
             {
@@ -5156,6 +5156,200 @@ bool environment::newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDo
     {
         cerr << "exceptioncaught:" << e.what() << endl;
         ExitWithError("something wrong in newSpeciesEvaluation method","exceptionerrorthrown");
+    }
+
+    return newSpeciesFlag;
+}
+
+/**
+ Evaluate new species (Optimized function)
+ @version 2.0
+ @param acs_int tmpNewSpecies New species ID to evaluate
+ @param MTRand& tmp___RndDoubleGen random number generator
+ */
+bool environment::newSpeciesEvaluationII(acs_int tmpNewSpecies, MTRand& tmp___RndDoubleGen)
+{
+        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::newSpeciesEvaluationII start" << endl;
+
+        bool newSpeciesFlag = true; // Function Flag Control
+        bool tmpNotEqualSeqBetweenTwoSpecies = true; // True whether there is not equal species
+        bool tmpAlreadyEvaluated = false; // True if the species has been already evaluated
+        bool toEvaluate = true; // another control to check whether the evaluation is to do
+
+        if(debugLevel >= SMALL_DEBUG)
+            cout << "\t\t\t|- New Species: " << tmpNewSpecies << endl;
+
+    try{
+		if(allSpecies.at(tmpNewSpecies).getAmount() == 0)
+			allSpecies.at(tmpNewSpecies).rebornsIncrement(); // IF THE SPECIES REAPPEAR THE REBORN COUNTER IS UPDATED
+		allSpecies.at(tmpNewSpecies).increment(volume); // INCREMENT THE NUMBER OF ELEMENTS OF THIS SPECIES (conc fixed check is inside the function)
+		if(!allSpecies.at(tmpNewSpecies).getConcentrationFixed())
+		{
+			incMolProcedure(tmpNewSpecies); // Increment overall amount of species
+			incSpeciesProcedure(tmpNewSpecies);
+		}
+
+		tmpNotEqualSeqBetweenTwoSpecies = false; // IF THE SPECIES IS ALREADY PRESENT
+		if(allSpecies.at(tmpNewSpecies).getEvaluated() == 1) // IF THE SPECIES HAS BEEN ALREADY EVALUATED TOO
+		{
+			tmpAlreadyEvaluated = true;
+		}else{
+			if(allSpecies.at(tmpNewSpecies).getComplexCutPnt() == 0) // IF THE SPECIES IS NOT A COMPLEX
+			{
+				// IF THE SPECIES IS ALREADY PRESENT BUT NOT EVALUATED
+				// PRECIPITATION AND DIFFUSION CONTRIBUTE COMPUTATION
+				acs_double tmpDiffusionContribute = createDiffusionRenforcement(diffusion_contribute, 1);
+				allSpecies.at(tmpNewSpecies).setDiffusion(tmpDiffusionContribute);
+				// IN THIS CASE SET SOLUBILITY REFERES TO THE SPECIES OBJECT
+				bool tmpSolubilityState = setSolubility(allSpecies.at(tmpNewSpecies).getSequenceLength(), tmp___RndDoubleGen);
+				allSpecies.at(tmpNewSpecies).setSolubility(tmpSolubilityState);
+				allSpecies.at(tmpNewSpecies).setKphospho(K_nrg);
+				allSpecies.at(tmpNewSpecies).setEvaluated(); // IF the reactions have not been yet created the molecules evaluation is setting on 1 and the
+				// reactions will be created below
+			}
+		}
+
+
+        //IF THE MOLECULES IS NOT YET EVALUATED
+        if(tmpAlreadyEvaluated == false) //tmpAlreadyEvaluated = false at the beginning of the function
+        {
+            acs_longInt totalNumberOfConceivableReactions = 0;
+
+            if(newSpeciesProbMinThreshold < ratioBetweenNewGillTotGill)
+            {
+				if(toEvaluate) // TO SILENT IF NEW SPECIES CREATION MUST BE AVOIDED!!!
+				{
+					// SET REACTIONS FOR THIS NEW SPECIES
+					// COPY ALL THE ALREADY EVALUATED SPECIES ID IN A TEMPORARY VECTOR
+					vector<acs_longInt> tmpAlreadyEvaluatedSpeciesVector;
+					for(acs_longInt tmpS = 0; tmpS < (acs_longInt)allSpecies.size(); tmpS++)
+					{
+						if(allSpecies.at(tmpS).getEvaluated() == 1)
+						{
+							// DEEP AND SECURE CHECK
+							if(allSpecies.at(tmpS).getComplexCutPnt() > 0)
+							{
+								ExitWithError("newSpeciesEvaluation", "A complex cannot be evaluated and involved in reactions!!!");
+							}else{
+								tmpAlreadyEvaluatedSpeciesVector.push_back(tmpS);
+							}
+						}
+					}
+
+					// COMPUTE TOTAL NUMBER OF CONCEIVABLE REACTIONS CONSIDERING ALREADY EVALUATED MOLECULES
+					for(acs_int presSpeciID = 0; presSpeciID < (acs_longInt)tmpAlreadyEvaluatedSpeciesVector.size(); presSpeciID++)
+					{
+						totalNumberOfConceivableReactions += allSpecies.at(tmpAlreadyEvaluatedSpeciesVector.at(presSpeciID)).getSequenceLength() - 1;
+					}
+					totalNumberOfConceivableReactions += pow((double)tmpAlreadyEvaluatedSpeciesVector.size(), 2.0);
+
+					if(debugLevel >= HIGH_DEBUG){printAllSpeciesIdAndSequence();}
+					if(debugLevel >= RUNNING_VERSION)
+					{
+						cout << "\t\t|-------------------------------------------------------|" << endl;
+						cout << "\t\t|- !! EVENT !! New species has been evaluated           |" << endl;
+						cout << "\t\t|- ID: " << allSpecies.at(tmpNewSpecies).getID() << " - Sequence: " << allSpecies.at(tmpNewSpecies).getSequence() << endl;
+						cout << "\t\t|- Total new number of conceivable reactions:" << totalNumberOfConceivableReactions << endl;
+					}
+
+					// COMPUTE THE REAL NUMBER OF REACTIONS FOR THIS SPECIES
+					acs_int reactionsForThisSpecies;
+					reactionsForThisSpecies = computeSngSpeciesRctsNumber(totalNumberOfConceivableReactions, tmp___RndDoubleGen);
+
+					if(debugLevel >= RUNNING_VERSION)
+					{
+						cout << "\t\t|- Number of reaction to catalyze: " << reactionsForThisSpecies << endl;
+						cout << "\t\t|-------------------------------------------------------|" << endl;
+					}
+
+					// CREATE REACTIONS FOR THIS SPECIFIC SPECIES
+					if((reactionsForThisSpecies > 0) && (allSpecies.at(tmpNewSpecies).getSolubility() == SOLUBLE))
+					{
+						if(!createReactionsForThisSpecies(tmpNewSpecies, reactionsForThisSpecies, tmp___RndDoubleGen, tmpAlreadyEvaluatedSpeciesVector, NEWREACTIONS))
+							ExitWithError("createReactionsForThisSpecies", "	|- !*!*!*! Problem with the reactions creation");
+					}
+
+					if(debugLevel >= SMALL_DEBUG){cout << "\t\t|- DONE!!! " << endl;}
+
+					// IF the new species is soluble
+					if(allSpecies.at(tmpNewSpecies).getSolubility() == SOLUBLE)
+					{
+						// ------------------------------------------
+						// NOW I HAVE TO UPDATE OLD SPECIES REACTIONS
+						// ------------------------------------------
+						// For each evaluated species
+						acs_longInt tmpIDcatalysis = 0;
+						acs_longInt tmpReactionsAlreadyCatbyThisSpecies = 0;
+						acs_longInt tmpNEWReactionsForThisOldSpecies = 0;
+						for(acs_longInt alreadyEvaID = 0; alreadyEvaID < (acs_longInt)tmpAlreadyEvaluatedSpeciesVector.size(); alreadyEvaID++)
+						{
+							// IF THE SPECIES IS NOT THE SAME OF THE SPECIES EVALUATED ABOVE
+							if(tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID) != tmpNewSpecies)
+							{
+								// UNTIL THE SPECIES ID WILL BE GREATER THAN THE EVALUATING SPECIES (in this way I don't have to go through all
+								// the vector but only until the species
+								// (acs_longInt)allCatalysis.size() > tmpIDcatalysis is necessary to avoid an "out of range" error
+								while((acs_longInt)allCatalysis.size() > tmpIDcatalysis && allCatalysis.at(tmpIDcatalysis).getCat() <= tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID))
+								{
+									// IF THE SPECIES IS WHICH WE WANT WE COUNT ALL THE REACTIONS CATALYZED BY THIS SPECIES
+									if(allCatalysis.at(tmpIDcatalysis).getCat() == tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID))
+									{
+										tmpReactionsAlreadyCatbyThisSpecies++;
+									}
+									tmpIDcatalysis++;
+								}
+								// NOW THE GAP BETWEEN THE NEW REAL NUMBER OF POSSIBLE REACTIONS AND THE NUMBER OF ALREADY PRESENT REACTIONS WILL BE FILLED UP
+								// Only species longer than nonCatalyticMaxLength can catalyse reactions!!!
+								if(allSpecies.at(tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID)).getSequenceLength() > nonCatalyticMaxLength)
+								{
+									reactionsForThisSpecies = computeSngSpeciesRctsNumber(totalNumberOfConceivableReactions, tmp___RndDoubleGen);
+								}else{
+									reactionsForThisSpecies = 0;
+								}
+
+								if(reactionsForThisSpecies > 0)
+								{
+									// COMPUTE GAP BETWEEN THE NEW NUMBER OF POSSIBLE REACTIONS AND THE REACTIONS ALREADY CATALYZED
+									if(reactionsForThisSpecies > tmpReactionsAlreadyCatbyThisSpecies)
+									{
+										//tmpNEWReactionsForThisOldSpecies = reactionsForThisSpecies - tmpReactionsAlreadyCatbyThisSpecies;
+										tmpNEWReactionsForThisOldSpecies = computeSngSpeciesRctsNumber(reactionsForThisSpecies - tmpReactionsAlreadyCatbyThisSpecies, tmp___RndDoubleGen);
+									}else{
+										tmpNEWReactionsForThisOldSpecies = 0;
+									}
+									if(debugLevel >= MEDIUM_DEBUG)
+									{
+										cout << "\t\t|- TotRcts: " << reactionsForThisSpecies << " - ";
+										cout << "AlreadyCatRcts: " << tmpReactionsAlreadyCatbyThisSpecies << " - ";
+										cout << "NewRcts: " << tmpNEWReactionsForThisOldSpecies << endl;
+									}
+
+									// IF THERE IS SOME NEW REACTION TO CREATE
+									if(tmpNEWReactionsForThisOldSpecies > 0)
+									{
+										if(!createReactionsForThisSpecies(tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID),
+																		  tmpNEWReactionsForThisOldSpecies, tmp___RndDoubleGen,
+																		  tmpAlreadyEvaluatedSpeciesVector, UPGRADEREACTIONS))
+										{
+											ExitWithError("createReactionsForThisSpecies", "	|- !*!*!*! Problem with the reactions creation");
+										}
+									}
+								}
+								tmpReactionsAlreadyCatbyThisSpecies = 0;
+							}// end not just evaluated
+						} // end for all species to upgrade the reactions network
+					} // if(allSpecies.at(tmpIdSpeciesToEvaluate).getSolubility() == SOLUBLE)
+				} // end if to evaluate
+            } // newSpeciesProbMinThreshold < ratioBetweenNewGillTotGill
+        } // tmpAlreadyEvaluated == false
+
+        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::newSpeciesEvaluationII end" << endl;
+
+    }
+    catch(exception&e)
+    {
+        cerr << "exceptioncaught:" << e.what() << endl;
+        ExitWithError("something wrong in newSpeciesEvaluationII method","exceptionerrorthrown");
     }
 
     return newSpeciesFlag;
