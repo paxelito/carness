@@ -53,6 +53,7 @@ private:
     acs_longInt endoCondensationCounter;   // Number of endoergonic condensation counter
     int overallLoadedMolsCounter;  // Total number of loaded molecules
     acs_double internalTimesStoredCounter; // Time interval to save certain structures
+    acs_int lastEvaluatedSpeceisForNewReactions; // Last species evaluated for new reactions, in such a way once that a species has been evaluated to be involved in new reactions
 
     // Kinetic Constants --------------------------
 

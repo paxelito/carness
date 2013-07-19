@@ -178,6 +178,7 @@ environment::environment(string tmpInitialPath)
     gillespieNewSpeciesScore = 0;
     ratioBetweenNewGillTotGill = 0;
     internalTimesStoredCounter = 0;
+    lastEvaluatedSpeceisForNewReactions = 0;
     // TO BE PARAMETRIZED
     Currentattempts = 0;
     resetReactionsCounter();
@@ -546,7 +547,10 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                             speciesAvailableForReactions.push_back(tmpIDOfCandidateSpecies.at(i));
                     }else{
                             // OLD SPECIES REACTIONS UPDATING PROCESS CAN INVOLVE SPECIES NEVER CONSIDERED BEFORE BY THIS SPECIES
-                            if((tmpIDOfCandidateSpecies.at(i) > ((acs_int)firingDisk.size() - 1)) && (tmpIDOfCandidateSpecies.at(i) > tmpsID))
+                    		// Species belonging to the firing disk are not considered
+                            if((tmpIDOfCandidateSpecies.at(i) > ((acs_int)firingDisk.size() - 1)) &&
+                            		(tmpIDOfCandidateSpecies.at(i) > tmpsID) &&
+                            		(tmpIDOfCandidateSpecies.at(i) > lastEvaluatedSpeceisForNewReactions))
                                     speciesAvailableForReactions.push_back(tmpIDOfCandidateSpecies.at(i));
                     }
             }else{
@@ -566,6 +570,11 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
     {
     // COPY AVALAIBLE SPECIES VECTOR INTO AVALAIBLE FOR CLEAVAGE
         speciesAvailableForCleavageReactions = speciesAvailableForReactions;
+        lastEvaluatedSpeceisForNewReactions = speciesAvailableForReactions.at(speciesAvailableForReactions.size()-1);
+        for(acs_int test=0; test < (acs_longInt)speciesAvailableForCleavageReactions.size(); test++)
+        	cout << speciesAvailableForReactions.at(test) << " ";
+        cout << endl;
+        cout << speciesAvailableForCleavageReactions.size() << " " << lastEvaluatedSpeceisForNewReactions << endl;
 
         if(debugLevel >= SMALL_DEBUG)
         {
@@ -5278,18 +5287,19 @@ bool environment::newSpeciesEvaluationII(acs_int tmpNewSpecies, MTRand& tmp___Rn
 					if(allSpecies.at(tmpNewSpecies).getSolubility() == SOLUBLE)
 					{
 						// ------------------------------------------
-						// NOW I HAVE TO UPDATE OLD SPECIES REACTIONS
+						// OLD SPECIES REACTIONS UPDATE
 						// ------------------------------------------
 						// For each evaluated species
 						acs_longInt tmpIDcatalysis = 0;
 						acs_longInt tmpReactionsAlreadyCatbyThisSpecies = 0;
 						acs_longInt tmpNEWReactionsForThisOldSpecies = 0;
+						// for each already evaluated species
 						for(acs_longInt alreadyEvaID = 0; alreadyEvaID < (acs_longInt)tmpAlreadyEvaluatedSpeciesVector.size(); alreadyEvaID++)
 						{
-							// IF THE SPECIES IS NOT THE SAME OF THE SPECIES EVALUATED ABOVE
+							// IF THE SPECIES IS NOT THE SAME OF THE SPECIES EVALUATED ABOVE (i.e. all the species but the last one)
 							if(tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID) != tmpNewSpecies)
 							{
-								// UNTIL THE SPECIES ID WILL BE GREATER THAN THE EVALUATING SPECIES (in this way I don't have to go through all
+								// UNTIL THE SPECIES IT WILL BE GREATER THAN THE EVALUATING SPECIES (in this way I don't have to go through all
 								// the vector but only until the species
 								// (acs_longInt)allCatalysis.size() > tmpIDcatalysis is necessary to avoid an "out of range" error
 								while((acs_longInt)allCatalysis.size() > tmpIDcatalysis && allCatalysis.at(tmpIDcatalysis).getCat() <= tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID))
@@ -5776,6 +5786,7 @@ void environment::clearAllStructures()
         internalTimesStoredCounter = 0;
 	setActualTime(0);
 	resetReactionsCounter();
+	lastEvaluatedSpeceisForNewReactions = 0;
 	
 }
 
