@@ -551,7 +551,10 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                             if((tmpIDOfCandidateSpecies.at(i) > ((acs_int)firingDisk.size() - 1)) &&
                             		(tmpIDOfCandidateSpecies.at(i) > tmpsID) &&
                             		(tmpIDOfCandidateSpecies.at(i) > lastEvaluatedSpeceisForNewReactions))
+                            {
                                     speciesAvailableForReactions.push_back(tmpIDOfCandidateSpecies.at(i));
+                                    cout << tmpIDOfCandidateSpecies.at(i) << " | ";
+                            }
                     }
             }else{
                     ExitWithError("createReactionsForThisSpecies", "A Complex Cannot be envolved in a reaction as product or substrate");
