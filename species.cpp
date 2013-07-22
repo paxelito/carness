@@ -32,6 +32,7 @@ species::species()
 	K_phospho = 0;
 	energizable = 0;
 	concentrationFixed = false;
+	lastSpeciesEvaluated = 0;
  
 }
 
@@ -77,6 +78,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 	}
 
     firstConcentration = 0; // 0 because the species is created during on run
+    lastSpeciesEvaluated = 0;
 
 }
 
@@ -123,6 +125,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 	}
 
     firstConcentration = 0; // 0 because the species is created during on run
+    lastSpeciesEvaluated = 0;
 }
 
 /** \brief This constructor is used when a new species is uploaded from file (TOTAL AMOUNT BASED)
@@ -163,6 +166,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 	}
 
     firstConcentration = concentration; // If the species is loaded from file that's the very initial concentration
+    lastSpeciesEvaluated = 0;
 	
 }
 
@@ -206,6 +210,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 	}
 
     firstConcentration = tmpConcentration; // If the species is loaded from file that's the very initial concentration
+    lastSpeciesEvaluated = 0;
 }
 
 /** \brief This constructor is used when a species is randomly created (!!! NOT USED NOW)
@@ -250,6 +255,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 	energizable = tmpEnergizable;
 	concentrationFixed = false;
     firstConcentration = 0; // 0 because the species is created during on run
+    lastSpeciesEvaluated = 0;
 }
 
 /** \brief This constructor is used to create a molecular complex
@@ -287,6 +293,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpDiffusionE
 	energizable = tmpEnergizable;
 	concentrationFixed = false;
     firstConcentration = 0; // 0 because the species is created during on run
+    lastSpeciesEvaluated = 0;
 }
 
 /** Function to increment the total number of molecules belonging to this species

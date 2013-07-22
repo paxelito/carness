@@ -542,20 +542,17 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
        try{
             if(allSpecies.at(tmpIDOfCandidateSpecies.at(i)).getComplexCutPnt() == 0)
             {
-                    if(tmpRctCreationType == NEWREACTIONS) // If this is a reactions for a new species
-                    {
-                            speciesAvailableForReactions.push_back(tmpIDOfCandidateSpecies.at(i));
-                    }else{
-                            // OLD SPECIES REACTIONS UPDATING PROCESS CAN INVOLVE SPECIES NEVER CONSIDERED BEFORE BY THIS SPECIES
-                    		// Species belonging to the firing disk are not considered
-                            if((tmpIDOfCandidateSpecies.at(i) > ((acs_int)firingDisk.size() - 1)) &&
-                            		(tmpIDOfCandidateSpecies.at(i) > tmpsID) &&
-                            		(tmpIDOfCandidateSpecies.at(i) > lastEvaluatedSpeceisForNewReactions))
-                            {
-                                    speciesAvailableForReactions.push_back(tmpIDOfCandidateSpecies.at(i));
-                                    cout << tmpIDOfCandidateSpecies.at(i) << " | ";
-                            }
-                    }
+				if(tmpRctCreationType == NEWREACTIONS) // If this is a reactions for a new species
+				{
+					speciesAvailableForReactions.push_back(tmpIDOfCandidateSpecies.at(i));
+				}else{
+					// OLD SPECIES REACTIONS UPDATING PROCESS CAN INVOLVE SPECIES NEVER CONSIDERED BEFORE BY THIS SPECIES
+					// Species belonging to the firing disk are not considered
+					if((tmpIDOfCandidateSpecies.at(i) > ((acs_int)firingDisk.size() - 1)) &&
+					   (tmpIDOfCandidateSpecies.at(i) > tmpsID) &&
+					   (tmpIDOfCandidateSpecies.at(i) > allSpecies.at(tmpsID).getLastSpeciesEvaluated()))
+							speciesAvailableForReactions.push_back(tmpIDOfCandidateSpecies.at(i));
+				}
             }else{
                     ExitWithError("createReactionsForThisSpecies", "A Complex Cannot be envolved in a reaction as product or substrate");
             }
@@ -573,12 +570,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
     {
     // COPY AVALAIBLE SPECIES VECTOR INTO AVALAIBLE FOR CLEAVAGE
         speciesAvailableForCleavageReactions = speciesAvailableForReactions;
-        lastEvaluatedSpeceisForNewReactions = speciesAvailableForReactions.at(speciesAvailableForReactions.size()-1);
-        for(acs_int test=0; test < (acs_longInt)speciesAvailableForCleavageReactions.size(); test++)
-        	cout << speciesAvailableForReactions.at(test) << " ";
-        cout << endl;
-        cout << speciesAvailableForCleavageReactions.size() << " " << lastEvaluatedSpeceisForNewReactions << endl;
-
+        allSpecies.at(tmpsID).setLastSpeciesEvaluated(speciesAvailableForReactions.at(speciesAvailableForReactions.size()-1));
         if(debugLevel >= SMALL_DEBUG)
         {
                 cout << "\t\t|- " << allSpecies.at(tmpsID).getID() + 1 << "th Species (ID " << allSpecies.at(tmpsID).getID() << ") - " <<
@@ -5067,8 +5059,8 @@ bool environment::newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDo
 					if(debugLevel >= HIGH_DEBUG){printAllSpeciesIdAndSequence();}
 					if(debugLevel >= RUNNING_VERSION)
 					{
-						cout << "\t\t|-------------------------------------------------------|" << endl;
-						cout << "\t\t|- !! EVENT !! New species has been evaluated           |" << endl;
+						cout << "\t\t|-------------------------------------------------------\\" << endl;
+						cout << "\t\t|- !! EVENT !! New species has been evaluated" << endl;
 						cout << "\t\t|- ID: " << allSpecies.at(tmpIdSpeciesToEvaluate).getID() << " - Sequence: " << allSpecies.at(tmpIdSpeciesToEvaluate).getSequence() << endl;
 						cout << "\t\t|- Total new number of conceivable reactions:" << totalNumberOfConceivableReactions << endl;
 					}
@@ -5080,7 +5072,7 @@ bool environment::newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDo
 					if(debugLevel >= RUNNING_VERSION)
 					{
 						cout << "\t\t|- Number of reaction to catalyze: " << reactionsForThisSpecies << endl;
-						cout << "\t\t|-------------------------------------------------------|" << endl;
+						cout << "\t\t|-------------------------------------------------------/" << endl;
 					}
 
 					// CREATE REACTIONS FOR THIS SPECIFIC SPECIES
@@ -5261,8 +5253,8 @@ bool environment::newSpeciesEvaluationII(acs_int tmpNewSpecies, MTRand& tmp___Rn
 					if(debugLevel >= HIGH_DEBUG){printAllSpeciesIdAndSequence();}
 					if(debugLevel >= RUNNING_VERSION)
 					{
-						cout << "\t\t|-------------------------------------------------------|" << endl;
-						cout << "\t\t|- !! EVENT !! New species has been evaluated           |" << endl;
+						cout << "\t\t|-------------------------------------------------------\\" << endl;
+						cout << "\t\t|- !! EVENT !! New species has been evaluated" << endl;
 						cout << "\t\t|- ID: " << allSpecies.at(tmpNewSpecies).getID() << " - Sequence: " << allSpecies.at(tmpNewSpecies).getSequence() << endl;
 						cout << "\t\t|- Total new number of conceivable reactions:" << totalNumberOfConceivableReactions << endl;
 					}
@@ -5274,7 +5266,7 @@ bool environment::newSpeciesEvaluationII(acs_int tmpNewSpecies, MTRand& tmp___Rn
 					if(debugLevel >= RUNNING_VERSION)
 					{
 						cout << "\t\t|- Number of reaction to catalyze: " << reactionsForThisSpecies << endl;
-						cout << "\t\t|-------------------------------------------------------|" << endl;
+						cout << "\t\t|-------------------------------------------------------/" << endl;
 					}
 
 					// CREATE REACTIONS FOR THIS SPECIFIC SPECIES
@@ -5530,7 +5522,7 @@ void environment::showGlobalParameter()
         cout << "|   ****         ***   *     *          *****   *****                             |" << endl;
         cout << "|  *            *   *  **    *         *       *                                  |" << endl;
         cout << "| *        ***  *   *  * *   *  ****   *       *                                  |" << endl;
-        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 4.2b20130718.54   |" << endl;
+        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 4.3b20130722.55   |" << endl;
         cout << "| *       ****  **     *   * *  ****        *       *                             |" << endl;
         cout << "|  *      *  *  * *    *    **  *           *       *                             |"  << endl;
         cout << "|   ****  ****  *  *   *     *   ***   *****   *****                              |" << endl;

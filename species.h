@@ -36,6 +36,7 @@ private:
 	acs_int energizable;				/**< This parameter indicates whether the species is energizable or not*/
 	bool concentrationFixed;			/**< This parameter indicates whether or not the species concentration may change*/
     acs_double firstConcentration;      /**< Concentration at the beginning of the simulation, > 0 for the initial species, 0 otherwise*/
+    acs_int lastSpeciesEvaluated;		/**< ID of the last species evaluated by this species for possible reactions*/
 	
 public:
 	//!< New species constructor (IN AMOUNT)
@@ -99,6 +100,7 @@ public:
 	acs_int getEnergizable()const{return energizable;}
 	bool getConcentrationFixed()const{return concentrationFixed;}
     acs_double getFirstConcentration()const{return firstConcentration;}
+    acs_int getLastSpeciesEvaluated()const{return lastSpeciesEvaluated;}
 	
 	// FUNCTIONAL FUNCTIONS
 	// Total quantity update functions (concentration is recomputed)
@@ -126,6 +128,7 @@ public:
     void resetAge(){age=0;}
     void resetReborns(){reborns=0;}
     void resetToInitConc(acs_double tmpVolume){concentration=firstConcentration; concToNum(tmpVolume);}
+    void setLastSpeciesEvaluated(acs_int tmpID){lastSpeciesEvaluated = tmpID;}
 
 
 };
