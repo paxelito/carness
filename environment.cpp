@@ -958,35 +958,38 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
         getline(myfile, strChar, '\t');
         getline(myfile, strLock, '\n');
 
-        allSpecies.push_back(species((acs_longInt)atol(strID.c_str()), strCod, (acs_double)atof(strConc.c_str()),
-                                     (acs_double)atof(strDiff.c_str()),(acs_int)atoi(strPrec.c_str()),
-                                     (acs_double)atof(strK_cpx.c_str()), (acs_int)atoi(strCpxBin.c_str()),
-                                     (acs_int)atoi(strEval.c_str()), (acs_double)atof(strAge.c_str()),atoi(strReb.c_str()), volume,
-                                     (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
-                                     (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
-                                     (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut));
-        try{
-            if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getComplexCutPnt() == 0)
-            {
-                if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0)
-                    numberOfSpecies++;
+        if(strID.find("\n") != 0)
+        {
+			allSpecies.push_back(species((acs_longInt)atol(strID.c_str()), strCod, (acs_double)atof(strConc.c_str()),
+										 (acs_double)atof(strDiff.c_str()),(acs_int)atoi(strPrec.c_str()),
+										 (acs_double)atof(strK_cpx.c_str()), (acs_int)atoi(strCpxBin.c_str()),
+										 (acs_int)atoi(strEval.c_str()), (acs_double)atof(strAge.c_str()),atoi(strReb.c_str()), volume,
+										 (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
+										 (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
+										 (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut));
+			try{
+				if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getComplexCutPnt() == 0)
+				{
+					if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0)
+						numberOfSpecies++;
 
-                numberOfMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
-                if(((acs_longInt)atoi(strID.c_str()) > lastFiringDiskSpeciesID) &&
-                   (allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0))
-                {
-                    numberOfNewSpecies++;
-                    numberOfNewMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
-                }
-            }else{ // If the species is a complex
-                incNumberOfCpx();
-                numberOfCpxMols += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
-            }
-        }catch(exception&e){
-            cout << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt()..." << endl;
-            cout << "Vectorsize " << allSpecies.size() << " - position "<< (acs_longInt)atoi(strID.c_str()) << endl;
-            cerr << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt().."<<e.what()<<endl;
-            ExitWithError("createInitialMoleculesPopulationFromFile","exceptionerrorthrown");
+					numberOfMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+					if(((acs_longInt)atoi(strID.c_str()) > lastFiringDiskSpeciesID) &&
+					   (allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0))
+					{
+						numberOfNewSpecies++;
+						numberOfNewMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+					}
+				}else{ // If the species is a complex
+					incNumberOfCpx();
+					numberOfCpxMols += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+				}
+			}catch(exception&e){
+				cout << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt()..." << endl;
+				cout << "Vectorsize " << allSpecies.size() << " - position "<< (acs_longInt)atoi(strID.c_str()) << endl;
+				cerr << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt().."<<e.what()<<endl;
+				ExitWithError("createInitialMoleculesPopulationFromFile","exceptionerrorthrown");
+			}
         }
     }
     myfile.close();
@@ -1185,35 +1188,38 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
         getline(myfile, strChar, '\t');
         getline(myfile, strLock, '\n');
 
-        allSpecies.push_back(species((acs_longInt)atol(strID.c_str()), strCod, (acs_double)atof(strConc.c_str()),
-                                     (acs_double)atof(strDiff.c_str()),(acs_int)atoi(strPrec.c_str()),
-                                     (acs_double)atof(strK_cpx.c_str()), (acs_int)atoi(strCpxBin.c_str()),
-                                     (acs_int)atoi(strEval.c_str()), (acs_double)atof(strAge.c_str()),atoi(strReb.c_str()), volume,
-                                     (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
-                                     (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
-                                     (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut));
-        try{
-            if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getComplexCutPnt() == 0)
-            {
-                if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0)
-                    numberOfSpecies++;
+        if(strID.find("\n") != 0)
+        {
+			allSpecies.push_back(species((acs_longInt)atol(strID.c_str()), strCod, (acs_double)atof(strConc.c_str()),
+										 (acs_double)atof(strDiff.c_str()),(acs_int)atoi(strPrec.c_str()),
+										 (acs_double)atof(strK_cpx.c_str()), (acs_int)atoi(strCpxBin.c_str()),
+										 (acs_int)atoi(strEval.c_str()), (acs_double)atof(strAge.c_str()),atoi(strReb.c_str()), volume,
+										 (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
+										 (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
+										 (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut));
+			try{
+				if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getComplexCutPnt() == 0)
+				{
+					if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0)
+						numberOfSpecies++;
 
-                numberOfMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
-                if(((acs_longInt)atoi(strID.c_str()) > lastFiringDiskSpeciesID) &&
-                   (allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0))
-                {
-                    numberOfNewSpecies++;
-                    numberOfNewMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
-                }
-            }else{ // If the species is a complex
-                incNumberOfCpx();
-                numberOfCpxMols += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
-            }
-        }catch(exception&e){
-            cout << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt()..." << endl;
-            cout << "Vectorsize " << allSpecies.size() << " - position "<< (acs_longInt)atoi(strID.c_str()) << endl;
-            cerr << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt().."<<e.what()<<endl;
-            ExitWithError("createInitialMoleculesPopulationFromFile","exceptionerrorthrown");
+					numberOfMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+					if(((acs_longInt)atoi(strID.c_str()) > lastFiringDiskSpeciesID) &&
+					   (allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0))
+					{
+						numberOfNewSpecies++;
+						numberOfNewMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+					}
+				}else{ // If the species is a complex
+					incNumberOfCpx();
+					numberOfCpxMols += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
+				}
+			}catch(exception&e){
+				cout << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt()..." << endl;
+				cout << "Vectorsize " << allSpecies.size() << " - position "<< (acs_longInt)atoi(strID.c_str()) << endl;
+				cerr << "allSpecies.at((acs_longInt)strLineSpletted[0].toInt()).getComplexCutPnt().."<<e.what()<<endl;
+				ExitWithError("createInitialMoleculesPopulationFromFile","exceptionerrorthrown");
+			}
         }
     }
     myfile.close();
@@ -1248,8 +1254,11 @@ bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath)
         getline(myfile, strFeedID, '\t');
         getline(myfile, strFeedProb, '\n');
 
-        nutrientsForInflux.push_back((acs_int)atoi(strFeedID.c_str()));
-        nutrientsProb2BeSelected.push_back((acs_double)atof(strFeedProb.c_str()));
+        if(strFeedID.find("\n") != 0)
+        {
+        	nutrientsForInflux.push_back((acs_int)atoi(strFeedID.c_str()));
+        	nutrientsProb2BeSelected.push_back((acs_double)atof(strFeedProb.c_str()));
+        }
 
     }
 
@@ -1277,9 +1286,11 @@ bool environment::createNrgBooleanFunctionsFromFileSTD(string tmpBoolNrgFilePath
         getline(myfile, strBoolNrgID, '\t');
         getline(myfile, strBoolNrgProb, '\n');
 
-        nrgBooleanFunctions.push_back((acs_int)atoi(strBoolNrgID.c_str()));
-        nrgBoolFncsProb2BeSelected.push_back((acs_double)atof(strBoolNrgProb.c_str()));
-
+        if(strBoolNrgID.find("\n") != 0)
+        {
+        	nrgBooleanFunctions.push_back((acs_int)atoi(strBoolNrgID.c_str()));
+        	nrgBoolFncsProb2BeSelected.push_back((acs_double)atof(strBoolNrgProb.c_str()));
+        }
     }
 
     myfile.close();
@@ -1311,7 +1322,7 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
         getline(myfile, strCnt, '\t');
         getline(myfile, strNrg, '\n');
 
-        if(!strID.empty())
+        if(strID.find("\n") != 0)
             allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
                                          (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
                                          (acs_double)atof(strNrg.c_str())));
@@ -1360,7 +1371,8 @@ bool environment::createInitialReactionsLayerFromSpecificFileSTD(string tmpReact
         getline(myfile, strCnt, '\t');
         getline(myfile, strNrg, '\n');
 
-        allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
+        if(strID.find("\n") != 0)
+        	allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
                                          (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
                                          (acs_double)atof(strNrg.c_str())));
 
@@ -1395,7 +1407,8 @@ bool environment::createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFile
         getline(myfile, strKcleav, '\t');
         getline(myfile, strKcpx, '\n');
 
-        allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
+        if(strID.find("\n") != 0)
+        	allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
                                          (acs_longInt)atol(strCounter.c_str()), (acs_double)atof(strKcond.c_str()), (acs_double)atof(strKcleav.c_str()),
                                          (acs_double)atof(strKcpx.c_str())));
 
@@ -1443,7 +1456,8 @@ bool environment::createInitialCatalysisLayerFromSpecificFileSTD(string tmpCatal
         getline(myfile, strKcleav, '\t');
         getline(myfile, strKcpx, '\n');
 
-        allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
+        if(strID.find("\n") != 0)
+        	allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
                                          (acs_longInt)atol(strCounter.c_str()), (acs_double)atof(strKcond.c_str()), (acs_double)atof(strKcleav.c_str()),
                                          (acs_double)atof(strKcpx.c_str())));
 
