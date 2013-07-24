@@ -58,6 +58,7 @@
     <member refid="classenvironment_1ad46f3ea657f0d5ff5d88df9ea5de73de" kind="variable"><name>endoCondensationCounter</name></member>
     <member refid="classenvironment_1a020780454d503563fabbd5a4ad70633b" kind="variable"><name>overallLoadedMolsCounter</name></member>
     <member refid="classenvironment_1a7d34a8ee0295c6055d1193efe5149c28" kind="variable"><name>internalTimesStoredCounter</name></member>
+    <member refid="classenvironment_1a25a0d08dc8d9db571ff4d25f57daf0e8" kind="variable"><name>lastEvaluatedSpeceisForNewReactions</name></member>
     <member refid="classenvironment_1a21a3d311736d7ae95e2433ce35d9f066" kind="variable"><name>K_ass</name></member>
     <member refid="classenvironment_1a50a5928e65632d2131cd1780dc7579ff" kind="variable"><name>K_diss</name></member>
     <member refid="classenvironment_1a5fa768dc84d3090fe415947f7ec3fb23" kind="variable"><name>K_cpx</name></member>
@@ -79,6 +80,8 @@
     <member refid="classenvironment_1a62b303983daceb0507cb23319a0ae2cc" kind="variable"><name>timeSinceTheLastInFlux</name></member>
     <member refid="classenvironment_1a4a3dac39816a04bb21ff3d941c02d7bf" kind="variable"><name>alphabet</name></member>
     <member refid="classenvironment_1a45031661384cfad1819805550e349d5f" kind="variable"><name>volume</name></member>
+    <member refid="classenvironment_1a9ebcc0afc38c9ccc9962789b9e87f6c2" kind="variable"><name>volumeGrowth</name></member>
+    <member refid="classenvironment_1a2580fae8f8d5973797574926268c1f42" kind="variable"><name>stochDivision</name></member>
     <member refid="classenvironment_1a39210b2133a2a04725d22590b1c3b9c8" kind="variable"><name>randomSeed</name></member>
     <member refid="classenvironment_1a1ada64c2cc0124f83f9112109c1bbd18" kind="variable"><name>totalPossibleNumberOfSpecies</name></member>
     <member refid="classenvironment_1a087d2cc24cd71bc5a6cfb5422023da29" kind="variable"><name>allSpecies</name></member>
@@ -224,9 +227,11 @@
     <member refid="classenvironment_1a2cb0152bf789918e7d92685f947ce48f" kind="function"><name>performGillespieComputation</name></member>
     <member refid="classenvironment_1a1db4e67ba458a54f4fab3e10a203765c" kind="function"><name>performReaction</name></member>
     <member refid="classenvironment_1aa4b3e51bd7bbb2a287f0963e261cb79b" kind="function"><name>newSpeciesEvaluation</name></member>
+    <member refid="classenvironment_1ac58fdd1a7e2880585ab9716d9db1e8e2" kind="function"><name>newSpeciesEvaluationII</name></member>
     <member refid="classenvironment_1a866ffc56a30e1b2698158a5428a1de0c" kind="function"><name>complexEvaluation</name></member>
     <member refid="classenvironment_1ae1270b9c235dd6b28413075197dba8e0" kind="function"><name>computeSinglGilScore</name></member>
     <member refid="classenvironment_1a30a0827eed2860d03d5fa5318fcf86b0" kind="function"><name>performSingleGilleSpieIntroduction</name></member>
+    <member refid="classenvironment_1a0156a2d7219396e58a930731966b0c66" kind="function"><name>changeVolume</name></member>
     <member refid="classenvironment_1a5c86f93c84f9931640843c38eccb9bf4" kind="function"><name>incNumberOfSpecies</name></member>
     <member refid="classenvironment_1a69a926e0b9bb4f4b29876d0e45b54d84" kind="function"><name>decNumberOfSpecies</name></member>
     <member refid="classenvironment_1ae356db3b6ee374b998e9f041216b4b75" kind="function"><name>incNumberOfMols</name></member>
@@ -415,6 +420,7 @@
     <member refid="classspecies_1af59d3c9a137190360afa9bf05043bce1" kind="variable"><name>energizable</name></member>
     <member refid="classspecies_1adabdbcb062f03b3dced7d6d70133bb24" kind="variable"><name>concentrationFixed</name></member>
     <member refid="classspecies_1a468ac12f40c09c0645eec6f493e017ef" kind="variable"><name>firstConcentration</name></member>
+    <member refid="classspecies_1a347af9ca8552b15b1045ea861e8d095f" kind="variable"><name>lastSpeciesEvaluated</name></member>
     <member refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kind="function"><name>species</name></member>
     <member refid="classspecies_1a2c407091ff53f0d508b7b9ed8230eee4" kind="function"><name>species</name></member>
     <member refid="classspecies_1a0c91a8b735cb484bff240ba5049f6af3" kind="function"><name>species</name></member>
@@ -444,6 +450,7 @@
     <member refid="classspecies_1ad234e523f16507008b64f2d872d9792f" kind="function"><name>getEnergizable</name></member>
     <member refid="classspecies_1aa2b24de5a97f1e06d359ab5b63817d98" kind="function"><name>getConcentrationFixed</name></member>
     <member refid="classspecies_1a6773ef96109c27ddd4afa78b87b2fcd3" kind="function"><name>getFirstConcentration</name></member>
+    <member refid="classspecies_1ace7de26d4e33dddfa78f2c624cfb3666" kind="function"><name>getLastSpeciesEvaluated</name></member>
     <member refid="classspecies_1a77f68017e5c50f8943df90efd2e8a0bb" kind="function"><name>increment</name></member>
     <member refid="classspecies_1a87e85a2397e5ec34518efa235b529d7e" kind="function"><name>specificIncrement</name></member>
     <member refid="classspecies_1abefdc30b6f352e5ce5576a610015f5b8" kind="function"><name>setAmount</name></member>
@@ -464,6 +471,7 @@
     <member refid="classspecies_1a911d4db36e84690d19abb2902a734524" kind="function"><name>resetAge</name></member>
     <member refid="classspecies_1a4884d8bce59ddb79e87e08f3ed16633f" kind="function"><name>resetReborns</name></member>
     <member refid="classspecies_1acc180a103e6681da2add266aafda3eb9" kind="function"><name>resetToInitConc</name></member>
+    <member refid="classspecies_1a8daa007da55f042b9c436f956836f4d8" kind="function"><name>setLastSpeciesEvaluated</name></member>
   </compound>
   <compound refid="namespacebuffered_flux_analysis" kind="namespace"><name>bufferedFluxAnalysis</name>
     <member refid="namespacebuffered_flux_analysis_1a86b649a1e51f1e3384ad432c0de3340b" kind="variable"><name>StrPath</name></member>
@@ -1499,6 +1507,7 @@
     <member refid="common_functions_8cpp_1a1a13653eb649b6fc74090deecddf1028" kind="function"><name>dec2bin</name></member>
     <member refid="common_functions_8cpp_1aa678d0a98232158c48108227b98de4b6" kind="function"><name>ExitWithError</name></member>
     <member refid="common_functions_8cpp_1a4d1aa74fac80ae0275c056575fdb6626" kind="function"><name>split</name></member>
+    <member refid="common_functions_8cpp_1aed580149796de6350e6fcfae9b2adb30" kind="function"><name>fromStrToBool</name></member>
   </compound>
   <compound refid="common_functions_8h" kind="file"><name>commonFunctions.h</name>
     <member refid="common_functions_8h_1ab210458a0dbaa0cc2f245926c7aa82ef" kind="function"><name>returnSelectionIdFromAWeightProbVector</name></member>
@@ -1513,6 +1522,7 @@
     <member refid="common_functions_8h_1a1a13653eb649b6fc74090deecddf1028" kind="function"><name>dec2bin</name></member>
     <member refid="common_functions_8h_1a4d1aa74fac80ae0275c056575fdb6626" kind="function"><name>split</name></member>
     <member refid="common_functions_8h_1aa678d0a98232158c48108227b98de4b6" kind="function"><name>ExitWithError</name></member>
+    <member refid="common_functions_8h_1aed580149796de6350e6fcfae9b2adb30" kind="function"><name>fromStrToBool</name></member>
   </compound>
   <compound refid="catalysis_8d" kind="file"><name>catalysis.d</name>
   </compound>

@@ -1,4 +1,4 @@
-.TH "species" 3 "Mon Jul 8 2013" "Version 4.1 (20130708.53)" "CaRNeSS" \" -*- nroff -*-
+.TH "species" 3 "Wed Jul 24 2013" "Version 4.3 (20130719.55)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -109,6 +109,9 @@ This class contains declarations of the species class\&.
 .RI "\fBacs_double\fP \fBgetFirstConcentration\fP () const "
 .br
 .ti -1c
+.RI "\fBacs_int\fP \fBgetLastSpeciesEvaluated\fP () const "
+.br
+.ti -1c
 .RI "void \fBincrement\fP (\fBacs_double\fP tmpVolume)"
 .br
 .ti -1c
@@ -167,6 +170,9 @@ This class contains declarations of the species class\&.
 .br
 .ti -1c
 .RI "void \fBresetToInitConc\fP (\fBacs_double\fP tmpVolume)"
+.br
+.ti -1c
+.RI "void \fBsetLastSpeciesEvaluated\fP (\fBacs_int\fP tmpID)"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -242,7 +248,7 @@ New species constructor (IN CONCENTRATION) This constructor is used each time a 
 .PP
 
 .PP
-Definition at line 51 of file species\&.cpp\&.
+Definition at line 52 of file species\&.cpp\&.
 .SS "species::species (\fBacs_longInt\fPtmpID, stringtmpSequence, \fBacs_double\fPtmpConcentration, \fBacs_double\fPtmpDiffusionEnh, \fBacs_int\fPtmpSoluble, \fBacs_double\fPtmpComplexDegEnh, \fBacs_int\fPtmpComplexCuttingPoint, \fBacs_int\fPtmpEvalueted, \fBacs_double\fPtmpVolume, \fBacs_double\fPtmpK_phospho, \fBacs_int\fPtmpEnergizable, \fBacs_double\fPtmpInflux_rate, \fBacs_int\fPtmpMaxLOut)"
 
 .PP
@@ -275,7 +281,7 @@ New species constructor in case of species structure file upload (IN AMOUNT) Thi
 .PP
 
 .PP
-Definition at line 96 of file species\&.cpp\&.
+Definition at line 98 of file species\&.cpp\&.
 .SS "species::species (\fBacs_longInt\fPtmpID, stringtmpSequence, \fBacs_longInt\fPtmpAmount, \fBacs_double\fPtmpDiffusionEnh, \fBacs_int\fPtmpSoluble, \fBacs_double\fPtmpComplexDegEnh, \fBacs_int\fPtmpComplexCuttingPoint, \fBacs_int\fPtmpEvalueted, \fBacs_double\fPtmpAge, \fBacs_int\fPtmpReborns, \fBacs_double\fPtmpVolume, \fBacs_longInt\fPtmpNotUsedCatID, \fBacs_longInt\fPtmpNotUsedSubID, \fBacs_double\fPtmpK_phospho, \fBacs_int\fPtmpEnergizable, \fBacs_double\fPtmpInflux_rate, \fBacs_int\fPtmpMaxLOut)"
 
 .PP
@@ -294,7 +300,7 @@ New species constructor in case of species structure file upload (IN CONCENTRATI
 .PP
 
 .PP
-Definition at line 134 of file species\&.cpp\&.
+Definition at line 137 of file species\&.cpp\&.
 .SS "species::species (\fBacs_longInt\fPtmpID, stringtmpSequence, \fBacs_double\fPtmpConcentration, \fBacs_double\fPtmpDiffusionEnh, \fBacs_int\fPtmpSoluble, \fBacs_double\fPtmpComplexDegEnh, \fBacs_int\fPtmpComplexCuttingPoint, \fBacs_int\fPtmpEvalueted, \fBacs_double\fPtmpAge, \fBacs_int\fPtmpReborns, \fBacs_double\fPtmpVolume, \fBacs_longInt\fPtmpNotUsedCatID, \fBacs_longInt\fPtmpNotUsedSubID, \fBacs_double\fPtmpK_phospho, \fBacs_double\fPtmpKLoadConc, \fBacs_int\fPtmpEnergizable, \fBacs_double\fPtmpInflux_rate, \fBacs_int\fPtmpMaxLOut)"
 
 .PP
@@ -313,7 +319,7 @@ New random species constructor\&. This constructor is used when a new species is
 .PP
 
 .PP
-Definition at line 175 of file species\&.cpp\&.
+Definition at line 179 of file species\&.cpp\&.
 .SS "species::species (\fBacs_longInt\fPtmpID, stringtmpSequence, \fBacs_longInt\fPtmpAmount, \fBacs_double\fPtmpDiffusionEnh, \fBacs_int\fPtmpSoluble, \fBacs_double\fPtmpComplexProb, \fBacs_double\fPtmpMaxComplexDegKinetic, \fBMTRand\fP &tmp_RandomGenerator, \fBacs_double\fPtmpVolume, \fBacs_double\fPtmpK_phospho, \fBacs_int\fPtmpEnergizable)"
 
 .PP
@@ -345,7 +351,7 @@ new Complex species constructor This constructor is used when a species is rando
 .PP
 
 .PP
-Definition at line 222 of file species\&.cpp\&.
+Definition at line 227 of file species\&.cpp\&.
 .SS "species::species (\fBacs_longInt\fPtmpID, stringtmpSequence, \fBacs_double\fPtmpDiffusionEnh, \fBacs_int\fPtmpSoluble, \fBacs_double\fPtmpMaxComplexDegKinetic, \fBacs_int\fPtmpCuttingPoint, \fBMTRand\fP &tmp_RandomGenerator, \fBacs_longInt\fPtmpCatalyst_ID, \fBacs_longInt\fPtmpSubstrate_ID, \fBacs_double\fPtmpVolume, \fBacs_double\fPtmpK_phospho, \fBacs_int\fPtmpEnergizable)"
 
 .PP
@@ -379,177 +385,185 @@ This constructor is used to create a molecular complex\&.
 .PP
 
 .PP
-Definition at line 267 of file species\&.cpp\&.
+Definition at line 273 of file species\&.cpp\&.
 .SS "species::~species ()\fC [inline]\fP"
 
 .PP
-Definition at line 78 of file species\&.h\&.
+Definition at line 79 of file species\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "bool species::chargeMol ()"
 to charge molecules 
 .PP
-Definition at line 342 of file species\&.cpp\&.
+Definition at line 349 of file species\&.cpp\&.
 .SS "void species::concToNum (\fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 123 of file species\&.h\&.
+Definition at line 125 of file species\&.h\&.
 .SS "void species::decrement (\fBacs_double\fPtmpVolume)"
 Function to decrement the total number of molecules belonging to this species 
 .PP
-Definition at line 305 of file species\&.cpp\&.
+Definition at line 312 of file species\&.cpp\&.
 .SS "\fBacs_double\fP species::getAge () const\fC [inline]\fP"
 
 .PP
-Definition at line 89 of file species\&.h\&.
+Definition at line 90 of file species\&.h\&.
 .SS "\fBacs_longInt\fP species::getAmount () const\fC [inline]\fP"
 
 .PP
-Definition at line 84 of file species\&.h\&.
+Definition at line 85 of file species\&.h\&.
 .SS "\fBacs_longInt\fP species::getCatalyst_ID () const\fC [inline]\fP"
 
 .PP
-Definition at line 96 of file species\&.h\&.
+Definition at line 97 of file species\&.h\&.
 .SS "\fBacs_longInt\fP species::getChargeMols () const\fC [inline]\fP"
 
 .PP
-Definition at line 86 of file species\&.h\&.
+Definition at line 87 of file species\&.h\&.
 .SS "\fBacs_int\fP species::getComplexCutPnt () const\fC [inline]\fP"
 
 .PP
-Definition at line 94 of file species\&.h\&.
+Definition at line 95 of file species\&.h\&.
 .SS "\fBacs_double\fP species::getComplexDegEnh () const\fC [inline]\fP"
 
 .PP
-Definition at line 93 of file species\&.h\&.
+Definition at line 94 of file species\&.h\&.
 .SS "\fBacs_double\fP species::getConcentration () const\fC [inline]\fP"
 
 .PP
-Definition at line 87 of file species\&.h\&.
+Definition at line 88 of file species\&.h\&.
 .SS "bool species::getConcentrationFixed () const\fC [inline]\fP"
 
 .PP
-Definition at line 100 of file species\&.h\&.
+Definition at line 101 of file species\&.h\&.
 .SS "\fBacs_double\fP species::getDiffusionEnh () const\fC [inline]\fP"
 
 .PP
-Definition at line 91 of file species\&.h\&.
+Definition at line 92 of file species\&.h\&.
 .SS "\fBacs_int\fP species::getEnergizable () const\fC [inline]\fP"
 
 .PP
-Definition at line 99 of file species\&.h\&.
+Definition at line 100 of file species\&.h\&.
 .SS "\fBacs_int\fP species::getEvaluated () const\fC [inline]\fP"
 
 .PP
-Definition at line 95 of file species\&.h\&.
+Definition at line 96 of file species\&.h\&.
 .SS "\fBacs_double\fP species::getFirstConcentration () const\fC [inline]\fP"
 
 .PP
-Definition at line 101 of file species\&.h\&.
+Definition at line 102 of file species\&.h\&.
 .SS "\fBacs_longInt\fP species::getID () const\fC [inline]\fP"
 
 .PP
-Definition at line 81 of file species\&.h\&.
+Definition at line 82 of file species\&.h\&.
 .SS "\fBacs_double\fP species::getK_phospho () const\fC [inline]\fP"
 
 .PP
-Definition at line 98 of file species\&.h\&.
+Definition at line 99 of file species\&.h\&.
+.SS "\fBacs_int\fP species::getLastSpeciesEvaluated () const\fC [inline]\fP"
+
+.PP
+Definition at line 103 of file species\&.h\&.
 .SS "\fBacs_double\fP species::getLoadedConcentration (\fBacs_double\fPtmpVolume)"
 return the concentration of the loaded molecules 
 .PP
-Definition at line 369 of file species\&.cpp\&.
+Definition at line 376 of file species\&.cpp\&.
 .SS "\fBacs_longInt\fP species::getNOTchargeMols () const\fC [inline]\fP"
 
 .PP
-Definition at line 85 of file species\&.h\&.
+Definition at line 86 of file species\&.h\&.
 .SS "\fBacs_int\fP species::getReborns () const\fC [inline]\fP"
 
 .PP
-Definition at line 90 of file species\&.h\&.
+Definition at line 91 of file species\&.h\&.
 .SS "string species::getSequence () const\fC [inline]\fP"
 
 .PP
-Definition at line 82 of file species\&.h\&.
+Definition at line 83 of file species\&.h\&.
 .SS "\fBacs_int\fP species::getSequenceLength () const\fC [inline]\fP"
 
 .PP
-Definition at line 83 of file species\&.h\&.
+Definition at line 84 of file species\&.h\&.
 .SS "\fBacs_int\fP species::getSolubility () const\fC [inline]\fP"
 
 .PP
-Definition at line 92 of file species\&.h\&.
+Definition at line 93 of file species\&.h\&.
 .SS "\fBacs_longInt\fP species::getSubstrate_ID () const\fC [inline]\fP"
 
 .PP
-Definition at line 97 of file species\&.h\&.
+Definition at line 98 of file species\&.h\&.
 .SS "void species::increment (\fBacs_double\fPtmpVolume)"
 Function to increment the total number of molecules belonging to this species 
 .PP
-Definition at line 294 of file species\&.cpp\&.
+Definition at line 301 of file species\&.cpp\&.
 .SS "void species::numToConc (\fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 124 of file species\&.h\&.
+Definition at line 126 of file species\&.h\&.
 .SS "void species::rebornsIncrement ()\fC [inline]\fP"
 
 .PP
-Definition at line 121 of file species\&.h\&.
+Definition at line 123 of file species\&.h\&.
 .SS "void species::resetAge ()\fC [inline]\fP"
 
 .PP
-Definition at line 126 of file species\&.h\&.
+Definition at line 128 of file species\&.h\&.
 .SS "void species::resetReborns ()\fC [inline]\fP"
 
 .PP
-Definition at line 127 of file species\&.h\&.
+Definition at line 129 of file species\&.h\&.
 .SS "void species::resetToInitConc (\fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 128 of file species\&.h\&.
+Definition at line 130 of file species\&.h\&.
 .SS "void species::setAmount (\fBacs_int\fPtmpAmount, \fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 107 of file species\&.h\&.
+Definition at line 109 of file species\&.h\&.
 .SS "bool species::setChargeMols (\fBacs_int\fPtmpMolsToCharge)"
 to charge a specific number of molecules 
 .PP
-Definition at line 329 of file species\&.cpp\&.
+Definition at line 336 of file species\&.cpp\&.
 .SS "void species::setConcentration (\fBacs_double\fPtmpConc, \fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 108 of file species\&.h\&.
+Definition at line 110 of file species\&.h\&.
 .SS "void species::setDiffusion (\fBacs_double\fPtmpDiff)\fC [inline]\fP"
 
 .PP
-Definition at line 117 of file species\&.h\&.
+Definition at line 119 of file species\&.h\&.
 .SS "void species::setEvaluated ()\fC [inline]\fP"
 
 .PP
-Definition at line 116 of file species\&.h\&.
+Definition at line 118 of file species\&.h\&.
 .SS "void species::setKphospho (\fBacs_double\fPtmpKphospho)\fC [inline]\fP"
 
 .PP
-Definition at line 119 of file species\&.h\&.
+Definition at line 121 of file species\&.h\&.
+.SS "void species::setLastSpeciesEvaluated (\fBacs_int\fPtmpID)\fC [inline]\fP"
+
+.PP
+Definition at line 131 of file species\&.h\&.
 .SS "void species::setNewAge (\fBacs_double\fPtmpLastTimeInterval)\fC [inline]\fP"
 
 .PP
-Definition at line 120 of file species\&.h\&.
+Definition at line 122 of file species\&.h\&.
 .SS "void species::setSolubility (\fBacs_int\fPtmpSol)\fC [inline]\fP"
 
 .PP
-Definition at line 118 of file species\&.h\&.
+Definition at line 120 of file species\&.h\&.
 .SS "bool species::setSpecificChargeMols (\fBacs_int\fPtmpMolsToCharge)"
 to charge a specific number of molecules 
 .PP
-Definition at line 316 of file species\&.cpp\&.
+Definition at line 323 of file species\&.cpp\&.
 .SS "void species::specificIncrement (\fBacs_int\fPtmpIncrement, \fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 106 of file species\&.h\&.
+Definition at line 108 of file species\&.h\&.
 .SS "bool species::unchargeMol ()"
 to uncharge molecules 
 .PP
-Definition at line 357 of file species\&.cpp\&.
+Definition at line 364 of file species\&.cpp\&.
 
 .SH "Author"
 .PP 

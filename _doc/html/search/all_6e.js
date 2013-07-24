@@ -7,6 +7,7 @@ var searchData=
   ['newdir',['newdir',['../namespacebuffered_flux_analysis.html#a90d7a1a691a7ba3f095a06b940e152c9',1,'bufferedFluxAnalysis']]],
   ['newreactions',['NEWREACTIONS',['../acs__headers_8h.html#afb2a947dfb1847f71649f82bc1bf0292',1,'acs_headers.h']]],
   ['newspeciesevaluation',['newSpeciesEvaluation',['../classenvironment.html#aa4b3e51bd7bbb2a287f0963e261cb79b',1,'environment']]],
+  ['newspeciesevaluationii',['newSpeciesEvaluationII',['../classenvironment.html#ac58fdd1a7e2880585ab9716d9db1e8e2',1,'environment']]],
   ['newspeciesprob',['newSpeciesProb',['../general_concentration_over_threshold_8m.html#aa66147edba72bc0b9cf591cd7475396f',1,'generalConcentrationOverThreshold.m']]],
   ['nfile',['nFile',['../conc_analysis_8m.html#a0df074de7bfa18238647c0c8b555316e',1,'concAnalysis.m']]],
   ['ngen',['nGEN',['../start_8m.html#a4af22ee598eb5fcc4d0ff8439823e600',1,'start.m']]],

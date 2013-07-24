@@ -61,6 +61,7 @@ var searchData=
   ['getkirrad',['getKirrad',['../classenvironment.html#a4c163b36e84cd8406aff4ab5d220a251',1,'environment']]],
   ['getknrg',['getKnrg',['../classenvironment.html#a7615c746521a592ff1ab2d0793b14d89',1,'environment']]],
   ['getlastfiringdiskspeciesid',['getLastFiringDiskSpeciesID',['../classenvironment.html#a984f79e5f89b774b65db901899687ac0',1,'environment']]],
+  ['getlastspeciesevaluated',['getLastSpeciesEvaluated',['../classspecies.html#ace7de26d4e33dddfa78f2c624cfb3666',1,'species']]],
   ['getloadedconcentration',['getLoadedConcentration',['../classspecies.html#ab930176d793e5d3b8ce984013d0e0328',1,'species']]],
   ['getmaxattempts',['getMAXattempts',['../classenvironment.html#ae626b961a53eeb5e08b4190da235e8dd',1,'environment']]],
   ['getmaxhours',['getMAXhours',['../classenvironment.html#af2b482132fc3ab299118f7a894bd53a2',1,'environment']]],

@@ -27,6 +27,7 @@ var searchData=
   ['setdiffusion',['setDiffusion',['../classspecies.html#ab4b4adbc3c26e3a8c81a090c9d1330e3',1,'species']]],
   ['setevaluated',['setEvaluated',['../classspecies.html#a089da38f8016bd588fa262cd836d1c4d',1,'species']]],
   ['setkphospho',['setKphospho',['../classspecies.html#a4d33fdb252e1884841f9c671ce25973c',1,'species']]],
+  ['setlastspeciesevaluated',['setLastSpeciesEvaluated',['../classspecies.html#a8daa007da55f042b9c436f956836f4d8',1,'species']]],
   ['setlivingspeciesidsandamounts',['setLivingSpeciesIDsAndAmounts',['../classenvironment.html#a4fb98d7cad06ef479e2643785231feb9',1,'environment']]],
   ['setnewage',['setNewAge',['../classspecies.html#aa73ab15fb28aefd3b0c6b19e7c9bb944',1,'species']]],
   ['setnotchargedandchargedspeciesidsandamounts',['setNotChargedAndChargedSpeciesIDsAndAmounts',['../classenvironment.html#ac5528a39937cdc76f0dd23c27542110c',1,'environment']]],

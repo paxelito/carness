@@ -2,6 +2,7 @@ var common_functions_8cpp =
 [
     [ "dec2bin", "common_functions_8cpp.html#a1a13653eb649b6fc74090deecddf1028", null ],
     [ "ExitWithError", "common_functions_8cpp.html#aa678d0a98232158c48108227b98de4b6", null ],
+    [ "fromStrToBool", "common_functions_8cpp.html#aed580149796de6350e6fcfae9b2adb30", null ],
     [ "getDoubleRandom", "common_functions_8cpp.html#aed308af1d3ee40e106e4e23e78644d07", null ],
     [ "getIntRandom", "common_functions_8cpp.html#a6d28311eff309499e66efb5d39a035f4", null ],
     [ "random_binomial", "common_functions_8cpp.html#a78d5b4a67b6e66b8ceaa85874a2a12b7", null ],

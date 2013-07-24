@@ -1,4 +1,4 @@
-.TH "/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" 3 "Mon Jul 8 2013" "Version 4.1 (20130708.53)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" 3 "Wed Jul 24 2013" "Version 4.3 (20130719.55)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -49,6 +49,9 @@
 .ti -1c
 .RI "bool \fBExitWithError\fP (string strFunctionName, string strError)"
 .br
+.ti -1c
+.RI "bool \fBfromStrToBool\fP (string const &string)"
+.br
 .in -1c
 .SH "Function Documentation"
 .PP 
@@ -60,6 +63,10 @@ Definition at line 241 of file commonFunctions\&.cpp\&.
 Function to close the program after having en error 
 .PP
 Definition at line 269 of file commonFunctions\&.cpp\&.
+.SS "bool fromStrToBool (string const &string)"
+Function to convert from string to boolean 
+.PP
+Definition at line 302 of file commonFunctions\&.cpp\&.
 .SS "\fBacs_double\fP getDoubleRandom (\fBacs_double\fPtmpFromNum, \fBacs_double\fPtmpToNum, \fBMTRand\fP &tmpRandomGenerator)"
 
 .PP
