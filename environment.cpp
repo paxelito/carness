@@ -2682,32 +2682,27 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
 								if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[1] == TRUENRG))
 								if(checkAvailability(mid, temp_mol_II, temp_catAmount_charged, temp_substrateAmount_charged))
 									performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
-											temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,
-											true);
+											temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,true);
 
 								// CATALYST LOADED, SUBSTRATE NOT LOADED (+ - ...)
 								if((nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG))
 										performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
-																												temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID,
-																												false);
+																			temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID,false);
 
 								// CATALYST NOT LOADED, SUBSTRATE LOADED (- + ...)
 								if((nrgBooleanFunction[4] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
 										performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
-																												temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,
-																												false);
+																			temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID, false);
 
 								// CATALYST NOT LOADED, SUBSTRATE NOT LOADED (- - ...)
 								if((nrgBooleanFunction[6] == TRUENRG) || (nrgBooleanFunction[7] == TRUENRG))
 									if(checkAvailability(mid, temp_mol_II, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
 										performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, mid, temp_mol_II, idCat, COMPLEXFORMATION,
-											temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-											true);
+											temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,true);
 							}else{ // NO ENERGY
 							   if(checkAvailability(mid, temp_mol_II, temp_catAmount_TOT, temp_substrateAmount_TOT))
 									performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, mid, temp_mol_II, idCat, COMPLEXFORMATION,
-										   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-										   true);
+										   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,true);
 							} // end if(nrgBoolFlag == ENERGYBASED)
 						} // end if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION)
 					} // end if(allCatalysis.at(idCat).getCat() == mid)
@@ -3133,30 +3128,45 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
                     " mol2: " << allReactions.at(allCatalysis.at(tmpIDCatalysis).getReactionID()).getSpecies_II() <<
                     " mol3: " << allReactions.at(allCatalysis.at(tmpIDCatalysis).getReactionID()).getSpecies_III() << endl;
 
-            allGillespieScores.push_back(gillespie((acs_longInt)allGillespieScores.size(),
-                                            tmp__rctType, temp_score, tmpMol_I, tmpMol_II,
-                                            tmpMol_III, tmpMol_IV, tmp_NRGDirection, tmpRctID,
-                                            tmpIDCatalysis));
-            gillespieTotalScore += temp_score;
-            gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
-            // If the theoretical product is not evaluated gillespieNewSpeciesScore is incremented
-            if((tmp__rctType == CONDENSATION) || (tmp__rctType == ENDO_CONDENSATION))
+            // Check whether the gillespie new entry is already present, if not new entry will be added
+            bool gillAlreadyPresent = false;
+            if(allGillespieScores.size() > 0)
             {
-                // IN the case of condensation molIII is the product, in the reaction structure molIII is a substrate but this subroutine is the product, mol_I is che complex and mol_II is the second substrate
-                if(allSpecies.at(tmpMol_III).getEvaluated() == 0)
-                    gillespieNewSpeciesScore += temp_score;
-            }else if((tmp__rctType == CLEAVAGE) || (tmp__rctType == ENDO_CLEAVAGE))
-            {
-                // In the case of cleavage molII and molIII are products
-                if((allSpecies.at(tmpMol_II).getEvaluated() == 0) || (allSpecies.at(tmpMol_III).getEvaluated() == 0))
-                    gillespieNewSpeciesScore += temp_score;
-            }
+                for(vector<gillespie>::iterator tmpAllGillIter = allGillespieScores.begin(); tmpAllGillIter != allGillespieScores.end(); tmpAllGillIter++)
+                {
+                    if((tmpAllGillIter->getMolI() == tmpMol_I) && (tmpAllGillIter->getMolII() == tmpMol_II) && (tmpAllGillIter->getIdReactionType() == tmp__rctType))
+                    	gillAlreadyPresent = true;
+                    if(gillAlreadyPresent) break;
+                }
 
-            if( ((tmp__rctType == CLEAVAGE || tmp__rctType == ENDO_CLEAVAGE) && (allReactions.at(tmpRctID).getType() == CONDENSATION))
-                 ||
-                ((tmp__rctType == CONDENSATION || tmp__rctType == ENDO_CONDENSATION) && (allReactions.at(tmpRctID).getType() == CLEAVAGE)) )
+            }
+            if(!gillAlreadyPresent)
             {
-                reverseReactionsGillScore += temp_score;
+				allGillespieScores.push_back(gillespie((acs_longInt)allGillespieScores.size(),
+											tmp__rctType, temp_score, tmpMol_I, tmpMol_II,
+											tmpMol_III, tmpMol_IV, tmp_NRGDirection, tmpRctID,
+											tmpIDCatalysis));
+				gillespieTotalScore += temp_score;
+				gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
+				// If the theoretical product is not evaluated gillespieNewSpeciesScore is incremented
+				if((tmp__rctType == CONDENSATION) || (tmp__rctType == ENDO_CONDENSATION))
+				{
+					// IN the case of condensation molIII is the product, in the reaction structure molIII is a substrate but this subroutine is the product, mol_I is che complex and mol_II is the second substrate
+					if(allSpecies.at(tmpMol_III).getEvaluated() == 0)
+						gillespieNewSpeciesScore += temp_score;
+				}else if((tmp__rctType == CLEAVAGE) || (tmp__rctType == ENDO_CLEAVAGE))
+				{
+					// In the case of cleavage molII and molIII are products
+					if((allSpecies.at(tmpMol_II).getEvaluated() == 0) || (allSpecies.at(tmpMol_III).getEvaluated() == 0))
+						gillespieNewSpeciesScore += temp_score;
+				}
+
+				if( ((tmp__rctType == CLEAVAGE || tmp__rctType == ENDO_CLEAVAGE) && (allReactions.at(tmpRctID).getType() == CONDENSATION))
+					 ||
+					((tmp__rctType == CONDENSATION || tmp__rctType == ENDO_CONDENSATION) && (allReactions.at(tmpRctID).getType() == CLEAVAGE)) )
+				{
+					reverseReactionsGillScore += temp_score;
+				}
             }
         }
     }

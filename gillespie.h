@@ -12,16 +12,16 @@
 class gillespie
 {
 private:
-        acs_longInt id_u; /**<  ID */
-        acs_int idReactionType; /**<  Reaction type (go to acs_header.h for more informations) */
-        acs_double score; /**<  Single Gillespie propensity */
-        acs_longInt molI; /**<  According to the specific reaction type molI,II,III and IV represents different species (catalyst rather than substract...) */
+	acs_longInt id_u; /**<  ID */
+	acs_int idReactionType; /**<  Reaction type (go to acs_header.h for more informations) */
+	acs_double score; /**<  Single Gillespie propensity */
+	acs_longInt molI; /**<  According to the specific reaction type molI,II,III and IV represents different species (catalyst rather than substract...) */
 	acs_longInt molII;
 	acs_longInt molIII;
 	acs_longInt molIV;
-        acs_longInt idReaction; /**<  reactions object foreing key */
-        acs_longInt idCatalysis; /**<  catalysis object foreing key */
-        acs_int nrgSide; /**<  catalystLoaded, SubstrateLoaded, BothLoaded, NOenergy */
+	acs_longInt idReaction; /**<  reactions object foreing key */
+	acs_longInt idCatalysis; /**<  catalysis object foreing key */
+	acs_int nrgSide; /**<  catalystLoaded, SubstrateLoaded, BothLoaded, NOenergy */
 public: 
 	gillespie();
 	gillespie(acs_longInt tmpIDU, acs_int tmpIdReactionType, acs_double tmpScore, 
