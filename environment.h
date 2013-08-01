@@ -34,7 +34,6 @@ private:
     acs_int lastFiringDiskSpeciesID; // ID of the last species of the firing disk
     acs_double overallConcentration; // initial overall concentration
     acs_double ECConcentration; // Energie Carriers concentration
-    bool complexFormationSymmetry; // Whether or not both substrates can form complexes
     acs_int nonCatalyticMaxLength; // Max length of the NON catalytic species
     acs_double reactionProbability; // Reaction probability
     acs_double cleavageProbability; // Cleavage probability (when new reactions are created)
@@ -152,7 +151,6 @@ private:
     acs_double getFileTimesSavingInterval()const{return fileTimesSaveInterval;}
 	acs_int getLastFiringDiskSpeciesID()const{return lastFiringDiskSpeciesID;}
 	acs_double getOverallConcentration()const{return overallConcentration;}
-	bool getComplexFormationSymmetry()const{return complexFormationSymmetry;}
 	acs_int getMaxNonCatalyticLength()const{return nonCatalyticMaxLength;}
 	acs_double getRctProb()const{return reactionProbability;}
 	acs_double getCleavProb()const{return cleavageProbability;}
@@ -200,6 +198,7 @@ private:
 	acs_double getRandomSeed()const{return randomSeed;}
     vector<species> getMoleculesPopulation()const{return allSpecies;}
 	acs_longInt getTotalNumberOfSpecies();
+	acs_longInt getTotalNumberOfPossibleCatalysts();
 	acs_longInt getTotalNumberOfMolecules();
 	acs_longInt getTotalNumberOfComplexSpecies();
 	acs_longInt getTotalNumberOfComplexes();
@@ -246,6 +245,7 @@ private:
 	acs_int computeSngSpeciesRctsNumber(acs_longInt tmpTotalNumberOfReactions, MTRand& tmpRndDoubleGen);
 	acs_int selectWhetherCleavageOrCond(MTRand& tmp__RndDoubleGen);
     bool createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpReactionsForThisSpecies, MTRand& tmp_RndDoubleGen, vector<acs_longInt>& tmpIDOfCandidateSpecies, acs_int tmpRctCreationType);
+    bool updateReactions(acs_longInt tmpIDtoUpdate, acs_longInt tmpNewSpecies, acs_int tmpRctType, vector<acs_longInt>& tmp_AlreadyEvaluatedSpeciesVector,  MTRand& tmp_RndDoubleGen);
 	acs_double createDiffusionRenforcement(acs_double tmpDiffEnh, acs_int tmpNewSpeciesLength);
 	bool setSolubility(acs_int tmpNewSpeciesLength, MTRand& tmpRndDoubleGen);
 	//TR acs_longInt createInitialAmount(int tmpAlphabetLength, int tmpSpeciesLength);
@@ -255,8 +255,7 @@ private:
 	bool checkIfTheReactionIsAlreadyCatalyzedByThisSpecies(acs_longInt tmpSPeciesID, acs_longInt tmpIdReaction);
     bool performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath);
     bool performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleGen, acs_int tmp_ActGEN, acs_int tmp_ActSIM, acs_int tmp_ActSTEP, string tmp_StoringPath);
-	bool newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDoubleGen);
-	bool newSpeciesEvaluationII(acs_int tmpNewSpecies, MTRand& tmp___RndDoubleGen);
+	bool newSpeciesEvaluationIII(acs_int tmpNewSpecies, MTRand& tmp___RndDoubleGen);
     bool complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGen, acs_int tmpCuttingPnt, acs_int tmpCatalyst_ID, acs_int tmpSubstrate_ID, bool tmpCpxType);
 	acs_double computeSinglGilScore(acs_longInt tmpAmountI, acs_double tmpDifI, acs_int tmpSolI,acs_longInt tmpAmountII, acs_double tmpDifII, acs_int tmpSolII, acs_double tmpK, bool tmpSameMol);
 	void performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs_longInt tmpAmountII, acs_longInt tmpIDI, acs_longInt tmpIDII, acs_longInt tmpIDCatalysis, acs_int tmp__rctType,

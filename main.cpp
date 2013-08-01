@@ -1,7 +1,7 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.3 (20130722.55)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.4 (20130731.56)
  * \author Alessandro Filisetti
- * \version 4.3 (20130722.55)
- * \date 2013-07-22
+ * \version 4.4 (20130731.56)
+ * \date 2013-07-31
  * sourceforge repository -- https://carness.svn.sourceforge.net/svnroot/carness/
  * git repository -- https://github.com/paxelito/carness
  *
@@ -69,9 +69,6 @@
  *		\subsection paramdyn Dynamic
  *		@param energy (0 or 1) 0 no energy in the system, 1 energy constraints are applied
  *      @param ratioSpeciesEnergizable (%) The probability for a species to be potentially energized by the energy carriers
- *		@param complexFormationSymmetry (0 or 1) Complex Formation Symmetry
- *				- <b>1</b>: the catalyst can bound both substrates
- *				- <b>0 (default)</b>: catalyst binds only with the first substrate of the reaction
  *		@param nonCatalyticMaxLength (>= 0) Max length of non catalytic species
  *		@param reactionProbability (from 0 to 1) Probability for a species to catalyze a reaction
  *		@param cleavageProbability (from 0 to 1) Cleavage probability (Condensation probability is 1 - cleavage probability)
@@ -172,6 +169,7 @@
  *		- <i>K final step end condensation kinetic constant</i>: Final step end condensation kinetic constant
  *		- <i>K Cleavage</i>: Cleavage Kinetic constant
  *		- <i>K complex association</i>: Complex association kinetic constant
+ *		- <i>Complex creation substrate target</i>: Which substrate will be involved in complex creation, 1 or 2
  *<br>
  *	\section subInflux _acsinflux.csv
  * Columns description (each field is delimited using "\t"):
@@ -501,6 +499,7 @@ int main (int argc, char *argv[]) {
                                                     << "\t\t- Gil NS ratio: " << puddle->getRatioBetweenNewGillTotGill()
                                                     << " - Back and Forw Ratio: " << puddle->getRatioBetweenBackandForw() << endl
                                                     << "\t- REACTIONS COUNTERS" << endl
+                                                    << "\t\t|- Theoretical Average Connectivity:" << (double)puddle->getNumberOfCatalysis() / puddle->getTotalNumberOfPossibleCatalysts() << endl
                                                     << "\t\t|- Cond: " << puddle->getCondensationCounter()
                                                     << " - Endo Cond: " << puddle->getEndoCondensationCounter() << endl
                                                     << "\t\t|- Cleav: " << puddle->getCleavageCounter()

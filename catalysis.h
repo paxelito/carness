@@ -25,12 +25,13 @@ private:
         acs_double Kass;	/**<  Associative constant (CONDENSATION) */
         acs_double Kdiss;	/**<  dissociative constant (CLEAVAGE) */
         acs_double k_cpx;	/**<  Kinetic constant for the complex formation */
-        acs_double k_cpxDiss;	/**<  Kinetic constant for the complex dissociation */
+        //TR acs_double k_cpxDiss;	/**<  Kinetic constant for the complex dissociation */
+        acs_int cpxTarget; /**<  species forming the complex with the catalyst in reaction structure, mol_II (1) or mol_III (2) */
 	
 public:
 	catalysis();
 	catalysis(acs_longInt tmpCatId, acs_longInt tmpCat, acs_longInt tmpRctId, acs_longInt tmpAmount, 
-			  acs_double tmpKass, acs_double tmpKdiss, acs_double tmpK_cpx);
+			  acs_double tmpKass, acs_double tmpKdiss, acs_double tmpK_cpx, acs_int tmpCpxTarget);
 	~catalysis(){};
 	
 	//GETTING FUNCTIONS
@@ -42,6 +43,7 @@ public:
         acs_double getKdiss()const{return Kdiss;} // dissociation Kinetic Constant A_C -> A + C (A_C is a temporary complex)
         acs_double getK_cpx()const{return k_cpx;} // complex formation kinetic constant A + C -> A_C
         //acs_double getK_cpxDiss()const{return k_cpxDiss;} // This parameter in now specific for the single species
+        acs_int getCpxTarget()const{return cpxTarget;} // complex target.
 	
 	// OPERATIVE FUNCTION
         void updateTotAmount(){totalAmount++;} // Increase the counter of this catalysis

@@ -17,7 +17,7 @@
  * \date 2010-03-16
  */
 catalysis::catalysis(acs_longInt tmpCatId, acs_longInt tmpCat, acs_longInt tmpRctId, acs_longInt tmpAmount, 
-					 acs_double tmpKass, acs_double tmpKdiss, acs_double tmpK_cpx)
+					 acs_double tmpKass, acs_double tmpKdiss, acs_double tmpK_cpx, acs_int tmpCpxTarget)
 {
 	ID = tmpCatId;				// CATALYSIS ID
 	catalyst = tmpCat;			// CATALYST ID
@@ -26,5 +26,6 @@ catalysis::catalysis(acs_longInt tmpCatId, acs_longInt tmpCat, acs_longInt tmpRc
 	Kdiss = tmpKdiss;			// CLEAVAGE KINETIC CONSTANT
 	Kass = tmpKass;				// CONDENSATION KINETIC CONSTANT
 	k_cpx = tmpK_cpx;			// COMPLEX FORMATION KINETIC CONSTANT
+	cpxTarget = tmpCpxTarget;	// Catalyst Complex species Target
 	//TR k_cpxDiss = tmpK_cpxDiss;	// COMPLEX DISSOCIATION KINETIC CONSTANT
 }

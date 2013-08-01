@@ -25,7 +25,6 @@
 	nSIM = 1;
 	nReactions = 100;
 	//TR initialPopulationNumber = 30;
-	complexFormationSymmetry = 0;
 	timeStructuresSavingInterval = 1;
    	fileTimesSaveInterval = 0;
    	newSpeciesProbMinThreshold = 0;
@@ -115,7 +114,6 @@ environment::environment(string tmpInitialPath)
                 // DYNAMIC PARAMETERS
                 if(linered[0] == "energy") energy = atoi(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE, IL TUTTO VERRA' SOSTITUITO DALLA FUNZIONE BOOLEANA
                 if(linered[0] == "ratioSpeciesEnergizable") ratioSpeciesEnergizable = atof(linered[1].c_str());
-                if(linered[0] == "complexFormationSymmetry") complexFormationSymmetry = atoi(linered[1].c_str());
                 if(linered[0] == "nonCatalyticMaxLength") nonCatalyticMaxLength = atoi(linered[1].c_str());
                 if(linered[0] == "reactionProbability") reactionProbability = atof(linered[1].c_str());
                 if(linered[0] == "cleavageProbability") cleavageProbability = atof(linered[1].c_str());
@@ -618,7 +616,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                            try{
                                substrateLength = allSpecies.at(speciesAvailableForCleavageReactions.at(substratePosID)).getSequence().length();
                            }catch(exception&e){
-                               cout << "createReactionsForThisSpecies allSpecies.at(speciesAvailableForCleavageReactions.at(substratePosID))…" << endl;
+                               cout << "createReactionsForThisSpecies allSpecies.at(speciesAvailableForCleavageReactions.at(substratePosID))" << endl;
                                cout << "Vectorsize "<<allSpecies.size()<<" - position "<<speciesAvailableForCleavageReactions.at(substratePosID)<<endl;
                                cerr << "exceptioncaught:"<<e.what()<<endl;
                                ExitWithError("createReactionsForThisSpecies","exceptionerrorthrown");
@@ -644,7 +642,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                                     product_I = allSpecies.at(speciesAvailableForCleavageReactions.at(substratePosID)).getSequence().substr(0, cuttingPoint);
                                     product_II = allSpecies.at(speciesAvailableForCleavageReactions.at(substratePosID)).getSequence().substr(cuttingPoint, allSpecies.at(speciesAvailableForCleavageReactions.at(substratePosID)).getSequence().length() - cuttingPoint);
                                 }catch(exception&e){
-                                    cout << "createReactionsForThisSpecies allSpecies.at(speciesAvailableForCleavageReactions.at(substratePosID))…" << endl;
+                                    cout << "createReactionsForThisSpecies allSpecies.at(speciesAvailableForCleavageReactions.at(substratePosID))" << endl;
                                     cout << "Vectorsize "<<allSpecies.size()<<" - position "<<speciesAvailableForCleavageReactions.at(substratePosID)<<endl;
                                     cerr << "exceptioncaught in if(substrateLength > 1):"<<e.what()<<endl;
                                     ExitWithError("createReactionsForThisSpecies","exceptionerrorthrown");
@@ -811,10 +809,12 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                     if(debugLevel == SMALL_DEBUG)
                         cout << "\t\t\tReaction validity: " << validReactionFlag << " - attempts " << rctCreationAttemptCounter << endl;
 
-                    // IF ALL IT'S OK REACTION AND CATALYSIS ARE STORED
-
                     if(validReactionFlag == true)
                     {
+                        // IF ALL IT'S OK REACTION AND CATALYSIS ARE STORED
+                        acs_int tmpCpxTarget = 1;
+    					if(tmp_RndDoubleGen() >= 0.5) tmpCpxTarget = 2;
+
                         // SINCE THE SPECIES HAS BEEN CREATED, NOW I HAVE TO CHECK WHETHER THE REACTION IS ALREADY PRESENT.
                         if(getNumberOfReactions() > 0)
                         {
@@ -866,7 +866,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                                 tmpK_diss = K_diss;
                                 tmpK_cpx = K_cpx;
                             }
-                            allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpsID, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx));
+                            allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpsID, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx, tmpCpxTarget));
                         }else{ // OTHERWISE ONLY THE VECTOR ALLCATALYSIS IS UPDATED
                             if(reverseReactions == true)
                             {
@@ -889,7 +889,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                                 cout << "\t\t\tAssagning catalysis for reaction " << IDrct << endl;
                             //Check if this reaction is not already catalysed by this species
                             if(!checkIfTheReactionIsAlreadyCatalyzedByThisSpecies(tmpsID, id_reaction))
-                                allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpsID, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx));
+                                allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpsID, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx, tmpCpxTarget));
                         }
                     }else{
                             rctCreationAttemptCounter++;
@@ -902,6 +902,279 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
 
 
     return true;
+}
+
+/**
+ Old Species Reactions and Catalysis update process
+ @version 1.0
+ @date 2013/07/30
+ @param acs_longInt tmpIDtoUpdate ID of the species to update
+ @param acs_longInt ID of the new species involved in the reactions to update
+ @param acs_int tmpRctType Reaction type, namely cleavage or condensation
+ @param MTRand& tmp____RndDoubleGen Random number generator
+ */
+bool environment::updateReactions(acs_longInt tmpIDtoUpdate, acs_longInt tmpNewSpecies, acs_int tmpRctType, vector<acs_longInt>& tmp_AlreadyEvaluatedSpeciesVector, MTRand& tmp_RndDoubleGen)
+{
+	 if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\t\tenvironment::updateReactions start" << endl;
+
+	    acs_longInt ids_I = 0;
+	    acs_longInt ids_II = 0;
+	    acs_longInt ids_III = 0;
+	    acs_double tmpK_ass; // Declare three kinetic variable to initialize according to the presence of not of the reverse reations
+	    acs_double tmpK_diss;
+	    acs_double tmpK_cpx;
+	    acs_longInt id_reaction;
+	    acs_int tempEnergyRctType = ESOERGONIC;
+	    acs_int nrgRctBoolFncID;
+	    acs_int tmpEnergizable = NOTENERGIZABLE;
+	    bool validReactionFlag = false; // this flag is true if all possible steps of the reaction creation have been satisfied
+	    bool toProceed = true; // Variable to check whether it is possibile proceeding with the creation reaction or not
+	    acs_int rctCreationAttemptCounter = 0; // Number of tentative to create a reaction
+		acs_int tmpCpxTarget; // Substrate involved in the complex formation (condensation reactions or reverse cleavage reactions)
+
+	    while(!validReactionFlag && (rctCreationAttemptCounter < 200))
+		{
+				tempEnergyRctType = ESOERGONIC;
+				validReactionFlag = false; //RESET VALIDATION FLAG IN ORDER TO NOT CREATE WRONG REACTIONS
+				toProceed = true;
+
+				//------------------------------ CLEAVAGE REACTION -------------------------------------------------|
+
+				if(tmpRctType == CLEAVAGE)
+				{
+				   string product_I;
+				   string product_II;
+				   if(allSpecies.at(tmpNewSpecies).getSequenceLength() > 1) //IF THE SUBSTRATE IS LONGER THAN 1
+				   {
+						//SELECT CUTTING POINT AND CREATE THE TWO PRODUCTS
+						acs_int cuttingPoint = getIntRandom(1, allSpecies.at(tmpNewSpecies).getSequenceLength() - 1, tmp_RndDoubleGen);
+
+						try{
+							product_I = allSpecies.at(tmpNewSpecies).getSequence().substr(0, cuttingPoint);
+							product_II = allSpecies.at(tmpNewSpecies).getSequence().substr(cuttingPoint, allSpecies.at(tmpNewSpecies).getSequence().length() - cuttingPoint);
+						}catch(exception&e){
+							cout << "updateReactions allSpecies.at(speciesAvailableForCleavageReactions.at(substratePosID))" << endl;
+							cerr << "exceptioncaught in if(allSpecies.at(tmpNewSpecies).getSequenceLength() > 1):"<<e.what()<<endl;
+							ExitWithError("createReactionsForThisSpecies","exceptionerrorthrown");
+						}
+
+						// Try here is not necessary since it has been used 20 rows above
+						ids_I = tmpNewSpecies; //substrate vector allSpecies position
+
+						// CHECK WHETHER THE NEW PRODUCT IS ALREADY PRESENT AND IF IT ISN'T REACTION IS STORED. IF IT IS, ITS ID BECAME THE VALUE TO STORE INTO THE REACTIONS,
+						// OTHERWISE A NEW ID WILL BE CREATED
+						ids_II = returnPosSpeciesAlreadyPresent(product_I);
+						if(product_I != product_II) // IF PRODUCTS ARE DIFFERENT
+						{
+							ids_III = returnPosSpeciesAlreadyPresent(product_II);
+							// IF BOTH PRODUCTS ARE NEW THE ID OF HTE SECOND ONE IN INCREMENTED BY 1
+							if(ids_II == ids_III)
+									ids_III++;
+						}else{
+							ids_III = ids_II;
+						}
+
+						// ONE SPECIES CAN NOT CATALYZE BOTH FORWARD AND BACKWARD REACTIONS
+						if(toProceed)
+						{
+							if(!notInverseReactionAlreadyCatalyzed(CLEAVAGE, ids_I, ids_II))
+							{
+								validReactionFlag = false; // BACKWARD REACTION IS ALREADY CATALIZED!!!
+							}else{
+							  if(ids_II == (acs_longInt)allSpecies.size()) //IF THE POSITION RETURNED IS EQUAL TO THE SIZE OF vector ALLSPECIES, IT MEANS THAT THE SPECIES IS NOT PRESENT
+								{
+										if(tmp_RndDoubleGen() < ratioSpeciesEnergizable){tmpEnergizable=ENERGIZABLE;}else{tmpEnergizable=NOTENERGIZABLE;}
+										allSpecies.push_back(species(ids_II, product_I, (acs_longInt)0, 0, 0, 0, 0, 0, volume, 0, tmpEnergizable, influx_rate, maxLOut));
+								}
+							  if(ids_III == (acs_longInt)allSpecies.size()) //IF THE POSITION RETURNED IS EQUAL TO THE SIZE OF vector ALLSPECIES, IT MEANS THAT THE SPECIES IS NOT PRESENT
+								{
+										if(tmp_RndDoubleGen() < ratioSpeciesEnergizable){tmpEnergizable=ENERGIZABLE;}else{tmpEnergizable=NOTENERGIZABLE;}
+										allSpecies.push_back(species(ids_III, product_II, (acs_longInt)0, 0, 0, 0, 0, 0, volume, 0, tmpEnergizable, influx_rate, maxLOut));
+								}
+								validReactionFlag = true;
+							}
+						}else{
+								validReactionFlag = false;
+						}
+					}
+
+				//------------------------------ CONDENSATION REACTION -------------------------------------------------|
+
+				}else{
+					acs_longInt substratePosID_I;
+					acs_longInt substratePosID_II;
+					string product;
+
+					if((acs_longInt)tmp_AlreadyEvaluatedSpeciesVector.size() > 0) // IF THERE ARE SPECIES
+					{
+						// Select if the new species will be the first or the second substrate
+						if(tmp_RndDoubleGen() < 0.5)
+						{
+							substratePosID_I = tmpNewSpecies;
+							substratePosID_II = tmp_AlreadyEvaluatedSpeciesVector.at(returnUniformSelection_LONG_IdFromVector(tmp_AlreadyEvaluatedSpeciesVector, tmp_RndDoubleGen));
+							tmpCpxTarget = 1;
+						}else{
+							substratePosID_II = tmpNewSpecies;
+							substratePosID_I = tmp_AlreadyEvaluatedSpeciesVector.at(returnUniformSelection_LONG_IdFromVector(tmp_AlreadyEvaluatedSpeciesVector, tmp_RndDoubleGen));
+							tmpCpxTarget = 2;
+
+						}
+
+						//PRODUCT CREATION
+						try{
+							product = allSpecies.at(substratePosID_I).getSequence() + allSpecies.at(substratePosID_II).getSequence();
+						}catch(exception&e){
+							cout << "allSpecies.at(speciesAvailableForReactions.at(substratePosID_I)).getSequence() + allSpecies.at(speciesAvailableForReactions.at(substratePosID_II)).getSequence();" << endl;
+							cout << "Vectorsize "<<allSpecies.size()<<" - position " << substratePosID_I << endl;
+							cerr << "exceptioncaught in if(substrateLength > 1):"<<e.what()<<endl;
+							ExitWithError("UpdateReactions","exceptionerrorthrown");
+						}
+
+						if(debugLevel >= SMALL_DEBUG)
+							cout << "\t\t\t\t|- Product: " << product << endl;
+
+						ids_I = returnPosSpeciesAlreadyPresent(product);
+
+						// If the species is one of the initial set
+						if(tmpIDtoUpdate <= ((acs_int)firingDisk.size() - 1)){ if(tmpIDtoUpdate == ids_I) toProceed = false;}
+
+						if(toProceed)
+						{
+							// ONE SPECIES CAN NOT CATALYZE BOTH ONE REACTION AND THE INVERTED ONE
+							try{
+								ids_II = substratePosID_I;
+							}catch(exception&e){
+								cout << "speciesAvailableForReactions.at(substratePosID_I)" << endl;
+								cout << "Vectorsize "<<tmp_AlreadyEvaluatedSpeciesVector.size()<<" - position "<<substratePosID_I<<endl;
+								cerr << "ids_II = speciesAvailableForReactions.at(substratePosID_I);"<<e.what()<<endl;
+								ExitWithError("UpdateReactions","exceptionerrorthrown");
+							}
+
+							try{
+								ids_III = substratePosID_II;
+							}catch(exception&e){
+								cout << "speciesAvailableForReactions.at(substratePosID_II)" << endl;
+								cout << "Vectorsize "<<tmp_AlreadyEvaluatedSpeciesVector.size()<<" - position "<<substratePosID_II<<endl;
+								cerr << "ids_II = speciesAvailableForReactions.at(substratePosID_II);"<<e.what()<<endl;
+								ExitWithError("UpdateReactions","exceptionerrorthrown");
+							}
+
+							if(!notInverseReactionAlreadyCatalyzed(CONDENSATION, ids_I, ids_II))
+							{
+								validReactionFlag = false;
+								if(debugLevel == SMALL_DEBUG)
+									 cout << "\t\t\tFound clavage reverse reaction - " << validReactionFlag <<  " -  tentativi - " << rctCreationAttemptCounter << endl;
+							}else{
+								if(ids_I == (acs_longInt)allSpecies.size()) //IF THE POSITION RETURNED IS EQUAL TO THE SIZE OF VECOTR ALLSPECIES, IT MEANS THAT THE SPECIES IS NOT PRESENT
+								{
+										if(tmp_RndDoubleGen() < ratioSpeciesEnergizable){tmpEnergizable=ENERGIZABLE;}else{tmpEnergizable=NOTENERGIZABLE;}
+										allSpecies.push_back(species(ids_I, product, (acs_longInt)0, 0, 0, 0, 0, 0, volume, 0, tmpEnergizable, influx_rate, maxLOut));
+								}
+								validReactionFlag = true;
+							}
+						}else{
+							validReactionFlag = false;
+						}
+					}
+
+				}
+
+				if(debugLevel == SMALL_DEBUG)
+					cout << "\t\t\tReaction validity: " << validReactionFlag << " - attempts " << rctCreationAttemptCounter << endl;
+
+				// IF ALL IT'S OK REACTION AND CATALYSIS ARE STORED
+
+				if(validReactionFlag == true)
+				{
+					// SINCE THE SPECIES HAS BEEN CREATED, NOW I HAVE TO CHECK WHETHER THE REACTION IS ALREADY PRESENT.
+					if(getNumberOfReactions() > 0)
+					{
+						id_reaction = returnPosReactionAlreadyPresent(tmpRctType, ids_I, ids_II, ids_III);
+					}else{
+						id_reaction = 0;
+					}
+
+					if(id_reaction == getNumberOfReactions())
+					{
+						// IF THE ENERGY IS CONSIDERED
+						// According to the energy parameter and the reaction type the energetic type is assigned
+						if(nrgBoolFlag == ENERGYBASED)
+						{
+							if(nrgBooleanFunctions.size() > 0)
+							{
+								nrgRctBoolFncID = returnSelectionIdFromAWeightProbVectorAlreadyNormalized(nrgBoolFncsProb2BeSelected,tmp_RndDoubleGen);
+								try{
+									tempEnergyRctType = nrgBooleanFunctions.at(nrgRctBoolFncID);
+								}catch(exception&e){
+									cout << "tempEnergyRctType = nrgBooleanFunctions.at(nrgRctBoolFncID);" << endl;
+									cout << "Vectorsize "<<nrgBooleanFunctions.size()<<" - position "<<nrgRctBoolFncID<<endl;
+									cerr << "tempEnergyRctType = nrgBooleanFunctions.at(nrgRctBoolFncID);"<<e.what()<<endl;
+									ExitWithError("createReactionsForThisSpecies","exceptionerrorthrown");
+								}
+							}else{
+								// If the vector contains only 1 element, the first one is selected
+								tempEnergyRctType = nrgBooleanFunctions.front();
+							}
+						}
+						// IF IT IS NOT PRESENT THE VECTOR ALLREACTIONS AND THE VECTOR ALLCATALYSIS ARE UPDATED
+						allReactions.push_back(reactions(id_reaction, tmpRctType, ids_I, ids_II, ids_III, 0, tempEnergyRctType));
+						if(reverseReactions == true)
+						{
+							if(tmpRctType == CONDENSATION)
+							{
+								tmpK_ass = K_ass;
+								tmpK_diss = K_diss / revRctRatio;
+								tmpK_cpx = K_cpx;
+							}else{ //Cleavage reaction
+								tmpK_ass = K_ass / revRctRatio;
+								tmpK_diss = K_diss;
+								tmpK_cpx = K_cpx / revRctRatio;
+							}
+						}else{ // reverseReactions == FALSE
+							tmpK_ass = K_ass;
+							tmpK_diss = K_diss;
+							tmpK_cpx = K_cpx;
+						}
+						// IF camplex target must be defined as 1
+						allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpIDtoUpdate, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx, tmpCpxTarget));
+
+					}else{ // OTHERWISE ONLY THE VECTOR ALLCATALYSIS IS UPDATED
+						if(reverseReactions == true)
+						{
+							if(tmpRctType == CONDENSATION)
+							{
+								tmpK_ass = K_ass;
+								tmpK_diss = K_diss / revRctRatio;
+								tmpK_cpx = K_cpx;
+							}else{ //Cleavage reaction
+								tmpK_ass = K_ass / revRctRatio;
+								tmpK_diss = K_diss;
+								tmpK_cpx = K_cpx / revRctRatio;
+							}
+						}else{ // reverseReactions == FALSE
+							tmpK_ass = K_ass;
+							tmpK_diss = K_diss;
+							tmpK_cpx = K_cpx;
+						}
+						//Check if this reaction is not already catalysed by this species
+						if(!checkIfTheReactionIsAlreadyCatalyzedByThisSpecies(tmpIDtoUpdate, id_reaction))
+							allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpIDtoUpdate, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx, tmpCpxTarget));
+					}
+					if(debugLevel >= SMALL_DEBUG)
+					{
+						cout << "\t\t\t|- old species ID: " << allSpecies.at(tmpIDtoUpdate).getID() << " - Sequence: " << allSpecies.at(tmpIDtoUpdate).getSequence() << endl;
+						cout << "\t\t\t\t have been updated with new catalysis: " << getNumberOfCatalysis() << " affecting reaction " << id_reaction << "(" << tmpRctType << ")"
+								<< " involving species " << ids_I << " (" << allSpecies.at(ids_I).getSequence() << ") - "
+								<< ids_II  << " (" << allSpecies.at(ids_II).getSequence() << ") - "
+								<< ids_III << " (" << allSpecies.at(ids_III).getSequence() << ") - complex target: " << tmpCpxTarget << endl;
+					}
+				}else{
+						rctCreationAttemptCounter++;
+				}// if(validReactionFlag)
+		} //while(!validReactionFlag)
+
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\t\tenvironment::createReactionsForThisSpecies end" << endl;
+	return true;
 }
 
 /**
@@ -1396,7 +1669,7 @@ bool environment::createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFile
     string FilePath = tmpCatalysisFilePath + "_acscatalysis.csv";
     ifstream myfile;
     myfile.open(FilePath.c_str());
-    string strID, strCatalyst, strReaction, strCounter, strKcond, strKcleav, strKcpx;
+    string strID, strCatalyst, strReaction, strCounter, strKcond, strKcleav, strKcpx, strCpxTarget;
     while (myfile.good())
     {
         getline(myfile, strID, '\t');
@@ -1405,12 +1678,13 @@ bool environment::createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFile
         getline(myfile, strCounter, '\t');
         getline(myfile, strKcond, '\t');
         getline(myfile, strKcleav, '\t');
-        getline(myfile, strKcpx, '\n');
+        getline(myfile, strKcpx, '\t');
+        getline(myfile, strCpxTarget, '\n');
 
         if(strID.find("\n") != 0)
         	allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
                                          (acs_longInt)atol(strCounter.c_str()), (acs_double)atof(strKcond.c_str()), (acs_double)atof(strKcleav.c_str()),
-                                         (acs_double)atof(strKcpx.c_str())));
+                                         (acs_double)atof(strKcpx.c_str()), (acs_int)atoi(strCpxTarget.c_str())));
 
     }
 
@@ -1445,7 +1719,7 @@ bool environment::createInitialCatalysisLayerFromSpecificFileSTD(string tmpCatal
 
     ifstream myfile;
     myfile.open(catalysisFilePath.c_str());
-    string strID, strCatalyst, strReaction, strCounter, strKcond, strKcleav, strKcpx;
+    string strID, strCatalyst, strReaction, strCounter, strKcond, strKcleav, strKcpx, strCpxTarget;
     while (myfile.good())
     {
         getline(myfile, strID, '\t');
@@ -1454,12 +1728,13 @@ bool environment::createInitialCatalysisLayerFromSpecificFileSTD(string tmpCatal
         getline(myfile, strCounter, '\t');
         getline(myfile, strKcond, '\t');
         getline(myfile, strKcleav, '\t');
-        getline(myfile, strKcpx, '\n');
+        getline(myfile, strKcpx, '\t');
+        getline(myfile, strCpxTarget, '\n');
 
         if(strID.find("\n") != 0)
         	allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
                                          (acs_longInt)atol(strCounter.c_str()), (acs_double)atof(strKcond.c_str()), (acs_double)atof(strKcleav.c_str()),
-                                         (acs_double)atof(strKcpx.c_str())));
+                                         (acs_double)atof(strKcpx.c_str()), (acs_int)atoi(strCpxTarget.c_str())));
 
     }
 
@@ -2246,13 +2521,13 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
 		
 		if((allSpecies.at(mid).getAmount() > 0) && (allSpecies.at(mid).getComplexCutPnt() == 0))
 		{
-                    // tmpActSTEP is the simulation step
-                    if(tmpActSTEP > 2)
-                    {
-                        allSpecies.at(mid).setNewAge(reactionsTime.at((reactionsTime.size() - 1)) - reactionsTime.at((reactionsTime.size() - 2)));
-                    }
+			// tmpActSTEP is the simulation step
+			if(tmpActSTEP > 2)
+			{
+				allSpecies.at(mid).setNewAge(reactionsTime.at((reactionsTime.size() - 1)) - reactionsTime.at((reactionsTime.size() - 2)));
+			}
 		}else{
-                    allSpecies.at(mid).setNewAge(0); // IF THE SPECIES IS DEAD THE AGE OF LAST DEATH REMAINS
+			allSpecies.at(mid).setNewAge(0); // IF THE SPECIES IS DEAD THE AGE OF LAST DEATH REMAINS
 		}
 		
 		if((allSpecies.at(mid).getAmount() > 0) && (allSpecies.at(mid).getSolubility() == SOLUBLE)) // If there are some molecule belonging to this species
@@ -2260,388 +2535,339 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
 			
 	// DISSOCIATION IF COMPLEX .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 			
-                    if(allSpecies.at(mid).getComplexCutPnt() > 0)
-                    {
+			if(allSpecies.at(mid).getComplexCutPnt() > 0)
+			{
 
-                        // In this step all the molecules are taken into account. Selection between loaded and unloaded type will be performed
-                        // in the reaction perform process according to the numerosity of each category
-                        temp_score = allSpecies.at(mid).getAmount() * allSpecies.at(mid).getComplexDegEnh();
-                        temp_mol_I = mid;
-                        temp_mol_II = tmpCatalyst_ID = allSpecies.at(mid).getCatalyst_ID();	// Recover catalyst ID from the complex
-                        temp_mol_III = tmpSubstrate_ID = allSpecies.at(mid).getSubstrate_ID();	// Recover substrate ID from the complex
-                        temp_mol_IV = 0;
-                        temp_rctType = COMPLEXDEGRADATION;
-                        temp_reactionID = 0;
-                        temp_catalysisID = 0;
+				// In this step all the molecules are taken into account. Selection between loaded and unloaded type will be performed
+				// in the reaction perform process according to the numerosity of each category
+				temp_score = allSpecies.at(mid).getAmount() * allSpecies.at(mid).getComplexDegEnh();
+				temp_mol_I = mid;
+				temp_mol_II = tmpCatalyst_ID = allSpecies.at(mid).getCatalyst_ID();	// Recover catalyst ID from the complex
+				temp_mol_III = tmpSubstrate_ID = allSpecies.at(mid).getSubstrate_ID();	// Recover substrate ID from the complex
+				temp_mol_IV = 0;
+				temp_rctType = COMPLEXDEGRADATION;
+				temp_reactionID = 0;
+				temp_catalysisID = 0;
 
-                        if(temp_score > 0) // If score is grater than one
-                        {
-                            if(debugLevel >= MEDIUM_DEBUG)
-                                cout << "\t\t\t|- COMPLEX DISSOCIATION: " << temp_score << endl;
+				if(temp_score > 0) // If score is grater than one
+				{
+					if(debugLevel >= MEDIUM_DEBUG)
+						cout << "\t\t\t|- COMPLEX DISSOCIATION: " << temp_score << endl;
 
-                            allGillespieScores.push_back(gillespie((acs_longInt)allGillespieScores.size(), temp_rctType,
-                                                       temp_score, temp_mol_I, temp_mol_II, temp_mol_III,
-                                                       temp_mol_IV, temp_reactionID, temp_catalysisID));
-                            gillespieTotalScore += temp_score;
-                            gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
-                        }
-                    }
+					allGillespieScores.push_back(gillespie((acs_longInt)allGillespieScores.size(), temp_rctType,
+											   temp_score, temp_mol_I, temp_mol_II, temp_mol_III,
+											   temp_mol_IV, temp_reactionID, temp_catalysisID));
+					gillespieTotalScore += temp_score;
+					gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
+				}
+			} // end if(allSpecies.at(mid).getComplexCutPnt() > 0)
 			
 	 // IF THERE ARE REACTIONS *********************************************************************************************************
 			
-                    if((acs_longInt)allCatalysis.size() > 0)
-                    {
-                        for(acs_longInt idCat = 0; idCat < (acs_longInt)allCatalysis.size(); idCat++)
-                        {
-                            if(allCatalysis.at(idCat).getCat() == mid)
-                            {
+			if((acs_longInt)allCatalysis.size() > 0)
+			{
+				for(acs_longInt idCat = 0; idCat < (acs_longInt)allCatalysis.size(); idCat++)
+				{
+					if(allCatalysis.at(idCat).getCat() == mid)
+					{
 
-                                // Retrive the energetic boolean function of the reaction
-                                try{
-                                    nrgBooleanFunction = dec2bin(allReactions.at(allCatalysis.at(idCat).getReactionID()).getEnergyType());
-                                }catch(exception&e){
-                                    cout << "nrgBooleanFunction = dec2bin(allReactions.at(allCatalysis.at(idCat).getReactionID()).getEnergyType());" << endl;
-                                    cout << "Vectorsize "<<allReactions.size() << " - position " << allCatalysis.at(idCat).getReactionID() << endl;
-                                    cerr << "exceptioncaught:" << e.what() << endl;
-                                    ExitWithError("performGillespieComputation","exceptionerrorthrown");
-                               }
+						// Retrive the energetic boolean function of the reaction
+						try{
+							nrgBooleanFunction = dec2bin(allReactions.at(allCatalysis.at(idCat).getReactionID()).getEnergyType());
+						}catch(exception&e){
+							cout << "nrgBooleanFunction = dec2bin(allReactions.at(allCatalysis.at(idCat).getReactionID()).getEnergyType());" << endl;
+							cout << "Vectorsize "<<allReactions.size() << " - position " << allCatalysis.at(idCat).getReactionID() << endl;
+							cerr << "exceptioncaught:" << e.what() << endl;
+							ExitWithError("performGillespieComputation","exceptionerrorthrown");
+					   }
 
-    //\-- CLEAVAGE .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+			//\-- CLEAVAGE .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
-                                //IF CLEAVAGE REACTION (if reverse reactions are enabled reaction is computed as well)
-                               // TRY HAS BEEN ALREADY USED
-                                if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CLEAVAGE) || (reverseReactions == true))
-                                {
-                                    temp_mol_I = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_I();     // SUBSTRATE
-                                    temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II();   // PRODUCT 1
-                                    temp_mol_III = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // PRODUCT 2
-                                    temp_mol_IV = mid;	// CATALYST
-                                    temp_reactionID = allCatalysis.at(idCat).getReactionID(); // REACTION ID
-                                    temp_catalysisID = idCat;
+						//IF CLEAVAGE REACTION (if reverse reactions are enabled reaction is computed as well)
+					   // TRY HAS BEEN ALREADY USED
+						if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CLEAVAGE) || (reverseReactions == true))
+						{
+							temp_mol_I = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_I();     // SUBSTRATE
+							temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II();   // PRODUCT 1
+							temp_mol_III = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // PRODUCT 2
+							temp_mol_IV = mid;	// CATALYST
+							temp_reactionID = allCatalysis.at(idCat).getReactionID(); // REACTION ID
+							temp_catalysisID = idCat;
 
-                                    // Compute the overall number of molecules for the species involved
-                                    temp_catAmount_TOT = allSpecies.at(mid).getAmount();
-                                    temp_catAmount_charged = allSpecies.at(mid).getChargeMols();
-                                    temp_catAmount_NotCharged = allSpecies.at(mid).getNOTchargeMols();
+							// Compute the overall number of molecules for the species involved
+							temp_catAmount_TOT = allSpecies.at(mid).getAmount();
+							temp_catAmount_charged = allSpecies.at(mid).getChargeMols();
+							temp_catAmount_NotCharged = allSpecies.at(mid).getNOTchargeMols();
 
-                                   try{
-                                        temp_substrateAmount_TOT = allSpecies.at(temp_mol_I).getAmount();
-                                        temp_substrateAmount_charged = allSpecies.at(temp_mol_I).getChargeMols();
-                                        temp_substrateAmount_NotCharged = allSpecies.at(temp_mol_I).getNOTchargeMols();
-                                    }catch(exception&e){
-                                        cout << "temp_substrateAmount_TOT = allSpecies.at(temp_mol_I).getAmount();" << endl;
-                                        cout << "Vectorsize "<< allSpecies.size() << " - position " << temp_mol_I << endl;
-                                        cerr << "exceptioncaught:" << e.what() << endl;
-                                        ExitWithError("performGillespieComputation","exceptionerrorthrown");
-                                   }
+						   try{
+								temp_substrateAmount_TOT = allSpecies.at(temp_mol_I).getAmount();
+								temp_substrateAmount_charged = allSpecies.at(temp_mol_I).getChargeMols();
+								temp_substrateAmount_NotCharged = allSpecies.at(temp_mol_I).getNOTchargeMols();
+							}catch(exception&e){
+								cout << "temp_substrateAmount_TOT = allSpecies.at(temp_mol_I).getAmount();" << endl;
+								cout << "Vectorsize "<< allSpecies.size() << " - position " << temp_mol_I << endl;
+								cerr << "exceptioncaught:" << e.what() << endl;
+								ExitWithError("performGillespieComputation","exceptionerrorthrown");
+						   }
 
-            // Gillespie record creation according to the energy configuration
-                                    if(nrgBoolFlag == ENERGYBASED)
-                                    {
+							// Gillespie record creation according to the energy configuration
+							if(nrgBoolFlag == ENERGYBASED)
+							{
 
-                                        // CATALYST NOT LOADED, SUBSTRATE LOADED (- -)
-                                        if(nrgBooleanFunction[11] == TRUENRG)
-                                        if(checkAvailability(mid, temp_mol_I, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
-                                            performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, mid, temp_mol_I, idCat, CLEAVAGE,
-                                                   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-                                                   true);
+								// CATALYST NOT LOADED, SUBSTRATE LOADED (- -)
+								if(nrgBooleanFunction[11] == TRUENRG)
+								if(checkAvailability(mid, temp_mol_I, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
+									performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, mid, temp_mol_I, idCat, CLEAVAGE,
+										   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
 
-                                        // CATALYST NOT LOADED, SUBSTRATE LOADED (- +)
-                                        if(nrgBooleanFunction[10] == TRUENRG)
-                                                performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, mid, temp_mol_I, idCat, ENDO_CLEAVAGE,
-                                                                                                                   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,
-                                                                                                                   false);
-                                        // CATALYST NOT LOADED, SUBSTRATE LOADED (+ -)
-                                        if(nrgBooleanFunction[9] == TRUENRG)
-                                                performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, mid, temp_mol_I, idCat, ENDO_CLEAVAGE,
-                                                                                                                   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID,
-                                                                                                                   false);
+								// CATALYST NOT LOADED, SUBSTRATE LOADED (- +)
+								if(nrgBooleanFunction[10] == TRUENRG)
+										performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, mid, temp_mol_I, idCat, ENDO_CLEAVAGE,
+																			temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,false);
+								// CATALYST NOT LOADED, SUBSTRATE LOADED (+ -)
+								if(nrgBooleanFunction[9] == TRUENRG)
+										performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, mid, temp_mol_I, idCat, ENDO_CLEAVAGE,
+																		   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID, false);
 
-                                        // CATALYST NOT LOADED, SUBSTRATE LOADED (+ +)
-                                        if(nrgBooleanFunction[8] == TRUENRG)
-                                            if(checkAvailability(mid, temp_mol_I, temp_catAmount_charged, temp_substrateAmount_charged))
-                                                performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, mid, temp_mol_I, idCat, ENDO_CLEAVAGE,
-                                                 temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,
-                                                   true);
-                                    }else{
-                                            // CATALYST NOT LOADED, SUBSTRATE NOT LOADED
-                                        if(checkAvailability(mid, temp_mol_I, temp_catAmount_TOT, temp_substrateAmount_TOT))
-                                            performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, mid, temp_mol_I, idCat, CLEAVAGE,
-                                                                               temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-                                                                               true);
-                                    }
-                                } // end getType() == CLEAVAGE
+								// CATALYST NOT LOADED, SUBSTRATE LOADED (+ +)
+								if(nrgBooleanFunction[8] == TRUENRG)
+									if(checkAvailability(mid, temp_mol_I, temp_catAmount_charged, temp_substrateAmount_charged))
+										performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, mid, temp_mol_I, idCat, ENDO_CLEAVAGE,
+										 temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID, true);
+							}else{
+									// CATALYST NOT LOADED, SUBSTRATE NOT LOADED
+								if(checkAvailability(mid, temp_mol_I, temp_catAmount_TOT, temp_substrateAmount_TOT))
+									performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, mid, temp_mol_I, idCat, CLEAVAGE,
+																	   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
+							} // end if(nrgBoolFlag == ENERGYBASED)
+						} // end getType() == CLEAVAGE
 
-    //\-- OVERALL CONDENSATION .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+				//\-- OVERALL CONDENSATION .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 
-                                    // IF THIS IS A CONDENSATION REACTION (if reverse reactions are enabled reaction is comuputed as well)
-                                    if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION) || (reverseReactions == true))
-                                    {
+						// IF THIS IS A CONDENSATION REACTION (if reverse reactions are enabled reaction is comuputed as well)
+						if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION) || (reverseReactions == true))
+						{
 
-            //\-- COMPLEX CREATION	.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+							//\-- COMPLEX CREATION	.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
-                                        temp_mol_I = mid; // Catalyst
-                                        temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II(); // First substrate
-                                        temp_mol_III = 0; // This variable contains the number of energized molecules (0 ++ 2 +- 4 -+ 6 --)
-                                        temp_mol_IV = 0;
-                                        temp_reactionID = allCatalysis.at(idCat).getReactionID();
-                                        temp_catalysisID = idCat;
+							temp_mol_I = mid; // Catalyst
+							// According to the complex creation target, species to create the complex is selected.
+							if(allCatalysis.at(idCat).getCpxTarget() == 1)
+							{
+								temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II(); // First substrate
+							}else{
+								temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // secondo substrate substrate
+							}
 
-                //\-- FIRST AND SECOND SUBSTRATE  -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+							temp_mol_III = 0; // This variable contains the number of energized molecules (0 ++ 2 +- 4 -+ 6 --)
+							temp_mol_IV = 0;
+							temp_reactionID = allCatalysis.at(idCat).getReactionID();
+							temp_catalysisID = idCat;
 
-                                        // Compute the overall number of molecules for the species involved
-                                        temp_catAmount_TOT = allSpecies.at(mid).getAmount();
-                                        temp_catAmount_charged = allSpecies.at(mid).getChargeMols();
-                                        temp_catAmount_NotCharged = allSpecies.at(mid).getNOTchargeMols();
+							//\-- FIRST AND SECOND SUBSTRATE  -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 
-                                        temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
-                                        temp_substrateAmount_charged = allSpecies.at(temp_mol_II).getChargeMols();
-                                        temp_substrateAmount_NotCharged = allSpecies.at(temp_mol_II).getNOTchargeMols();
+							// Compute the overall number of molecules for the species involved
+							temp_catAmount_TOT = allSpecies.at(mid).getAmount();
+							temp_catAmount_charged = allSpecies.at(mid).getChargeMols();
+							temp_catAmount_NotCharged = allSpecies.at(mid).getNOTchargeMols();
 
-                                        if(nrgBoolFlag == ENERGYBASED)
-                                        {
+							temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
+							temp_substrateAmount_charged = allSpecies.at(temp_mol_II).getChargeMols();
+							temp_substrateAmount_NotCharged = allSpecies.at(temp_mol_II).getNOTchargeMols();
 
-                                            // CATALYST LOADED, SUBSTRATE LOADED (+ + ...)
-                                            if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[1] == TRUENRG))
-                                            if(checkAvailability(mid, temp_mol_II, temp_catAmount_charged, temp_substrateAmount_charged))
-                                                performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
-                                                        temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,
-                                                        true);
+							if(nrgBoolFlag == ENERGYBASED)
+							{
 
-                                            // CATALYST LOADED, SUBSTRATE NOT LOADED (+ - ...)
-                                            if((nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG))
-                                                    performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
-                                                                                                                            temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID,
-                                                                                                                            false);
+								// CATALYST LOADED, SUBSTRATE LOADED (+ + ...)
+								if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[1] == TRUENRG))
+								if(checkAvailability(mid, temp_mol_II, temp_catAmount_charged, temp_substrateAmount_charged))
+									performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
+											temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,
+											true);
 
-                                            // CATALYST NOT LOADED, SUBSTRATE LOADED (- + ...)
-                                            if((nrgBooleanFunction[4] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
-                                                    performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
-                                                                                                                            temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,
-                                                                                                                            false);
+								// CATALYST LOADED, SUBSTRATE NOT LOADED (+ - ...)
+								if((nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG))
+										performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
+																												temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID,
+																												false);
 
-                                            // CATALYST NOT LOADED, SUBSTRATE NOT LOADED (- - ...)
-                                            if((nrgBooleanFunction[6] == TRUENRG) || (nrgBooleanFunction[7] == TRUENRG))
-                                                if(checkAvailability(mid, temp_mol_II, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
-                                                    performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, mid, temp_mol_II, idCat, COMPLEXFORMATION,
-                                                        temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-                                                        true);
+								// CATALYST NOT LOADED, SUBSTRATE LOADED (- + ...)
+								if((nrgBooleanFunction[4] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
+										performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
+																												temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,
+																												false);
 
-                                            // SECOND SUBSTRATE
-                                            if(complexFormationSymmetry)
-                                            {
-                                                    temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // Second Substrate
-                                                                            temp_substrateAmount_charged = allSpecies.at(temp_mol_II).getChargeMols();
-                                                                            temp_substrateAmount_NotCharged = allSpecies.at(temp_mol_II).getNOTchargeMols();
+								// CATALYST NOT LOADED, SUBSTRATE NOT LOADED (- - ...)
+								if((nrgBooleanFunction[6] == TRUENRG) || (nrgBooleanFunction[7] == TRUENRG))
+									if(checkAvailability(mid, temp_mol_II, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
+										performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, mid, temp_mol_II, idCat, COMPLEXFORMATION,
+											temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
+											true);
+							}else{ // NO ENERGY
+							   if(checkAvailability(mid, temp_mol_II, temp_catAmount_TOT, temp_substrateAmount_TOT))
+									performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, mid, temp_mol_II, idCat, COMPLEXFORMATION,
+										   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
+										   true);
+							} // end if(nrgBoolFlag == ENERGYBASED)
+						} // end if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION)
+					} // end if(allCatalysis.at(idCat).getCat() == mid)
 
-                                                    // CATALYST LOADED, SUBSTRATE LOADED (+ + ...)
-                                                    if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[2] == TRUENRG))
-                                                    if(checkAvailability(mid, temp_mol_II, temp_catAmount_charged, temp_substrateAmount_charged))
-                                                        performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
-                                                            temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,
-                                                            true);
+				//\-- IF THE SPECIES IS A COMPLEX CONDENSATION TOT .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 
-                                                    // CATALYST LOADED, SUBSTRATE NOT LOADED (+ - ...)
-                                                    if((nrgBooleanFunction[1] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG))
-                                                            performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
-                                                                                                                                    temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID,
-                                                                                                                                    false);
+					if(allSpecies.at(mid).getComplexCutPnt() > 0) // If the species is a complex the second substrate could be bound
+					{
 
-                                                    // CATALYST NOT LOADED, SUBSTRATE LOADED (- + ...)
-                                                    if((nrgBooleanFunction[4] == TRUENRG) || (nrgBooleanFunction[6] == TRUENRG))
-                                                            performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, mid, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
-                                                                                                                                    temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,
-                                                                                                                                    false);
+						// Recover catalyst and substrate ID from the complex
+						tmpCatalyst_ID = allSpecies.at(mid).getCatalyst_ID();
+						tmpSubstrate_ID = allSpecies.at(mid).getSubstrate_ID();
 
-                                                    // CATALYST NOT LOADED, SUBSTRATE NOT LOADED (- - ...)
-                                                    if((nrgBooleanFunction[5] == TRUENRG) || (nrgBooleanFunction[7] == TRUENRG))
-                                                    if(checkAvailability(mid, temp_mol_II, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
-                                                         performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, mid, temp_mol_II, idCat, COMPLEXFORMATION,
-                                                            temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-                                                            true);
-                                            }
+						// Searching for the reactions catalzed by the catalyst
+						if(allCatalysis.at(idCat).getCat() == tmpCatalyst_ID)
+						{
+							// If so, searching for the catalysed reactions involving the substrate
+							// Check whether the temporary catalyst catalyse a condensation reaction containing the temporary substrate as a first or second molecule
+							// WHETHER IT IS A CONDENSATION REACTION
 
-                                        }else{ // NO ENERGY
-                                           if(checkAvailability(mid, temp_mol_II, temp_catAmount_TOT, temp_substrateAmount_TOT))
-                                                performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, mid, temp_mol_II, idCat, COMPLEXFORMATION,
-                                                       temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-                                                       true);
-                                            if(complexFormationSymmetry)
-                                            {
-                                                //Change substrate
-                                                temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // First substrate
-                                                   temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
-                                                   if(checkAvailability(mid, temp_mol_II, temp_catAmount_TOT, temp_substrateAmount_TOT))
-                                                        performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, mid, temp_mol_II, idCat, COMPLEXFORMATION,
-                                                   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-                                                   true);
-                                            } // end if(complexFormationSymmetry)
-                                        } // end if(nrgBoolFlag == ENERGYBASED)
-                                    } // end if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION)
-                            } // end if(allCatalysis.at(idCat).getCat() == mid)
+							if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION) || (reverseReactions == true))
+							{
 
-                        //\-- IF THE SPECIES IS A COMPLEX CONDENSATION TOT .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+							// CONDENSATION 1 ----------------------------------------------------------------------------------------------------------------------------
 
-                            if(allSpecies.at(mid).getComplexCutPnt() > 0) // If the species is a complex the second substrate could be bound
-                            {
+								// First substrate
+								if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II() == tmpSubstrate_ID)
+								{
+									// Assign species to the temp variables
+									temp_mol_I = allCatalysis.at(idCat).getCat(); //catalyst
+									temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // second substrate
+									temp_mol_III = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_I(); // Product
+									temp_mol_IV = mid; // Complex
+									temp_reactionID = allCatalysis.at(idCat).getReactionID(); // reaction ID
+									temp_catalysisID = idCat; // Catalysis ID
+									temp_rctType = CONDENSATION; // reaction type
 
-                                    // Recover catalyst and substrate ID from the complex
-                                    tmpCatalyst_ID = allSpecies.at(mid).getCatalyst_ID();
-                                    tmpSubstrate_ID = allSpecies.at(mid).getSubstrate_ID();
+									if(nrgBoolFlag == ENERGYBASED)
+									{
+										// COMPLEX CHARGED - SECOND SUBSTRATE NOT CHARGED
+										if((nrgBooleanFunction[1] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
+										{
+											// Compute the total amount of complexes and second substrates
+											temp_cpxAmount = allSpecies.at(mid).getChargeMols();
+											temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
+											performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
+																			   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, COMPLEXLOAD, temp_reactionID,false);
+										}
 
-                                    // Searching for the reactions catalzed by the catalyst
-                                    if(allCatalysis.at(idCat).getCat() == tmpCatalyst_ID)
-                                    {
-                                            // If there is searching for the reactions catalyzed containing the substrate
-                                            // Check whether the temporary catalyst catalyse a condensation reaction containing the temporary substrate as a first or second molecule
-                                            // WHETHER IT IS A CONDENSATION REACTION
+										// COMPLEX NOT CHARGED - SECOND SUBSTRATE CHARGED
+										if(nrgBooleanFunction[6] == TRUENRG)
+										{
+											// Compute the total amount of complexes and second substrates
+											temp_cpxAmount = allSpecies.at(mid).getNOTchargeMols();
+											temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
+											performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
+																			   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,false);
+										}
 
-                                        if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION) || (reverseReactions == true))
-                                            {
+										// COMPLEX CHARGED - SECOND SUBSTRATE CHARGED
+										if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[4] == TRUENRG))
+										{
+											// Compute the total amount of complexes and second substrates
+											temp_cpxAmount = allSpecies.at(mid).getChargeMols();
+											temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
+											performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
+																			   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,false);
+										}
 
-                                            // CONDENSATION 1 ----------------------------------------------------------------------------------------------------------------------------
+										// COMPLEX NOT CHARGED - SECOND SUBSTRATE NOT CHARGED (ONLY IF CONDENSATION ESOERGONIC)
+										if(nrgBooleanFunction[7] == TRUENRG)
+										{
+											// Compute the total amount of complexes and second substrates
+											temp_cpxAmount = allSpecies.at(mid).getNOTchargeMols();
+											temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
+											performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, CONDENSATION,
+																			   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,false);
+										}
+									}else{ // NO ENERGY
+										// Compute the total amount of complexes and second substrates
+										temp_cpxAmount = allSpecies.at(mid).getAmount();
+										temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
+										performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount_TOT, mid, temp_mol_II, idCat, CONDENSATION,
+																		   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,false);
+									} // end if(nrgBoolFlag == ENERGYBASED)
+								} // if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II() == tmpSubstrate_ID)
 
-                                                    // First substrate
-                                                    if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II() == tmpSubstrate_ID)
-                                                    {
-                                                            // Assign species to the temp variables
-                                                            temp_mol_I = allCatalysis.at(idCat).getCat(); //catalyst
-                                                            temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // second substrate
-                                                            temp_mol_III = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_I(); // Product
-                                                            temp_mol_IV = mid; // Complex
-                                                            temp_reactionID = allCatalysis.at(idCat).getReactionID(); // reaction ID
-                                                            temp_catalysisID = idCat; // Catalysis ID
-                                                            temp_rctType = CONDENSATION; // reaction type
+// CONDENSATION 2 -----------------------------------------------------------------------------------------------------------------------------
 
-                                                            if(nrgBoolFlag == ENERGYBASED)
-                                                            {
-                                                                    // COMPLEX CHARGED - SECOND SUBSTRATE NOT CHARGED
-                                                                    if((nrgBooleanFunction[1] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
-                                                                    {
-                                                                        // Compute the total amount of complexes and second substrates
-                                                                        temp_cpxAmount = allSpecies.at(mid).getChargeMols();
-                                                                        temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
-                                                                        performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
-                                                                                                           temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, COMPLEXLOAD, temp_reactionID,
-                                                                                                           false);
-                                                                    }
+								// Second substrate
+								if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III() == tmpSubstrate_ID)
+								{
+									// Assign species to the temp variables
+									temp_mol_I = allCatalysis.at(idCat).getCat(); //catalyst
+									temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II(); // second substrate
+									temp_mol_III = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_I(); // Product
+									temp_mol_IV = mid; // Complex
+									temp_reactionID = allCatalysis.at(idCat).getReactionID(); // reaction ID
+									temp_catalysisID = idCat; // Catalysis ID
+									temp_rctType = CONDENSATION; // reaction type
 
-                                                                    // COMPLEX NOT CHARGED - SECOND SUBSTRATE CHARGED
-                                                                    if(nrgBooleanFunction[6] == TRUENRG)
-                                                                    {
-                                                                        // Compute the total amount of complexes and second substrates
-                                                                        temp_cpxAmount = allSpecies.at(mid).getNOTchargeMols();
-                                                                        temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
-                                                                        performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
-                                                                                                           temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,
-                                                                                                           false);
-}
+									if(nrgBoolFlag == ENERGYBASED)
+									{
+										// COMPLEX CHARGED - SECOND SUBSTRATE NOT CHARGED
+										if((nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG) || (nrgBooleanFunction[6] == TRUENRG))
+										{
+											// Compute the total amount of complexes and second substrates
+											temp_cpxAmount = allSpecies.at(mid).getChargeMols();
+											temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
+											performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
+																			   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, COMPLEXLOAD, temp_reactionID,
+																			   false);
+										}
 
-                                                                    // COMPLEX CHARGED - SECOND SUBSTRATE CHARGED
-                                                                    if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[4] == TRUENRG))
-                                                                    {
-                                                                        // Compute the total amount of complexes and second substrates
-                                                                        temp_cpxAmount = allSpecies.at(mid).getChargeMols();
-                                                                        temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
-                                                                        performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
-                                                                                                           temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,
-                                                                                                           false);
-                                                                    }
+										// COMPLEX NOT CHARGED - SECOND SUBSTRATE CHARGED
+										if(nrgBooleanFunction[5] == TRUENRG)
+										{
+											// Compute the total amount of complexes and second substrates
+											temp_cpxAmount = allSpecies.at(mid).getNOTchargeMols();
+											temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
+											performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
+																			   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,
+																			   false);
+										}
 
-                                                                    // COMPLEX NOT CHARGED - SECOND SUBSTRATE NOT CHARGED (ONLY IF CONDENSATION ESOERGONIC)
-                                                                    if(nrgBooleanFunction[7] == TRUENRG)
-                                                                    {
-                                                                        // Compute the total amount of complexes and second substrates
-                                                                        temp_cpxAmount = allSpecies.at(mid).getNOTchargeMols();
-                                                                        temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
-                                                                        performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, CONDENSATION,
-                                                                                                           temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-                                                                                                           false);
-}
-                                                            }else{ // NO ENERGY
-                                                                    // Compute the total amount of complexes and second substrates
-                                                                    temp_cpxAmount = allSpecies.at(mid).getAmount();
-                                                                    temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
-                                                                    performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount_TOT, mid, temp_mol_II, idCat, CONDENSATION,
-                                                                                                       temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-                                                                                                       false);
-                                                            } // end if(nrgBoolFlag == ENERGYBASED)
-                                                    } // if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II() == tmpSubstrate_ID)
+										// COMPLEX CHARGED - SECOND SUBSTRATE CHARGED
+										if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[1] == TRUENRG) || (nrgBooleanFunction[4] == TRUENRG))
+										{
+											// Compute the total amount of complexes and second substrates
+											temp_cpxAmount = allSpecies.at(mid).getChargeMols();
+											temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
+											performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
+																			   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,
+																			   false);
+										}
 
-    // CONDENSATION 2 -----------------------------------------------------------------------------------------------------------------------------
+										// COMPLEX NOT CHARGED - SECOND SUBSTRATE NOT CHARGED (ONLY IF CONDENSATION ESOERGONIC)
+										if(nrgBooleanFunction[7] == TRUENRG)
+										{
+											// Compute the total amount of complexes and second substrates
+											temp_cpxAmount = allSpecies.at(mid).getNOTchargeMols();
+											temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
+											performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, CONDENSATION,
+																			   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
+																			   false);
+										}
+									}else{
 
-                                                    // Second substrate
-                                                    if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III() == tmpSubstrate_ID) && (complexFormationSymmetry == true))
-                                                    {
-                                                            // Assign species to the temp variables
-                                                            temp_mol_I = allCatalysis.at(idCat).getCat(); //catalyst
-                                                            temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II(); // second substrate
-                                                            temp_mol_III = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_I(); // Product
-                                                            temp_mol_IV = mid; // Complex
-                                                            temp_reactionID = allCatalysis.at(idCat).getReactionID(); // reaction ID
-                                                            temp_catalysisID = idCat; // Catalysis ID
-                                                            temp_rctType = CONDENSATION; // reaction type
-
-                                                            if(nrgBoolFlag == ENERGYBASED)
-                                                            {
-                                                                // COMPLEX CHARGED - SECOND SUBSTRATE NOT CHARGED
-                                                                if((nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG) || (nrgBooleanFunction[6] == TRUENRG))
-                                                                {
-                                                                    // Compute the total amount of complexes and second substrates
-                                                                    temp_cpxAmount = allSpecies.at(mid).getChargeMols();
-                                                                    temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
-                                                                    performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
-                                                                                                       temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, COMPLEXLOAD, temp_reactionID,
-                                                                                                       false);
-                                                                }
-
-                                                                // COMPLEX NOT CHARGED - SECOND SUBSTRATE CHARGED
-                                                                if(nrgBooleanFunction[5] == TRUENRG)
-                                                                {
-                                                                    // Compute the total amount of complexes and second substrates
-                                                                    temp_cpxAmount = allSpecies.at(mid).getNOTchargeMols();
-                                                                    temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
-                                                                    performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
-                                                                                                       temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,
-                                                                                                       false);
-                                                                }
-
-                                                                // COMPLEX CHARGED - SECOND SUBSTRATE CHARGED
-                                                                if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[1] == TRUENRG) || (nrgBooleanFunction[4] == TRUENRG))
-                                                                {
-                                                                    // Compute the total amount of complexes and second substrates
-                                                                    temp_cpxAmount = allSpecies.at(mid).getChargeMols();
-                                                                    temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
-                                                                    performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, ENDO_CONDENSATION,
-                                                                                                       temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,
-                                                                                                       false);
-                                                                }
-
-                                                                // COMPLEX NOT CHARGED - SECOND SUBSTRATE NOT CHARGED (ONLY IF CONDENSATION ESOERGONIC)
-                                                                if(nrgBooleanFunction[7] == TRUENRG)
-                                                                {
-                                                                    // Compute the total amount of complexes and second substrates
-                                                                    temp_cpxAmount = allSpecies.at(mid).getNOTchargeMols();
-                                                                    temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
-                                                                    performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, idCat, CONDENSATION,
-                                                                                                       temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-                                                                                                       false);
-                                                                }
-                                                            }else{
-
-                                                                    // Compute the total amount of complexes and second substrates
-                                                                    temp_cpxAmount = allSpecies.at(mid).getAmount();
-                                                                    temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
-                                                                    performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount_TOT, mid, temp_mol_II, idCat, CONDENSATION,
-                                                                                                       temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,
-                                                                                                       false);
-                                                            } // end if(nrgBoolFlag == ENERGYBASED)
-                                                    } // if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II() == tmpSubstrate_ID)
-                                            } // end if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION) || (reverseReactions == true))
-                                    } // end if(allCatalysis.at(idCat).getCat() == tmpCatalyst_ID)
-                            } // end if complex
-                        } // end for all catalysis
-                    } // end if if((acs_longInt)allCatalysis.size() > 0)
+										// Compute the total amount of complexes and second substrates
+										temp_cpxAmount = allSpecies.at(mid).getAmount();
+										temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
+										performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount_TOT, mid, temp_mol_II, idCat, CONDENSATION,
+																		   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, false);
+									} // end if(nrgBoolFlag == ENERGYBASED)
+								} // if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II() == tmpSubstrate_ID)
+							} // end if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION) || (reverseReactions == true))
+						} // end if(allCatalysis.at(idCat).getCat() == tmpCatalyst_ID)
+					} // end if complex
+				} // end for all catalysis
+			} // end if if((acs_longInt)allCatalysis.size() > 0)
 		} //end if total amount greater than 0
 	} // end for each species
 	
@@ -2894,12 +3120,18 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
 
         if(temp_score > 0) // If score is grater than 0
         {
-            if(debugLevel >= SMALL_DEBUG)
+            if((debugLevel >= SMALL_DEBUG))
                     cout << "\t\t\t|- Amount 1: " << tmpIDI << " " << tmpAmountI <<
+                    " rct type: " << tmp__rctType <<
                     " Amount 2: " << tmpIDII << " "  << tmpAmountII <<
                     " Reaction: " << tmpRctID <<
                     " tmp_NRGDirection: " << tmp_NRGDirection <<
-                    " tmpIDCatalysis: " << tmpIDCatalysis << endl;
+                    " tmpIDCatalysis: " << tmpIDCatalysis <<
+                    " cpxTarget: " << allCatalysis.at(tmpIDCatalysis).getCpxTarget() <<
+                    " cat: " << allCatalysis.at(tmpIDCatalysis).getCat() <<
+                    " mol1: " << allReactions.at(allCatalysis.at(tmpIDCatalysis).getReactionID()).getSpecies_I() <<
+                    " mol2: " << allReactions.at(allCatalysis.at(tmpIDCatalysis).getReactionID()).getSpecies_II() <<
+                    " mol3: " << allReactions.at(allCatalysis.at(tmpIDCatalysis).getReactionID()).getSpecies_III() << endl;
 
             allGillespieScores.push_back(gillespie((acs_longInt)allGillespieScores.size(),
                                             tmp__rctType, temp_score, tmpMol_I, tmpMol_II,
@@ -2953,6 +3185,29 @@ acs_longInt environment::getTotalNumberOfSpecies()
 	
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::getTotalNumberOfMolecules end" << endl;
 	
+	return tmpTotNumOfMols;
+}
+
+/**
+ This Function returns the total amount of MOLECULES in the  tmpSpeciesvector
+ The file is saved in the directory indicated as a second parameter in the run command
+ @param vector<species>* tmpSpeciesvector pointer to tmpSpeciesvector
+ */
+acs_longInt environment::getTotalNumberOfPossibleCatalysts()
+{
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::getTotalNumberOfMolecules start" << endl;
+
+	acs_longInt tmpTotNumOfMols = 0;
+
+        for(vector<species>::iterator tmpAllSpeciesIter = allSpecies.begin(); tmpAllSpeciesIter != allSpecies.end(); tmpAllSpeciesIter++)
+        {
+            if((tmpAllSpeciesIter->getComplexCutPnt() == 0) &&
+                (tmpAllSpeciesIter->getSolubility() == SOLUBLE))
+                    tmpTotNumOfMols++;
+        }
+
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::getTotalNumberOfMolecules end" << endl;
+
 	return tmpTotNumOfMols;
 }
 
@@ -4258,8 +4513,8 @@ bool environment::performCondensation(acs_longInt tmpCatalyst, acs_longInt tmpSu
 		ExitWithError("performCondensation", "Problem with reaction ID coherence");
 	}
 	// EVALUATE PRODUCT
-	if(!newSpeciesEvaluationII(tmpProduct, tmp__RndDoubleGen))
-		ExitWithError("newSpeciesEvaluationII", "Problems during the new species evalutation");
+	if(!newSpeciesEvaluationIII(tmpProduct, tmp__RndDoubleGen))
+		ExitWithError("newSpeciesEvaluationIII", "Problems during the new species evalutation");
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performCondensation end" << endl;
 	
 	// Update reaction counter
@@ -4394,8 +4649,8 @@ bool environment::perform_endo_Condensation(acs_longInt tmpCatalyst, acs_longInt
             ExitWithError("performCondensation", "Problem with reaction ID coherence");
 	}
 	// EVALUATE PRODUCT
-	if(!newSpeciesEvaluationII(tmpProduct, tmp__RndDoubleGen))
-            ExitWithError("newSpeciesEvaluationII", "Problems during the new species evalutation");
+	if(!newSpeciesEvaluationIII(tmpProduct, tmp__RndDoubleGen))
+            ExitWithError("newSpeciesEvaluationIII", "Problems during the new species evalutation");
 	
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::perform_endo_Condensation end" << endl;
 	
@@ -4477,8 +4732,8 @@ bool environment::performCleavage(acs_longInt tmpSubstrate, acs_longInt tmpProdu
 
     try{
         // EVALUATE PRODUCT 1
-        if(!newSpeciesEvaluationII(tmpProduct_I, tmp__RndDoubleGen))
-            ExitWithError("newSpeciesEvaluationII", "Problems during the new species evalutation");
+        if(!newSpeciesEvaluationIII(tmpProduct_I, tmp__RndDoubleGen))
+            ExitWithError("newSpeciesEvaluationIII", "Problems during the new species evalutation");
     }
     catch(exception&e)
     {
@@ -4489,8 +4744,8 @@ bool environment::performCleavage(acs_longInt tmpSubstrate, acs_longInt tmpProdu
 
     try{
         // EVALUATE PRODUCT 2
-        if(!newSpeciesEvaluationII(tmpProduct_II, tmp__RndDoubleGen))
-            ExitWithError("newSpeciesEvaluationII", "Problems during the new species evalutation");
+        if(!newSpeciesEvaluationIII(tmpProduct_II, tmp__RndDoubleGen))
+            ExitWithError("newSpeciesEvaluationIII", "Problems during the new species evalutation");
     }
     catch(exception&e)
     {
@@ -4599,12 +4854,12 @@ bool environment::perform_endo_Cleavage(acs_longInt tmpSubstrate, acs_longInt tm
 
     try{
         // EVALUATE PRODUCT 1
-        if(!newSpeciesEvaluationII(tmpProduct_I, tmp__RndDoubleGen))
-            ExitWithError("newSpeciesEvaluation", "Problems during the new species evalutation");
+        if(!newSpeciesEvaluationIII(tmpProduct_I, tmp__RndDoubleGen))
+            ExitWithError("newSpeciesEvaluationIII", "Problems during the new species evalutation");
     }
     catch(exception&e)
     {
-        cout<<"if(!newSpeciesEvaluation(allSpecies.at(tmpProduct_I).getSequence(), tmp__RndDoubleGen))" << endl;
+        cout<<"if(!newSpeciesEvaluationIII(allSpecies.at(tmpProduct_I).getSequence(), tmp__RndDoubleGen))" << endl;
         cerr << "exceptioncaught:" << e.what() << endl;
         ExitWithError("something wrong in evaluating product 1 in  form_endo_Cleavage method","exceptionerrorthrown");
     }
@@ -4612,12 +4867,12 @@ bool environment::perform_endo_Cleavage(acs_longInt tmpSubstrate, acs_longInt tm
 
     try{
         // EVALUATE PRODUCT 2
-        if(!newSpeciesEvaluationII(tmpProduct_II, tmp__RndDoubleGen))
-            ExitWithError("newSpeciesEvaluation", "Problems during the new species evalutation");
+        if(!newSpeciesEvaluationIII(tmpProduct_II, tmp__RndDoubleGen))
+            ExitWithError("newSpeciesEvaluationIII", "Problems during the new species evalutation");
     }
     catch(exception&e)
     {
-        cout<<"if(!newSpeciesEvaluation(allSpecies.at(tmpProduct_II).getSequence(), tmp__RndDoubleGen))" << endl;
+        cout<<"if(!newSpeciesEvaluationIII(allSpecies.at(tmpProduct_II).getSequence(), tmp__RndDoubleGen))" << endl;
         cerr << "exceptioncaught:" << e.what() << endl;
         ExitWithError("something wrong in evaluating product 2 in  form_endo_Cleavage method","exceptionerrorthrown");
     }
@@ -4953,244 +5208,14 @@ bool environment::performPhosphorilation(acs_longInt tmpSpecies)
 }*/
 
 /**
- Evaluate new species
- @version 1.0
- @param string tmpNewSpecies New species sequence to evaluate 
- @param MTRand& tmp___RndDoubleGen random number generator
- */
-bool environment::newSpeciesEvaluation(string tmpNewSpecies, MTRand& tmp___RndDoubleGen)
-{
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::newSpeciesEvaluation start" << endl;
-
-        bool newSpeciesFlag = true; // Function Flag Control
-        bool tmpNotEqualSeqBetweenTwoSpecies = true; // True whether there is not equal species
-        bool tmpAlreadyEvaluated = false; // True if the species has been already evaluated
-        bool toEvaluate = true; // another control to check whether the evaluation is to do
-        acs_longInt tmpIdSpeciesToEvaluate = 0;
-
-        if(debugLevel >= SMALL_DEBUG)
-            cout << "\t\t\t|- New Species: " << tmpNewSpecies << endl;
-
-    try{
-
-        //CHECK WHETHER THE SPECIES (OR COMPLEX) IS ALREADY PRESENT
-        for(acs_longInt i = 0; i < (acs_longInt)allSpecies.size(); i++)
-        {
-        	// IF THE SPECIES IS ALREADY PRESENT and IT IS NOT A COMPLEX
-            if((allSpecies.at(i).getSequence() == tmpNewSpecies) && (allSpecies.at(i).getComplexCutPnt() == 0))
-            {
-                if(allSpecies.at(i).getAmount() == 0)
-                    allSpecies.at(i).rebornsIncrement(); // IF THE SPECIES REAPPEAR THE REBORN COUNTER IS UPDATED
-                allSpecies.at(i).increment(volume); // INCREMENT THE NUMBER OF ELEMENTS OF THIS SPECIES (conc fixed check is inside the function)
-                if(!allSpecies.at(i).getConcentrationFixed())
-                {
-                    incMolProcedure(i); // Increment overall amount of species
-                    incSpeciesProcedure(i);
-                }
-
-                tmpNotEqualSeqBetweenTwoSpecies = false; // IF THE SPECIES IS ALREADY PRESENT
-                tmpIdSpeciesToEvaluate = i; // SET THE ALREADY PRESENT ID OF THE SPECIES
-                if(allSpecies.at(i).getEvaluated() == 1) // IF THE SPECIES HAS BEEN ALREADY EVALUATED TOO
-                {
-                    tmpAlreadyEvaluated = true;
-                }else{
-                    if(allSpecies.at(i).getComplexCutPnt() == 0) // IF THE SPECIES IS NOT A COMPLEX
-                    {
-                        // IF THE SPECIES IS ALREADY PRESENT BUT NOT EVALUATED
-                        // PRECIPITATION AND DIFFUSION CONTRIBUTE COMPUTATION
-                        acs_double tmpDiffusionContribute = createDiffusionRenforcement(diffusion_contribute, 1);
-                        allSpecies.at(i).setDiffusion(tmpDiffusionContribute);
-                        // IN THIS CASE SET SOLUBILITY REFERES TO THE SPECIES OBJECT
-                        bool tmpSolubilityState = setSolubility(allSpecies.at(i).getSequenceLength(), tmp___RndDoubleGen);
-                        allSpecies.at(i).setSolubility(tmpSolubilityState);
-                        allSpecies.at(i).setKphospho(K_nrg);
-                        allSpecies.at(i).setEvaluated(); // IF the reactions have not been yet created the molecules evaluation is setting on 1 and the
-                        // reactions will be created below
-                    }
-                }
-                break; // IF the species has been find the research is stopped
-            }
-        }
-
-        //IF THE MOLECULES IS NOT YET EVALUATED
-        if(tmpAlreadyEvaluated == false) //tmpAlreadyEvaluated = false at the beginning of the function
-        {
-            acs_longInt totalNumberOfConceivableReactions = 0;
-            // IF THE SPECIES IS ACTUALLY NEW
-           /* if(tmpNotEqualSeqBetweenTwoSpecies == true)
-            {
-                // PRECIPITATION AND DIFFUSION CONTRIBUTE COMPUTATION
-                acs_double tmpDiffusionContribute = createDiffusionRenforcement(diffusion_contribute, tmpNewSpecies.length());
-
-                bool tmpSolubilityState = setSolubility(tmpNewSpecies.length(), tmp___RndDoubleGen);
-
-                // CREATE NEW SPECIES OBJECT AND STORE IT INTO THE ENVIRONMENT SPECIES VECTOR
-                tmpIdSpeciesToEvaluate = (acs_longInt)allSpecies.size();
-                if(tmp___RndDoubleGen() < ratioSpeciesEnergizable){tmpEnergizable=ENERGIZABLE;}else{tmpEnergizable=NOTENERGIZABLE;}
-                allSpecies.push_back(species(tmpIdSpeciesToEvaluate, tmpNewSpecies, (acs_longInt)1, tmpDiffusionContribute,
-                                             tmpSolubilityState, 0, 0, 1, volume, K_nrg,tmpEnergizable, influx_rate, maxLOut));
-
-                if(!allSpecies.at(tmpIdSpeciesToEvaluate).getConcentrationFixed())
-                {
-                    incSpeciesProcedure(tmpIdSpeciesToEvaluate);
-                    incMolProcedure(tmpIdSpeciesToEvaluate);
-                }
-
-                toEvaluate = false;
-                if(debugLevel >= SMALL_DEBUG)
-                    cout << "\t\t\t\t|- New Species " <<  tmpNewSpecies << " has been created" << endl;
-
-            }*/
-
-            if(newSpeciesProbMinThreshold < ratioBetweenNewGillTotGill)
-            {
-				if(toEvaluate) // TO SILENT IF NEW SPECIES CREATION MUST BE AVOIDED!!!
-				{
-					// SET REACTIONS FOR THIS NEW SPECIES
-					// COPY ALL THE ALREADY EVALUATED SPECIES ID IN A TEMPORARY VECTOR
-					vector<acs_longInt> tmpAlreadyEvaluatedSpeciesVector;
-					for(acs_longInt tmpS = 0; tmpS < (acs_longInt)allSpecies.size(); tmpS++)
-					{
-						if(allSpecies.at(tmpS).getEvaluated() == 1)
-						{
-							// DEEP AND SECURE CHECK
-							if(allSpecies.at(tmpS).getComplexCutPnt() > 0)
-							{
-								ExitWithError("newSpeciesEvaluation", "A complex cannot be evaluated and involved in reactions!!!");
-							}else{
-								tmpAlreadyEvaluatedSpeciesVector.push_back(tmpS);
-							}
-						}
-					}
-
-					// COMPUTE TOTAL NUMBER OF CONCEIVABLE REACTIONS CONSIDERING ALREADY EVALUATED MOLECULES
-					for(acs_int presSpeciID = 0; presSpeciID < (acs_longInt)tmpAlreadyEvaluatedSpeciesVector.size(); presSpeciID++)
-					{
-						totalNumberOfConceivableReactions += allSpecies.at(tmpAlreadyEvaluatedSpeciesVector.at(presSpeciID)).getSequenceLength() - 1;
-					}
-					totalNumberOfConceivableReactions += pow((double)tmpAlreadyEvaluatedSpeciesVector.size(), 2.0);
-
-					if(debugLevel >= HIGH_DEBUG){printAllSpeciesIdAndSequence();}
-					if(debugLevel >= RUNNING_VERSION)
-					{
-						cout << "\t\t|-------------------------------------------------------\\" << endl;
-						cout << "\t\t|- !! EVENT !! New species has been evaluated" << endl;
-						cout << "\t\t|- ID: " << allSpecies.at(tmpIdSpeciesToEvaluate).getID() << " - Sequence: " << allSpecies.at(tmpIdSpeciesToEvaluate).getSequence() << endl;
-						cout << "\t\t|- Total new number of conceivable reactions:" << totalNumberOfConceivableReactions << endl;
-					}
-
-					// COMPUTE THE REAL NUMBER OF REACTIONS FOR THIS SPECIES
-					acs_int reactionsForThisSpecies;
-					reactionsForThisSpecies = computeSngSpeciesRctsNumber(totalNumberOfConceivableReactions, tmp___RndDoubleGen);
-
-					if(debugLevel >= RUNNING_VERSION)
-					{
-						cout << "\t\t|- Number of reaction to catalyze: " << reactionsForThisSpecies << endl;
-						cout << "\t\t|-------------------------------------------------------/" << endl;
-					}
-
-					// CREATE REACTIONS FOR THIS SPECIFIC SPECIES
-					if((reactionsForThisSpecies > 0) && (allSpecies.at(tmpIdSpeciesToEvaluate).getSolubility() == SOLUBLE))
-					{
-						if(!createReactionsForThisSpecies(tmpIdSpeciesToEvaluate, reactionsForThisSpecies, tmp___RndDoubleGen, tmpAlreadyEvaluatedSpeciesVector, NEWREACTIONS))
-							ExitWithError("createReactionsForThisSpecies", "	|- !*!*!*! Problem with the reactions creation");
-					}
-
-					if(debugLevel >= SMALL_DEBUG){cout << "\t\t|- DONE!!! " << endl;}
-
-					// IF the new species is soluble
-					if(allSpecies.at(tmpIdSpeciesToEvaluate).getSolubility() == SOLUBLE)
-					{
-						// ------------------------------------------
-						// NOW I HAVE TO UPDATE OLD SPECIES REACTIONS
-						// ------------------------------------------
-						// For each evaluated species
-						acs_longInt tmpIDcatalysis = 0;
-						acs_longInt tmpReactionsAlreadyCatbyThisSpecies = 0;
-						acs_longInt tmpNEWReactionsForThisOldSpecies = 0;
-						for(acs_longInt alreadyEvaID = 0; alreadyEvaID < (acs_longInt)tmpAlreadyEvaluatedSpeciesVector.size(); alreadyEvaID++)
-						{
-							// IF THE SPECIES IS NOT THE SAME OF THE SPECIES EVALUATED ABOVE
-							if(tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID) != tmpIdSpeciesToEvaluate)
-							{
-								// UNTIL THE SPECIES ID WILL BE GREATER THAN THE EVALUATING SPECIES (in this way I don't have to go through all
-								// the vector but only until the species
-								// (acs_longInt)allCatalysis.size() > tmpIDcatalysis is necessary to avoid an "out of range" error
-								while((acs_longInt)allCatalysis.size() > tmpIDcatalysis && allCatalysis.at(tmpIDcatalysis).getCat() <= tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID))
-								{
-									// IF THE SPECIES IS WHICH WE WANT WE COUNT ALL THE REACTIONS CATALYZED BY THIS SPECIES
-									if(allCatalysis.at(tmpIDcatalysis).getCat() == tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID))
-									{
-										tmpReactionsAlreadyCatbyThisSpecies++;
-									}
-									tmpIDcatalysis++;
-								}
-								// NOW THE GAP BETWEEN THE NEW REAL NUMBER OF POSSIBLE REACTIONS AND THE NUMBER OF ALREADY PRESENT REACTIONS WILL BE FILLED UP
-								// Only species longer than nonCatalyticMaxLength can catalyse reactions!!!
-								if(allSpecies.at(tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID)).getSequenceLength() > nonCatalyticMaxLength)
-								{
-									reactionsForThisSpecies = computeSngSpeciesRctsNumber(totalNumberOfConceivableReactions, tmp___RndDoubleGen);
-								}else{
-									reactionsForThisSpecies = 0;
-								}
-
-								if(reactionsForThisSpecies > 0)
-								{
-									// COMPUTE GAP BETWEEN THE NEW NUMBER OF POSSIBLE REACTIONS AND THE REACTIONS ALREADY CATALYZED
-									if(reactionsForThisSpecies > tmpReactionsAlreadyCatbyThisSpecies)
-									{
-										//tmpNEWReactionsForThisOldSpecies = reactionsForThisSpecies - tmpReactionsAlreadyCatbyThisSpecies;
-										tmpNEWReactionsForThisOldSpecies = computeSngSpeciesRctsNumber(reactionsForThisSpecies - tmpReactionsAlreadyCatbyThisSpecies, tmp___RndDoubleGen);
-									}else{
-										tmpNEWReactionsForThisOldSpecies = 0;
-									}
-									if(debugLevel >= MEDIUM_DEBUG)
-									{
-										cout << "\t\t|- TotRcts: " << reactionsForThisSpecies << " - ";
-										cout << "AlreadyCatRcts: " << tmpReactionsAlreadyCatbyThisSpecies << " - ";
-										cout << "NewRcts: " << tmpNEWReactionsForThisOldSpecies << endl;
-									}
-
-									// IF THERE IS SOME NEW REACTION TO CREATE
-									if(tmpNEWReactionsForThisOldSpecies > 0)
-									{
-										if(!createReactionsForThisSpecies(tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID),
-																		  tmpNEWReactionsForThisOldSpecies, tmp___RndDoubleGen,
-																		  tmpAlreadyEvaluatedSpeciesVector, UPGRADEREACTIONS))
-										{
-											ExitWithError("createReactionsForThisSpecies", "	|- !*!*!*! Problem with the reactions creation");
-										}
-									}
-								}
-								tmpReactionsAlreadyCatbyThisSpecies = 0;
-							}// end not just evaluated
-						} // end for all species to upgrade the reactions network
-					} // if(allSpecies.at(tmpIdSpeciesToEvaluate).getSolubility() == SOLUBLE)
-				} // end if to evaluate
-            } // newSpeciesProbMinThreshold < ratioBetweenNewGillTotGill
-        } // tmpAlreadyEvaluated == false
-
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::newSpeciesEvaluation end" << endl;    
-
-    }
-    catch(exception&e)
-    {
-        cerr << "exceptioncaught:" << e.what() << endl;
-        ExitWithError("something wrong in newSpeciesEvaluation method","exceptionerrorthrown");
-    }
-
-    return newSpeciesFlag;
-}
-
-/**
- Evaluate new species (Optimized function)
- @version 2.0
+ Evaluate new species (Optimized function with new species reactions update process)
+ @version 3.0
  @param acs_int tmpNewSpecies New species ID to evaluate
  @param MTRand& tmp___RndDoubleGen random number generator
  */
-bool environment::newSpeciesEvaluationII(acs_int tmpNewSpecies, MTRand& tmp___RndDoubleGen)
+bool environment::newSpeciesEvaluationIII(acs_int tmpNewSpecies, MTRand& tmp___RndDoubleGen)
 {
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::newSpeciesEvaluationII start" << endl;
+        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::newSpeciesEvaluationIII start" << endl;
 
         bool newSpeciesFlag = true; // Function Flag Control
         bool tmpNotEqualSeqBetweenTwoSpecies = true; // True whether there is not equal species
@@ -5298,87 +5323,61 @@ bool environment::newSpeciesEvaluationII(acs_int tmpNewSpecies, MTRand& tmp___Rn
 						// ------------------------------------------
 						// OLD SPECIES REACTIONS UPDATE
 						// ------------------------------------------
-						// For each evaluated species
-						acs_longInt tmpIDcatalysis = 0;
-						acs_longInt tmpReactionsAlreadyCatbyThisSpecies = 0;
-						acs_longInt tmpNEWReactionsForThisOldSpecies = 0;
-						// for each already evaluated species
-						for(acs_longInt alreadyEvaID = 0; alreadyEvaID < (acs_longInt)tmpAlreadyEvaluatedSpeciesVector.size(); alreadyEvaID++)
+						// Compute theoretical number of reactions involving the new species.
+						// CLEAVAGE reactions: allSpecies.at(tmpNewSpecies).getSequenceLength() - 1
+						// CONDENSATION reactions: (2 * tmpAlreadyEvaluatedSpeciesVector.size())
+						acs_int theoreticalNofNewRcts = (tmpAlreadyEvaluatedSpeciesVector.size() - 1) *
+														((allSpecies.at(tmpNewSpecies).getSequenceLength() - 1) +
+														(2 * tmpAlreadyEvaluatedSpeciesVector.size()));
+
+						// According to new number of possibile new reactions, the probability and the number of species, the number of new reaction to catalyze is now computed
+						// rctToAdd < theoreticalNofNewRcts
+						acs_int rctToAdd = computeSngSpeciesRctsNumber(theoreticalNofNewRcts, tmp___RndDoubleGen);
+
+						// For each new reaction
+						acs_longInt speciesToUpdate;
+						vector<acs_double> possRctType;
+						possRctType.push_back(2 * tmpAlreadyEvaluatedSpeciesVector.size());
+						possRctType.push_back(possRctType.at(0) + (allSpecies.at(tmpNewSpecies).getSequenceLength() - 1));
+						acs_int rctType;
+
+						if(debugLevel >= RUNNING_VERSION)
+							cout << "\t\t\t|----- Old species catalysis have been update with " << rctToAdd << " new reactions ("
+							<< theoreticalNofNewRcts << " conceivable reactions for all " << tmpAlreadyEvaluatedSpeciesVector.size() << " already eval species)" << endl;
+
+						for(acs_int newR = 0; newR < rctToAdd; newR++)
 						{
-							// IF THE SPECIES IS NOT THE SAME OF THE SPECIES EVALUATED ABOVE (i.e. all the species but the last one)
-							if(tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID) != tmpNewSpecies)
-							{
-								// UNTIL THE SPECIES IT WILL BE GREATER THAN THE EVALUATING SPECIES (in this way I don't have to go through all
-								// the vector but only until the species
-								// (acs_longInt)allCatalysis.size() > tmpIDcatalysis is necessary to avoid an "out of range" error
-								while((acs_longInt)allCatalysis.size() > tmpIDcatalysis && allCatalysis.at(tmpIDcatalysis).getCat() <= tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID))
-								{
-									// IF THE SPECIES IS WHICH WE WANT WE COUNT ALL THE REACTIONS CATALYZED BY THIS SPECIES
-									if(allCatalysis.at(tmpIDcatalysis).getCat() == tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID))
-									{
-										tmpReactionsAlreadyCatbyThisSpecies++;
-									}
-									tmpIDcatalysis++;
-								}
-								// NOW THE GAP BETWEEN THE NEW REAL NUMBER OF POSSIBLE REACTIONS AND THE NUMBER OF ALREADY PRESENT REACTIONS WILL BE FILLED UP
-								// Only species longer than nonCatalyticMaxLength can catalyse reactions!!!
-								if(allSpecies.at(tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID)).getSequenceLength() > nonCatalyticMaxLength)
-								{
-									reactionsForThisSpecies = computeSngSpeciesRctsNumber(totalNumberOfConceivableReactions, tmp___RndDoubleGen);
-								}else{
-									reactionsForThisSpecies = 0;
-								}
-
-								if(reactionsForThisSpecies > 0)
-								{
-									// COMPUTE GAP BETWEEN THE NEW NUMBER OF POSSIBLE REACTIONS AND THE REACTIONS ALREADY CATALYZED
-									if(reactionsForThisSpecies > tmpReactionsAlreadyCatbyThisSpecies)
-									{
-										//tmpNEWReactionsForThisOldSpecies = reactionsForThisSpecies - tmpReactionsAlreadyCatbyThisSpecies;
-										tmpNEWReactionsForThisOldSpecies = computeSngSpeciesRctsNumber(reactionsForThisSpecies - tmpReactionsAlreadyCatbyThisSpecies, tmp___RndDoubleGen);
-									}else{
-										tmpNEWReactionsForThisOldSpecies = 0;
-									}
-									if(debugLevel >= MEDIUM_DEBUG)
-									{
-										cout << "\t\t|- TotRcts: " << reactionsForThisSpecies << " - ";
-										cout << "AlreadyCatRcts: " << tmpReactionsAlreadyCatbyThisSpecies << " - ";
-										cout << "NewRcts: " << tmpNEWReactionsForThisOldSpecies << endl;
-									}
-
-									// IF THERE IS SOME NEW REACTION TO CREATE
-									if(tmpNEWReactionsForThisOldSpecies > 0)
-									{
-										if(!createReactionsForThisSpecies(tmpAlreadyEvaluatedSpeciesVector.at(alreadyEvaID),
-																		  tmpNEWReactionsForThisOldSpecies, tmp___RndDoubleGen,
-																		  tmpAlreadyEvaluatedSpeciesVector, UPGRADEREACTIONS))
-										{
-											ExitWithError("createReactionsForThisSpecies", "	|- !*!*!*! Problem with the reactions creation");
-										}
-									}
-								}
-								tmpReactionsAlreadyCatbyThisSpecies = 0;
-							}// end not just evaluated
-						} // end for all species to upgrade the reactions network
+							// Select catalyst to update
+							speciesToUpdate = tmpAlreadyEvaluatedSpeciesVector.at(getIntRandom(0, tmpAlreadyEvaluatedSpeciesVector.size() - 1, tmp___RndDoubleGen));
+							// According to the number of cleavage and condensation select wheater cleavage or condensation
+							rctType = returnSelectionIdFromAWeightProbVector(possRctType, possRctType.at(1), tmp___RndDoubleGen);
+							// According to the species to update and the reaction type new reactions are created
+						    try{
+						    	updateReactions(speciesToUpdate, tmpNewSpecies, rctType, tmpAlreadyEvaluatedSpeciesVector, tmp___RndDoubleGen);
+						    }catch(exception&e)
+						    {
+						        cerr << "exceptioncaught:" << e.what() << endl;
+						        ExitWithError("something wrong in update reactions method","exceptionerrorthrown");
+						    }
+						}
 					} // if(allSpecies.at(tmpIdSpeciesToEvaluate).getSolubility() == SOLUBLE)
 				} // end if to evaluate
             } // newSpeciesProbMinThreshold < ratioBetweenNewGillTotGill
         } // tmpAlreadyEvaluated == false
 
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::newSpeciesEvaluationII end" << endl;
+        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::newSpeciesEvaluationIII end" << endl;
 
     }
     catch(exception&e)
     {
         cerr << "exceptioncaught:" << e.what() << endl;
-        ExitWithError("something wrong in newSpeciesEvaluationII method","exceptionerrorthrown");
+        ExitWithError("something wrong in newSpeciesEvaluationIII method","exceptionerrorthrown");
     }
 
     return newSpeciesFlag;
 }
-
 /**
- Evaluate new species
+ Complex evaluation
  @version 1.1
  @date 2010-06-04
  @param string tmpNewSpecies New species sequence to evaluate 
@@ -5536,7 +5535,7 @@ void environment::showGlobalParameter()
         cout << "|   ****         ***   *     *          *****   *****                             |" << endl;
         cout << "|  *            *   *  **    *         *       *                                  |" << endl;
         cout << "| *        ***  *   *  * *   *  ****   *       *                                  |" << endl;
-        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 4.3b20130722.55   |" << endl;
+        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 4.4b20130731.56   |" << endl;
         cout << "| *       ****  **     *   * *  ****        *       *                             |" << endl;
         cout << "|  *      *  *  * *    *    **  *           *       *                             |"  << endl;
         cout << "|   ****  ****  *  *   *     *   ***   *****   *****                              |" << endl;
@@ -5556,7 +5555,6 @@ void environment::showGlobalParameter()
         cout << "\t|- time Structures Saving Interval: " << (double)timeStructuresSavingInterval << endl;
         cout << "\t|- Minimal new species prob to allow system expansion: " << (double)newSpeciesProbMinThreshold << endl;
         cout << "\t|- file times Saving Interval: " << (double)fileTimesSaveInterval << endl;
-        cout << "\t|- Complex Formation Simmetry: " << complexFormationSymmetry << endl;
         cout << "\t|- Max lenght of non catalytic species: " << nonCatalyticMaxLength << endl;
 		cout << "\t|- Overall initial concentration: " << overallConcentration << endl;
 		cout << "\t|- Energy Carriers concentration: " << ECConcentration << endl;
@@ -6054,11 +6052,6 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
     fidFile << "# Ratio of energizable species" << endl;
     fidFile << "ratioSpeciesEnergizable=" << (double)ratioSpeciesEnergizable << endl << endl;
 
-    fidFile << "# Complex Formation Symmetry (GILLESPIE computation: if equal to 1, one complex" << endl;
-    fidFile << "#	formation reaction for each substrate will be created, otherwise only" << endl;
-    fidFile << "#	complex formation reaction with the first substrate will be considered" << endl;
-    fidFile << "complexFormationSymmetry=" << complexFormationSymmetry << endl << endl;
-
     fidFile << "# IF 1 also monomers can catalyze reactions, otherwise reactions are catalyzed" << endl;
     fidFile << "# starting from dimers" << endl;
     fidFile << "nonCatalyticMaxLength=" << nonCatalyticMaxLength << endl << endl;
@@ -6342,8 +6335,8 @@ bool environment::saveCatalysisStructureSTD(acs_int tmpCurrentGen, acs_int tmpCu
         << tmpAllCatalysisIter->getTotAmount() << "\t"
         << (double)tmpAllCatalysisIter->getKass() << "\t"
         << (double)tmpAllCatalysisIter->getKdiss() << "\t"
-        << (double)tmpAllCatalysisIter->getK_cpx() << endl;
-        //TR << (double)tmpAllCatalysisIter->getK_cpxDiss() << endl;
+        << (double)tmpAllCatalysisIter->getK_cpx() << "\t"
+        << tmpAllCatalysisIter->getCpxTarget() << endl;
     }
     fidFile.close();
     if(debugLevel >= SMALL_DEBUG)

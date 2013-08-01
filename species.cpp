@@ -33,6 +33,7 @@ species::species()
 	energizable = 0;
 	concentrationFixed = false;
 	lastSpeciesEvaluated = 0;
+	firstConcentration = 0;
  
 }
 
