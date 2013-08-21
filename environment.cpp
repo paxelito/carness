@@ -5521,6 +5521,7 @@ void environment::updateSpeciesAges()
 void environment::changeVolume(acs_int tmpTimeSinceLastReaction)
 {
 	//volume = volume + ((volume * 10) * tmpTimeSinceLastReaction) ;
+	cout << "volue change" << endl;
 	volume = volume * 10 ;
 }
 
