@@ -50,6 +50,7 @@ typedef unsigned int acs_int;
 #define HIGH_DEBUG 3
 #define FINDERRORDURINGRUNTIME -10
 #define COMPLEXSTUFF -20
+#define GILLESPIESTUFF -30
 
 // RANDOM INITIALIZATION
 #define RANDOMRANGE random()

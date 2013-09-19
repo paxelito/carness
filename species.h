@@ -108,6 +108,9 @@ public:
     vector<acs_double> getSec_k_SubList()const{return kCond;}
     vector<acs_longInt> getCatalysisIfCpx()const{return catalysisIfCpx;}
     acs_int getSecSubListSize()const{return secondSubstrates.size();}
+    acs_longInt getSecSubListID(acs_int tmpID)const{return secondSubstrates.at(tmpID);}
+    acs_double getSec_k_SubListID(acs_int tmpID)const{return kCond.at(tmpID);}
+    acs_longInt getCatalysisIfCpxID(acs_int tmpID)const{return catalysisIfCpx.at(tmpID);}
 	
 	// FUNCTIONAL FUNCTIONS
 	// Total quantity update functions (concentration is recomputed)
@@ -137,9 +140,6 @@ public:
     void resetToInitConc(acs_double tmpVolume){concentration=firstConcentration; concToNum(tmpVolume);}
     void setLastSpeciesEvaluated(acs_int tmpID){lastSpeciesEvaluated = tmpID;}
     void insertSecSub(acs_longInt tmpID, acs_double tmpK, acs_longInt tmpCat);
-    acs_longInt getSecSubListID(acs_int tmpID){return secondSubstrates.at(tmpID);}
-    acs_double getSec_k_SubListID(acs_int tmpID){return kCond.at(tmpID);}
-    acs_longInt getCatalysisIfCpxID(acs_int tmpID){return catalysisIfCpx.at(tmpID);}
 };
 
 #endif
