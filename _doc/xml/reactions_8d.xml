@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="reactions_8d" kind="file">
     <compoundname>reactions.d</compoundname>
     <briefdescription>
@@ -8,7 +8,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"><ref refid="classreactions" kindref="compound">reactions</ref>.d<sp/><ref refid="classreactions" kindref="compound">reactions</ref>.o:<sp/>../<ref refid="classreactions" kindref="compound">reactions</ref>.cpp<sp/>../<ref refid="classreactions" kindref="compound">reactions</ref>.h<sp/>../acs_headers.h<sp/>\</highlight></codeline>
-<codeline lineno="2"><highlight class="normal"><sp/><sp/>../mtrand.h<sp/>../<ref refid="classcommon_functions" kindref="compound" tooltip="This class contains all the common function of the system. ">commonFunctions</ref>.h</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/>../mtrand.h<sp/>../<ref refid="classcommon_functions" kindref="compound">commonFunctions</ref>.h</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal">../<ref refid="classreactions" kindref="compound">reactions</ref>.h:</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
@@ -16,7 +16,7 @@
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal">../mtrand.h:</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal">../<ref refid="classcommon_functions" kindref="compound" tooltip="This class contains all the common function of the system. ">commonFunctions</ref>.h:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">../<ref refid="classcommon_functions" kindref="compound">commonFunctions</ref>.h:</highlight></codeline>
     </programlisting>
     <location file="/Users/alessandrofilisetti/Documents/GIT/carness/Debug/reactions.d"/>
   </compounddef>

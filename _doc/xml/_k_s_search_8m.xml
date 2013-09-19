@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="_k_s_search_8m" kind="file">
     <compoundname>KSSearch.m</compoundname>
       <sectiondef kind="var">
@@ -22,7 +22,7 @@
         <definition>creating reactions matrix rFiles</definition>
         <argsstring></argsstring>
         <name>rFiles</name>
-        <initializer>= <ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;<ref refid="classreactions" kindref="compound">reactions</ref>*&apos;)</initializer>
+        <initializer>= dir(&apos;<ref refid="classreactions" kindref="compound">reactions</ref>*&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -192,7 +192,7 @@
         <definition>creating catalysis matrix cFiles</definition>
         <argsstring></argsstring>
         <name>cFiles</name>
-        <initializer>= <ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;<ref refid="classcatalysis" kindref="compound">catalysis</ref>*&apos;)</initializer>
+        <initializer>= dir(&apos;<ref refid="classcatalysis" kindref="compound">catalysis</ref>*&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -802,7 +802,7 @@
 <codeline lineno="1" refid="_k_s_search_8m_1a1faaaae288fc8ca4ed1751049aa2f84f" refkind="member"><highlight class="normal"><ref refid="_kill_spam_8m_1a1faaaae288fc8ca4ed1751049aa2f84f" kindref="member">blocked</ref><sp/>=<sp/>0:5;</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal">%<sp/>creating<sp/><ref refid="classreactions" kindref="compound">reactions</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="4" refid="_k_s_search_8m_1ad75735665492cabd747370126464fddf" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(</highlight><highlight class="stringliteral">&apos;reactions*&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="4" refid="_k_s_search_8m_1ad75735665492cabd747370126464fddf" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref><sp/>=<sp/>dir(</highlight><highlight class="stringliteral">&apos;reactions*&apos;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="5" refid="_k_s_search_8m_1a4c72dba1fe2ee2fbcc699262a8d0c624" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref><sp/>=<sp/><ref refid="garbage_search_8m_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>(length(<ref refid="garbage_search_8m_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>)-1).name;</highlight></codeline>
 <codeline lineno="6" refid="_k_s_search_8m_1ae9011d40c6f13e68e6f07156e0da7c5d" refkind="member"><highlight class="normal"><ref refid="namespacebuffered_flux_analysis_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref><sp/>=<sp/>fopen(<ref refid="garbage_search_8m_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref>);</highlight></codeline>
 <codeline lineno="7" refid="_k_s_search_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>1;</highlight></codeline>
@@ -836,8 +836,8 @@
 <codeline lineno="35"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="36"><highlight class="normal">clear<sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">%<sp/>creating<sp/><ref refid="classcatalysis" kindref="compound" tooltip="CATALYSIS class. ">catalysis</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="39" refid="_k_s_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(</highlight><highlight class="stringliteral">&apos;catalysis*&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">%<sp/>creating<sp/><ref refid="classcatalysis" kindref="compound">catalysis</ref><sp/>matrix</highlight></codeline>
+<codeline lineno="39" refid="_k_s_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref><sp/>=<sp/>dir(</highlight><highlight class="stringliteral">&apos;catalysis*&apos;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="40" refid="_k_s_search_8m_1a33e70cf5b45cb59005b82d30202f0b69" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>(length(<ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>)).name;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><ref refid="namespacebuffered_flux_analysis_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref><sp/>=<sp/>fopen(<ref refid="garbage_search_8m_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref>);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><ref refid="garbage_search_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>1;</highlight></codeline>

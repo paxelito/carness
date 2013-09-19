@@ -53,9 +53,9 @@ Identificator&Reaction type&Species 1&Species 2&Species 3&Reaction counter&Energ
 \item {\itshape Energy Type}\-: The reaction energetic configuration, 1 for endoergonic 0 for esoergonic \par
  
 \end{DoxyItemize}\hypertarget{page_init_str_subCatalysis}{}\section{\-\_\-acscatalysis.\-csv}\label{page_init_str_subCatalysis}
-Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{7}
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{8}
 \hline
-Identificator&Catalyst I\-D&Reaction I\-D&Catalysis counter&K condensation&K cleavage&K Complex Association  \\\cline{1-7}
+Identificator&Catalyst I\-D&Reaction I\-D&Catalysis counter&K condensation&K cleavage&K Complex Association&Complex creation substrate target  \\\cline{1-8}
 \end{TabularC}
 
 \begin{DoxyItemize}
@@ -65,7 +65,8 @@ Identificator&Catalyst I\-D&Reaction I\-D&Catalysis counter&K condensation&K cle
 \item {\itshape Catalysis counter}\-: Catalysis counter
 \item {\itshape K final step end condensation kinetic constant}\-: Final step end condensation kinetic constant
 \item {\itshape K Cleavage}\-: Cleavage Kinetic constant
-\item {\itshape K complex association}\-: Complex association kinetic constant \par
+\item {\itshape K complex association}\-: Complex association kinetic constant
+\item {\itshape Complex creation substrate target}\-: Which substrate will be involved in complex creation, 1 or 2 \par
  
 \end{DoxyItemize}\hypertarget{page_init_str_subInflux}{}\section{\-\_\-acsinflux.\-csv}\label{page_init_str_subInflux}
 Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{2}

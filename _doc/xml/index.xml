@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.4">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.5">
   <compound refid="classcatalysis" kind="class"><name>catalysis</name>
     <member refid="classcatalysis_1a581f76199a1e7cab49794ebe7806151e" kind="variable"><name>ID</name></member>
     <member refid="classcatalysis_1a13f8f20cf9acf08827e573b219a07232" kind="variable"><name>catalyst</name></member>
@@ -8,9 +8,9 @@
     <member refid="classcatalysis_1a7495ea3d161d54fec0ba9fdd27ae7300" kind="variable"><name>Kass</name></member>
     <member refid="classcatalysis_1a7b3d426980a6d618f14e72ae2e5af0d6" kind="variable"><name>Kdiss</name></member>
     <member refid="classcatalysis_1a727325a8968a2068c4615fb3fb653fc6" kind="variable"><name>k_cpx</name></member>
-    <member refid="classcatalysis_1a8f87d0300c226ea1d5eb5ac601d4080b" kind="variable"><name>k_cpxDiss</name></member>
+    <member refid="classcatalysis_1a415f8a0d39c71e97d96e262353e2d5ec" kind="variable"><name>cpxTarget</name></member>
     <member refid="classcatalysis_1a7c4d1a67d2745293a17a6bee0df7c5cd" kind="function"><name>catalysis</name></member>
-    <member refid="classcatalysis_1ad512d0e2ff7cbb1b431c917f659a5395" kind="function"><name>catalysis</name></member>
+    <member refid="classcatalysis_1ab6af429c051e2bc9756bac72b99cc4ce" kind="function"><name>catalysis</name></member>
     <member refid="classcatalysis_1a982805165c59e95ac055dc24e684fa05" kind="function"><name>~catalysis</name></member>
     <member refid="classcatalysis_1a85ba5bd9c758392f245f1277141a1706" kind="function"><name>getCatId</name></member>
     <member refid="classcatalysis_1a205e222dff1e80ff8f3195ab22e78726" kind="function"><name>getCat</name></member>
@@ -19,6 +19,7 @@
     <member refid="classcatalysis_1a471d98737d6708b3ac03efba41082d0c" kind="function"><name>getKass</name></member>
     <member refid="classcatalysis_1ad8b0d5f6410e2256cfefe0db9a10b0af" kind="function"><name>getKdiss</name></member>
     <member refid="classcatalysis_1a182bfb05b12ddd3613693f6d1f362665" kind="function"><name>getK_cpx</name></member>
+    <member refid="classcatalysis_1a95cce06ac3f63b66d984bd723ab7e561" kind="function"><name>getCpxTarget</name></member>
     <member refid="classcatalysis_1a9c90e6f2cd9aafd2029ef20a09b95eb2" kind="function"><name>updateTotAmount</name></member>
     <member refid="classcatalysis_1ab8964f8ec17d677de03747520d0a9995" kind="function"><name>resetEventsCounter</name></member>
   </compound>
@@ -39,7 +40,6 @@
     <member refid="classenvironment_1ae562d04f9a2b5084753304c29039d2b1" kind="variable"><name>lastFiringDiskSpeciesID</name></member>
     <member refid="classenvironment_1ad9013e55251c021588c991de0a2e174c" kind="variable"><name>overallConcentration</name></member>
     <member refid="classenvironment_1a408122b5c383b53f0b9539f69e310b9d" kind="variable"><name>ECConcentration</name></member>
-    <member refid="classenvironment_1a0baadb36c19d7756b099c043e394a6f0" kind="variable"><name>complexFormationSymmetry</name></member>
     <member refid="classenvironment_1abaf3fae6060aacfa95a5881d6cef25fc" kind="variable"><name>nonCatalyticMaxLength</name></member>
     <member refid="classenvironment_1a62592802946ed03d101f843f89fefead" kind="variable"><name>reactionProbability</name></member>
     <member refid="classenvironment_1acaf3cd03764e412ac52fcb22ab7ece05" kind="variable"><name>cleavageProbability</name></member>
@@ -56,6 +56,8 @@
     <member refid="classenvironment_1a04cce0a6b32dcd992770631b5175c72a" kind="variable"><name>endoCleavageCounter</name></member>
     <member refid="classenvironment_1af62e4171e2cbea7ba1b06ca07b34ab4e" kind="variable"><name>condensationCounter</name></member>
     <member refid="classenvironment_1ad46f3ea657f0d5ff5d88df9ea5de73de" kind="variable"><name>endoCondensationCounter</name></member>
+    <member refid="classenvironment_1a2904efb427ff7de47767d7110292e200" kind="variable"><name>cpxFormCounter</name></member>
+    <member refid="classenvironment_1aaddbba36836969907bc4bdaa4be7f89b" kind="variable"><name>cpxDissCounter</name></member>
     <member refid="classenvironment_1a020780454d503563fabbd5a4ad70633b" kind="variable"><name>overallLoadedMolsCounter</name></member>
     <member refid="classenvironment_1a7d34a8ee0295c6055d1193efe5149c28" kind="variable"><name>internalTimesStoredCounter</name></member>
     <member refid="classenvironment_1a25a0d08dc8d9db571ff4d25f57daf0e8" kind="variable"><name>lastEvaluatedSpeceisForNewReactions</name></member>
@@ -112,6 +114,7 @@
     <member refid="classenvironment_1a90771fff4cdb0c1aadef204d509fc1c8" kind="variable"><name>decimalMoleculesToEfflux</name></member>
     <member refid="classenvironment_1ada0015e4b148b45227ffdcad63eaf389" kind="variable"><name>decimalMoleculesToLoad</name></member>
     <member refid="classenvironment_1a973d3c945427e6d08521ae4ef4b19f33" kind="variable"><name>decimalMoleculesToUNLOAD</name></member>
+    <member refid="classenvironment_1a48c6498bbf54456a1d81d6e837a593c1" kind="variable"><name>decimalComplexesToDissociate</name></member>
     <member refid="classenvironment_1a5e0df47dc701f009dcc92bbe17bd299f" kind="variable"><name>gillespieMean</name></member>
     <member refid="classenvironment_1ae28e58ae543007a45edb275a615e7a26" kind="variable"><name>gillespieSD</name></member>
     <member refid="classenvironment_1ab6c610b2bd0b83c661782b8a7e8a2664" kind="variable"><name>gillespieEntropy</name></member>
@@ -140,7 +143,6 @@
     <member refid="classenvironment_1a77e995bee54ab4e09f165a857a7b0272" kind="function"><name>getFileTimesSavingInterval</name></member>
     <member refid="classenvironment_1a984f79e5f89b774b65db901899687ac0" kind="function"><name>getLastFiringDiskSpeciesID</name></member>
     <member refid="classenvironment_1a8bea373c48982a78ee46c5c5fafcb81c" kind="function"><name>getOverallConcentration</name></member>
-    <member refid="classenvironment_1a609a22828e5f92d74d31793b907621ad" kind="function"><name>getComplexFormationSymmetry</name></member>
     <member refid="classenvironment_1aca760caf9354f541020c1db58490b18f" kind="function"><name>getMaxNonCatalyticLength</name></member>
     <member refid="classenvironment_1ae244aa972cf10c103b8b20d95703831f" kind="function"><name>getRctProb</name></member>
     <member refid="classenvironment_1ac728f6ab012c42fa85a2e2f70df7dc58" kind="function"><name>getCleavProb</name></member>
@@ -182,6 +184,7 @@
     <member refid="classenvironment_1ab6952f7f6fd971ece0a8661733cfc2b3" kind="function"><name>getRandomSeed</name></member>
     <member refid="classenvironment_1adb12eb52af74ea1fdfe0cd195109fe83" kind="function"><name>getMoleculesPopulation</name></member>
     <member refid="classenvironment_1a7a321296874fa1320da225cdbbf56a64" kind="function"><name>getTotalNumberOfSpecies</name></member>
+    <member refid="classenvironment_1a8796aead7bcc4a3f91eec7bc908dfa5b" kind="function"><name>getTotalNumberOfPossibleCatalysts</name></member>
     <member refid="classenvironment_1a57e7ac49955f4717096cb6696ee03a61" kind="function"><name>getTotalNumberOfMolecules</name></member>
     <member refid="classenvironment_1a453d88017912e8b5973310ea2b044266" kind="function"><name>getTotalNumberOfComplexSpecies</name></member>
     <member refid="classenvironment_1ab564c7ddffd3dba896d5b049e1257793" kind="function"><name>getTotalNumberOfComplexes</name></member>
@@ -199,6 +202,8 @@
     <member refid="classenvironment_1aa2ded3c5ba8c4ce41ee86399dc616d4a" kind="function"><name>getEndoCleavageCounter</name></member>
     <member refid="classenvironment_1a0fc62131bf552c2a995c7ddc461828cd" kind="function"><name>getCondensationCounter</name></member>
     <member refid="classenvironment_1aaa23d550cfa37344dd3bb4d5767e6ea0" kind="function"><name>getEndoCondensationCounter</name></member>
+    <member refid="classenvironment_1a5d72675f37c3936c58d27480613a9ab6" kind="function"><name>getCpxFormCounter</name></member>
+    <member refid="classenvironment_1abf2f63b22c52e17f6089f098651584b8" kind="function"><name>getCpxDissCounter</name></member>
     <member refid="classenvironment_1a75329459280bc79537a5c08883449a63" kind="function"><name>getOverallLoadedMolsCounter</name></member>
     <member refid="classenvironment_1aadb5c442d5c9d16a0d6b2e90715dda94" kind="function"><name>getTotNumberOfChargedMols</name></member>
     <member refid="classenvironment_1af959a6b6a72cb6226fef7f0e7fab5c0c" kind="function"><name>showGlobalParameter</name></member>
@@ -219,16 +224,17 @@
     <member refid="classenvironment_1a0fd3cb062d35d2f6dd8961e95dd477b7" kind="function"><name>computeSngSpeciesRctsNumber</name></member>
     <member refid="classenvironment_1a53282cca8882e86652ab0a22e6966d17" kind="function"><name>selectWhetherCleavageOrCond</name></member>
     <member refid="classenvironment_1a76794f37d6d94b7504c58f0f4a4709ca" kind="function"><name>createReactionsForThisSpecies</name></member>
+    <member refid="classenvironment_1ace92235425bfbe692e3873ba5bb07639" kind="function"><name>updateReactions</name></member>
     <member refid="classenvironment_1af795a4d1f04dfbfcbdf321e20e74f9c2" kind="function"><name>createDiffusionRenforcement</name></member>
     <member refid="classenvironment_1a496ba50d3a345cd842ce42406946405c" kind="function"><name>setSolubility</name></member>
     <member refid="classenvironment_1a4e26cc574e20a5afcfbbe5887109c5af" kind="function"><name>returnPosSpeciesAlreadyPresent</name></member>
     <member refid="classenvironment_1a6feec5685b519ba0cdae0e5c59dffff0" kind="function"><name>returnPosReactionAlreadyPresent</name></member>
     <member refid="classenvironment_1ac4c90b07b8e75ea03e2ced0ea644a69f" kind="function"><name>checkIfTheReactionIsAlreadyCatalyzedByThisSpecies</name></member>
     <member refid="classenvironment_1a2cb0152bf789918e7d92685f947ce48f" kind="function"><name>performGillespieComputation</name></member>
+    <member refid="classenvironment_1a90fba3b2cc589f32c97a74540620bd84" kind="function"><name>performOPTGillespieComputation</name></member>
     <member refid="classenvironment_1a1db4e67ba458a54f4fab3e10a203765c" kind="function"><name>performReaction</name></member>
-    <member refid="classenvironment_1aa4b3e51bd7bbb2a287f0963e261cb79b" kind="function"><name>newSpeciesEvaluation</name></member>
-    <member refid="classenvironment_1ac58fdd1a7e2880585ab9716d9db1e8e2" kind="function"><name>newSpeciesEvaluationII</name></member>
-    <member refid="classenvironment_1a866ffc56a30e1b2698158a5428a1de0c" kind="function"><name>complexEvaluation</name></member>
+    <member refid="classenvironment_1aaf76ff29b387a5308fdd34470994732f" kind="function"><name>newSpeciesEvaluationIII</name></member>
+    <member refid="classenvironment_1a5ee6b203f077de1467aa72042814db7d" kind="function"><name>complexEvaluation</name></member>
     <member refid="classenvironment_1ae1270b9c235dd6b28413075197dba8e0" kind="function"><name>computeSinglGilScore</name></member>
     <member refid="classenvironment_1a30a0827eed2860d03d5fa5318fcf86b0" kind="function"><name>performSingleGilleSpieIntroduction</name></member>
     <member refid="classenvironment_1a0156a2d7219396e58a930731966b0c66" kind="function"><name>changeVolume</name></member>
@@ -253,6 +259,8 @@
     <member refid="classenvironment_1ab0fc2cd6ed209d61286b837bd5460d90" kind="function"><name>incEndoCleavageCounter</name></member>
     <member refid="classenvironment_1a3fae8e57fad9ef5b182e32d9bb9989af" kind="function"><name>incCondensationCounter</name></member>
     <member refid="classenvironment_1a01812d540519696ab07c9f822119cc64" kind="function"><name>incEndoCondensationCounter</name></member>
+    <member refid="classenvironment_1afd3d590aa9b6a644cb360cc5fd47e16a" kind="function"><name>incCpxFormCounter</name></member>
+    <member refid="classenvironment_1a73f88a08ff9206e48063cccb1729ee6b" kind="function"><name>incCpxDissCounter</name></member>
     <member refid="classenvironment_1a719b14624d9a2f891b8d4eb47649a00e" kind="function"><name>incOverallLoadedMolsCounter</name></member>
     <member refid="classenvironment_1a6686b0489ed94f11c4b03c011978f9af" kind="function"><name>decOverallLoadedMolsCounter</name></member>
     <member refid="classenvironment_1a0b1e324c651c86cb54279e022c14dc6d" kind="function"><name>resetCleavageCounter</name></member>
@@ -260,6 +268,8 @@
     <member refid="classenvironment_1ac7deab8db2f581077da735c3542d8f1b" kind="function"><name>resetCondensationCounter</name></member>
     <member refid="classenvironment_1a55cff0bc2f8de4d3e4db471cad580a86" kind="function"><name>resetEndoCondensationCounter</name></member>
     <member refid="classenvironment_1abc04de785dddab4703fdcf52ccdf85f9" kind="function"><name>resetOverallLoadedMolsCounter</name></member>
+    <member refid="classenvironment_1a4cf4413f3028f8c5e33991ad5ba18e21" kind="function"><name>resetCpxFormCounter</name></member>
+    <member refid="classenvironment_1a987dc7b9f211f34564343ee0eaa20dc1" kind="function"><name>resetCpxDissCounter</name></member>
     <member refid="classenvironment_1a5c8713237992b28c39199a7aea3f9ea0" kind="function"><name>resetReactionsCounter</name></member>
     <member refid="classenvironment_1a7981c34d16c0b1e9e6ca3ea69aa3a8a3" kind="function"><name>addChargeMolToList</name></member>
     <member refid="classenvironment_1aa4830018af0b99eddefcdefad877b305" kind="function"><name>removeChargeMolFromList</name></member>
@@ -269,6 +279,7 @@
     <member refid="classenvironment_1a8a53821ad1675b0da50591616aac3b74" kind="function"><name>performRefill</name></member>
     <member refid="classenvironment_1acbbcdb4c77231e9ffa4c169e0caa0d0c" kind="function"><name>performMoleculesEfflux</name></member>
     <member refid="classenvironment_1adbaf165a12edd62c614a455544807ea3" kind="function"><name>performDETMoleculesCharging</name></member>
+    <member refid="classenvironment_1a6ae793f9d2dca0632239be955dd83cee" kind="function"><name>performDETComplexDissociation</name></member>
     <member refid="classenvironment_1a9bc445da3e89d09d4fce11c83f3dedb0" kind="function"><name>setActualTime</name></member>
     <member refid="classenvironment_1adab0607255ca5927b69cb6882917e031" kind="function"><name>updateSpeciesAges</name></member>
     <member refid="classenvironment_1aac3eed768b89e3a70017075b68046ede" kind="function"><name>increaseAttempts</name></member>
@@ -276,8 +287,8 @@
     <member refid="classenvironment_1aa7a2cc95d8ba242c805a8fda063b23a7" kind="function"><name>perform_endo_Condensation</name></member>
     <member refid="classenvironment_1aa4ed307a123c402166cfc7f6ed99043a" kind="function"><name>performCleavage</name></member>
     <member refid="classenvironment_1ade26b82a3b48a5bda7e5751cbfd31b04" kind="function"><name>perform_endo_Cleavage</name></member>
-    <member refid="classenvironment_1ab50605f871505a3ab9215552cac90790" kind="function"><name>performComplexFormation</name></member>
-    <member refid="classenvironment_1aa85e7ddc4de7bdfe70b3828a300edeb8" kind="function"><name>perform_endo_ComplexFormation</name></member>
+    <member refid="classenvironment_1aaf4f4f6be28edb182d2a2516c9394f9b" kind="function"><name>performComplexFormation</name></member>
+    <member refid="classenvironment_1ae942db2453c56b60250a5d43452b91a5" kind="function"><name>perform_endo_ComplexFormation</name></member>
     <member refid="classenvironment_1a5c5e57b0558067cbf55c894f33d0a121" kind="function"><name>performComplexDissociation</name></member>
     <member refid="classenvironment_1ad072a40a7d9521379c7ff50ed8110fbe" kind="function"><name>performMoleculeEfflux</name></member>
     <member refid="classenvironment_1aff7607e0f3a74790109a7d87de3031bd" kind="function"><name>performEnergyEfflux</name></member>
@@ -285,6 +296,8 @@
     <member refid="classenvironment_1a5160dec152ed0369fe8af9aff3253a9e" kind="function"><name>notInverseReactionAlreadyCatalyzed</name></member>
     <member refid="classenvironment_1abdafaeba15b5d32fd35569869c6244d5" kind="function"><name>checkIfOnlyMutualCatalysis</name></member>
     <member refid="classenvironment_1ad3ebcd7ab1c9ba1a0f65b264b97adf33" kind="function"><name>checkAvailability</name></member>
+    <member refid="classenvironment_1af293fafca4582120d88f888d70d8623a" kind="function"><name>inserSubListInSpecies</name></member>
+    <member refid="classenvironment_1a5cb194f927ddc7a804a942ca71f062af" kind="function"><name>showSubListInSpecies</name></member>
     <member refid="classenvironment_1a71f4c5ff1c11a9d61cbc818682a4a91e" kind="function"><name>saveConfigurationFileSTD</name></member>
     <member refid="classenvironment_1a8f831e2db11fa5d840484345dac64fc7" kind="function"><name>saveInfluxStructureSTD</name></member>
     <member refid="classenvironment_1a1412b9b1c3bd3e42bcb481f5e18ea931" kind="function"><name>saveNrgBoolFncStructureSTD</name></member>
@@ -421,6 +434,9 @@
     <member refid="classspecies_1adabdbcb062f03b3dced7d6d70133bb24" kind="variable"><name>concentrationFixed</name></member>
     <member refid="classspecies_1a468ac12f40c09c0645eec6f493e017ef" kind="variable"><name>firstConcentration</name></member>
     <member refid="classspecies_1a347af9ca8552b15b1045ea861e8d095f" kind="variable"><name>lastSpeciesEvaluated</name></member>
+    <member refid="classspecies_1a0826035786fad71fc2f00a208275025f" kind="variable"><name>secondSubstrates</name></member>
+    <member refid="classspecies_1a010db03de5c29d42f3ee71ea61135fb6" kind="variable"><name>catalysisIfCpx</name></member>
+    <member refid="classspecies_1a74db6047c1209ffc92de38ed9194c73f" kind="variable"><name>kCond</name></member>
     <member refid="classspecies_1a25887c42dfb4b6f33a2d17fdcf74bc47" kind="function"><name>species</name></member>
     <member refid="classspecies_1a2c407091ff53f0d508b7b9ed8230eee4" kind="function"><name>species</name></member>
     <member refid="classspecies_1a0c91a8b735cb484bff240ba5049f6af3" kind="function"><name>species</name></member>
@@ -451,6 +467,10 @@
     <member refid="classspecies_1aa2b24de5a97f1e06d359ab5b63817d98" kind="function"><name>getConcentrationFixed</name></member>
     <member refid="classspecies_1a6773ef96109c27ddd4afa78b87b2fcd3" kind="function"><name>getFirstConcentration</name></member>
     <member refid="classspecies_1ace7de26d4e33dddfa78f2c624cfb3666" kind="function"><name>getLastSpeciesEvaluated</name></member>
+    <member refid="classspecies_1ada53efcec76e8f241b15fd6c76d4fb79" kind="function"><name>getSecSubList</name></member>
+    <member refid="classspecies_1a30f77a52d0c75f02f6b4c269b5cf702d" kind="function"><name>getSec_k_SubList</name></member>
+    <member refid="classspecies_1aaafd2738231ba916153e24c19e7b3bfc" kind="function"><name>getCatalysisIfCpx</name></member>
+    <member refid="classspecies_1a984df86838272204e7a8414bbc2a61fb" kind="function"><name>getSecSubListSize</name></member>
     <member refid="classspecies_1a77f68017e5c50f8943df90efd2e8a0bb" kind="function"><name>increment</name></member>
     <member refid="classspecies_1a87e85a2397e5ec34518efa235b529d7e" kind="function"><name>specificIncrement</name></member>
     <member refid="classspecies_1abefdc30b6f352e5ce5576a610015f5b8" kind="function"><name>setAmount</name></member>
@@ -472,6 +492,10 @@
     <member refid="classspecies_1a4884d8bce59ddb79e87e08f3ed16633f" kind="function"><name>resetReborns</name></member>
     <member refid="classspecies_1acc180a103e6681da2add266aafda3eb9" kind="function"><name>resetToInitConc</name></member>
     <member refid="classspecies_1a8daa007da55f042b9c436f956836f4d8" kind="function"><name>setLastSpeciesEvaluated</name></member>
+    <member refid="classspecies_1a0da8d53a216583f7790b12362da376a3" kind="function"><name>insertSecSub</name></member>
+    <member refid="classspecies_1ac066ac5e1684a958e7f1c8b200de3155" kind="function"><name>getSecSubListID</name></member>
+    <member refid="classspecies_1a012baa0b3a908e433bbc76151271f8bb" kind="function"><name>getSec_k_SubListID</name></member>
+    <member refid="classspecies_1a5b26e28656321f2b19fafe49b153a5cd" kind="function"><name>getCatalysisIfCpxID</name></member>
   </compound>
   <compound refid="namespacebuffered_flux_analysis" kind="namespace"><name>bufferedFluxAnalysis</name>
     <member refid="namespacebuffered_flux_analysis_1a86b649a1e51f1e3384ad432c0de3340b" kind="variable"><name>StrPath</name></member>
@@ -695,6 +719,7 @@
     <member refid="general_concentration_over_threshold_8m_1a4d8f56ee83b9b4dbe17b218746a1768c" kind="variable"><name>interval</name></member>
     <member refid="general_concentration_over_threshold_8m_1a54768c0405781065cb2f7a16ab8e7d31" kind="variable"><name>currentDate</name></member>
     <member refid="general_concentration_over_threshold_8m_1af32eb97339f1e9d37b5540de2cbc79c9" kind="variable"><name>currentDir</name></member>
+    <member refid="general_concentration_over_threshold_8m_1af42e186bcb2ad28b937ef14407da1f0d" kind="variable"><name>outFilenName</name></member>
     <member refid="general_concentration_over_threshold_8m_1a2f1bf22f6a0c3f5791577061e92c0433" kind="variable"><name>fidFINAL</name></member>
     <member refid="general_concentration_over_threshold_8m_1ab3186e0326a3b47b2cfcb5577ab5139f" kind="variable"><name>search</name></member>
     <member refid="general_concentration_over_threshold_8m_1aae5035eb84b89176ed5b06e136325eff" kind="variable"><name>simDirs</name></member>
@@ -744,7 +769,6 @@
     <member refid="general_concentration_over_threshold_8m_1a32ac1074f1b1cce044e95ec345f378e7" kind="variable"><name>ratioBackForward</name></member>
     <member refid="general_concentration_over_threshold_8m_1af837f695e5b67c86016c1a82608c38b4" kind="variable"><name>nrg</name></member>
     <member refid="general_concentration_over_threshold_8m_1acc16e80f122cc11cf1570c53597afb19" kind="variable"><name>printTemporalMessage</name></member>
-    <member refid="general_concentration_over_threshold_8m_1a95b8ff8a27bbc7e771fa2fdd279f2465" kind="variable"><name>saveGraphToFile</name></member>
     <member refid="general_concentration_over_threshold_8m_1a30a404fc0b2d3c996251dfd4adf5ec51" kind="variable"><name>timeInterval</name></member>
     <member refid="general_concentration_over_threshold_8m_1a91819eaefb434ac459f17b3caa03713d" kind="variable"><name>graph</name></member>
     <member refid="general_concentration_over_threshold_8m_1a0c738fa68cf19f3aeef6b6a7a723577c" kind="variable"><name>graphSUB</name></member>
@@ -811,8 +835,7 @@
     <member refid="general_concentration_over_threshold_8m_1a6791897869706b835f1a5d305739a415" kind="variable"><name>tline</name></member>
     <member refid="general_concentration_over_threshold_8m_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kind="variable"><name>param</name></member>
     <member refid="general_concentration_over_threshold_8m_1afb8c99b8f4d982428090b0b6ab07dafb" kind="function"><name>cd</name></member>
-    <member refid="general_concentration_over_threshold_8m_1ae60321a34c0a93776384a837b8f3a9e1" kind="function"><name>disp</name></member>
-    <member refid="general_concentration_over_threshold_8m_1a442b9e123f36a16e7fca4f2f2f067c27" kind="function"><name>cd</name></member>
+    <member refid="general_concentration_over_threshold_8m_1a8b0a903208664a3adb1355b79af314b4" kind="function"><name>~isdir</name></member>
     <member refid="general_concentration_over_threshold_8m_1a1e641c44546ec25e735b887393dceb16" kind="function"><name>exist</name></member>
     <member refid="general_concentration_over_threshold_8m_1a6ffb0f3cb73c8f8faf0b5192942de203" kind="function"><name>fprintf</name></member>
     <member refid="general_concentration_over_threshold_8m_1a59d5e4adb82333e9d1fbe886d0071c6b" kind="function"><name>fclose</name></member>
@@ -826,6 +849,8 @@
     <member refid="general_concentration_over_threshold_8m_1aaa2ace52a161710427bdc25dd600089b" kind="function"><name>ischar</name></member>
     <member refid="general_concentration_over_threshold_8m_1ab5b947e1a8b7cf496ffd4eb21317052e" kind="function"><name>rline</name></member>
     <member refid="general_concentration_over_threshold_8m_1ac62d9b6e4b7257c90322e20e1eb8e733" kind="function"><name>gillTimeSeries</name></member>
+    <member refid="general_concentration_over_threshold_8m_1afa2000dd097bd23eb8be232e0bdfeb4d" kind="function"><name>disp</name></member>
+    <member refid="general_concentration_over_threshold_8m_1ab80c851bb58475542f68e7585b2b1948" kind="function"><name>saveGraphToFile</name></member>
     <member refid="general_concentration_over_threshold_8m_1af8c5bdc8ca3fe8ddcc8594ecad80560a" kind="function"><name>saveGraphSUBToFile</name></member>
     <member refid="general_concentration_over_threshold_8m_1a170f8acb213f91bf71c77b1d20bceb33" kind="function"><name>and</name></member>
     <member refid="general_concentration_over_threshold_8m_1a107ac08fa413d7d0c5323dc4330d83fb" kind="function"><name>disp</name></member>
@@ -1104,8 +1129,7 @@
     <member refid="overall_stats_8m_1ab41953ee2db3da78ed71808b12490209" kind="function"><name>tmpAnalysis</name></member>
     <member refid="overall_stats_8m_1a2e3fcc5ce8c864c086058fa1fcd8adb4" kind="function"><name>tmpAnalysis</name></member>
     <member refid="overall_stats_8m_1a08f902f5af41bb11acdd6ce5130e5934" kind="function"><name>tmpAnalysis</name></member>
-    <member refid="overall_stats_8m_1a98ae4bf3f5f573af6ea4fc18d2a1125e" kind="function"><name>tmpAnalysis</name></member>
-    <member refid="overall_stats_8m_1a56bd5c817530f9b305b5375d6509978a" kind="function"><name>generalConcentrationOverThreshold</name></member>
+    <member refid="overall_stats_8m_1a2715fe7879632230b881069e171a734c" kind="function"><name>tmpAnalysis</name></member>
     <member refid="overall_stats_8m_1ab41b8dc78dee42a1a5e5a33d8bf6eeb3" kind="function"><name>exist</name></member>
     <member refid="overall_stats_8m_1ab4c95c2d6a84263412f5679a78b55e41" kind="function"><name>eval</name></member>
     <member refid="overall_stats_8m_1a2160a514930abbfa9436b787b4cfc8ab" kind="function"><name>cd</name></member>
@@ -1168,6 +1192,7 @@
     <member refid="crea__catalizzatori_8m_1a6f6ccfcf58b31cb6412107d9d5281426" kind="variable"><name>i</name></member>
     <member refid="crea__catalizzatori_8m_1a2e07612f7e3cd041be7b701c434ac5c1" kind="variable"><name>tot_cond</name></member>
     <member refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kind="variable"><name>tot_reaz</name></member>
+    <member refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kind="variable"><name>reactionProbability</name></member>
     <member refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kind="variable"><name>cleavageProbability</name></member>
     <member refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" kind="variable"><name>catalisi_reali</name></member>
     <member refid="crea__catalizzatori_8m_1a84d78e886b9f683403579e3911e7f046" kind="variable"><name>reazione</name></member>
@@ -1178,7 +1203,6 @@
     <member refid="crea__catalizzatori_8m_1ab149f236ebc8e97056dd65cc2eacb67f" kind="variable"><name>numero_specie_da_togliere</name></member>
     <member refid="crea__catalizzatori_8m_1a0cd6a44ffb07342cbc7e5ac33bfc9495" kind="variable"><name>index</name></member>
     <member refid="crea__catalizzatori_8m_1a2e17c940b115a5db53ac8c404feac6ae" kind="variable"><name>fino_a_che_lunghezza_i_polimeri_non_catalizzano</name></member>
-    <member refid="crea__catalizzatori_8m_1a703d109ba53d930882a7736d9e73a933" kind="function"><name>fprintf</name></member>
     <member refid="crea__catalizzatori_8m_1a0d28c684ab6483b3af034981a7db4806" kind="function"><name>switch</name></member>
     <member refid="crea__catalizzatori_8m_1a41bcbf4606f8025b8341a3f393f5726f" kind="function"><name>catalizzatore</name></member>
     <member refid="crea__catalizzatori_8m_1a8f0e827efd2844af2e4d5970b712b574" kind="function"><name>catalizzatore</name></member>
@@ -1276,6 +1300,7 @@
   </compound>
   <compound refid="inizializzatore___a_c_s_8m" kind="file"><name>inizializzatore_ACS.m</name>
     <member refid="inizializzatore___a_c_s_8m_1a4b4c670b101bf7a838f775e008fa6255" kind="variable"><name>function</name></member>
+    <member refid="inizializzatore___a_c_s_8m_1aff1e821fc5f97a0758f74b5cbd00cacf" kind="variable"><name>fid1</name></member>
     <member refid="inizializzatore___a_c_s_8m_1a11af2c31c7926441f43875d99b4577d2" kind="variable"><name>fid2</name></member>
     <member refid="inizializzatore___a_c_s_8m_1a153e3250d4161f9bea4c140498016d94" kind="variable"><name>fid3</name></member>
     <member refid="inizializzatore___a_c_s_8m_1a28f0b3b80ef3c84a4a00660a307d2147" kind="variable"><name>fid4</name></member>
@@ -1293,8 +1318,7 @@
     <member refid="inizializzatore___a_c_s_8m_1a4ac535f433360d1fc7c40f462e2a4ea3" kind="variable"><name>reazione</name></member>
     <member refid="inizializzatore___a_c_s_8m_1aad3b1a68f41f4a6fa247c1cf8e1d450a" kind="variable"><name>eso_endo</name></member>
     <member refid="inizializzatore___a_c_s_8m_1ae51c8aaf978db2e5d5f076fca5b3d6fd" kind="variable"><name>temporal</name></member>
-    <member refid="inizializzatore___a_c_s_8m_1ab526c3939d1049806db989cf3095fc9a" kind="function"><name>cd</name></member>
-    <member refid="inizializzatore___a_c_s_8m_1a778632868660bf2a5fb3a44735cfc066" kind="function"><name>cd</name></member>
+    <member refid="inizializzatore___a_c_s_8m_1abcaf3fe79479456b56924747f1bca0d9" kind="function"><name>mkdir</name></member>
     <member refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kind="function"><name>mkdir</name></member>
     <member refid="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" kind="function"><name>cd</name></member>
     <member refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kind="function"><name>fprintf</name></member>
@@ -1367,7 +1391,7 @@
     <member refid="lancia__inizializzatore__acs_8m_1a7cd0915d7542523abc226a8eecf67ecf" kind="variable"><name>gamma_powerlaw_concentrazioni</name></member>
     <member refid="lancia__inizializzatore__acs_8m_1a089ff88e71c60b850d67fa1c891af4ab" kind="variable"><name>catalizzatori</name></member>
     <member refid="lancia__inizializzatore__acs_8m_1ada2b06fc2d132c7a047984505d3bad7c" kind="variable"><name>inizializzatore_ACS</name></member>
-    <member refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kind="function"><name>rand</name></member>
+    <member refid="lancia__inizializzatore__acs_8m_1a82556659f7ba7219e55a18e9b9e63873" kind="function"><name>nGEN</name></member>
     <member refid="lancia__inizializzatore__acs_8m_1a5b5a345da13951297f4d3ad31f76a87a" kind="function"><name>eso</name></member>
     <member refid="lancia__inizializzatore__acs_8m_1acd685f63a27f53fc049aff633634ddd6" kind="function"><name>ratio_firing_disk</name></member>
   </compound>
@@ -1431,8 +1455,10 @@
     <member refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kind="variable"><name>i</name></member>
     <member refid="start_8m_1ac9358e0c7555a21532187de31cdbd469" kind="variable"><name>lastFiringDiskSpeciesID</name></member>
     <member refid="start_8m_1a2d4125646b62462ce279d82913125ccf" kind="variable"><name>thisFolder</name></member>
-    <member refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kind="variable"><name>dir</name></member>
-    <member refid="start_8m_1a116958824076bbd8ba3a094b73919de4" kind="variable"><name>funzioni_booleane_in_dec</name></member>
+    <member refid="start_8m_1aaad88534fbf3d065202db78a891374ca" kind="variable"><name>fid20</name></member>
+    <member refid="start_8m_1a15a0e3f3007df072a07460518322b944" kind="variable"><name>energia</name></member>
+    <member refid="start_8m_1a35e364c23f0047548a80b164387d0f06" kind="variable"><name>metà</name></member>
+    <member refid="start_8m_1ac2751b1d83e4866f727cdcc856beaad1" kind="variable"><name>funzioni_booleane_in_dec</name></member>
     <member refid="start_8m_1a18f9e9dff2c5a2fe455a8d41fa6860fa" kind="variable"><name>parte2_nome_cartella</name></member>
     <member refid="start_8m_1a1795e2dc228962c5b67eaee336bba2ad" kind="variable"><name>parte3_nome_cartella</name></member>
     <member refid="start_8m_1a1b273eb41d82b5ca6c9f74a3c0aa2855" kind="function"><name>simulazioni</name></member>
@@ -1440,16 +1466,19 @@
     <member refid="start_8m_1ad4ff287bf077be8ffb479fcc197bc548" kind="function"><name>simulazione</name></member>
     <member refid="start_8m_1a40d2922f55b48d94c99038a8c2bef2ff" kind="function"><name>rete</name></member>
     <member refid="start_8m_1a096e1441156fd2c744baece86d6b295c" kind="function"><name>simulation</name></member>
-    <member refid="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" kind="function"><name>cd</name></member>
+    <member refid="start_8m_1acda334cb7ae2a2f83fa0ec9c6f57a846" kind="function"><name>exist</name></member>
+    <member refid="start_8m_1a05f7e68f06e2b202f7fc3d5678f70fa8" kind="function"><name>condensazione</name></member>
     <member refid="start_8m_1aa053e90bd0493b6b9dfbb0e8febbee0e" kind="function"><name>funzioni_booleane_in_dec</name></member>
   </compound>
   <compound refid="acs__headers_8h" kind="file"><name>acs_headers.h</name>
+    <member refid="acs__headers_8h_1aab38659c2fe462437b89a1e85e619dc7" kind="define"><name>__SOFTVERSION__</name></member>
     <member refid="acs__headers_8h_1a972f6696f10f8159f336357f003493b6" kind="define"><name>MINIMAL_PROMPT</name></member>
     <member refid="acs__headers_8h_1a72244054b9e2e45fe85cbef84bd42904" kind="define"><name>RUNNING_VERSION</name></member>
     <member refid="acs__headers_8h_1a6f7711b8195edb3c3541c153ebcb4bfa" kind="define"><name>SMALL_DEBUG</name></member>
     <member refid="acs__headers_8h_1ab0ead5a0a8c59ad5f4d9fcf0be28a5d7" kind="define"><name>MEDIUM_DEBUG</name></member>
     <member refid="acs__headers_8h_1ac2a71f467524d5299cbff5df96be638a" kind="define"><name>HIGH_DEBUG</name></member>
     <member refid="acs__headers_8h_1a0934dca9b46dc1ce8ccae606a6511f63" kind="define"><name>FINDERRORDURINGRUNTIME</name></member>
+    <member refid="acs__headers_8h_1a186bfb39322832c790ce5403bc04330d" kind="define"><name>COMPLEXSTUFF</name></member>
     <member refid="acs__headers_8h_1a4cb4f6978b0d938a0523bd6946e7609d" kind="define"><name>RANDOMRANGE</name></member>
     <member refid="acs__headers_8h_1a79c4b6317fd327fd5a62d65036481a25" kind="define"><name>PROPORTIONALMOLECULEAMOUNT</name></member>
     <member refid="acs__headers_8h_1a6236cb136896f6bcbc6694d394e8aca3" kind="define"><name>UNIFORMMOLECULEAMOUNT</name></member>

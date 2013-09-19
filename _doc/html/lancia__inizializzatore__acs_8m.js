@@ -1,7 +1,7 @@
 var lancia__inizializzatore__acs_8m =
 [
     [ "eso", "lancia__inizializzatore__acs_8m.html#a5b5a345da13951297f4d3ad31f76a87a", null ],
-    [ "rand", "lancia__inizializzatore__acs_8m.html#a078f67f8fbdd9ac6587e03bdf2651d32", null ],
+    [ "nGEN", "lancia__inizializzatore__acs_8m.html#a82556659f7ba7219e55a18e9b9e63873", null ],
     [ "ratio_firing_disk", "lancia__inizializzatore__acs_8m.html#acd685f63a27f53fc049aff633634ddd6", null ],
     [ "__pad1__", "lancia__inizializzatore__acs_8m.html#a6ea019326f9d9d9c5e10160c5c4b6679", null ],
     [ "__pad2__", "lancia__inizializzatore__acs_8m.html#a43895072f7337df80dc4273211c55c9b", null ],

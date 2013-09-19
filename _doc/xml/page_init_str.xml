@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="page_init_str" kind="page">
     <compoundname>pageInitStr</compoundname>
     <title>Initial Data Structures</title>
@@ -31,11 +31,11 @@
 </para></sect1>
 <sect1 id="page_init_str_1subCatalysis">
 <title>_acscatalysis.csv</title>
-<para>Columns description (each field is delimited using &quot;\t&quot;): <table rows="1" cols="7"><row>
-<entry thead="no"><para>Identificator</para></entry><entry thead="no"><para>Catalyst ID</para></entry><entry thead="no"><para>Reaction ID</para></entry><entry thead="no"><para>Catalysis counter</para></entry><entry thead="no"><para>K condensation</para></entry><entry thead="no"><para>K cleavage</para></entry><entry thead="no"><para>K Complex Association  </para></entry></row>
+<para>Columns description (each field is delimited using &quot;\t&quot;): <table rows="1" cols="8"><row>
+<entry thead="no"><para>Identificator</para></entry><entry thead="no"><para>Catalyst ID</para></entry><entry thead="no"><para>Reaction ID</para></entry><entry thead="no"><para>Catalysis counter</para></entry><entry thead="no"><para>K condensation</para></entry><entry thead="no"><para>K cleavage</para></entry><entry thead="no"><para>K Complex Association</para></entry><entry thead="no"><para>Complex creation substrate target  </para></entry></row>
 </table>
 <itemizedlist>
-<listitem><para><emphasis>Identificator</emphasis>: Catalysis ID</para></listitem><listitem><para><emphasis>Catalyst ID</emphasis>: species (as catalyst) ID</para></listitem><listitem><para><emphasis>Reaction ID</emphasis>: Reaction ID</para></listitem><listitem><para><emphasis>Catalysis counter</emphasis>: Catalysis counter</para></listitem><listitem><para><emphasis>K final step end condensation kinetic constant</emphasis>: Final step end condensation kinetic constant</para></listitem><listitem><para><emphasis>K Cleavage</emphasis>: Cleavage Kinetic constant</para></listitem><listitem><para><emphasis>K complex association</emphasis>: Complex association kinetic constant <linebreak/>
+<listitem><para><emphasis>Identificator</emphasis>: Catalysis ID</para></listitem><listitem><para><emphasis>Catalyst ID</emphasis>: species (as catalyst) ID</para></listitem><listitem><para><emphasis>Reaction ID</emphasis>: Reaction ID</para></listitem><listitem><para><emphasis>Catalysis counter</emphasis>: Catalysis counter</para></listitem><listitem><para><emphasis>K final step end condensation kinetic constant</emphasis>: Final step end condensation kinetic constant</para></listitem><listitem><para><emphasis>K Cleavage</emphasis>: Cleavage Kinetic constant</para></listitem><listitem><para><emphasis>K complex association</emphasis>: Complex association kinetic constant</para></listitem><listitem><para><emphasis>Complex creation substrate target</emphasis>: Which substrate will be involved in complex creation, 1 or 2 <linebreak/>
  </para></listitem></itemizedlist>
 </para></sect1>
 <sect1 id="page_init_str_1subInflux">

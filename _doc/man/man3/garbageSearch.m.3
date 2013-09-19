@@ -1,4 +1,4 @@
-.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" 3 "Wed Jul 24 2013" "Version 4.3 (20130719.55)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/garbageSearch.m" 3 "Thu Sep 19 2013" "Version 4.5 (20130919.57)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -76,7 +76,7 @@ CONTAINING SIMULATIONS \fBif\fP \fB~isdir\fP ('0_statistics') mkdir('0_statistic
 .RI "\fBend\fP \fBtmpFolder\fP = strcat('*',\fBparam\&.simFolder\fP,'*')"
 .br
 .ti -1c
-.RI "\fBsimDirs\fP = \fBdir\fP(\fBtmpFolder\fP)"
+.RI "\fBsimDirs\fP = dir(\fBtmpFolder\fP)"
 .br
 .ti -1c
 .RI "\fBfid\fP = fopen('ALL_garbage\&.txt','w')"
@@ -85,7 +85,7 @@ CONTAINING SIMULATIONS \fBif\fP \fB~isdir\fP ('0_statistics') mkdir('0_statistic
 .RI "for \fBx\fP"
 .br
 .ti -1c
-.RI "creating \fBspecies\fP matrix \fBsFiles\fP = \fBdir\fP('\fBspecies\fP*')"
+.RI "creating \fBspecies\fP matrix \fBsFiles\fP = dir('\fBspecies\fP*')"
 .br
 .ti -1c
 .RI "\fBspeciesFile\fP = \fBsFiles\fP(length(\fBsFiles\fP))\&.\fBname\fP"
@@ -112,7 +112,7 @@ CONTAINING SIMULATIONS \fBif\fP \fB~isdir\fP ('0_statistics') mkdir('0_statistic
 .RI "\fBsValues\fP = \fBfscanf\fP(\fBfid\fP,'%\fBf\fP',12)"
 .br
 .ti -1c
-.RI "creating \fBreactions\fP matrix \fBrFiles\fP = \fBdir\fP('\fBreactions\fP*')"
+.RI "creating \fBreactions\fP matrix \fBrFiles\fP = dir('\fBreactions\fP*')"
 .br
 .ti -1c
 .RI "\fBreactionsFile\fP = \fBrFiles\fP(length(\fBrFiles\fP)-1)\&.\fBname\fP"
@@ -141,7 +141,7 @@ CONTAINING SIMULATIONS \fBif\fP \fB~isdir\fP ('0_statistics') mkdir('0_statistic
 .RI "for \fBi\fP"
 .br
 .ti -1c
-.RI "creating \fBcatalysis\fP matrix \fBcFiles\fP = \fBdir\fP('\fBcatalysis\fP*')"
+.RI "creating \fBcatalysis\fP matrix \fBcFiles\fP = dir('\fBcatalysis\fP*')"
 .br
 .ti -1c
 .RI "\fBcatalysisFile\fP = \fBcFiles\fP(length(\fBcFiles\fP))\&.\fBname\fP"
@@ -247,7 +247,7 @@ Definition at line 89 of file garbageSearch\&.m\&.
 
 .PP
 Definition at line 92 of file garbageSearch\&.m\&.
-.SS "creating \fBcatalysis\fP matrix cFiles = \fBdir\fP('\fBcatalysis\fP*')"
+.SS "creating \fBcatalysis\fP matrix cFiles = dir('\fBcatalysis\fP*')"
 
 .PP
 Definition at line 88 of file garbageSearch\&.m\&.
@@ -346,7 +346,7 @@ Definition at line 54 of file garbageSearch\&.m\&.
 
 .PP
 Definition at line 57 of file garbageSearch\&.m\&.
-.SS "creating \fBreactions\fP matrix rFiles = \fBdir\fP('\fBreactions\fP*')"
+.SS "creating \fBreactions\fP matrix rFiles = dir('\fBreactions\fP*')"
 
 .PP
 Definition at line 53 of file garbageSearch\&.m\&.
@@ -354,11 +354,11 @@ Definition at line 53 of file garbageSearch\&.m\&.
 
 .PP
 Definition at line 59 of file garbageSearch\&.m\&.
-.SS "creating \fBspecies\fP matrix sFiles = \fBdir\fP('\fBspecies\fP*')"
+.SS "creating \fBspecies\fP matrix sFiles = dir('\fBspecies\fP*')"
 
 .PP
 Definition at line 29 of file garbageSearch\&.m\&.
-.SS "simDirs = \fBdir\fP(\fBtmpFolder\fP)"
+.SS "simDirs = dir(\fBtmpFolder\fP)"
 
 .PP
 Definition at line 17 of file garbageSearch\&.m\&.

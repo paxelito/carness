@@ -1,7 +1,6 @@
 var searchData=
 [
   ['r',['r',['../garbage_search_8m.html#ac862e7284527eb913b1351c8bfb8e079',1,'r():&#160;garbageSearch.m'],['../_kill_spam_8m.html#ac862e7284527eb913b1351c8bfb8e079',1,'r():&#160;KillSpam.m'],['../_k_s_search_launcher_8m.html#ac862e7284527eb913b1351c8bfb8e079',1,'r():&#160;KSSearchLauncher.m']]],
-  ['rand',['rand',['../lancia__inizializzatore__acs_8m.html#a078f67f8fbdd9ac6587e03bdf2651d32',1,'lancia_inizializzatore_acs.m']]],
   ['rand_5fint32',['rand_int32',['../class_m_t_rand__int32.html#abacdfa346255baeac69d29bb57f29b22',1,'MTRand_int32']]],
   ['random_5fbinomial',['random_binomial',['../common_functions_8cpp.html#a78d5b4a67b6e66b8ceaa85874a2a12b7',1,'random_binomial(acs_longInt n, acs_double tmpP, MTRand &amp;tmpRandomGenerator):&#160;commonFunctions.cpp'],['../common_functions_8h.html#a78d5b4a67b6e66b8ceaa85874a2a12b7',1,'random_binomial(acs_longInt n, acs_double tmpP, MTRand &amp;tmpRandomGenerator):&#160;commonFunctions.cpp']]],
   ['random_5fpoisson',['random_poisson',['../common_functions_8cpp.html#a22cddb6ffcf2250e0c90bc913728350f',1,'random_poisson(acs_double tmpLambda, MTRand &amp;tmpRandomGenerator):&#160;commonFunctions.cpp'],['../common_functions_8h.html#a22cddb6ffcf2250e0c90bc913728350f',1,'random_poisson(acs_double tmpLambda, MTRand &amp;tmpRandomGenerator):&#160;commonFunctions.cpp']]],
@@ -18,7 +17,7 @@ var searchData=
   ['rctidshownosave',['rctIDshowNoSave',['../general_concentration_over_threshold_8m.html#aeb449dcc9eb8bfe0321b031e10962ac5',1,'generalConcentrationOverThreshold.m']]],
   ['rctparfilenum',['rctParFileNum',['../namespacebuffered_flux_analysis.html#aa203d8968b82cc631fffe3da7c46ddfd',1,'bufferedFluxAnalysis']]],
   ['reaction',['reaction',['../namespacebuffered_flux_analysis.html#ae2f3c773b4d02cc6548fa0199cd93d81',1,'bufferedFluxAnalysis.reaction()'],['../general_concentration_over_threshold_8m.html#a4ba2ecb46f808729569ecce2cc1d34c6',1,'reaction():&#160;generalConcentrationOverThreshold.m']]],
-  ['reactionprobability',['reactionProbability',['../lancia__inizializzatore__acs_8m.html#a9101beaeb03fddb5c6a9e68442177543',1,'reactionProbability():&#160;lancia_inizializzatore_acs.m'],['../start_8m.html#a9101beaeb03fddb5c6a9e68442177543',1,'reactionProbability():&#160;start.m']]],
+  ['reactionprobability',['reactionProbability',['../crea__catalizzatori_8m.html#aa1e3cee6a6b640a872d1e454e8fb0c98',1,'reactionProbability():&#160;crea_catalizzatori.m'],['../lancia__inizializzatore__acs_8m.html#a9101beaeb03fddb5c6a9e68442177543',1,'reactionProbability():&#160;lancia_inizializzatore_acs.m'],['../start_8m.html#a9101beaeb03fddb5c6a9e68442177543',1,'reactionProbability():&#160;start.m']]],
   ['reactions',['reactions',['../classreactions.html',1,'reactions'],['../classreactions.html#a496de9cbc128b98213ded20b936752c2',1,'reactions::reactions()']]],
   ['reactions_2ecpp',['reactions.cpp',['../reactions_8cpp.html',1,'']]],
   ['reactions_2ed',['reactions.d',['../reactions_8d.html',1,'']]],
@@ -38,6 +37,8 @@ var searchData=
   ['resetcleavagecounter',['resetCleavageCounter',['../classenvironment.html#a0b1e324c651c86cb54279e022c14dc6d',1,'environment']]],
   ['resetconcentrationtoinitialconditions',['resetConcentrationToInitialConditions',['../classenvironment.html#a97305e36924f19e72bfc1c3d89e45931',1,'environment']]],
   ['resetcondensationcounter',['resetCondensationCounter',['../classenvironment.html#ac7deab8db2f581077da735c3542d8f1b',1,'environment']]],
+  ['resetcpxdisscounter',['resetCpxDissCounter',['../classenvironment.html#a987dc7b9f211f34564343ee0eaa20dc1',1,'environment']]],
+  ['resetcpxformcounter',['resetCpxFormCounter',['../classenvironment.html#a4cf4413f3028f8c5e33991ad5ba18e21',1,'environment']]],
   ['resetendocleavagecounter',['resetEndoCleavageCounter',['../classenvironment.html#a3362d147de095640619d9b44f7f20bba',1,'environment']]],
   ['resetendocondensationcounter',['resetEndoCondensationCounter',['../classenvironment.html#a55cff0bc2f8de4d3e4db471cad580a86',1,'environment']]],
   ['reseteventscounter',['resetEventsCounter',['../classcatalysis.html#ab8964f8ec17d677de03747520d0a9995',1,'catalysis::resetEventsCounter()'],['../classreactions.html#a614a367a15dda1df4160bcdc170a9b32',1,'reactions::resetEventsCounter()']]],

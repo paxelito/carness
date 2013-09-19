@@ -37,6 +37,9 @@ private:
 	bool concentrationFixed;			/**< This parameter indicates whether or not the species concentration may change*/
     acs_double firstConcentration;      /**< Concentration at the beginning of the simulation, > 0 for the initial species, 0 otherwise*/
     acs_int lastSpeciesEvaluated;		/**< ID of the last species evaluated by this species for possible reactions*/
+    vector<acs_longInt> secondSubstrates;/**< If the species in a complex this is a list of the second substrates with which perform the final condensation*/
+    vector<acs_longInt> catalysisIfCpx; /**< Catalysis ID list if complex*/
+    vector<acs_double> kCond;			/**< List parallel to secondSubstrates, contain a copy of the k condensation*/
 	
 public:
 	//!< New species constructor (IN AMOUNT)
@@ -101,6 +104,10 @@ public:
 	bool getConcentrationFixed()const{return concentrationFixed;}
     acs_double getFirstConcentration()const{return firstConcentration;}
     acs_int getLastSpeciesEvaluated()const{return lastSpeciesEvaluated;}
+    vector<acs_longInt> getSecSubList()const{return secondSubstrates;}
+    vector<acs_double> getSec_k_SubList()const{return kCond;}
+    vector<acs_longInt> getCatalysisIfCpx()const{return catalysisIfCpx;}
+    acs_int getSecSubListSize()const{return secondSubstrates.size();}
 	
 	// FUNCTIONAL FUNCTIONS
 	// Total quantity update functions (concentration is recomputed)
@@ -129,8 +136,10 @@ public:
     void resetReborns(){reborns=0;}
     void resetToInitConc(acs_double tmpVolume){concentration=firstConcentration; concToNum(tmpVolume);}
     void setLastSpeciesEvaluated(acs_int tmpID){lastSpeciesEvaluated = tmpID;}
-
-
+    void insertSecSub(acs_longInt tmpID, acs_double tmpK, acs_longInt tmpCat);
+    acs_longInt getSecSubListID(acs_int tmpID){return secondSubstrates.at(tmpID);}
+    acs_double getSec_k_SubListID(acs_int tmpID){return kCond.at(tmpID);}
+    acs_longInt getCatalysisIfCpxID(acs_int tmpID){return catalysisIfCpx.at(tmpID);}
 };
 
 #endif

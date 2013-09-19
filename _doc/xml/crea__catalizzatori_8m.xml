@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="crea__catalizzatori_8m" kind="file">
     <compoundname>crea_catalizzatori.m</compoundname>
       <sectiondef kind="var">
@@ -76,6 +76,20 @@ tot_cleav = 0</initializer>
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_catalizzatori.m" line="12" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_catalizzatori.m" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" prot="public" static="no" mutable="no">
+        <type>controllo while <ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref> *reactionProbability *<ref refid="start_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref> tot_cleav</type>
+        <definition>controllo while tot_reaz* reactionProbability* cleavageProbability tot_cleav reactionProbability</definition>
+        <argsstring></argsstring>
+        <name>reactionProbability</name>
+        <initializer>= input(&apos;introduci la nuova reactionProbability \n&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_catalizzatori.m" line="17" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_catalizzatori.m" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" prot="public" static="no" mutable="no">
         <type></type>
@@ -194,7 +208,7 @@ tot_cleav = 0</initializer>
         <definition>else index</definition>
         <argsstring></argsstring>
         <name>index</name>
-        <initializer>= ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*(<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>-<ref refid="crea__catalizzatori_8m_1ab149f236ebc8e97056dd65cc2eacb67f" kindref="member">numero_specie_da_togliere</ref>))+<ref refid="crea__catalizzatori_8m_1ab149f236ebc8e97056dd65cc2eacb67f" kindref="member">numero_specie_da_togliere</ref></initializer>
+        <initializer>= ceil(rand*(<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>-<ref refid="crea__catalizzatori_8m_1ab149f236ebc8e97056dd65cc2eacb67f" kindref="member">numero_specie_da_togliere</ref>))+<ref refid="crea__catalizzatori_8m_1ab149f236ebc8e97056dd65cc2eacb67f" kindref="member">numero_specie_da_togliere</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -219,26 +233,6 @@ tot_cleav = 0</initializer>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="crea__catalizzatori_8m_1a703d109ba53d930882a7736d9e73a933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>controllo while <ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref> *<ref refid="start_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref> *<ref refid="start_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref> tot_cleav</type>
-        <definition>controllo while tot_reaz* reactionProbability* cleavageProbability tot_cleav fprintf</definition>
-        <argsstring>(&apos;la combinazione di reactionProbability e cleavageProbability\n è sbagliata, non ci sono cleavage possibili sufficienti\n&apos;) reactionProbability</argsstring>
-        <name>fprintf</name>
-        <param>
-          <type>&apos;la combinazione di <ref refid="start_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref> e cleavageProbability\n è</type>
-          <declname>sbagliata</declname>
-        </param>
-        <param>
-          <type>non ci sono cleavage possibili sufficienti\n&apos;</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_catalizzatori.m" line="16" column="1"/>
-      </memberdef>
       <memberdef kind="function" id="crea__catalizzatori_8m_1a0d28c684ab6483b3af034981a7db4806" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>distribuendo le catalisi <ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref> caso viene una distribuzione uniforme</type>
         <definition>distribuendo le catalisi a caso viene una distribuzione uniforme switch</definition>
@@ -331,8 +325,8 @@ tot_cleav = 0</initializer>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="crea__catalizzatori_8m_1add8dcd3f8ceb8ea621c22197d8d0eabf" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[catalizzatore<sp/>reazione<sp/>specie_non_esistenti]=crea_catalizzatori<sp/>(<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>,<sp/><ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>,<sp/><ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>)</highlight></codeline>
-<codeline lineno="2"><highlight class="normal">%</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[catalizzatore<sp/>reazione<sp/>specie_non_esistenti]=crea_catalizzatori<sp/>(<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>,<sp/><ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>,<sp/><ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>)</highlight></codeline>
+<codeline lineno="1" refid="crea__catalizzatori_8m_1add8dcd3f8ceb8ea621c22197d8d0eabf" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[catalizzatore<sp/>reazione<sp/>specie_non_esistenti]=crea_catalizzatori<sp/>(<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>,<sp/><ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>,<sp/><ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>,<sp/><ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">%</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[catalizzatore<sp/>reazione<sp/>specie_non_esistenti]=crea_catalizzatori<sp/>(<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>,<sp/><ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>,<sp/><ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>,<sp/><ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>)</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal">tot_cleav<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="5" refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" refkind="member"><highlight class="normal"><ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref><sp/>=<sp/>length(<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>(:,1));</highlight></codeline>
@@ -345,8 +339,8 @@ tot_cleav = 0</initializer>
 <codeline lineno="12" refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" refkind="member"><highlight class="normal"><ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref>=<ref refid="crea__catalizzatori_8m_1a2e07612f7e3cd041be7b701c434ac5c1" kindref="member">tot_cond</ref>+tot_cleav;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal">%controllo</highlight></codeline>
-<codeline lineno="15"><highlight class="normal">while<sp/><ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref>*<ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>*<ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref><sp/>&gt;<sp/>tot_cleav<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(&apos;la<sp/>combinazione<sp/>di<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref><sp/>e<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref><sp/>\n<sp/>è sbagliata,<sp/>non<sp/>ci<sp/>sono<sp/>cleavage<sp/>possibili<sp/>sufficienti<sp/>\n&apos;)
+<codeline lineno="15"><highlight class="normal">while<sp/><ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref>*<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>*<ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref><sp/>&gt;<sp/>tot_cleav<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(&apos;la<sp/>combinazione<sp/>di<sp/><ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref><sp/>e<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref><sp/>\n<sp/>è sbagliata,<sp/>non<sp/>ci<sp/>sono<sp/>cleavage<sp/>possibili<sp/>sufficienti<sp/>\n&apos;)
 <sp/><sp/><sp/><sp/>reactionProbability<sp/>=<sp/>input(&apos;introduci<sp/>la<sp/>nuova<sp/>reactionProbability<sp/>\n&apos;);
 <sp/><sp/><sp/><sp/>cleavageProbability<sp/>=<sp/>input(&apos;introduci<sp/>la<sp/>nuova<sp/>cleavageProbability<sp/>\n&apos;);
 end
@@ -586,13 +580,12 @@ else
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 end
-<sp/><sp/><sp/><sp/>
-<sp/>sbagliata,<sp/>non<sp/>ci<sp/>sono<sp/>cleavage<sp/>possibili<sp/>sufficienti<sp/>\n&apos;)</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref><sp/>=<sp/>input(&apos;introduci<sp/>la<sp/>nuova<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref><sp/>\n&apos;);</highlight></codeline>
+<sp/><sp/><sp/><sp/><sp/>sbagliata,<sp/>non<sp/>ci<sp/>sono<sp/>cleavage<sp/>possibili<sp/>sufficienti<sp/>\n&apos;)</highlight></codeline>
+<codeline lineno="17" refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref><sp/>=<sp/>input(&apos;introduci<sp/>la<sp/>nuova<sp/><ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref><sp/>\n&apos;);</highlight></codeline>
 <codeline lineno="18" refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref><sp/>=<sp/>input(&apos;introduci<sp/>la<sp/>nuova<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref><sp/>\n&apos;);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21" refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" refkind="member"><highlight class="normal"><ref refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" kindref="member">catalisi_reali</ref><sp/>=<sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(<ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref>*<ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>*numero_specie);</highlight></codeline>
+<codeline lineno="21" refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" refkind="member"><highlight class="normal"><ref refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" kindref="member">catalisi_reali</ref><sp/>=<sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(<ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref>*<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>*numero_specie);</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" kindref="member">catalisi_reali</ref><sp/>==<sp/>0</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref><sp/>=<sp/>-9999;</highlight></codeline>
@@ -620,7 +613,7 @@ end
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%numero_specie_da_togliere</highlight></codeline>
-<codeline lineno="49" refid="crea__catalizzatori_8m_1a0cd6a44ffb07342cbc7e5ac33bfc9495" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebuffered_flux_analysis_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref><sp/>=<sp/>ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*(<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>-numero_specie_da_togliere))+numero_specie_da_togliere;</highlight></codeline>
+<codeline lineno="49" refid="crea__catalizzatori_8m_1a0cd6a44ffb07342cbc7e5ac33bfc9495" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebuffered_flux_analysis_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref><sp/>=<sp/>ceil(rand*(<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>-numero_specie_da_togliere))+numero_specie_da_togliere;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
@@ -827,11 +820,10 @@ end
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 end
-<sp/><sp/><sp/><sp/>
-<sp/>1</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebuffered_flux_analysis_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref><sp/>=<sp/>ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>-length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>))+length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>);</highlight></codeline>
+<sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebuffered_flux_analysis_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref><sp/>=<sp/>ceil(rand*<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>-length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>))+length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebuffered_flux_analysis_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref><sp/>=<sp/>ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebuffered_flux_analysis_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref><sp/>=<sp/>ceil(rand*<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref>(<ref refid="crea__catalizzatori_8m_1afa7f08233358e9b466effa1328168527" kindref="member">kk</ref>,1)=<ref refid="crea__catalizzatori_8m_1afa7f08233358e9b466effa1328168527" kindref="member">kk</ref>;<sp/>%</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/><ref refid="crea__catalizzatori_8m_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref></highlight></codeline>
@@ -841,7 +833,7 @@ end
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref><sp/>&lt;<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref><sp/>%cleveage<sp/>o<sp/>condensazione??</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>rand<sp/>&lt;<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref><sp/>%cleveage<sp/>o<sp/><ref refid="start_8m_1a05f7e68f06e2b202f7fc3d5678f70fa8" kindref="member">condensazione</ref>??</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref>(<ref refid="crea__catalizzatori_8m_1afa7f08233358e9b466effa1328168527" kindref="member">kk</ref>,4)=1;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
@@ -851,13 +843,13 @@ end
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>trovato<sp/>==<sp/>0</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index_reaz<sp/>=<sp/>ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*(<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>-length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)))+length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index_reaz<sp/>=<sp/>ceil(rand*(<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>-length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)))+length(<ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>);</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>punto_di_taglio=ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*(<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>(index_reaz,2)-1));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>punto_di_taglio=ceil(rand*(<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>(index_reaz,2)-1));</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a84d78e886b9f683403579e3911e7f046" kindref="member">reazione</ref>(k,1)=<ref refid="conc_analysis_8m_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref>;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a84d78e886b9f683403579e3911e7f046" kindref="member">reazione</ref>(k,2)=1;<sp/><sp/><sp/><sp/>%</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>del<sp/>cleavage:<sp/>1<sp/>cleavage<sp/>0<sp/>condensazione<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a84d78e886b9f683403579e3911e7f046" kindref="member">reazione</ref>(k,2)=1;<sp/><sp/><sp/><sp/>%</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>del<sp/>cleavage:<sp/>1<sp/>cleavage<sp/>0<sp/><ref refid="start_8m_1a05f7e68f06e2b202f7fc3d5678f70fa8" kindref="member">condensazione</ref><sp/></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a84d78e886b9f683403579e3911e7f046" kindref="member">reazione</ref>(k,3)=<ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>(index_reaz,1);</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
@@ -904,7 +896,7 @@ end
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref><sp/>%<sp/><sp/>caso<sp/>condensazione</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref><sp/>%<sp/><sp/>caso<sp/><ref refid="start_8m_1a05f7e68f06e2b202f7fc3d5678f70fa8" kindref="member">condensazione</ref></highlight></codeline>
 <codeline lineno="131"><highlight class="normal"></highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref>(kk,4)=0;</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"></highlight></codeline>
@@ -913,10 +905,10 @@ end
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>while<sp/>trovato<sp/>==<sp/>0</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reazione(k,1)=k;</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reazione(k,2)=0;<sp/><sp/><sp/><sp/>%</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>della<sp/>condensazione:<sp/>1<sp/>cleavage<sp/>0<sp/>condensazione<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reazione(k,2)=0;<sp/><sp/><sp/><sp/>%</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>della<sp/><ref refid="start_8m_1a05f7e68f06e2b202f7fc3d5678f70fa8" kindref="member">condensazione</ref>:<sp/>1<sp/>cleavage<sp/>0<sp/><ref refid="start_8m_1a05f7e68f06e2b202f7fc3d5678f70fa8" kindref="member">condensazione</ref><sp/></highlight></codeline>
 <codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index_specie_1<sp/>=<sp/>ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*(<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>));</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index_specie_2<sp/>=<sp/>ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*(numero_specie));</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index_specie_1<sp/>=<sp/>ceil(rand*(<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>));</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index_specie_2<sp/>=<sp/>ceil(rand*(numero_specie));</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nuova_specie<sp/>=<sp/>[deblank(<ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>(index_specie_1,:)),<sp/>deblank(<ref refid="inizializzatore___a_c_s_8m_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref>(index_specie_2,:))];</highlight></codeline>
 <codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nuova_specie=</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">(nuova_specie);</highlight></codeline>
@@ -1029,8 +1021,7 @@ end
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 end
-<sp/><sp/><sp/><sp/>
-</highlight></codeline>
+<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="150"><highlight class="normal"></highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:length(specie_def(:,1))</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"></highlight></codeline>
@@ -1136,8 +1127,7 @@ end
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 end
-<sp/><sp/><sp/><sp/>
-</highlight></codeline>
+<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="192"><highlight class="normal"></highlight></codeline>
 <codeline lineno="193"><highlight class="normal"></highlight></codeline>
 <codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>length(<ref refid="crea__catalizzatori_8m_1a84d78e886b9f683403579e3911e7f046" kindref="member">reazione</ref>(:,1)):-1:1</highlight></codeline>

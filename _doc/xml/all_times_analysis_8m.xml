@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="all_times_analysis_8m" kind="file">
     <compoundname>allTimesAnalysis.m</compoundname>
       <sectiondef kind="var">
@@ -70,7 +70,7 @@
         <definition>currentDir</definition>
         <argsstring></argsstring>
         <name>currentDir</name>
-        <initializer>= <ref refid="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>()</initializer>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -165,7 +165,7 @@
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal">%<sp/>READ<sp/>ALL<sp/>THE<sp/>DIRECTORY<sp/>CONTAINING<sp/>SIMULATIONS</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1ab3186e0326a3b47b2cfcb5577ab5139f" kindref="member">search</ref><sp/>=<sp/>strcat(</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">,params.simFolder,</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(<ref refid="general_concentration_over_threshold_8m_1ab3186e0326a3b47b2cfcb5577ab5139f" kindref="member">search</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/>dir(<ref refid="general_concentration_over_threshold_8m_1ab3186e0326a3b47b2cfcb5577ab5139f" kindref="member">search</ref>);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(strcat(<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(1).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,</highlight><highlight class="stringliteral">&apos;/res&apos;</highlight><highlight class="normal">));</highlight></codeline>
 <codeline lineno="34"><highlight class="normal">%<sp/>Read<sp/>configuration<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
@@ -189,12 +189,12 @@
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(strcat(<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(i).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;));</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>Select<sp/>Times<sp/><ref refid="general_concentration_over_threshold_8m_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/><ref refid="classreactions" kindref="compound">reactions</ref><sp/>files</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeFiles<sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;*times*&apos;);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeFiles<sp/>=<sp/>dir(&apos;*times*&apos;);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>For<sp/>each<sp/>time<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/><ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>=1:length(timeFiles)</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>sprintf(&apos;Processing<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref><sp/>%s,<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>%s&apos;,<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(i).name,timeFiles(<ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>).name);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>sprintf(&apos;Processing<sp/>dir<sp/>%s,<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>%s&apos;,<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(i).name,timeFiles(<ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>).name);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="all_times_analysis_8m_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(msg);</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesSel<sp/>=<sp/>1;</highlight></codeline>
@@ -253,7 +253,7 @@
 <codeline lineno="116"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.times<sp/>=<sp/>times;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>~isdir(&apos;0_statistics&apos;)</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1abcaf3fe79479456b56924747f1bca0d9" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
 <codeline lineno="120"><highlight class="normal">end</highlight></codeline>
 <codeline lineno="121"><highlight class="normal">cd(&apos;0_statistics&apos;)</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>
@@ -368,8 +368,8 @@
 <codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="start_8m_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
 <codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="start_8m_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref>&apos;)</highlight></codeline>
 <codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="start_8m_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>&apos;)</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>&apos;)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
 <codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>&apos;)</highlight></codeline>
 <codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;ECConcentration&apos;)</highlight></codeline>

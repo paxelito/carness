@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="overall_stats_8m" kind="file">
     <compoundname>overallStats.m</compoundname>
       <sectiondef kind="var">
@@ -119,7 +119,7 @@
         <definition>end scriptAnalDir</definition>
         <argsstring></argsstring>
         <name>scriptAnalDir</name>
-        <initializer>= <ref refid="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>()</initializer>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -221,14 +221,17 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/overallStats.m" line="25" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="overall_stats_8m_1a98ae4bf3f5f573af6ea4fc18d2a1125e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="overall_stats_8m_1a2715fe7879632230b881069e171a734c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="general_concentration_over_threshold_8m_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
-        <definition>if p tmpAnalysis</definition>
+        <definition>end Need p tmpAnalysis</definition>
         <argsstring>(6)</argsstring>
         <name>tmpAnalysis</name>
         <param>
           <type>6</type>
         </param>
+        <initializer>== 1
+    % Using an R-Cran script this part is <ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref> little bit different
+    crtDir = <ref refid="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -236,22 +239,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/overallStats.m" line="34" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="overall_stats_8m_1a56bd5c817530f9b305b5375d6509978a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>generalConcentrationOverThreshold</definition>
-        <argsstring>(p) end%Need p.tmpAnalysis(6) in order to be performed if p.tmpAnalysis(7)</argsstring>
-        <name>generalConcentrationOverThreshold</name>
-        <param>
-          <type><ref refid="general_concentration_over_threshold_8m_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/overallStats.m" line="39" column="1"/>
       </memberdef>
       <memberdef kind="function" id="overall_stats_8m_1ab41b8dc78dee42a1a5e5a33d8bf6eeb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
@@ -317,7 +304,7 @@
 <codeline lineno="7" refid="overall_stats_8m_1a1e5a4863ab2b87f923e1d19e2da1f5ac" refkind="member"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.<ref refid="overall_stats_8m_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/>&apos;/Users/alessandrofilisetti/Documents/results/VILLANI/&apos;;</highlight></codeline>
 <codeline lineno="8" refid="overall_stats_8m_1a31bcde9ac70ba64728f4de0de470f126" refkind="member"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.<ref refid="all_times_analysis_8m_1a63b4c2789d7e1513024181d12e4f1b6b" kindref="member">figureVisible</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="9" refid="overall_stats_8m_1aa671e3345005bd599e662bcaa115b18a" refkind="member"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref><sp/>=<sp/>&apos;ACS2&apos;;</highlight></codeline>
-<codeline lineno="10" refid="overall_stats_8m_1aad7be196243f3c9ca83dfee7c9111014" refkind="member"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.<ref refid="overall_stats_8m_1aad7be196243f3c9ca83dfee7c9111014" kindref="member">lastSpecies</ref><sp/>=<sp/>2;<sp/>%<sp/>Used<sp/>in<sp/>KillSpan<sp/><ref refid="overall_stats_8m_1abf6e5638a23a2531114655f3f690b70c" kindref="member">analysis</ref>,<sp/>it<sp/>represents<sp/>the<sp/>last<sp/><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref><sp/><ref refid="classspecies" kindref="compound" tooltip="This class contains declarations of the species class. ">species</ref></highlight></codeline>
+<codeline lineno="10" refid="overall_stats_8m_1aad7be196243f3c9ca83dfee7c9111014" refkind="member"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.<ref refid="overall_stats_8m_1aad7be196243f3c9ca83dfee7c9111014" kindref="member">lastSpecies</ref><sp/>=<sp/>2;<sp/>%<sp/>Used<sp/>in<sp/>KillSpan<sp/><ref refid="overall_stats_8m_1abf6e5638a23a2531114655f3f690b70c" kindref="member">analysis</ref>,<sp/>it<sp/>represents<sp/>the<sp/>last<sp/><ref refid="general_concentration_over_threshold_8m_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref><sp/><ref refid="classspecies" kindref="compound">species</ref></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal">%<sp/>LATEST<sp/>FILES<sp/>ANALYSIS</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="general_concentration_over_threshold_8m_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.tmpAnalysis(1)<sp/>==<sp/>1</highlight></codeline>
@@ -346,7 +333,7 @@
 <codeline lineno="36" refid="overall_stats_8m_1a9ec673b91cb4ce5ba9842d584db1eea2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="general_concentration_over_threshold_8m_1aa022cbb28f80299d572def08e7a5ccfd" kindref="member">threshold</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="37" refid="overall_stats_8m_1a729812cd35dceb80bddf2bea4d57c3d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="general_concentration_over_threshold_8m_1a3b01c97f207a2997c3bd0c2718441509" kindref="member">tmpRctFileToLoad</ref><sp/>=<sp/>&apos;&apos;;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="38" refid="overall_stats_8m_1aa7c848ee61f4363047d50b027f539e68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="general_concentration_over_threshold_8m_1ae5d21adddbfe36d5b10d43a2e8b39123" kindref="member">tmpRctSUBFileToLoad</ref><sp/>=<sp/>&apos;&apos;;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="overall_stats_8m_1a56bd5c817530f9b305b5375d6509978a" kindref="member">generalConcentrationOverThreshold</ref>(p)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>generalConcentrationOverThreshold(p)</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal">%<sp/>Need<sp/>p.tmpAnalysis(6)<sp/>in<sp/>order<sp/><ref refid="general_concentration_over_threshold_8m_1af71dbe52628a3f83a77ab494817525c6" kindref="member">to</ref><sp/>be<sp/>performed</highlight></codeline>

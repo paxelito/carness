@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="read_parameters_8m" kind="file">
     <compoundname>readParameters.m</compoundname>
       <sectiondef kind="var">
@@ -93,7 +93,7 @@
           <type><ref refid="read_parameters_8m_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="read_parameters_8m_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
         </param>
         <param>
-          <type>&apos;<ref refid="start_8m_1a4af22ee598eb5fcc4d0ff8439823e600" kindref="member">nGEN</ref>&apos;</type>
+          <type>&apos;<ref refid="lancia__inizializzatore__acs_8m_1a82556659f7ba7219e55a18e9b9e63873" kindref="member">nGEN</ref>&apos;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -336,8 +336,8 @@
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="start_8m_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="start_8m_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref>&apos;)</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="start_8m_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>&apos;)</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>&apos;)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>&apos;)</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;ECConcentration&apos;)</highlight></codeline>

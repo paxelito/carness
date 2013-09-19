@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="common_functions_8cpp" kind="file">
     <compoundname>commonFunctions.cpp</compoundname>
     <includes refid="common_functions_8h" local="yes">commonFunctions.h</includes>
@@ -439,7 +439,7 @@
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_functions_8h" kindref="compound">commonFunctions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="common_functions_8h_1ab210458a0dbaa0cc2f245926c7aa82ef" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="common_functions_8cpp_1ab210458a0dbaa0cc2f245926c7aa82ef" kindref="member" tooltip="This funtion returns a random position in a probability weight array of N elements. ">returnSelectionIdFromAWeightProbVector</ref>(<ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>*tmpArray,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator)</highlight></codeline>
+<codeline lineno="15" refid="common_functions_8h_1ab210458a0dbaa0cc2f245926c7aa82ef" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="common_functions_8cpp_1ab210458a0dbaa0cc2f245926c7aa82ef" kindref="member">returnSelectionIdFromAWeightProbVector</ref>(<ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>*tmpArray,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator)</highlight></codeline>
 <codeline lineno="16"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tmpArray<sp/>is<sp/>not<sp/>a<sp/>vector.<sp/>Access<sp/>is<sp/>made<sp/>by<sp/>[]</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>pnt<sp/>=<sp/>tmpRandomGenerator();</highlight></codeline>
@@ -457,7 +457,7 @@
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>idReturned;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="common_functions_8h_1ab037fdfaa93ee6a0fe3f624b791204cd" refkind="member"><highlight class="normal"><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="common_functions_8cpp_1ab210458a0dbaa0cc2f245926c7aa82ef" kindref="member" tooltip="This funtion returns a random position in a probability weight array of N elements. ">returnSelectionIdFromAWeightProbVector</ref>(vector&lt;acs_double&gt;&amp;<sp/>tmpVector,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpMaxValue,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator)</highlight></codeline>
+<codeline lineno="40" refid="common_functions_8h_1ab037fdfaa93ee6a0fe3f624b791204cd" refkind="member"><highlight class="normal"><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="common_functions_8cpp_1ab210458a0dbaa0cc2f245926c7aa82ef" kindref="member">returnSelectionIdFromAWeightProbVector</ref>(vector&lt;acs_double&gt;&amp;<sp/>tmpVector,<sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpMaxValue,<sp/><ref refid="class_m_t_rand" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator)</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>pnt<sp/>=<sp/>tmpRandomGenerator();</highlight></codeline>

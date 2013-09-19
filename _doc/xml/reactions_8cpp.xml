@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="reactions_8cpp" kind="file">
     <compoundname>reactions.cpp</compoundname>
     <includes refid="reactions_8h" local="yes">reactions.h</includes>
@@ -111,7 +111,7 @@
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="reactions_8h" kindref="compound">reactions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="classreactions_1a496de9cbc128b98213ded20b936752c2" refkind="member"><highlight class="normal"><ref refid="classreactions_1a496de9cbc128b98213ded20b936752c2" kindref="member" tooltip="Constructor. ">reactions::reactions</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpType,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_I,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_II,<sp/></highlight></codeline>
+<codeline lineno="20" refid="classreactions_1a496de9cbc128b98213ded20b936752c2" refkind="member"><highlight class="normal"><ref refid="classreactions_1a496de9cbc128b98213ded20b936752c2" kindref="member">reactions::reactions</ref>(<ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpType,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_I,<sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_II,<sp/></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_III,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvents,<sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergyType)</highlight></codeline>
 <codeline lineno="22"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id_reaction<sp/>=<sp/>tmpID;</highlight></codeline>

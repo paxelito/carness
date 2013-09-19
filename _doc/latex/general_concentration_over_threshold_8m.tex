@@ -6,11 +6,9 @@
 \item 
 \hyperlink{general_concentration_over_threshold_8m_afb8c99b8f4d982428090b0b6ab07dafb}{cd} (\hyperlink{overall_stats_8m_a1e5a4863ab2b87f923e1d19e2da1f5ac}{params.\-tmp\-Path})
 \item 
-\hyperlink{general_concentration_over_threshold_8m_ae60321a34c0a93776384a837b8f3a9e1}{disp} ('start analysis...') if$\sim$isdir('0\-\_\-statistics') mkdir('0\-\_\-statistics')
+\hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{general_concentration_over_threshold_8m_a8b0a903208664a3adb1355b79af314b4}{$\sim$isdir} ('0\-\_\-statistics') mkdir('0\-\_\-statistics')
 \item 
-\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{general_concentration_over_threshold_8m_a442b9e123f36a16e7fca4f2f2f067c27}{cd} ('0\-\_\-statistics')\%\-C\-R\-E\-A\-T\-E H\-E\-A\-D\-E\-R R\-O\-W I\-N T\-H\-E F\-I\-N\-A\-L O\-U\-T\-C\-O\-M\-E\-S F\-I\-L\-E\-S out\-Filen\-Name
-\item 
-\hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{general_concentration_over_threshold_8m_a1e641c44546ec25e735b887393dceb16}{exist} (out\-Filen\-Name,'\hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file}') delete(out\-Filen\-Name)
+\hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{general_concentration_over_threshold_8m_a1e641c44546ec25e735b887393dceb16}{exist} (\hyperlink{general_concentration_over_threshold_8m_af42e186bcb2ad28b937ef14407da1f0d}{out\-Filen\-Name},'\hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file}') delete(\hyperlink{general_concentration_over_threshold_8m_af42e186bcb2ad28b937ef14407da1f0d}{out\-Filen\-Name})
 \item 
 \hyperlink{general_concentration_over_threshold_8m_a6ffb0f3cb73c8f8faf0b5192942de203}{fprintf} (\hyperlink{general_concentration_over_threshold_8m_a2f1bf22f6a0c3f5791577061e92c0433}{fid\-F\-I\-N\-A\-L},'\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}t\%s\textbackslash{}n',... 'Reaction Probability','Energy Concentration','Tot over Threshold','Real A\-C\-Ss','in A\-C\-Ss',... 'Leaves','by Chain','Overlap','Autocatalysis','in A\-C\-Ss(W)','Leaves(W)','by Chain(W)','Overlap(W)','Autocatalysis(W)',... '\mbox{[}\hyperlink{general_concentration_over_threshold_8m_ad72e1068795c577213481e5db7f3e925}{A\-C\-S}\mbox{]}','\mbox{[}Leaves\mbox{]}','\mbox{[}Chains\mbox{]}','\mbox{[}Self\mbox{]}','Endo Cond','Cond','Endo Cleavage','Cleavage','Wasted \hyperlink{classspecies}{species}')
 \item 
@@ -38,6 +36,11 @@ while \hyperlink{general_concentration_over_threshold_8m_aaa2ace52a161710427bdc2
 while \hyperlink{general_concentration_over_threshold_8m_ab5b947e1a8b7cf496ffd4eb21317052e}{rline} (\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end})
 \item 
 \hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{general_concentration_over_threshold_8m_ac62d9b6e4b7257c90322e20e1eb8e733}{gill\-Time\-Series} (\hyperlink{general_concentration_over_threshold_8m_a8443a49765859a8631fed7e8a1d27fe5}{rline\-I\-D},\-:)
+\item 
+If the time is \hyperlink{crea__tutte__le__combinazioni__di__elementi_8m_abdf49e297e2c121f2d09f075ac3d518a}{righe} save \\*
+i\-Graph structures \hyperlink{general_concentration_over_threshold_8m_af71dbe52628a3f83a77ab494817525c6}{to} \hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file} \hyperlink{general_concentration_over_threshold_8m_afa2000dd097bd23eb8be232e0bdfeb4d}{disp} (sprintf('$|$-\/\%s$|$Reaction\%d-\/time\-:\%6.\-4f-\/\-Save structures', sim\-Dirs(\-I\-D\-F).\-name, reaction, rtime))
+\item 
+\hyperlink{general_concentration_over_threshold_8m_ab80c851bb58475542f68e7585b2b1948}{save\-Graph\-To\-File} (\hyperlink{general_concentration_over_threshold_8m_ac4793cb55101110d228ded89ce9caa48}{folder\-Cat}, \hyperlink{general_concentration_over_threshold_8m_a4ba2ecb46f808729569ecce2cc1d34c6}{reaction}, \hyperlink{general_concentration_over_threshold_8m_afc6b38657a313b9f1de2ee356910b6ee}{rtime}, \hyperlink{start_8m_a8d704532b4b419f1428cb078bb5c7ffe}{confparams.\-n\-Reactions}, \hyperlink{general_concentration_over_threshold_8m_a2745e24fec2a44d51f4452beb1596bd3}{graph}, \hyperlink{general_concentration_over_threshold_8m_a527736a425f4f7ead2c2dc9d7b479346}{filext\-Pre})
 \item 
 \hyperlink{general_concentration_over_threshold_8m_af8c5bdc8ca3fe8ddcc8594ecad80560a}{save\-Graph\-S\-U\-B\-To\-File} (\hyperlink{general_concentration_over_threshold_8m_a05c5bf0305e5d58d4dc25bd89a025678}{folder\-Sub}, \hyperlink{general_concentration_over_threshold_8m_a4ba2ecb46f808729569ecce2cc1d34c6}{reaction}, \hyperlink{general_concentration_over_threshold_8m_afc6b38657a313b9f1de2ee356910b6ee}{rtime}, \hyperlink{start_8m_a8d704532b4b419f1428cb078bb5c7ffe}{confparams.\-n\-Reactions}, \hyperlink{general_concentration_over_threshold_8m_acd499d32ebba9c935bab9a19da7a174b}{graph\-S\-U\-B}, \hyperlink{general_concentration_over_threshold_8m_a527736a425f4f7ead2c2dc9d7b479346}{filext\-Pre})
 \item 
@@ -192,7 +195,7 @@ tmpl, tmp\-L \hyperlink{general_concentration_over_threshold_8m_a28aa31ca6f19c01
 \item 
 \hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{general_concentration_over_threshold_8m_a6240fe23b1576d5d6b32d90004c366ea}{exist} (\hyperlink{general_concentration_over_threshold_8m_abf4ae8c34e865742e8ee979ed6e03384}{out\-Fname},'\hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file}') delete(\hyperlink{general_concentration_over_threshold_8m_abf4ae8c34e865742e8ee979ed6e03384}{out\-Fname})
 \item 
-\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{general_concentration_over_threshold_8m_ab078bed653ccebab8120e6777dca2774}{fclose} (\hyperlink{general_concentration_over_threshold_8m_ae941ef58ebac7f05a8095badde51c07b}{fid1})
+\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{general_concentration_over_threshold_8m_ab078bed653ccebab8120e6777dca2774}{fclose} (\hyperlink{inizializzatore___a_c_s_8m_aff1e821fc5f97a0758f74b5cbd00cacf}{fid1})
 \item 
 \hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{inizializzatore___a_c_s_8m_a4b4c670b101bf7a838f775e008fa6255}{function} \hyperlink{general_concentration_over_threshold_8m_a6d3d953fb0b0cc79fc6dee3bb74982fa}{save\-Graph\-S\-U\-B\-To\-File} (tmp\-Dir, tmp\-Rct, tmpr\-Time, tmp\-Rcts, tmp\-Graph, tmp\-Filext\-Pre) \hyperlink{_k_s_search_launcher_8m_af32eb97339f1e9d37b5540de2cbc79c9}{current\-Dir}
 \item 
@@ -200,7 +203,7 @@ while \hyperlink{general_concentration_over_threshold_8m_a1cefc2ab6209d3abc58581
 \item 
 \hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{general_concentration_over_threshold_8m_a9609808cef745ad8ee18e35e55a1fbf1}{isequal} (\hyperlink{read_parameters_8m_a6791897869706b835f1a5d305739a415}{tline}(1\-:\hyperlink{read_parameters_8m_a51f20d6b1b54a2eee3be0e8adc96a0ae}{param}-\/1),'\hyperlink{lancia__inizializzatore__acs_8m_aaded2f2d61413dc4bddf805e9be03ded}{n\-Seconds}') \hyperlink{lancia__inizializzatore__acs_8m_aaded2f2d61413dc4bddf805e9be03ded}{confparams.\-n\-Seconds}
 \item 
-elseif \hyperlink{general_concentration_over_threshold_8m_a302e40bc97d43406841d0fa4246f1d6a}{isequal} (\hyperlink{read_parameters_8m_a6791897869706b835f1a5d305739a415}{tline}(1\-:\hyperlink{read_parameters_8m_a51f20d6b1b54a2eee3be0e8adc96a0ae}{param}-\/1),'\hyperlink{start_8m_a4af22ee598eb5fcc4d0ff8439823e600}{n\-G\-E\-N}') \hyperlink{start_8m_a4af22ee598eb5fcc4d0ff8439823e600}{confparams.\-n\-G\-E\-N}
+elseif \hyperlink{general_concentration_over_threshold_8m_a302e40bc97d43406841d0fa4246f1d6a}{isequal} (\hyperlink{read_parameters_8m_a6791897869706b835f1a5d305739a415}{tline}(1\-:\hyperlink{read_parameters_8m_a51f20d6b1b54a2eee3be0e8adc96a0ae}{param}-\/1),'\hyperlink{lancia__inizializzatore__acs_8m_a82556659f7ba7219e55a18e9b9e63873}{n\-G\-E\-N}') \hyperlink{lancia__inizializzatore__acs_8m_a82556659f7ba7219e55a18e9b9e63873}{confparams.\-n\-G\-E\-N}
 \item 
 elseif \hyperlink{general_concentration_over_threshold_8m_a00a640dfb4748b56c2891827afa0f8c9}{isequal} (\hyperlink{read_parameters_8m_a6791897869706b835f1a5d305739a415}{tline}(1\-:\hyperlink{read_parameters_8m_a51f20d6b1b54a2eee3be0e8adc96a0ae}{param}-\/1),'\hyperlink{start_8m_a2b9b3728c03157895f28160b24f4c572}{n\-S\-I\-M}') \hyperlink{start_8m_a2b9b3728c03157895f28160b24f4c572}{confparams.\-n\-S\-I\-M}
 \item 
@@ -244,15 +247,18 @@ params \hyperlink{general_concentration_over_threshold_8m_a4d8f56ee83b9b4dbe17b2
 \hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} Set current date \hyperlink{general_concentration_over_threshold_8m_a170f8acb213f91bf71c77b1d20bceb33}{and} \\*
 current directory \hyperlink{general_concentration_over_threshold_8m_a54768c0405781065cb2f7a16ab8e7d31}{current\-Date} = date()
 \item 
-\hyperlink{general_concentration_over_threshold_8m_af32eb97339f1e9d37b5540de2cbc79c9}{current\-Dir} = \hyperlink{start_8m_abe327856a9ee2f30f3ccafe4dc9edf5e}{cd}()
+\hyperlink{general_concentration_over_threshold_8m_af32eb97339f1e9d37b5540de2cbc79c9}{current\-Dir} = \hyperlink{inizializzatore___a_c_s_8m_a767271ad82d244871370a0f0e6a7f8a4}{cd}()
 \item 
-\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{general_concentration_over_threshold_8m_a2f1bf22f6a0c3f5791577061e92c0433}{fid\-F\-I\-N\-A\-L} = fopen(out\-Filen\-Name,'w')
+\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} C\-R\-E\-A\-T\-E H\-E\-A\-D\-E\-R R\-O\-W I\-N T\-H\-E \\*
+F\-I\-N\-A\-L O\-U\-T\-C\-O\-M\-E\-S F\-I\-L\-E\-S \hyperlink{general_concentration_over_threshold_8m_af42e186bcb2ad28b937ef14407da1f0d}{out\-Filen\-Name} = strcat(\hyperlink{general_concentration_over_threshold_8m_a54768c0405781065cb2f7a16ab8e7d31}{current\-Date}, '\-\_\-' , int2str(\hyperlink{stats_8m_aa022cbb28f80299d572def08e7a5ccfd}{params.\-threshold}), '\-\_\-conv\-Over\-Threshold\-\_\-', int2str(\hyperlink{stats_8m_afb6aa83fb78c663f3b39be2380842a8b}{params.\-decay\-Time}), '.csv')
+\item 
+\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{general_concentration_over_threshold_8m_a2f1bf22f6a0c3f5791577061e92c0433}{fid\-F\-I\-N\-A\-L} = fopen(\hyperlink{general_concentration_over_threshold_8m_af42e186bcb2ad28b937ef14407da1f0d}{out\-Filen\-Name},'w')
 \item 
 Come back \hyperlink{general_concentration_over_threshold_8m_af71dbe52628a3f83a77ab494817525c6}{to} the original \\*
 folder R\-E\-A\-D A\-L\-L T\-H\-E D\-I\-R\-E\-C\-T\-O\-R\-Y \\*
 C\-O\-N\-T\-A\-I\-N\-I\-N\-G S\-I\-M\-U\-L\-A\-T\-I\-O\-N\-S \hyperlink{general_concentration_over_threshold_8m_ab3186e0326a3b47b2cfcb5577ab5139f}{search} = strcat('$\ast$',\hyperlink{overall_stats_8m_aa671e3345005bd599e662bcaa115b18a}{params.\-sim\-Folder},'$\ast$')
 \item 
-\hyperlink{general_concentration_over_threshold_8m_aae5035eb84b89176ed5b06e136325eff}{sim\-Dirs} = \hyperlink{start_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir}(\hyperlink{general_concentration_over_threshold_8m_ab3186e0326a3b47b2cfcb5577ab5139f}{search})
+\hyperlink{general_concentration_over_threshold_8m_aae5035eb84b89176ed5b06e136325eff}{sim\-Dirs} = dir(\hyperlink{general_concentration_over_threshold_8m_ab3186e0326a3b47b2cfcb5577ab5139f}{search})
 \item 
 File Containing all Times \hyperlink{general_concentration_over_threshold_8m_a47868b053902b822eab5c738a67a633a}{times} = 0\-:\hyperlink{stats_8m_aa9758857dd92f7845934f06daa7c4120}{params.\-delta\-T\-:params.\-tot\-T}
 \item 
@@ -262,7 +268,7 @@ for \hyperlink{general_concentration_over_threshold_8m_a8acdc1bee73718b1ffcfc7eb
 \item 
 Read \hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file} conf \hyperlink{general_concentration_over_threshold_8m_a000cb2f4b2f69aebbfb0e8e0809567f6}{confparams} = read\-Parameters()
 \item 
-Select Times \hyperlink{general_concentration_over_threshold_8m_a170f8acb213f91bf71c77b1d20bceb33}{and} \hyperlink{classreactions}{reactions} files \hyperlink{general_concentration_over_threshold_8m_af5703745c2c2a6af7f62da460994d9c2}{species\-Files} = \hyperlink{start_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir}('species\-\_\-1$\ast$')
+Select Times \hyperlink{general_concentration_over_threshold_8m_a170f8acb213f91bf71c77b1d20bceb33}{and} \hyperlink{classreactions}{reactions} files \hyperlink{general_concentration_over_threshold_8m_af5703745c2c2a6af7f62da460994d9c2}{species\-Files} = dir('species\-\_\-1$\ast$')
 \item 
 \hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{read_parameters_8m_a53a794fb4119b36e89d14a405e075596}{confparams} \hyperlink{start_8m_ac002779c383d2cc783e881f94449de66}{energy}$<$ 2 \hyperlink{general_concentration_over_threshold_8m_af837f695e5b67c86016c1a82608c38b4}{nrg}=1;\hyperlink{_k_s_search_launcher_8m_af5946383720aa572eb93e1e63afc23c2}{else} \\*
 \hyperlink{general_concentration_over_threshold_8m_af837f695e5b67c86016c1a82608c38b4}{nrg}=0;\hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end}\%analysis\-Time\-Interval \\*
@@ -281,7 +287,7 @@ Compute \hyperlink{classspecies}{species} over \hyperlink{stats_8m_aa022cbb28f80
 \item 
 \hyperlink{general_concentration_over_threshold_8m_a5cb5865443d8f156213280c070385e0d}{conc\-Vec} = tmp\-Conc
 \item 
-\hyperlink{general_concentration_over_threshold_8m_a4ba2ecb46f808729569ecce2cc1d34c6}{reaction} parameters files \hyperlink{general_concentration_over_threshold_8m_aa7a414dad4901fc05688608a49adfd7e}{rcs\-Files} = \hyperlink{start_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir}('$\ast$reactions\-\_\-parameters$\ast$')
+\hyperlink{general_concentration_over_threshold_8m_a4ba2ecb46f808729569ecce2cc1d34c6}{reaction} parameters files \hyperlink{general_concentration_over_threshold_8m_aa7a414dad4901fc05688608a49adfd7e}{rcs\-Files} = dir('$\ast$reactions\-\_\-parameters$\ast$')
 \item 
 \hyperlink{general_concentration_over_threshold_8m_a527736a425f4f7ead2c2dc9d7b479346}{filext\-Pre} = strcat('\-\_\-',zero\-Before\-Str\-Num(\hyperlink{general_concentration_over_threshold_8m_aeef3e34bd64eec758eac16f004cdcef0}{I\-Dsim\-F\-O\-L\-D\-E\-R}, length(\hyperlink{_k_s_search_launcher_8m_aae5035eb84b89176ed5b06e136325eff}{sim\-Dirs})),int2str(\hyperlink{general_concentration_over_threshold_8m_aeef3e34bd64eec758eac16f004cdcef0}{I\-Dsim\-F\-O\-L\-D\-E\-R}))
 \item 
@@ -352,11 +358,6 @@ Craete different \hyperlink{times_analysis_8m_a075795b83d470ba58980e465541f16e9}
 \item 
 \hyperlink{general_concentration_over_threshold_8m_acc16e80f122cc11cf1570c53597afb19}{print\-Temporal\-Message} = 1
 \item 
-If the time is \hyperlink{crea__tutte__le__combinazioni__di__elementi_8m_abdf49e297e2c121f2d09f075ac3d518a}{righe} save \\*
-i\-Graph structures \hyperlink{general_concentration_over_threshold_8m_af71dbe52628a3f83a77ab494817525c6}{to} \hyperlink{inizializzatore___a_c_s_8m_ab790e1eaff8d62837eb7fe789b2b52c6}{file} \hyperlink{_k_s_search_8m_a01d55766b8058903dd360b4bda71f9f5}{if}(\hyperlink{general_concentration_over_threshold_8m_afc6b38657a313b9f1de2ee356910b6ee}{rtime} $>$\\*
- \hyperlink{general_concentration_over_threshold_8m_acfa9ac92c0e448faa531767d0e6ab194}{rct\-I\-Dshow} \\*
-$\ast$analysis\-Time\-Interval) \hyperlink{_kill_spam_8m_a609f02c862f2843febf3408f688be8e8}{disp}(sprintf('$|$-\/\%s$|$Reaction\%d-\/time \hyperlink{general_concentration_over_threshold_8m_a95b8ff8a27bbc7e771fa2fdd279f2465}{save\-Graph\-To\-File} (\hyperlink{general_concentration_over_threshold_8m_ac4793cb55101110d228ded89ce9caa48}{folder\-Cat}, \hyperlink{general_concentration_over_threshold_8m_a4ba2ecb46f808729569ecce2cc1d34c6}{reaction}, \hyperlink{general_concentration_over_threshold_8m_afc6b38657a313b9f1de2ee356910b6ee}{rtime}, \hyperlink{start_8m_a8d704532b4b419f1428cb078bb5c7ffe}{confparams.\-n\-Reactions}, \hyperlink{general_concentration_over_threshold_8m_a2745e24fec2a44d51f4452beb1596bd3}{graph}, \hyperlink{general_concentration_over_threshold_8m_a527736a425f4f7ead2c2dc9d7b479346}{filext\-Pre})
-\item 
 \hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} update time intervals \hyperlink{general_concentration_over_threshold_8m_a30a404fc0b2d3c996251dfd4adf5ec51}{time\-Interval} = \hyperlink{general_concentration_over_threshold_8m_afc6b38657a313b9f1de2ee356910b6ee}{rtime} -\/ \hyperlink{general_concentration_over_threshold_8m_a17b8652a085b5add031a40fb1c9a680e}{previous\-Time}
 \item 
 \hyperlink{general_concentration_over_threshold_8m_a91819eaefb434ac459f17b3caa03713d}{graph} = graph(graph(\-:,5)$>$0,\-:)
@@ -365,7 +366,7 @@ $\ast$analysis\-Time\-Interval) \hyperlink{_kill_spam_8m_a609f02c862f2843febf340
 \item 
 \hyperlink{_k_s_search_launcher_8m_af5946383720aa572eb93e1e63afc23c2}{else} \hyperlink{general_concentration_over_threshold_8m_ac7610da79e174cac91899b5a15014265}{endo\-\_\-condensation\-\_\-counter} = endo\-\_\-condensation\-\_\-counter + 1
 \item 
-\hyperlink{general_concentration_over_threshold_8m_af393966a41271e721a03e544a1650f4a}{current\-Folder} = \hyperlink{start_8m_abe327856a9ee2f30f3ccafe4dc9edf5e}{cd}()
+\hyperlink{general_concentration_over_threshold_8m_af393966a41271e721a03e544a1650f4a}{current\-Folder} = \hyperlink{inizializzatore___a_c_s_8m_a767271ad82d244871370a0f0e6a7f8a4}{cd}()
 \item 
 \hyperlink{general_concentration_over_threshold_8m_acbece2625a541230e9f9091adca38c8c}{file\-Name} = strcat('25\-\_\-gille\-Mean\-\_\-',str\-Zero,int2str(\-I\-D\-F),'.\-eps')
 \item 
@@ -511,13 +512,6 @@ for \hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866f
 \item[{params.}]{tmp\-Path}
 \end{DoxyParamCaption}
 )}}\label{general_concentration_over_threshold_8m_afb8c99b8f4d982428090b0b6ab07dafb}
-\hypertarget{general_concentration_over_threshold_8m_a442b9e123f36a16e7fca4f2f2f067c27}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!cd@{cd}}
-\index{cd@{cd}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
-\subsubsection[{cd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} cd (
-\begin{DoxyParamCaption}
-\item[{'0\-\_\-statistics'}]{}
-\end{DoxyParamCaption}
-)}}\label{general_concentration_over_threshold_8m_a442b9e123f36a16e7fca4f2f2f067c27}
 \hypertarget{general_concentration_over_threshold_8m_a39434ffa59ddeceeb07714cb934049a9}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!cd@{cd}}
 \index{cd@{cd}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
 \subsubsection[{cd}]{\setlength{\rightskip}{0pt plus 5cm}Go into the results folder cd (
@@ -553,13 +547,6 @@ for \hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866f
 \item[{strcat('../../', tmp\-Dir)}]{}
 \end{DoxyParamCaption}
 )}}\label{general_concentration_over_threshold_8m_a72bfbb9eaef303d52d21151f89766b77}
-\hypertarget{general_concentration_over_threshold_8m_ae60321a34c0a93776384a837b8f3a9e1}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!disp@{disp}}
-\index{disp@{disp}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
-\subsubsection[{disp}]{\setlength{\rightskip}{0pt plus 5cm}disp (
-\begin{DoxyParamCaption}
-\item[{'start analysis...'}]{}
-\end{DoxyParamCaption}
-)}}\label{general_concentration_over_threshold_8m_ae60321a34c0a93776384a837b8f3a9e1}
 \hypertarget{general_concentration_over_threshold_8m_a2ec4cc6a83a1e0bbf63967d936f47a80}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!disp@{disp}}
 \index{disp@{disp}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
 \subsubsection[{disp}]{\setlength{\rightskip}{0pt plus 5cm}For each folder the necessary computations are performed disp (
@@ -588,6 +575,13 @@ for \hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866f
 \item[{strcat('$|$-\/File ', {\bf rcs\-Files}({\bf rfile\-I\-D}).{\bf name}, 'processing...')}]{}
 \end{DoxyParamCaption}
 )}}\label{general_concentration_over_threshold_8m_a4fe58a51590fa7bdca1837a88383dac0}
+\hypertarget{general_concentration_over_threshold_8m_afa2000dd097bd23eb8be232e0bdfeb4d}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!disp@{disp}}
+\index{disp@{disp}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
+\subsubsection[{disp}]{\setlength{\rightskip}{0pt plus 5cm}If the time is {\bf righe} save i\-Graph structures {\bf to} {\bf file} disp (
+\begin{DoxyParamCaption}
+\item[{sprintf('$|$-\/\%s$|$Reaction\%d-\/time\-:\%6.\-4f-\/\-Save structures', sim\-Dirs(\-I\-D\-F).\-name, reaction, rtime)}]{}
+\end{DoxyParamCaption}
+)}}\label{general_concentration_over_threshold_8m_afa2000dd097bd23eb8be232e0bdfeb4d}
 \hypertarget{general_concentration_over_threshold_8m_a107ac08fa413d7d0c5323dc4330d83fb}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!disp@{disp}}
 \index{disp@{disp}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
 \subsubsection[{disp}]{\setlength{\rightskip}{0pt plus 5cm}disp (
@@ -802,7 +796,7 @@ for \hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866f
 \index{exist@{exist}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
 \subsubsection[{exist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} exist (
 \begin{DoxyParamCaption}
-\item[{out\-Filen\-Name}]{, }
+\item[{{\bf out\-Filen\-Name}}]{, }
 \item[{'{\bf file}'}]{}
 \end{DoxyParamCaption}
 )}}\label{general_concentration_over_threshold_8m_a1e641c44546ec25e735b887393dceb16}
@@ -1170,6 +1164,18 @@ for \hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866f
 \item[{tmp\-Filext\-Pre}]{}
 \end{DoxyParamCaption}
 )}}\label{general_concentration_over_threshold_8m_a6d3d953fb0b0cc79fc6dee3bb74982fa}
+\hypertarget{general_concentration_over_threshold_8m_ab80c851bb58475542f68e7585b2b1948}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!save\-Graph\-To\-File@{save\-Graph\-To\-File}}
+\index{save\-Graph\-To\-File@{save\-Graph\-To\-File}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
+\subsubsection[{save\-Graph\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}save\-Graph\-To\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf folder\-Cat}}]{, }
+\item[{{\bf reaction}}]{, }
+\item[{{\bf rtime}}]{, }
+\item[{confparams.}]{n\-Reactions, }
+\item[{{\bf graph}}]{, }
+\item[{{\bf filext\-Pre}}]{}
+\end{DoxyParamCaption}
+)}}\label{general_concentration_over_threshold_8m_ab80c851bb58475542f68e7585b2b1948}
 \hypertarget{general_concentration_over_threshold_8m_a4436ee01db317f5aca8999e75f24e581}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!save\-Graph\-To\-File@{save\-Graph\-To\-File}}
 \index{save\-Graph\-To\-File@{save\-Graph\-To\-File}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
 \subsubsection[{save\-Graph\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} {\bf function} save\-Graph\-To\-File (
@@ -1328,6 +1334,13 @@ for \hyperlink{general_concentration_over_threshold_8m_ad34e9c7e9ae69ae0b9f1866f
 \item[{15}]{}
 \end{DoxyParamCaption}
 )}}\label{general_concentration_over_threshold_8m_ab0e565f3a4f9b2e025000111fdb0beda}
+\hypertarget{general_concentration_over_threshold_8m_a8b0a903208664a3adb1355b79af314b4}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!$\sim$isdir@{$\sim$isdir}}
+\index{$\sim$isdir@{$\sim$isdir}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
+\subsubsection[{$\sim$isdir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} $\sim$isdir (
+\begin{DoxyParamCaption}
+\item[{'0\-\_\-statistics'}]{}
+\end{DoxyParamCaption}
+)}}\label{general_concentration_over_threshold_8m_a8b0a903208664a3adb1355b79af314b4}
 \hypertarget{general_concentration_over_threshold_8m_aa2bc434ff78341a81d894075c72eae04}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!$\sim$isdir@{$\sim$isdir}}
 \index{$\sim$isdir@{$\sim$isdir}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
 \subsubsection[{$\sim$isdir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} $\sim$isdir (
@@ -1562,7 +1575,7 @@ Definition at line 696 of file general\-Concentration\-Over\-Threshold.\-m.
 
 \hypertarget{general_concentration_over_threshold_8m_a2f1bf22f6a0c3f5791577061e92c0433}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!fid\-F\-I\-N\-A\-L@{fid\-F\-I\-N\-A\-L}}
 \index{fid\-F\-I\-N\-A\-L@{fid\-F\-I\-N\-A\-L}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
-\subsubsection[{fid\-F\-I\-N\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} fid\-F\-I\-N\-A\-L = fopen(out\-Filen\-Name,'w')}}\label{general_concentration_over_threshold_8m_a2f1bf22f6a0c3f5791577061e92c0433}
+\subsubsection[{fid\-F\-I\-N\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} fid\-F\-I\-N\-A\-L = fopen({\bf out\-Filen\-Name},'w')}}\label{general_concentration_over_threshold_8m_a2f1bf22f6a0c3f5791577061e92c0433}
 
 
 Definition at line 38 of file general\-Concentration\-Over\-Threshold.\-m.
@@ -1771,7 +1784,7 @@ Definition at line 220 of file general\-Concentration\-Over\-Threshold.\-m.
     
     \hyperlink{conc_analysis_8m_adf3394dfd4755fd0ef2854fe558ff8aa}{if} isdir(strcat(\hyperlink{garbage_search_8m_aae5035eb84b89176ed5b06e136325eff}{simDirs}(\hyperlink{general_concentration_over_threshold_8m_a8acdc1bee73718b1ffcfc7eb26968f48}{IDF}).\hyperlink{garbage_search_8m_abbf559a76fab59203496b0847ab9502a}{name}))
         
-        \hyperlink{all_times_analysis_8m_a9be64ccaf83f215ee184d5aafefd7352}{disp}(sprintf('|- Processing \hyperlink{start_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir} %s',\hyperlink{garbage_search_8m_aae5035eb84b89176ed5b06e136325eff}{simDirs}(\hyperlink{general_concentration_over_threshold_8m_a8acdc1bee73718b1ffcfc7eb26968f48}{IDF}).\hyperlink{garbage_search_8m_abbf559a76fab59203496b0847ab9502a}{name}))
+        \hyperlink{all_times_analysis_8m_a9be64ccaf83f215ee184d5aafefd7352}{disp}(sprintf('|- Processing dir %s',\hyperlink{garbage_search_8m_aae5035eb84b89176ed5b06e136325eff}{simDirs}(\hyperlink{general_concentration_over_threshold_8m_a8acdc1bee73718b1ffcfc7eb26968f48}{IDF}).\hyperlink{garbage_search_8m_abbf559a76fab59203496b0847ab9502a}{name}))
 \end{DoxyCode}
 
 
@@ -1945,7 +1958,7 @@ Definition at line 673 of file general\-Concentration\-Over\-Threshold.\-m.
 \subsubsection[{out}]{\setlength{\rightskip}{0pt plus 5cm}Come back {\bf to} the original folder {\bf end} {\bf end} out}}\label{general_concentration_over_threshold_8m_a34c820385e9209f49c18739329ad9206}
 {\bfseries Initial value\-:}
 \begin{DoxyCode}
-= \hyperlink{overall_stats_8m_a56bd5c817530f9b305b5375d6509978a}{generalConcentrationOverThreshold}(params)
+= generalConcentrationOverThreshold(params)
 
 % \hyperlink{general_concentration_over_threshold_8m_a51f20d6b1b54a2eee3be0e8adc96a0ae}{param}.threshold               # Theshold above which the concentration has 
       \hyperlink{general_concentration_over_threshold_8m_af71dbe52628a3f83a77ab494817525c6}{to} be 
@@ -1960,6 +1973,13 @@ Definition at line 673 of file general\-Concentration\-Over\-Threshold.\-m.
 
 
 Definition at line 1 of file general\-Concentration\-Over\-Threshold.\-m.
+
+\hypertarget{general_concentration_over_threshold_8m_af42e186bcb2ad28b937ef14407da1f0d}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!out\-Filen\-Name@{out\-Filen\-Name}}
+\index{out\-Filen\-Name@{out\-Filen\-Name}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
+\subsubsection[{out\-Filen\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} C\-R\-E\-A\-T\-E H\-E\-A\-D\-E\-R R\-O\-W I\-N T\-H\-E F\-I\-N\-A\-L O\-U\-T\-C\-O\-M\-E\-S F\-I\-L\-E\-S out\-Filen\-Name = strcat({\bf current\-Date}, '\-\_\-' , int2str({\bf params.\-threshold}), '\-\_\-conv\-Over\-Threshold\-\_\-', int2str({\bf params.\-decay\-Time}), '.csv')}}\label{general_concentration_over_threshold_8m_af42e186bcb2ad28b937ef14407da1f0d}
+
+
+Definition at line 34 of file general\-Concentration\-Over\-Threshold.\-m.
 
 \hypertarget{general_concentration_over_threshold_8m_abf4ae8c34e865742e8ee979ed6e03384}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!out\-Fname@{out\-Fname}}
 \index{out\-Fname@{out\-Fname}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
@@ -2066,7 +2086,7 @@ Definition at line 172 of file general\-Concentration\-Over\-Threshold.\-m.
 
 \hypertarget{general_concentration_over_threshold_8m_aa7a414dad4901fc05688608a49adfd7e}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!rcs\-Files@{rcs\-Files}}
 \index{rcs\-Files@{rcs\-Files}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
-\subsubsection[{rcs\-Files}]{\setlength{\rightskip}{0pt plus 5cm}{\bf reaction} parameters files rcs\-Files = {\bf dir}('$\ast$reactions\-\_\-parameters$\ast$')}}\label{general_concentration_over_threshold_8m_aa7a414dad4901fc05688608a49adfd7e}
+\subsubsection[{rcs\-Files}]{\setlength{\rightskip}{0pt plus 5cm}{\bf reaction} parameters files rcs\-Files = dir('$\ast$reactions\-\_\-parameters$\ast$')}}\label{general_concentration_over_threshold_8m_aa7a414dad4901fc05688608a49adfd7e}
 
 
 Definition at line 120 of file general\-Concentration\-Over\-Threshold.\-m.
@@ -2156,13 +2176,6 @@ Definition at line 145 of file general\-Concentration\-Over\-Threshold.\-m.
 
 Definition at line 160 of file general\-Concentration\-Over\-Threshold.\-m.
 
-\hypertarget{general_concentration_over_threshold_8m_a95b8ff8a27bbc7e771fa2fdd279f2465}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!save\-Graph\-To\-File@{save\-Graph\-To\-File}}
-\index{save\-Graph\-To\-File@{save\-Graph\-To\-File}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
-\subsubsection[{save\-Graph\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}If the time is {\bf righe} save i\-Graph structures {\bf to} {\bf file} {\bf if} ({\bf rtime} $>$ {\bf rct\-I\-Dshow} $\ast$ analysis\-Time\-Interval) {\bf disp}(sprintf(' $|$-\/ \%s $|$ Reaction \%d -\/ time save\-Graph\-To\-File({\bf folder\-Cat}, {\bf reaction}, {\bf rtime}, {\bf confparams.\-n\-Reactions}, {\bf graph}, {\bf filext\-Pre})}}\label{general_concentration_over_threshold_8m_a95b8ff8a27bbc7e771fa2fdd279f2465}
-
-
-Definition at line 186 of file general\-Concentration\-Over\-Threshold.\-m.
-
 \hypertarget{general_concentration_over_threshold_8m_a85ff953f350ff6660d5f3489e31d57b6}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!scc\-I\-D@{scc\-I\-D}}
 \index{scc\-I\-D@{scc\-I\-D}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
 \subsubsection[{scc\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}scc\-I\-D = 0}}\label{general_concentration_over_threshold_8m_a85ff953f350ff6660d5f3489e31d57b6}
@@ -2186,7 +2199,7 @@ Definition at line 506 of file general\-Concentration\-Over\-Threshold.\-m.
 
 \hypertarget{general_concentration_over_threshold_8m_aae5035eb84b89176ed5b06e136325eff}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!sim\-Dirs@{sim\-Dirs}}
 \index{sim\-Dirs@{sim\-Dirs}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
-\subsubsection[{sim\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}sim\-Dirs = {\bf dir}({\bf search})}}\label{general_concentration_over_threshold_8m_aae5035eb84b89176ed5b06e136325eff}
+\subsubsection[{sim\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}sim\-Dirs = dir({\bf search})}}\label{general_concentration_over_threshold_8m_aae5035eb84b89176ed5b06e136325eff}
 
 
 Definition at line 49 of file general\-Concentration\-Over\-Threshold.\-m.
@@ -2207,7 +2220,7 @@ Definition at line 602 of file general\-Concentration\-Over\-Threshold.\-m.
 
 \hypertarget{general_concentration_over_threshold_8m_af5703745c2c2a6af7f62da460994d9c2}{\index{general\-Concentration\-Over\-Threshold.\-m@{general\-Concentration\-Over\-Threshold.\-m}!species\-Files@{species\-Files}}
 \index{species\-Files@{species\-Files}!generalConcentrationOverThreshold.m@{general\-Concentration\-Over\-Threshold.\-m}}
-\subsubsection[{species\-Files}]{\setlength{\rightskip}{0pt plus 5cm}L\-O\-A\-D F\-I\-R\-S\-T S\-P\-E\-C\-I\-E\-S F\-I\-L\-E species\-Files = {\bf dir}('species\-\_\-1$\ast$')}}\label{general_concentration_over_threshold_8m_af5703745c2c2a6af7f62da460994d9c2}
+\subsubsection[{species\-Files}]{\setlength{\rightskip}{0pt plus 5cm}L\-O\-A\-D F\-I\-R\-S\-T S\-P\-E\-C\-I\-E\-S F\-I\-L\-E species\-Files = dir('species\-\_\-1$\ast$')}}\label{general_concentration_over_threshold_8m_af5703745c2c2a6af7f62da460994d9c2}
 
 
 Definition at line 74 of file general\-Concentration\-Over\-Threshold.\-m.

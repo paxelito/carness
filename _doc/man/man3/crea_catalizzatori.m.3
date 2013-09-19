@@ -1,4 +1,4 @@
-.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_catalizzatori.m" 3 "Wed Jul 24 2013" "Version 4.3 (20130719.55)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_catalizzatori.m" 3 "Thu Sep 19 2013" "Version 4.5 (20130919.57)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,13 +9,6 @@
 .SS "Functions"
 
 .in +1c
-.ti -1c
-.RI "controllo while \fBtot_reaz\fP 
-.br
-*\fBreactionProbability\fP 
-.br
-*\fBcleavageProbability\fP tot_cleav \fBfprintf\fP ('la combinazione di \fBreactionProbability\fP e cleavageProbability\\n è sbagliata, non ci sono cleavage possibili sufficienti\\n') \fBreactionProbability\fP"
-.br
 .ti -1c
 .RI "distribuendo le catalisi \fBa\fP 
 .br
@@ -52,6 +45,13 @@ uniforme \fBswitch\fP (\fBdecisione_catalizzatori\fP)%distribuzione dei \fBcatal
 .RI "\fBtot_reaz\fP =\fBtot_cond\fP+tot_cleav"
 .br
 .ti -1c
+.RI "controllo while \fBtot_reaz\fP 
+.br
+*reactionProbability 
+.br
+*\fBcleavageProbability\fP tot_cleav \fBreactionProbability\fP = input('introduci la nuova reactionProbability \\n')"
+.br
+.ti -1c
 .RI "\fBcleavageProbability\fP = input('introduci la nuova cleavageProbability \\n')"
 .br
 .ti -1c
@@ -78,7 +78,7 @@ uniforme \fBswitch\fP (\fBdecisione_catalizzatori\fP)%distribuzione dei \fBcatal
 .RI "\fBnumero_specie_da_togliere\fP =0"
 .br
 .ti -1c
-.RI "\fBend\fP \fBnumero_specie_da_togliere\fP \fBindex\fP = ceil(\fBrand\fP*(\fBnumero_specie\fP-\fBnumero_specie_da_togliere\fP))+\fBnumero_specie_da_togliere\fP"
+.RI "\fBend\fP \fBnumero_specie_da_togliere\fP \fBindex\fP = ceil(rand*(\fBnumero_specie\fP-\fBnumero_specie_da_togliere\fP))+\fBnumero_specie_da_togliere\fP"
 .br
 .ti -1c
 .RI "\fBif\fP \fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP == 0 %\fBi\fP monomeri non catalizzano 0"
@@ -91,8 +91,6 @@ uniforme \fBswitch\fP (\fBdecisione_catalizzatori\fP)%distribuzione dei \fBcatal
 .SS "id catalizzatore catalizzatore (\fBkk\fP, 2)"
 
 .SS "id specie catalizzatore (\fBkk\fP, 3)"
-
-.SS "controllo while \fBtot_reaz\fP* \fBreactionProbability\fP* \fBcleavageProbability\fP tot_cleav fprintf ('la combinazione di \fBreactionProbability\fP e cleavageProbability\\n èsbagliata, non ci sono cleavage possibili sufficienti\\n')"
 
 .SS "distribuendo le catalisi \fBa\fP caso viene una distribuzione uniforme switch (\fBdecisione_catalizzatori\fP)\fC [pure virtual]\fP"
 
@@ -134,7 +132,7 @@ Definition at line 29 of file crea_catalizzatori\&.m\&.
 .fi
 .PP
 Definition at line 7 of file crea_catalizzatori\&.m\&.
-.SS "\fBelse\fP index = ceil(\fBrand\fP*(\fBnumero_specie\fP-\fBnumero_specie_da_togliere\fP))+\fBnumero_specie_da_togliere\fP"
+.SS "\fBelse\fP index = ceil(rand*(\fBnumero_specie\fP-\fBnumero_specie_da_togliere\fP))+\fBnumero_specie_da_togliere\fP"
 
 .PP
 Definition at line 49 of file crea_catalizzatori\&.m\&.
@@ -154,11 +152,15 @@ Definition at line 5 of file crea_catalizzatori\&.m\&.
 
 .PP
 Definition at line 43 of file crea_catalizzatori\&.m\&.
+.SS "controllo while \fBtot_reaz\fP* reactionProbability* \fBcleavageProbability\fP tot_cleav reactionProbability = input('introduci la nuova reactionProbability \\n')"
+
+.PP
+Definition at line 17 of file crea_catalizzatori\&.m\&.
 .SS "reazione = -9999"
 
 .PP
 Definition at line 25 of file crea_catalizzatori\&.m\&.
-.SS "id \fBreazione\fP \fBif\fP \fBrand\fP< \fBcleavageProbability\fP%cleveage o condensazione??\fBcatalizzatore\fP(\fBkk\fP, 4)=1%caso cleveage \fBtrovato\fP=0 while \fBtrovato\fP==0 index_reaz=ceil(\fBrand\fP *(\fBnumero_specie\fP-length(\fBalphabet\fP)))+length(\fBalphabet\fP) punto_di_taglio=ceil(\fBrand\fP *(\fBfiring_disk\fP(index_reaz, 2)-1)) \fBreazione\fP(\fBk\fP, 1)=\fBk\fP \fBreazione\fP(\fBk\fP, 2)=1%id del cleavage:1 cleavage 0 condensazione \fBreazione\fP(\fBk\fP, 3)=\fBfiring_disk\fP(index_reaz, 1) sp=char(\fBspecie_def\fP(:,:)) sp1=char(sp(index_reaz, 1:punto_di_taglio)) sp2=char(sp(index_reaz, punto_di_taglio+1:\fBfiring_disk\fP(index_reaz, 2))) for \fBi\fP=1:length(\fBspecie_def\fP(:, 1)) \fBif\fP strcmp(deblank(sp(\fBi\fP,:)), sp1)==1 \fBreazione\fP(\fBk\fP, 4)=\fBi\fP \fBend\fP \fBif\fP strcmp(deblank(sp(\fBi\fP,:)), sp2)==1 \fBreazione\fP(\fBk\fP, 5)=\fBi\fP \fBend\fP \fBend\fP for \fBi\fP=length(\fBreazione\fP(:, 1)):-1:1 \fBif\fP((\fBsum\fP(\fBreazione\fP(\fBk\fP, 2:5)==\fBreazione\fP(\fBi\fP, 2:5)))==4 &&i~=\fBk\fP) \fBreazione\fP(\fBk\fP,:)=[] \fBk\fP=\fBk\fP-1 \fBcatalizzatore\fP(\fBkk\fP, 3)=\fBi\fP \fBtrovato\fP=1 \fBbreak\fP \fBelse\fP%CONTROLLARE IL CONTROLLO!!!!!DOPO IL||%TOGLIERE IL CONTROLLO DA QUI E DA SOTTO!!!if(\fBsum\fP(\fBreazione\fP(\fBk\fP, 3:5)==\fBreazione\fP(\fBi\fP, 3:5))==3 &&\fBreazione\fP(\fBk\fP, 2)~=\fBreazione\fP(\fBi\fP, 2))||((\fBreazione\fP(\fBk\fP, 3)==\fBreazione\fP(\fBi\fP, 3)&&\fBreazione\fP(\fBk\fP, 4)==\fBreazione\fP(\fBi\fP, 5)&&\fBreazione\fP(\fBk\fP, 5)==\fBreazione\fP(\fBi\fP, 4))) \fBtrovato\fP=0 \fBbreak\fP \fBelse\fP \fBtrovato\fP=1 \fBend\fP \fBend\fP \fBend\fP \fBend\fP \fBelse\fP%caso condensazione \fBcatalizzatore\fP(\fBkk\fP, 4)=0 \fBtrovato\fP=0 while \fBtrovato\fP==0 \fBreazione\fP(\fBk\fP, 1)=\fBk\fP \fBreazione\fP(\fBk\fP, 2)=0%id della condensazione:1 cleavage 0 condensazione index_specie_1=ceil(\fBrand\fP *(\fBnumero_specie\fP)) index_specie_2=ceil(\fBrand\fP *(\fBnumero_specie\fP)) nuova_specie=[deblank(\fBspecie_def\fP(index_specie_1,:)), deblank(\fBspecie_def\fP(index_specie_2,:))] nuova_specie=char(nuova_specie) sp=char(\fBspecie_def\fP(:,:)) found=0%controllo per vedere \fBse\fP trovo una specie che esiste già for \fBi\fP=1:length(\fBspecie_def\fP(:, 1)) \fBif\fP strcmp(deblank(sp(\fBi\fP,:)), deblank(nuova_specie))==1 \fBreazione\fP(\fBk\fP, 3)=\fBi\fP found=1 \fBend\fP \fBif\fP strcmp(deblank(sp(\fBi\fP,:)), deblank(sp(index_specie_1,:)))==1 \fBreazione\fP(\fBk\fP, 4)=\fBi\fP \fBend\fP \fBif\fP strcmp(deblank(sp(\fBi\fP,:)), deblank(sp(index_specie_2,:)))==1 \fBreazione\fP(\fBk\fP, 5)=\fBi\fP \fBend\fP \fBend\fP \fBif\fP found==0%\fBse\fP ho \fBtrovato\fP una specie che NON esiste \fBh\fP=\fBh\fP+1 \fBreazione\fP(\fBk\fP, 3)=length(\fBspecie_def\fP(:, 1))+\fBh\fP specie_non_esistenti(\fBh\fP)={nuova_specie}for iii=h:-1:1 \fBif\fP strcmp(specie_non_esistenti(\fBh\fP), specie_non_esistenti(iii))==1 &&h~=iii specie_non_esistenti(\fBh\fP)=[] \fBh\fP=\fBh\fP-1 \fBreazione\fP(\fBk\fP, 3)=length(\fBspecie_def\fP(:, 1))+iii \fBend\fP \fBend\fP \fBend\fP%controllo che la \fBreazione\fP non esista già for \fBi\fP=length(\fBreazione\fP(:, 1)):-1:1 \fBif\fP(\fBsum\fP(\fBreazione\fP(\fBk\fP, 2:5)==\fBreazione\fP(\fBi\fP, 2:5)))==4 &&i~=\fBk\fP \fBreazione\fP(\fBk\fP,:)=[] \fBk\fP=\fBk\fP-1 \fBcatalizzatore\fP(\fBkk\fP, 3)=\fBi\fP \fBtrovato\fP=1 \fBbreak\fP \fBelse\fP \fBif\fP(\fBsum\fP(\fBreazione\fP(\fBk\fP, 3:5)==\fBreazione\fP(\fBi\fP, 3:5))==3 &&\fBreazione\fP(\fBk\fP, 2)~=\fBreazione\fP(\fBi\fP, 2))||((\fBreazione\fP(\fBk\fP, 3)==\fBreazione\fP(\fBi\fP, 3)&&\fBreazione\fP(\fBk\fP, 4)==\fBreazione\fP(\fBi\fP, 5)&&\fBreazione\fP(\fBk\fP, 5)==\fBreazione\fP(\fBi\fP, 4))) \fBtrovato\fP=0 \fBbreak\fP \fBelse\fP \fBtrovato\fP=1 \fBend\fP \fBend\fP \fBend\fP \fBend\fP \fBend\fP%controllo per evitare che lo stesso \fBcatalizzatore\fP catalizzi la%stessa \fBreazione\fP trovato_uguale=1 for iiii=length(\fBcatalizzatore\fP(:, 1)):-1:1 \fBif\fP \fBsum\fP(\fBcatalizzatore\fP(\fBkk\fP, 2:3)==\fBcatalizzatore\fP(iiii, 2:3))==2 &&kk~=iiii \fBcatalizzatore\fP(\fBkk\fP,:)=[] \fBkk\fP=\fBkk\fP-1 trovato_uguale=0 \fBbreak\fP \fBend\fP \fBend\fP \fBif\fP trovato_uguale==1 \fBcatalisi_reali\fP=\fBcatalisi_reali\fP-1 \fBend\fP \fBend\fP \fBif\fP \fBexist\fP('specie_non_esistenti')> specie_non_esistenti {1,1} =-9999"
+.SS "id \fBreazione\fP \fBif\fP rand< \fBcleavageProbability\fP%cleveage o \fBcondensazione\fP??\fBcatalizzatore\fP(\fBkk\fP, 4)=1%caso cleveage \fBtrovato\fP=0 while \fBtrovato\fP==0 index_reaz=ceil(rand *(\fBnumero_specie\fP-length(\fBalphabet\fP)))+length(\fBalphabet\fP) punto_di_taglio=ceil(rand *(\fBfiring_disk\fP(index_reaz, 2)-1)) \fBreazione\fP(\fBk\fP, 1)=\fBk\fP \fBreazione\fP(\fBk\fP, 2)=1%id del cleavage:1 cleavage 0 \fBcondensazione\fP \fBreazione\fP(\fBk\fP, 3)=\fBfiring_disk\fP(index_reaz, 1) sp=char(\fBspecie_def\fP(:,:)) sp1=char(sp(index_reaz, 1:punto_di_taglio)) sp2=char(sp(index_reaz, punto_di_taglio+1:\fBfiring_disk\fP(index_reaz, 2))) for \fBi\fP=1:length(\fBspecie_def\fP(:, 1)) \fBif\fP strcmp(deblank(sp(\fBi\fP,:)), sp1)==1 \fBreazione\fP(\fBk\fP, 4)=\fBi\fP \fBend\fP \fBif\fP strcmp(deblank(sp(\fBi\fP,:)), sp2)==1 \fBreazione\fP(\fBk\fP, 5)=\fBi\fP \fBend\fP \fBend\fP for \fBi\fP=length(\fBreazione\fP(:, 1)):-1:1 \fBif\fP((\fBsum\fP(\fBreazione\fP(\fBk\fP, 2:5)==\fBreazione\fP(\fBi\fP, 2:5)))==4 &&i~=\fBk\fP) \fBreazione\fP(\fBk\fP,:)=[] \fBk\fP=\fBk\fP-1 \fBcatalizzatore\fP(\fBkk\fP, 3)=\fBi\fP \fBtrovato\fP=1 \fBbreak\fP \fBelse\fP%CONTROLLARE IL CONTROLLO!!!!!DOPO IL||%TOGLIERE IL CONTROLLO DA QUI E DA SOTTO!!!if(\fBsum\fP(\fBreazione\fP(\fBk\fP, 3:5)==\fBreazione\fP(\fBi\fP, 3:5))==3 &&\fBreazione\fP(\fBk\fP, 2)~=\fBreazione\fP(\fBi\fP, 2))||((\fBreazione\fP(\fBk\fP, 3)==\fBreazione\fP(\fBi\fP, 3)&&\fBreazione\fP(\fBk\fP, 4)==\fBreazione\fP(\fBi\fP, 5)&&\fBreazione\fP(\fBk\fP, 5)==\fBreazione\fP(\fBi\fP, 4))) \fBtrovato\fP=0 \fBbreak\fP \fBelse\fP \fBtrovato\fP=1 \fBend\fP \fBend\fP \fBend\fP \fBend\fP \fBelse\fP%caso \fBcondensazione\fP \fBcatalizzatore\fP(\fBkk\fP, 4)=0 \fBtrovato\fP=0 while \fBtrovato\fP==0 \fBreazione\fP(\fBk\fP, 1)=\fBk\fP \fBreazione\fP(\fBk\fP, 2)=0%id della condensazione:1 cleavage 0 \fBcondensazione\fP index_specie_1=ceil(rand *(\fBnumero_specie\fP)) index_specie_2=ceil(rand *(\fBnumero_specie\fP)) nuova_specie=[deblank(\fBspecie_def\fP(index_specie_1,:)), deblank(\fBspecie_def\fP(index_specie_2,:))] nuova_specie=char(nuova_specie) sp=char(\fBspecie_def\fP(:,:)) found=0%controllo per vedere \fBse\fP trovo una specie che esiste già for \fBi\fP=1:length(\fBspecie_def\fP(:, 1)) \fBif\fP strcmp(deblank(sp(\fBi\fP,:)), deblank(nuova_specie))==1 \fBreazione\fP(\fBk\fP, 3)=\fBi\fP found=1 \fBend\fP \fBif\fP strcmp(deblank(sp(\fBi\fP,:)), deblank(sp(index_specie_1,:)))==1 \fBreazione\fP(\fBk\fP, 4)=\fBi\fP \fBend\fP \fBif\fP strcmp(deblank(sp(\fBi\fP,:)), deblank(sp(index_specie_2,:)))==1 \fBreazione\fP(\fBk\fP, 5)=\fBi\fP \fBend\fP \fBend\fP \fBif\fP found==0%\fBse\fP ho \fBtrovato\fP una specie che NON esiste \fBh\fP=\fBh\fP+1 \fBreazione\fP(\fBk\fP, 3)=length(\fBspecie_def\fP(:, 1))+\fBh\fP specie_non_esistenti(\fBh\fP)={nuova_specie}for iii=h:-1:1 \fBif\fP strcmp(specie_non_esistenti(\fBh\fP), specie_non_esistenti(iii))==1 &&h~=iii specie_non_esistenti(\fBh\fP)=[] \fBh\fP=\fBh\fP-1 \fBreazione\fP(\fBk\fP, 3)=length(\fBspecie_def\fP(:, 1))+iii \fBend\fP \fBend\fP \fBend\fP%controllo che la \fBreazione\fP non esista già for \fBi\fP=length(\fBreazione\fP(:, 1)):-1:1 \fBif\fP(\fBsum\fP(\fBreazione\fP(\fBk\fP, 2:5)==\fBreazione\fP(\fBi\fP, 2:5)))==4 &&i~=\fBk\fP \fBreazione\fP(\fBk\fP,:)=[] \fBk\fP=\fBk\fP-1 \fBcatalizzatore\fP(\fBkk\fP, 3)=\fBi\fP \fBtrovato\fP=1 \fBbreak\fP \fBelse\fP \fBif\fP(\fBsum\fP(\fBreazione\fP(\fBk\fP, 3:5)==\fBreazione\fP(\fBi\fP, 3:5))==3 &&\fBreazione\fP(\fBk\fP, 2)~=\fBreazione\fP(\fBi\fP, 2))||((\fBreazione\fP(\fBk\fP, 3)==\fBreazione\fP(\fBi\fP, 3)&&\fBreazione\fP(\fBk\fP, 4)==\fBreazione\fP(\fBi\fP, 5)&&\fBreazione\fP(\fBk\fP, 5)==\fBreazione\fP(\fBi\fP, 4))) \fBtrovato\fP=0 \fBbreak\fP \fBelse\fP \fBtrovato\fP=1 \fBend\fP \fBend\fP \fBend\fP \fBend\fP \fBend\fP%controllo per evitare che lo stesso \fBcatalizzatore\fP catalizzi la%stessa \fBreazione\fP trovato_uguale=1 for iiii=length(\fBcatalizzatore\fP(:, 1)):-1:1 \fBif\fP \fBsum\fP(\fBcatalizzatore\fP(\fBkk\fP, 2:3)==\fBcatalizzatore\fP(iiii, 2:3))==2 &&kk~=iiii \fBcatalizzatore\fP(\fBkk\fP,:)=[] \fBkk\fP=\fBkk\fP-1 trovato_uguale=0 \fBbreak\fP \fBend\fP \fBend\fP \fBif\fP trovato_uguale==1 \fBcatalisi_reali\fP=\fBcatalisi_reali\fP-1 \fBend\fP \fBend\fP \fBif\fP \fBexist\fP('specie_non_esistenti')> specie_non_esistenti {1,1} =-9999"
 
 .PP
 Definition at line 26 of file crea_catalizzatori\&.m\&.

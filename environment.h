@@ -50,6 +50,8 @@ private:
     acs_longInt endoCleavageCounter;        // Number of endoergonic cleavage counter
     acs_longInt condensationCounter;        // Number of condensation counter
     acs_longInt endoCondensationCounter;   // Number of endoergonic condensation counter
+    acs_longInt cpxFormCounter;	   // Complex formation Counter
+    acs_longInt cpxDissCounter;		// Complex dissociation counter
     int overallLoadedMolsCounter;  // Total number of loaded molecules
     acs_double internalTimesStoredCounter; // Time interval to save certain structures
     acs_int lastEvaluatedSpeceisForNewReactions; // Last species evaluated for new reactions, in such a way once that a species has been evaluated to be involved in new reactions
@@ -114,6 +116,7 @@ private:
 	acs_double decimalMoleculesToEfflux; // Decimal part of molecule to efflux in the next reaction
 	acs_double decimalMoleculesToLoad; // Decimal part of molecules to load in the next reaction
 	acs_double decimalMoleculesToUNLOAD; // Decimal part of molecules to unload because of the energy decay 
+	acs_double decimalComplexesToDissociate; // Decimal part of complex to dissociate.
 	
     // STATISTICAL VARIABLES ------------------------
 	acs_double gillespieMean;       // Mean of all the Gillespie Scores
@@ -216,6 +219,8 @@ private:
 	acs_longInt getEndoCleavageCounter()const{return endoCleavageCounter;}
 	acs_longInt getCondensationCounter()const{return condensationCounter;}
 	acs_longInt getEndoCondensationCounter()const{return endoCondensationCounter;}
+	acs_longInt getCpxFormCounter()const{return cpxFormCounter;}
+	acs_longInt getCpxDissCounter()const{return cpxDissCounter;}
 	acs_longInt getOverallLoadedMolsCounter()const{return overallLoadedMolsCounter;}
 	acs_int getTotNumberOfChargedMols();
 
@@ -254,9 +259,10 @@ private:
     acs_longInt returnPosReactionAlreadyPresent(acs_int tmpReactionType, acs_longInt tmpIds_I, acs_longInt tmpIds_II, acs_longInt tmpIds_III); //return vector allReactions size if it doesn't
 	bool checkIfTheReactionIsAlreadyCatalyzedByThisSpecies(acs_longInt tmpSPeciesID, acs_longInt tmpIdReaction);
     bool performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath);
+    bool performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath);
     bool performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleGen, acs_int tmp_ActGEN, acs_int tmp_ActSIM, acs_int tmp_ActSTEP, string tmp_StoringPath);
 	bool newSpeciesEvaluationIII(acs_int tmpNewSpecies, MTRand& tmp___RndDoubleGen);
-    bool complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGen, acs_int tmpCuttingPnt, acs_int tmpCatalyst_ID, acs_int tmpSubstrate_ID, bool tmpCpxType);
+    bool complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGen, acs_int tmpCuttingPnt, acs_longInt tmpCatalyst_ID, acs_longInt tmpCatID, acs_longInt tmpSubstrate_ID, acs_longInt tmpSecSub_ID, bool tmpCpxType);
 	acs_double computeSinglGilScore(acs_longInt tmpAmountI, acs_double tmpDifI, acs_int tmpSolI,acs_longInt tmpAmountII, acs_double tmpDifII, acs_int tmpSolII, acs_double tmpK, bool tmpSameMol);
 	void performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs_longInt tmpAmountII, acs_longInt tmpIDI, acs_longInt tmpIDII, acs_longInt tmpIDCatalysis, acs_int tmp__rctType,
 											acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III, acs_longInt tmpMol_IV, acs_int tmpNRGDirection, acs_longInt tmpRctID,
@@ -290,6 +296,8 @@ private:
 	void incEndoCleavageCounter(){endoCleavageCounter++;}
 	void incCondensationCounter(){condensationCounter++;}
 	void incEndoCondensationCounter(){endoCondensationCounter++;}
+	void incCpxFormCounter(){cpxFormCounter++;}
+	void incCpxDissCounter(){cpxDissCounter++;}
 	void incOverallLoadedMolsCounter(){overallLoadedMolsCounter++;}
 	void decOverallLoadedMolsCounter(){overallLoadedMolsCounter--;}
 
@@ -298,9 +306,12 @@ private:
 	void resetCondensationCounter(){condensationCounter = 0;}
 	void resetEndoCondensationCounter(){endoCondensationCounter = 0;}
 	void resetOverallLoadedMolsCounter(){overallLoadedMolsCounter = 0;}
+	void resetCpxFormCounter(){cpxFormCounter = 0;}
+	void resetCpxDissCounter(){cpxDissCounter = 0;}
 
 	void resetReactionsCounter(){resetCleavageCounter(); resetEndoCleavageCounter();
-		resetCondensationCounter(); resetEndoCondensationCounter(); resetOverallLoadedMolsCounter();}
+		resetCondensationCounter(); resetEndoCondensationCounter(); resetOverallLoadedMolsCounter();
+		resetCpxFormCounter(); resetCpxDissCounter();}
 
 	bool addChargeMolToList(acs_int tmpSpeciesID);
 	bool removeChargeMolFromList(acs_int tmpSpeciesID);
@@ -315,6 +326,7 @@ private:
 	bool performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double tmpMinimalTimeForOneMols, MTRand& tmp__RndDoubleGen);
 	bool performMoleculesEfflux(acs_double tmpTimeInterval, MTRand& tmp_RndDoubleGen);
 	bool performDETMoleculesCharging(acs_double tmpTimeInterval, MTRand& tmp_RndDoubleGen);
+	bool performDETComplexDissociation(acs_double tmpTimeInterval, MTRand& tmp_RndDoubleGen);
 	void setActualTime(acs_double tmpActualTime){actualTime = tmpActualTime;}
 	//TR void getNutrientsFromTheFiringDisk();
 	void updateSpeciesAges();
@@ -329,8 +341,8 @@ private:
 						 acs_longInt tmpIdReaction, acs_longInt tmpIdCatalysis, MTRand& tmp__RndDoubleGen);
 	bool perform_endo_Cleavage(acs_longInt tmpSubstrate, acs_longInt tmpProduct_I, acs_longInt tmpProduct_II,
 							   acs_int tmpNRGside, acs_longInt tmpIdReaction, acs_longInt tmpIdCatalysis, MTRand& tmp__RndDoubleGen);
-    bool performComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, MTRand& tmp__RndDoubleGen);
-    bool perform_endo_ComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, acs_int tmpNRGSide, MTRand& tmp__RndDoubleGen);
+    bool performComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, acs_longInt tmpCatID, acs_longInt tmpSecSub, MTRand& tmp__RndDoubleGen);
+    bool perform_endo_ComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, acs_longInt tmpCatID, acs_longInt tmpSecSub, acs_int tmpNRGSide, MTRand& tmp__RndDoubleGen);
 	bool performComplexDissociation(acs_longInt tmpComplex, acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, MTRand& tmp__RndDoubleGen);
 	bool performMoleculeEfflux(acs_longInt tmpSpecies, MTRand& tmp__RndDoubleGen);
     //TR bool performPhosphorilation(acs_longInt tmpSpecies);
@@ -340,7 +352,9 @@ private:
 	bool structureCoherenceCheckUp();
 	bool notInverseReactionAlreadyCatalyzed(acs_int tmpRct, acs_longInt tmpID_I, acs_longInt tmpID_II);
 	bool checkIfOnlyMutualCatalysis(acs_int tmpCat, acs_int tmpCandidateProduct);
-        bool checkAvailability(acs_longInt tmpMI, acs_longInt tmpMII, acs_longInt tmpQI, acs_longInt tmpQII);
+    bool checkAvailability(acs_longInt tmpMI, acs_longInt tmpMII, acs_longInt tmpQI, acs_longInt tmpQII);
+    void inserSubListInSpecies();
+    void showSubListInSpecies();
 	
     // SAVE TO FILE FUNCTIONS
 

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="crea__concentrazioni__iniziali_8m" kind="file">
     <compoundname>crea_concentrazioni_iniziali.m</compoundname>
       <sectiondef kind="var">
@@ -192,7 +192,7 @@
         <argsstring></argsstring>
         <name>trovato</name>
         <initializer>==0
-                <ref refid="crea__catalizzatori_8m_1a0cd6a44ffb07342cbc7e5ac33bfc9495" kindref="member">index</ref> = <ref refid="crea__concentrazioni__iniziali_8m_1ab10fb0f79db7ffeb421b335cce374d9c" kindref="member">l_max</ref>+ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*<ref refid="crea__influx_8m_1a3749709d4cc2c50b5107d802173fb144" kindref="member">remaining_species</ref>)</initializer>
+                <ref refid="crea__catalizzatori_8m_1a0cd6a44ffb07342cbc7e5ac33bfc9495" kindref="member">index</ref> = <ref refid="crea__concentrazioni__iniziali_8m_1ab10fb0f79db7ffeb421b335cce374d9c" kindref="member">l_max</ref>+ceil(rand*<ref refid="crea__influx_8m_1a3749709d4cc2c50b5107d802173fb144" kindref="member">remaining_species</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -593,7 +593,7 @@
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=1:<ref refid="crea__concentrazioni__iniziali_8m_1a6d872cdbb63424cff04a431f8c23cb99" kindref="member">species_to_delete</ref></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1ab9820e0c2b1ec444c369e5ba77827df6" kindref="member">trovato</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="44" refid="crea__concentrazioni__iniziali_8m_1ab9820e0c2b1ec444c369e5ba77827df6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/><sp/>trovato<sp/>==0</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebuffered_flux_analysis_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref><sp/>=<sp/>l_max+ceil(<ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>*remaining_species);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacebuffered_flux_analysis_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref><sp/>=<sp/>l_max+ceil(rand*remaining_species);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>(<ref refid="namespacebuffered_flux_analysis_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref>,3)==1</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a2d2940c89db3abbcc0c1331eab98a267" kindref="member">firing_disk</ref>(<ref refid="namespacebuffered_flux_analysis_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref>,3)=0;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trovato<sp/>=<sp/>1;</highlight></codeline>

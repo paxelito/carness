@@ -1,4 +1,4 @@
-.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" 3 "Wed Jul 24 2013" "Version 4.3 (20130719.55)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" 3 "Thu Sep 19 2013" "Version 4.5 (20130919.57)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -31,7 +31,22 @@ for every network will be
 performed nSim different \fBsimulation\fP (differnt random seeds) \fBsimFolder\&.name\fP"
 .br
 .ti -1c
-.RI "\fBcd\fP (\fBsimFolder\&.path\fP) \fBif\fP \fBexist\fP(\fBsimFolder\&.name\fP"
+.RI "\fBif\fP \fBexist\fP (\fBsimFolder\&.name\fP, 'dir')"
+.br
+.ti -1c
+.RI "introduzione delle FUNZIONI 
+.br
+BOOLEANE nell che verranno 
+.br
+successivamente assegnate con 
+.br
+probabilità uniforme alle 
+.br
+\fBreazioni\fP la funzione è divisa 
+.br
+\fBa\fP la prima \fBmetà\fP corrisponde 
+.br
+alla \fBcondensazione\fP (8 bit)"
 .br
 .ti -1c
 .RI "converto in decimale for per 
@@ -182,10 +197,10 @@ uscire dal quando \fBinflux_rate\fP"
 .RI "\fBenergy\fP =0"
 .br
 .ti -1c
-.RI "energia \fBconsiderata\fP"
+.RI "\fBenergia\fP \fBconsiderata\fP"
 .br
 .ti -1c
-.RI "energia non \fBconsiderata\fP \fBcomplexFormationSymmetry\fP =0"
+.RI "\fBenergia\fP non \fBconsiderata\fP \fBcomplexFormationSymmetry\fP =0"
 .br
 .ti -1c
 .RI "\fBfino_a_che_lunghezza_i_polimeri_non_catalizzano\fP = 2"
@@ -338,12 +353,42 @@ lasciare ad \fB!lastFiringDiskSpeciesID\fP = 0"
 .RI "\fBthisFolder\fP = pwd"
 .br
 .ti -1c
-.RI "\fBdir\fP"
+.RI "\fBend\fP \fBfid20\fP = fopen('lanciatore\&.sh','w')"
 .br
 .ti -1c
-.RI "\fBcd\fP(\fBthisFolder\fP)%introduzione 
+.RI "introduzione delle FUNZIONI 
 .br
-delle FUNZIONI BOOLEANE nell'energia \fBfunzioni_booleane_in_dec\fP = bi2de(funzioni_booleane,'left-msb')"
+BOOLEANE nell \fBenergia\fP"
+.br
+.ti -1c
+.RI "introduzione delle FUNZIONI 
+.br
+BOOLEANE nell che verranno 
+.br
+successivamente assegnate con 
+.br
+probabilità uniforme alle 
+.br
+\fBreazioni\fP la funzione è divisa 
+.br
+\fBa\fP \fBmetà\fP"
+.br
+.ti -1c
+.RI "introduzione delle FUNZIONI 
+.br
+BOOLEANE nell che verranno 
+.br
+successivamente assegnate con 
+.br
+probabilità uniforme alle 
+.br
+\fBreazioni\fP la funzione è divisa 
+.br
+\fBa\fP la prima \fBmetà\fP corrisponde 
+.br
+alla la seconda parte al 
+.br
+cleavage(4 bit)\&.%esempio \fBfunzioni_booleane_in_dec\fP = bi2de(funzioni_booleane,'left-msb')"
 .br
 .ti -1c
 .RI "\fBparte2_nome_cartella\fP = num2str(\fBnome_folder\fP(\fBi\fP))"
@@ -354,7 +399,9 @@ delle FUNZIONI BOOLEANE nell'energia \fBfunzioni_booleane_in_dec\fP = bi2de(funz
 .in -1c
 .SH "Function Documentation"
 .PP 
-.SS "cd (simFolder\&.path)"
+.SS "introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle \fBreazioni\fP la funzione è divisa \fBa\fP la prima \fBmetà\fP corrisponde alla condensazione (8bit)"
+
+.SS "\fBif\fP exist (simFolder\&.name, 'dir')"
 
 .SS "converto in decimale for per default è uniforme funzioni_booleane_in_dec (\fBi\fP, 2)"
 
@@ -390,11 +437,11 @@ Definition at line 63 of file start\&.m\&.
 
 .PP
 Definition at line 42 of file start\&.m\&.
-.SS "energia non \fBconsiderata\fP complexFormationSymmetry =0"
+.SS "\fBenergia\fP non \fBconsiderata\fP complexFormationSymmetry =0"
 
 .PP
 Definition at line 40 of file start\&.m\&.
-.SS "energia considerata"
+.SS "\fBenergia\fP considerata"
 
 .PP
 Definition at line 39 of file start\&.m\&.
@@ -414,15 +461,10 @@ Definition at line 62 of file start\&.m\&.
 
 .PP
 Definition at line 54 of file start\&.m\&.
-.SS "dir"
-\fBInitial value:\fP
+.SS "introduzione delle FUNZIONI BOOLEANE nell energia"
+
 .PP
-.nf
-== 0
-    mkdir(simFolder\&.name)
-.fi
-.PP
-Definition at line 85 of file start\&.m\&.
+Definition at line 108 of file start\&.m\&.
 .SS "energy =0"
 
 .PP
@@ -431,6 +473,10 @@ Definition at line 39 of file start\&.m\&.
 
 .PP
 Definition at line 69 of file start\&.m\&.
+.SS "\fBend\fP fid20 = fopen('lanciatore\&.sh','w')"
+
+.PP
+Definition at line 89 of file start\&.m\&.
 .SS "definisce il tempo in cui vengono salvati \fBi\fP \fBfile\fP durante la \fBsimulazione\fP fileTimesSaveInterval =0"
 
 .PP
@@ -443,7 +489,7 @@ Definition at line 41 of file start\&.m\&.
 
 .PP
 Definition at line 20 of file start\&.m\&.
-.SS "\fBcd\fP (\fBthisFolder\fP) %introduzione delle FUNZIONI BOOLEANE nell'energia funzioni_booleane_in_dec = bi2de(funzioni_booleane,'left-msb')"
+.SS "introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle \fBreazioni\fP la funzione è divisa \fBa\fP la prima \fBmetà\fP corrisponde alla la seconda parte al cleavage (4 bit)\&. %esempio funzioni_booleane_in_dec = bi2de(funzioni_booleane,'left-msb')"
 
 .PP
 Definition at line 116 of file start\&.m\&.
@@ -521,6 +567,10 @@ Definition at line 60 of file start\&.m\&.
 
 .PP
 Definition at line 34 of file start\&.m\&.
+.SS "introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle \fBreazioni\fP la funzione è divisa \fBa\fP metà"
+
+.PP
+Definition at line 108 of file start\&.m\&.
 .SS "percentuale di specie presenti nel sistema che possono essere energizzate per ogni specie create \fBc\fP è una certa probabilità di essere energizzabile o meno moleculeDecay_KineticConstant =0\&.02"
 
 .PP

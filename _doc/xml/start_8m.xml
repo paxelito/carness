@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="start_8m" kind="file">
     <compoundname>start.m</compoundname>
       <sectiondef kind="var">
@@ -349,7 +349,7 @@ ECConcentration=0</initializer>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="start_8m_1ad76697f83c5d8bf201c45822af227e21" prot="public" static="no" mutable="no">
-        <type>energia</type>
+        <type><ref refid="start_8m_1a15a0e3f3007df072a07460518322b944" kindref="member">energia</ref></type>
         <definition>energia considerata</definition>
         <argsstring></argsstring>
         <name>considerata</name>
@@ -362,7 +362,7 @@ ECConcentration=0</initializer>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="start_8m_1ac5d9cfec5453da5efc3e8d574b455833" prot="public" static="no" mutable="no">
-        <type>energia non <ref refid="start_8m_1ad76697f83c5d8bf201c45822af227e21" kindref="member">considerata</ref></type>
+        <type><ref refid="start_8m_1a15a0e3f3007df072a07460518322b944" kindref="member">energia</ref> non <ref refid="start_8m_1ad76697f83c5d8bf201c45822af227e21" kindref="member">considerata</ref></type>
         <definition>energia non considerata complexFormationSymmetry</definition>
         <argsstring></argsstring>
         <name>complexFormationSymmetry</name>
@@ -817,24 +817,49 @@ ECConcentration=0</initializer>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="83" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" bodystart="83" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>dir</definition>
+      <memberdef kind="variable" id="start_8m_1aaad88534fbf3d065202db78a891374ca" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end fid20</definition>
         <argsstring></argsstring>
-        <name>dir</name>
-        <initializer>== 0
-    <ref refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">simFolder.name</ref>)</initializer>
+        <name>fid20</name>
+        <initializer>= fopen(&apos;lanciatore.sh&apos;,&apos;w&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="85" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" bodystart="85" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="89" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" bodystart="89" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="start_8m_1a116958824076bbd8ba3a094b73919de4" prot="public" static="no" mutable="no">
-        <type><ref refid="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>(<ref refid="start_8m_1a2d4125646b62462ce279d82913125ccf" kindref="member">thisFolder</ref>)%introduzione delle FUNZIONI BOOLEANE nell&apos;energia</type>
-        <definition>cd (thisFolder) %introduzione delle FUNZIONI BOOLEANE nell&apos;energia funzioni_booleane_in_dec</definition>
+      <memberdef kind="variable" id="start_8m_1a15a0e3f3007df072a07460518322b944" prot="public" static="no" mutable="no">
+        <type>introduzione delle FUNZIONI BOOLEANE nell</type>
+        <definition>introduzione delle FUNZIONI BOOLEANE nell energia</definition>
+        <argsstring></argsstring>
+        <name>energia</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="92" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="start_8m_1a35e364c23f0047548a80b164387d0f06" prot="public" static="no" mutable="no">
+        <type>introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle <ref refid="start_8m_1a69962f56e60d0c88abc5d4b6839c2886" kindref="member">reazioni</ref> la funzione è divisa <ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref></type>
+        <definition>introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle reazioni la funzione è divisa a metà</definition>
+        <argsstring></argsstring>
+        <name>metà</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="110" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="start_8m_1ac2751b1d83e4866f727cdcc856beaad1" prot="public" static="no" mutable="no">
+        <type>introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle <ref refid="start_8m_1a69962f56e60d0c88abc5d4b6839c2886" kindref="member">reazioni</ref> la funzione è divisa <ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref> la prima <ref refid="start_8m_1a35e364c23f0047548a80b164387d0f06" kindref="member">metà</ref> corrisponde alla la seconda parte al cleavage(4 bit).%esempio</type>
+        <definition>introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle reazioni la funzione è divisa a la prima metà corrisponde alla la seconda parte al cleavage (4 bit). %esempio funzioni_booleane_in_dec</definition>
         <argsstring></argsstring>
         <name>funzioni_booleane_in_dec</name>
         <initializer>= bi2de(funzioni_booleane,&apos;left-msb&apos;)</initializer>
@@ -953,14 +978,17 @@ ECConcentration=0</initializer>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="69" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>cd</definition>
-        <argsstring>(simFolder.path) if exist(simFolder.name</argsstring>
-        <name>cd</name>
+      <memberdef kind="function" id="start_8m_1acda334cb7ae2a2f83fa0ec9c6f57a846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>if exist</definition>
+        <argsstring>(simFolder.name, &apos;dir&apos;)</argsstring>
+        <name>exist</name>
         <param>
           <type>simFolder.</type>
-          <declname>path</declname>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>&apos;dir&apos;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -968,7 +996,24 @@ ECConcentration=0</initializer>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="84" column="1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="start_8m_1a05f7e68f06e2b202f7fc3d5678f70fa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle <ref refid="start_8m_1a69962f56e60d0c88abc5d4b6839c2886" kindref="member">reazioni</ref> la funzione è divisa <ref refid="somma_8m_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref> la prima <ref refid="start_8m_1a35e364c23f0047548a80b164387d0f06" kindref="member">metà</ref> corrisponde alla</type>
+        <definition>introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle reazioni la funzione è divisa a la prima metà corrisponde alla condensazione</definition>
+        <argsstring>(8 bit)</argsstring>
+        <name>condensazione</name>
+        <param>
+          <type>8</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" line="110" column="1"/>
       </memberdef>
       <memberdef kind="function" id="start_8m_1aa053e90bd0493b6b9dfbb0e8febbee0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>converto in decimale for per default è uniforme</type>
@@ -1005,7 +1050,7 @@ ECConcentration=0</initializer>
 <codeline lineno="8" refid="start_8m_1abc4a849052f02bdfa554624d1d058817" refkind="member"><highlight class="normal">%Inserimento<sp/>dei<sp/>PARAMETRI<sp/>VARIABILI<sp/>sui<sp/>quali<sp/>fare<sp/>lo<sp/><ref refid="start_8m_1abc4a849052f02bdfa554624d1d058817" kindref="member">SCREENING</ref>,<sp/>sottoforma<sp/>di<sp/>matrici</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">%o<sp/>vettori</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="start_8m_1a9101beaeb03fddb5c6a9e68442177543" refkind="member"><highlight class="normal">%<ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref><sp/>=<sp/>[0.000516529;<sp/>0.000258264;<sp/>0.000129132;<sp/>0.001033058;<sp/>0.002066116;<sp/>0.004132231;<sp/>0.008264463];</highlight></codeline>
+<codeline lineno="11" refid="start_8m_1a9101beaeb03fddb5c6a9e68442177543" refkind="member"><highlight class="normal">%<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref><sp/>=<sp/>[0.000516529;<sp/>0.000258264;<sp/>0.000129132;<sp/>0.001033058;<sp/>0.002066116;<sp/>0.004132231;<sp/>0.008264463];</highlight></codeline>
 <codeline lineno="12" refid="start_8m_1ab05ea37ca64abe64c55c1f166e3a818b" refkind="member"><highlight class="normal">%<ref refid="start_8m_1ab05ea37ca64abe64c55c1f166e3a818b" kindref="member">nome_prob</ref><sp/>=<sp/>[0.125;<sp/>0.25;<sp/>0.5;<sp/>1;<sp/>2;<sp/>4;<sp/>8];</highlight></codeline>
 <codeline lineno="13" refid="start_8m_1a5b50e4bf0f01cb1e2d8bdf9494493579" refkind="member"><highlight class="normal"><ref refid="start_8m_1a5b50e4bf0f01cb1e2d8bdf9494493579" kindref="member">lMaxInflux</ref><sp/>=<sp/>[4];</highlight></codeline>
 <codeline lineno="14" refid="start_8m_1adc8f9d08ccff64cc5892dfd1791e14bc" refkind="member"><highlight class="normal"><ref refid="start_8m_1adc8f9d08ccff64cc5892dfd1791e14bc" kindref="member">parametro_screening</ref><sp/>=<sp/><ref refid="start_8m_1a5b50e4bf0f01cb1e2d8bdf9494493579" kindref="member">lMaxInflux</ref>;</highlight></codeline>
@@ -2007,14 +2052,14 @@ st<sp/>=<sp/>fclose(fid20);
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
 <codeline lineno="83" refid="start_8m_1a2d4125646b62462ce279d82913125ccf" refkind="member"><highlight class="normal"><ref refid="start_8m_1a2d4125646b62462ce279d82913125ccf" kindref="member">thisFolder</ref><sp/>=<sp/>pwd;</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>.path)</highlight></codeline>
-<codeline lineno="85" refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" refkind="member"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="conc_analysis_8m_1ab05bb9470ea34cab3ab1c2c9e748840b" kindref="member">exist</ref>(<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>.<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,<sp/>&apos;<ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>&apos;)<sp/>==<sp/>0</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>.name);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="conc_analysis_8m_1ab05bb9470ea34cab3ab1c2c9e748840b" kindref="member">exist</ref>(<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>.<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,<sp/>&apos;dir&apos;)<sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1abcaf3fe79479456b56924747f1bca0d9" kindref="member">mkdir</ref>(<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>.name);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>.name)</highlight></codeline>
-<codeline lineno="89"><highlight class="normal">fid20<sp/>=<sp/>fopen(&apos;lanciatore.sh&apos;,&apos;w&apos;);</highlight></codeline>
+<codeline lineno="89" refid="start_8m_1aaad88534fbf3d065202db78a891374ca" refkind="member"><highlight class="normal"><ref refid="start_8m_1aaad88534fbf3d065202db78a891374ca" kindref="member">fid20</ref><sp/>=<sp/>fopen(&apos;lanciatore.sh&apos;,&apos;w&apos;);</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(<ref refid="start_8m_1a2d4125646b62462ce279d82913125ccf" kindref="member">thisFolder</ref>)</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal">%introduzione<sp/>delle<sp/>FUNZIONI<sp/>BOOLEANE<sp/>nell&apos;energia:</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">%introduzione<sp/>delle<sp/>FUNZIONI<sp/>BOOLEANE<sp/>nell&apos;<ref refid="start_8m_1a15a0e3f3007df072a07460518322b944" kindref="member">energia</ref>:</highlight></codeline>
 <codeline lineno="93"><highlight class="normal">%la<sp/>combinazione<sp/>di<sp/>input<sp/>riguarda<sp/>quali<sp/>elementi<sp/>possano/debbano<sp/>essere</highlight></codeline>
 <codeline lineno="94"><highlight class="normal">%carichi<sp/>per<sp/>rendere<sp/>possibile<sp/>la<sp/><ref refid="crea__catalizzatori_8m_1a84d78e886b9f683403579e3911e7f046" kindref="member">reazione</ref>.<sp/>Nello<sp/>specifico<sp/>la<sp/>tabella<sp/>è %questa:
 %C<sp/><sp/><sp/><sp/><sp/><sp/>S1<sp/><sp/><sp/><sp/><sp/><sp/>S2
@@ -2171,7 +2216,7 @@ st<sp/>=<sp/>fclose(fid20);
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 <sp/>pertanto<sp/>01100101</highlight></codeline>
 <codeline lineno="107"><highlight class="normal">%in<sp/>questo<sp/>caso<sp/>si<sp/>chiede<sp/>di<sp/>indicare<sp/>nella<sp/><sp/>matrice<sp/>&apos;funzioni_booleane&apos;<sp/>le</highlight></codeline>
-<codeline lineno="108"><highlight class="normal">%funzioni<sp/>che<sp/>si<sp/>vogliono<sp/>rendere<sp/>possibili,<sp/>che<sp/>verranno<sp/>successivamente</highlight></codeline>
+<codeline lineno="108" refid="start_8m_1a35e364c23f0047548a80b164387d0f06" refkind="member"><highlight class="normal">%funzioni<sp/>che<sp/>si<sp/>vogliono<sp/>rendere<sp/>possibili,<sp/>che<sp/>verranno<sp/>successivamente</highlight></codeline>
 <codeline lineno="109"><highlight class="normal">%assegnate<sp/>con<sp/>probabilità uniforme<sp/>alle<sp/>reazioni<sp/>
 %la<sp/>funzione<sp/>è divisa<sp/>a<sp/>metà, la<sp/>prima<sp/>metà corrisponde<sp/>alla<sp/>condensazione
 %(8<sp/>bit),<sp/>la<sp/>seconda<sp/>parte<sp/>al<sp/>cleavage<sp/>(4<sp/>bit).
@@ -2296,7 +2341,7 @@ st<sp/>=<sp/>fclose(fid20);
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/>divisa<sp/><ref refid="conc_analysis_8m_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref><sp/>metà  la<sp/>prima<sp/>metà corrisponde<sp/>alla<sp/>condensazione
+<sp/>divisa<sp/><ref refid="conc_analysis_8m_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref><sp/><ref refid="start_8m_1a35e364c23f0047548a80b164387d0f06" kindref="member">metà</ref>,<sp/>la<sp/>prima<sp/>metà corrisponde<sp/>alla<sp/>condensazione
 %(8<sp/>bit),<sp/>la<sp/>seconda<sp/>parte<sp/>al<sp/>cleavage<sp/>(4<sp/>bit).
 %esempio:<sp/>funzione<sp/>00001110<sp/>sulla<sp/>condensazione<sp/>e<sp/>funzione<sp/>1111<sp/>sul
 %cleavage,<sp/>la<sp/>funzione<sp/>booleana<sp/>viene<sp/>codificata<sp/>come<sp/>000011101111
@@ -2357,75 +2402,14 @@ st<sp/>=<sp/>fclose(fid20);
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-,<sp/>la<sp/>prima<sp/>metà corrisponde<sp/>alla<sp/>condensazione
-%(8<sp/>bit),<sp/>la<sp/>seconda<sp/>parte<sp/>al<sp/>cleavage<sp/>(4<sp/>bit).
-%esempio:<sp/>funzione<sp/>00001110<sp/>sulla<sp/>condensazione<sp/>e<sp/>funzione<sp/>1111<sp/>sul
-%cleavage,<sp/>la<sp/>funzione<sp/>booleana<sp/>viene<sp/>codificata<sp/>come<sp/>000011101111
-
-funzioni_booleane<sp/>=<sp/>[0<sp/>0<sp/>0<sp/>0<sp/>1<sp/>1<sp/>1<sp/>0<sp/>1<sp/>1<sp/>1<sp/>1];
-funzioni_booleane_in_dec<sp/>=<sp/>bi2de(funzioni_booleane,&apos;left-msb&apos;);<sp/>%converto<sp/>in<sp/>decimale
-for<sp/>i=1:length(funzioni_booleane_in_dec)<sp/>%assegno<sp/>la<sp/>probabilità di<sp/>scelta<sp/>della<sp/>funzione<sp/>booleana,<sp/>per<sp/>default<sp/>è uniforme
-
-<sp/><sp/><sp/><sp/>funzioni_booleane_in_dec(i,2)=1/length(funzioni_booleane_in_dec);
-end
-
-%**************************************************************************
-
-
-
-%*********************
-%*****<sp/>S<sp/>T<sp/>A<sp/>R<sp/>T<sp/>*****
-%*********************
-
-[rows,b]=size(parametro_screening);
-
-for<sp/>i<sp/>=<sp/>1:b<sp/>%numero<sp/>di<sp/>valori<sp/>delle<sp/>variabili<sp/>(e.g.<sp/>numero<sp/>di<sp/>valori<sp/>della<sp/>probabilità)
-<sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>z<sp/>=<sp/>1:simFolder.nets<sp/>%numero<sp/>di<sp/>reti<sp/>per<sp/>ogni<sp/>combinazione<sp/>di<sp/>variabili
-<sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%scrivo<sp/>il<sp/>nome<sp/>delle<sp/>cartelle
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parte1_nome_cartella<sp/>=<sp/>(&apos;CSTR_&apos;);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parte2_nome_cartella<sp/>=<sp/>num2str(nome_folder(i));
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parte3_nome_cartella<sp/>=<sp/>(&apos;_rete_n_&apos;);<sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>z<sp/>&lt;10
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parte_a=num2str(0);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parte_b=num2str(z);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parte4_nome_cartella<sp/>=<sp/>strcat(parte_a,parte_b);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parte4_nome_cartella<sp/>=<sp/>num2str(z);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nome_cartella=<sp/>strcat(parte1_nome_cartella,parte2_nome_cartella,parte3_nome_cartella,parte4_nome_cartella);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%scrivo<sp/>il<sp/>lanciatore.sh
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>riga_lanciatore<sp/>=<sp/>strcat(&apos;<sp/>nice<sp/>./acsm2s<sp/>./&apos;,nome_cartella,&apos;/<sp/>./&apos;,nome_cartella,&apos;/res/<sp/>./&apos;,<sp/>nome_cartella,&apos;/<sp/>&gt;sims&apos;,&apos;_&apos;,parte2_nome_cartella,&apos;_&apos;,num2str(z),&apos;.log&apos;);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>riga_lanciatore_2<sp/>=<sp/>strcat(&apos;echo<sp/>&quot;Reverse/&apos;,nome_cartella,&apos;&quot;<sp/>;&apos;,riga_lanciatore);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count<sp/>=<sp/>fprintf(fid20,&apos;%s\n<sp/>&apos;,riga_lanciatore_2);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>riga_lanciatore
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%lancio<sp/>il<sp/>vero<sp/>e<sp/>proprio<sp/>inizializzatore<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inizializzatore_ACS(nGEN,<sp/>nSIM,<sp/>nSeconds,<sp/>nReactions,<sp/>initialMaxLength,<sp/>virtual_fd_max_length,<sp/>overallConcentration,<sp/>...
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alphabet,<sp/>complexFormationSymmetry,<sp/>fino_a_che_lunghezza_i_polimeri_non_catalizzano,<sp/>reactionProbability,<sp/>cleavageProbability,<sp/>...
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffusion_contribute,<sp/>solubility_threshold,<sp/>influx_rate,<sp/>reverseReactions,K_nrg,<sp/>moleculeDecay_KineticConstant,<sp/>ratio_firing_disk,<sp/>...
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lunghezza_max_fd,<sp/>scelta_concentrazioni,<sp/>gamma_powerlaw_concentrazioni,decisione_catalizzatori,<sp/>lastFiringDiskSpeciesID,<sp/>ECConcentration,<sp/>...
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>volume,<sp/>energy,<sp/>controllo_ACS_nel_ciclo,<sp/>K_nrg_decay,<sp/>nome_cartella,<sp/>funzioni_booleane_in_dec,ratioSpeciesEnergizable,Kass,Kdiss,Kcpx,K_cpx,...
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>randomSeed,<sp/>debugLevel,<sp/>timeStructuresSavingInterval,maxLOut,simFolder,lMaxInflux(i),fileTimesSaveInterval,nHours,nAttempts,revRctRatio);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end
-end
-
-st<sp/>=<sp/>fclose(fid20);
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
-<sp/>corrisponde<sp/>alla<sp/>condensazione</highlight></codeline>
+<sp/>corrisponde<sp/>alla<sp/><ref refid="start_8m_1a05f7e68f06e2b202f7fc3d5678f70fa8" kindref="member">condensazione</ref></highlight></codeline>
 <codeline lineno="111"><highlight class="normal">%(8<sp/>bit),<sp/>la<sp/>seconda<sp/>parte<sp/>al<sp/>cleavage<sp/>(4<sp/>bit).</highlight></codeline>
-<codeline lineno="112"><highlight class="normal">%esempio:<sp/>funzione<sp/>00001110<sp/>sulla<sp/>condensazione<sp/>e<sp/>funzione<sp/>1111<sp/>sul</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">%esempio:<sp/>funzione<sp/>00001110<sp/>sulla<sp/><ref refid="start_8m_1a05f7e68f06e2b202f7fc3d5678f70fa8" kindref="member">condensazione</ref><sp/>e<sp/>funzione<sp/>1111<sp/>sul</highlight></codeline>
 <codeline lineno="113"><highlight class="normal">%cleavage,<sp/>la<sp/>funzione<sp/>booleana<sp/>viene<sp/>codificata<sp/>come<sp/>000011101111</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
 <codeline lineno="115"><highlight class="normal">funzioni_booleane<sp/>=<sp/>[0<sp/>0<sp/>0<sp/>0<sp/>1<sp/>1<sp/>1<sp/>0<sp/>1<sp/>1<sp/>1<sp/>1];</highlight></codeline>
-<codeline lineno="116" refid="start_8m_1a116958824076bbd8ba3a094b73919de4" refkind="member"><highlight class="normal"><ref refid="start_8m_1a116958824076bbd8ba3a094b73919de4" kindref="member">funzioni_booleane_in_dec</ref><sp/>=<sp/>bi2de(funzioni_booleane,&apos;left-msb&apos;);<sp/>%converto<sp/>in<sp/>decimale</highlight></codeline>
-<codeline lineno="117"><highlight class="normal">for<sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>=1:length(<ref refid="start_8m_1a116958824076bbd8ba3a094b73919de4" kindref="member">funzioni_booleane_in_dec</ref>)<sp/>%assegno<sp/>la<sp/>probabilità di<sp/>scelta<sp/>della<sp/>funzione<sp/>booleana,<sp/>per<sp/>default<sp/>è uniforme
+<codeline lineno="116" refid="start_8m_1ac2751b1d83e4866f727cdcc856beaad1" refkind="member"><highlight class="normal"><ref refid="start_8m_1ac2751b1d83e4866f727cdcc856beaad1" kindref="member">funzioni_booleane_in_dec</ref><sp/>=<sp/>bi2de(funzioni_booleane,&apos;left-msb&apos;);<sp/>%converto<sp/>in<sp/>decimale</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">for<sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>=1:length(<ref refid="start_8m_1ac2751b1d83e4866f727cdcc856beaad1" kindref="member">funzioni_booleane_in_dec</ref>)<sp/>%assegno<sp/>la<sp/>probabilità di<sp/>scelta<sp/>della<sp/>funzione<sp/>booleana,<sp/>per<sp/>default<sp/>è uniforme
 
 <sp/><sp/><sp/><sp/>funzioni_booleane_in_dec(i,2)=1/length(funzioni_booleane_in_dec);
 end
@@ -2535,7 +2519,7 @@ st<sp/>=<sp/>fclose(fid20);
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 <sp/>uniforme</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="start_8m_1a116958824076bbd8ba3a094b73919de4" kindref="member">funzioni_booleane_in_dec</ref>(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,2)=1/length(<ref refid="start_8m_1a116958824076bbd8ba3a094b73919de4" kindref="member">funzioni_booleane_in_dec</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="start_8m_1ac2751b1d83e4866f727cdcc856beaad1" kindref="member">funzioni_booleane_in_dec</ref>(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,2)=1/length(<ref refid="start_8m_1ac2751b1d83e4866f727cdcc856beaad1" kindref="member">funzioni_booleane_in_dec</ref>);</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight></codeline>
 <codeline lineno="122"><highlight class="normal">%**************************************************************************</highlight></codeline>
@@ -2608,12 +2592,12 @@ st<sp/>=<sp/>fclose(fid20);
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%scrivo<sp/>il<sp/>lanciatore.sh</highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>riga_lanciatore<sp/>=<sp/>strcat(&apos;<sp/>nice<sp/>./acsm2s<sp/>./&apos;,nome_cartella,&apos;/<sp/>./&apos;,nome_cartella,&apos;/res/<sp/>./&apos;,<sp/>nome_cartella,&apos;/<sp/>&gt;sims&apos;,&apos;_&apos;,parte2_nome_cartella,&apos;_&apos;,num2str(z),&apos;.log&apos;);</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>riga_lanciatore_2<sp/>=<sp/>strcat(&apos;echo<sp/>&quot;Reverse/&apos;,nome_cartella,&apos;&quot;<sp/>;&apos;,riga_lanciatore);</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid20,&apos;%s\n<sp/>&apos;,riga_lanciatore_2);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1a3a41d504a4fcdc069bbb2c33cbb75376" kindref="member">count</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="start_8m_1aaad88534fbf3d065202db78a891374ca" kindref="member">fid20</ref>,&apos;%s\n<sp/>&apos;,riga_lanciatore_2);</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>riga_lanciatore</highlight></codeline>
 <codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%lancio<sp/>il<sp/>vero<sp/>e<sp/>proprio<sp/>inizializzatore<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lancia__inizializzatore__acs_8m_1ada2b06fc2d132c7a047984505d3bad7c" kindref="member">inizializzatore_ACS</ref>(<ref refid="start_8m_1a4af22ee598eb5fcc4d0ff8439823e600" kindref="member">nGEN</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a68c8b36ce2387749248f566faa108e45" kindref="member">nSIM</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref>,<sp/><ref refid="start_8m_1a20355c3a8f29f03f3b002dfb23f03a86" kindref="member">virtual_fd_max_length</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a59597688ed79473c0234f45eb9167574" kindref="member">overallConcentration</ref>,<sp/>...</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ad4d86c1b55f9f76727181b05251ab7b1" kindref="member">complexFormationSymmetry</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>,<sp/>...</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lancia__inizializzatore__acs_8m_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ad4d86c1b55f9f76727181b05251ab7b1" kindref="member">complexFormationSymmetry</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>,<sp/><ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>,<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>,<sp/>...</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lancia__inizializzatore__acs_8m_1a9341167cb56ed18499df723220990b9c" kindref="member">diffusion_contribute</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1acbefa7c9bfd826fec9b32fa3bd29c288" kindref="member">solubility_threshold</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ad795c71664f3161dc8f7a769341daadf" kindref="member">influx_rate</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a650532b3a3c04865cc35cff6d567c5c0" kindref="member">reverseReactions</ref>,<ref refid="lancia__inizializzatore__acs_8m_1ac8f2b2a8d859ca2b7cf056575c7b0538" kindref="member">K_nrg</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1aef2ea28de56b86a577b3c6fa0220926c" kindref="member">moleculeDecay_KineticConstant</ref>,<sp/><ref refid="start_8m_1a83c1660d71068ae836121af0890bb3dd" kindref="member">ratio_firing_disk</ref>,<sp/>...</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lancia__inizializzatore__acs_8m_1a7c974cc56015b6503e0619d32ebd4180" kindref="member">lunghezza_max_fd</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ac60b74a4c1b8bc23e64008ba1e0c41a8" kindref="member">scelta_concentrazioni</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1a7cd0915d7542523abc226a8eecf67ecf" kindref="member">gamma_powerlaw_concentrazioni</ref>,<ref refid="start_8m_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>,<sp/><ref refid="lancia__inizializzatore__acs_8m_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref>,<sp/>ECConcentration,<sp/>...</highlight></codeline>
 <codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lancia__inizializzatore__acs_8m_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>,<sp/><ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>,<sp/>controllo_ACS_nel_ciclo,<sp/><ref refid="start_8m_1abd02c282e86e2173abc6daed03f73584" kindref="member">K_nrg_decay</ref>,<sp/>nome_cartella,<sp/>funzioni_booleane_in_dec,<ref refid="start_8m_1a1fa680d8b3a4f885d99f56fef41d2c37" kindref="member">ratioSpeciesEnergizable</ref>,<ref refid="lancia__inizializzatore__acs_8m_1a74947b8f8ce132902a228628db296032" kindref="member">Kass</ref>,<ref refid="start_8m_1a51a314f9df0eaa4488a1b264d1de0173" kindref="member">Kdiss</ref>,<ref refid="start_8m_1aaea32371e0f1645dcea44ce4d4a3d147" kindref="member">Kcpx</ref>,<ref refid="start_8m_1a26dbdfeb290332837753db666ee56981" kindref="member">K_cpx</ref>,...</highlight></codeline>

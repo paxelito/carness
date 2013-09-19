@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
-    <title>Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.3 (20130722.55)</title>
+    <title>Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.4 (20130731.56)</title>
     <innerpage refid="intro">Essential informations</innerpage>
     <innerpage refid="page_init_str">Initial Data Structures</innerpage>
     <innerpage refid="pageoutcomes">Outcomes</innerpage>
     <innerpage refid="page_initializator">The initializator (a very brief description)</innerpage>
     <detaileddescription>
 <para><simplesect kind="author"><para>Alessandro Filisetti </para></simplesect>
-<simplesect kind="version"><para>4.3 (20130722.55) </para></simplesect>
-<simplesect kind="date"><para>2013-07-22 sourceforge repository <ndash/> <ulink url="https://carness.svn.sourceforge.net/svnroot/carness/">https://carness.svn.sourceforge.net/svnroot/carness/</ulink> git repository <ndash/> <ulink url="https://github.com/paxelito/carness">https://github.com/paxelito/carness</ulink></para></simplesect>
+<simplesect kind="version"><para>4.5 (20130919.57) </para></simplesect>
+<simplesect kind="date"><para>2013-09-19 sourceforge repository <ndash/> <ulink url="https://carness.svn.sourceforge.net/svnroot/carness/">https://carness.svn.sourceforge.net/svnroot/carness/</ulink> git repository <ndash/> <ulink url="https://github.com/paxelito/carness">https://github.com/paxelito/carness</ulink></para></simplesect>
 This manual is divided in the following sections:<itemizedlist>
 <listitem><para><ref refid="intro" kindref="compound">Essential informations</ref></para></listitem><listitem><para><ref refid="page_init_str" kindref="compound">Initial Data Structures</ref></para></listitem><listitem><para><ref refid="pageoutcomes" kindref="compound">Outcomes</ref></para></listitem><listitem><para><ref refid="page_initializator" kindref="compound">The initializator (a very brief description)</ref> </para></listitem></itemizedlist>
 </para>    </detaileddescription>

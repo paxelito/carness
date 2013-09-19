@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="_kill_spam_8m" kind="file">
     <compoundname>KillSpam.m</compoundname>
       <sectiondef kind="var">
@@ -22,7 +22,7 @@
         <definition>simDirs</definition>
         <argsstring></argsstring>
         <name>simDirs</name>
-        <initializer>= <ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(<ref refid="_kill_spam_8m_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref>)</initializer>
+        <initializer>= dir(<ref refid="_kill_spam_8m_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -51,7 +51,7 @@
         <argsstring></argsstring>
         <name>x</name>
         <initializer>= 1:length(<ref refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>)
-    <ref refid="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>(strcat(<ref refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(x).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;))</initializer>
+    <ref refid="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>(strcat(<ref refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(x).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -79,7 +79,7 @@
         <definition>creating reactions matrix rFiles</definition>
         <argsstring></argsstring>
         <name>rFiles</name>
-        <initializer>= <ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;<ref refid="classreactions" kindref="compound">reactions</ref>*&apos;)</initializer>
+        <initializer>= dir(&apos;<ref refid="classreactions" kindref="compound">reactions</ref>*&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -235,7 +235,7 @@
         <definition>creating catalysis matrix cFiles</definition>
         <argsstring></argsstring>
         <name>cFiles</name>
-        <initializer>= <ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;<ref refid="classcatalysis" kindref="compound">catalysis</ref>*&apos;)</initializer>
+        <initializer>= dir(&apos;<ref refid="classcatalysis" kindref="compound">catalysis</ref>*&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -1586,11 +1586,11 @@
 <codeline lineno="10"><highlight class="normal">%<sp/>READ<sp/>ALL<sp/>THE<sp/>DIRECTORY<sp/>CONTAINING<sp/>SIMULATIONS</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>~isdir(&apos;0_statistics&apos;)</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1abcaf3fe79479456b56924747f1bca0d9" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16" refid="_kill_spam_8m_1ad509473eed851f9f5ff4157c02ec8618" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref><sp/>=<sp/>strcat(&apos;*&apos;,<ref refid="general_concentration_over_threshold_8m_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>,&apos;*&apos;);</highlight></codeline>
-<codeline lineno="17" refid="_kill_spam_8m_1aae5035eb84b89176ed5b06e136325eff" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(<ref refid="garbage_search_8m_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref>);</highlight></codeline>
+<codeline lineno="17" refid="_kill_spam_8m_1aae5035eb84b89176ed5b06e136325eff" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/>dir(<ref refid="garbage_search_8m_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref>);</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal">cd(&apos;0_statistics&apos;);</highlight></codeline>
 <codeline lineno="20" refid="_kill_spam_8m_1ae9011d40c6f13e68e6f07156e0da7c5d" refkind="member"><highlight class="normal"><ref refid="namespacebuffered_flux_analysis_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref><sp/>=<sp/>fopen(&apos;ALL_results_TS1.txt&apos;,&apos;w&apos;);</highlight></codeline>
@@ -1602,7 +1602,7 @@
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="all_times_analysis_8m_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(strcat(&apos;<sp/><sp/>|-<sp/>Folder:<sp/>&apos;,<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>).name,&apos;/res...&apos;));</highlight></codeline>
 <codeline lineno="27" refid="_kill_spam_8m_1a1faaaae288fc8ca4ed1751049aa2f84f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_kill_spam_8m_1a1faaaae288fc8ca4ed1751049aa2f84f" kindref="member">blocked</ref><sp/>=<sp/>0:<ref refid="general_concentration_over_threshold_8m_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.<ref refid="overall_stats_8m_1aad7be196243f3c9ca83dfee7c9111014" kindref="member">lastSpecies</ref>;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>creating<sp/><ref refid="classreactions" kindref="compound">reactions</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="29" refid="_kill_spam_8m_1ad75735665492cabd747370126464fddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;<ref refid="classreactions" kindref="compound">reactions</ref>*&apos;);</highlight></codeline>
+<codeline lineno="29" refid="_kill_spam_8m_1ad75735665492cabd747370126464fddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref><sp/>=<sp/>dir(&apos;<ref refid="classreactions" kindref="compound">reactions</ref>*&apos;);</highlight></codeline>
 <codeline lineno="30" refid="_kill_spam_8m_1a4c72dba1fe2ee2fbcc699262a8d0c624" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref><sp/>=<sp/><ref refid="garbage_search_8m_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>(length(<ref refid="garbage_search_8m_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>)-1).name;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(<ref refid="garbage_search_8m_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref>);</highlight></codeline>
 <codeline lineno="32" refid="_kill_spam_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>1;</highlight></codeline>
@@ -1636,8 +1636,8 @@
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>creating<sp/><ref refid="classcatalysis" kindref="compound" tooltip="CATALYSIS class. ">catalysis</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="64" refid="_kill_spam_8m_1a9eab57ccb42a39c704f47dc30e4f4515" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;<ref refid="classcatalysis" kindref="compound" tooltip="CATALYSIS class. ">catalysis</ref>*&apos;);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>creating<sp/><ref refid="classcatalysis" kindref="compound">catalysis</ref><sp/>matrix</highlight></codeline>
+<codeline lineno="64" refid="_kill_spam_8m_1a9eab57ccb42a39c704f47dc30e4f4515" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref><sp/>=<sp/>dir(&apos;<ref refid="classcatalysis" kindref="compound">catalysis</ref>*&apos;);</highlight></codeline>
 <codeline lineno="65" refid="_kill_spam_8m_1a33e70cf5b45cb59005b82d30202f0b69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref><sp/>=<sp/><ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>(length(<ref refid="garbage_search_8m_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>)).name;</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(<ref refid="garbage_search_8m_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref>);</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>1;</highlight></codeline>

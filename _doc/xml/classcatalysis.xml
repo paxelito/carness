@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="classcatalysis" kind="class" prot="public">
     <compoundname>catalysis</compoundname>
     <includes refid="catalysis_8h" local="no">catalysis.h</includes>
@@ -95,18 +95,18 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="27" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="27" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classcatalysis_1a8f87d0300c226ea1d5eb5ac601d4080b" prot="private" static="no" mutable="no">
-        <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
-        <definition>acs_double catalysis::k_cpxDiss</definition>
+      <memberdef kind="variable" id="classcatalysis_1a415f8a0d39c71e97d96e262353e2d5ec" prot="private" static="no" mutable="no">
+        <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int catalysis::cpxTarget</definition>
         <argsstring></argsstring>
-        <name>k_cpxDiss</name>
+        <name>cpxTarget</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Kinetic constant for the complex dissociation </para>        </detaileddescription>
+<para>species forming the complex with the catalyst in reaction structure, mol_II (1) or mol_III (2) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="28" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="28" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="29" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -121,12 +121,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="31" column="1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="32" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="classcatalysis_1ad512d0e2ff7cbb1b431c917f659a5395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classcatalysis_1ab6af429c051e2bc9756bac72b99cc4ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>catalysis::catalysis</definition>
-        <argsstring>(acs_longInt tmpCatId, acs_longInt tmpCat, acs_longInt tmpRctId, acs_longInt tmpAmount, acs_double tmpKass, acs_double tmpKdiss, acs_double tmpK_cpx)</argsstring>
+        <argsstring>(acs_longInt tmpCatId, acs_longInt tmpCat, acs_longInt tmpRctId, acs_longInt tmpAmount, acs_double tmpKass, acs_double tmpKdiss, acs_double tmpK_cpx, acs_int tmpCpxTarget)</argsstring>
         <name>catalysis</name>
         <param>
           <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -156,6 +156,10 @@
           <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
           <declname>tmpK_cpx</declname>
         </param>
+        <param>
+          <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpCpxTarget</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -165,7 +169,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="32" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.cpp" bodystart="19" bodyend="30"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="33" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.cpp" bodystart="19" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a982805165c59e95ac055dc24e684fa05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -178,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="34" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="34" bodyend="34"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="35" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a85ba5bd9c758392f245f1277141a1706" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -191,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="37" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="37" bodyend="37"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="38" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="38" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a205e222dff1e80ff8f3195ab22e78726" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -204,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="38" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="38" bodyend="38"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="39" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a6e0eea2f12109b36bb522ac971d1db29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -217,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="39" bodyend="39"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="40" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a70a29d164efd7c22f56ba05da04f8c9b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -230,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="40" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="40" bodyend="40"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="41" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="41" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a471d98737d6708b3ac03efba41082d0c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -243,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="41" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="41" bodyend="41"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="42" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="42" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1ad8b0d5f6410e2256cfefe0db9a10b0af" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -256,7 +260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="42" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="42" bodyend="42"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="43" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="43" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a182bfb05b12ddd3613693f6d1f362665" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
@@ -269,7 +273,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="43" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="43" bodyend="43"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="44" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classcatalysis_1a95cce06ac3f63b66d984bd723ab7e561" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int catalysis::getCpxTarget</definition>
+        <argsstring>() const </argsstring>
+        <name>getCpxTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="46" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="46" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1a9c90e6f2cd9aafd2029ef20a09b95eb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -282,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="47" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="47" bodyend="47"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="49" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="49" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="classcatalysis_1ab8964f8ec17d677de03747520d0a9995" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -295,7 +312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="48" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="48" bodyend="48"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="50" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="50" bodyend="50"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -305,13 +322,15 @@
 <simplesect kind="version"><para>0.1 </para></simplesect>
 <simplesect kind="date"><para>2009-04-16 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="17" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="16" bodyend="50"/>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" line="17" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/catalysis.h" bodystart="16" bodyend="52"/>
     <listofallmembers>
       <member refid="classcatalysis_1a7c4d1a67d2745293a17a6bee0df7c5cd" prot="public" virt="non-virtual"><scope>catalysis</scope><name>catalysis</name></member>
-      <member refid="classcatalysis_1ad512d0e2ff7cbb1b431c917f659a5395" prot="public" virt="non-virtual"><scope>catalysis</scope><name>catalysis</name></member>
+      <member refid="classcatalysis_1ab6af429c051e2bc9756bac72b99cc4ce" prot="public" virt="non-virtual"><scope>catalysis</scope><name>catalysis</name></member>
       <member refid="classcatalysis_1a13f8f20cf9acf08827e573b219a07232" prot="private" virt="non-virtual"><scope>catalysis</scope><name>catalyst</name></member>
+      <member refid="classcatalysis_1a415f8a0d39c71e97d96e262353e2d5ec" prot="private" virt="non-virtual"><scope>catalysis</scope><name>cpxTarget</name></member>
       <member refid="classcatalysis_1a205e222dff1e80ff8f3195ab22e78726" prot="public" virt="non-virtual"><scope>catalysis</scope><name>getCat</name></member>
       <member refid="classcatalysis_1a85ba5bd9c758392f245f1277141a1706" prot="public" virt="non-virtual"><scope>catalysis</scope><name>getCatId</name></member>
+      <member refid="classcatalysis_1a95cce06ac3f63b66d984bd723ab7e561" prot="public" virt="non-virtual"><scope>catalysis</scope><name>getCpxTarget</name></member>
       <member refid="classcatalysis_1a182bfb05b12ddd3613693f6d1f362665" prot="public" virt="non-virtual"><scope>catalysis</scope><name>getK_cpx</name></member>
       <member refid="classcatalysis_1a471d98737d6708b3ac03efba41082d0c" prot="public" virt="non-virtual"><scope>catalysis</scope><name>getKass</name></member>
       <member refid="classcatalysis_1ad8b0d5f6410e2256cfefe0db9a10b0af" prot="public" virt="non-virtual"><scope>catalysis</scope><name>getKdiss</name></member>
@@ -319,7 +338,6 @@
       <member refid="classcatalysis_1a70a29d164efd7c22f56ba05da04f8c9b" prot="public" virt="non-virtual"><scope>catalysis</scope><name>getTotAmount</name></member>
       <member refid="classcatalysis_1a581f76199a1e7cab49794ebe7806151e" prot="private" virt="non-virtual"><scope>catalysis</scope><name>ID</name></member>
       <member refid="classcatalysis_1a727325a8968a2068c4615fb3fb653fc6" prot="private" virt="non-virtual"><scope>catalysis</scope><name>k_cpx</name></member>
-      <member refid="classcatalysis_1a8f87d0300c226ea1d5eb5ac601d4080b" prot="private" virt="non-virtual"><scope>catalysis</scope><name>k_cpxDiss</name></member>
       <member refid="classcatalysis_1a7495ea3d161d54fec0ba9fdd27ae7300" prot="private" virt="non-virtual"><scope>catalysis</scope><name>Kass</name></member>
       <member refid="classcatalysis_1a7b3d426980a6d618f14e72ae2e5af0d6" prot="private" virt="non-virtual"><scope>catalysis</scope><name>Kdiss</name></member>
       <member refid="classcatalysis_1aa208dc8e0913b49abc838b81c37040ca" prot="private" virt="non-virtual"><scope>catalysis</scope><name>reaction_ID</name></member>

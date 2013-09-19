@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="_k_s_search_launcher_8m" kind="file">
     <compoundname>KSSearchLauncher.m</compoundname>
       <sectiondef kind="var">
@@ -8,7 +8,7 @@
         <definition>currentDir</definition>
         <argsstring></argsstring>
         <name>currentDir</name>
-        <initializer>= <ref refid="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>()</initializer>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -22,7 +22,7 @@
         <definition>simDirs</definition>
         <argsstring></argsstring>
         <name>simDirs</name>
-        <initializer>= <ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;sim_*&apos;)</initializer>
+        <initializer>= dir(&apos;sim_*&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -51,7 +51,7 @@
         <argsstring></argsstring>
         <name>x</name>
         <initializer>= 1:length(<ref refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>)
-    <ref refid="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>(strcat(<ref refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(x).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;))</initializer>
+    <ref refid="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>(strcat(<ref refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(x).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -323,7 +323,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1" refid="_k_s_search_launcher_8m_1af32eb97339f1e9d37b5540de2cbc79c9" refkind="member"><highlight class="normal"><ref refid="all_times_analysis_8m_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref><sp/>=<sp/><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>();</highlight></codeline>
-<codeline lineno="2" refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(</highlight><highlight class="stringliteral">&apos;sim_*&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="2" refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/>dir(</highlight><highlight class="stringliteral">&apos;sim_*&apos;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="3" refid="_k_s_search_launcher_8m_1ae9011d40c6f13e68e6f07156e0da7c5d" refkind="member"><highlight class="normal"><ref refid="namespacebuffered_flux_analysis_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref><sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&apos;results.txt&apos;</highlight><highlight class="normal">,</highlight><highlight class="charliteral">&apos;w&apos;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"><ref refid="conc_analysis_8m_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(<ref refid="namespacebuffered_flux_analysis_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref>);</highlight></codeline>
 <codeline lineno="5" refid="_k_s_search_launcher_8m_1a7265972fe485274cfff77a9bb07b8fce" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="garbage_search_8m_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref><sp/>=<sp/>1:length(<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>)</highlight></codeline>

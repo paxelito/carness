@@ -1,5 +1,6 @@
 var acs__headers_8h =
 [
+    [ "__SOFTVERSION__", "acs__headers_8h.html#aab38659c2fe462437b89a1e85e619dc7", null ],
     [ "AVO", "acs__headers_8h.html#a174754c04acfba9e1f66ba249e68643a", null ],
     [ "BOTHLOAD", "acs__headers_8h.html#afb6d1105a81463fbadceff0217332f68", null ],
     [ "CATALYSTLOAD", "acs__headers_8h.html#a7e521c899f69e37df3501fd0e652c517", null ],
@@ -8,6 +9,7 @@ var acs__headers_8h =
     [ "COMPLEXDEGRADATION", "acs__headers_8h.html#ab9c64bfc35cc5e2e712759d474091c4d", null ],
     [ "COMPLEXFORMATION", "acs__headers_8h.html#a44658f1c8c0e272eb0404d42e537928e", null ],
     [ "COMPLEXLOAD", "acs__headers_8h.html#a7eb138e043eb9ec6d717c6178724bbaf", null ],
+    [ "COMPLEXSTUFF", "acs__headers_8h.html#a186bfb39322832c790ce5403bc04330d", null ],
     [ "CONDENSATION", "acs__headers_8h.html#aeeaf3e004dff03f70f94e0cf7d623b3c", null ],
     [ "CONDENSATIONBASED", "acs__headers_8h.html#ad722fbaf2330838fb9522c028141de6c", null ],
     [ "ENDO_CLEAVAGE", "acs__headers_8h.html#a96f1798e4da28ce26b866585be4e363d", null ],

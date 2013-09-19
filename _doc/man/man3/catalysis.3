@@ -1,4 +1,4 @@
-.TH "catalysis" 3 "Wed Jul 24 2013" "Version 4.3 (20130719.55)" "CaRNeSS" \" -*- nroff -*-
+.TH "catalysis" 3 "Thu Sep 19 2013" "Version 4.5 (20130919.57)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,7 +18,7 @@ CATALYSIS class\&.
 .RI "\fBcatalysis\fP ()"
 .br
 .ti -1c
-.RI "\fBcatalysis\fP (\fBacs_longInt\fP tmpCatId, \fBacs_longInt\fP tmpCat, \fBacs_longInt\fP tmpRctId, \fBacs_longInt\fP tmpAmount, \fBacs_double\fP tmpKass, \fBacs_double\fP tmpKdiss, \fBacs_double\fP tmpK_cpx)"
+.RI "\fBcatalysis\fP (\fBacs_longInt\fP tmpCatId, \fBacs_longInt\fP tmpCat, \fBacs_longInt\fP tmpRctId, \fBacs_longInt\fP tmpAmount, \fBacs_double\fP tmpKass, \fBacs_double\fP tmpKdiss, \fBacs_double\fP tmpK_cpx, \fBacs_int\fP tmpCpxTarget)"
 .br
 .ti -1c
 .RI "\fB~catalysis\fP ()"
@@ -43,6 +43,9 @@ CATALYSIS class\&.
 .br
 .ti -1c
 .RI "\fBacs_double\fP \fBgetK_cpx\fP () const "
+.br
+.ti -1c
+.RI "\fBacs_int\fP \fBgetCpxTarget\fP () const "
 .br
 .ti -1c
 .RI "void \fBupdateTotAmount\fP ()"
@@ -79,7 +82,7 @@ Definition at line 16 of file catalysis\&.h\&.
 .PP 
 .SS "catalysis::catalysis ()"
 
-.SS "catalysis::catalysis (\fBacs_longInt\fPtmpCatId, \fBacs_longInt\fPtmpCat, \fBacs_longInt\fPtmpRctId, \fBacs_longInt\fPtmpAmount, \fBacs_double\fPtmpKass, \fBacs_double\fPtmpKdiss, \fBacs_double\fPtmpK_cpx)"
+.SS "catalysis::catalysis (\fBacs_longInt\fPtmpCatId, \fBacs_longInt\fPtmpCat, \fBacs_longInt\fPtmpRctId, \fBacs_longInt\fPtmpAmount, \fBacs_double\fPtmpKass, \fBacs_double\fPtmpKdiss, \fBacs_double\fPtmpK_cpx, \fBacs_int\fPtmpCpxTarget)"
 
 .PP
 .nf
@@ -104,45 +107,49 @@ Definition at line 19 of file catalysis\&.cpp\&.
 .SS "catalysis::~catalysis ()\fC [inline]\fP"
 
 .PP
-Definition at line 34 of file catalysis\&.h\&.
+Definition at line 35 of file catalysis\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBacs_longInt\fP catalysis::getCat () const\fC [inline]\fP"
 
 .PP
-Definition at line 38 of file catalysis\&.h\&.
+Definition at line 39 of file catalysis\&.h\&.
 .SS "\fBacs_longInt\fP catalysis::getCatId () const\fC [inline]\fP"
 
 .PP
-Definition at line 37 of file catalysis\&.h\&.
+Definition at line 38 of file catalysis\&.h\&.
+.SS "\fBacs_int\fP catalysis::getCpxTarget () const\fC [inline]\fP"
+
+.PP
+Definition at line 46 of file catalysis\&.h\&.
 .SS "\fBacs_double\fP catalysis::getK_cpx () const\fC [inline]\fP"
 
 .PP
-Definition at line 43 of file catalysis\&.h\&.
+Definition at line 44 of file catalysis\&.h\&.
 .SS "\fBacs_double\fP catalysis::getKass () const\fC [inline]\fP"
 
 .PP
-Definition at line 41 of file catalysis\&.h\&.
+Definition at line 42 of file catalysis\&.h\&.
 .SS "\fBacs_double\fP catalysis::getKdiss () const\fC [inline]\fP"
 
 .PP
-Definition at line 42 of file catalysis\&.h\&.
+Definition at line 43 of file catalysis\&.h\&.
 .SS "\fBacs_longInt\fP catalysis::getReactionID () const\fC [inline]\fP"
 
 .PP
-Definition at line 39 of file catalysis\&.h\&.
+Definition at line 40 of file catalysis\&.h\&.
 .SS "\fBacs_longInt\fP catalysis::getTotAmount () const\fC [inline]\fP"
 
 .PP
-Definition at line 40 of file catalysis\&.h\&.
+Definition at line 41 of file catalysis\&.h\&.
 .SS "void catalysis::resetEventsCounter ()\fC [inline]\fP"
 
 .PP
-Definition at line 48 of file catalysis\&.h\&.
+Definition at line 50 of file catalysis\&.h\&.
 .SS "void catalysis::updateTotAmount ()\fC [inline]\fP"
 
 .PP
-Definition at line 47 of file catalysis\&.h\&.
+Definition at line 49 of file catalysis\&.h\&.
 
 .SH "Author"
 .PP 

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['rand',['rand',['../lancia__inizializzatore__acs_8m.html#a078f67f8fbdd9ac6587e03bdf2651d32',1,'lancia_inizializzatore_acs.m']]],
   ['rand_5fint32',['rand_int32',['../class_m_t_rand__int32.html#abacdfa346255baeac69d29bb57f29b22',1,'MTRand_int32']]],
   ['random_5fbinomial',['random_binomial',['../common_functions_8cpp.html#a78d5b4a67b6e66b8ceaa85874a2a12b7',1,'random_binomial(acs_longInt n, acs_double tmpP, MTRand &amp;tmpRandomGenerator):&#160;commonFunctions.cpp'],['../common_functions_8h.html#a78d5b4a67b6e66b8ceaa85874a2a12b7',1,'random_binomial(acs_longInt n, acs_double tmpP, MTRand &amp;tmpRandomGenerator):&#160;commonFunctions.cpp']]],
   ['random_5fpoisson',['random_poisson',['../common_functions_8cpp.html#a22cddb6ffcf2250e0c90bc913728350f',1,'random_poisson(acs_double tmpLambda, MTRand &amp;tmpRandomGenerator):&#160;commonFunctions.cpp'],['../common_functions_8h.html#a22cddb6ffcf2250e0c90bc913728350f',1,'random_poisson(acs_double tmpLambda, MTRand &amp;tmpRandomGenerator):&#160;commonFunctions.cpp']]],
@@ -15,6 +14,8 @@ var searchData=
   ['resetcleavagecounter',['resetCleavageCounter',['../classenvironment.html#a0b1e324c651c86cb54279e022c14dc6d',1,'environment']]],
   ['resetconcentrationtoinitialconditions',['resetConcentrationToInitialConditions',['../classenvironment.html#a97305e36924f19e72bfc1c3d89e45931',1,'environment']]],
   ['resetcondensationcounter',['resetCondensationCounter',['../classenvironment.html#ac7deab8db2f581077da735c3542d8f1b',1,'environment']]],
+  ['resetcpxdisscounter',['resetCpxDissCounter',['../classenvironment.html#a987dc7b9f211f34564343ee0eaa20dc1',1,'environment']]],
+  ['resetcpxformcounter',['resetCpxFormCounter',['../classenvironment.html#a4cf4413f3028f8c5e33991ad5ba18e21',1,'environment']]],
   ['resetendocleavagecounter',['resetEndoCleavageCounter',['../classenvironment.html#a3362d147de095640619d9b44f7f20bba',1,'environment']]],
   ['resetendocondensationcounter',['resetEndoCondensationCounter',['../classenvironment.html#a55cff0bc2f8de4d3e4db471cad580a86',1,'environment']]],
   ['reseteventscounter',['resetEventsCounter',['../classcatalysis.html#ab8964f8ec17d677de03747520d0a9995',1,'catalysis::resetEventsCounter()'],['../classreactions.html#a614a367a15dda1df4160bcdc170a9b32',1,'reactions::resetEventsCounter()']]],

@@ -6,6 +6,10 @@
  */
 #include "environment.h"
 
+/**
+ * TEMPLATE DEACLARATION AND DEFINITION
+ */
+
 /* ************
 |
 |	CONSTRUCTORS
@@ -51,6 +55,7 @@
 	decimalMoleculesToLoad = 0;
 	decimalMoleculesToUNLOAD = 0;
 	decimalMoleculesToEfflux = 0;
+	decimalComplexesToDissociate = 0;
 	numberOfSpecies = 0;
 	numberOfNewSpecies = 0;
 	numberOfMolecules = 0;
@@ -172,6 +177,7 @@ environment::environment(string tmpInitialPath)
     decimalMoleculesToEfflux = 0;
     decimalMoleculesToLoad = 0;
     decimalMoleculesToUNLOAD = 0;
+    decimalComplexesToDissociate = 0;
     gillespieTotalScore = 0;
     gillespieNewSpeciesScore = 0;
     ratioBetweenNewGillTotGill = 0;
@@ -1682,13 +1688,16 @@ bool environment::createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFile
         getline(myfile, strCpxTarget, '\n');
 
         if(strID.find("\n") != 0)
+        {
         	allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
                                          (acs_longInt)atol(strCounter.c_str()), (acs_double)atof(strKcond.c_str()), (acs_double)atof(strKcleav.c_str()),
                                          (acs_double)atof(strKcpx.c_str()), (acs_int)atoi(strCpxTarget.c_str())));
+        }
 
     }
 
     myfile.close();
+    inserSubListInSpecies();
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromFileSTD end" << endl;
     return true;
 }//eof createInitialCatalysisLayerFromFileSTD
@@ -1739,6 +1748,7 @@ bool environment::createInitialCatalysisLayerFromSpecificFileSTD(string tmpCatal
     }
 
     myfile.close();
+    inserSubListInSpecies();
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromSpecificFileSTD end" << endl;
     return true;
 }//eof createInitialCatalysisLayerFromSpecificFileSTD
@@ -1952,106 +1962,111 @@ bool environment::structureCoherenceCheckUp()
 	// ===================================
 	
 		cout << "\t|- SPECIES STRUCTURE" << endl;
-		cout << "\t\t|- Searching for Incoherences, double entries and incorrect ID progression... ";
+		cout << "\t\t|- Searching for Incoherences, double entries and incorrect ID progression... "<< endl;
 	}
-	for(acs_longInt i = 0; i < getNumberOfTheoreticalSpecies(); i++)
+	if(debugLevel >= MEDIUM_DEBUG)
 	{
-		for(acs_longInt j= 0; j < getNumberOfTheoreticalSpecies(); j++)
+		acs_int tmpTotTheorSpecies = getNumberOfTheoreticalSpecies();
+		for(acs_longInt i = 0; i < tmpTotTheorSpecies; i++)
 		{
-			if(i != j) // A Species is definitely equal to itself
+			if(i%100 == 0) cout << "\t\t|- Species Percentage Controlled  " << (double)i/tmpTotTheorSpecies*100 << " %" << endl;
+			for(acs_longInt j= 0; j < tmpTotTheorSpecies; j++)
 			{
-				if(allSpecies.at(i).getSequence() == allSpecies.at(j).getSequence())
-				{ // IF THE SEQUENCE IS THE SAME THE CUTTING POINT HAS TO BE CHECKED
-					if(debugLevel >= SMALL_DEBUG)
-					{
-						cout << endl << "\t\t\t |- The sequence of " <<  allSpecies.at(i).getSequence() << " [ID" << i << "] is the same of "
-							 <<   allSpecies.at(i).getSequence() << " [ID" << j << "]... check CUTTING POINT"; 
-					}
-				   if(allSpecies.at(i).getComplexCutPnt() == allSpecies.at(j).getComplexCutPnt())
-				   {
-					   flagControl = false;
-					   cout << endl << "\t\t\t|- ERROR: Species " << allSpecies.at(i).getID() << " is a duplicate of species "
-							<< allSpecies.at(j).getID() << ": The two cutting points are NOT different: "
-							<< allSpecies.at(i).getComplexCutPnt()  << " and " << allSpecies.at(j).getComplexCutPnt()  << endl;
-					   break;
-				   }else{
-					   if(debugLevel >= SMALL_DEBUG)
+				if(i != j) // A Species is definitely equal to itself
+				{
+					if(allSpecies.at(i).getSequence() == allSpecies.at(j).getSequence())
+					{ // IF THE SEQUENCE IS THE SAME THE CUTTING POINT HAS TO BE CHECKED
+						if(debugLevel >= SMALL_DEBUG)
+						{
+							cout << endl << "\t\t\t |- The sequence of " <<  allSpecies.at(i).getSequence() << " [ID" << i << "] is the same of "
+								 <<   allSpecies.at(i).getSequence() << " [ID" << j << "]... check CUTTING POINT";
+						}
+					   if(allSpecies.at(i).getComplexCutPnt() == allSpecies.at(j).getComplexCutPnt())
 					   {
-						   cout << endl << "\t\t\t|- NO PROBLEN: The two cutting points are different: " << allSpecies.at(i).getComplexCutPnt()
-								<< " and " << allSpecies.at(j).getComplexCutPnt()  << endl;
+						   flagControl = false;
+						   cout << endl << "\t\t\t|- ERROR: Species " << allSpecies.at(i).getID() << " is a duplicate of species "
+								<< allSpecies.at(j).getID() << ": The two cutting points are NOT different: "
+								<< allSpecies.at(i).getComplexCutPnt()  << " and " << allSpecies.at(j).getComplexCutPnt()  << endl;
+						   break;
+					   }else{
+						   if(debugLevel >= SMALL_DEBUG)
+						   {
+							   cout << endl << "\t\t\t|- NO PROBLEN: The two cutting points are different: " << allSpecies.at(i).getComplexCutPnt()
+									<< " and " << allSpecies.at(j).getComplexCutPnt()  << endl;
+						   }
 					   }
-				   }
+					}
 				}
 			}
-		}
-		if(debugLevel >= RUNNING_VERSION)
-		{
-			if(i == getNumberOfTheoreticalSpecies())
+			if(debugLevel >= RUNNING_VERSION)
 			{
-				if(flagControl == true)
-					cout << endl << "\t\t\t|- No Double entries... OK!" << endl;
+				if(i == getNumberOfTheoreticalSpecies())
+				{
+					if(flagControl == true)
+						cout << endl << "\t\t\t|- No Double entries... OK!" << endl;
+				}
+			}
+
+			if(debugLevel >= SMALL_DEBUG)
+			{
+				cout << endl << "ID: " << allSpecies.at(i).getID() << "\t"
+				<< "SEQ: " << allSpecies.at(i).getSequence() << "\t"
+				<< "AMOUNT: " << allSpecies.at(i).getAmount() << "\t"
+				<< "DIFF: " << allSpecies.at(i).getDiffusionEnh() << "\t"
+				<< "PREC: " << allSpecies.at(i).getSolubility() << "\t"
+				<< "COM DEG: " << allSpecies.at(i).getComplexDegEnh() << "\t"
+				<< "CUT PNT: " << allSpecies.at(i).getComplexCutPnt() << "\t"
+				<< "EVAL: " << allSpecies.at(i).getEvaluated();
+			}
+					//SINGLE CHECKS, with the following TRY all allSpecies.at(i) are checked
+					try{
+						if(allSpecies.at(i).getID() != i) //CHECK ID PROGRESSION
+						{
+							flagControl = false;
+							cout << endl << "\t\t\tERROR: SPECIES ID progression in not right: ID " << allSpecies.at(i).getID() << " could be equal to " << i << endl;
+						}
+					}catch(exception&e){
+						cout << "structureCoherenceCheckUp allSpecies.at(i)…" << endl;
+						cout << "Vectorsize " << allSpecies.size() << " - position " << i << endl;
+						cerr << "exceptioncaught:" << e.what() << endl;
+						ExitWithError("structureCoherenceCheckUp","exceptionerrorthrown");
+				   }
+
+			if(allSpecies.at(i).getComplexCutPnt() > 0 && allSpecies.at(i).getEvaluated() > 0) // COMPLEX CANNOT BE EVALUATED
+			{
+				flagControl = false;
+				cout << endl << "Species " << allSpecies.at(i).getID() << " is a complex and cannot be evaluated!!!" << endl;
+			}
+			// IF THERE ARE MOLECULE BELONGING TO THE SPECIES, THE SPECIES HAD TO BE EVALUATED
+			if(allSpecies.at(i).getAmount() > 0 &&  allSpecies.at(i).getComplexCutPnt() == 0 && allSpecies.at(i).getEvaluated() == 0)
+			{
+				flagControl = false;
+				cout << endl << "Species " << allSpecies.at(i).getSequence() << "(ID" << i << ") has "
+					 <<  allSpecies.at(i).getAmount() << " and it wasn't evaluated!!!" << endl;
+			}
+			// A COMPLEX HAS TO BE EOLUBILITY SET TO 1
+			if(allSpecies.at(i).getComplexCutPnt() > 0 && allSpecies.at(i).getSolubility() == PRECIPITATED)
+			{
+				flagControl = false;
+				cout << endl << "Complex " << allSpecies.at(i).getSequence() << "(ID" << i << ") has to be solubility set to 1!!!" << endl;
 			}
 		}
 		
-		if(debugLevel >= SMALL_DEBUG)
+		if(debugLevel >= RUNNING_VERSION)
 		{
-			cout << endl << "ID: " << allSpecies.at(i).getID() << "\t"
-			<< "SEQ: " << allSpecies.at(i).getSequence() << "\t"
-			<< "AMOUNT: " << allSpecies.at(i).getAmount() << "\t"
-			<< "DIFF: " << allSpecies.at(i).getDiffusionEnh() << "\t"
-			<< "PREC: " << allSpecies.at(i).getSolubility() << "\t"
-			<< "COM DEG: " << allSpecies.at(i).getComplexDegEnh() << "\t"
-			<< "CUT PNT: " << allSpecies.at(i).getComplexCutPnt() << "\t"
-			<< "EVAL: " << allSpecies.at(i).getEvaluated();
+			//Previous Test
+			cout << endl << "\t\t\t|- ID Progression... OK!" << endl;
+			cout << "\t\t\t|- Complexes not evaluated... OK!" << endl;
+			cout << "\t\t\t|- Living Species Evaluated... OK!" << endl;
+			cout << "\t\t\t|- Complex Solubility... OK!" << endl;
 		}
-                //SINGLE CHECKS, with the following TRY all allSpecies.at(i) are checked
-                try{
-                    if(allSpecies.at(i).getID() != i) //CHECK ID PROGRESSION
-                    {
-                        flagControl = false;
-                        cout << endl << "\t\t\tERROR: SPECIES ID progression in not right: ID " << allSpecies.at(i).getID() << " could be equal to " << i << endl;
-                    }
-                }catch(exception&e){
-                    cout << "structureCoherenceCheckUp allSpecies.at(i)…" << endl;
-                    cout << "Vectorsize " << allSpecies.size() << " - position " << i << endl;
-                    cerr << "exceptioncaught:" << e.what() << endl;
-                    ExitWithError("structureCoherenceCheckUp","exceptionerrorthrown");
-               }
-
-		if(allSpecies.at(i).getComplexCutPnt() > 0 && allSpecies.at(i).getEvaluated() > 0) // COMPLEX CANNOT BE EVALUATED
-		{
-			flagControl = false;
-			cout << endl << "Species " << allSpecies.at(i).getID() << " is a complex and cannot be evaluated!!!" << endl;
-		}
-		// IF THERE ARE MOLECULE BELONGING TO THE SPECIES, THE SPECIES HAD TO BE EVALUATED
-		if(allSpecies.at(i).getAmount() > 0 &&  allSpecies.at(i).getComplexCutPnt() == 0 && allSpecies.at(i).getEvaluated() == 0) 
-		{
-			flagControl = false;
-			cout << endl << "Species " << allSpecies.at(i).getSequence() << "(ID" << i << ") has "
-				 <<  allSpecies.at(i).getAmount() << " and it wasn't evaluated!!!" << endl;
-		}	
-		// A COMPLEX HAS TO BE EOLUBILITY SET TO 1
-		if(allSpecies.at(i).getComplexCutPnt() > 0 && allSpecies.at(i).getSolubility() == PRECIPITATED) 
-		{
-			flagControl = false;
-			cout << endl << "Complex " << allSpecies.at(i).getSequence() << "(ID" << i << ") has to be solubility set to 1!!!" << endl;
-		}			
-	}
-	
-	if(debugLevel >= RUNNING_VERSION)
-	{
-		//Previous Test
-		cout << endl << "\t\t\t|- ID Progression... OK!" << endl;
-		cout << "\t\t\t|- Complexes not evaluated... OK!" << endl;
-		cout << "\t\t\t|- Living Species Evaluated... OK!" << endl;
-		cout << "\t\t\t|- Complex Solubility... OK!" << endl;
 	}
 	
 	// ===================================
 	// IF THE SYSTEM IS OPEN
 	// ===================================
 	
-        if(influx_rate > 0)
+    if(influx_rate > 0)
 	{
             if(flagControl) // IF THE PREVIOUS CONTROL WAS OK REACTION CONTROL WILL BE PERFORMED
             {
@@ -2095,256 +2110,261 @@ bool environment::structureCoherenceCheckUp()
 	// IF THERE ARE REACTIONS
 	// ===================================
 
-	
-	if((acs_longInt)allReactions.size() > 0)
+	if(debugLevel >= MEDIUM_DEBUG)
 	{
-            if(debugLevel == RUNNING_VERSION)
-            {
-                //Check reactions structures
-                cout << "\t|- REACTIONS LAYER STRUCTURE" << endl;
-                cout << "\t\t|- Searching for duplicate, incorrect reactions products and ID progression... ";
-            }
+		if((acs_longInt)allReactions.size() > 0)
+		{
+				if(debugLevel == RUNNING_VERSION)
+				{
+					//Check reactions structures
+					cout << "\t|- REACTIONS LAYER STRUCTURE" << endl;
+					cout << "\t\t|- Searching for duplicate, incorrect reactions products and ID progression... " << endl;
+				}
+	
+				if(flagControl) // IF THE PREVIOUS CONTROL WAS OK REACTION CONTROL WILL BE PERFORMED
+				{
+					string tmpStr1; // TEMPORARY TEST STRING 1
+					string tmpStr2; // TEMPORARY TEST STRING 2
+					string tmpStr3; // TEMPORARY TEST STRING 3
+					string tmpStrtot; // TEMPORARY CONCATENATION OF STR2 AND STR3
+					acs_double tmpClConRatio = 0;
 
-            if(flagControl) // IF THE PREVIOUS CONTROL WAS OK REACTION CONTROL WILL BE PERFORMED
-            {
-                string tmpStr1; // TEMPORARY TEST STRING 1
-                string tmpStr2; // TEMPORARY TEST STRING 2
-                string tmpStr3; // TEMPORARY TEST STRING 3
-                string tmpStrtot; // TEMPORARY CONCATENATION OF STR2 AND STR3
-                acs_double tmpClConRatio = 0;
+					// FOR ALL REACTIONS
+					acs_int tmpNrct = getNumberOfReactions();
+					for(acs_longInt i = 0; i < tmpNrct - 1; i++)
+					{
+						if(i%100 == 0) cout << "\t\t|- Reaction Percentage Controlled " << (double)i/tmpNrct*100 << " %" << endl;
+						if (allReactions.at(i).getType() == 1) {
+								tmpClConRatio++;
+						}
 
-                // FOR ALL REACTIONS
-                for(acs_longInt i = 0; i < getNumberOfReactions() - 1; i++)
-                {
-                    if (allReactions.at(i).getType() == 1) {
-                            tmpClConRatio++;
-                    }
+						if(debugLevel >= MEDIUM_DEBUG)
+						{
+							cout << endl << "ID: " << allReactions.at(i).getID() <<
+											"\tType: " << allReactions.at(i).getType() <<
+											"\tMOL 1: " << allReactions.at(i).getSpecies_I() <<
+											"\tMOL 2: " << allReactions.at(i).getSpecies_II() <<
+											"\tMOL 3: " << allReactions.at(i).getSpecies_III() <<
+											"\tOccurence: " << allReactions.at(i).getEvents() <<
+											"\tEquilibrium constant: " << allReactions.at(i).getEnergyType();
+						}
 
-                    if(debugLevel >= MEDIUM_DEBUG)
-                    {
-                        cout << endl << "ID: " << allReactions.at(i).getID() <<
-                                        "\tType: " << allReactions.at(i).getType() <<
-                                        "\tMOL 1: " << allReactions.at(i).getSpecies_I() <<
-                                        "\tMOL 2: " << allReactions.at(i).getSpecies_II() <<
-                                        "\tMOL 3: " << allReactions.at(i).getSpecies_III() <<
-                                        "\tOccurence: " << allReactions.at(i).getEvents() <<
-                                        "\tEquilibrium constant: " << allReactions.at(i).getEnergyType();
-                    }
+						// CHECK ID PROGRESSION
+						if(allReactions.at(i).getID() != i)
+						{
+							flagControl = false;
+							cout << endl << "\t\t\tERROR: REACTION ID progression in not right: ID " << allReactions.at(i).getID() <<
+							" could be equal to " << i << endl;
+							//break;
+						}
 
-                    // CHECK ID PROGRESSION
-                    if(allReactions.at(i).getID() != i)
-                    {
-                        flagControl = false;
-                        cout << endl << "\t\t\tERROR: REACTION ID progression in not right: ID " << allReactions.at(i).getID() <<
-                        " could be equal to " << i << endl;
-                        //break;
-                    }
+						// CHECK THAT SUBSTRATES ARE NOT INVOLVED IN REACTIONS
+						try{
+							if(allSpecies.at(allReactions.at(i).getSpecies_I()).getComplexCutPnt() > 0)
+							{
+									flagControl = false;
+									cout << endl << "\t\t\tERROR: Reaction " << i << ", Species " << allReactions.at(i).getSpecies_I() << " ia a complex, then it can not be affected by any reaction!!!" << endl;
+							}
+						}catch(exception&e){
+							cout << "structureCoherenceCheckUp allSpecies.at(allReactions.at(i).getSpecies_I())…" << endl;
+							cout << "Vectorsize " << allSpecies.size() <<" - position "<< i << endl;
+							cerr << "exceptioncaught:"<<e.what()<<endl;
+							ExitWithError("structureCoherenceCheckUp","exceptionerrorthrown");
+					   }
 
-                    // CHECK THAT SUBSTRATES ARE NOT INVOLVED IN REACTIONS
-                    try{
-                        if(allSpecies.at(allReactions.at(i).getSpecies_I()).getComplexCutPnt() > 0)
-                        {
-                                flagControl = false;
-                                cout << endl << "\t\t\tERROR: Reaction " << i << ", Species " << allReactions.at(i).getSpecies_I() << " ia a complex, then it can not be affected by any reaction!!!" << endl;
-                        }
-                    }catch(exception&e){
-                        cout << "structureCoherenceCheckUp allSpecies.at(allReactions.at(i).getSpecies_I())…" << endl;
-                        cout << "Vectorsize " << allSpecies.size() <<" - position "<< i << endl;
-                        cerr << "exceptioncaught:"<<e.what()<<endl;
-                        ExitWithError("structureCoherenceCheckUp","exceptionerrorthrown");
-                   }
+					   try{
+							if(allSpecies.at(allReactions.at(i).getSpecies_II()).getComplexCutPnt() > 0)
+							{
+									flagControl = false;
+									cout << endl << "\t\t\tERROR: Reaction " << i << ", Species " << allReactions.at(i).getSpecies_II() << " ia a complex, then it can not be affected by any reaction!!!" << endl;
+							}
+						}catch(exception&e){
+							cout << "if(allSpecies.at(allReactions.at(i).getSpecies_II()).getComplexCutPnt() > 0)" << endl;
+							cout << "Vectorsize "<<allSpecies.size()<<" - position " << i << endl;
+							cerr << "exceptioncaught:"<<e.what()<<endl;
+							ExitWithError("structureCoherenceCheckUp","exceptionerrorthrown");
+					   }
 
-                   try{
-                        if(allSpecies.at(allReactions.at(i).getSpecies_II()).getComplexCutPnt() > 0)
-                        {
-                                flagControl = false;
-                                cout << endl << "\t\t\tERROR: Reaction " << i << ", Species " << allReactions.at(i).getSpecies_II() << " ia a complex, then it can not be affected by any reaction!!!" << endl;
-                        }
-                    }catch(exception&e){
-                        cout << "if(allSpecies.at(allReactions.at(i).getSpecies_II()).getComplexCutPnt() > 0)" << endl;
-                        cout << "Vectorsize "<<allSpecies.size()<<" - position " << i << endl;
-                        cerr << "exceptioncaught:"<<e.what()<<endl;
-                        ExitWithError("structureCoherenceCheckUp","exceptionerrorthrown");
-                   }
+					   try{
+							if(allSpecies.at(allReactions.at(i).getSpecies_III()).getComplexCutPnt() > 0)
+							{
+									flagControl = false;
+									cout << endl << "\t\t\tERROR: Reaction " << i << ", Species " << allReactions.at(i).getSpecies_III() << " ia a complex, then it can not be affected by any reaction!!!" << endl;
+							}
+						}catch(exception&e){
+							cout << "if(allSpecies.at(allReactions.at(i).getSpecies_III()).getComplexCutPnt() > 0)" << endl;
+							cout << "Vectorsize "<<allSpecies.size()<<" - position " << i << endl;
+							cerr << "exceptioncaught:"<<e.what()<<endl;
+							ExitWithError("structureCoherenceCheckUp","exceptionerrorthrown");
+					   }
 
-                   try{
-                        if(allSpecies.at(allReactions.at(i).getSpecies_III()).getComplexCutPnt() > 0)
-                        {
-                                flagControl = false;
-                                cout << endl << "\t\t\tERROR: Reaction " << i << ", Species " << allReactions.at(i).getSpecies_III() << " ia a complex, then it can not be affected by any reaction!!!" << endl;
-                        }
-                    }catch(exception&e){
-                        cout << "if(allSpecies.at(allReactions.at(i).getSpecies_III()).getComplexCutPnt() > 0)" << endl;
-                        cout << "Vectorsize "<<allSpecies.size()<<" - position " << i << endl;
-                        cerr << "exceptioncaught:"<<e.what()<<endl;
-                        ExitWithError("structureCoherenceCheckUp","exceptionerrorthrown");
-                   }
+						// CHECK COMPOSITION COHERENCE
+						tmpStr1 = allSpecies.at(allReactions.at(i).getSpecies_I()).getSequence();
+						tmpStr2 = allSpecies.at(allReactions.at(i).getSpecies_II()).getSequence();
+						tmpStr3 = allSpecies.at(allReactions.at(i).getSpecies_III()).getSequence();
+						tmpStrtot = tmpStr2 + tmpStr3;
 
-                    // CHECK COMPOSITION COHERENCE
-                    tmpStr1 = allSpecies.at(allReactions.at(i).getSpecies_I()).getSequence();
-                    tmpStr2 = allSpecies.at(allReactions.at(i).getSpecies_II()).getSequence();
-                    tmpStr3 = allSpecies.at(allReactions.at(i).getSpecies_III()).getSequence();
-                    tmpStrtot = tmpStr2 + tmpStr3;
+						if(tmpStr1 != tmpStrtot)
+						{
+								flagControl = false;
+								if(debugLevel >= RUNNING_VERSION)
+										cout << endl << "\t\t\tERROR in reaction " << i << " - Type: " << allReactions.at(i).getType() << endl;
+										cout << "\t\t\t\t: " << tmpStr1 << "[" << allReactions.at(i).getSpecies_I() << "] cannot be product or substrate of " << tmpStr2 << "[" << allReactions.at(i).getSpecies_II()
+										<< "] + " << tmpStr3 << "[" << allReactions.at(i).getSpecies_III() << "]";
+						}
 
-                    if(tmpStr1 != tmpStrtot)
-                    {
-                            flagControl = false;
-                            if(debugLevel >= RUNNING_VERSION)
-                                    cout << endl << "\t\t\tERROR in reaction " << i << " - Type: " << allReactions.at(i).getType() << endl;
-                                    cout << "\t\t\t\t: " << tmpStr1 << "[" << allReactions.at(i).getSpecies_I() << "] cannot be product or substrate of " << tmpStr2 << "[" << allReactions.at(i).getSpecies_II()
-                                    << "] + " << tmpStr3 << "[" << allReactions.at(i).getSpecies_III() << "]";
-                    }
+						// SEARCHING FOR DUPLICATE REACTIONS
+						for(acs_longInt j = 0; j < getNumberOfReactions(); j++)
+						{
+							if( i != j)// A single reaction is definitely equal to itself
+							{
+								try{
+									if(allReactions.at(i).getType() == allReactions.at(j).getType())
+									{
+										if(allReactions.at(i).getSpecies_I() == allReactions.at(j).getSpecies_I())
+										{
+											if((allReactions.at(i).getSpecies_II() == allReactions.at(j).getSpecies_II() &&
+												allReactions.at(i).getSpecies_III() == allReactions.at(j).getSpecies_III()) ||
+												(allReactions.at(i).getSpecies_II() == allReactions.at(j).getSpecies_III() &&
+												 allReactions.at(i).getSpecies_III() == allReactions.at(j).getSpecies_II()))
+											{
+												flagControl = false;
+												cout << endl << "\t\t\tERROR: Reaction " << allReactions.at(i).getID() << " is a duplicate of reaction " << allReactions.at(j).getID();
+												break;
+											}
+										} // end if(allReactions.at(i).getSpecies_I() == allReactions.at(j).getSpecies_I())
+									} // end if(allReactions.at(i).getType() == allReactions.at(j).getType())
+								}catch(exception&e){
+									cout << "allReactions.at(i).get..." << endl;
+									cout << "Vectorsize "<<allReactions.size()<<" - position " << i << endl;
+									cerr << "exceptioncaught:"<<e.what()<<endl;
+									ExitWithError("structureCoherenceCheckUp","exceptionerrorthrown");
+							   }
+							} // end if( i != j)
+						} // end for(acs_longInt j = 0; j < getNumberOfReactions(); j++)
+					} // end for(acs_longInt i = 0; i < getNumberOfReactions() - 1; i++)
+					cout << endl << "\t\t\t|- Ratio between cleavage and condensation reactions:" << tmpClConRatio / getNumberOfReactions() * 100;
 
-                    // SEARCHING FOR DUPLICATE REACTIONS
-                    for(acs_longInt j = 0; j < getNumberOfReactions(); j++)
-                    {
-                        if( i != j)// A single reaction is definitely equal to itself
-                        {
-                            try{
-                                if(allReactions.at(i).getType() == allReactions.at(j).getType())
-                                {
-                                    if(allReactions.at(i).getSpecies_I() == allReactions.at(j).getSpecies_I())
-                                    {
-                                        if((allReactions.at(i).getSpecies_II() == allReactions.at(j).getSpecies_II() &&
-                                            allReactions.at(i).getSpecies_III() == allReactions.at(j).getSpecies_III()) ||
-                                            (allReactions.at(i).getSpecies_II() == allReactions.at(j).getSpecies_III() &&
-                                             allReactions.at(i).getSpecies_III() == allReactions.at(j).getSpecies_II()))
-                                        {
-                                            flagControl = false;
-                                            cout << endl << "\t\t\tERROR: Reaction " << allReactions.at(i).getID() << " is a duplicate of reaction " << allReactions.at(j).getID();
-                                            break;
-                                        }
-                                    } // end if(allReactions.at(i).getSpecies_I() == allReactions.at(j).getSpecies_I())
-                                } // end if(allReactions.at(i).getType() == allReactions.at(j).getType())
-                            }catch(exception&e){
-                                cout << "allReactions.at(i).get..." << endl;
-                                cout << "Vectorsize "<<allReactions.size()<<" - position " << i << endl;
-                                cerr << "exceptioncaught:"<<e.what()<<endl;
-                                ExitWithError("structureCoherenceCheckUp","exceptionerrorthrown");
-                           }
-                        } // end if( i != j)
-                    } // end for(acs_longInt j = 0; j < getNumberOfReactions(); j++)
-                } // end for(acs_longInt i = 0; i < getNumberOfReactions() - 1; i++)
-                cout << endl << "\t\t\t|- Ratio between cleavage and condensation reactions:" << tmpClConRatio / getNumberOfReactions() * 100;
+				} // end if(flagControl)
+		} // if((acs_longInt)allReactions.size() > 0)
+	} // if(debugLevel >= MEDIUM_DEBUG)
 
-            } // end if(flagControl)
+	if(debugLevel >= MEDIUM_DEBUG)
+	{
+		// ===================================
+		// IF THERE ARE CATALYSIS
+		// ===================================
 
+		if(flagControl)
+		{
+			if(debugLevel >= RUNNING_VERSION)
+			{
+				// PREVIOUS CHECK
+				cout << endl
+				<< "\t\t\t|- Id Progression... OK!" << endl
+				<< "\t\t\t|- No Double reactions... OK!" << endl
+				<< "\t\t\t|- Substrates are not involved in reactions... OK!" << endl
+				<< "\t\t\t|- Reaction coherence... OK!" << endl;
+				if (energy == 1) {
+						cout << "\t\t\t|- ENERGY TYPE control... OK!" << endl;
+				}
+				// CATALYSIS STRUCTURE CHECK
+				cout << "\t|- CATALYSIS LAYER STRUCTURE" << endl;
+				cout << "\t\t|- Searching for duplicate, incorrect ID progression... ";
+			}
+			acs_int tmpCatNum = getNumberOfCatalysis();
+			for(acs_longInt i = 0; i < tmpCatNum - 1; i++)
+			{
+				if(i%100 == 0) cout << "\t\t|- Catalysis Percentage Controlled " << (double)i/tmpCatNum*100 << " %" << endl;
+				// NO COMPLEX CATALYST CONTROL
+				if(allSpecies.at(allCatalysis.at(i).getCat()).getComplexCutPnt() > 0)
+				{
+					//A COMPLEX CANNOT CATALYZE ANY REACTION
+					flagControl = false;
+					cout << "Catalysis number " << i << ": A complex cannot catalyse any reaction, catalyst " << allCatalysis.at(i).getCat() << " is a complex!!! " << endl;
+					break;
+				}
+				// NO DOUBLE ENTRIES CONTROL
+				for(acs_longInt j= 0; j < getNumberOfCatalysis(); j++)
+				{
+					if(i != j) // A Species is definitely equal to itself
+					{
+						if(allCatalysis.at(i).getCat() == allCatalysis.at(j).getCat())
+						{
+							if(allCatalysis.at(i).getReactionID() == allCatalysis.at(j).getReactionID())
+							{
+								flagControl = false;
+								cout << endl << "\t\t\tERROR: Catalysis " << allCatalysis.at(i).getCatId() << " is a duplicate of catalysis " << allCatalysis.at(j).getCatId()  << endl;
+								break;
+							}
+						}
+					}
+				}
+				// PROGRESSION CONTROL
+				if(allCatalysis.at(i).getCatId() != i)
+				{
+					flagControl = false;
+					cout << endl << "\t\t\tERROR: CATALYSIS ID progression in not right: ID " << allCatalysis.at(i).getCatId() <<
+					" could be equal to " << i << endl;
+					//break;
+				}
 
-            // ===================================
-            // IF THERE ARE CATALYSIS
-            // ===================================
-
-            if(flagControl)
-            {
-                if(debugLevel >= RUNNING_VERSION)
-                {
-                    // PREVIOUS CHECK
-                    cout << endl
-                    << "\t\t\t|- Id Progression... OK!" << endl
-                    << "\t\t\t|- No Double reactions... OK!" << endl
-                    << "\t\t\t|- Substrates are not involved in reactions... OK!" << endl
-                    << "\t\t\t|- Reaction coherence... OK!" << endl;
-                    if (energy == 1) {
-                            cout << "\t\t\t|- ENERGY TYPE control... OK!" << endl;
-                    }
-                    // CATALYSIS STRUCTURE CHECK
-                    cout << "\t|- CATALYSIS LAYER STRUCTURE" << endl;
-                    cout << "\t\t|- Searching for duplicate, incorrect ID progression... ";
-                }
-                for(acs_longInt i = 0; i < getNumberOfCatalysis() - 1; i++)
-                {
-                    // NO COMPLEX CATALYST CONTROL
-                    if(allSpecies.at(allCatalysis.at(i).getCat()).getComplexCutPnt() > 0)
-                    {
-                        //A COMPLEX CANNOT CATALYZE ANY REACTION
-                        flagControl = false;
-                        cout << "Catalysis number " << i << ": A complex cannot catalyse any reaction, catalyst " << allCatalysis.at(i).getCat() << " is a complex!!! " << endl;
-                        break;
-                    }
-                    // NO DOUBLE ENTRIES CONTROL
-                    for(acs_longInt j= 0; j < getNumberOfCatalysis(); j++)
-                    {
-                        if(i != j) // A Species is definitely equal to itself
-                        {
-                            if(allCatalysis.at(i).getCat() == allCatalysis.at(j).getCat())
-                            {
-                                if(allCatalysis.at(i).getReactionID() == allCatalysis.at(j).getReactionID())
-                                {
-                                    flagControl = false;
-                                    cout << endl << "\t\t\tERROR: Catalysis " << allCatalysis.at(i).getCatId() << " is a duplicate of catalysis " << allCatalysis.at(j).getCatId()  << endl;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-
-                    // PROGRESSION CONTROL
-                    if(allCatalysis.at(i).getCatId() != i)
-                    {
-                        flagControl = false;
-                        cout << endl << "\t\t\tERROR: CATALYSIS ID progression in not right: ID " << allCatalysis.at(i).getCatId() <<
-                        " could be equal to " << i << endl;
-                        //break;
-                    }
-
-                    // NOT INVERSE REACTIONS CONTROL
-                    if(allReactions.at(allCatalysis.at(i).getReactionID()).getType() == CLEAVAGE)
-                    { // CLEAVAGE
-                        if(!notInverseReactionAlreadyCatalyzed(CLEAVAGE,
-                                                               allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I(),
-                                                               allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()))
-                        {
-                                flagControl = false;
-                                cout << endl << "\t\t\tERROR: Rct Type: " <<  CLEAVAGE  <<
-                                " - Catalisys: " << i << " - Catalyst: " <<  allCatalysis.at(i).getCat() <<
-                                " - S1: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I() <<
-                                " - S2: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II() <<
-                                " - Reaction " << allCatalysis.at(i).getReactionID() << endl << "\t\t\t\t" <<
-                                ": Both forward and backward reaction are catalyzed!!!" << endl <<
-                                "\t\t\t\t" << "-----------------------------------------------------" << endl;
-                                //break;
-                        }
-                        // NO SELF-CATALYSIS CONTROL
+				// NOT INVERSE REACTIONS CONTROL
+				if(allReactions.at(allCatalysis.at(i).getReactionID()).getType() == CLEAVAGE)
+				{ // CLEAVAGE
+					if(!notInverseReactionAlreadyCatalyzed(CLEAVAGE,
+														   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I(),
+														   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()))
+					{
+							flagControl = false;
+							cout << endl << "\t\t\tERROR: Rct Type: " <<  CLEAVAGE  <<
+							" - Catalisys: " << i << " - Catalyst: " <<  allCatalysis.at(i).getCat() <<
+							" - S1: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I() <<
+							" - S2: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II() <<
+							" - Reaction " << allCatalysis.at(i).getReactionID() << endl << "\t\t\t\t" <<
+							": Both forward and backward reaction are catalyzed!!!" << endl <<
+							"\t\t\t\t" << "-----------------------------------------------------" << endl;
+							//break;
+					}
+					// NO SELF-CATALYSIS CONTROL
 //					if(allCatalysis.at(i).getCat() < (acs_longInt)firingDisk.size())
 //					{
 //						if((allCatalysis.at(i).getCat() == allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()) ||
 //						   (allCatalysis.at(i).getCat() == allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_III()))
 //						{
-//							cout << "WARNING*** CLEAVAGE -> Species " << allCatalysis.at(i).getCatId() << " is a firing disk species and it cannot catalize the formation of itself: cat ID " 
+//							cout << "WARNING*** CLEAVAGE -> Species " << allCatalysis.at(i).getCatId() << " is a firing disk species and it cannot catalize the formation of itself: cat ID "
 //							     << i << " - Rct ID " << allCatalysis.at(i).getReactionID() << endl;
 //							//flagControl = false;
 //						}
 //					}
-                    }else{ // CONDENSATION
-                            if(!notInverseReactionAlreadyCatalyzed(CONDENSATION,
-                                                   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I(),
-                                                   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()))
-                            {
-                                    flagControl = false;
-                                    cout << endl << "\t\t\tERROR: Rct Type: " << CONDENSATION <<
-                                    " - Catalisys: " << i << " - Catalyst: " <<  allCatalysis.at(i).getCat() <<
-                                    " - S1: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I() <<
-                                    " - S2: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II() <<
-                                    " - Reaction " << allCatalysis.at(i).getReactionID() << endl << "\t\t\t\t" <<
-                                    ": Both forward and backward reaction are catalyzed!!!" << endl <<
-                                    "\t\t\t\t" << "-----------------------------------------------------" << endl;
-                                    //break;
-                            }
-                            // NO SELF-CATALYSIS CONTROL
+				}else{ // CONDENSATION
+						if(!notInverseReactionAlreadyCatalyzed(CONDENSATION,
+											   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I(),
+											   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()))
+						{
+								flagControl = false;
+								cout << endl << "\t\t\tERROR: Rct Type: " << CONDENSATION <<
+								" - Catalisys: " << i << " - Catalyst: " <<  allCatalysis.at(i).getCat() <<
+								" - S1: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I() <<
+								" - S2: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II() <<
+								" - Reaction " << allCatalysis.at(i).getReactionID() << endl << "\t\t\t\t" <<
+								": Both forward and backward reaction are catalyzed!!!" << endl <<
+								"\t\t\t\t" << "-----------------------------------------------------" << endl;
+								//break;
+						}
+						// NO SELF-CATALYSIS CONTROL
 //					if(allCatalysis.at(i).getCat() < (acs_longInt)firingDisk.size())
 //					{
 //						if((allCatalysis.at(i).getCat() == allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I()))
 //						{
-//							cout << "WARNING*** CONDENSATION -> Species " << allCatalysis.at(i).getCatId() << " is a firing disk species and it cannot catalize the formation of itself: cat ID " 
+//							cout << "WARNING*** CONDENSATION -> Species " << allCatalysis.at(i).getCatId() << " is a firing disk species and it cannot catalize the formation of itself: cat ID "
 //							<< i << " - Rct ID " << allCatalysis.at(i).getReactionID() << endl;
 //							//flagControl = false;
 //						}
-//					} // end if(allCatalysis.at(i).getCatId() < (acs_longInt)firingDisk.size())		 			
-                    } // end if(allReactions.at(allCatalysis.at(i).getReactionID()).getType() == CLEAVAGE)
-                } // end for(acs_longInt i = 0; i < getNumberOfCatalysis() - 1; i++)
-            } // end if(flagControl)
-	}else{
-		cout << "NO REACTIONS...";
+//					} // end if(allCatalysis.at(i).getCatId() < (acs_longInt)firingDisk.size())
+				} // end if(allReactions.at(allCatalysis.at(i).getReactionID()).getType() == CLEAVAGE)
+			} // end for(acs_longInt i = 0; i < getNumberOfCatalysis() - 1; i++)
+		} // end if(flagControl)
 	}
 	
 	if(flagControl)
@@ -2365,6 +2385,97 @@ bool environment::structureCoherenceCheckUp()
 	return flagControl;
 
 }
+
+/**
+ Insert substrate reactions information in species if complex
+ @version 1.0
+ @date 20130917
+ @author Alessandro Filisetti
+ */
+void environment::inserSubListInSpecies()
+{
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::inserSubListInSpecies start" << endl;
+	// For Each Species
+	acs_longInt tmpCat;
+	acs_longInt tmpRct;
+	acs_int tmpCpxTgt;
+
+	if(debugLevel == RUNNING_VERSION)
+	{
+		cout << "|- Complex Condensation Parameters Introduction..." << endl;
+	}
+
+    for(vector<species>::iterator tmpSpeciesIterator = allSpecies.begin(); tmpSpeciesIterator != allSpecies.end(); tmpSpeciesIterator++)
+    {
+    	// If the species is a complex
+    	if(tmpSpeciesIterator->getComplexCutPnt() > 0)
+    	{
+    		tmpCat = tmpSpeciesIterator->getCatalyst_ID();
+    		// For each catalysis
+    		for(vector<catalysis>::iterator tmpCatalysisIterator = allCatalysis.begin(); tmpCatalysisIterator != allCatalysis.end(); tmpCatalysisIterator++)
+    		{
+    			// Searching for Catalysed reactions
+    			if(tmpCatalysisIterator->getCat() == tmpCat)
+    			{
+    				tmpRct = tmpCatalysisIterator->getReactionID();
+    				tmpCpxTgt = tmpCatalysisIterator->getCpxTarget();
+    				// Insert complex formation reaction
+    				if((allReactions.at(tmpRct).getType()) == CONDENSATION || (reverseReactions == true))
+    				{
+    					if(debugLevel == SMALL_DEBUG)
+    					{
+    						cout << tmpSpeciesIterator->getID() << " " << tmpCatalysisIterator->getCatId() << endl;
+    						cout << tmpSpeciesIterator->getCatalyst_ID() << " " << allReactions.at(tmpRct).getID() << endl;
+    					}
+						if(tmpCpxTgt == 1)
+						{
+							tmpSpeciesIterator->insertSecSub(allReactions.at(tmpRct).getSpecies_III(),tmpCatalysisIterator->getKass(),tmpCatalysisIterator->getCatId());
+							//cout << allReactions.at(tmpRct).getSpecies_III() << " " << tmpCatalysisIterator->getKass() << endl;
+						}else{
+							tmpSpeciesIterator->insertSecSub(allReactions.at(tmpRct).getSpecies_II(),tmpCatalysisIterator->getKass(),tmpCatalysisIterator->getCatId());
+							//cout << allReactions.at(tmpRct).getSpecies_II() << " " << tmpCatalysisIterator->getKass() << endl;
+						}
+    				}
+    			}
+    		}
+    	}
+    }
+
+    //showSubListInSpecies();
+
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::inserSubListInSpecies end" << endl;
+}
+
+void environment::showSubListInSpecies()
+{
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::showSubListInSpecies start" << endl;
+	if(debugLevel == RUNNING_VERSION)
+	{
+		cout << "|- Complex Condensation Parameters ..." << endl;
+	}
+
+	for(vector<species>::iterator tmpSpeciesIterator = allSpecies.begin(); tmpSpeciesIterator != allSpecies.end(); tmpSpeciesIterator++)
+	{
+		// If the species is a complex
+		if(tmpSpeciesIterator->getComplexCutPnt() > 0)
+		{
+			if(tmpSpeciesIterator->getSecSubListSize() > 0)
+			{
+				cout << "\t|- Complex " << tmpSpeciesIterator->getID() << " - " << tmpSpeciesIterator->getSequence()
+					 << " - " << allSpecies.at(tmpSpeciesIterator->getCatalyst_ID()).getSequence()
+					 << " - " << allSpecies.at(tmpSpeciesIterator->getSubstrate_ID()).getSequence() << endl;
+				cout << "\t\t|- Sec Subs ";
+				for(acs_int i = 0; i < tmpSpeciesIterator->getSecSubListSize(); i++)
+				{
+					cout << tmpSpeciesIterator->getSecSubListID(i) << " " << tmpSpeciesIterator->getSec_k_SubListID(i) << " || ";
+				}
+				cout << endl;
+			}
+		}
+	}
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::showSubListInSpecies end" << endl;
+}
+
 
 /**
  Check if the reaction catalyze both one reaction and the inverted one
@@ -2623,7 +2734,7 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
 								// CATALYST NOT LOADED, SUBSTRATE LOADED (- +)
 								if(nrgBooleanFunction[10] == TRUENRG)
 										performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, mid, temp_mol_I, idCat, ENDO_CLEAVAGE,
-																			temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,false);
+																			temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID, false);
 								// CATALYST NOT LOADED, SUBSTRATE LOADED (+ -)
 								if(nrgBooleanFunction[9] == TRUENRG)
 										performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, mid, temp_mol_I, idCat, ENDO_CLEAVAGE,
@@ -2655,12 +2766,13 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
 							if(allCatalysis.at(idCat).getCpxTarget() == 1)
 							{
 								temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II(); // First substrate
+								temp_mol_IV = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // Second substrate
 							}else{
 								temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // secondo substrate substrate
+								temp_mol_IV = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II(); // Second substrate
 							}
 
-							temp_mol_III = 0; // This variable contains the number of energized molecules (0 ++ 2 +- 4 -+ 6 --)
-							temp_mol_IV = 0;
+							temp_mol_III = idCat; // This variable contains the number of energized molecules (0 ++ 2 +- 4 -+ 6 --)
 							temp_reactionID = allCatalysis.at(idCat).getReactionID();
 							temp_catalysisID = idCat;
 
@@ -2925,6 +3037,7 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
                 if(!entropy()) // compute Gillespie score vector entropy
                      ExitWithError("entropy", "Problems during Gillespie score entropy computation");
 
+                // PERFORM REACTION
                 if(!performReaction(reaction_u, tmpRndDoubleGen, tmpActGEN, tmpActSIM, tmpActSTEP, tmpStoringPath))
                                 ExitWithError("performReaction", "Problems during the reaction computation");
 
@@ -2997,9 +3110,9 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
 			{
 				if(debugLevel >= SMALL_DEBUG)
 				{
-								cout << "\t\t\t\t|- Time: " << reactionsTime.at(reactionsTime.size() - 1)
-												 << " - Time needed for 1 molecule incoming: " << minimalTimeForOneMols
-										 << " - Time Since The Last InFlux: " << timeSinceTheLastInFlux << endl;
+					cout << "\t\t\t\t|- Time: " << reactionsTime.at(reactionsTime.size() - 1)
+						 << " - Time needed for 1 molecule incoming: " << minimalTimeForOneMols
+						 << " - Time Since The Last InFlux: " << timeSinceTheLastInFlux << endl;
 				}
 				// PERFORM REFILL !!!
 				if(performRefill(timeSinceTheLastInFlux, minimalTimeForOneMols, tmpRndDoubleGen))
@@ -3026,6 +3139,507 @@ bool environment::performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& 
     return flagControl;
 
 }
+
+/**
+ Perform all the gillespie algorithm procedure (OPTIMIZED VERSION)
+ @version 1.0
+ @date 2013.09.17
+ @param tmpRndDoubleGen random numbers generator
+ @param tmpTimeElapsed Computation time elapsed from the T0
+ @param tmpActGEN actual generation
+ @param tmpActSIM actual simulation
+ @param tmpActSTEP actual step (reaction)
+ @param tmpStoringPath path where results are stored
+*/
+bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath)
+{
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::performGillespieComputation start" << endl;
+
+	bool flagControl = true; //Check flag
+	bool sameSpecies = false; // true if I'm computing the score of a reaction involving the same species as catalyst and substrate
+	//acs_double temp_score; // Gillespie score
+    gillespieTotalScore = 0; // Initialize (or reset) the overall Gillespie score
+    gillespieNewSpeciesScore = 0; // Initialize (or reset) the sum of the Gillespie scores creating new species
+    ratioBetweenNewGillTotGill = 0;
+    reverseReactionsGillScore = 0; // the sum of the gillespie scores related to the reverse reactions
+    ratioBetweenReverseAndTotalScore = 0; // Ratio between the reverse reaction scores and all the reaction scores
+	acs_longInt temp_mol_I; // temp_mol_I II III and IV will contain the molecules IDs according to the different reactions
+	acs_longInt temp_mol_II;
+	acs_longInt temp_mol_III;
+	acs_longInt temp_mol_IV;
+
+	acs_longInt temp_substrateAmount; // These variables will contain the different amounts of the different species
+	acs_longInt temp_cpxAmount;
+
+	acs_longInt temp_catAmount_charged;
+	acs_longInt temp_catAmount_NotCharged;
+	acs_longInt temp_catAmount_TOT;
+
+	acs_longInt temp_substrateAmount_charged;
+	acs_longInt temp_substrateAmount_NotCharged;
+	acs_longInt temp_substrateAmount_TOT;
+
+	acs_int temp_rctType; // Reaction type (condensation, endo_condensation, complex_formation, endo_complex_formation, cleavage, endo_cleavage)
+	acs_longInt temp_reactionID;
+	acs_longInt temp_catalysisID;
+	acs_longInt reaction_u; // This variable will contain the ID of the reaction selected amond all the possible one contained in the Gillespie algorithm
+	acs_double tempTime; // Temporary Delta T
+	acs_longInt tmpCatalyst_ID; //temporary catalyst produced degrading the complex to searching for the substrate in condensation reaction
+	acs_longInt tmpSubstrate_ID; //temporary substrate produced degrading the complex to searching for the second substrate of the condensation reaction
+	acs_double tmpDeltaT; // Time interval between two successive generation
+
+	string nrgBooleanFunction = ""; // This string contains the energetic boolean function of the selected reaction
+
+	// TRANSFORM KINETIC CONSTANTS IN GILLESPIE KINETIC CONSTANTS (THEY ARE RESCALED ACCORDING TO THE VOLUME)
+
+	/* ------------------------------------------\
+	// GILLESPIE STRUCTURE CREATION				 ||==----
+	// ------------------------------------------*/
+
+	// FOR EACH SINGLE SPECIES ALL POSSIBLE REACTIONS INVOLVING IT IS COMPUTED.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+
+	// Initialize Time for the Gillespie Algorithm
+    gillespiePartialTimer = clock();
+
+	for(acs_longInt mid = 0; mid < (acs_longInt)allSpecies.size(); mid++)
+	{
+
+		sameSpecies = false; // This flag will be true is a second order reaction will involve the same species
+
+	// MID IS THE CATALYST
+
+	// UPDATE SPECIES AGE .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+
+		if((allSpecies.at(mid).getAmount() > 0) && (allSpecies.at(mid).getComplexCutPnt() == 0))
+		{
+			// tmpActSTEP is the simulation step
+			if(tmpActSTEP > 2)
+			{
+				allSpecies.at(mid).setNewAge(reactionsTime.at((reactionsTime.size() - 1)) - reactionsTime.at((reactionsTime.size() - 2)));
+			}
+		}else{
+			allSpecies.at(mid).setNewAge(0); // IF THE SPECIES IS DEAD THE AGE OF LAST DEATH REMAINS
+		}
+
+		if((allSpecies.at(mid).getAmount() > 0) && (allSpecies.at(mid).getSolubility() == SOLUBLE)) // If there are some molecule belonging to this species
+		{
+
+	// DISSOCIATION IF COMPLEX .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+
+			if(allSpecies.at(mid).getComplexCutPnt() > 0)
+			{
+//				if(allSpecies.at(mid).getAmount() > 10)
+//					cout << "\t\t\t|- Complex " << mid << " has more than 100 copies(" << allSpecies.at(mid).getAmount() << ")" << endl;
+//
+//				// In this step all the molecules are taken into account. Selection between loaded and unloaded type will be performed
+//				// in the reaction perform process according to the numerosity of each category
+//				temp_score = allSpecies.at(mid).getAmount() * allSpecies.at(mid).getComplexDegEnh();
+//				temp_mol_I = mid;
+//				temp_mol_II = tmpCatalyst_ID = allSpecies.at(mid).getCatalyst_ID();	// Recover catalyst ID from the complex
+//				temp_mol_III = tmpSubstrate_ID = allSpecies.at(mid).getSubstrate_ID();	// Recover substrate ID from the complex
+//				temp_mol_IV = 0;
+//				temp_rctType = COMPLEXDEGRADATION;
+//				temp_reactionID = 0;
+//				temp_catalysisID = 0;
+//
+//				if(temp_score > 0) // If score is grater than one
+//				{
+//					if(debugLevel >= MEDIUM_DEBUG)
+//						cout << "\t\t\t|- COMPLEX DISSOCIATION: " << temp_score << endl;
+//
+//					allGillespieScores.push_back(gillespie((acs_longInt)allGillespieScores.size(), temp_rctType,
+//											   temp_score, temp_mol_I, temp_mol_II, temp_mol_III,
+//											   temp_mol_IV, temp_reactionID, temp_catalysisID));
+//					gillespieTotalScore += temp_score;
+//					gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
+//				}
+				// CONDENSATION (SECOND STEP)
+				// Recover catalyst and substrate ID from the complex
+				tmpCatalyst_ID = allSpecies.at(mid).getCatalyst_ID();
+				tmpSubstrate_ID = allSpecies.at(mid).getSubstrate_ID();
+
+				if(allSpecies.at(mid).getSecSubListSize() > 0)
+				{
+					// If so, searching for the catalysed reactions involving the substrate
+					// Check whether the temporary catalyst catalyse a condensation reaction containing the temporary substrate as a first or second molecule
+					// WHETHER IT IS A CONDENSATION REACTION
+
+					for(acs_int listCondSecStep = 0; listCondSecStep < allSpecies.at(mid).getSecSubListSize(); listCondSecStep++)
+					{
+
+						// CONDENSATION SECOND STEP
+						// Assign species to the temp variables
+						temp_mol_I = allSpecies.at(mid).getCatalyst_ID(); //catalyst
+						temp_mol_II = allSpecies.at(mid).getSecSubListID(listCondSecStep); // second substrate
+						temp_catalysisID = allSpecies.at(mid).getCatalysisIfCpxID(listCondSecStep); // Catalysis ID
+						temp_mol_III = allReactions.at(allCatalysis.at(temp_catalysisID).getReactionID()).getSpecies_I(); // Product
+						temp_mol_IV = mid; // Complex
+						temp_reactionID = allCatalysis.at(allSpecies.at(mid).getCatalysisIfCpxID(listCondSecStep)).getReactionID(); // reaction ID
+						temp_rctType = CONDENSATION; // reaction type
+
+						if(nrgBoolFlag == ENERGYBASED)
+						{
+							// COMPLEX CHARGED - SECOND SUBSTRATE NOT CHARGED
+							if((nrgBooleanFunction[1] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
+							{
+								// Compute the total amount of complexes and second substrates
+								temp_cpxAmount = allSpecies.at(mid).getChargeMols();
+								temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
+								performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, temp_catalysisID, ENDO_CONDENSATION,
+																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, COMPLEXLOAD, temp_reactionID,false);
+							}
+
+							// COMPLEX NOT CHARGED - SECOND SUBSTRATE CHARGED
+							if(nrgBooleanFunction[6] == TRUENRG)
+							{
+								// Compute the total amount of complexes and second substrates
+								temp_cpxAmount = allSpecies.at(mid).getNOTchargeMols();
+								temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
+								performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, temp_catalysisID, ENDO_CONDENSATION,
+																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,false);
+							}
+
+							// COMPLEX CHARGED - SECOND SUBSTRATE CHARGED
+							if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[4] == TRUENRG))
+							{
+								// Compute the total amount of complexes and second substrates
+								temp_cpxAmount = allSpecies.at(mid).getChargeMols();
+								temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
+								performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, temp_catalysisID, ENDO_CONDENSATION,
+																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,false);
+							}
+
+							// COMPLEX NOT CHARGED - SECOND SUBSTRATE NOT CHARGED (ONLY IF CONDENSATION ESOERGONIC)
+							if(nrgBooleanFunction[7] == TRUENRG)
+							{
+								// Compute the total amount of complexes and second substrates
+								temp_cpxAmount = allSpecies.at(mid).getNOTchargeMols();
+								temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
+								performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, mid, temp_mol_II, temp_catalysisID, CONDENSATION,
+																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,false);
+							}
+						}else{ // NO ENERGY
+							// Compute the total amount of complexes and second substrates
+							temp_cpxAmount = allSpecies.at(mid).getAmount();
+							temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
+							performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount_TOT, mid, temp_mol_II, temp_catalysisID, CONDENSATION,
+															   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,false);
+						} // end if(nrgBoolFlag == ENERGYBASED)
+					} // end if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION) || (reverseReactions == true))
+				} // end if(allSpecies.at(mid).getSecSubListSize() > 0)
+			} // end if(allSpecies.at(mid).getComplexCutPnt() > 0)
+		} //end if total amount greater than 0
+	} // end for each species
+
+	 // IF THERE ARE REACTIONS AND CATALYSIS ************************************************************************************
+
+	if((acs_longInt)allCatalysis.size() > 0)
+	{
+		for(acs_longInt idCat = 0; idCat < (acs_longInt)allCatalysis.size(); idCat++)
+		{
+			// Retrive the energetic boolean function of the reaction
+			try{
+				nrgBooleanFunction = dec2bin(allReactions.at(allCatalysis.at(idCat).getReactionID()).getEnergyType());
+			}catch(exception&e){
+				cout << "nrgBooleanFunction = dec2bin(allReactions.at(allCatalysis.at(idCat).getReactionID()).getEnergyType());" << endl;
+				cout << "Vectorsize "<<allReactions.size() << " - position " << allCatalysis.at(idCat).getReactionID() << endl;
+				cerr << "exceptioncaught:" << e.what() << endl;
+				ExitWithError("performGillespieComputation","exceptionerrorthrown");
+		   }
+
+	//\-- CLEAVAGE .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+
+			//IF CLEAVAGE REACTION (if reverse reactions are enabled reaction is computed as well)
+		   // TRY HAS BEEN ALREADY USED
+			if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CLEAVAGE) || (reverseReactions == true))
+			{
+				temp_mol_I = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_I();     // SUBSTRATE
+				temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II();   // PRODUCT 1
+				temp_mol_III = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // PRODUCT 2
+				temp_mol_IV = allCatalysis.at(idCat).getCat();	// CATALYST
+				temp_reactionID = allCatalysis.at(idCat).getReactionID(); // REACTION ID
+				temp_catalysisID = idCat;
+
+				// Compute the overall number of molecules for the species involved
+				temp_catAmount_TOT = allSpecies.at(temp_mol_IV).getAmount();
+				temp_catAmount_charged = allSpecies.at(temp_mol_IV).getChargeMols();
+				temp_catAmount_NotCharged = allSpecies.at(temp_mol_IV).getNOTchargeMols();
+
+			   try{
+					temp_substrateAmount_TOT = allSpecies.at(temp_mol_I).getAmount();
+					temp_substrateAmount_charged = allSpecies.at(temp_mol_I).getChargeMols();
+					temp_substrateAmount_NotCharged = allSpecies.at(temp_mol_I).getNOTchargeMols();
+				}catch(exception&e){
+					cout << "temp_substrateAmount_TOT = allSpecies.at(temp_mol_I).getAmount();" << endl;
+					cout << "Vectorsize "<< allSpecies.size() << " - position " << temp_mol_I << endl;
+					cerr << "exceptioncaught:" << e.what() << endl;
+					ExitWithError("performGillespieComputation","exceptionerrorthrown");
+			   }
+
+				// Gillespie record creation according to the energy configuration
+				if(nrgBoolFlag == ENERGYBASED)
+				{
+
+					// CATALYST NOT LOADED, SUBSTRATE LOADED (- -)
+					if(nrgBooleanFunction[11] == TRUENRG)
+					if(checkAvailability(temp_mol_IV, temp_mol_I, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
+						performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, temp_mol_IV, temp_mol_I, idCat, CLEAVAGE,
+							   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
+
+					// CATALYST NOT LOADED, SUBSTRATE LOADED (- +)
+					if(nrgBooleanFunction[10] == TRUENRG)
+							performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, temp_mol_IV, temp_mol_I, idCat, ENDO_CLEAVAGE,
+																temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,false);
+					// CATALYST NOT LOADED, SUBSTRATE LOADED (+ -)
+					if(nrgBooleanFunction[9] == TRUENRG)
+							performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, temp_mol_IV, temp_mol_I, idCat, ENDO_CLEAVAGE,
+															   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID, false);
+
+					// CATALYST NOT LOADED, SUBSTRATE LOADED (+ +)
+					if(nrgBooleanFunction[8] == TRUENRG)
+						if(checkAvailability(temp_mol_IV, temp_mol_I, temp_catAmount_charged, temp_substrateAmount_charged))
+							performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, temp_mol_IV, temp_mol_I, idCat, ENDO_CLEAVAGE,
+							 temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID, true);
+				}else{
+						// CATALYST NOT LOADED, SUBSTRATE NOT LOADED
+					if(checkAvailability(temp_mol_IV, temp_mol_I, temp_catAmount_TOT, temp_substrateAmount_TOT))
+						performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, temp_mol_IV, temp_mol_I, idCat, CLEAVAGE,
+														   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
+				} // end if(nrgBoolFlag == ENERGYBASED)
+			} // end getType() == CLEAVAGE
+
+	//\-- OVERALL CONDENSATION .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+
+			// IF THIS IS A CONDENSATION REACTION (if reverse reactions are enabled reaction is comuputed as well)
+			if((allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION) || (reverseReactions == true))
+			{
+
+				//\-- COMPLEX CREATION	.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+
+				temp_mol_I = allCatalysis.at(idCat).getCat(); // Catalyst
+				// According to the complex creation target, species to create the complex is selected.
+				if(allCatalysis.at(idCat).getCpxTarget() == 1)
+				{
+					temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II(); // First substrate
+					temp_mol_IV = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // Second substrate
+				}else{
+					temp_mol_II = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_III(); // secondo substrate substrate
+					temp_mol_IV = allReactions.at(allCatalysis.at(idCat).getReactionID()).getSpecies_II(); // Second substrate
+				}
+
+				temp_mol_III = 0; // This variable contains the number of energized molecules (0 ++ 2 +- 4 -+ 6 --)
+				temp_reactionID = allCatalysis.at(idCat).getReactionID();
+				temp_catalysisID = idCat;
+
+				//\-- FIRST AND SECOND SUBSTRATE  -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+
+				// Compute the overall number of molecules for the species involved
+				temp_catAmount_TOT = allSpecies.at(temp_mol_I).getAmount();
+				temp_catAmount_charged = allSpecies.at(temp_mol_I).getChargeMols();
+				temp_catAmount_NotCharged = allSpecies.at(temp_mol_I).getNOTchargeMols();
+
+				temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
+				temp_substrateAmount_charged = allSpecies.at(temp_mol_II).getChargeMols();
+				temp_substrateAmount_NotCharged = allSpecies.at(temp_mol_II).getNOTchargeMols();
+
+				if(nrgBoolFlag == ENERGYBASED)
+				{
+
+					// CATALYST LOADED, SUBSTRATE LOADED (+ + ...)
+					if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[1] == TRUENRG))
+					if(checkAvailability(temp_mol_I, temp_mol_II, temp_catAmount_charged, temp_substrateAmount_charged))
+						performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, temp_mol_I, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
+								temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,true);
+
+					// CATALYST LOADED, SUBSTRATE NOT LOADED (+ - ...)
+					if((nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG))
+							performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, temp_mol_I, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
+																temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID,false);
+
+					// CATALYST NOT LOADED, SUBSTRATE LOADED (- + ...)
+					if((nrgBooleanFunction[4] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
+							performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, temp_mol_I, temp_mol_II, idCat, ENDO_COMPLEXFORMATION,
+																temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID, false);
+
+					// CATALYST NOT LOADED, SUBSTRATE NOT LOADED (- - ...)
+					if((nrgBooleanFunction[6] == TRUENRG) || (nrgBooleanFunction[7] == TRUENRG))
+						if(checkAvailability(temp_mol_I, temp_mol_II, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
+							performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, temp_mol_I, temp_mol_II, idCat, COMPLEXFORMATION,
+								temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,true);
+				}else{ // NO ENERGY
+				   if(checkAvailability(temp_mol_I, temp_mol_II, temp_catAmount_TOT, temp_substrateAmount_TOT))
+						performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, temp_mol_I, temp_mol_II, idCat, COMPLEXFORMATION,
+							   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,true);
+				} // end if(nrgBoolFlag == ENERGYBASED)
+			} // end if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION)
+		} // end for all catalysis
+	} // end if if((acs_longInt)allCatalysis.size() > 0)
+    // Store gillespie computational time and start performReaction Times
+    gillespiePartialTimes.push_back(((float)clock() - gillespiePartialTimer) / CLOCKS_PER_SEC);
+    performReactionPartialTimer = clock();
+
+	bool goReaction = true;
+	acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
+	if((acs_longInt)allGillespieScores.size() > 0)
+	{
+            if(debugLevel == SMALL_DEBUG) printGillespieStructure();
+
+            if((acs_longInt)allGillespieScores.size() == 1)
+            {
+                reaction_u = 0;
+            }else{
+                    //cout << allGillespieScores.size() << " " << gillespieCumulativeStepScoreList.size() << endl;
+                reaction_u = returnSelectionIdFromAWeightProbVector(gillespieCumulativeStepScoreList,
+                                                           gillespieCumulativeStepScoreList.at((acs_longInt)gillespieCumulativeStepScoreList.size()-1),
+                                                           tmpRndDoubleGen);
+            }
+            // CREATE RANDOM NUMBER TO COMPUTE THE TIME
+
+            tmpDeltaT = ((1 / gillespieTotalScore) * log(1 / tmpRndDoubleGen()));
+
+            // If deltaT is lower than 10 seconds, it is fixed to 10 second in order to continue the simulation
+            if((tmpDeltaT) > MINIMALRCTTIMEMULTI*minimalTimeForOneMols)
+            {
+                    tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+                    goReaction = false;
+            }
+
+            if(debugLevel == SMALL_DEBUG)
+                    cout << "gillespieTotalScore: " << gillespieTotalScore << " G size: " << allGillespieScores.size() << " delta T " << tmpDeltaT << endl;
+
+            if(goReaction)
+            {
+                if(reactionsTime.size() > 0)
+                {
+                    tempTime = reactionsTime.at(reactionsTime.size() - 1) + tmpDeltaT;
+                    timeSinceTheLastInFlux += tmpDeltaT;
+                }else{
+                    tempTime = 0.0;
+                }
+                reactionsTime.push_back(tempTime);
+                setActualTime(tempTime);
+                gillespieReactionsSelected.push_back(reaction_u);
+                allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+
+                // =^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^
+                // PERFORM REACTION SELECTED BEFORE
+                // ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=
+                // Compute Gillespie mean
+                gillespieMean = gillespieTotalScore / (acs_longInt)allGillespieScores.size();
+                if(gillespieTotalScore > 0){ratioBetweenNewGillTotGill = gillespieNewSpeciesScore / gillespieTotalScore;}else{ratioBetweenNewGillTotGill=0;}
+                if(gillespieTotalScore > 0){ratioBetweenReverseAndTotalScore = reverseReactionsGillScore / gillespieTotalScore;}else{ratioBetweenReverseAndTotalScore=0;}
+                if(!devStd()) // compute Gillespie score vector standard deviation
+                     ExitWithError("devStd", "Problems during Gillespie score standard deviation computation");
+                if(!entropy()) // compute Gillespie score vector entropy
+                     ExitWithError("entropy", "Problems during Gillespie score entropy computation");
+
+                // PERFORM REACTION
+                if(!performReaction(reaction_u, tmpRndDoubleGen, tmpActGEN, tmpActSIM, tmpActSTEP, tmpStoringPath))
+                                ExitWithError("performReaction", "Problems during the reaction computation");
+
+                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                // CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
+                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                if(volumeGrowth) changeVolume(tmpDeltaT);
+
+            }else{
+				gillespieMean = 0;
+				gillespieSD = 0;
+				gillespieEntropy = 0;
+				if(reactionsTime.size() > 0)
+				{
+					tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+					timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+					tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+				}else{
+					tempTime = 0.0;
+				}
+				reactionsTime.push_back(tempTime);
+				setActualTime(tempTime);
+				gillespieReactionsSelected.push_back(0);
+				allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+
+				if(debugLevel >= RUNNING_VERSION)
+								cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
+            }
+
+        }else{ // If there are not possible reactions
+            gillespieMean = 0;
+            gillespieSD = 0;
+            gillespieEntropy = 0;
+            ratioBetweenNewGillTotGill = 0;
+            if(reactionsTime.size() > 0)
+            {
+                    tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+                    timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+                    tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+            }else{
+                    tempTime = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+                    timeSinceTheLastInFlux = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+                    tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+            }
+            reactionsTime.push_back(tempTime);
+            setActualTime(tempTime);
+            gillespieReactionsSelected.push_back(0);
+            allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+
+            if(debugLevel >= RUNNING_VERSION)
+                    cout << "\t\t\t|- NO REACTIONS AT THIS STEP" << endl;
+        } // end if((acs_longInt)allGillespieScores.size() > 0)
+
+        // Store perform reaction time and start remaining processes timer
+        performReactionPartialTimes.push_back(((float)clock() - performReactionPartialTimer) / CLOCKS_PER_SEC);
+        remainingProcessesPartialTimer = clock();
+
+        // If the system is open influx and efflux processes are performed
+        if(influx_rate > 0)
+        {
+        	//     acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
+			if(debugLevel >= SMALL_DEBUG)
+			{
+				cout << "\t\t\t|- REFILL --------" << endl;
+				cout << "\t\t\t\t|- Minimal Time for one molecule: " << minimalTimeForOneMols <<
+												" - Time since the last influx: " << timeSinceTheLastInFlux <<  endl;
+			}
+			// If the time interval betweem two successive influx is enough to introduce at least one new mol...
+			if(timeSinceTheLastInFlux > minimalTimeForOneMols)
+			{
+				if(debugLevel >= SMALL_DEBUG)
+				{
+					cout << "\t\t\t\t|- Time: " << reactionsTime.at(reactionsTime.size() - 1)
+						 << " - Time needed for 1 molecule incoming: " << minimalTimeForOneMols
+						 << " - Time Since The Last InFlux: " << timeSinceTheLastInFlux << endl;
+				}
+				// PERFORM REFILL !!!
+				if(performRefill(timeSinceTheLastInFlux, minimalTimeForOneMols, tmpRndDoubleGen))
+								timeSinceTheLastInFlux = 0;
+			}
+			// PERFORM EFFLUX PROCESS
+			performMoleculesEfflux(tmpDeltaT, tmpRndDoubleGen);
+         }
+
+    // Perform molecule charging
+    if(energy == ENERGYBASED)
+            performDETMoleculesCharging(tmpDeltaT, tmpRndDoubleGen);
+
+    // Perform deterministic complex dissociation
+    if(!performDETComplexDissociation(tmpDeltaT, tmpRndDoubleGen))
+    	ExitWithError("performComplexDissociation", "Problems during the COMPLEX DETERMINISTIC DISSOCIATION process in Gillespie");;
+
+    // COPY and CLEAN OF GILLESPIE STRUCTURES
+    COPYOFallGillespieScores = allGillespieScores;
+    allGillespieScores.clear();
+    gillespieCumulativeStepScoreList.clear();
+
+    // Store remaining processes time
+    remainingProcessesPartialTimes.push_back(((float)clock() - remainingProcessesPartialTimer) / CLOCKS_PER_SEC);
+
+    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::performGillespieComputation end" << endl;
+
+    return flagControl;
+
+}
+
 
 /**
  Compute a single gillespie score according to the amount and peoprieties of the species involved
@@ -3104,8 +3718,8 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
 
         try{
             temp_score = computeSinglGilScore(tmpAmountI, allSpecies.at(tmpIDI).getDiffusionEnh(), allSpecies.at(tmpIDI).getSolubility(),
-                                                                          tmpAmountII, allSpecies.at(tmpIDII).getDiffusionEnh(), allSpecies.at(tmpIDII).getSolubility(),
-                                                                          temp_k_reaction, temp_sameSpecies);
+                                              tmpAmountII, allSpecies.at(tmpIDII).getDiffusionEnh(), allSpecies.at(tmpIDII).getSolubility(),
+                                              temp_k_reaction, temp_sameSpecies);
         }catch(exception&e){
             cout << "temp_score = computeSinglGilScore" << endl;
             cout << "Vectorsize "<< allSpecies.size() << " - position " << tmpIDI << endl;
@@ -3135,8 +3749,10 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
                 for(vector<gillespie>::iterator tmpAllGillIter = allGillespieScores.begin(); tmpAllGillIter != allGillespieScores.end(); tmpAllGillIter++)
                 {
                     if((tmpAllGillIter->getMolI() == tmpMol_I) && (tmpAllGillIter->getMolII() == tmpMol_II) && (tmpAllGillIter->getIdReactionType() == tmp__rctType))
+                    {
                     	gillAlreadyPresent = true;
-                    if(gillAlreadyPresent) break;
+                    	break;
+                    }
                 }
 
             }
@@ -3493,6 +4109,114 @@ bool environment::performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double
 	
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performRefill end" << endl;
 	return refillFlag;
+}
+
+/**
+ This function perform the deterministic dissociation of the complex
+ @version 1.0
+ @date 2013-09-18
+ @param tmpTimeInterval time elapsed since the last reaction
+ @param MTrand &tmp_RndDoubleGen random number generator
+ */
+bool environment::performDETComplexDissociation(acs_double tmpTimeInterval, MTRand& tmp_RndDoubleGen)
+{
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performDETComplexDissociation start" << endl;
+	bool cpxFlug = true;
+	vector<acs_double> tempCpx;
+	vector<acs_longInt> tempID;
+	acs_double cpxDissRate = 0;
+	acs_double totCpxDissRate = 0;
+	acs_int cpxIntegerPart;
+	acs_longInt selectedID;
+	acs_int selectedPosition;
+	acs_int traceID;
+	for(vector<species>::iterator speciesIter = allSpecies.begin(); speciesIter < allSpecies.end(); speciesIter++)
+	{
+		// Insert complexes into a temporary list
+		if((speciesIter->getComplexCutPnt() > 0) && (speciesIter->getAmount() > 0))
+		{
+			cpxDissRate = speciesIter->getAmount() * speciesIter->getComplexDegEnh() * tmpTimeInterval;
+			totCpxDissRate += cpxDissRate;
+			tempCpx.push_back(totCpxDissRate);
+			tempID.push_back(speciesIter->getID());
+			decimalComplexesToDissociate += cpxDissRate;
+		}
+	}
+	if(decimalComplexesToDissociate > 1)
+	{
+		// Computer number of complexes to dissociate
+			if(debugLevel == COMPLEXSTUFF) cout << "-----------" << endl;
+			if(debugLevel == COMPLEXSTUFF) cout << decimalComplexesToDissociate << endl;
+
+		cpxIntegerPart = (acs_int)decimalComplexesToDissociate;
+
+			if(debugLevel == COMPLEXSTUFF) cout << cpxIntegerPart << endl;
+
+		decimalComplexesToDissociate = decimalComplexesToDissociate - cpxIntegerPart;
+
+			if(debugLevel == COMPLEXSTUFF) cout << decimalComplexesToDissociate << endl;
+			if(debugLevel == COMPLEXSTUFF) cout << tempCpx.size() << endl;
+
+			if(decimalComplexesToDissociate < 0) decimalComplexesToDissociate = 0;
+		for(acs_int i = 0; i < cpxIntegerPart; i++)
+		{
+			try{
+				if(tempCpx.size() > 0)
+				{
+					// According to the propensity list the complex is randomly selected
+					selectedPosition = returnSelectionIdFromAWeightProbVector(tempCpx,totCpxDissRate,tmp_RndDoubleGen);
+					selectedID = tempID.at(selectedPosition);
+					if(debugLevel == COMPLEXSTUFF)
+					{	cout << "Pos " << selectedPosition << " - Sel " << selectedID << " - #" << allSpecies.at(selectedID).getAmount()
+							<< " -cat "<< allSpecies.at(selectedID).getCatalyst_ID()
+							<< " -sub " << allSpecies.at(selectedID).getSubstrate_ID() << endl;
+					}
+					// Perform complex dissociation
+					if(!performComplexDissociation(selectedID,allSpecies.at(selectedID).getCatalyst_ID(),allSpecies.at(selectedID).getSubstrate_ID(),tmp_RndDoubleGen))
+						ExitWithError("performComplexDissociation", "Problems during the COMPLEX DETERMINISTIC DISSOCIATION process");
+
+					if(debugLevel == COMPLEXSTUFF) cout << "Residues - #" << allSpecies.at(selectedID).getAmount() << endl;
+
+					// The list of possible dissociation is now recalculeted according to the previous dissociation
+					traceID = 0; // -1 because list starts from 0
+					vector<acs_double>::iterator backIterTempCpx = tempCpx.end()-1;
+					while(backIterTempCpx >= tempCpx.begin()+selectedPosition)
+					{
+						*backIterTempCpx -= allSpecies.at(selectedID).getComplexDegEnh() * tmpTimeInterval;
+						totCpxDissRate -= allSpecies.at(selectedID).getComplexDegEnh() * tmpTimeInterval;
+						backIterTempCpx--;
+						traceID++;
+					}
+					if(allSpecies.at(selectedID).getAmount() == 0)
+					{
+						if(debugLevel == COMPLEXSTUFF)
+						{
+							cout << "Processing the elementID " << tempCpx.size()-traceID  << ": " << *backIterTempCpx << endl;
+							for(acs_int z = 0; z < tempCpx.size(); z++){cout << " - Pos " << z << " " << tempCpx.at(z) << " " << tempID.at(z) << endl;}
+							cout << endl;
+						}
+						tempCpx.erase(tempCpx.end()-traceID);
+						tempID.erase(tempID.end()-traceID);
+						if(debugLevel == COMPLEXSTUFF) for(acs_int z = 0; z < tempCpx.size(); z++){cout << " - Pos " << z << " " << tempCpx.at(z) << " " << tempID.at(z) << endl;cout << endl;}
+					}
+				}else{
+					ExitWithError("performDETComplexDissociation","Although the system compute possibile dissociation, noone complex is available");
+				}
+
+			}
+				catch(exception&e)
+			{
+				cout << "ERROR in Deterministic Complex Dissociation" << endl;
+				cerr << "exceptioncaught:" << e.what() << endl;
+				ExitWithError("performDETComplexDissociation","exceptionerrorthrown");
+			}
+
+		}
+	}
+
+
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performDETComplexDissociation end" << endl;
+	return cpxFlug;
 }
 
 /**
@@ -4261,25 +4985,25 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 									allGillespieScores.at(reaction_u).getCatalysisID(), 
 									tmp_RndDoubleGen))
 			{
-				if(debugLevel >= RUNNING_VERSION)
-					cout << "\t\t\t|- !*!*!* There's no molecule availability to perform CONDENSATION reaction..." << endl;
+			if(debugLevel >= RUNNING_VERSION)
+				cout << "\t\t\t|- !*!*!* There's no molecule availability to perform CONDENSATION reaction..." << endl;
 			}	
-                        // STORE ON FILE TIMES EVERY fileTimesSaveInterval seconds (if at least something happen)
-                        if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
-                                (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
-                        {
-                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
-                                                    allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),
-                                                    allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());
+			// STORE ON FILE TIMES EVERY fileTimesSaveInterval seconds (if at least something happen)
+			if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
+					(getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			{
+				saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
+										allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),
+										allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());
 
-                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
-                            saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            if(getActualTime() > 0)
-                            {
-                                internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
-                            }
-                        }
+				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				if(getActualTime() > 0)
+				{
+					internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
+				}
+			}
 			break;
 		case ENDO_CONDENSATION:
 			if(!perform_endo_Condensation(allGillespieScores.at(reaction_u).getMolI(), //catalyst
@@ -4293,30 +5017,30 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 			{
 				if(debugLevel >= RUNNING_VERSION)
 					cout << "\t\t\t|- !*!*!* There's no molecule availability to perform ENDO CONDENSATION reaction..." << endl;
-                        }
-                        if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
-                           (getActualTime() == 0))
-                        {
-                            try{
-                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
-                                                    allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),
-                                                    allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());
-                            }
-                            catch(exception&e)
-                            {
-                            cout<<" saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());" << endl;
-                            cerr << "exceptioncaught:" << e.what() << endl;
-                            ExitWithError("","exceptionerrorthrown");
-                            }
+            }
+			if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
+			   (getActualTime() == 0))
+			{
+				try{
+				saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
+										allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),
+										allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());
+				}
+				catch(exception&e)
+				{
+				cout<<" saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());" << endl;
+				cerr << "exceptioncaught:" << e.what() << endl;
+				ExitWithError("","exceptionerrorthrown");
+				}
 
-                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
-                            saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            if(getActualTime() > 0)
-                            {
-                                internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
-                            }
-                        }
+				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				if(getActualTime() > 0)
+				{
+					internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
+				}
+			}
 			break;
 		case CLEAVAGE:
 			if(!performCleavage(allGillespieScores.at(reaction_u).getMolI(), // Substrate
@@ -4327,21 +5051,21 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 								tmp_RndDoubleGen))
 				ExitWithError("performCleavage", "Problems during the CLEAVAGE reaction");	
 			
-                        if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
-                           (getActualTime() == 0))
-                        {
-                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
-                                                                            allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
-                                                                            allGillespieScores.at(reaction_u).getMolIII());
+			if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
+			   (getActualTime() == 0))
+			{
+				saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
+										   allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
+										   allGillespieScores.at(reaction_u).getMolIII());
 
-                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
-                            saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            if(getActualTime() > 0)
-                            {
-                                internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
-                            }
-                        }
+				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				if(getActualTime() > 0)
+				{
+					internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
+				}
+			}
 			break;
 		case ENDO_CLEAVAGE:
 			if(!perform_endo_Cleavage(allGillespieScores.at(reaction_u).getMolI(), // Substrate
@@ -4353,25 +5077,27 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 									  tmp_RndDoubleGen))
                                 ExitWithError("perform_endo_Cleavage", "Problems during the ENDOCLEAVAGE reaction");
 			
-                        if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
-                           (getActualTime() == 0))
-                        {
-                            saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
-                                                       allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
-                                                       allGillespieScores.at(reaction_u).getMolIII());
+			if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
+			   (getActualTime() == 0))
+			{
+				saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
+										   allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
+										   allGillespieScores.at(reaction_u).getMolIII());
 
-                            saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
-                            saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-                            if(getActualTime() > 0)
-                            {
-                                internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
-                            }
-                        }
+				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				if(getActualTime() > 0)
+				{
+					internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
+				}
+			}
 			break;
 		case COMPLEXFORMATION:
 			if(!performComplexFormation(allGillespieScores.at(reaction_u).getMolI(), // Catalyst
                                         allGillespieScores.at(reaction_u).getMolII(), // Substrate
+                                        allGillespieScores.at(reaction_u).getMolIII(), // k condensation
+                                        allGillespieScores.at(reaction_u).getMolIV(), // Second Substrate
 										tmp_RndDoubleGen))
 			{
 				if(debugLevel >= RUNNING_VERSION)
@@ -4383,6 +5109,8 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 		case ENDO_COMPLEXFORMATION:
 			if(!perform_endo_ComplexFormation(allGillespieScores.at(reaction_u).getMolI(), // Catalyst
 											  allGillespieScores.at(reaction_u).getMolII(), // Substrate
+											  allGillespieScores.at(reaction_u).getMolIII(), // k condensation
+											  allGillespieScores.at(reaction_u).getMolIV(), // Second Substrate
                                               allGillespieScores.at(reaction_u).getNRGside(), // Energy species side, complex, substrate or both
 											  tmp_RndDoubleGen))
 			{
@@ -4904,7 +5632,8 @@ bool environment::perform_endo_Cleavage(acs_longInt tmpSubstrate, acs_longInt tm
  @tmpCatalysisID Catalysis ID
  @param MTRand& tmp__RndDoubleGen random generator
  */
-bool environment::performComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, MTRand& tmp__RndDoubleGen)
+bool environment::performComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, acs_longInt tmpCatID,
+										  acs_longInt tmpSecSub, MTRand& tmp__RndDoubleGen)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performComplexFormation start" << endl;
 	
@@ -4971,10 +5700,12 @@ bool environment::performComplexFormation(acs_longInt tmpCatalyst, acs_longInt t
 		}
 		// EVALUATE COMPLEX (allSpecies.at(tmpCatalyst).getSequence().length() is definitly the cutting point)
 		if(!complexEvaluation(tmpComplex, tmp__RndDoubleGen, allSpecies.at(tmpCatalyst).getSequence().length(),
-                                                          tmpCatalyst, tmpSubstrate, tempNrgType))
+                              tmpCatalyst, tmpSubstrate, tmpCatID, tmpSecSub, tempNrgType))
 				ExitWithError("complexEvaluation", "Problems during the complex evalutation");
 	}
 	
+	incCpxFormCounter();
+
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performComplexFormation end" << endl;
 		
 	return reactionFlag;	
@@ -4988,7 +5719,8 @@ bool environment::performComplexFormation(acs_longInt tmpCatalyst, acs_longInt t
  @tmpCatalysisID Catalysis ID
  @param MTRand& tmp__RndDoubleGen random generator
  */
-bool environment::perform_endo_ComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, acs_int tmpNRGSide, MTRand& tmp__RndDoubleGen)
+bool environment::perform_endo_ComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, acs_longInt tmpCatID,
+												acs_longInt tmpSecSub, acs_int tmpNRGSide, MTRand& tmp__RndDoubleGen)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::perform_endo_ComplexFormation start" << endl;
 	
@@ -5016,59 +5748,61 @@ bool environment::perform_endo_ComplexFormation(acs_longInt tmpCatalyst, acs_lon
         {
             if((allSpecies.at(tmpCatalyst).getNOTchargeMols() > 0) && (allSpecies.at(tmpSubstrate).getChargeMols() > 0))
             {
-                            allSpecies.at(tmpCatalyst).decrement(volume);
-                            if(!allSpecies.at(tmpCatalyst).getConcentrationFixed())
-                                decMolSpeciesProcedure(tmpCatalyst); // Update overall number of species and molecules
+				allSpecies.at(tmpCatalyst).decrement(volume);
+				if(!allSpecies.at(tmpCatalyst).getConcentrationFixed())
+					decMolSpeciesProcedure(tmpCatalyst); // Update overall number of species and molecules
 
-                            unchargeMolProcess(tmpSubstrate);
-                            allSpecies.at(tmpSubstrate).decrement(volume);
-                            if(!allSpecies.at(tmpSubstrate).getConcentrationFixed())
-                                decMolSpeciesProcedure(tmpSubstrate); // Update overall number of species and molecules
-                            reactionFlag = true;
+				unchargeMolProcess(tmpSubstrate);
+				allSpecies.at(tmpSubstrate).decrement(volume);
+				if(!allSpecies.at(tmpSubstrate).getConcentrationFixed())
+					decMolSpeciesProcedure(tmpSubstrate); // Update overall number of species and molecules
+				reactionFlag = true;
             }else{
-                            ExitWithError("perform_endo_ComplexFormation", "Catalyst or Substrate are not avalaible");
+				ExitWithError("perform_endo_ComplexFormation", "Catalyst or Substrate are not avalaible");
             }
         }
         if(tmpNRGSide == CATALYSTLOAD)
         {
             if((allSpecies.at(tmpCatalyst).getChargeMols() > 0) && (allSpecies.at(tmpSubstrate).getNOTchargeMols() > 0))
             {
-                            unchargeMolProcess(tmpCatalyst);
-                            allSpecies.at(tmpCatalyst).decrement(volume);
-                            if(!allSpecies.at(tmpCatalyst).getConcentrationFixed())
-                                decMolSpeciesProcedure(tmpCatalyst); // Update overall number of species and molecules
+				unchargeMolProcess(tmpCatalyst);
+				allSpecies.at(tmpCatalyst).decrement(volume);
+				if(!allSpecies.at(tmpCatalyst).getConcentrationFixed())
+					decMolSpeciesProcedure(tmpCatalyst); // Update overall number of species and molecules
 
-                            allSpecies.at(tmpSubstrate).decrement(volume);
-                            if(!allSpecies.at(tmpSubstrate).getConcentrationFixed())
-                                decMolSpeciesProcedure(tmpSubstrate); // Update overall number of species and molecules
-                            reactionFlag = true;
+				allSpecies.at(tmpSubstrate).decrement(volume);
+				if(!allSpecies.at(tmpSubstrate).getConcentrationFixed())
+					decMolSpeciesProcedure(tmpSubstrate); // Update overall number of species and molecules
+				reactionFlag = true;
             }else{
-                            ExitWithError("perform_endo_ComplexFormation", "Catalyst or Substrate are not avalaible");
+				ExitWithError("perform_endo_ComplexFormation", "Catalyst or Substrate are not avalaible");
             }
         }
         if(tmpNRGSide == BOTHLOAD)
             {
             if((allSpecies.at(tmpCatalyst).getChargeMols() > 0) && (allSpecies.at(tmpSubstrate).getChargeMols() > 0))
             {
-                            unchargeMolProcess(tmpCatalyst);
-                            allSpecies.at(tmpCatalyst).decrement(volume);
-                            if(!allSpecies.at(tmpCatalyst).getConcentrationFixed())
-                                decMolSpeciesProcedure(tmpCatalyst); // Update overall number of species and molecules
+				unchargeMolProcess(tmpCatalyst);
+				allSpecies.at(tmpCatalyst).decrement(volume);
+				if(!allSpecies.at(tmpCatalyst).getConcentrationFixed())
+					decMolSpeciesProcedure(tmpCatalyst); // Update overall number of species and molecules
 
-                            unchargeMolProcess(tmpSubstrate);
-                            allSpecies.at(tmpSubstrate).decrement(volume);
-                            if(!allSpecies.at(tmpSubstrate).getConcentrationFixed())
-                                decMolSpeciesProcedure(tmpSubstrate); // Update overall number of species and molecules
-                            reactionFlag = true;
+				unchargeMolProcess(tmpSubstrate);
+				allSpecies.at(tmpSubstrate).decrement(volume);
+				if(!allSpecies.at(tmpSubstrate).getConcentrationFixed())
+					decMolSpeciesProcedure(tmpSubstrate); // Update overall number of species and molecules
+				reactionFlag = true;
             }else{
-                            ExitWithError("perform_endo_ComplexFormation", "Catalyst or Substrate are not avalaible");
+				ExitWithError("perform_endo_ComplexFormation", "Catalyst or Substrate are not avalaible");
             }
         }
 	// EVALUATE COMPLEX (allSpecies.at(tmpCatalyst).getSequence().length() is definitly the cutting point)
 	if(!complexEvaluation(tmpComplex, tmp__RndDoubleGen, allSpecies.at(tmpCatalyst).getSequence().length(),
-                                                  tmpCatalyst, tmpSubstrate, ESOERGONIC))
+                                                  tmpCatalyst, tmpSubstrate, tmpCatID, tmpSecSub, ESOERGONIC))
 			ExitWithError("complexEvaluation", "Problems during the complex evalutation");
 		
+	incCpxFormCounter();
+
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::perform_endo_ComplexFormation end" << endl;
 	return reactionFlag;	
 }
@@ -5158,6 +5892,8 @@ bool environment::performComplexDissociation(acs_longInt tmpComplex, acs_longInt
         cerr << "exceptioncaught:" << e.what() << endl;
         ExitWithError("something wrong in performComplexDissociation","exceptionerrorthrown");
     }
+
+    incCpxDissCounter();
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performComplexDissociation end" << endl;
 
@@ -5399,7 +6135,8 @@ bool environment::newSpeciesEvaluationIII(acs_int tmpNewSpecies, MTRand& tmp___R
  @param tmpCpxType ENDOERGONIC or ESOERGONIC
  */
 bool environment::complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGen, acs_int tmpCuttingPnt, 
-                                    acs_int tmpCatalyst_ID, acs_int tmpSubstrate_ID, bool tmpCpxType)
+									acs_longInt tmpCatalyst_ID, acs_longInt tmpSubstrate_ID,
+									acs_longInt tmpCatID, acs_longInt tmpSecSub_ID, bool tmpCpxType)
 {
         if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::ComplexEvaluation start" << endl;
 
@@ -5439,12 +6176,14 @@ bool environment::complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGe
                         acs_double tmpDiffusionContribute = createDiffusionRenforcement(diffusion_contribute, 1);
                         allSpecies.at(i).setDiffusion(tmpDiffusionContribute);
                     }
+                    // Add the second substrate to the complex species
+                    allSpecies.at(i).insertSecSub(tmpSecSub_ID,allCatalysis.at(tmpCatID).getKass(), tmpCatID);
                     break;
                 }
             }
         }
 
-        // IF THE SPECIES IS COMPLETALY NEW
+        // IF THE COMPLEX IS ACTUALLY NEW
         if(tmpNotEqualSeqBetweenTwoSpecies == true)
         {
             // PRECIPITATION AND DIFFUSION CONTRIBUTE COMPUTATION
@@ -5459,6 +6198,9 @@ bool environment::complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGe
                                          tmp___RndDoubleGen, tmpCatalyst_ID, tmpSubstrate_ID, volume, 0, NOTENERGIZABLE));
             incNumberOfCpx();	// Increment number of complex types
             incNumberOfCpxMols();	// Increment number of complex tokens
+
+            // Add the second substrate to the complex species
+            allSpecies.at(allSpecies.size()-1).insertSecSub(tmpSecSub_ID,allCatalysis.at(tmpCatID).getKass(), tmpCatID);
 
             if(tmpCpxType == ESOERGONIC)
             {
@@ -5546,10 +6288,12 @@ void environment::showGlobalParameter()
         cout << "|   ****         ***   *     *          *****   *****                             |" << endl;
         cout << "|  *            *   *  **    *         *       *                                  |" << endl;
         cout << "| *        ***  *   *  * *   *  ****   *       *                                  |" << endl;
-        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION 4.4b20130731.56   |" << endl;
+        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION " << __SOFTVERSION__ << " |" << endl;
         cout << "| *       ****  **     *   * *  ****        *       *                             |" << endl;
         cout << "|  *      *  *  * *    *    **  *           *       *                             |"  << endl;
         cout << "|   ****  ****  *  *   *     *   ***   *****   *****                              |" << endl;
+        cout << "|  												                               |" << endl;
+        cout << "| CAtalytic     Reaction NEtworks      Stochastic Simulator	                   |" << endl;
         cout << "|---------------------------------------------------------------------------------|" << endl;
         cout << endl << endl;
 
@@ -5801,7 +6545,8 @@ void environment::clearAllStructures()
 	decimalMoleculesToEfflux = 0;
 	decimalMoleculesToLoad = 0;
 	decimalMoleculesToUNLOAD = 0;
-        internalTimesStoredCounter = 0;
+	decimalComplexesToDissociate = 0;
+    internalTimesStoredCounter = 0;
 	setActualTime(0);
 	resetReactionsCounter();
 	lastEvaluatedSpeceisForNewReactions = 0;
@@ -5897,6 +6642,7 @@ void environment::resetConcentrationToInitialConditions()
 	decimalMoleculesToEfflux = 0;
 	decimalMoleculesToLoad = 0;
 	decimalMoleculesToUNLOAD = 0;
+	decimalComplexesToDissociate = 0;
 	setActualTime(0);
 	resetReactionsCounter();
 	
@@ -5972,6 +6718,7 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
 
     fidFile << "# =================" << endl;
     fidFile << "# ACSM2S PARAMETERS" << endl;
+    fidFile << "# Ver. " << __SOFTVERSION__ << endl;
     fidFile << "# =================" << endl << endl;
 
     fidFile << "# -----------------" << endl;

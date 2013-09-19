@@ -380,3 +380,22 @@ acs_double species::getLoadedConcentration(acs_double tmpVolume)
 	//cout << "Amount: " << amount << " - Conc:" << concentration << " - Loaded M:" << chargedMols << " -  Conc C:" << tmpConc << endl;
 	return tmpConc;
 }
+/**
+ \Function to insert the second substrate - and k reaction - to the species (complexes list)
+ */
+void species::insertSecSub(acs_longInt tmpID, acs_double tmpK, acs_longInt tmpCat)
+{
+    if(secondSubstrates.size() > 0)
+    {
+    	bool tmpFound = false;
+    	for(acs_int z = 0; z < (acs_int)secondSubstrates.size(); z++)
+    	{
+    		if(secondSubstrates.at(z) == tmpID){tmpFound = true; break;}
+    	}
+    	if(!tmpFound){secondSubstrates.push_back(tmpID); kCond.push_back(tmpK); catalysisIfCpx.push_back(tmpCat);}
+    }else{
+    	secondSubstrates.push_back(tmpID);
+    	kCond.push_back(tmpK);
+    	catalysisIfCpx.push_back(tmpCat);
+    }
+}

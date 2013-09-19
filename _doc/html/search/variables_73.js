@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['savegraphtofile',['saveGraphToFile',['../general_concentration_over_threshold_8m.html#a95b8ff8a27bbc7e771fa2fdd279f2465',1,'generalConcentrationOverThreshold.m']]],
   ['savingmatrix',['savingMatrix',['../namespacebuffered_flux_analysis.html#a20f8e8350b77ca9121474e7177166800',1,'bufferedFluxAnalysis']]],
   ['sccid',['sccID',['../general_concentration_over_threshold_8m.html#a85ff953f350ff6660d5f3489e31d57b6',1,'generalConcentrationOverThreshold.m']]],
   ['scelta_5fconcentrazioni',['scelta_concentrazioni',['../lancia__inizializzatore__acs_8m.html#ac60b74a4c1b8bc23e64008ba1e0c41a8',1,'scelta_concentrazioni():&#160;lancia_inizializzatore_acs.m'],['../start_8m.html#ac60b74a4c1b8bc23e64008ba1e0c41a8',1,'scelta_concentrazioni():&#160;start.m']]],

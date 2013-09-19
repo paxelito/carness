@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="general_concentration_over_threshold_8m" kind="file">
     <compoundname>generalConcentrationOverThreshold.m</compoundname>
       <sectiondef kind="var">
@@ -8,7 +8,7 @@
         <definition>Come back to the original folder end end out</definition>
         <argsstring></argsstring>
         <name>out</name>
-        <initializer>= <ref refid="overall_stats_8m_1a56bd5c817530f9b305b5375d6509978a" kindref="member">generalConcentrationOverThreshold</ref>(params)
+        <initializer>= generalConcentrationOverThreshold(params)
 
 % <ref refid="stats_8m_1aa022cbb28f80299d572def08e7a5ccfd" kindref="member">param.threshold</ref>               # Theshold above which the concentration has <ref refid="general_concentration_over_threshold_8m_1af71dbe52628a3f83a77ab494817525c6" kindref="member">to</ref> be 
 % <ref refid="stats_8m_1afb6aa83fb78c663f3b39be2380842a8b" kindref="member">param.decayTime</ref>               # Reaction decay time
@@ -143,7 +143,7 @@
         <definition>currentDir</definition>
         <argsstring></argsstring>
         <name>currentDir</name>
-        <initializer>= <ref refid="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>()</initializer>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -152,12 +152,26 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="22" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" bodystart="22" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="general_concentration_over_threshold_8m_1af42e186bcb2ad28b937ef14407da1f0d" prot="public" static="no" mutable="no">
+        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> CREATE HEADER ROW IN THE FINAL OUTCOMES FILES</type>
+        <definition>end CREATE HEADER ROW IN THE FINAL OUTCOMES FILES outFilenName</definition>
+        <argsstring></argsstring>
+        <name>outFilenName</name>
+        <initializer>= strcat(<ref refid="general_concentration_over_threshold_8m_1a54768c0405781065cb2f7a16ab8e7d31" kindref="member">currentDate</ref>, &apos;_&apos; , int2str(<ref refid="stats_8m_1aa022cbb28f80299d572def08e7a5ccfd" kindref="member">params.threshold</ref>), &apos;_convOverThreshold_&apos;, int2str(<ref refid="stats_8m_1afb6aa83fb78c663f3b39be2380842a8b" kindref="member">params.decayTime</ref>), &apos;.csv&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="34" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" bodystart="34" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="general_concentration_over_threshold_8m_1a2f1bf22f6a0c3f5791577061e92c0433" prot="public" static="no" mutable="no">
         <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
         <definition>end fidFINAL</definition>
         <argsstring></argsstring>
         <name>fidFINAL</name>
-        <initializer>= fopen(outFilenName,&apos;w&apos;)</initializer>
+        <initializer>= fopen(<ref refid="general_concentration_over_threshold_8m_1af42e186bcb2ad28b937ef14407da1f0d" kindref="member">outFilenName</ref>,&apos;w&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -185,7 +199,7 @@
         <definition>simDirs</definition>
         <argsstring></argsstring>
         <name>simDirs</name>
-        <initializer>= <ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(<ref refid="general_concentration_over_threshold_8m_1ab3186e0326a3b47b2cfcb5577ab5139f" kindref="member">search</ref>)</initializer>
+        <initializer>= dir(<ref refid="general_concentration_over_threshold_8m_1ab3186e0326a3b47b2cfcb5577ab5139f" kindref="member">search</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -231,7 +245,7 @@
     
     <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> isdir(strcat(<ref refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(IDF).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>))
         
-        <ref refid="_kill_spam_8m_1a609f02c862f2843febf3408f688be8e8" kindref="member">disp</ref>(sprintf(&apos;|- Processing <ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref> %s&apos;,<ref refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(IDF).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>))</initializer>
+        <ref refid="_kill_spam_8m_1a609f02c862f2843febf3408f688be8e8" kindref="member">disp</ref>(sprintf(&apos;|- Processing dir %s&apos;,<ref refid="_k_s_search_launcher_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(IDF).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -259,7 +273,7 @@
         <definition>LOAD FIRST SPECIES FILE speciesFiles</definition>
         <argsstring></argsstring>
         <name>speciesFiles</name>
-        <initializer>= <ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;species_1*&apos;)</initializer>
+        <initializer>= dir(&apos;species_1*&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -357,7 +371,7 @@
         <definition>reaction parameters files rcsFiles</definition>
         <argsstring></argsstring>
         <name>rcsFiles</name>
-        <initializer>= <ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;*reactions_parameters*&apos;)</initializer>
+        <initializer>= dir(&apos;*reactions_parameters*&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -846,19 +860,6 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="182" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" bodystart="182" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="general_concentration_over_threshold_8m_1a95b8ff8a27bbc7e771fa2fdd279f2465" prot="public" static="no" mutable="no">
-        <type>If the time is <ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1abdf49e297e2c121f2d09f075ac3d518a" kindref="member">righe</ref> save iGraph structures <ref refid="general_concentration_over_threshold_8m_1af71dbe52628a3f83a77ab494817525c6" kindref="member">to</ref> <ref refid="inizializzatore___a_c_s_8m_1ab790e1eaff8d62837eb7fe789b2b52c6" kindref="member">file</ref> <ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref>(<ref refid="general_concentration_over_threshold_8m_1afc6b38657a313b9f1de2ee356910b6ee" kindref="member">rtime</ref> &gt; <ref refid="general_concentration_over_threshold_8m_1acfa9ac92c0e448faa531767d0e6ab194" kindref="member">rctIDshow</ref> *analysisTimeInterval) <ref refid="_kill_spam_8m_1a609f02c862f2843febf3408f688be8e8" kindref="member">disp</ref>(sprintf(&apos;|-%s|Reaction%d-time</type>
-        <definition>If the time is righe save iGraph structures to file if (rtime &gt; rctIDshow * analysisTimeInterval) disp(sprintf(&apos; |- %s | Reaction %d - time saveGraphToFile(folderCat, reaction, rtime, confparams.nReactions, graph, filextPre)</definition>
-        <argsstring>(folderCat, reaction, rtime, confparams.nReactions, graph, filextPre)</argsstring>
-        <name>saveGraphToFile</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="186" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" bodystart="186" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="general_concentration_over_threshold_8m_1a30a404fc0b2d3c996251dfd4adf5ec51" prot="public" static="no" mutable="no">
         <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> update time intervals</type>
         <definition>: timeInterval</definition>
@@ -920,7 +921,7 @@
         <definition>currentFolder</definition>
         <argsstring></argsstring>
         <name>currentFolder</name>
-        <initializer>= <ref refid="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>()</initializer>
+        <initializer>= <ref refid="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -1707,7 +1708,7 @@
         <argsstring></argsstring>
         <name>j</name>
         <initializer>= 1 : <ref refid="_k_s_search_launcher_8m_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref>
-        <ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="general_concentration_over_threshold_8m_1ae941ef58ebac7f05a8095badde51c07b" kindref="member">fid1</ref>,&apos;%d\t%d\t%d\t%6.4f\t%6.4f\t%d\n&apos;,tmpGraph(j,1),tmpGraph(j,2),tmpGraph(j,3),tmpGraph(j,4),tmpGraph(j,5),tmpGraph(j,6))</initializer>
+        <ref refid="inizializzatore___a_c_s_8m_1aa6dc40efe43a338c9ff278260d95b4d9" kindref="member">fprintf</ref>(<ref refid="inizializzatore___a_c_s_8m_1aff1e821fc5f97a0758f74b5cbd00cacf" kindref="member">fid1</ref>,&apos;%d\t%d\t%d\t%6.4f\t%6.4f\t%d\n&apos;,tmpGraph(j,1),tmpGraph(j,2),tmpGraph(j,3),tmpGraph(j,4),tmpGraph(j,5),tmpGraph(j,6))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -1793,27 +1794,11 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="24" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="general_concentration_over_threshold_8m_1ae60321a34c0a93776384a837b8f3a9e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>disp</definition>
-        <argsstring>(&apos;start analysis...&apos;) if~isdir(&apos;0_statistics&apos;) mkdir(&apos;0_statistics&apos;)</argsstring>
-        <name>disp</name>
-        <param>
-          <type>&apos;start analysis...&apos;</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="26" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="general_concentration_over_threshold_8m_1a442b9e123f36a16e7fca4f2f2f067c27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
-        <definition>end cd</definition>
-        <argsstring>(&apos;0_statistics&apos;)%CREATE HEADER ROW IN THE FINAL OUTCOMES FILES outFilenName</argsstring>
-        <name>cd</name>
+      <memberdef kind="function" id="general_concentration_over_threshold_8m_1a8b0a903208664a3adb1355b79af314b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>if ~isdir</definition>
+        <argsstring>(&apos;0_statistics&apos;) mkdir(&apos;0_statistics&apos;)</argsstring>
+        <name>~isdir</name>
         <param>
           <type>&apos;0_statistics&apos;</type>
         </param>
@@ -1823,7 +1808,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="32" column="1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="29" column="1"/>
       </memberdef>
       <memberdef kind="function" id="general_concentration_over_threshold_8m_1a1e641c44546ec25e735b887393dceb16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="_k_s_search_8m_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
@@ -1831,7 +1816,7 @@
         <argsstring>(outFilenName,&apos;file&apos;) delete(outFilenName)</argsstring>
         <name>exist</name>
         <param>
-          <type>outFilenName</type>
+          <type><ref refid="general_concentration_over_threshold_8m_1af42e186bcb2ad28b937ef14407da1f0d" kindref="member">outFilenName</ref></type>
         </param>
         <param>
           <type>&apos;<ref refid="inizializzatore___a_c_s_8m_1ab790e1eaff8d62837eb7fe789b2b52c6" kindref="member">file</ref>&apos;</type>
@@ -2114,6 +2099,54 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="general_concentration_over_threshold_8m_1afa2000dd097bd23eb8be232e0bdfeb4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>If the time is <ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1abdf49e297e2c121f2d09f075ac3d518a" kindref="member">righe</ref> save iGraph structures <ref refid="general_concentration_over_threshold_8m_1af71dbe52628a3f83a77ab494817525c6" kindref="member">to</ref> <ref refid="inizializzatore___a_c_s_8m_1ab790e1eaff8d62837eb7fe789b2b52c6" kindref="member">file</ref></type>
+        <definition>If the time is righe save iGraph structures to file disp</definition>
+        <argsstring>(sprintf(&apos;|-%s|Reaction%d-time:%6.4f-Save structures&apos;, simDirs(IDF).name, reaction, rtime))</argsstring>
+        <name>disp</name>
+        <param>
+          <type>sprintf(&apos;|-%s|Reaction%d-time:%6.4f-Save structures&apos;, simDirs(IDF).name, reaction, rtime)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="185" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="general_concentration_over_threshold_8m_1ab80c851bb58475542f68e7585b2b1948" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>saveGraphToFile</definition>
+        <argsstring>(folderCat, reaction, rtime, confparams.nReactions, graph, filextPre)</argsstring>
+        <name>saveGraphToFile</name>
+        <param>
+          <type><ref refid="general_concentration_over_threshold_8m_1ac4793cb55101110d228ded89ce9caa48" kindref="member">folderCat</ref></type>
+        </param>
+        <param>
+          <type><ref refid="general_concentration_over_threshold_8m_1a4ba2ecb46f808729569ecce2cc1d34c6" kindref="member">reaction</ref></type>
+        </param>
+        <param>
+          <type><ref refid="general_concentration_over_threshold_8m_1afc6b38657a313b9f1de2ee356910b6ee" kindref="member">rtime</ref></type>
+        </param>
+        <param>
+          <type>confparams.</type>
+          <declname>nReactions</declname>
+        </param>
+        <param>
+          <type><ref refid="general_concentration_over_threshold_8m_1a2745e24fec2a44d51f4452beb1596bd3" kindref="member">graph</ref></type>
+        </param>
+        <param>
+          <type><ref refid="general_concentration_over_threshold_8m_1a527736a425f4f7ead2c2dc9d7b479346" kindref="member">filextPre</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/generalConcentrationOverThreshold.m" line="186" column="1"/>
       </memberdef>
       <memberdef kind="function" id="general_concentration_over_threshold_8m_1af8c5bdc8ca3fe8ddcc8594ecad80560a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -3537,7 +3570,7 @@
         <argsstring>(fid1)</argsstring>
         <name>fclose</name>
         <param>
-          <type><ref refid="general_concentration_over_threshold_8m_1ae941ef58ebac7f05a8095badde51c07b" kindref="member">fid1</ref></type>
+          <type><ref refid="inizializzatore___a_c_s_8m_1aff1e821fc5f97a0758f74b5cbd00cacf" kindref="member">fid1</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -3622,7 +3655,7 @@
           <type><ref refid="read_parameters_8m_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="read_parameters_8m_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
         </param>
         <param>
-          <type>&apos;<ref refid="start_8m_1a4af22ee598eb5fcc4d0ff8439823e600" kindref="member">nGEN</ref>&apos;</type>
+          <type>&apos;<ref refid="lancia__inizializzatore__acs_8m_1a82556659f7ba7219e55a18e9b9e63873" kindref="member">nGEN</ref>&apos;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -3826,7 +3859,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="general_concentration_over_threshold_8m_1a34c820385e9209f49c18739329ad9206" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="general_concentration_over_threshold_8m_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref><sp/>=<sp/><ref refid="overall_stats_8m_1a56bd5c817530f9b305b5375d6509978a" kindref="member">generalConcentrationOverThreshold</ref>(params)</highlight></codeline>
+<codeline lineno="1" refid="general_concentration_over_threshold_8m_1a34c820385e9209f49c18739329ad9206" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="general_concentration_over_threshold_8m_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref><sp/>=<sp/>generalConcentrationOverThreshold(params)</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal">%<sp/><ref refid="general_concentration_over_threshold_8m_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.threshold<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Theshold<sp/>above<sp/>which<sp/>the<sp/>concentration<sp/>has<sp/><ref refid="general_concentration_over_threshold_8m_1af71dbe52628a3f83a77ab494817525c6" kindref="member">to</ref><sp/>be<sp/></highlight></codeline>
 <codeline lineno="4"><highlight class="normal">%<sp/><ref refid="general_concentration_over_threshold_8m_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.decayTime<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Reaction<sp/>decay<sp/>time</highlight></codeline>
@@ -3855,26 +3888,26 @@
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>~isdir(&apos;0_statistics&apos;)</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1abcaf3fe79479456b56924747f1bca0d9" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(&apos;0_statistics&apos;)</highlight></codeline>
 <codeline lineno="33"><highlight class="normal">%<sp/>CREATE<sp/>HEADER<sp/>ROW<sp/>IN<sp/>THE<sp/>FINAL<sp/>OUTCOMES<sp/>FILES</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">outFilenName<sp/>=<sp/>strcat(<ref refid="general_concentration_over_threshold_8m_1a54768c0405781065cb2f7a16ab8e7d31" kindref="member">currentDate</ref>,<sp/>&apos;_&apos;<sp/>,<sp/>int2str(params.<ref refid="general_concentration_over_threshold_8m_1aa022cbb28f80299d572def08e7a5ccfd" kindref="member">threshold</ref>),<sp/>&apos;_convOverThreshold_&apos;,<sp/>int2str(params.<ref refid="general_concentration_over_threshold_8m_1abd7ce2c4bf5f563b1e70731f58e8c57d" kindref="member">decayTime</ref>),<sp/>&apos;.csv&apos;);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="conc_analysis_8m_1ab05bb9470ea34cab3ab1c2c9e748840b" kindref="member">exist</ref>(outFilenName,&apos;<ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref>&apos;)</highlight></codeline>
+<codeline lineno="34" refid="general_concentration_over_threshold_8m_1af42e186bcb2ad28b937ef14407da1f0d" refkind="member"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1af42e186bcb2ad28b937ef14407da1f0d" kindref="member">outFilenName</ref><sp/>=<sp/>strcat(<ref refid="general_concentration_over_threshold_8m_1a54768c0405781065cb2f7a16ab8e7d31" kindref="member">currentDate</ref>,<sp/>&apos;_&apos;<sp/>,<sp/>int2str(params.<ref refid="general_concentration_over_threshold_8m_1aa022cbb28f80299d572def08e7a5ccfd" kindref="member">threshold</ref>),<sp/>&apos;_convOverThreshold_&apos;,<sp/>int2str(params.<ref refid="general_concentration_over_threshold_8m_1abd7ce2c4bf5f563b1e70731f58e8c57d" kindref="member">decayTime</ref>),<sp/>&apos;.csv&apos;);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="conc_analysis_8m_1ab05bb9470ea34cab3ab1c2c9e748840b" kindref="member">exist</ref>(<ref refid="general_concentration_over_threshold_8m_1af42e186bcb2ad28b937ef14407da1f0d" kindref="member">outFilenName</ref>,&apos;<ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref>&apos;)</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>delete(outFilenName);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="38" refid="general_concentration_over_threshold_8m_1a2f1bf22f6a0c3f5791577061e92c0433" refkind="member"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1a2f1bf22f6a0c3f5791577061e92c0433" kindref="member">fidFINAL</ref><sp/>=<sp/>fopen(outFilenName,&apos;w&apos;);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><ref refid="garbage_search_8m_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(<ref refid="general_concentration_over_threshold_8m_1a2f1bf22f6a0c3f5791577061e92c0433" kindref="member">fidFINAL</ref>,&apos;\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n&apos;,...</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;Reaction<sp/>Probability&apos;,&apos;Energy<sp/>Concentration&apos;,&apos;Tot<sp/>over<sp/>Threshold&apos;,&apos;Real<sp/>ACSs&apos;,&apos;in<sp/>ACSs&apos;,...</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;Leaves&apos;,&apos;by<sp/>Chain&apos;,&apos;Overlap&apos;,&apos;Autocatalysis&apos;,&apos;in<sp/>ACSs<sp/>(W)&apos;,&apos;Leaves<sp/>(W)&apos;,&apos;by<sp/>Chain<sp/>(W)&apos;,&apos;Overlap<sp/>(W)&apos;,&apos;Autocatalysis<sp/>(W)&apos;,...</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;[<ref refid="general_concentration_over_threshold_8m_1ad72e1068795c577213481e5db7f3e925" kindref="member">ACS</ref>]&apos;,&apos;[Leaves]&apos;,&apos;[Chains]&apos;,&apos;[Self]&apos;,&apos;Endo<sp/>Cond&apos;,&apos;Cond&apos;,&apos;Endo<sp/>Cleavage&apos;,&apos;Cleavage&apos;,&apos;Wasted<sp/><ref refid="classspecies" kindref="compound" tooltip="This class contains declarations of the species class. ">species</ref>&apos;);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;[<ref refid="general_concentration_over_threshold_8m_1ad72e1068795c577213481e5db7f3e925" kindref="member">ACS</ref>]&apos;,&apos;[Leaves]&apos;,&apos;[Chains]&apos;,&apos;[Self]&apos;,&apos;Endo<sp/>Cond&apos;,&apos;Cond&apos;,&apos;Endo<sp/>Cleavage&apos;,&apos;Cleavage&apos;,&apos;Wasted<sp/><ref refid="classspecies" kindref="compound">species</ref>&apos;);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><ref refid="conc_analysis_8m_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fidFINAL);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(params.<ref refid="overall_stats_8m_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>);<sp/>%<sp/>Come<sp/>back<sp/><ref refid="general_concentration_over_threshold_8m_1af71dbe52628a3f83a77ab494817525c6" kindref="member">to</ref><sp/>the<sp/>original<sp/>folder</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal">%<sp/>READ<sp/>ALL<sp/>THE<sp/>DIRECTORY<sp/>CONTAINING<sp/>SIMULATIONS</highlight></codeline>
 <codeline lineno="48" refid="general_concentration_over_threshold_8m_1ab3186e0326a3b47b2cfcb5577ab5139f" refkind="member"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1ab3186e0326a3b47b2cfcb5577ab5139f" kindref="member">search</ref><sp/>=<sp/>strcat(&apos;*&apos;,params.<ref refid="general_concentration_over_threshold_8m_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>,&apos;*&apos;);</highlight></codeline>
-<codeline lineno="49" refid="general_concentration_over_threshold_8m_1aae5035eb84b89176ed5b06e136325eff" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(<ref refid="general_concentration_over_threshold_8m_1ab3186e0326a3b47b2cfcb5577ab5139f" kindref="member">search</ref>);</highlight></codeline>
+<codeline lineno="49" refid="general_concentration_over_threshold_8m_1aae5035eb84b89176ed5b06e136325eff" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/>dir(<ref refid="general_concentration_over_threshold_8m_1ab3186e0326a3b47b2cfcb5577ab5139f" kindref="member">search</ref>);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal">%<sp/>File<sp/>Containing<sp/>all<sp/>Times</highlight></codeline>
 <codeline lineno="52" refid="general_concentration_over_threshold_8m_1a47868b053902b822eab5c738a67a633a" refkind="member"><highlight class="normal">%<ref refid="general_concentration_over_threshold_8m_1a47868b053902b822eab5c738a67a633a" kindref="member">times</ref><sp/>=<sp/>0:params.<ref refid="all_times_analysis_8m_1a5318eae09f2b8ac76b2d6df39ba9c1cd" kindref="member">deltaT</ref>:params.<ref refid="all_times_analysis_8m_1aa9758857dd92f7845934f06daa7c4120" kindref="member">totT</ref>;</highlight></codeline>
@@ -3890,7 +3923,7 @@
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>isdir(strcat(<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="general_concentration_over_threshold_8m_1a8acdc1bee73718b1ffcfc7eb26968f48" kindref="member">IDF</ref>).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>))</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>disp(sprintf(&apos;|-<sp/>Processing<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref><sp/>%s&apos;,<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="general_concentration_over_threshold_8m_1a8acdc1bee73718b1ffcfc7eb26968f48" kindref="member">IDF</ref>).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>disp(sprintf(&apos;|-<sp/>Processing<sp/>dir<sp/>%s&apos;,<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="general_concentration_over_threshold_8m_1a8acdc1bee73718b1ffcfc7eb26968f48" kindref="member">IDF</ref>).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>));</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>Go<sp/>into<sp/>the<sp/>results<sp/>folder</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(strcat(<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="general_concentration_over_threshold_8m_1a8acdc1bee73718b1ffcfc7eb26968f48" kindref="member">IDF</ref>).name,&apos;/res&apos;));</highlight></codeline>
@@ -3899,7 +3932,7 @@
 <codeline lineno="71" refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref><sp/>=<sp/>readParameters();</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>Select<sp/>Times<sp/><ref refid="general_concentration_over_threshold_8m_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/><ref refid="classreactions" kindref="compound">reactions</ref><sp/>files<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="74" refid="general_concentration_over_threshold_8m_1af5703745c2c2a6af7f62da460994d9c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1af5703745c2c2a6af7f62da460994d9c2" kindref="member">speciesFiles</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;species_1*&apos;);</highlight></codeline>
+<codeline lineno="74" refid="general_concentration_over_threshold_8m_1af5703745c2c2a6af7f62da460994d9c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1af5703745c2c2a6af7f62da460994d9c2" kindref="member">speciesFiles</ref><sp/>=<sp/>dir(&apos;species_1*&apos;);</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref><sp/>&lt;<sp/>2</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1af837f695e5b67c86016c1a82608c38b4" kindref="member">nrg</ref><sp/>=<sp/>1;</highlight></codeline>
@@ -3924,10 +3957,10 @@
 <codeline lineno="96" refid="general_concentration_over_threshold_8m_1a05c5bf0305e5d58d4dc25bd89a025678" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a05c5bf0305e5d58d4dc25bd89a025678" kindref="member">folderSub</ref><sp/>=<sp/>strcat(&apos;__0_iGraph_SUB_&apos;,<sp/>int2str(params.decayTime));</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>~isdir(strcat(&apos;../../&apos;,<ref refid="general_concentration_over_threshold_8m_1ac4793cb55101110d228ded89ce9caa48" kindref="member">folderCat</ref>))</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(strcat(&apos;../../&apos;,<ref refid="general_concentration_over_threshold_8m_1ac4793cb55101110d228ded89ce9caa48" kindref="member">folderCat</ref>));</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1abcaf3fe79479456b56924747f1bca0d9" kindref="member">mkdir</ref>(strcat(&apos;../../&apos;,<ref refid="general_concentration_over_threshold_8m_1ac4793cb55101110d228ded89ce9caa48" kindref="member">folderCat</ref>));</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>~isdir(strcat(&apos;../../&apos;,<ref refid="general_concentration_over_threshold_8m_1a05c5bf0305e5d58d4dc25bd89a025678" kindref="member">folderSub</ref>))</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(strcat(&apos;../../&apos;,<ref refid="general_concentration_over_threshold_8m_1a05c5bf0305e5d58d4dc25bd89a025678" kindref="member">folderSub</ref>));</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1abcaf3fe79479456b56924747f1bca0d9" kindref="member">mkdir</ref>(strcat(&apos;../../&apos;,<ref refid="general_concentration_over_threshold_8m_1a05c5bf0305e5d58d4dc25bd89a025678" kindref="member">folderSub</ref>));</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -3945,7 +3978,7 @@
 <codeline lineno="117" refid="general_concentration_over_threshold_8m_1a5cb5865443d8f156213280c070385e0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a5cb5865443d8f156213280c070385e0d" kindref="member">concVec</ref><sp/>=<sp/>tmpConc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/><ref refid="general_concentration_over_threshold_8m_1a4ba2ecb46f808729569ecce2cc1d34c6" kindref="member">reaction</ref><sp/>parameters<sp/>files</highlight></codeline>
-<codeline lineno="120" refid="general_concentration_over_threshold_8m_1aa7a414dad4901fc05688608a49adfd7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1aa7a414dad4901fc05688608a49adfd7e" kindref="member">rcsFiles</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;*reactions_parameters*&apos;);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120" refid="general_concentration_over_threshold_8m_1aa7a414dad4901fc05688608a49adfd7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1aa7a414dad4901fc05688608a49adfd7e" kindref="member">rcsFiles</ref><sp/>=<sp/>dir(&apos;*reactions_parameters*&apos;);<sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="122" refid="general_concentration_over_threshold_8m_1a527736a425f4f7ead2c2dc9d7b479346" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a527736a425f4f7ead2c2dc9d7b479346" kindref="member">filextPre</ref><sp/>=<sp/>strcat(&apos;_&apos;,<ref refid="namespacefrom_within2_between_1a6f865e0e97da35920db45f5491a1300f" kindref="member">zeroBeforeStrNum</ref>(<ref refid="general_concentration_over_threshold_8m_1aeef3e34bd64eec758eac16f004cdcef0" kindref="member">IDsimFOLDER</ref>,<sp/>length(<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>)),int2str(IDsimFOLDER));</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
@@ -4011,7 +4044,7 @@
 <codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>If<sp/>the<sp/>time<sp/>is<sp/><ref refid="crea__tutte__le__combinazioni__di__elementi_8m_1abdf49e297e2c121f2d09f075ac3d518a" kindref="member">righe</ref><sp/>save<sp/>iGraph<sp/>structures<sp/><ref refid="general_concentration_over_threshold_8m_1af71dbe52628a3f83a77ab494817525c6" kindref="member">to</ref><sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
 <codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>(rtime<sp/>&gt;<sp/><ref refid="general_concentration_over_threshold_8m_1acfa9ac92c0e448faa531767d0e6ab194" kindref="member">rctIDshow</ref><sp/>*<sp/>analysisTimeInterval)</highlight></codeline>
 <codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>disp(sprintf(&apos;<sp/><sp/><sp/><sp/><sp/>|-<sp/>%s<sp/>|<sp/>Reaction<sp/>%d<sp/>-<sp/>time:<sp/>%6.4<ref refid="conc_analysis_8m_1a9c5a71c46b1abb8b7df5ebeac6c81535" kindref="member">f</ref><sp/>-<sp/>Save<sp/>structures&apos;,<sp/>simDirs(<ref refid="general_concentration_over_threshold_8m_1a8acdc1bee73718b1ffcfc7eb26968f48" kindref="member">IDF</ref>).name,<sp/><ref refid="general_concentration_over_threshold_8m_1a4ba2ecb46f808729569ecce2cc1d34c6" kindref="member">reaction</ref>,<sp/>rtime));</highlight></codeline>
-<codeline lineno="186" refid="general_concentration_over_threshold_8m_1a95b8ff8a27bbc7e771fa2fdd279f2465" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a95b8ff8a27bbc7e771fa2fdd279f2465" kindref="member">saveGraphToFile</ref>(folderCat,reaction,rtime,<ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="lancia__inizializzatore__acs_8m_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref>,<ref refid="general_concentration_over_threshold_8m_1a91819eaefb434ac459f17b3caa03713d" kindref="member">graph</ref>,<ref refid="general_concentration_over_threshold_8m_1a527736a425f4f7ead2c2dc9d7b479346" kindref="member">filextPre</ref>);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1ab80c851bb58475542f68e7585b2b1948" kindref="member">saveGraphToFile</ref>(folderCat,reaction,rtime,<ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="lancia__inizializzatore__acs_8m_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref>,<ref refid="general_concentration_over_threshold_8m_1a91819eaefb434ac459f17b3caa03713d" kindref="member">graph</ref>,<ref refid="general_concentration_over_threshold_8m_1a527736a425f4f7ead2c2dc9d7b479346" kindref="member">filextPre</ref>);</highlight></codeline>
 <codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1af8c5bdc8ca3fe8ddcc8594ecad80560a" kindref="member">saveGraphSUBToFile</ref>(folderSub,reaction,rtime,<ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.nReactions,<ref refid="general_concentration_over_threshold_8m_1a0c738fa68cf19f3aeef6b6a7a723577c" kindref="member">graphSUB</ref>,filextPre);</highlight></codeline>
 <codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1acfa9ac92c0e448faa531767d0e6ab194" kindref="member">rctIDshow</ref><sp/>=<sp/><ref refid="general_concentration_over_threshold_8m_1acfa9ac92c0e448faa531767d0e6ab194" kindref="member">rctIDshow</ref><sp/>+<sp/>1;</highlight></codeline>
 <codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1acc16e80f122cc11cf1570c53597afb19" kindref="member">printTemporalMessage</ref><sp/>=<sp/>0;</highlight></codeline>
@@ -4515,7 +4548,7 @@
 <codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(&apos;./res&apos;);</highlight></codeline>
 <codeline lineno="688"><highlight class="normal">end</highlight></codeline>
 <codeline lineno="689"><highlight class="normal"></highlight></codeline>
-<codeline lineno="690"><highlight class="normal"><ref refid="all_times_analysis_8m_1a370f3dd25136a73d619eba0aa2e3bb4b" kindref="member">function</ref><sp/><ref refid="general_concentration_over_threshold_8m_1a95b8ff8a27bbc7e771fa2fdd279f2465" kindref="member">saveGraphToFile</ref>(tmpDir,tmpRct,tmprTime,tmpRcts,tmpGraph,tmpFilextPre)</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><ref refid="all_times_analysis_8m_1a370f3dd25136a73d619eba0aa2e3bb4b" kindref="member">function</ref><sp/><ref refid="general_concentration_over_threshold_8m_1ab80c851bb58475542f68e7585b2b1948" kindref="member">saveGraphToFile</ref>(tmpDir,tmpRct,tmprTime,tmpRcts,tmpGraph,tmpFilextPre)</highlight></codeline>
 <codeline lineno="691" refid="general_concentration_over_threshold_8m_1aacf946bee61c4c535a7bf6d85f55f66a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="all_times_analysis_8m_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref><sp/>=<sp/>cd();</highlight></codeline>
 <codeline lineno="692" refid="general_concentration_over_threshold_8m_1abf4ae8c34e865742e8ee979ed6e03384" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cd(strcat(&apos;../../&apos;,tmpDir));</highlight></codeline>
 <codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1aacf946bee61c4c535a7bf6d85f55f66a" kindref="member">tmpStrZeros</ref><sp/>=<sp/><ref refid="namespacefrom_within2_between_1a6f865e0e97da35920db45f5491a1300f" kindref="member">zeroBeforeStrNum</ref>(tmpRct,<sp/>tmpRcts);</highlight></codeline>
@@ -4574,8 +4607,8 @@
 <codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.nReactions<sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
 <codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="start_8m_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref>&apos;)</highlight></codeline>
 <codeline lineno="748"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="start_8m_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
-<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>&apos;)</highlight></codeline>
-<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="lancia__inizializzatore__acs_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>&apos;)</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
 <codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>&apos;)</highlight></codeline>
 <codeline lineno="752"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general_concentration_over_threshold_8m_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="start_8m_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="753"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="general_concentration_over_threshold_8m_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;ECConcentration&apos;)</highlight></codeline>

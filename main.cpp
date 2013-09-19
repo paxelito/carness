@@ -1,7 +1,7 @@
 /** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.4 (20130731.56)
  * \author Alessandro Filisetti
- * \version 4.4 (20130731.56)
- * \date 2013-07-31
+ * \version 4.5 (20130919.57)
+ * \date 2013-09-19
  * sourceforge repository -- https://carness.svn.sourceforge.net/svnroot/carness/
  * git repository -- https://github.com/paxelito/carness
  *
@@ -159,7 +159,7 @@
 * Columns description (each field is delimited using "\t"):
  *	  <table>
  *		<tr>
- *			<td>Identificator</td><td>Catalyst ID</td><td>Reaction ID</td><td>Catalysis counter</td><td>K condensation</td><td>K cleavage</td><td>K Complex Association</td>
+ *			<td>Identificator</td><td>Catalyst ID</td><td>Reaction ID</td><td>Catalysis counter</td><td>K condensation</td><td>K cleavage</td><td>K Complex Association</td><td>Complex creation substrate target</td>
  *		</tr>
  *	  </table>
  *		- <i>Identificator</i>: Catalysis ID
@@ -461,7 +461,7 @@ int main (int argc, char *argv[]) {
                             if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
                             {
                                 //GILLESPIE COMPUTATION
-                                if(!puddle->performGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
+                                if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
                                         ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
 
                                 // DISPLAY SIMULATION CONTROL VARIABLES
@@ -503,7 +503,9 @@ int main (int argc, char *argv[]) {
                                                     << "\t\t|- Cond: " << puddle->getCondensationCounter()
                                                     << " - Endo Cond: " << puddle->getEndoCondensationCounter() << endl
                                                     << "\t\t|- Cleav: " << puddle->getCleavageCounter()
-                                                    << " - Endo Cleav: " << puddle->getEndoCleavageCounter() << endl;
+                                                    << " - Endo Cleav: " << puddle->getEndoCleavageCounter() << endl
+                                                	<< "\t\t|- Cpx: " << puddle->getCpxFormCounter()
+                                                	<< " - Cpx Diss: " << puddle->getCpxDissCounter() << endl;
                                         }
                                 }
 

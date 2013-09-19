@@ -7,7 +7,7 @@
  *
  */
 
-//prova2
+//prova2 cin.ignore().get();
 
 #ifndef ACS_HEADERS
 #define ACS_HEADERS
@@ -39,6 +39,8 @@ typedef unsigned int acs_int;
 // CONSTANTS
 //----------
 
+#define __SOFTVERSION__ "4.5b20130919.57"
+
 // DEBUG LEVELS
 
 #define MINIMAL_PROMPT -1
@@ -47,6 +49,7 @@ typedef unsigned int acs_int;
 #define MEDIUM_DEBUG 2
 #define HIGH_DEBUG 3
 #define FINDERRORDURINGRUNTIME -10
+#define COMPLEXSTUFF -20
 
 // RANDOM INITIALIZATION
 #define RANDOMRANGE random()

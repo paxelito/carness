@@ -48,13 +48,13 @@ C\-O\-N\-T\-A\-I\-N\-I\-N\-G S\-I\-M\-U\-L\-A\-T\-I\-O\-N\-S \hyperlink{_k_s_sea
 \item 
 \hyperlink{conc_analysis_8m_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{garbage_search_8m_ad509473eed851f9f5ff4157c02ec8618}{tmp\-Folder} = strcat('$\ast$',\hyperlink{overall_stats_8m_aa671e3345005bd599e662bcaa115b18a}{param.\-sim\-Folder},'$\ast$')
 \item 
-\hyperlink{garbage_search_8m_aae5035eb84b89176ed5b06e136325eff}{sim\-Dirs} = \hyperlink{start_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir}(\hyperlink{_kill_spam_8m_ad509473eed851f9f5ff4157c02ec8618}{tmp\-Folder})
+\hyperlink{garbage_search_8m_aae5035eb84b89176ed5b06e136325eff}{sim\-Dirs} = dir(\hyperlink{_kill_spam_8m_ad509473eed851f9f5ff4157c02ec8618}{tmp\-Folder})
 \item 
 \hyperlink{garbage_search_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid} = fopen('A\-L\-L\-\_\-garbage.\-txt','w')
 \item 
 for \hyperlink{garbage_search_8m_a7265972fe485274cfff77a9bb07b8fce}{x}
 \item 
-creating \hyperlink{classspecies}{species} matrix \hyperlink{garbage_search_8m_a0cf551ea63e8b67362ae2ab776072d1f}{s\-Files} = \hyperlink{start_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir}('\hyperlink{classspecies}{species}$\ast$')
+creating \hyperlink{classspecies}{species} matrix \hyperlink{garbage_search_8m_a0cf551ea63e8b67362ae2ab776072d1f}{s\-Files} = dir('\hyperlink{classspecies}{species}$\ast$')
 \item 
 \hyperlink{garbage_search_8m_a7da0c82834970c5f3c3d9224ab832577}{species\-File} = \hyperlink{garbage_search_8m_a0cf551ea63e8b67362ae2ab776072d1f}{s\-Files}(length(\hyperlink{garbage_search_8m_a0cf551ea63e8b67362ae2ab776072d1f}{s\-Files})).\hyperlink{garbage_search_8m_abbf559a76fab59203496b0847ab9502a}{name}
 \item 
@@ -72,7 +72,7 @@ while \hyperlink{_k_s_search_8m_a9c951ebd5bc3f1adce943bee1255f4d6}{continua} \hy
 \item 
 \hyperlink{garbage_search_8m_a02a2184ac978f50472408ca644862302}{s\-Values} = \hyperlink{conc_analysis_8m_a028ac102a731e62fb0a7439381f566c1}{fscanf}(\hyperlink{_k_s_search_launcher_8m_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\%\hyperlink{conc_analysis_8m_a9c5a71c46b1abb8b7df5ebeac6c81535}{f}',12)
 \item 
-creating \hyperlink{classreactions}{reactions} matrix \hyperlink{garbage_search_8m_ad75735665492cabd747370126464fddf}{r\-Files} = \hyperlink{start_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir}('\hyperlink{classreactions}{reactions}$\ast$')
+creating \hyperlink{classreactions}{reactions} matrix \hyperlink{garbage_search_8m_ad75735665492cabd747370126464fddf}{r\-Files} = dir('\hyperlink{classreactions}{reactions}$\ast$')
 \item 
 \hyperlink{garbage_search_8m_a4c72dba1fe2ee2fbcc699262a8d0c624}{reactions\-File} = \hyperlink{_k_s_search_8m_ad75735665492cabd747370126464fddf}{r\-Files}(length(\hyperlink{_k_s_search_8m_ad75735665492cabd747370126464fddf}{r\-Files})-\/1).\hyperlink{garbage_search_8m_abbf559a76fab59203496b0847ab9502a}{name}
 \item 
@@ -91,7 +91,7 @@ dividing into condensations \\*
 \item 
 for \hyperlink{garbage_search_8m_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}
 \item 
-creating \hyperlink{classcatalysis}{catalysis} matrix \hyperlink{garbage_search_8m_a9eab57ccb42a39c704f47dc30e4f4515}{c\-Files} = \hyperlink{start_8m_a4ca269cf93df1b512b52174c1a256fe5}{dir}('\hyperlink{classcatalysis}{catalysis}$\ast$')
+creating \hyperlink{classcatalysis}{catalysis} matrix \hyperlink{garbage_search_8m_a9eab57ccb42a39c704f47dc30e4f4515}{c\-Files} = dir('\hyperlink{classcatalysis}{catalysis}$\ast$')
 \item 
 \hyperlink{garbage_search_8m_a33e70cf5b45cb59005b82d30202f0b69}{catalysis\-File} = \hyperlink{_k_s_search_8m_a9eab57ccb42a39c704f47dc30e4f4515}{c\-Files}(length(\hyperlink{_k_s_search_8m_a9eab57ccb42a39c704f47dc30e4f4515}{c\-Files})).\hyperlink{garbage_search_8m_abbf559a76fab59203496b0847ab9502a}{name}
 \item 
@@ -305,7 +305,7 @@ Definition at line 92 of file garbage\-Search.\-m.
 
 \hypertarget{garbage_search_8m_a9eab57ccb42a39c704f47dc30e4f4515}{\index{garbage\-Search.\-m@{garbage\-Search.\-m}!c\-Files@{c\-Files}}
 \index{c\-Files@{c\-Files}!garbageSearch.m@{garbage\-Search.\-m}}
-\subsubsection[{c\-Files}]{\setlength{\rightskip}{0pt plus 5cm}creating {\bf catalysis} matrix c\-Files = {\bf dir}('{\bf catalysis}$\ast$')}}\label{garbage_search_8m_a9eab57ccb42a39c704f47dc30e4f4515}
+\subsubsection[{c\-Files}]{\setlength{\rightskip}{0pt plus 5cm}creating {\bf catalysis} matrix c\-Files = dir('{\bf catalysis}$\ast$')}}\label{garbage_search_8m_a9eab57ccb42a39c704f47dc30e4f4515}
 
 
 Definition at line 88 of file garbage\-Search.\-m.
@@ -470,7 +470,7 @@ Definition at line 57 of file garbage\-Search.\-m.
 
 \hypertarget{garbage_search_8m_ad75735665492cabd747370126464fddf}{\index{garbage\-Search.\-m@{garbage\-Search.\-m}!r\-Files@{r\-Files}}
 \index{r\-Files@{r\-Files}!garbageSearch.m@{garbage\-Search.\-m}}
-\subsubsection[{r\-Files}]{\setlength{\rightskip}{0pt plus 5cm}creating {\bf reactions} matrix r\-Files = {\bf dir}('{\bf reactions}$\ast$')}}\label{garbage_search_8m_ad75735665492cabd747370126464fddf}
+\subsubsection[{r\-Files}]{\setlength{\rightskip}{0pt plus 5cm}creating {\bf reactions} matrix r\-Files = dir('{\bf reactions}$\ast$')}}\label{garbage_search_8m_ad75735665492cabd747370126464fddf}
 
 
 Definition at line 53 of file garbage\-Search.\-m.
@@ -484,14 +484,14 @@ Definition at line 59 of file garbage\-Search.\-m.
 
 \hypertarget{garbage_search_8m_a0cf551ea63e8b67362ae2ab776072d1f}{\index{garbage\-Search.\-m@{garbage\-Search.\-m}!s\-Files@{s\-Files}}
 \index{s\-Files@{s\-Files}!garbageSearch.m@{garbage\-Search.\-m}}
-\subsubsection[{s\-Files}]{\setlength{\rightskip}{0pt plus 5cm}creating {\bf species} matrix s\-Files = {\bf dir}('{\bf species}$\ast$')}}\label{garbage_search_8m_a0cf551ea63e8b67362ae2ab776072d1f}
+\subsubsection[{s\-Files}]{\setlength{\rightskip}{0pt plus 5cm}creating {\bf species} matrix s\-Files = dir('{\bf species}$\ast$')}}\label{garbage_search_8m_a0cf551ea63e8b67362ae2ab776072d1f}
 
 
 Definition at line 29 of file garbage\-Search.\-m.
 
 \hypertarget{garbage_search_8m_aae5035eb84b89176ed5b06e136325eff}{\index{garbage\-Search.\-m@{garbage\-Search.\-m}!sim\-Dirs@{sim\-Dirs}}
 \index{sim\-Dirs@{sim\-Dirs}!garbageSearch.m@{garbage\-Search.\-m}}
-\subsubsection[{sim\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}sim\-Dirs = {\bf dir}({\bf tmp\-Folder})}}\label{garbage_search_8m_aae5035eb84b89176ed5b06e136325eff}
+\subsubsection[{sim\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}sim\-Dirs = dir({\bf tmp\-Folder})}}\label{garbage_search_8m_aae5035eb84b89176ed5b06e136325eff}
 
 
 Definition at line 17 of file garbage\-Search.\-m.

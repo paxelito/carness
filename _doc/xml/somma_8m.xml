@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="somma_8m" kind="file">
     <compoundname>somma.m</compoundname>
       <sectiondef kind="var">
@@ -37,7 +37,7 @@
         <argsstring></argsstring>
         <name>i</name>
         <initializer>= 1 : N
-    <ref refid="_k_s_search_launcher_8m_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref> = <ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>()</initializer>
+    <ref refid="_k_s_search_launcher_8m_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref> = rand()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -128,7 +128,7 @@
 <codeline lineno="8" refid="somma_8m_1ae0323a9039add2978bf5b49550572c7c" refkind="member"><highlight class="normal"><ref refid="garbage_search_8m_1a8e54ca14679a1ce9245a3b7d55d95570" kindref="member">c</ref><sp/>=<sp/>zeros(1,N);</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10" refid="somma_8m_1a6f6ccfcf58b31cb6412107d9d5281426" refkind="member"><highlight class="normal">for<sp/><ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>1<sp/>:<sp/>N</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref><sp/>=<sp/><ref refid="lancia__inizializzatore__acs_8m_1a078f67f8fbdd9ac6587e03bdf2651d32" kindref="member">rand</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="garbage_search_8m_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref><sp/>=<sp/>rand();</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref>(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>)<sp/>=<sp/><ref refid="garbage_search_8m_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref>;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>r<sp/>&gt;<sp/>0.5</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="somma_8m_1a21ad0bd836b90d08f4cf640b4c298e7c" kindref="member">b</ref>(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>)<sp/>=<sp/>1;</highlight></codeline>

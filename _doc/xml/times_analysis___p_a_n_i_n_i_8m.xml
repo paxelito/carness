@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="times_analysis___p_a_n_i_n_i_8m" kind="file">
     <compoundname>timesAnalysis_PANINI.m</compoundname>
       <sectiondef kind="var">
@@ -20,7 +20,7 @@
 % INPUT
 % <ref refid="overall_stats_8m_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref> = <ref refid="start_8m_1af28466084b87af2cdc5c7b48f4661f2d" kindref="member">path</ref> of the simulations root 
 
-<ref refid="_k_s_search_launcher_8m_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref> = <ref refid="start_8m_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>()</initializer>
+<ref refid="_k_s_search_launcher_8m_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref> = <ref refid="inizializzatore___a_c_s_8m_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -59,7 +59,7 @@
 <codeline lineno="22"><highlight class="normal"><ref refid="general_concentration_over_threshold_8m_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.<ref refid="all_times_analysis_8m_1a63b4c2789d7e1513024181d12e4f1b6b" kindref="member">figureVisible</ref><sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal">%<sp/>READ<sp/>ALL<sp/>THE<sp/>DIRECTORY<sp/>CONTAINING<sp/>SIMULATIONS</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;*sim*&apos;);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/>dir(&apos;*sim*&apos;);</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal">%timesMatrix<sp/>=<sp/>zeros(<ref refid="crea__e__controlla__i__catalizzatori_8m_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="garbage_search_8m_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>),12);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal">timesMatrix<sp/>=<sp/>zeros(<ref refid="crea__e__controlla__i__catalizzatori_8m_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(simDirs),11);</highlight></codeline>
@@ -71,8 +71,8 @@
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(strcat(simDirs(<ref refid="garbage_search_8m_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>).<ref refid="garbage_search_8m_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;));</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>Select<sp/>Times<sp/><ref refid="general_concentration_over_threshold_8m_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/><ref refid="classreactions" kindref="compound">reactions</ref><sp/>files</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>timeFiles<sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;*<ref refid="general_concentration_over_threshold_8m_1a47868b053902b822eab5c738a67a633a" kindref="member">times</ref>*&apos;);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>rctFiles<sp/>=<sp/><ref refid="start_8m_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;*reactions_parameters*&apos;);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>timeFiles<sp/>=<sp/>dir(&apos;*<ref refid="general_concentration_over_threshold_8m_1a47868b053902b822eab5c738a67a633a" kindref="member">times</ref>*&apos;);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>rctFiles<sp/>=<sp/>dir(&apos;*reactions_parameters*&apos;);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>For<sp/>each<sp/>time<sp/><ref refid="namespacereset_for_new_simulations_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/><ref refid="general_concentration_over_threshold_8m_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>=1:<ref refid="crea__e__controlla__i__catalizzatori_8m_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(timeFiles)</highlight></codeline>
@@ -153,8 +153,8 @@
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal">%CREATE<sp/>FIGURE<sp/>PARAMS</highlight></codeline>
 <codeline lineno="118"><highlight class="normal">%COLS</highlight></codeline>
-<codeline lineno="119"><highlight class="normal">%<sp/>1.RCTS<sp/>-<sp/>2.PossibleReactions<sp/>-<sp/>3.Computational<sp/>time<sp/>-<sp/>4.<ref refid="classspecies" kindref="compound" tooltip="This class contains declarations of the species class. ">species</ref><sp/>-<sp/>5.molecules<sp/>-</highlight></codeline>
-<codeline lineno="120"><highlight class="normal">%<sp/>6.cpx<sp/>-<sp/>7.cpx<sp/>mols<sp/>-<sp/>8.bricks<sp/>-<sp/>9.gill<sp/>mean<sp/>-<sp/>10.entropy<sp/>-<sp/>11.prob<sp/>new<sp/><ref refid="classspecies" kindref="compound" tooltip="This class contains declarations of the species class. ">species</ref></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">%<sp/>1.RCTS<sp/>-<sp/>2.PossibleReactions<sp/>-<sp/>3.Computational<sp/>time<sp/>-<sp/>4.<ref refid="classspecies" kindref="compound">species</ref><sp/>-<sp/>5.molecules<sp/>-</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">%<sp/>6.cpx<sp/>-<sp/>7.cpx<sp/>mols<sp/>-<sp/>8.bricks<sp/>-<sp/>9.gill<sp/>mean<sp/>-<sp/>10.entropy<sp/>-<sp/>11.prob<sp/>new<sp/><ref refid="classspecies" kindref="compound">species</ref></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight></codeline>
 <codeline lineno="122"><highlight class="normal">xlv<sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;Reactions&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Reactions&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Species&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Complexes&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Species&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Molecules&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Reactions&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Bricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Molecules&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Species&apos;</highlight><highlight class="normal">};</highlight></codeline>
 <codeline lineno="123"><highlight class="normal">ylv<sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;Species&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Molecules&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Molecules&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Complexes<sp/>Molecules&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Bricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Bricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Bricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Entropy&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Entropy&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Entropy&apos;</highlight><highlight class="normal">};</highlight></codeline>
@@ -163,7 +163,7 @@
 <codeline lineno="126"><highlight class="normal">ytp<sp/>=<sp/>[4,5,5,7,8,8,8,10,10,10];</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><ref refid="garbage_search_8m_1aef429e9a25e0d4d70aa2037a59816956" kindref="member">~isdir</ref>(</highlight><highlight class="stringliteral">&apos;0_statistics&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inizializzatore___a_c_s_8m_1abcaf3fe79479456b56924747f1bca0d9" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="131"><highlight class="normal"><ref refid="conc_analysis_8m_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(&apos;0_statistics&apos;)</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>

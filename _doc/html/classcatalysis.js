@@ -1,10 +1,11 @@
 var classcatalysis =
 [
     [ "catalysis", "classcatalysis.html#a7c4d1a67d2745293a17a6bee0df7c5cd", null ],
-    [ "catalysis", "classcatalysis.html#ad512d0e2ff7cbb1b431c917f659a5395", null ],
+    [ "catalysis", "classcatalysis.html#ab6af429c051e2bc9756bac72b99cc4ce", null ],
     [ "~catalysis", "classcatalysis.html#a982805165c59e95ac055dc24e684fa05", null ],
     [ "getCat", "classcatalysis.html#a205e222dff1e80ff8f3195ab22e78726", null ],
     [ "getCatId", "classcatalysis.html#a85ba5bd9c758392f245f1277141a1706", null ],
+    [ "getCpxTarget", "classcatalysis.html#a95cce06ac3f63b66d984bd723ab7e561", null ],
     [ "getK_cpx", "classcatalysis.html#a182bfb05b12ddd3613693f6d1f362665", null ],
     [ "getKass", "classcatalysis.html#a471d98737d6708b3ac03efba41082d0c", null ],
     [ "getKdiss", "classcatalysis.html#ad8b0d5f6410e2256cfefe0db9a10b0af", null ],

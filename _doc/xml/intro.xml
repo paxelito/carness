@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="intro" kind="page">
     <compoundname>intro</compoundname>
     <title>Essential informations</title>
@@ -170,15 +170,6 @@
 </parameternamelist>
 <parameterdescription>
 <para>(%) The probability for a species to be potentially energized by the energy carriers </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>complexFormationSymmetry</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>(0 or 1) Complex Formation Symmetry<itemizedlist>
-<listitem><para><bold>1</bold>: the catalyst can bound both substrates</para></listitem><listitem><para><bold>0 (default)</bold>: catalyst binds only with the first substrate of the reaction </para></listitem></itemizedlist>
-</para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
