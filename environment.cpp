@@ -6765,7 +6765,7 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
     fidFile << "# Volume (dm^3)" << endl;
     fidFile << "volume=" << (double)volume << endl << endl;
 
-    fidFile << "Volume growth possibility (1: volume changes, 0: volume is fixed)" << endl;
+    fidFile << "# Volume growth possibility (1: volume changes, 0: volume is fixed)" << endl;
     fidFile << "volumeGrowth=" << volumeGrowth << endl << endl;
 
     fidFile << "# Division type (1: Stochastic, 0: deterministic)" << endl;
