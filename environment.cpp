@@ -1216,8 +1216,14 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialMoleculesPopulationFromFileSTD start" << endl;
     // SPECIES FILE PATH CREATION
     string SpeciesFilePath = tmpSpeciesFilePath + "_acsspecies.csv";
+    cout << "|- Loading Species from " << SpeciesFilePath;
     ifstream myfile;
-    myfile.open(SpeciesFilePath.c_str());
+    try{
+    	myfile.open(SpeciesFilePath.c_str());
+    }catch(exception&e){
+		cerr << "|- ERROR!!! PROBLEM WITH FILE " << SpeciesFilePath << e.what() << endl;
+		ExitWithError("createInitialMoleculesPopulationFromFile","exceptionerrorthrown");
+    }
     string strID, strCod, strConc, strDiff, strPrec, strK_cpx, strCpxBin, strEval, strAge, strReb, strCatID, strCpxID, strPho, strChar, strLock;
     while (myfile.good())
     {
@@ -1277,7 +1283,10 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
     {
         if(allSpecies.at(singleSpecies).getID() <= getLastFiringDiskSpeciesID())
             firingDisk.push_back(allSpecies.at(singleSpecies));
+        if(debugLevel == SMALL_DEBUG)
+        	cout << allSpecies.at(singleSpecies).getID() << endl;
     }
+    cout << " Done" << endl;
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialMoleculesPopulationFromFile end" << endl;
 
     return true;
@@ -1587,6 +1596,7 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
 {
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromFileSTD start" << endl;
     // SPECIES FILE PATH CREATION
+    cout << "|- Loading Reactions...";
     string FilePath = tmpSpeciesFilePath + "_acsreactions.csv";
     ifstream myfile;
     myfile.open(FilePath.c_str());
@@ -1609,6 +1619,8 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
     }
 
     myfile.close();
+    cout << " Done" << endl;
+
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromFileSTD end" << endl;
     return true;
 }//eof createInitialReactionsLayerFromFileSTD
@@ -1672,6 +1684,7 @@ bool environment::createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFile
 {
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromFileSTD start" << endl;
     // SPECIES FILE PATH CREATION
+    cout << "|- Loading Catalysis..." << endl;
     string FilePath = tmpCatalysisFilePath + "_acscatalysis.csv";
     ifstream myfile;
     myfile.open(FilePath.c_str());
@@ -1698,6 +1711,7 @@ bool environment::createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFile
 
     myfile.close();
     inserSubListInSpecies();
+    cout << " Done" << endl;
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialCatalysisLayerFromFileSTD end" << endl;
     return true;
 }//eof createInitialCatalysisLayerFromFileSTD
@@ -1964,7 +1978,7 @@ bool environment::structureCoherenceCheckUp()
 		cout << "\t|- SPECIES STRUCTURE" << endl;
 		cout << "\t\t|- Searching for Incoherences, double entries and incorrect ID progression... "<< endl;
 	}
-	if(debugLevel >= MEDIUM_DEBUG)
+	if(debugLevel >= RUNNING_VERSION)
 	{
 		acs_int tmpTotTheorSpecies = getNumberOfTheoreticalSpecies();
 		for(acs_longInt i = 0; i < tmpTotTheorSpecies; i++)
@@ -2110,7 +2124,7 @@ bool environment::structureCoherenceCheckUp()
 	// IF THERE ARE REACTIONS
 	// ===================================
 
-	if(debugLevel >= MEDIUM_DEBUG)
+	if(debugLevel >= RUNNING_VERSION)
 	{
 		if((acs_longInt)allReactions.size() > 0)
 		{
@@ -2249,7 +2263,7 @@ bool environment::structureCoherenceCheckUp()
 		} // if((acs_longInt)allReactions.size() > 0)
 	} // if(debugLevel >= MEDIUM_DEBUG)
 
-	if(debugLevel >= MEDIUM_DEBUG)
+	if(debugLevel >= RUNNING_VERSION)
 	{
 		// ===================================
 		// IF THERE ARE CATALYSIS
@@ -2270,7 +2284,7 @@ bool environment::structureCoherenceCheckUp()
 				}
 				// CATALYSIS STRUCTURE CHECK
 				cout << "\t|- CATALYSIS LAYER STRUCTURE" << endl;
-				cout << "\t\t|- Searching for duplicate, incorrect ID progression... ";
+				cout << "\t\t|- Searching for duplicate, incorrect ID progression... " << endl;
 			}
 			acs_int tmpCatNum = getNumberOfCatalysis();
 			for(acs_longInt i = 0; i < tmpCatNum - 1; i++)
@@ -2402,7 +2416,7 @@ void environment::inserSubListInSpecies()
 
 	if(debugLevel == RUNNING_VERSION)
 	{
-		cout << "|- Complex Condensation Parameters Introduction..." << endl;
+		cout << "\t|- Complex Condensation Parameters Introduction...";
 	}
 
     for(vector<species>::iterator tmpSpeciesIterator = allSpecies.begin(); tmpSpeciesIterator != allSpecies.end(); tmpSpeciesIterator++)
@@ -5661,7 +5675,7 @@ bool environment::performComplexFormation(acs_longInt tmpCatalyst, acs_longInt t
 		
 		if(avalability)
 		{
-                        allSpecies.at(tmpCatalyst).decrement(volume);
+            allSpecies.at(tmpCatalyst).decrement(volume);
             if(!allSpecies.at(tmpCatalyst).getConcentrationFixed())
                 decMolSpeciesProcedure(tmpCatalyst); // Update overall number of species and molecules
 
