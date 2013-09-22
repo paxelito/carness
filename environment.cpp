@@ -1542,7 +1542,7 @@ bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath)
         getline(myfile, strFeedID, '\t');
         getline(myfile, strFeedProb, '\n');
 
-        if(strFeedID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
+        if(strFeedID.find("\n") != 0 && (strFeedID.size() > 0) && (strFeedID.find(" ") != 0))
         {
         	nutrientsForInflux.push_back((acs_int)atoi(strFeedID.c_str()));
         	nutrientsProb2BeSelected.push_back((acs_double)atof(strFeedProb.c_str()));
@@ -1574,7 +1574,7 @@ bool environment::createNrgBooleanFunctionsFromFileSTD(string tmpBoolNrgFilePath
         getline(myfile, strBoolNrgID, '\t');
         getline(myfile, strBoolNrgProb, '\n');
 
-        if(strBoolNrgID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
+        if(strBoolNrgID.find("\n") != 0 && (strBoolNrgID.size() > 0) && (strBoolNrgID.find(" ") != 0))
         {
         	nrgBooleanFunctions.push_back((acs_int)atoi(strBoolNrgID.c_str()));
         	nrgBoolFncsProb2BeSelected.push_back((acs_double)atof(strBoolNrgProb.c_str()));
