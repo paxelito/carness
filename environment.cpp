@@ -1243,7 +1243,7 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
         getline(myfile, strChar, '\t');
         getline(myfile, strLock, '\n');
 
-        if(strID.find("\n") != 0)
+        if(strID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
         {
 			allSpecies.push_back(species((acs_longInt)atol(strID.c_str()), strCod, (acs_double)atof(strConc.c_str()),
 										 (acs_double)atof(strDiff.c_str()),(acs_int)atoi(strPrec.c_str()),
@@ -1476,7 +1476,7 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
         getline(myfile, strChar, '\t');
         getline(myfile, strLock, '\n');
 
-        if(strID.find("\n") != 0)
+        if(strID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
         {
 			allSpecies.push_back(species((acs_longInt)atol(strID.c_str()), strCod, (acs_double)atof(strConc.c_str()),
 										 (acs_double)atof(strDiff.c_str()),(acs_int)atoi(strPrec.c_str()),
@@ -1542,7 +1542,7 @@ bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath)
         getline(myfile, strFeedID, '\t');
         getline(myfile, strFeedProb, '\n');
 
-        if(strFeedID.find("\n") != 0)
+        if(strFeedID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
         {
         	nutrientsForInflux.push_back((acs_int)atoi(strFeedID.c_str()));
         	nutrientsProb2BeSelected.push_back((acs_double)atof(strFeedProb.c_str()));
@@ -1574,7 +1574,7 @@ bool environment::createNrgBooleanFunctionsFromFileSTD(string tmpBoolNrgFilePath
         getline(myfile, strBoolNrgID, '\t');
         getline(myfile, strBoolNrgProb, '\n');
 
-        if(strBoolNrgID.find("\n") != 0)
+        if(strBoolNrgID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
         {
         	nrgBooleanFunctions.push_back((acs_int)atoi(strBoolNrgID.c_str()));
         	nrgBoolFncsProb2BeSelected.push_back((acs_double)atof(strBoolNrgProb.c_str()));
@@ -1603,6 +1603,7 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
     string strID, strType, strMolsI, strMolsII, strMolsIII, strCnt, strNrg;
     while (myfile.good())
     {
+
         getline(myfile, strID, '\t');
         getline(myfile, strType, '\t');
         getline(myfile, strMolsI, '\t');
@@ -1610,8 +1611,7 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
         getline(myfile, strMolsIII, '\t');
         getline(myfile, strCnt, '\t');
         getline(myfile, strNrg, '\n');
-
-        if(strID.find("\n") != 0)
+        if((strID.find("\n") != 0) && (strID.size() > 0) && (strID.find(" ") != 0))
             allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
                                          (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
                                          (acs_double)atof(strNrg.c_str())));
@@ -1619,7 +1619,6 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
     }
 
     myfile.close();
-    cout << " Done" << endl;
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInitialReactionsLayerFromFileSTD end" << endl;
     return true;
@@ -1662,7 +1661,7 @@ bool environment::createInitialReactionsLayerFromSpecificFileSTD(string tmpReact
         getline(myfile, strCnt, '\t');
         getline(myfile, strNrg, '\n');
 
-        if(strID.find("\n") != 0)
+        if(strID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
         	allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
                                          (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
                                          (acs_double)atof(strNrg.c_str())));
@@ -1700,7 +1699,7 @@ bool environment::createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFile
         getline(myfile, strKcpx, '\t');
         getline(myfile, strCpxTarget, '\n');
 
-        if(strID.find("\n") != 0)
+        if(strID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
         {
         	allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
                                          (acs_longInt)atol(strCounter.c_str()), (acs_double)atof(strKcond.c_str()), (acs_double)atof(strKcleav.c_str()),
@@ -1754,7 +1753,7 @@ bool environment::createInitialCatalysisLayerFromSpecificFileSTD(string tmpCatal
         getline(myfile, strKcpx, '\t');
         getline(myfile, strCpxTarget, '\n');
 
-        if(strID.find("\n") != 0)
+        if(strID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
         	allCatalysis.push_back(catalysis((acs_longInt)atol(strID.c_str()), (acs_longInt)atol(strCatalyst.c_str()), (acs_longInt)atol(strReaction.c_str()),
                                          (acs_longInt)atol(strCounter.c_str()), (acs_double)atof(strKcond.c_str()), (acs_double)atof(strKcleav.c_str()),
                                          (acs_double)atof(strKcpx.c_str()), (acs_int)atoi(strCpxTarget.c_str())));
@@ -2243,6 +2242,12 @@ bool environment::structureCoherenceCheckUp()
 												 allReactions.at(i).getSpecies_III() == allReactions.at(j).getSpecies_II()))
 											{
 												flagControl = false;
+												cout << endl << "\t\t\t Reaction " << allReactions.at(i).getID() << " " << allReactions.at(i).getType()
+													 << " " << allReactions.at(i).getSpecies_I() << " " <<  allReactions.at(i).getSpecies_II()
+													 << " " << allReactions.at(i).getSpecies_III() << endl;
+												cout << endl << "\t\t\t Reaction " << allReactions.at(j).getID() << " " << allReactions.at(j).getType()
+													 << " " << allReactions.at(j).getSpecies_I() << " " <<  allReactions.at(j).getSpecies_II()
+													 << " " << allReactions.at(j).getSpecies_III() << endl;
 												cout << endl << "\t\t\tERROR: Reaction " << allReactions.at(i).getID() << " is a duplicate of reaction " << allReactions.at(j).getID();
 												break;
 											}
