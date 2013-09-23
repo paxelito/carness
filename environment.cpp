@@ -4137,6 +4137,12 @@ bool environment::performDETComplexDissociation(acs_double tmpTimeInterval, MTRa
 			if(debugLevel == COMPLEXSTUFF) cout << "-----------" << endl;
 			if(debugLevel == COMPLEXSTUFF) cout << decimalComplexesToDissociate << endl;
 
+
+		// If the number of complexes to dissociate is greater than the actual number of complexes (due to round reason)
+		// the cpxIntegerPart is set to the total number of complex molecules.
+		if(decimalComplexesToDissociate >= numberOfCpxMols)
+			decimalComplexesToDissociate = numberOfCpxMols;
+
 		cpxIntegerPart = (acs_int)decimalComplexesToDissociate;
 
 			if(debugLevel == COMPLEXSTUFF) cout << cpxIntegerPart << endl;
@@ -4153,10 +4159,16 @@ bool environment::performDETComplexDissociation(acs_double tmpTimeInterval, MTRa
 				if(tempCpx.size() > 0)
 				{
 					// According to the propensity list the complex is randomly selected
-					selectedPosition = returnSelectionIdFromAWeightProbVector(tempCpx,totCpxDissRate,tmp_RndDoubleGen);
+					if(tempCpx.size() > 1)
+					{
+						selectedPosition = returnSelectionIdFromAWeightProbVector(tempCpx,totCpxDissRate,tmp_RndDoubleGen);
+					}else{
+						selectedPosition = 0;
+					}
 					selectedID = tempID.at(selectedPosition);
 					if(debugLevel == COMPLEXSTUFF)
-					{	cout << "Pos " << selectedPosition << " - Sel " << selectedID << " - #" << allSpecies.at(selectedID).getAmount()
+					{	cout << "-- REMOVING " << i+1 << " OF " << cpxIntegerPart
+							<< "Pos " << selectedPosition << " - Sel " << selectedID << " - #" << allSpecies.at(selectedID).getAmount()
 							<< " -cat "<< allSpecies.at(selectedID).getCatalyst_ID()
 							<< " -sub " << allSpecies.at(selectedID).getSubstrate_ID() << endl;
 					}
@@ -4182,14 +4194,22 @@ bool environment::performDETComplexDissociation(acs_double tmpTimeInterval, MTRa
 						{
 							cout << "Processing the elementID " << tempCpx.size()-traceID  << ": " << *backIterTempCpx << endl;
 							for(acs_int z = 0; z < tempCpx.size(); z++){cout << " - Pos " << z << " " << tempCpx.at(z) << " " << tempID.at(z) << endl;}
-							cout << endl;
 						}
 						tempCpx.erase(tempCpx.end()-traceID);
 						tempID.erase(tempID.end()-traceID);
-						if(debugLevel == COMPLEXSTUFF) for(acs_int z = 0; z < tempCpx.size(); z++){cout << " - Pos " << z << " " << tempCpx.at(z) << " " << tempID.at(z) << endl;cout << endl;}
+						if(debugLevel == COMPLEXSTUFF)
+						{
+							cout << endl;
+							for(acs_int z = 0; z < tempCpx.size(); z++){cout << " - Pos " << z << " " << tempCpx.at(z) << " " << tempID.at(z) << endl;}
+						}
 					}
 				}else{
-					ExitWithError("performDETComplexDissociation","Although the system compute possibile dissociation, noone complex is available");
+					cout << "\t\tNumber of complexes to dissociate: " << cpxIntegerPart
+						 << " - Removing the " << i+1 << "th complex"
+						 << " - Number of actual Complexes: " << tempCpx.size() << endl;
+					decimalComplexesToDissociate = 0;
+					//break;
+					ExitWithError("performDETComplexDissociation","ERROR!!! Although the system compute possibile dissociation, noone complex is available");
 				}
 
 			}
