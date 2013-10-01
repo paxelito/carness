@@ -1,4 +1,4 @@
-.TH "species" 3 "Thu Sep 19 2013" "Version 4.5 (20130919.57)" "CaRNeSS" \" -*- nroff -*-
+.TH "species" 3 "Tue Oct 1 2013" "Version 4.7 (20131001.59)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -124,6 +124,15 @@ This class contains declarations of the species class\&.
 .RI "\fBacs_int\fP \fBgetSecSubListSize\fP () const "
 .br
 .ti -1c
+.RI "\fBacs_longInt\fP \fBgetSecSubListID\fP (\fBacs_int\fP tmpID) const "
+.br
+.ti -1c
+.RI "\fBacs_double\fP \fBgetSec_k_SubListID\fP (\fBacs_int\fP tmpID) const "
+.br
+.ti -1c
+.RI "\fBacs_longInt\fP \fBgetCatalysisIfCpxID\fP (\fBacs_int\fP tmpID) const "
+.br
+.ti -1c
 .RI "void \fBincrement\fP (\fBacs_double\fP tmpVolume)"
 .br
 .ti -1c
@@ -188,15 +197,6 @@ This class contains declarations of the species class\&.
 .br
 .ti -1c
 .RI "void \fBinsertSecSub\fP (\fBacs_longInt\fP tmpID, \fBacs_double\fP tmpK, \fBacs_longInt\fP tmpCat)"
-.br
-.ti -1c
-.RI "\fBacs_longInt\fP \fBgetSecSubListID\fP (\fBacs_int\fP tmpID)"
-.br
-.ti -1c
-.RI "\fBacs_double\fP \fBgetSec_k_SubListID\fP (\fBacs_int\fP tmpID)"
-.br
-.ti -1c
-.RI "\fBacs_longInt\fP \fBgetCatalysisIfCpxID\fP (\fBacs_int\fP tmpID)"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -423,7 +423,7 @@ Definition at line 350 of file species\&.cpp\&.
 .SS "void species::concToNum (\fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 132 of file species\&.h\&.
+Definition at line 135 of file species\&.h\&.
 .SS "void species::decrement (\fBacs_double\fPtmpVolume)"
 Function to decrement the total number of molecules belonging to this species 
 .PP
@@ -440,10 +440,10 @@ Definition at line 88 of file species\&.h\&.
 
 .PP
 Definition at line 109 of file species\&.h\&.
-.SS "\fBacs_longInt\fP species::getCatalysisIfCpxID (\fBacs_int\fPtmpID)\fC [inline]\fP"
+.SS "\fBacs_longInt\fP species::getCatalysisIfCpxID (\fBacs_int\fPtmpID) const\fC [inline]\fP"
 
 .PP
-Definition at line 142 of file species\&.h\&.
+Definition at line 113 of file species\&.h\&.
 .SS "\fBacs_longInt\fP species::getCatalyst_ID () const\fC [inline]\fP"
 
 .PP
@@ -512,18 +512,18 @@ Definition at line 94 of file species\&.h\&.
 
 .PP
 Definition at line 108 of file species\&.h\&.
-.SS "\fBacs_double\fP species::getSec_k_SubListID (\fBacs_int\fPtmpID)\fC [inline]\fP"
+.SS "\fBacs_double\fP species::getSec_k_SubListID (\fBacs_int\fPtmpID) const\fC [inline]\fP"
 
 .PP
-Definition at line 141 of file species\&.h\&.
+Definition at line 112 of file species\&.h\&.
 .SS "vector<\fBacs_longInt\fP> species::getSecSubList () const\fC [inline]\fP"
 
 .PP
 Definition at line 107 of file species\&.h\&.
-.SS "\fBacs_longInt\fP species::getSecSubListID (\fBacs_int\fPtmpID)\fC [inline]\fP"
+.SS "\fBacs_longInt\fP species::getSecSubListID (\fBacs_int\fPtmpID) const\fC [inline]\fP"
 
 .PP
-Definition at line 140 of file species\&.h\&.
+Definition at line 111 of file species\&.h\&.
 .SS "\fBacs_int\fP species::getSecSubListSize () const\fC [inline]\fP"
 
 .PP
@@ -555,27 +555,27 @@ Definition at line 386 of file species\&.cpp\&.
 .SS "void species::numToConc (\fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 133 of file species\&.h\&.
+Definition at line 136 of file species\&.h\&.
 .SS "void species::rebornsIncrement ()\fC [inline]\fP"
 
 .PP
-Definition at line 130 of file species\&.h\&.
+Definition at line 133 of file species\&.h\&.
 .SS "void species::resetAge ()\fC [inline]\fP"
 
 .PP
-Definition at line 135 of file species\&.h\&.
+Definition at line 138 of file species\&.h\&.
 .SS "void species::resetReborns ()\fC [inline]\fP"
 
 .PP
-Definition at line 136 of file species\&.h\&.
+Definition at line 139 of file species\&.h\&.
 .SS "void species::resetToInitConc (\fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 137 of file species\&.h\&.
+Definition at line 140 of file species\&.h\&.
 .SS "void species::setAmount (\fBacs_int\fPtmpAmount, \fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 116 of file species\&.h\&.
+Definition at line 119 of file species\&.h\&.
 .SS "bool species::setChargeMols (\fBacs_int\fPtmpMolsToCharge)"
 to charge a specific number of molecules 
 .PP
@@ -583,31 +583,31 @@ Definition at line 337 of file species\&.cpp\&.
 .SS "void species::setConcentration (\fBacs_double\fPtmpConc, \fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 117 of file species\&.h\&.
+Definition at line 120 of file species\&.h\&.
 .SS "void species::setDiffusion (\fBacs_double\fPtmpDiff)\fC [inline]\fP"
 
 .PP
-Definition at line 126 of file species\&.h\&.
+Definition at line 129 of file species\&.h\&.
 .SS "void species::setEvaluated ()\fC [inline]\fP"
 
 .PP
-Definition at line 125 of file species\&.h\&.
+Definition at line 128 of file species\&.h\&.
 .SS "void species::setKphospho (\fBacs_double\fPtmpKphospho)\fC [inline]\fP"
 
 .PP
-Definition at line 128 of file species\&.h\&.
+Definition at line 131 of file species\&.h\&.
 .SS "void species::setLastSpeciesEvaluated (\fBacs_int\fPtmpID)\fC [inline]\fP"
 
 .PP
-Definition at line 138 of file species\&.h\&.
+Definition at line 141 of file species\&.h\&.
 .SS "void species::setNewAge (\fBacs_double\fPtmpLastTimeInterval)\fC [inline]\fP"
 
 .PP
-Definition at line 129 of file species\&.h\&.
+Definition at line 132 of file species\&.h\&.
 .SS "void species::setSolubility (\fBacs_int\fPtmpSol)\fC [inline]\fP"
 
 .PP
-Definition at line 127 of file species\&.h\&.
+Definition at line 130 of file species\&.h\&.
 .SS "bool species::setSpecificChargeMols (\fBacs_int\fPtmpMolsToCharge)"
 to charge a specific number of molecules 
 .PP
@@ -615,7 +615,7 @@ Definition at line 324 of file species\&.cpp\&.
 .SS "void species::specificIncrement (\fBacs_int\fPtmpIncrement, \fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
-Definition at line 115 of file species\&.h\&.
+Definition at line 118 of file species\&.h\&.
 .SS "bool species::unchargeMol ()"
 to uncharge molecules 
 .PP

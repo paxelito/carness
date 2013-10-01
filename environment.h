@@ -35,6 +35,7 @@ private:
     acs_double overallConcentration; // initial overall concentration
     acs_double ECConcentration; // Energie Carriers concentration
     acs_int nonCatalyticMaxLength; // Max length of the NON catalytic species
+    acs_longInt nonCatalyticLastID; // ID of the non catalytic last species.
     acs_double reactionProbability; // Reaction probability
     acs_double cleavageProbability; // Cleavage probability (when new reactions are created)
     bool reverseReactions; // if true backward reactions are present
@@ -258,10 +259,9 @@ private:
     acs_longInt returnPosSpeciesAlreadyPresent(string tmpNewSequence); //return vector species size if it doesn't
     acs_longInt returnPosReactionAlreadyPresent(acs_int tmpReactionType, acs_longInt tmpIds_I, acs_longInt tmpIds_II, acs_longInt tmpIds_III); //return vector allReactions size if it doesn't
 	bool checkIfTheReactionIsAlreadyCatalyzedByThisSpecies(acs_longInt tmpSPeciesID, acs_longInt tmpIdReaction);
-    bool performGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath);
     bool performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath);
     bool performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleGen, acs_int tmp_ActGEN, acs_int tmp_ActSIM, acs_int tmp_ActSTEP, string tmp_StoringPath);
-	bool newSpeciesEvaluationIII(acs_int tmpNewSpecies, MTRand& tmp___RndDoubleGen);
+	bool newSpeciesEvaluationIII(acs_longInt tmpNewSpecies, MTRand& tmp___RndDoubleGen);
     bool complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGen, acs_int tmpCuttingPnt, acs_longInt tmpCatalyst_ID, acs_longInt tmpCatID, acs_longInt tmpSubstrate_ID, acs_longInt tmpSecSub_ID, bool tmpCpxType);
 	acs_double computeSinglGilScore(acs_longInt tmpAmountI, acs_double tmpDifI, acs_int tmpSolI,acs_longInt tmpAmountII, acs_double tmpDifII, acs_int tmpSolII, acs_double tmpK, bool tmpSameMol);
 	void performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs_longInt tmpAmountII, acs_longInt tmpIDI, acs_longInt tmpIDII, acs_longInt tmpIDCatalysis, acs_int tmp__rctType,

@@ -41,6 +41,7 @@
     <member refid="classenvironment_1ad9013e55251c021588c991de0a2e174c" kind="variable"><name>overallConcentration</name></member>
     <member refid="classenvironment_1a408122b5c383b53f0b9539f69e310b9d" kind="variable"><name>ECConcentration</name></member>
     <member refid="classenvironment_1abaf3fae6060aacfa95a5881d6cef25fc" kind="variable"><name>nonCatalyticMaxLength</name></member>
+    <member refid="classenvironment_1ac4ae7cd1bac2bfffcfbd67d7f2532166" kind="variable"><name>nonCatalyticLastID</name></member>
     <member refid="classenvironment_1a62592802946ed03d101f843f89fefead" kind="variable"><name>reactionProbability</name></member>
     <member refid="classenvironment_1acaf3cd03764e412ac52fcb22ab7ece05" kind="variable"><name>cleavageProbability</name></member>
     <member refid="classenvironment_1acc54187b57eae193171eecc0f8d935b3" kind="variable"><name>reverseReactions</name></member>
@@ -230,10 +231,9 @@
     <member refid="classenvironment_1a4e26cc574e20a5afcfbbe5887109c5af" kind="function"><name>returnPosSpeciesAlreadyPresent</name></member>
     <member refid="classenvironment_1a6feec5685b519ba0cdae0e5c59dffff0" kind="function"><name>returnPosReactionAlreadyPresent</name></member>
     <member refid="classenvironment_1ac4c90b07b8e75ea03e2ced0ea644a69f" kind="function"><name>checkIfTheReactionIsAlreadyCatalyzedByThisSpecies</name></member>
-    <member refid="classenvironment_1a2cb0152bf789918e7d92685f947ce48f" kind="function"><name>performGillespieComputation</name></member>
     <member refid="classenvironment_1a90fba3b2cc589f32c97a74540620bd84" kind="function"><name>performOPTGillespieComputation</name></member>
     <member refid="classenvironment_1a1db4e67ba458a54f4fab3e10a203765c" kind="function"><name>performReaction</name></member>
-    <member refid="classenvironment_1aaf76ff29b387a5308fdd34470994732f" kind="function"><name>newSpeciesEvaluationIII</name></member>
+    <member refid="classenvironment_1a4fe7891fb38f3f25bb82769af0ddfe19" kind="function"><name>newSpeciesEvaluationIII</name></member>
     <member refid="classenvironment_1a5ee6b203f077de1467aa72042814db7d" kind="function"><name>complexEvaluation</name></member>
     <member refid="classenvironment_1ae1270b9c235dd6b28413075197dba8e0" kind="function"><name>computeSinglGilScore</name></member>
     <member refid="classenvironment_1a30a0827eed2860d03d5fa5318fcf86b0" kind="function"><name>performSingleGilleSpieIntroduction</name></member>
@@ -471,6 +471,9 @@
     <member refid="classspecies_1a30f77a52d0c75f02f6b4c269b5cf702d" kind="function"><name>getSec_k_SubList</name></member>
     <member refid="classspecies_1aaafd2738231ba916153e24c19e7b3bfc" kind="function"><name>getCatalysisIfCpx</name></member>
     <member refid="classspecies_1a984df86838272204e7a8414bbc2a61fb" kind="function"><name>getSecSubListSize</name></member>
+    <member refid="classspecies_1a214be9ae628e99e47dfd9d72c8c07933" kind="function"><name>getSecSubListID</name></member>
+    <member refid="classspecies_1a6c546c89a974434e24f2161867521462" kind="function"><name>getSec_k_SubListID</name></member>
+    <member refid="classspecies_1aac1880e5779d75ef8c700bee278da15d" kind="function"><name>getCatalysisIfCpxID</name></member>
     <member refid="classspecies_1a77f68017e5c50f8943df90efd2e8a0bb" kind="function"><name>increment</name></member>
     <member refid="classspecies_1a87e85a2397e5ec34518efa235b529d7e" kind="function"><name>specificIncrement</name></member>
     <member refid="classspecies_1abefdc30b6f352e5ce5576a610015f5b8" kind="function"><name>setAmount</name></member>
@@ -493,9 +496,6 @@
     <member refid="classspecies_1acc180a103e6681da2add266aafda3eb9" kind="function"><name>resetToInitConc</name></member>
     <member refid="classspecies_1a8daa007da55f042b9c436f956836f4d8" kind="function"><name>setLastSpeciesEvaluated</name></member>
     <member refid="classspecies_1a0da8d53a216583f7790b12362da376a3" kind="function"><name>insertSecSub</name></member>
-    <member refid="classspecies_1ac066ac5e1684a958e7f1c8b200de3155" kind="function"><name>getSecSubListID</name></member>
-    <member refid="classspecies_1a012baa0b3a908e433bbc76151271f8bb" kind="function"><name>getSec_k_SubListID</name></member>
-    <member refid="classspecies_1a5b26e28656321f2b19fafe49b153a5cd" kind="function"><name>getCatalysisIfCpxID</name></member>
   </compound>
   <compound refid="namespacebuffered_flux_analysis" kind="namespace"><name>bufferedFluxAnalysis</name>
     <member refid="namespacebuffered_flux_analysis_1a86b649a1e51f1e3384ad432c0de3340b" kind="variable"><name>StrPath</name></member>
@@ -1479,6 +1479,7 @@
     <member refid="acs__headers_8h_1ac2a71f467524d5299cbff5df96be638a" kind="define"><name>HIGH_DEBUG</name></member>
     <member refid="acs__headers_8h_1a0934dca9b46dc1ce8ccae606a6511f63" kind="define"><name>FINDERRORDURINGRUNTIME</name></member>
     <member refid="acs__headers_8h_1a186bfb39322832c790ce5403bc04330d" kind="define"><name>COMPLEXSTUFF</name></member>
+    <member refid="acs__headers_8h_1a27f5d30679c0e8877ba9246eb1a48ff4" kind="define"><name>GILLESPIESTUFF</name></member>
     <member refid="acs__headers_8h_1a4cb4f6978b0d938a0523bd6946e7609d" kind="define"><name>RANDOMRANGE</name></member>
     <member refid="acs__headers_8h_1a79c4b6317fd327fd5a62d65036481a25" kind="define"><name>PROPORTIONALMOLECULEAMOUNT</name></member>
     <member refid="acs__headers_8h_1a6236cb136896f6bcbc6694d394e8aca3" kind="define"><name>UNIFORMMOLECULEAMOUNT</name></member>
@@ -1600,6 +1601,8 @@
   <compound refid="page_init_str" kind="page"><name>pageInitStr</name>
   </compound>
   <compound refid="pageoutcomes" kind="page"><name>pageoutcomes</name>
+  </compound>
+  <compound refid="page_gillespie" kind="page"><name>pageGillespie</name>
   </compound>
   <compound refid="page_initializator" kind="page"><name>pageInitializator</name>
   </compound>

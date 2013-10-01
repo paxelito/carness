@@ -10,7 +10,6 @@ var searchData=
   ['performdetcomplexdissociation',['performDETComplexDissociation',['../classenvironment.html#a6ae793f9d2dca0632239be955dd83cee',1,'environment']]],
   ['performdetmoleculescharging',['performDETMoleculesCharging',['../classenvironment.html#adbaf165a12edd62c614a455544807ea3',1,'environment']]],
   ['performenergyefflux',['performEnergyEfflux',['../classenvironment.html#aff7607e0f3a74790109a7d87de3031bd',1,'environment']]],
-  ['performgillespiecomputation',['performGillespieComputation',['../classenvironment.html#a2cb0152bf789918e7d92685f947ce48f',1,'environment']]],
   ['performmoleculeefflux',['performMoleculeEfflux',['../classenvironment.html#ad072a40a7d9521379c7ff50ed8110fbe',1,'environment']]],
   ['performmoleculesefflux',['performMoleculesEfflux',['../classenvironment.html#acbbcdb4c77231e9ffa4c169e0caa0d0c',1,'environment']]],
   ['performoptgillespiecomputation',['performOPTGillespieComputation',['../classenvironment.html#a90fba3b2cc589f32c97a74540620bd84',1,'environment']]],

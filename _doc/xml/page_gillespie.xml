@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="page_gillespie" kind="page">
+    <compoundname>pageGillespie</compoundname>
+    <title>Gillespie Class</title>
+    <detaileddescription>
+<para>The Gillespie class contains the information concerning the Gillespie algorithm propensity with other useful information. In particular it has 4 properties, namely mol_I, mol_II, mol_III, mol_IV containing the species ID&apos;s related to different species type according to the different admitted reactions. In the following a table summarizing the different meanings for the different reactions is reported. <table rows="4" cols="6"><row>
+<entry thead="no"><para>Reaction Type</para></entry><entry thead="no"><para>Reaction Type Code</para></entry><entry thead="no"><para>MOL 1</para></entry><entry thead="no"><para>MOL 2</para></entry><entry thead="no"><para>MOL 3</para></entry><entry thead="no"><para>MOL 4  </para></entry></row>
+<row>
+<entry thead="no"><para>Complex Formation</para></entry><entry thead="no"><para>2</para></entry><entry thead="no"><para>Catalyst</para></entry><entry thead="no"><para>First Substrate</para></entry><entry thead="no"><para>Catalysis ID</para></entry><entry thead="no"><para>Second Substrate  </para></entry></row>
+<row>
+<entry thead="no"><para>Final Condensation</para></entry><entry thead="no"><para>0</para></entry><entry thead="no"><para>Catalyst</para></entry><entry thead="no"><para>Substrate</para></entry><entry thead="no"><para>Product</para></entry><entry thead="no"><para>Complex  </para></entry></row>
+<row>
+<entry thead="no"><para>Cleavage</para></entry><entry thead="no"><para>1</para></entry><entry thead="no"><para>Substrate</para></entry><entry thead="no"><para>Product 1</para></entry><entry thead="no"><para>Product 2</para></entry><entry thead="no"><para>Catalyst  </para></entry></row>
+</table>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

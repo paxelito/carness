@@ -1413,6 +1413,57 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="110" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="110" bodyend="110"/>
       </memberdef>
+      <memberdef kind="function" id="classspecies_1a214be9ae628e99e47dfd9d72c8c07933" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt species::getSecSubListID</definition>
+        <argsstring>(acs_int tmpID) const </argsstring>
+        <name>getSecSubListID</name>
+        <param>
+          <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="111" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classspecies_1a6c546c89a974434e24f2161867521462" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+        <definition>acs_double species::getSec_k_SubListID</definition>
+        <argsstring>(acs_int tmpID) const </argsstring>
+        <name>getSec_k_SubListID</name>
+        <param>
+          <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="112" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classspecies_1aac1880e5779d75ef8c700bee278da15d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt species::getCatalysisIfCpxID</definition>
+        <argsstring>(acs_int tmpID) const </argsstring>
+        <name>getCatalysisIfCpxID</name>
+        <param>
+          <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="113" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="113" bodyend="113"/>
+      </memberdef>
       <memberdef kind="function" id="classspecies_1a77f68017e5c50f8943df90efd2e8a0bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void species::increment</definition>
@@ -1428,7 +1479,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
 <para>Function to increment the total number of molecules belonging to this species </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="114" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="302" bodyend="309"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="117" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="302" bodyend="309"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a87e85a2397e5ec34518efa235b529d7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1449,7 +1500,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="115" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="115" bodyend="115"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="118" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="118" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1abefdc30b6f352e5ce5576a610015f5b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1470,7 +1521,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="116" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="116" bodyend="116"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="119" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="119" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a018a8f55746849f4814b4d281d4aca5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1491,7 +1542,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="117" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="117" bodyend="117"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="120" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="120" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1ae5142c6ab199459bc1d7d5945c761f0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1508,7 +1559,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
 <para>Function to decrement the total number of molecules belonging to this species </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="119" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="313" bodyend="320"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="122" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="313" bodyend="320"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a27f9852312659597efe7925124152286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1525,7 +1576,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
 <para>to charge a specific number of molecules </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="120" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="337" bodyend="346"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="123" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="337" bodyend="346"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a088763fc6b6279040920d219f314c90e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1542,7 +1593,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
 <para>to charge a specific number of molecules </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="121" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="324" bodyend="333"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="124" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="324" bodyend="333"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1adc36fb991695aed6503b8ed82e06bca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1555,7 +1606,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
 <para>to charge molecules </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="122" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="350" bodyend="361"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="125" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="350" bodyend="361"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1acf8588148932adb86229eec28f7cde7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1568,7 +1619,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
 <para>to uncharge molecules </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="123" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="365" bodyend="373"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="126" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="365" bodyend="373"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a089da38f8016bd588fa262cd836d1c4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1581,7 +1632,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="125" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="125" bodyend="125"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="128" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="128" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1ab4b4adbc3c26e3a8c81a090c9d1330e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1598,7 +1649,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="126" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="126" bodyend="126"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="129" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="129" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a27c2d0448e1f56e0962132d8d360fc07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1615,7 +1666,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="127" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="127" bodyend="127"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="130" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="130" bodyend="130"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a4d33fdb252e1884841f9c671ce25973c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1632,7 +1683,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="128" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="128" bodyend="128"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="131" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="131" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1aa73ab15fb28aefd3b0c6b19e7c9bb944" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1649,7 +1700,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="129" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="129" bodyend="129"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="132" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="132" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a90d5fc1d90637f2245e8b0ecf228ddfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1662,7 +1713,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="130" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="130" bodyend="130"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="133" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="133" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a9842732a5dbe0eb67e24148b5d7ae4a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1679,7 +1730,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="132" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="132" bodyend="132"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="135" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="135" bodyend="135"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a23c19a53390142ba690d0f3db0520d05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1696,7 +1747,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="133" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="133" bodyend="133"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="136" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="136" bodyend="136"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a911d4db36e84690d19abb2902a734524" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1709,7 +1760,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="135" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="135" bodyend="135"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="138" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="138" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a4884d8bce59ddb79e87e08f3ed16633f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1722,7 +1773,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="136" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="136" bodyend="136"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="139" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="139" bodyend="139"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1acc180a103e6681da2add266aafda3eb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1739,7 +1790,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="137" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="137" bodyend="137"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="140" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="140" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a8daa007da55f042b9c436f956836f4d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1756,7 +1807,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="138" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="138" bodyend="138"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="141" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="141" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="classspecies_1a0da8d53a216583f7790b12362da376a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1781,58 +1832,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
 <para>to insert the second substrate - and k reaction - to the species (complexes list) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="139" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="386" bodyend="401"/>
-      </memberdef>
-      <memberdef kind="function" id="classspecies_1ac066ac5e1684a958e7f1c8b200de3155" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
-        <definition>acs_longInt species::getSecSubListID</definition>
-        <argsstring>(acs_int tmpID)</argsstring>
-        <name>getSecSubListID</name>
-        <param>
-          <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
-          <declname>tmpID</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="140" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="140" bodyend="140"/>
-      </memberdef>
-      <memberdef kind="function" id="classspecies_1a012baa0b3a908e433bbc76151271f8bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
-        <definition>acs_double species::getSec_k_SubListID</definition>
-        <argsstring>(acs_int tmpID)</argsstring>
-        <name>getSec_k_SubListID</name>
-        <param>
-          <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
-          <declname>tmpID</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="141" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="141" bodyend="141"/>
-      </memberdef>
-      <memberdef kind="function" id="classspecies_1a5b26e28656321f2b19fafe49b153a5cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="acs__headers_8h_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
-        <definition>acs_longInt species::getCatalysisIfCpxID</definition>
-        <argsstring>(acs_int tmpID)</argsstring>
-        <name>getCatalysisIfCpxID</name>
-        <param>
-          <type><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
-          <declname>tmpID</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="142" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="142" bodyend="142"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="142" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="386" bodyend="401"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1862,7 +1862,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
       <member refid="classspecies_1a209c36c4e7eda0608f14cc003c344d65" prot="public" virt="non-virtual"><scope>species</scope><name>getAge</name></member>
       <member refid="classspecies_1a53c74ca3861c4cdac2457e7057fbef21" prot="public" virt="non-virtual"><scope>species</scope><name>getAmount</name></member>
       <member refid="classspecies_1aaafd2738231ba916153e24c19e7b3bfc" prot="public" virt="non-virtual"><scope>species</scope><name>getCatalysisIfCpx</name></member>
-      <member refid="classspecies_1a5b26e28656321f2b19fafe49b153a5cd" prot="public" virt="non-virtual"><scope>species</scope><name>getCatalysisIfCpxID</name></member>
+      <member refid="classspecies_1aac1880e5779d75ef8c700bee278da15d" prot="public" virt="non-virtual"><scope>species</scope><name>getCatalysisIfCpxID</name></member>
       <member refid="classspecies_1a4be19a81a4de43016316832fdf8b5f35" prot="public" virt="non-virtual"><scope>species</scope><name>getCatalyst_ID</name></member>
       <member refid="classspecies_1a3af3e7879c333a55f189cd351f8358ef" prot="public" virt="non-virtual"><scope>species</scope><name>getChargeMols</name></member>
       <member refid="classspecies_1a4c87285bf983ddd5635b58ce82d02a80" prot="public" virt="non-virtual"><scope>species</scope><name>getComplexCutPnt</name></member>
@@ -1880,9 +1880,9 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
       <member refid="classspecies_1af7293ab371ab92d6d16866ea281e901a" prot="public" virt="non-virtual"><scope>species</scope><name>getNOTchargeMols</name></member>
       <member refid="classspecies_1a00fe9b888d23788423cbcdc634eae934" prot="public" virt="non-virtual"><scope>species</scope><name>getReborns</name></member>
       <member refid="classspecies_1a30f77a52d0c75f02f6b4c269b5cf702d" prot="public" virt="non-virtual"><scope>species</scope><name>getSec_k_SubList</name></member>
-      <member refid="classspecies_1a012baa0b3a908e433bbc76151271f8bb" prot="public" virt="non-virtual"><scope>species</scope><name>getSec_k_SubListID</name></member>
+      <member refid="classspecies_1a6c546c89a974434e24f2161867521462" prot="public" virt="non-virtual"><scope>species</scope><name>getSec_k_SubListID</name></member>
       <member refid="classspecies_1ada53efcec76e8f241b15fd6c76d4fb79" prot="public" virt="non-virtual"><scope>species</scope><name>getSecSubList</name></member>
-      <member refid="classspecies_1ac066ac5e1684a958e7f1c8b200de3155" prot="public" virt="non-virtual"><scope>species</scope><name>getSecSubListID</name></member>
+      <member refid="classspecies_1a214be9ae628e99e47dfd9d72c8c07933" prot="public" virt="non-virtual"><scope>species</scope><name>getSecSubListID</name></member>
       <member refid="classspecies_1a984df86838272204e7a8414bbc2a61fb" prot="public" virt="non-virtual"><scope>species</scope><name>getSecSubListSize</name></member>
       <member refid="classspecies_1a553019883dd1344a7f15b805453e46d1" prot="public" virt="non-virtual"><scope>species</scope><name>getSequence</name></member>
       <member refid="classspecies_1ade5b59eab17c02ff322dcf068f923f9d" prot="public" virt="non-virtual"><scope>species</scope><name>getSequenceLength</name></member>

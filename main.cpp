@@ -1,7 +1,7 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.4 (20130731.56)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.7 (20131001.59)
  * \author Alessandro Filisetti
- * \version 4.5 (20130919.57)
- * \date 2013-09-19
+ * \version 4.7 (20131001.59)
+ * \date 2013-10-01
  * sourceforge repository -- https://carness.svn.sourceforge.net/svnroot/carness/
  * git repository -- https://github.com/paxelito/carness
  *
@@ -10,6 +10,7 @@
 *- \subpage intro
 *- \subpage pageInitStr
 *- \subpage pageoutcomes
+*- \subpage pageGillespie
 *- \subpage pageInitializator
 *
  * \page intro Essential informations
@@ -298,6 +299,26 @@
  *		</tr>
  *	  </table>
  *		- <i>Living Species amounts..., one for column</i>: Each values is related to the species indicated in the livingSpecies file. Reaction ID and time is that of the livingSpecies file
+ *
+ * \page pageGillespie Gillespie Class
+ * The Gillespie class contains the information concerning the Gillespie algorithm propensity with other useful information.
+ * In particular it has 4 properties, namely mol_I, mol_II, mol_III, mol_IV containing the species ID's related to different species type according to the different admitted reactions.
+ * In the following a table summarizing the different meanings for the different reactions is reported.
+ * <table>
+ * <tr>
+ * 	<td>Reaction Type</td><td>Reaction Type Code</td><td>MOL 1</td><td>MOL 2</td><td>MOL 3</td><td>MOL 4</td>
+ * </tr>
+ *  <tr>
+ * 	<td>Complex Formation</td><td>2</td><td>Catalyst</td><td>First Substrate</td><td>Catalysis ID</td><td>Second Substrate</td>
+ * </tr>
+ * <tr>
+ * 	<td>Final Condensation</td><td>0</td><td>Catalyst</td><td>Substrate</td><td>Product</td><td>Complex</td>
+ * </tr>
+ * <tr>
+ * 	<td>Cleavage</td><td>1</td><td>Substrate</td><td>Product 1</td><td>Product 2</td><td>Catalyst</td>
+ * </tr>
+ * </table>
+ *
  *
  * \page pageInitializator The initializator (a very brief description)
  * The initializator provided with the simulator is located in the \c initializator folder (within the source code folder) and it is developed in Matlab code. All the parameters are set in the \c start.m file (from line 22 to line 63). In addition you find the parameters related to the name of the folder that will contain the simulation (\c simFolder.name), the path where that folder will be created (\c simFolder.path) and the number of different network ensambles to create (\c simFolder.nets). It is important to notice that the initializator has not been thought to be shared, so it is not too much user friendly to be manipulated. Nevertheless it could be very useful with a little bit of practice.

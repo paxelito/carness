@@ -27,6 +27,7 @@ var index =
       [ "Living_species_amounts", "pageoutcomes.html#outLivAmounts", null ],
       [ "Living_species_concentration", "pageoutcomes.html#outLivConcentrations", null ]
     ] ],
+    [ "Gillespie Class", "page_gillespie.html", null ],
     [ "The initializator (a very brief description)", "page_initializator.html", [
       [ "Screening Parameter", "page_initializator.html#initSensitivity", null ]
     ] ]

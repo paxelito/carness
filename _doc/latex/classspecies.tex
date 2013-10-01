@@ -81,6 +81,12 @@ vector$<$ \hyperlink{acs__headers_8h_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\
 \item 
 \hyperlink{acs__headers_8h_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} \hyperlink{classspecies_a984df86838272204e7a8414bbc2a61fb}{get\-Sec\-Sub\-List\-Size} () const 
 \item 
+\hyperlink{acs__headers_8h_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} \hyperlink{classspecies_a214be9ae628e99e47dfd9d72c8c07933}{get\-Sec\-Sub\-List\-I\-D} (\hyperlink{acs__headers_8h_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-I\-D) const 
+\item 
+\hyperlink{acs__headers_8h_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{classspecies_a6c546c89a974434e24f2161867521462}{get\-Sec\-\_\-k\-\_\-\-Sub\-List\-I\-D} (\hyperlink{acs__headers_8h_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-I\-D) const 
+\item 
+\hyperlink{acs__headers_8h_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} \hyperlink{classspecies_aac1880e5779d75ef8c700bee278da15d}{get\-Catalysis\-If\-Cpx\-I\-D} (\hyperlink{acs__headers_8h_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-I\-D) const 
+\item 
 void \hyperlink{classspecies_a77f68017e5c50f8943df90efd2e8a0bb}{increment} (\hyperlink{acs__headers_8h_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} tmp\-Volume)
 \item 
 void \hyperlink{classspecies_a87e85a2397e5ec34518efa235b529d7e}{specific\-Increment} (\hyperlink{acs__headers_8h_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-Increment, \hyperlink{acs__headers_8h_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} tmp\-Volume)
@@ -124,12 +130,6 @@ void \hyperlink{classspecies_acc180a103e6681da2add266aafda3eb9}{reset\-To\-Init\
 void \hyperlink{classspecies_a8daa007da55f042b9c436f956836f4d8}{set\-Last\-Species\-Evaluated} (\hyperlink{acs__headers_8h_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-I\-D)
 \item 
 void \hyperlink{classspecies_a0da8d53a216583f7790b12362da376a3}{insert\-Sec\-Sub} (\hyperlink{acs__headers_8h_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} tmp\-I\-D, \hyperlink{acs__headers_8h_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} tmp\-K, \hyperlink{acs__headers_8h_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} tmp\-Cat)
-\item 
-\hyperlink{acs__headers_8h_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} \hyperlink{classspecies_ac066ac5e1684a958e7f1c8b200de3155}{get\-Sec\-Sub\-List\-I\-D} (\hyperlink{acs__headers_8h_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-I\-D)
-\item 
-\hyperlink{acs__headers_8h_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{classspecies_a012baa0b3a908e433bbc76151271f8bb}{get\-Sec\-\_\-k\-\_\-\-Sub\-List\-I\-D} (\hyperlink{acs__headers_8h_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-I\-D)
-\item 
-\hyperlink{acs__headers_8h_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} \hyperlink{classspecies_a5b26e28656321f2b19fafe49b153a5cd}{get\-Catalysis\-If\-Cpx\-I\-D} (\hyperlink{acs__headers_8h_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-I\-D)
 \end{DoxyCompactItemize}
 
 
@@ -502,7 +502,7 @@ Definition at line 350 of file species.\-cpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a9842732a5dbe0eb67e24148b5d7ae4a2}
 
 
-Definition at line 132 of file species.\-h.
+Definition at line 135 of file species.\-h.
 
 \hypertarget{classspecies_ae5142c6ab199459bc1d7d5945c761f0e}{\index{species@{species}!decrement@{decrement}}
 \index{decrement@{decrement}!species@{species}}
@@ -548,16 +548,16 @@ Definition at line 88 of file species.\-h.
 
 Definition at line 109 of file species.\-h.
 
-\hypertarget{classspecies_a5b26e28656321f2b19fafe49b153a5cd}{\index{species@{species}!get\-Catalysis\-If\-Cpx\-I\-D@{get\-Catalysis\-If\-Cpx\-I\-D}}
+\hypertarget{classspecies_aac1880e5779d75ef8c700bee278da15d}{\index{species@{species}!get\-Catalysis\-If\-Cpx\-I\-D@{get\-Catalysis\-If\-Cpx\-I\-D}}
 \index{get\-Catalysis\-If\-Cpx\-I\-D@{get\-Catalysis\-If\-Cpx\-I\-D}!species@{species}}
 \subsubsection[{get\-Catalysis\-If\-Cpx\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-long\-Int} species\-::get\-Catalysis\-If\-Cpx\-I\-D (
 \begin{DoxyParamCaption}
 \item[{{\bf acs\-\_\-int}}]{tmp\-I\-D}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a5b26e28656321f2b19fafe49b153a5cd}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_aac1880e5779d75ef8c700bee278da15d}
 
 
-Definition at line 142 of file species.\-h.
+Definition at line 113 of file species.\-h.
 
 \hypertarget{classspecies_a4be19a81a4de43016316832fdf8b5f35}{\index{species@{species}!get\-Catalyst\-\_\-\-I\-D@{get\-Catalyst\-\_\-\-I\-D}}
 \index{get\-Catalyst\-\_\-\-I\-D@{get\-Catalyst\-\_\-\-I\-D}!species@{species}}
@@ -746,16 +746,16 @@ Definition at line 94 of file species.\-h.
 
 Definition at line 108 of file species.\-h.
 
-\hypertarget{classspecies_a012baa0b3a908e433bbc76151271f8bb}{\index{species@{species}!get\-Sec\-\_\-k\-\_\-\-Sub\-List\-I\-D@{get\-Sec\-\_\-k\-\_\-\-Sub\-List\-I\-D}}
+\hypertarget{classspecies_a6c546c89a974434e24f2161867521462}{\index{species@{species}!get\-Sec\-\_\-k\-\_\-\-Sub\-List\-I\-D@{get\-Sec\-\_\-k\-\_\-\-Sub\-List\-I\-D}}
 \index{get\-Sec\-\_\-k\-\_\-\-Sub\-List\-I\-D@{get\-Sec\-\_\-k\-\_\-\-Sub\-List\-I\-D}!species@{species}}
 \subsubsection[{get\-Sec\-\_\-k\-\_\-\-Sub\-List\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-double} species\-::get\-Sec\-\_\-k\-\_\-\-Sub\-List\-I\-D (
 \begin{DoxyParamCaption}
 \item[{{\bf acs\-\_\-int}}]{tmp\-I\-D}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a012baa0b3a908e433bbc76151271f8bb}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a6c546c89a974434e24f2161867521462}
 
 
-Definition at line 141 of file species.\-h.
+Definition at line 112 of file species.\-h.
 
 \hypertarget{classspecies_ada53efcec76e8f241b15fd6c76d4fb79}{\index{species@{species}!get\-Sec\-Sub\-List@{get\-Sec\-Sub\-List}}
 \index{get\-Sec\-Sub\-List@{get\-Sec\-Sub\-List}!species@{species}}
@@ -768,16 +768,16 @@ Definition at line 141 of file species.\-h.
 
 Definition at line 107 of file species.\-h.
 
-\hypertarget{classspecies_ac066ac5e1684a958e7f1c8b200de3155}{\index{species@{species}!get\-Sec\-Sub\-List\-I\-D@{get\-Sec\-Sub\-List\-I\-D}}
+\hypertarget{classspecies_a214be9ae628e99e47dfd9d72c8c07933}{\index{species@{species}!get\-Sec\-Sub\-List\-I\-D@{get\-Sec\-Sub\-List\-I\-D}}
 \index{get\-Sec\-Sub\-List\-I\-D@{get\-Sec\-Sub\-List\-I\-D}!species@{species}}
 \subsubsection[{get\-Sec\-Sub\-List\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-long\-Int} species\-::get\-Sec\-Sub\-List\-I\-D (
 \begin{DoxyParamCaption}
 \item[{{\bf acs\-\_\-int}}]{tmp\-I\-D}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_ac066ac5e1684a958e7f1c8b200de3155}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a214be9ae628e99e47dfd9d72c8c07933}
 
 
-Definition at line 140 of file species.\-h.
+Definition at line 111 of file species.\-h.
 
 \hypertarget{classspecies_a984df86838272204e7a8414bbc2a61fb}{\index{species@{species}!get\-Sec\-Sub\-List\-Size@{get\-Sec\-Sub\-List\-Size}}
 \index{get\-Sec\-Sub\-List\-Size@{get\-Sec\-Sub\-List\-Size}!species@{species}}
@@ -867,7 +867,7 @@ Definition at line 386 of file species.\-cpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a23c19a53390142ba690d0f3db0520d05}
 
 
-Definition at line 133 of file species.\-h.
+Definition at line 136 of file species.\-h.
 
 \hypertarget{classspecies_a90d5fc1d90637f2245e8b0ecf228ddfa}{\index{species@{species}!reborns\-Increment@{reborns\-Increment}}
 \index{reborns\-Increment@{reborns\-Increment}!species@{species}}
@@ -878,7 +878,7 @@ Definition at line 133 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a90d5fc1d90637f2245e8b0ecf228ddfa}
 
 
-Definition at line 130 of file species.\-h.
+Definition at line 133 of file species.\-h.
 
 \hypertarget{classspecies_a911d4db36e84690d19abb2902a734524}{\index{species@{species}!reset\-Age@{reset\-Age}}
 \index{reset\-Age@{reset\-Age}!species@{species}}
@@ -889,7 +889,7 @@ Definition at line 130 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a911d4db36e84690d19abb2902a734524}
 
 
-Definition at line 135 of file species.\-h.
+Definition at line 138 of file species.\-h.
 
 \hypertarget{classspecies_a4884d8bce59ddb79e87e08f3ed16633f}{\index{species@{species}!reset\-Reborns@{reset\-Reborns}}
 \index{reset\-Reborns@{reset\-Reborns}!species@{species}}
@@ -900,7 +900,7 @@ Definition at line 135 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a4884d8bce59ddb79e87e08f3ed16633f}
 
 
-Definition at line 136 of file species.\-h.
+Definition at line 139 of file species.\-h.
 
 \hypertarget{classspecies_acc180a103e6681da2add266aafda3eb9}{\index{species@{species}!reset\-To\-Init\-Conc@{reset\-To\-Init\-Conc}}
 \index{reset\-To\-Init\-Conc@{reset\-To\-Init\-Conc}!species@{species}}
@@ -911,7 +911,7 @@ Definition at line 136 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_acc180a103e6681da2add266aafda3eb9}
 
 
-Definition at line 137 of file species.\-h.
+Definition at line 140 of file species.\-h.
 
 \hypertarget{classspecies_abefdc30b6f352e5ce5576a610015f5b8}{\index{species@{species}!set\-Amount@{set\-Amount}}
 \index{set\-Amount@{set\-Amount}!species@{species}}
@@ -923,7 +923,7 @@ Definition at line 137 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_abefdc30b6f352e5ce5576a610015f5b8}
 
 
-Definition at line 116 of file species.\-h.
+Definition at line 119 of file species.\-h.
 
 \hypertarget{classspecies_a27f9852312659597efe7925124152286}{\index{species@{species}!set\-Charge\-Mols@{set\-Charge\-Mols}}
 \index{set\-Charge\-Mols@{set\-Charge\-Mols}!species@{species}}
@@ -946,7 +946,7 @@ Definition at line 337 of file species.\-cpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a018a8f55746849f4814b4d281d4aca5a}
 
 
-Definition at line 117 of file species.\-h.
+Definition at line 120 of file species.\-h.
 
 \hypertarget{classspecies_ab4b4adbc3c26e3a8c81a090c9d1330e3}{\index{species@{species}!set\-Diffusion@{set\-Diffusion}}
 \index{set\-Diffusion@{set\-Diffusion}!species@{species}}
@@ -957,7 +957,7 @@ Definition at line 117 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_ab4b4adbc3c26e3a8c81a090c9d1330e3}
 
 
-Definition at line 126 of file species.\-h.
+Definition at line 129 of file species.\-h.
 
 \hypertarget{classspecies_a089da38f8016bd588fa262cd836d1c4d}{\index{species@{species}!set\-Evaluated@{set\-Evaluated}}
 \index{set\-Evaluated@{set\-Evaluated}!species@{species}}
@@ -968,7 +968,7 @@ Definition at line 126 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a089da38f8016bd588fa262cd836d1c4d}
 
 
-Definition at line 125 of file species.\-h.
+Definition at line 128 of file species.\-h.
 
 \hypertarget{classspecies_a4d33fdb252e1884841f9c671ce25973c}{\index{species@{species}!set\-Kphospho@{set\-Kphospho}}
 \index{set\-Kphospho@{set\-Kphospho}!species@{species}}
@@ -979,7 +979,7 @@ Definition at line 125 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a4d33fdb252e1884841f9c671ce25973c}
 
 
-Definition at line 128 of file species.\-h.
+Definition at line 131 of file species.\-h.
 
 \hypertarget{classspecies_a8daa007da55f042b9c436f956836f4d8}{\index{species@{species}!set\-Last\-Species\-Evaluated@{set\-Last\-Species\-Evaluated}}
 \index{set\-Last\-Species\-Evaluated@{set\-Last\-Species\-Evaluated}!species@{species}}
@@ -990,7 +990,7 @@ Definition at line 128 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a8daa007da55f042b9c436f956836f4d8}
 
 
-Definition at line 138 of file species.\-h.
+Definition at line 141 of file species.\-h.
 
 \hypertarget{classspecies_aa73ab15fb28aefd3b0c6b19e7c9bb944}{\index{species@{species}!set\-New\-Age@{set\-New\-Age}}
 \index{set\-New\-Age@{set\-New\-Age}!species@{species}}
@@ -1001,7 +1001,7 @@ Definition at line 138 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_aa73ab15fb28aefd3b0c6b19e7c9bb944}
 
 
-Definition at line 129 of file species.\-h.
+Definition at line 132 of file species.\-h.
 
 \hypertarget{classspecies_a27c2d0448e1f56e0962132d8d360fc07}{\index{species@{species}!set\-Solubility@{set\-Solubility}}
 \index{set\-Solubility@{set\-Solubility}!species@{species}}
@@ -1012,7 +1012,7 @@ Definition at line 129 of file species.\-h.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a27c2d0448e1f56e0962132d8d360fc07}
 
 
-Definition at line 127 of file species.\-h.
+Definition at line 130 of file species.\-h.
 
 \hypertarget{classspecies_a088763fc6b6279040920d219f314c90e}{\index{species@{species}!set\-Specific\-Charge\-Mols@{set\-Specific\-Charge\-Mols}}
 \index{set\-Specific\-Charge\-Mols@{set\-Specific\-Charge\-Mols}!species@{species}}
@@ -1035,7 +1035,7 @@ Definition at line 324 of file species.\-cpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classspecies_a87e85a2397e5ec34518efa235b529d7e}
 
 
-Definition at line 115 of file species.\-h.
+Definition at line 118 of file species.\-h.
 
 \hypertarget{classspecies_acf8588148932adb86229eec28f7cde7c}{\index{species@{species}!uncharge\-Mol@{uncharge\-Mol}}
 \index{uncharge\-Mol@{uncharge\-Mol}!species@{species}}
