@@ -22,13 +22,13 @@ catalysis::catalysis(acs_longInt tmpCatId, acs_longInt tmpCat, acs_longInt tmpRc
 	if((tmpCpxTarget < 1) || (tmpCpxTarget > 2))
 	{
 		cout << "ID: " << tmpCatId
-			 << "Catalyst: " << tmpCat
-			 << "reaction_ID: " << tmpRctId
-			 << "totalAmount: " << tmpAmount
-			 << "Kdiss: " << tmpKdiss
-			 << "Kass: " << tmpKass
-			 << "k_cpx: " << tmpK_cpx
-			 << "cpxTarget: " << tmpCpxTarget << endl;
+			 << " || Catalyst: " << tmpCat
+			 << " || reaction_ID: " << tmpRctId
+			 << " || totalAmount: " << tmpAmount
+			 << " || Kdiss: " << tmpKdiss
+			 << " || Kass: " << tmpKass
+			 << " || k_cpx: " << tmpK_cpx
+			 << " || cpxTarget: " << tmpCpxTarget << endl;
 		ExitWithError("catalysis::catalysis","Wrong Complex Target");
 	}
 	ID = tmpCatId;				// CATALYSIS ID

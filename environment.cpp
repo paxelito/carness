@@ -768,7 +768,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                                 if(tmpsID == ids_I) toProceed = false;
 
                                 // CHECK WHETHER THE CANDIDATE PRODUCT ALREADY CATALYSES THE CATALYST
-//					if(toProceed) toProceed = checkIfOnlyMutualCatalysis(tmpsID, ids_I);
+//							if(toProceed) toProceed = checkIfOnlyMutualCatalysis(tmpsID, ids_I);
                             }
 
                             if(toProceed)
@@ -875,6 +875,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                             }
 
                             if(allSpecies.at(tmpsID).getSequenceLength() <= nonCatalyticMaxLength) ExitWithError("createReactionsForThisSpecies","ERROR: The catalyst is smaller than the minumum");
+                            if((tmpCpxTarget < 1) || (tmpCpxTarget > 2)) ExitWithError("createReactionsForThisSpecies:r878","WRONG COMPLEX TARGET");
                             allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpsID, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx, tmpCpxTarget));
 
                         }else{ // OTHERWISE ONLY THE VECTOR ALLCATALYSIS IS UPDATED
@@ -901,7 +902,8 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                             if(!checkIfTheReactionIsAlreadyCatalyzedByThisSpecies(tmpsID, id_reaction))
                             {
                             	if(allSpecies.at(tmpsID).getSequenceLength() <= nonCatalyticMaxLength) ExitWithError("createReactionsForThisSpecies","ERROR: The catalyst is smaller than the minumum");
-                                allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpsID, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx, tmpCpxTarget));
+                            	if((tmpCpxTarget < 1) || (tmpCpxTarget > 2)) ExitWithError("createReactionsForThisSpecies:r905","WRONG COMPLEX TARGET");
+                            	allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpsID, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx, tmpCpxTarget));
                             }
                         }
                     }else{
@@ -957,6 +959,9 @@ bool environment::updateReactions(acs_longInt tmpIDtoUpdate, acs_longInt tmpNewS
 				{
 				   string product_I;
 				   string product_II;
+				   // Define complex target in case of reverse reaction...
+				   if(tmp_RndDoubleGen() < 0.5) tmpCpxTarget = 1; else tmpCpxTarget = 2;
+
 				   if(allSpecies.at(tmpNewSpecies).getSequenceLength() > 1) //IF THE SUBSTRATE IS LONGER THAN 1
 				   {
 						//SELECT CUTTING POINT AND CREATE THE TWO PRODUCTS
@@ -1030,7 +1035,6 @@ bool environment::updateReactions(acs_longInt tmpIDtoUpdate, acs_longInt tmpNewS
 							substratePosID_II = tmpNewSpecies;
 							substratePosID_I = tmp_AlreadyEvaluatedSpeciesVector.at(returnUniformSelection_LONG_IdFromVector(tmp_AlreadyEvaluatedSpeciesVector, tmp_RndDoubleGen));
 							tmpCpxTarget = 2;
-
 						}
 
 						//PRODUCT CREATION
@@ -1085,18 +1089,16 @@ bool environment::updateReactions(acs_longInt tmpIDtoUpdate, acs_longInt tmpNewS
 								}
 								validReactionFlag = true;
 							}
-						}else{
+						}else{ // if(toProceed)
 							validReactionFlag = false;
 						}
-					}
-
+					}//if((acs_longInt)tmp_AlreadyEvaluatedSpeciesVector.size() > 0) // IF THERE ARE SPECIES
 				}
 
 				if(debugLevel == SMALL_DEBUG)
 					cout << "\t\t\tReaction validity: " << validReactionFlag << " - attempts " << rctCreationAttemptCounter << endl;
 
 				// IF ALL IT'S OK REACTION AND CATALYSIS ARE STORED
-
 				if(validReactionFlag == true)
 				{
 					// SINCE THE SPECIES HAS BEEN CREATED, NOW I HAVE TO CHECK WHETHER THE REACTION IS ALREADY PRESENT.
@@ -1150,6 +1152,11 @@ bool environment::updateReactions(acs_longInt tmpIDtoUpdate, acs_longInt tmpNewS
 						}
 						// IF camplex target must be defined as 1
 						if(allSpecies.at(tmpIDtoUpdate).getSequenceLength() <= nonCatalyticMaxLength) ExitWithError("createReactionsForThisSpecies","ERROR: The catalyst is smaller than the minumum");
+						if((tmpCpxTarget < 1) || (tmpCpxTarget > 2))
+						{
+							cout << "id reaction: " << id_reaction << " - Reaction type: " << allReactions.at(id_reaction).getType() << endl;
+							ExitWithError("createReactionsForThisSpecies:r1154","WRONG COMPLEX TARGET");
+						}
 						allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpIDtoUpdate, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx, tmpCpxTarget));
 
 					}else{ // OTHERWISE ONLY THE VECTOR ALLCATALYSIS IS UPDATED
@@ -1174,6 +1181,7 @@ bool environment::updateReactions(acs_longInt tmpIDtoUpdate, acs_longInt tmpNewS
 						if(!checkIfTheReactionIsAlreadyCatalyzedByThisSpecies(tmpIDtoUpdate, id_reaction))
 						{
 							if(allSpecies.at(tmpIDtoUpdate).getSequenceLength() <= nonCatalyticMaxLength) ExitWithError("createReactionsForThisSpecies","ERROR: The catalyst is smaller than the minumum");
+							if((tmpCpxTarget < 1) || (tmpCpxTarget > 2)) ExitWithError("createReactionsForThisSpecies:r1179","WRONG COMPLEX TARGET");
 							allCatalysis.push_back(catalysis(getNumberOfCatalysis(), tmpIDtoUpdate, id_reaction, 0, tmpK_ass, tmpK_diss, tmpK_cpx, tmpCpxTarget));
 						}
 					}
@@ -1185,7 +1193,7 @@ bool environment::updateReactions(acs_longInt tmpIDtoUpdate, acs_longInt tmpNewS
 								<< ids_II  << " (" << allSpecies.at(ids_II).getSequence() << ") - "
 								<< ids_III << " (" << allSpecies.at(ids_III).getSequence() << ") - complex target: " << tmpCpxTarget << endl;
 					}
-				}else{
+				}else{ // if(validReactionFlag == true)
 						rctCreationAttemptCounter++;
 				}// if(validReactionFlag)
 		} //while(!validReactionFlag)
