@@ -93,7 +93,7 @@ environment::environment(string tmpInitialPath)
         getline(myfile, strID);
         if(!strID.empty())
             if(strID.c_str()[0] != '#'){
-                cout << strID << endl;
+                //cout << strID << endl;
                 linered = split(strID, "=");
                 if(linered[0] == "nGEN") nGEN = atoi(linered[1].c_str());
                 if(linered[0] == "nSIM") nSIM = atoi(linered[1].c_str());
@@ -124,6 +124,7 @@ environment::environment(string tmpInitialPath)
                 if(linered[0] == "cleavageProbability") cleavageProbability = atof(linered[1].c_str());
                 if(linered[0] == "reverseReactions") reverseReactions = atoi(linered[1].c_str());
                 if(linered[0] == "revRctRatio") revRctRatio = atof(linered[1].c_str());
+                if(linered[0] == "spontRct") spontRct = atoi(linered[1].c_str());
                 if(linered[0] == "K_ass") K_ass = atof(linered[1].c_str());
                 if(linered[0] == "K_diss") K_diss = atof(linered[1].c_str());
                 if(linered[0] == "K_cpx") K_cpx = atof(linered[1].c_str());
@@ -131,6 +132,8 @@ environment::environment(string tmpInitialPath)
                 if(linered[0] == "K_nrg") K_nrg = atof(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE
                 if(linered[0] == "K_nrg_decay") K_nrg_decay = atof(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE
                 if(linered[0] == "moleculeDecay_KineticConstant") moleculeDecay_KineticConstant = atof(linered[1].c_str());
+                if(linered[0] == "K_spont_ass") K_spont_ass = atof(linered[1].c_str());
+                if(linered[0] == "K_spont_diss") K_spont_diss = atof(linered[1].c_str());
                 if(linered[0] == "maxLOut") maxLOut = atoi(linered[1].c_str());
                 if(linered[0] == "solubility_threshold") solubility_threshold = atoi(linered[1].c_str());
                 if(linered[0] == "diffusion_contribute") diffusion_contribute = atof(linered[1].c_str());
@@ -530,6 +533,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
     acs_double tmpK_ass; // Declare three kinetic variable to initialize according to the presence of not of the reverse reations
     acs_double tmpK_diss;
     acs_double tmpK_cpx;
+    acs_double tmpK_spontanoues; // This variable is used to set the spontanoues kinetic constant of the reaction (0 in case of no spontaneous)
     acs_longInt id_reaction;
     acs_int tempEnergyRctType = ESOERGONIC;
     acs_int nrgRctBoolFncID;
@@ -855,7 +859,12 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
                                 }
                             }
                             // IF IT IS NOT PRESENT THE VECTOR ALLREACTIONS AND THE VECTOR ALLCATALYSIS ARE UPDATED
-                            allReactions.push_back(reactions(id_reaction, reactionType, ids_I, ids_II, ids_III, 0, tempEnergyRctType));
+                            if(!spontRct){tmpK_spontanoues = NOSPONTANEOUS;}
+                            else{
+                            	if((reactionType == CONDENSATION) || (reactionType == ENDO_CONDENSATION)){tmpK_spontanoues = K_spont_ass;}
+                            	else{tmpK_spontanoues = K_spont_diss;}
+                            }
+                            allReactions.push_back(reactions(id_reaction, reactionType, ids_I, ids_II, ids_III, 0, tempEnergyRctType, tmpK_spontanoues));
                             if(reverseReactions == true)
                             {
                                 if(reactionType == CONDENSATION)
@@ -939,6 +948,7 @@ bool environment::updateReactions(acs_longInt tmpIDtoUpdate, acs_longInt tmpNewS
 	    acs_double tmpK_diss;
 	    acs_double tmpK_cpx;
 	    acs_longInt id_reaction;
+	    acs_double tmpK_spontanoues;
 	    acs_int tempEnergyRctType = ESOERGONIC;
 	    acs_int nrgRctBoolFncID;
 	    acs_int tmpEnergizable = NOTENERGIZABLE;
@@ -1132,7 +1142,12 @@ bool environment::updateReactions(acs_longInt tmpIDtoUpdate, acs_longInt tmpNewS
 							}
 						}
 						// IF IT IS NOT PRESENT THE VECTOR ALLREACTIONS AND THE VECTOR ALLCATALYSIS ARE UPDATED
-						allReactions.push_back(reactions(id_reaction, tmpRctType, ids_I, ids_II, ids_III, 0, tempEnergyRctType));
+                        if(!spontRct){tmpK_spontanoues = NOSPONTANEOUS;}
+                        else{
+                        	if((tmpRctType == CONDENSATION) || (tmpRctType == ENDO_CONDENSATION)){tmpK_spontanoues = K_spont_ass;}
+                        	else{tmpK_spontanoues = K_spont_diss;}
+                        }
+						allReactions.push_back(reactions(id_reaction, tmpRctType, ids_I, ids_II, ids_III, 0, tempEnergyRctType, tmpK_spontanoues));
 						if(reverseReactions == true)
 						{
 							if(tmpRctType == CONDENSATION)
@@ -1624,7 +1639,7 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
     string FilePath = tmpSpeciesFilePath + "_acsreactions.csv";
     ifstream myfile;
     myfile.open(FilePath.c_str());
-    string strID, strType, strMolsI, strMolsII, strMolsIII, strCnt, strNrg;
+    string strID, strType, strMolsI, strMolsII, strMolsIII, strCnt, strNrg, strKspont;
     while (myfile.good())
     {
 
@@ -1634,11 +1649,12 @@ bool environment::createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePa
         getline(myfile, strMolsII, '\t');
         getline(myfile, strMolsIII, '\t');
         getline(myfile, strCnt, '\t');
-        getline(myfile, strNrg, '\n');
+        getline(myfile, strNrg, '\t');
+        getline(myfile, strKspont, '\n');
         if((strID.find("\n") != 0) && (strID.size() > 0) && (strID.find(" ") != 0))
             allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
                                          (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
-                                         (acs_double)atof(strNrg.c_str())));
+                                         (acs_double)atof(strNrg.c_str()), (acs_double)atof(strKspont.c_str())));
 
     }
 
@@ -1674,7 +1690,7 @@ bool environment::createInitialReactionsLayerFromSpecificFileSTD(string tmpReact
 
     ifstream myfile;
     myfile.open(ReactionsFilePath.c_str());
-    string strID, strType, strMolsI, strMolsII, strMolsIII, strCnt, strNrg;
+    string strID, strType, strMolsI, strMolsII, strMolsIII, strCnt, strNrg, strKspont;
     while (myfile.good())
     {
         getline(myfile, strID, '\t');
@@ -1683,12 +1699,13 @@ bool environment::createInitialReactionsLayerFromSpecificFileSTD(string tmpReact
         getline(myfile, strMolsII, '\t');
         getline(myfile, strMolsIII, '\t');
         getline(myfile, strCnt, '\t');
-        getline(myfile, strNrg, '\n');
+        getline(myfile, strNrg, '\t');
+        getline(myfile, strKspont, '\n');
 
         if(strID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
         	allReactions.push_back(reactions((acs_longInt)atol(strID.c_str()), (acs_int)atoi(strType.c_str()), (acs_longInt)atol(strMolsI.c_str()),
                                          (acs_longInt)atol(strMolsII.c_str()), (acs_longInt)atol(strMolsIII.c_str()), (acs_longInt)atol(strCnt.c_str()),
-                                         (acs_double)atof(strNrg.c_str())));
+                                         (acs_double)atof(strNrg.c_str()), (acs_double)atof(strKspont.c_str())));
 
     }
 
@@ -2926,6 +2943,28 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 			} // end if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION)
 		} // end for all catalysis
 	} // end if if((acs_longInt)allCatalysis.size() > 0)
+
+	// IF SPONTANEOUS REACTIONS ARE TURNED ON, ALL REACTIONS MUST BE EVALUATED
+	if(spontRct)
+	{
+		for(vector<reactions>::iterator reactionsIter = allReactions.begin(); reactionsIter != allReactions.end(); reactionsIter++)
+		{
+			// If the spontanoues constant of the reaction is greater than 0
+			if(reactionsIter->getKspont() > 0)
+			{
+				temp_mol_I = reactionsIter->getSpecies_I(); // Mol_I
+				temp_mol_II = reactionsIter->getSpecies_II(); // Mol_II
+				temp_mol_III = reactionsIter->getSpecies_III(); // Mol_III
+				temp_reactionID = reactionsIter->getID(); // reaction ID
+				temp_rctType = reactionsIter->getType();; // reaction type
+
+			}
+		}
+	}
+
+
+
+
     // Store gillespie computational time and start performReaction Times
     gillespiePartialTimes.push_back(((float)clock() - gillespiePartialTimer) / CLOCKS_PER_SEC);
     performReactionPartialTimer = clock();
@@ -5773,18 +5812,19 @@ void environment::showGlobalParameter()
 	if(debugLevel >= RUNNING_VERSION)
 	{ 
         cout << endl << endl;
-        cout << "|---------------------------------------------------------------------------------|" << endl;
-        cout << "|   ****         ***   *     *          *****   *****                             |" << endl;
-        cout << "|  *            *   *  **    *         *       *                                  |" << endl;
-        cout << "| *        ***  *   *  * *   *  ****   *       *                                  |" << endl;
-        cout << "| *          *  ****   *  *  *  *  *    ****    ****    VERSION " << __SOFTVERSION__ << " |" << endl;
-        cout << "| *       ****  **     *   * *  ****        *       *                             |" << endl;
-        cout << "|  *      *  *  * *    *    **  *           *       *                             |"  << endl;
-        cout << "|   ****  ****  *  *   *     *   ***   *****   *****                              |" << endl;
-        cout << "|  												                               |" << endl;
-        cout << "| CAtalytic     Reaction NEtworks      Stochastic Simulator	                   |" << endl;
-        cout << "|---------------------------------------------------------------------------------|" << endl;
-        cout << endl << endl;
+        cout << "|   ****         ***   *     *          *****   *****                             " << endl;
+        cout << "|  *            *   *  **    *         *       *                                  " << endl;
+        cout << "| *        ***  *   *  * *   *  ****   *       *                                  " << endl;
+        cout << "| *          *  ****   *  *  *  *  *    ****    ****       " << endl;
+        cout << "| *       ****  **     *   * *  ****        *       *                             " << endl;
+        cout << "|  *      *  *  * *    *    **  *           *       *                             "  << endl;
+        cout << "|   ****  ****  *  *   *     *   ***   *****   *****                              " << endl;
+        cout << "|  												                               " << endl;
+        cout << "| CAtalytic     Reaction NEtworks      Stochastic Simulator	                   " << endl;
+        cout << "| VERSION_ " << __SOFTVERSION__ << endl;
+        cout << "| Author_ Alessandro Filisetti" << endl;
+        cout << "| mail_ alessandro.filisetti@gmail.com" << endl;
+        cout << endl << endl << endl;
 
 		//TR if(onlyEnvironmentCreation)
 		//TR 	out << "\t|-ONLY THE ENVIRONMENT WILL BE CREATED..." << endl; 
@@ -5812,6 +5852,8 @@ void environment::showGlobalParameter()
 		cout << "\t|- COMPLEX dissociation : " << K_cpxDiss << endl;
 		cout << "\t|- ENERGY PHOSFORILATION constant: " << K_nrg << endl;
         cout << "\t|- ENERGY DECAY CONSTANT: " << K_nrg_decay << endl;
+        cout << "\t|- SPONTANOUES CONDENSATION kinetic constant: " << K_spont_ass << endl;
+        cout << "\t|- SPONTANOUES CLEAVAGE kinetic constant: " << K_spont_diss << endl;
 		cout << "\t|- SOLUBILITY THRESHOLD: " << solubility_threshold << endl;
         if(influx_rate > 0)
 		{
@@ -5822,6 +5864,9 @@ void environment::showGlobalParameter()
 		}else{
 			cout << "\t|- The system is CLOSED" << endl;
 		}
+        if(spontRct){cout << "\t|- Spontaneuos Reactions are present" << endl;}
+        else{cout << "\t|- Spontanoues Reactions are NOT present" << endl;}
+
 		cout << "\t|- Alphabet: " << alphabet << endl;
 		cout << "\t|- Volume: "<< volume << endl;
 		cout << "\t|- Volume Growth: " << volumeGrowth << endl;
@@ -5830,7 +5875,7 @@ void environment::showGlobalParameter()
 		cout << "\t|- NEPERO: " << NEP << endl;
 		cout << "\t|- AVOGADRO: " << AVO << endl;
 		cout << "\t|- ENERGY: " << energy << endl;
-		cout << "\t|- ratioSpeciesEnergizable: " << ratioSpeciesEnergizable << endl;
+		cout << "\t|- ratioSpeciesEnergizable: " << ratioSpeciesEnergizable << endl << endl;
 		//TR cout << "\t|- Percentage of laoded carriers in the influx: " << percLoadedECInflux << endl;
 		//TR switch (energyTarget) {
 		//	case SUBSTRATELOAD:
@@ -6325,6 +6370,9 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
     fidFile << "# Ratio between forward and backward reactions (if reverseReactions = TRUE)" << endl;
     fidFile << "revRctRatio=" << (double)revRctRatio << endl << endl;
 
+    fidFile << "# Spontaneous Reactions (if present = TRUE)" << endl;
+    fidFile << "spontRct=" << spontRct << endl << endl;
+
     fidFile << "# kinetic constants" << endl;
     fidFile << "K_ass=" << (double)K_ass << endl;
     fidFile << "K_diss=" << (double)K_diss << endl;
@@ -6332,6 +6380,8 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
     fidFile << "K_cpxDiss=" << (double)K_cpxDiss << endl;
     fidFile << "K_nrg=" << (double)K_nrg << endl;
     fidFile << "K_nrg_decay=" << (double)K_nrg_decay << endl;
+    fidFile << "K_spont_ass=" << (double)K_spont_ass << endl;
+    fidFile << "K_spont_diss=" << (double)K_spont_diss << endl;
     fidFile << "moleculeDecay_KineticConstant=" << (double)moleculeDecay_KineticConstant << endl << endl;
 
     fidFile << "# (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length" << endl;
@@ -6537,7 +6587,8 @@ bool environment::saveReactionsStructureSTD(acs_int tmpCurrentGen, acs_int tmpCu
         << tmpAllReactionsIter->getSpecies_II() << "\t"
         << tmpAllReactionsIter->getSpecies_III() << "\t"
         << tmpAllReactionsIter->getEvents() << "\t"
-        << tmpAllReactionsIter->getEnergyType() << endl;
+        << tmpAllReactionsIter->getEnergyType() << "\t"
+        << (acs_double)tmpAllReactionsIter->getKspont() << endl;
     }
     fidFile.close();
     if(debugLevel >= SMALL_DEBUG)

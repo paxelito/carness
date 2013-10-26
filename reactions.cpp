@@ -18,7 +18,7 @@
  @param tmpKeq equilibrium constant
  */
 reactions::reactions(acs_longInt tmpID, acs_int tmpType, acs_longInt tmpM_I, acs_longInt tmpM_II, 
-                     acs_longInt tmpM_III, acs_int tmpEvents, acs_int tmpEnergyType)
+                     acs_longInt tmpM_III, acs_int tmpEvents, acs_int tmpEnergyType, acs_double tmpKspont)
 {
 	id_reaction = tmpID;
 	type = tmpType;
@@ -27,5 +27,6 @@ reactions::reactions(acs_longInt tmpID, acs_int tmpType, acs_longInt tmpM_I, acs
 	species_III = tmpM_III;
 	events = tmpEvents;
 	energyType = tmpEnergyType;	
+	k_spont = tmpKspont;
 }
 

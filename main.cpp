@@ -17,7 +17,7 @@
  * <hr>
  * The <b>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</b> is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different
  * interacting molecular species. 
- * The model takes inspiration from the original model proposed by Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case.
+ * The model takes inspiration from the original model proposed by Stuart Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case.
  * Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction.
  * It is important to notice that there are not indications about the chemical nature of the molecules,
  * species "A" may be both a polipeptide, an amminoacid, a particular protein domain or an RNA strenght.<br><br>
@@ -75,13 +75,16 @@
  *		@param cleavageProbability (from 0 to 1) Cleavage probability (Condensation probability is 1 - cleavage probability)
  *		@param reverseReaction (0 or 1) Set to 1 to enable reverse reactions, 0 otherwise
  *      @param revRctRatio (>0) Ratio between forward and backward reactions, it is used in the creation of new reactions only (if reverseReactions = TRUE)
- *		@param K_ass (> 0) Final Condensation kinetic constant (C.A + B --> AB + C) where A.C is the molecular complex composed of C (the catalyst) and A (the first substrate)
- *		@param K_diss (> 0) Cleavage kinetic constant (AB --> A + B)
- *		@param K_cpx (> 0) Complex formation kinetic constant (A + C(catalyst) --> C.A)
- *		@param K_cpxDiss (> 0) Complex Dissociation kinetic constant (C.A --> A + C)
- *		@param K_nrg (> 0) species phosphorilation kinetic constant
- *		@param K_nrg_decay (> 0) de-energization kinetic constant
+ *		@param spontRct (0 or 1) If 1 spontanoues reactions are considered, otherwise no
+ *		@param K_ass (>= 0) Final Condensation kinetic constant (C.A + B --> AB + C) where A.C is the molecular complex composed of C (the catalyst) and A (the first substrate)
+ *		@param K_diss (>= 0) Cleavage kinetic constant (AB --> A + B)
+ *		@param K_cpx (>= 0) Complex formation kinetic constant (A + C(catalyst) --> C.A)
+ *		@param K_cpxDiss (>= 0) Complex Dissociation kinetic constant (C.A --> A + C)
+ *		@param K_nrg (>= 0) species phosphorilation kinetic constant
+ *		@param K_nrg_decay (>= 0) de-energization kinetic constant
  *		@param moleculeDecay_KineticConstant (> 0) Molecule decay (efflux) kinetic Constant (Disregarded if the system is closed)
+ *		@param K_spont_ass (>= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues condensations
+ *		@param K_spont_diss (>= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues cleavages
  *		@param influx_rate (>= 0) Concentration per seconds (The species to insert in the system will be randomly chosen according to the _acsinflux.csv file). If equal to 0 the system is closed (maxLOut=0) or only the species that can cross the membrane come in and go out (maxLOut>0).
  *		@param maxLOut Maximum lenght of the species involved in the efflux process (\c influx_rate  > 0), equal to 0 indicates that all the species can be involved in the efflux process (no filter). If influx_rate = 0 the parameter indicates the species that can cross the semipermeable membrane of the protocell. <b>THE COUPLING BETWEEN INFLUX_RATE AND MAXLOUT INDICATES IF WE ARE SIMULATING A PROTOCELL OR A FLOW REACTOR</b>
  *		@param diffusion_contribute (KD) (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length, L^{-KD}
@@ -145,7 +148,8 @@
  *	Columns description (each field is delimited using "\t"):
  *	  <table>
  *		<tr>
- *			<td>Identificator</td><td>Reaction type</td><td>Species 1</td><td>Species 2</td><td>Species 3</td><td>Reaction counter</td><td>Energy type</td>
+ *			<td>Identificator</td><td>Reaction type</td><td>Species 1</td><td>Species 2</td><td>Species 3</td>
+ *			<td>Reaction counter</td><td>Energy type</td><td>k spont</td>
  *		</tr>
  *	  </table>
  *		- <i>Identificator</i>: Reaction ID
@@ -155,9 +159,10 @@
  *		- <i>Species 3</i>: Product ID if reaction type = 0, Substrate ID reaction type = 1
  *		- <i>Reaction counter</i>:  Reaction occurrance counter
  *		- <i>Energy Type</i>: The reaction energetic configuration, 1 for endoergonic 0 for esoergonic
+ *		- <i>Spontaneous Constant</i>: Spontaneous reaction constant
  *<br>
  *	\section subCatalysis _acscatalysis.csv
-* Columns description (each field is delimited using "\t"):
+ * Columns description (each field is delimited using "\t"):
  *	  <table>
  *		<tr>
  *			<td>Identificator</td><td>Catalyst ID</td><td>Reaction ID</td><td>Catalysis counter</td><td>K condensation</td><td>K cleavage</td><td>K Complex Association</td><td>Complex creation substrate target</td>
@@ -517,7 +522,7 @@ int main (int argc, char *argv[]) {
                                                     << "\t\t|- Gil Mean: " << puddle->getGillespieMean()
                                                     << " - Gil SD: " << puddle->getgillespieSD()
                                                     << " - Gil Entropy: " << puddle->getgillespieEntropy() << endl
-                                                    << "\t\t- Gil NS ratio: " << puddle->getRatioBetweenNewGillTotGill()
+                                                    << "\t\t|- Gil NS ratio: " << puddle->getRatioBetweenNewGillTotGill()
                                                     << " - Back and Forw Ratio: " << puddle->getRatioBetweenBackandForw() << endl
                                                     << "\t- REACTIONS COUNTERS" << endl
                                                     << "\t\t|- Theoretical Average Connectivity:" << (double)puddle->getNumberOfCatalysis() / puddle->getTotalNumberOfPossibleCatalysts() << endl

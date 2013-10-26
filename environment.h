@@ -40,6 +40,7 @@ private:
     acs_double cleavageProbability; // Cleavage probability (when new reactions are created)
     bool reverseReactions; // if true backward reactions are present
     acs_double revRctRatio; // ratio between forward and backward reactions, it is used only in the creation of new reactions (if reverseReactions = TRUE)
+    bool spontRct; // if true spontaneous reactions are present
     species nrgCarrier; // !!! declare energy carrier, !!! PRESENTLY this is not used... it was used in previous versions !!!
     acs_longInt numberOfMolecules; // Total number of molecules
     acs_longInt numberOfNewMolecules; // Total number of NEW molecules
@@ -65,6 +66,8 @@ private:
     acs_double K_cpxDiss;
     acs_double K_nrg;
     acs_double K_nrg_decay; // Energy Decay (both for species and carriers) kinetic constant
+    acs_double K_spont_diss; // Spontaneous  dissociation kinetic constant
+    acs_double K_spont_ass; // Spontaneous association kinetic constant
     acs_int    maxLOut; // Maximum length of the species that may be involved in the outflow process
     acs_double cleavage_KineticConstant;
     acs_double complex_KineticConstant;
@@ -184,6 +187,8 @@ private:
 	acs_double getKcpxDiss()const{return K_cpxDiss;}
 	acs_double getKnrg()const{return K_nrg;}
 	acs_double getKirrad()const{return K_nrg_decay;}
+	acs_double getK_spont_diss()const{return K_spont_diss;}
+	acs_double getK_spont_ass()const{return K_spont_ass;}
 	
 	acs_double getCleavageKC()const{return cleavage_KineticConstant;}
 	acs_double getComplexKC()const{return complex_KineticConstant;}
