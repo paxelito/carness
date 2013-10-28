@@ -1,11 +1,8 @@
-
+#####
+# FILES TO IGNORE
+#####
 *.csv
-
-*.csv
-/Release
-
 *.d
-
 *.o
-
 *.mk
+/Release/
