@@ -5359,6 +5359,8 @@ bool environment::perform_endo_ComplexFormation(acs_longInt tmpCatalyst, acs_lon
  @version 1.1
  @date 2010.06.08
  @param acs_longInt tmpComplex Complex ID
+ @param acs_longInt tmpCatalyst Catalyst ID
+ @param acs_longInt tmpSubstrate Substrate ID
  @param MTRand& tmp__RndDoubleGen random generator
  */
 bool environment::performComplexDissociation(acs_longInt tmpComplex, acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, MTRand& tmp__RndDoubleGen)
@@ -5444,6 +5446,76 @@ bool environment::performComplexDissociation(acs_longInt tmpComplex, acs_longInt
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performComplexDissociation end" << endl;
 
     return reactionFlag;
+}
+
+/**
+ Perform SPONTANEOUS CLEAVAGE reaction
+ @version 1.0
+ @date 2013.10.28
+ @param acs_longInt tmpReaction Reaction ID
+ @param MTRand& tmp__RndDoubleGen random generator
+ */
+bool environment::performSpontaneousCleavage(acs_longInt tmpReaction, MTRand& tmp__RndDoubleGen)
+{
+        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performComplexDissociation start" << endl;
+
+        if(debugLevel >= SMALL_DEBUG)
+            cout << "\t\t\t|-REACTION " <<  tmpReaction << " will spontaneously occur" << endl;
+        bool reactionFlag = false;
+
+        acs_longInt tmpSubstrate = allReactions.at(tmpReaction).getSpecies_I();
+        acs_longInt tmpProduct_I = allReactions.at(tmpReaction).getSpecies_II();
+        acs_longInt tmpProduct_II = allReactions.at(tmpReaction).getSpecies_III();
+
+   try{
+
+		// substrate decrement
+		if(!allSpecies.at(tmpSubstrate).getAmount() > 0)
+		{
+			ExitWithError("performCleavage", "Substrate or catalyst not Avalaible!!!");
+		}else{
+
+			allSpecies.at(tmpSubstrate).decrement(volume);
+			if(!allSpecies.at(tmpSubstrate).getConcentrationFixed())
+				decMolSpeciesProcedure(tmpSubstrate); // Update overall number of species and molecules
+			reactionFlag = true;
+
+		}
+
+	}catch(exception&e){
+
+		cout<<"" << endl;
+		cerr << "exceptioncaught:" << e.what() << endl;
+		ExitWithError("something wrong in substrate decrement within performSpontaneousCleavage method","exceptionerrorthrown");
+	}
+
+	allReactions.at(tmpReaction).updateTotEvents();
+
+
+	try{
+		// EVALUATE PRODUCT 1
+		if(!newSpeciesEvaluationIII(tmpProduct_I, tmp__RndDoubleGen))
+			ExitWithError("newSpeciesEvaluationIII", "Problems during the new species evalutation");
+	}catch(exception&e){
+		cout<<" if(!newSpeciesEvaluation(allSpecies.at(tmpProduct_I).getSequence(), tmp__RndDoubleGen))" << endl;
+		cerr << "exceptioncaught:" << e.what() << endl;
+		ExitWithError("something wrong in evaluating product 1 in performCleavage method","exceptionerrorthrown");
+	}
+
+	try{
+		// EVALUATE PRODUCT 2
+		if(!newSpeciesEvaluationIII(tmpProduct_II, tmp__RndDoubleGen))
+			ExitWithError("newSpeciesEvaluationIII", "Problems during the new species evalutation");
+	}catch(exception&e){
+		cout<<" if(!newSpeciesEvaluation(allSpecies.at(tmpProduct_II).getSequence(), tmp__RndDoubleGen))" << endl;
+		cerr << "exceptioncaught:" << e.what() << endl;
+		ExitWithError("something wrong in evaluating product 2 in performCleavage method","exceptionerrorthrown");
+	}
+
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performCleavage end" << endl;
+	// Update reaction counter
+	incCleavageCounter();
+	return reactionFlag;
 }
 
 //TR

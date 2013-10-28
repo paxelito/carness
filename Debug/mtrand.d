@@ -1,3 +1,3 @@
-mtrand.d: ../mtrand.cpp ../mtrand.h
+mtrand.d mtrand.o: ../mtrand.cpp ../mtrand.h
 
 ../mtrand.h:

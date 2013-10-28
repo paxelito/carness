@@ -2,3 +2,10 @@
 *.csv
 
 *.csv
+/Release
+
+*.d
+
+*.o
+
+*.mk

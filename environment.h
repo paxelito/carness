@@ -349,6 +349,8 @@ private:
     bool performComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, acs_longInt tmpCatID, acs_longInt tmpSecSub, MTRand& tmp__RndDoubleGen);
     bool perform_endo_ComplexFormation(acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, acs_longInt tmpCatID, acs_longInt tmpSecSub, acs_int tmpNRGSide, MTRand& tmp__RndDoubleGen);
 	bool performComplexDissociation(acs_longInt tmpComplex, acs_longInt tmpCatalyst, acs_longInt tmpSubstrate, MTRand& tmp__RndDoubleGen);
+	bool performSpontaneousCondensation(acs_longInt tmpReaction, MTRand& tmp__RndDoubleGen);
+	bool performSpontaneousCleavage(acs_longInt tmpReaction, MTRand& tmp__RndDoubleGen);
 	bool performMoleculeEfflux(acs_longInt tmpSpecies, MTRand& tmp__RndDoubleGen);
     //TR bool performPhosphorilation(acs_longInt tmpSpecies);
 	bool performEnergyEfflux(MTRand& tmp__RndDoubleGen);

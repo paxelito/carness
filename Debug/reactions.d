@@ -1,5 +1,5 @@
-reactions.d: ../reactions.cpp ../reactions.h ../acs_headers.h ../mtrand.h \
-  ../commonFunctions.h
+reactions.d reactions.o: ../reactions.cpp ../reactions.h ../acs_headers.h \
+  ../mtrand.h ../commonFunctions.h
 
 ../reactions.h:
 
