@@ -4,5 +4,14 @@
 *.csv
 *.d
 *.o
+*.com
+*.class
+*.dll
+*.exe
+*.so
 *.mk
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
 /Release/
