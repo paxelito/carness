@@ -56,6 +56,8 @@ var classenvironment =
     [ "getGillespieMean", "classenvironment.html#a389a70abe42c7652c9511b7ed3b974c0", null ],
     [ "getgillespieSD", "classenvironment.html#a41d9f79794b74845f2d00b4c0affea02", null ],
     [ "getInflux", "classenvironment.html#a6f0b4481779cd12dbcd8155916c7d703", null ],
+    [ "getK_spont_ass", "classenvironment.html#a6557765370b636bc7d4e02288b444c0e", null ],
+    [ "getK_spont_diss", "classenvironment.html#a2c6ca24592b5feab891e43233c581711", null ],
     [ "getKass", "classenvironment.html#aa862f1f98c6060747d6f1f30377671ff", null ],
     [ "getKcpx", "classenvironment.html#ac62c6b719db59d5829e3cc451b237f44", null ],
     [ "getKcpxDiss", "classenvironment.html#a9091c4a0fe31f6d5f5330e7ebff297a3", null ],

@@ -22,11 +22,11 @@
 </para></sect1>
 <sect1 id="page_init_str_1subReactions">
 <title>_acsreactions.csv</title>
-<para>Columns description (each field is delimited using &quot;\t&quot;): <table rows="1" cols="7"><row>
-<entry thead="no"><para>Identificator</para></entry><entry thead="no"><para>Reaction type</para></entry><entry thead="no"><para>Species 1</para></entry><entry thead="no"><para>Species 2</para></entry><entry thead="no"><para>Species 3</para></entry><entry thead="no"><para>Reaction counter</para></entry><entry thead="no"><para>Energy type  </para></entry></row>
+<para>Columns description (each field is delimited using &quot;\t&quot;): <table rows="1" cols="8"><row>
+<entry thead="no"><para>Identificator</para></entry><entry thead="no"><para>Reaction type</para></entry><entry thead="no"><para>Species 1</para></entry><entry thead="no"><para>Species 2</para></entry><entry thead="no"><para>Species 3 </para></entry><entry thead="no"><para>Reaction counter</para></entry><entry thead="no"><para>Energy type</para></entry><entry thead="no"><para>k spont  </para></entry></row>
 </table>
 <itemizedlist>
-<listitem><para><emphasis>Identificator</emphasis>: Reaction ID</para></listitem><listitem><para><emphasis>Reaction type</emphasis>: 0 Condensation, 1 Cleavage</para></listitem><listitem><para><emphasis>Species 1</emphasis>: Product ID if reaction type = 1, Substrate ID reaction type = 0</para></listitem><listitem><para><emphasis>Species 2</emphasis>: Product ID if reaction type = 0, Substrate ID reaction type = 1</para></listitem><listitem><para><emphasis>Species 3</emphasis>: Product ID if reaction type = 0, Substrate ID reaction type = 1</para></listitem><listitem><para><emphasis>Reaction counter</emphasis>: Reaction occurrance counter</para></listitem><listitem><para><emphasis>Energy Type</emphasis>: The reaction energetic configuration, 1 for endoergonic 0 for esoergonic <linebreak/>
+<listitem><para><emphasis>Identificator</emphasis>: Reaction ID</para></listitem><listitem><para><emphasis>Reaction type</emphasis>: 0 Condensation, 1 Cleavage</para></listitem><listitem><para><emphasis>Species 1</emphasis>: Product ID if reaction type = 1, Substrate ID reaction type = 0</para></listitem><listitem><para><emphasis>Species 2</emphasis>: Product ID if reaction type = 0, Substrate ID reaction type = 1</para></listitem><listitem><para><emphasis>Species 3</emphasis>: Product ID if reaction type = 0, Substrate ID reaction type = 1</para></listitem><listitem><para><emphasis>Reaction counter</emphasis>: Reaction occurrance counter</para></listitem><listitem><para><emphasis>Energy Type</emphasis>: The reaction energetic configuration, 1 for endoergonic 0 for esoergonic</para></listitem><listitem><para><emphasis>Spontaneous Constant</emphasis>: Spontaneous reaction constant <linebreak/>
  </para></listitem></itemizedlist>
 </para></sect1>
 <sect1 id="page_init_str_1subCatalysis">

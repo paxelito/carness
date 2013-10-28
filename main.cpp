@@ -1,7 +1,7 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.7 (20131001.59)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131026.60)
  * \author Alessandro Filisetti
- * \version 4.7 (20131001.59)
- * \date 2013-10-01
+ * \version 4.8 (20131026.60)
+ * \date 2013-10-26
  * sourceforge repository -- https://carness.svn.sourceforge.net/svnroot/carness/
  * git repository -- https://github.com/paxelito/carness
  *
@@ -321,6 +321,12 @@
  * </tr>
  * <tr>
  * 	<td>Cleavage</td><td>1</td><td>Substrate</td><td>Product 1</td><td>Product 2</td><td>Catalyst</td>
+ * </tr>
+ * <tr>
+ * 	<td>Spontaneous Cleavage</td><td>11</td><td>Substrate</td><td>Product 1</td><td>Product 2</td><td>//</td>
+ * </tr>
+  * <tr>
+ * 	<td>Spontaneous Condensation</td><td>10</td><td>Product</td><td>Substrate 1</td><td>Substrate 2</td><td>//</td>
  * </tr>
  * </table>
  *

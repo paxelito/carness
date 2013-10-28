@@ -9,6 +9,7 @@ var searchData=
   ['acs_5fheaders_2eh',['acs_headers.h',['../acs__headers_8h.html',1,'']]],
   ['acs_5fint',['acs_int',['../acs__headers_8h.html#a8d277355641a098190360234e2ebde35',1,'acs_headers.h']]],
   ['acs_5flongint',['acs_longInt',['../acs__headers_8h.html#a19319d75f02db4308bc5c0026d98cd85',1,'acs_headers.h']]],
+  ['acsround',['acsround',['../common_functions_8cpp.html#a277c801cb0f8a290d7c28b6a67feff18',1,'acsround(acs_double tmpX):&#160;commonFunctions.cpp'],['../common_functions_8h.html#a277c801cb0f8a290d7c28b6a67feff18',1,'acsround(acs_double tmpX):&#160;commonFunctions.cpp']]],
   ['addchargemoltolist',['addChargeMolToList',['../classenvironment.html#a7981c34d16c0b1e9e6ca3ea69aa3a8a3',1,'environment']]],
   ['age',['Age',['../conc_analysis_8m.html#aefba28007767b12696670c7309808dd1',1,'concAnalysis.m']]],
   ['alltimesanalysis_2em',['allTimesAnalysis.m',['../all_times_analysis_8m.html',1,'']]],

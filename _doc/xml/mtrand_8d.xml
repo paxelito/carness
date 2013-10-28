@@ -7,7 +7,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="normal">mtrand.d<sp/>mtrand.o:<sp/>../mtrand.cpp<sp/>../mtrand.h</highlight></codeline>
+<codeline lineno="1"><highlight class="normal">mtrand.d:<sp/>../mtrand.cpp<sp/>../mtrand.h</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal">../mtrand.h:</highlight></codeline>
     </programlisting>

@@ -1,5 +1,5 @@
-catalysis.d catalysis.o: ../catalysis.cpp ../catalysis.h ../acs_headers.h \
-  ../mtrand.h ../commonFunctions.h
+catalysis.d: ../catalysis.cpp ../catalysis.h ../acs_headers.h ../mtrand.h \
+  ../commonFunctions.h
 
 ../catalysis.h:
 

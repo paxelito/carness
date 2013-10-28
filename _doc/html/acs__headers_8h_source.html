@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CaRNeSS
-   &#160;<span id="projectnumber">4.7 (20131001.59)</span>
+   &#160;<span id="projectnumber">4.8 (20131026.60)</span>
    </div>
    <div id="projectbrief">Catalytic Reaction Networks Stochastic Simulator</div>
   </td>
@@ -150,7 +150,7 @@ $(document).ready(function(){initNavTree('acs__headers_8h_source.html','');});
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// CONSTANTS</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//----------</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#aab38659c2fe462437b89a1e85e619dc7">   42</a></span>&#160;<span class="preprocessor">#define __SOFTVERSION__ &quot;4.7b20131001.59&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#aab38659c2fe462437b89a1e85e619dc7">   42</a></span>&#160;<span class="preprocessor">#define __SOFTVERSION__ &quot;4.8b20131026.60&quot;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// DEBUG LEVELS</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
@@ -182,43 +182,48 @@ $(document).ready(function(){initNavTree('acs__headers_8h_source.html','');});
 <div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a840f787adb443d5d9492b18d3180c233">   71</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENDO_CONDENSATION 7</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a1f0638306dc456453be7d6be35c3f617">   72</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENDO_COMPLEXFORMATION 8</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a66f3205fa4a725d70d3ea246fed2336a">   73</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENERGYEFFLUX 9</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// SOLUBILITY</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a248fc87e714b5d729453d11fbeec8310">   76</a></span>&#160;<span class="preprocessor">#define SOLUBLE 1</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#af270dce996bbfb82cc5d337af5b980e5">   77</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PRECIPITATED 0</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// ENERGY</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#ac23ad60cb24df0616d58202351b11e60">   80</a></span>&#160;<span class="preprocessor">#define ESOERGONIC 1</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a83346194720cacc0144e87246d23081b">   81</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENDOERGONIC 0</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a9c2a0137e4b97849150ab0842da3064c">   82</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CLEAVAGEBASED 1</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#ad722fbaf2330838fb9522c028141de6c">   83</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CONDENSATIONBASED 0</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#aca2c6e3c97c1e9728693b5c3c8c7f229">   84</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENERGYBASED 1</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a3efd65798c1856deacf187790b3f9ef5">   85</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENERGYFREE 0</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a903e07285c96e6fbb9aa3577ddd1f327">   86</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TRUENRG &#39;1&#39;</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#ada187b73f4b4a504680ead4f86785021">   87</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define FALSENRG &#39;0&#39;</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a2ce381beee4efd263052e93f9cbbfc77">   88</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENERGIZABLE 1</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a04e076b71093a6dc76f99298d9cfeb9e">   89</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NOTENERGIZABLE 0</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a5a83a3ca25e31afb2d58aa40c8b1fbbb">   91</a></span>&#160;<span class="preprocessor">#define SUBSTRATELOAD 0</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a7e521c899f69e37df3501fd0e652c517">   92</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CATALYSTLOAD 1</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#afb6d1105a81463fbadceff0217332f68">   93</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BOTHLOAD 2</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a7eb138e043eb9ec6d717c6178724bbaf">   94</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define COMPLEXLOAD 3</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a15e77522039bb4bb52000b65773c83cf">   95</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NOTHINGLOAD 4</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">// REACTION CREATION TYPE</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#afb2a947dfb1847f71649f82bc1bf0292">   98</a></span>&#160;<span class="preprocessor">#define NEWREACTIONS 1</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a5119e853077046684673dad15af9199f">   99</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UPGRADEREACTIONS 0</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">// SPECIAL NUMBERS</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a029d801cdb598a397cb99ea968a64dc2">  102</a></span>&#160;<span class="preprocessor">#define NEP 2.7182818284590452353602874</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a174754c04acfba9e1f66ba249e68643a">  103</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AVO 6.02214179e+23</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">// MINIMAL MULTIPLICATOR FOR MINIMAL REACTION TIME</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#aa7d0d45ef785688de1c634290ceb02e7">  106</a></span>&#160;<span class="preprocessor">#define MINIMALRCTTIMEMULTI 100</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a9248f5baf3277731d21513c01ab14ba2">   74</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SPONTANEOUS_CONDENSATION 10</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#adb07a512ddff058539c565dc597f8925">   75</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SPONTANEOUS_CLEAVAGE 11</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">// SOLUBILITY</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a248fc87e714b5d729453d11fbeec8310">   78</a></span>&#160;<span class="preprocessor">#define SOLUBLE 1</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#af270dce996bbfb82cc5d337af5b980e5">   79</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PRECIPITATED 0</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">// ENERGY</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#ac23ad60cb24df0616d58202351b11e60">   82</a></span>&#160;<span class="preprocessor">#define ESOERGONIC 1</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a83346194720cacc0144e87246d23081b">   83</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENDOERGONIC 0</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a9c2a0137e4b97849150ab0842da3064c">   84</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CLEAVAGEBASED 1</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#ad722fbaf2330838fb9522c028141de6c">   85</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CONDENSATIONBASED 0</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#aca2c6e3c97c1e9728693b5c3c8c7f229">   86</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENERGYBASED 1</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a3efd65798c1856deacf187790b3f9ef5">   87</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENERGYFREE 0</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a903e07285c96e6fbb9aa3577ddd1f327">   88</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TRUENRG &#39;1&#39;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#ada187b73f4b4a504680ead4f86785021">   89</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define FALSENRG &#39;0&#39;</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a2ce381beee4efd263052e93f9cbbfc77">   90</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENERGIZABLE 1</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a04e076b71093a6dc76f99298d9cfeb9e">   91</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NOTENERGIZABLE 0</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a5a83a3ca25e31afb2d58aa40c8b1fbbb">   93</a></span>&#160;<span class="preprocessor">#define SUBSTRATELOAD 0</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a7e521c899f69e37df3501fd0e652c517">   94</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CATALYSTLOAD 1</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#afb6d1105a81463fbadceff0217332f68">   95</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BOTHLOAD 2</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a7eb138e043eb9ec6d717c6178724bbaf">   96</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define COMPLEXLOAD 3</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a15e77522039bb4bb52000b65773c83cf">   97</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NOTHINGLOAD 4</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">// REACTION CREATION TYPE</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#afb2a947dfb1847f71649f82bc1bf0292">  100</a></span>&#160;<span class="preprocessor">#define NEWREACTIONS 1</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a5119e853077046684673dad15af9199f">  101</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UPGRADEREACTIONS 0</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">// REATIONS MISC</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a9ea25e0eb039e29accaed6cb99632deb">  104</a></span>&#160;<span class="preprocessor">#define NOSPONTANEOUS 0</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">// SPECIAL NUMBERS</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a029d801cdb598a397cb99ea968a64dc2">  107</a></span>&#160;<span class="preprocessor">#define NEP 2.7182818284590452353602874</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#a174754c04acfba9e1f66ba249e68643a">  108</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AVO 6.02214179e+23</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">// MINIMAL MULTIPLICATOR FOR MINIMAL REACTION TIME</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="acs__headers_8h.html#aa7d0d45ef785688de1c634290ceb02e7">  111</a></span>&#160;<span class="preprocessor">#define MINIMALRCTTIMEMULTI 100</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="mtrand_8h_html"><div class="ttname"><a href="mtrand_8h.html">mtrand.h</a></div></div>
 <div class="ttc" id="acs__headers_8h_html_a8d277355641a098190360234e2ebde35"><div class="ttname"><a href="acs__headers_8h.html#a8d277355641a098190360234e2ebde35">acs_int</a></div><div class="ttdeci">unsigned int acs_int</div><div class="ttdef"><b>Definition:</b> <a href="acs__headers_8h_source.html#l00036">acs_headers.h:36</a></div></div>
 <div class="ttc" id="acs__headers_8h_html_a19319d75f02db4308bc5c0026d98cd85"><div class="ttname"><a href="acs__headers_8h.html#a19319d75f02db4308bc5c0026d98cd85">acs_longInt</a></div><div class="ttdeci">unsigned long int acs_longInt</div><div class="ttdef"><b>Definition:</b> <a href="acs__headers_8h_source.html#l00035">acs_headers.h:35</a></div></div>
@@ -229,7 +234,7 @@ $(document).ready(function(){initNavTree('acs__headers_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b332d76264961ef132272329242bfdf0.html">alessandrofilisetti</a></li><li class="navelem"><a class="el" href="dir_aa442a8060e2d188d99c82c234c5a5b0.html">Documents</a></li><li class="navelem"><a class="el" href="dir_21ed3a790d3d47dec9b1b0286693acfe.html">GIT</a></li><li class="navelem"><a class="el" href="dir_db4b0999f315afd5b53562c9396ed6f4.html">carness</a></li><li class="navelem"><a class="el" href="acs__headers_8h.html">acs_headers.h</a></li>
-    <li class="footer">Generated on Tue Oct 1 2013 10:39:59 for CaRNeSS by
+    <li class="footer">Generated on Sat Oct 26 2013 15:02:49 for CaRNeSS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

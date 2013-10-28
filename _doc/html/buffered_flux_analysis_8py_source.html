@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CaRNeSS
-   &#160;<span id="projectnumber">4.7 (20131001.59)</span>
+   &#160;<span id="projectnumber">4.8 (20131026.60)</span>
    </div>
    <div id="projectbrief">Catalytic Reaction Networks Stochastic Simulator</div>
   </td>
@@ -279,10 +279,10 @@ $(document).ready(function(){initNavTree('buffered_flux_analysis_8py_source.html
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                                        expelledBricks.append(tempExpelledBricks)</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                        totTimes.append(rtime)</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                                        </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                        <span class="keywordflow">if</span> (<a class="code" href="common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1">round</a>(rtime) % 100 == 0) &amp; (okmonitor == 1):</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                        <span class="keywordflow">if</span> (round(rtime) % 100 == 0) &amp; (okmonitor == 1):</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                                                <span class="keywordflow">print</span> <span class="stringliteral">&#39;\t\t &#39;</span>, rtime, <span class="stringliteral">&#39; delta flux: &#39;</span>, deltaRct, <span class="stringliteral">&#39; tot: &#39;</span>, totFluxDyn[rctID-1], <span class="stringliteral">&#39; exp bricks: &#39;</span>, tempExpelledBricks, <span class="stringliteral">&#39; absorbed bricks: &#39;</span>, tempAbsorbedBricks</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                                                okmonitor = 0           </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                        <span class="keywordflow">if</span> (<a class="code" href="common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1">round</a>(rtime)) % 100 == 1:</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                        <span class="keywordflow">if</span> (round(rtime)) % 100 == 1:</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                                                okmonitor = 1   </div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                                                </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                        <span class="comment"># Saving data to create a shorter report</span></div>
@@ -352,14 +352,13 @@ $(document).ready(function(){initNavTree('buffered_flux_analysis_8py_source.html
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;cmdFileFid = open(cmdFileName, <span class="stringliteral">&#39;a&#39;</span>)</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;np.savetxt(cmdFileFid, expelledBricks_LITE, <span class="stringliteral">&#39;%d\t&#39;</span>)</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;cmdFileFid.close()      </div>
-<div class="ttc" id="common_functions_8cpp_html_aaaa7233fe68b91b6333e2729a2d619a1"><div class="ttname"><a href="common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1">round</a></div><div class="ttdeci">acs_double round(acs_double tmpX)</div><div class="ttdef"><b>Definition:</b> <a href="common_functions_8cpp_source.html#l00229">commonFunctions.cpp:229</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b332d76264961ef132272329242bfdf0.html">alessandrofilisetti</a></li><li class="navelem"><a class="el" href="dir_aa442a8060e2d188d99c82c234c5a5b0.html">Documents</a></li><li class="navelem"><a class="el" href="dir_21ed3a790d3d47dec9b1b0286693acfe.html">GIT</a></li><li class="navelem"><a class="el" href="dir_db4b0999f315afd5b53562c9396ed6f4.html">carness</a></li><li class="navelem"><a class="el" href="dir_66d19001354beca3375bfcfe54fec246.html">_analysis</a></li><li class="navelem"><a class="el" href="buffered_flux_analysis_8py.html">bufferedFluxAnalysis.py</a></li>
-    <li class="footer">Generated on Tue Oct 1 2013 10:39:58 for CaRNeSS by
+    <li class="footer">Generated on Sat Oct 26 2013 15:02:49 for CaRNeSS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

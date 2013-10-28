@@ -1,6 +1,6 @@
 
 
- The {\bfseries Catalytic Reactions Network Stochastic Simulator (Ca\-R\-Ne\-S\-S)} is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different interacting molecular species. The model takes inspiration from the original model proposed by Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case. Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction. It is important to notice that there are not indications about the chemical nature of the molecules, species \char`\"{}\-A\char`\"{} may be both a polipeptide, an amminoacid, a particular protein domain or an R\-N\-A strenght.\par
+ The {\bfseries Catalytic Reactions Network Stochastic Simulator (Ca\-R\-Ne\-S\-S)} is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different interacting molecular species. The model takes inspiration from the original model proposed by Stuart Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case. Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction. It is important to notice that there are not indications about the chemical nature of the molecules, species \char`\"{}\-A\char`\"{} may be both a polipeptide, an amminoacid, a particular protein domain or an R\-N\-A strenght.\par
 \par
  \hypertarget{intro_secUsage}{}\section{Using the simulator}\label{intro_secUsage}
 To run the simulator open a terminal shell and type\-:\par
@@ -93,19 +93,25 @@ On Mac\-Os system compile using {\ttfamily g++} -\/\-Wall -\/ansi -\/lm -\/o Ca\
 \hline
 {\em rev\-Rct\-Ratio} & ($>$0) Ratio between forward and backward reactions, it is used in the creation of new reactions only (if reverse\-Reactions = T\-R\-U\-E) \\
 \hline
-{\em K\-\_\-ass} & ($>$ 0) Final Condensation kinetic constant (C.\-A + B --$>$ A\-B + C) where A.\-C is the molecular complex composed of C (the catalyst) and A (the first substrate) \\
+{\em spont\-Rct} & (0 or 1) If 1 spontanoues reactions are considered, otherwise no \\
 \hline
-{\em K\-\_\-diss} & ($>$ 0) Cleavage kinetic constant (A\-B --$>$ A + B) \\
+{\em K\-\_\-ass} & ($>$= 0) Final Condensation kinetic constant (C.\-A + B --$>$ A\-B + C) where A.\-C is the molecular complex composed of C (the catalyst) and A (the first substrate) \\
 \hline
-{\em K\-\_\-cpx} & ($>$ 0) Complex formation kinetic constant (A + C(catalyst) --$>$ C.\-A) \\
+{\em K\-\_\-diss} & ($>$= 0) Cleavage kinetic constant (A\-B --$>$ A + B) \\
 \hline
-{\em K\-\_\-cpx\-Diss} & ($>$ 0) Complex Dissociation kinetic constant (C.\-A --$>$ A + C) \\
+{\em K\-\_\-cpx} & ($>$= 0) Complex formation kinetic constant (A + C(catalyst) --$>$ C.\-A) \\
 \hline
-{\em K\-\_\-nrg} & ($>$ 0) species phosphorilation kinetic constant \\
+{\em K\-\_\-cpx\-Diss} & ($>$= 0) Complex Dissociation kinetic constant (C.\-A --$>$ A + C) \\
 \hline
-{\em K\-\_\-nrg\-\_\-decay} & ($>$ 0) de-\/energization kinetic constant \\
+{\em K\-\_\-nrg} & ($>$= 0) species phosphorilation kinetic constant \\
+\hline
+{\em K\-\_\-nrg\-\_\-decay} & ($>$= 0) de-\/energization kinetic constant \\
 \hline
 {\em molecule\-Decay\-\_\-\-Kinetic\-Constant} & ($>$ 0) Molecule decay (efflux) kinetic Constant (Disregarded if the system is closed) \\
+\hline
+{\em K\-\_\-spont\-\_\-ass} & ($>$= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues condensations \\
+\hline
+{\em K\-\_\-spont\-\_\-diss} & ($>$= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues cleavages \\
 \hline
 {\em influx\-\_\-rate} & ($>$= 0) Concentration per seconds (The species to insert in the system will be randomly chosen according to the \-\_\-acsinflux.\-csv file). If equal to 0 the system is closed (max\-L\-Out=0) or only the species that can cross the membrane come in and go out (max\-L\-Out$>$0). \\
 \hline

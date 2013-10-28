@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CaRNeSS
-   &#160;<span id="projectnumber">4.7 (20131001.59)</span>
+   &#160;<span id="projectnumber">4.8 (20131026.60)</span>
    </div>
    <div id="projectbrief">Catalytic Reaction Networks Stochastic Simulator</div>
   </td>
@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('crea__influx_8m_source.html','');});
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;%     %casuale</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;%     case 1</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;%         </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="crea__influx_8m.html#a6d872cdbb63424cff04a431f8c23cb99">   53</a></span>&#160;%         <a class="code" href="crea__concentrazioni__iniziali_8m.html#a6d872cdbb63424cff04a431f8c23cb99">species_to_delete</a> = <a class="code" href="common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1">round</a>(ratio_influx*<a class="code" href="crea__concentrazioni__iniziali_8m.html#a776a9a06b8375875869043079a11ba0c">tot_species</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="crea__influx_8m.html#a6d872cdbb63424cff04a431f8c23cb99">   53</a></span>&#160;%         <a class="code" href="crea__concentrazioni__iniziali_8m.html#a6d872cdbb63424cff04a431f8c23cb99">species_to_delete</a> = round(ratio_influx*<a class="code" href="crea__concentrazioni__iniziali_8m.html#a776a9a06b8375875869043079a11ba0c">tot_species</a>);</div>
 <div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="crea__influx_8m.html#ac8f034c683f5b66572af8149f27da7e0">   54</a></span>&#160;%         <a class="code" href="crea__concentrazioni__iniziali_8m.html#a529ab6e60f79d401d9fcbab38ef5c25b">species_to_keep</a> = tot_species - <a class="code" href="crea__concentrazioni__iniziali_8m.html#a6d872cdbb63424cff04a431f8c23cb99">species_to_delete</a>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;% </div>
 <div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="crea__influx_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">   56</a></span>&#160;%         for i = 1:<a class="code" href="crea__concentrazioni__iniziali_8m.html#a529ab6e60f79d401d9fcbab38ef5c25b">species_to_keep</a></div>
@@ -192,7 +192,7 @@ $(document).ready(function(){initNavTree('crea__influx_8m_source.html','');});
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;%            </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;%        <a class="code" href="conc_analysis_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;%        </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;%        species_to_delete = <a class="code" href="common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1">round</a>(ratio_influx*remaining_species);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;%        species_to_delete = round(ratio_influx*remaining_species);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;%        <a class="code" href="crea__concentrazioni__iniziali_8m.html#a529ab6e60f79d401d9fcbab38ef5c25b">species_to_keep</a> = remaining_species - species_to_delete;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;%     </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;%     </div>
@@ -228,7 +228,6 @@ $(document).ready(function(){initNavTree('crea__influx_8m_source.html','');});
 <div class="ttc" id="garbage_search_8m_html_a1de1a45bc56b002aa1ad94bb5f54a1ca"><div class="ttname"><a href="garbage_search_8m.html#a1de1a45bc56b002aa1ad94bb5f54a1ca">i</a></div><div class="ttdeci">for i</div><div class="ttdef"><b>Definition:</b> <a href="garbage_search_8m_source.html#l00076">garbageSearch.m:76</a></div></div>
 <div class="ttc" id="crea__concentrazioni__iniziali_8m_html_a954c3e86b303e7b5ff41a314b0e845db"><div class="ttname"><a href="crea__concentrazioni__iniziali_8m.html#a954c3e86b303e7b5ff41a314b0e845db">remaining_species</a></div><div class="ttdeci">a seconda dei casi seleziono le specie esistenti del firing quelle non esistenti andranno semplicemente a concentrazione remaining_species</div><div class="ttdef"><b>Definition:</b> <a href="crea__concentrazioni__iniziali_8m_source.html#l00030">crea_concentrazioni_iniziali.m:30</a></div></div>
 <div class="ttc" id="conc_analysis_8m_html_adf3394dfd4755fd0ef2854fe558ff8aa"><div class="ttname"><a href="conc_analysis_8m.html#adf3394dfd4755fd0ef2854fe558ff8aa">if</a></div><div class="ttdeci">fixed Concentration if(evaluated(indice)==1)&amp;&amp;(bindpnt(indice)</div></div>
-<div class="ttc" id="common_functions_8cpp_html_aaaa7233fe68b91b6333e2729a2d619a1"><div class="ttname"><a href="common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1">round</a></div><div class="ttdeci">acs_double round(acs_double tmpX)</div><div class="ttdef"><b>Definition:</b> <a href="common_functions_8cpp_source.html#l00229">commonFunctions.cpp:229</a></div></div>
 <div class="ttc" id="conc_analysis_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="conc_analysis_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="conc_analysis_8m_source.html#l00073">concAnalysis.m:73</a></div></div>
 <div class="ttc" id="garbage_search_8m_html_a7265972fe485274cfff77a9bb07b8fce"><div class="ttname"><a href="garbage_search_8m.html#a7265972fe485274cfff77a9bb07b8fce">x</a></div><div class="ttdeci">for x</div><div class="ttdef"><b>Definition:</b> <a href="garbage_search_8m_source.html#l00024">garbageSearch.m:24</a></div></div>
 <div class="ttc" id="lancia__inizializzatore__acs_8m_html_adc12f688ec66254762f4bdd2ce8c73df"><div class="ttname"><a href="lancia__inizializzatore__acs_8m.html#adc12f688ec66254762f4bdd2ce8c73df">switch</a></div><div class="ttdeci">parametro switch</div><div class="ttdef"><b>Definition:</b> <a href="lancia__inizializzatore__acs_8m_source.html#l00084">lancia_inizializzatore_acs.m:84</a></div></div>
@@ -249,7 +248,7 @@ $(document).ready(function(){initNavTree('crea__influx_8m_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b332d76264961ef132272329242bfdf0.html">alessandrofilisetti</a></li><li class="navelem"><a class="el" href="dir_aa442a8060e2d188d99c82c234c5a5b0.html">Documents</a></li><li class="navelem"><a class="el" href="dir_21ed3a790d3d47dec9b1b0286693acfe.html">GIT</a></li><li class="navelem"><a class="el" href="dir_db4b0999f315afd5b53562c9396ed6f4.html">carness</a></li><li class="navelem"><a class="el" href="dir_57b3bf84c49e6a30c9113636c121b1cc.html">_matlabinitializator</a></li><li class="navelem"><a class="el" href="crea__influx_8m.html">crea_influx.m</a></li>
-    <li class="footer">Generated on Tue Oct 1 2013 10:39:59 for CaRNeSS by
+    <li class="footer">Generated on Sat Oct 26 2013 15:02:49 for CaRNeSS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

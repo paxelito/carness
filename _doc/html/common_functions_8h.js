@@ -1,5 +1,6 @@
 var common_functions_8h =
 [
+    [ "acsround", "common_functions_8h.html#a277c801cb0f8a290d7c28b6a67feff18", null ],
     [ "dec2bin", "common_functions_8h.html#a1a13653eb649b6fc74090deecddf1028", null ],
     [ "ExitWithError", "common_functions_8h.html#aa678d0a98232158c48108227b98de4b6", null ],
     [ "fromStrToBool", "common_functions_8h.html#aed580149796de6350e6fcfae9b2adb30", null ],
@@ -11,6 +12,5 @@ var common_functions_8h =
     [ "returnSelectionIdFromAWeightProbVector", "common_functions_8h.html#ab037fdfaa93ee6a0fe3f624b791204cd", null ],
     [ "returnSelectionIdFromAWeightProbVectorAlreadyNormalized", "common_functions_8h.html#a4135ff15fd24eb8fbfee3d00e1cfbf20", null ],
     [ "returnUniformSelection_LONG_IdFromVector", "common_functions_8h.html#a1cb9cc6ac8ec2ef62b8eb1970e73a11b", null ],
-    [ "round", "common_functions_8h.html#aaaa7233fe68b91b6333e2729a2d619a1", null ],
     [ "split", "common_functions_8h.html#a4d1aa74fac80ae0275c056575fdb6626", null ]
 ];

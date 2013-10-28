@@ -1,11 +1,11 @@
-.TH "intro" 3 "Tue Oct 1 2013" "Version 4.7 (20131001.59)" "CaRNeSS" \" -*- nroff -*-
+.TH "intro" 3 "Sat Oct 26 2013" "Version 4.8 (20131026.60)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 intro \- Essential informations 
 
 .PP
- The \fBCatalytic Reactions Network Stochastic Simulator (CaRNeSS)\fP is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different interacting molecular species\&. The model takes inspiration from the original model proposed by Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation\&. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case\&. Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction\&. It is important to notice that there are not indications about the chemical nature of the molecules, species 'A' may be both a polipeptide, an amminoacid, a particular protein domain or an RNA strenght\&.
+ The \fBCatalytic Reactions Network Stochastic Simulator (CaRNeSS)\fP is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different interacting molecular species\&. The model takes inspiration from the original model proposed by Stuart Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation\&. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case\&. Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction\&. It is important to notice that there are not indications about the chemical nature of the molecules, species 'A' may be both a polipeptide, an amminoacid, a particular protein domain or an RNA strenght\&.
 .br
 
 .br
@@ -120,19 +120,25 @@ On MacOs system compile using \fCg++\fP -Wall -ansi -lm -o CaRNeSS *\&.cpp
 .br
 \fIrevRctRatio\fP (>0) Ratio between forward and backward reactions, it is used in the creation of new reactions only (if reverseReactions = TRUE) 
 .br
-\fIK_ass\fP (> 0) Final Condensation kinetic constant (C\&.A + B --> AB + C) where A\&.C is the molecular complex composed of C (the catalyst) and A (the first substrate) 
+\fIspontRct\fP (0 or 1) If 1 spontanoues reactions are considered, otherwise no 
 .br
-\fIK_diss\fP (> 0) Cleavage kinetic constant (AB --> A + B) 
+\fIK_ass\fP (>= 0) Final Condensation kinetic constant (C\&.A + B --> AB + C) where A\&.C is the molecular complex composed of C (the catalyst) and A (the first substrate) 
 .br
-\fIK_cpx\fP (> 0) Complex formation kinetic constant (A + C(catalyst) --> C\&.A) 
+\fIK_diss\fP (>= 0) Cleavage kinetic constant (AB --> A + B) 
 .br
-\fIK_cpxDiss\fP (> 0) Complex Dissociation kinetic constant (C\&.A --> A + C) 
+\fIK_cpx\fP (>= 0) Complex formation kinetic constant (A + C(catalyst) --> C\&.A) 
 .br
-\fIK_nrg\fP (> 0) species phosphorilation kinetic constant 
+\fIK_cpxDiss\fP (>= 0) Complex Dissociation kinetic constant (C\&.A --> A + C) 
 .br
-\fIK_nrg_decay\fP (> 0) de-energization kinetic constant 
+\fIK_nrg\fP (>= 0) species phosphorilation kinetic constant 
+.br
+\fIK_nrg_decay\fP (>= 0) de-energization kinetic constant 
 .br
 \fImoleculeDecay_KineticConstant\fP (> 0) Molecule decay (efflux) kinetic Constant (Disregarded if the system is closed) 
+.br
+\fIK_spont_ass\fP (>= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues condensations 
+.br
+\fIK_spont_diss\fP (>= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues cleavages 
 .br
 \fIinflux_rate\fP (>= 0) Concentration per seconds (The species to insert in the system will be randomly chosen according to the _acsinflux\&.csv file)\&. If equal to 0 the system is closed (maxLOut=0) or only the species that can cross the membrane come in and go out (maxLOut>0)\&. 
 .br

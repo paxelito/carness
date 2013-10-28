@@ -1,4 +1,4 @@
-.TH "/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" 3 "Tue Oct 1 2013" "Version 4.7 (20131001.59)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" 3 "Sat Oct 26 2013" "Version 4.8 (20131026.60)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -38,7 +38,7 @@
 .RI "\fBacs_longInt\fP \fBrandom_binomial\fP (\fBacs_longInt\fP n, \fBacs_double\fP tmpP, \fBMTRand\fP &tmpRandomGenerator)"
 .br
 .ti -1c
-.RI "\fBacs_double\fP \fBround\fP (\fBacs_double\fP tmpX)"
+.RI "\fBacs_double\fP \fBacsround\fP (\fBacs_double\fP tmpX)"
 .br
 .ti -1c
 .RI "string \fBdec2bin\fP (\fBacs_int\fP tmpInt)"
@@ -55,6 +55,10 @@
 .in -1c
 .SH "Function Documentation"
 .PP 
+.SS "\fBacs_double\fP acsround (\fBacs_double\fPtmpX)"
+Function to round double numbers in integers 
+.PP
+Definition at line 229 of file commonFunctions\&.cpp\&.
 .SS "string dec2bin (\fBacs_int\fPtmpInt)"
 Function to convert a decimal number in a binary string composed of 12 bit such Example -> input: 10, binary 1010 --> 000000001010 
 .PP
@@ -145,10 +149,6 @@ Return position of a LONG INT randomly selected element from a normalized vector
 
 .PP
 Definition at line 124 of file commonFunctions\&.cpp\&.
-.SS "\fBacs_double\fP round (\fBacs_double\fPtmpX)"
-Function to round double numbers in integers 
-.PP
-Definition at line 229 of file commonFunctions\&.cpp\&.
 .SS "vector<string> split (stringstr, const char *delim)"
 Function to split a string and save tokens in a vector 
 .PP

@@ -327,11 +327,11 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" line="203" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.cpp" bodystart="203" bodyend="224"/>
       </memberdef>
-      <memberdef kind="function" id="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="common_functions_8cpp_1a277c801cb0f8a290d7c28b6a67feff18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
-        <definition>acs_double round</definition>
+        <definition>acs_double acsround</definition>
         <argsstring>(acs_double tmpX)</argsstring>
-        <name>round</name>
+        <name>acsround</name>
         <param>
           <type><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
           <declname>tmpX</declname>
@@ -625,7 +625,7 @@
 <codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="conc_analysis_8m_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref>;</highlight></codeline>
 <codeline lineno="224"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="225"><highlight class="normal"></highlight></codeline>
-<codeline lineno="229" refid="common_functions_8h_1aaaa7233fe68b91b6333e2729a2d619a1" refkind="member"><highlight class="normal"><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(<ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpX)</highlight></codeline>
+<codeline lineno="229" refid="common_functions_8h_1a277c801cb0f8a290d7c28b6a67feff18" refkind="member"><highlight class="normal"><ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/><ref refid="common_functions_8cpp_1a277c801cb0f8a290d7c28b6a67feff18" kindref="member">acsround</ref>(<ref refid="acs__headers_8h_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpX)</highlight></codeline>
 <codeline lineno="230"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>integer<sp/>part</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>integerPart<sp/>=<sp/>(<ref refid="acs__headers_8h_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref>)tmpX;</highlight></codeline>

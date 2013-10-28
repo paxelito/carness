@@ -1,4 +1,4 @@
-.TH "reactions" 3 "Tue Oct 1 2013" "Version 4.7 (20131001.59)" "CaRNeSS" \" -*- nroff -*-
+.TH "reactions" 3 "Sat Oct 26 2013" "Version 4.8 (20131026.60)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,7 +12,7 @@ reactions \-
 
 .in +1c
 .ti -1c
-.RI "\fBreactions\fP (\fBacs_longInt\fP tmpID, \fBacs_int\fP tmpType, \fBacs_longInt\fP tmpM_I, \fBacs_longInt\fP tmpM_II, \fBacs_longInt\fP tmpM_III, \fBacs_int\fP tmpEvents, \fBacs_int\fP tmpEnergyType)"
+.RI "\fBreactions\fP (\fBacs_longInt\fP tmpID, \fBacs_int\fP tmpType, \fBacs_longInt\fP tmpM_I, \fBacs_longInt\fP tmpM_II, \fBacs_longInt\fP tmpM_III, \fBacs_int\fP tmpEvents, \fBacs_int\fP tmpEnergyType, \fBacs_double\fP tmpKspont)"
 .br
 .RI "\fIConstructor\&. \fP"
 .ti -1c
@@ -40,6 +40,9 @@ reactions \-
 .RI "\fBacs_int\fP \fBgetEnergyType\fP () const "
 .br
 .ti -1c
+.RI "\fBacs_double\fP \fBgetKspont\fP () const "
+.br
+.ti -1c
 .RI "void \fBupdateTotEvents\fP ()"
 .br
 .ti -1c
@@ -51,7 +54,7 @@ reactions \-
 Definition at line 17 of file reactions\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "reactions::reactions (\fBacs_longInt\fPtmpID, \fBacs_int\fPtmpType, \fBacs_longInt\fPtmpM_I, \fBacs_longInt\fPtmpM_II, \fBacs_longInt\fPtmpM_III, \fBacs_int\fPtmpEvents, \fBacs_int\fPtmpEnergyType)"
+.SS "reactions::reactions (\fBacs_longInt\fPtmpID, \fBacs_int\fPtmpType, \fBacs_longInt\fPtmpM_I, \fBacs_longInt\fPtmpM_II, \fBacs_longInt\fPtmpM_III, \fBacs_int\fPtmpEvents, \fBacs_int\fPtmpEnergyType, \fBacs_double\fPtmpKspont)"
 
 .PP
 Constructor\&. 
@@ -77,45 +80,49 @@ Definition at line 20 of file reactions\&.cpp\&.
 .SS "reactions::~reactions ()\fC [inline]\fP"
 
 .PP
-Definition at line 32 of file reactions\&.h\&.
+Definition at line 33 of file reactions\&.h\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "\fBacs_int\fP reactions::getEnergyType () const\fC [inline]\fP"
 
 .PP
-Definition at line 41 of file reactions\&.h\&.
+Definition at line 42 of file reactions\&.h\&.
 .SS "\fBacs_int\fP reactions::getEvents () const\fC [inline]\fP"
 
 .PP
-Definition at line 40 of file reactions\&.h\&.
+Definition at line 41 of file reactions\&.h\&.
 .SS "\fBacs_longInt\fP reactions::getID () const\fC [inline]\fP"
 
 .PP
-Definition at line 35 of file reactions\&.h\&.
+Definition at line 36 of file reactions\&.h\&.
+.SS "\fBacs_double\fP reactions::getKspont () const\fC [inline]\fP"
+
+.PP
+Definition at line 43 of file reactions\&.h\&.
 .SS "\fBacs_longInt\fP reactions::getSpecies_I () const\fC [inline]\fP"
 
 .PP
-Definition at line 37 of file reactions\&.h\&.
+Definition at line 38 of file reactions\&.h\&.
 .SS "\fBacs_longInt\fP reactions::getSpecies_II () const\fC [inline]\fP"
 
 .PP
-Definition at line 38 of file reactions\&.h\&.
+Definition at line 39 of file reactions\&.h\&.
 .SS "\fBacs_longInt\fP reactions::getSpecies_III () const\fC [inline]\fP"
 
 .PP
-Definition at line 39 of file reactions\&.h\&.
+Definition at line 40 of file reactions\&.h\&.
 .SS "\fBacs_int\fP reactions::getType () const\fC [inline]\fP"
 
 .PP
-Definition at line 36 of file reactions\&.h\&.
+Definition at line 37 of file reactions\&.h\&.
 .SS "void reactions::resetEventsCounter ()\fC [inline]\fP"
 
 .PP
-Definition at line 45 of file reactions\&.h\&.
+Definition at line 47 of file reactions\&.h\&.
 .SS "void reactions::updateTotEvents ()\fC [inline]\fP"
 
 .PP
-Definition at line 44 of file reactions\&.h\&.
+Definition at line 46 of file reactions\&.h\&.
 
 .SH "Author"
 .PP 

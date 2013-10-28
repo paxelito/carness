@@ -46,6 +46,7 @@
     <member refid="classenvironment_1acaf3cd03764e412ac52fcb22ab7ece05" kind="variable"><name>cleavageProbability</name></member>
     <member refid="classenvironment_1acc54187b57eae193171eecc0f8d935b3" kind="variable"><name>reverseReactions</name></member>
     <member refid="classenvironment_1a9f8d2a20ca205da8fa132cb29b6f3507" kind="variable"><name>revRctRatio</name></member>
+    <member refid="classenvironment_1a56adcdd62539d0adf652bca6cd2d4ceb" kind="variable"><name>spontRct</name></member>
     <member refid="classenvironment_1a7070a2187b5b1cbb35e9d17edbee1e3d" kind="variable"><name>nrgCarrier</name></member>
     <member refid="classenvironment_1a94b4686e121125ce1f6de3f6c8dbcf4d" kind="variable"><name>numberOfMolecules</name></member>
     <member refid="classenvironment_1a0fa2d19ff8a38c1abb6b79d60f328a1a" kind="variable"><name>numberOfNewMolecules</name></member>
@@ -68,6 +69,8 @@
     <member refid="classenvironment_1a14fa51ec749e2a8896207be5e5fbf25c" kind="variable"><name>K_cpxDiss</name></member>
     <member refid="classenvironment_1acc5ac3dc3958204843e4cd4b153337a6" kind="variable"><name>K_nrg</name></member>
     <member refid="classenvironment_1a2b13919233351ee0283b4c50ca4c2335" kind="variable"><name>K_nrg_decay</name></member>
+    <member refid="classenvironment_1aee142fddcc841df2825de50ecdb75e17" kind="variable"><name>K_spont_diss</name></member>
+    <member refid="classenvironment_1afac72fc19f4a0a7ef2f73075d4be881d" kind="variable"><name>K_spont_ass</name></member>
     <member refid="classenvironment_1a070c5bdde6947542b87e5206e3f0b92a" kind="variable"><name>maxLOut</name></member>
     <member refid="classenvironment_1a91f74bf47cd5cc0ba95fd463c3a3bec0" kind="variable"><name>cleavage_KineticConstant</name></member>
     <member refid="classenvironment_1aebee978e44b20aa27b51737fcd0a8919" kind="variable"><name>complex_KineticConstant</name></member>
@@ -170,6 +173,8 @@
     <member refid="classenvironment_1a9091c4a0fe31f6d5f5330e7ebff297a3" kind="function"><name>getKcpxDiss</name></member>
     <member refid="classenvironment_1a7615c746521a592ff1ab2d0793b14d89" kind="function"><name>getKnrg</name></member>
     <member refid="classenvironment_1a4c163b36e84cd8406aff4ab5d220a251" kind="function"><name>getKirrad</name></member>
+    <member refid="classenvironment_1a2c6ca24592b5feab891e43233c581711" kind="function"><name>getK_spont_diss</name></member>
+    <member refid="classenvironment_1a6557765370b636bc7d4e02288b444c0e" kind="function"><name>getK_spont_ass</name></member>
     <member refid="classenvironment_1a771963196a27d3532cd7af4b98a5a9c5" kind="function"><name>getCleavageKC</name></member>
     <member refid="classenvironment_1abf3168adf05ff9fa6bab4e34b387f0a6" kind="function"><name>getComplexKC</name></member>
     <member refid="classenvironment_1a7ac1b69dd38107d5c40339563969d09f" kind="function"><name>getCondensationKC</name></member>
@@ -402,7 +407,8 @@
     <member refid="classreactions_1a7af6aa46f1d8bd13bb156347269fd361" kind="variable"><name>species_III</name></member>
     <member refid="classreactions_1a5df39ca8d79f8ea8b2ec0b471945b443" kind="variable"><name>events</name></member>
     <member refid="classreactions_1ae9470ad161585799d95e5dc675bb2353" kind="variable"><name>energyType</name></member>
-    <member refid="classreactions_1a496de9cbc128b98213ded20b936752c2" kind="function"><name>reactions</name></member>
+    <member refid="classreactions_1accac9b65200842458386fbac3e3bf7fe" kind="variable"><name>k_spont</name></member>
+    <member refid="classreactions_1a0b6ca1c86d79bb511f116d86714f74a6" kind="function"><name>reactions</name></member>
     <member refid="classreactions_1ad0c79e56e87891c502d8fcd6c4005987" kind="function"><name>~reactions</name></member>
     <member refid="classreactions_1a5c30ce559254e67f7d4e219a8fe26fcc" kind="function"><name>getID</name></member>
     <member refid="classreactions_1ad928f8c901ad8e318e201cedcf1209ba" kind="function"><name>getType</name></member>
@@ -411,6 +417,7 @@
     <member refid="classreactions_1aaf426633019113ac4ae54cd5597920be" kind="function"><name>getSpecies_III</name></member>
     <member refid="classreactions_1a4fd82a3f1a6474e53709c2a8c04b793c" kind="function"><name>getEvents</name></member>
     <member refid="classreactions_1ae6fce196577644283fdab4a78909d891" kind="function"><name>getEnergyType</name></member>
+    <member refid="classreactions_1a3cac13cba00c709df26485bbeffda4f0" kind="function"><name>getKspont</name></member>
     <member refid="classreactions_1ae7a0bcb1c921c25ad5dc637d664f2c94" kind="function"><name>updateTotEvents</name></member>
     <member refid="classreactions_1a614a367a15dda1df4160bcdc170a9b32" kind="function"><name>resetEventsCounter</name></member>
   </compound>
@@ -1494,6 +1501,8 @@
     <member refid="acs__headers_8h_1a840f787adb443d5d9492b18d3180c233" kind="define"><name>ENDO_CONDENSATION</name></member>
     <member refid="acs__headers_8h_1a1f0638306dc456453be7d6be35c3f617" kind="define"><name>ENDO_COMPLEXFORMATION</name></member>
     <member refid="acs__headers_8h_1a66f3205fa4a725d70d3ea246fed2336a" kind="define"><name>ENERGYEFFLUX</name></member>
+    <member refid="acs__headers_8h_1a9248f5baf3277731d21513c01ab14ba2" kind="define"><name>SPONTANEOUS_CONDENSATION</name></member>
+    <member refid="acs__headers_8h_1adb07a512ddff058539c565dc597f8925" kind="define"><name>SPONTANEOUS_CLEAVAGE</name></member>
     <member refid="acs__headers_8h_1a248fc87e714b5d729453d11fbeec8310" kind="define"><name>SOLUBLE</name></member>
     <member refid="acs__headers_8h_1af270dce996bbfb82cc5d337af5b980e5" kind="define"><name>PRECIPITATED</name></member>
     <member refid="acs__headers_8h_1ac23ad60cb24df0616d58202351b11e60" kind="define"><name>ESOERGONIC</name></member>
@@ -1513,6 +1522,7 @@
     <member refid="acs__headers_8h_1a15e77522039bb4bb52000b65773c83cf" kind="define"><name>NOTHINGLOAD</name></member>
     <member refid="acs__headers_8h_1afb2a947dfb1847f71649f82bc1bf0292" kind="define"><name>NEWREACTIONS</name></member>
     <member refid="acs__headers_8h_1a5119e853077046684673dad15af9199f" kind="define"><name>UPGRADEREACTIONS</name></member>
+    <member refid="acs__headers_8h_1a9ea25e0eb039e29accaed6cb99632deb" kind="define"><name>NOSPONTANEOUS</name></member>
     <member refid="acs__headers_8h_1a029d801cdb598a397cb99ea968a64dc2" kind="define"><name>NEP</name></member>
     <member refid="acs__headers_8h_1a174754c04acfba9e1f66ba249e68643a" kind="define"><name>AVO</name></member>
     <member refid="acs__headers_8h_1aa7d0d45ef785688de1c634290ceb02e7" kind="define"><name>MINIMALRCTTIMEMULTI</name></member>
@@ -1533,7 +1543,7 @@
     <member refid="common_functions_8cpp_1aed308af1d3ee40e106e4e23e78644d07" kind="function"><name>getDoubleRandom</name></member>
     <member refid="common_functions_8cpp_1a22cddb6ffcf2250e0c90bc913728350f" kind="function"><name>random_poisson</name></member>
     <member refid="common_functions_8cpp_1a78d5b4a67b6e66b8ceaa85874a2a12b7" kind="function"><name>random_binomial</name></member>
-    <member refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kind="function"><name>round</name></member>
+    <member refid="common_functions_8cpp_1a277c801cb0f8a290d7c28b6a67feff18" kind="function"><name>acsround</name></member>
     <member refid="common_functions_8cpp_1a1a13653eb649b6fc74090deecddf1028" kind="function"><name>dec2bin</name></member>
     <member refid="common_functions_8cpp_1aa678d0a98232158c48108227b98de4b6" kind="function"><name>ExitWithError</name></member>
     <member refid="common_functions_8cpp_1a4d1aa74fac80ae0275c056575fdb6626" kind="function"><name>split</name></member>
@@ -1548,7 +1558,7 @@
     <member refid="common_functions_8h_1aed308af1d3ee40e106e4e23e78644d07" kind="function"><name>getDoubleRandom</name></member>
     <member refid="common_functions_8h_1a22cddb6ffcf2250e0c90bc913728350f" kind="function"><name>random_poisson</name></member>
     <member refid="common_functions_8h_1a78d5b4a67b6e66b8ceaa85874a2a12b7" kind="function"><name>random_binomial</name></member>
-    <member refid="common_functions_8h_1aaaa7233fe68b91b6333e2729a2d619a1" kind="function"><name>round</name></member>
+    <member refid="common_functions_8h_1a277c801cb0f8a290d7c28b6a67feff18" kind="function"><name>acsround</name></member>
     <member refid="common_functions_8h_1a1a13653eb649b6fc74090deecddf1028" kind="function"><name>dec2bin</name></member>
     <member refid="common_functions_8h_1a4d1aa74fac80ae0275c056575fdb6626" kind="function"><name>split</name></member>
     <member refid="common_functions_8h_1aa678d0a98232158c48108227b98de4b6" kind="function"><name>ExitWithError</name></member>

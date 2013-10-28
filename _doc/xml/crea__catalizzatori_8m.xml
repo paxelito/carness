@@ -110,7 +110,7 @@ tot_cleav = 0</initializer>
         <definition>if catalisi_reali</definition>
         <argsstring></argsstring>
         <name>catalisi_reali</name>
-        <initializer>= <ref refid="common_functions_8h_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(<ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref>*<ref refid="start_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>*<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>)</initializer>
+        <initializer>= round(<ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref>*<ref refid="start_8m_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>*<ref refid="crea__catalizzatori_8m_1ab5807df6e5701d7529696a19c65fab49" kindref="member">numero_specie</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -585,7 +585,7 @@ end
 <codeline lineno="18" refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref><sp/>=<sp/>input(&apos;introduci<sp/>la<sp/>nuova<sp/><ref refid="crea__catalizzatori_8m_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref><sp/>\n&apos;);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21" refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" refkind="member"><highlight class="normal"><ref refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" kindref="member">catalisi_reali</ref><sp/>=<sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(<ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref>*<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>*numero_specie);</highlight></codeline>
+<codeline lineno="21" refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" refkind="member"><highlight class="normal"><ref refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" kindref="member">catalisi_reali</ref><sp/>=<sp/>round(<ref refid="crea__catalizzatori_8m_1ab4b5106fc951227cdbb0de4183d8bf20" kindref="member">tot_reaz</ref>*<ref refid="crea__catalizzatori_8m_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>*numero_specie);</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><ref refid="conc_analysis_8m_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="crea__catalizzatori_8m_1a69680fac89c0793ff1c6399d23033c67" kindref="member">catalisi_reali</ref><sp/>==<sp/>0</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crea__catalizzatori_8m_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref><sp/>=<sp/>-9999;</highlight></codeline>

@@ -163,7 +163,7 @@
         <definition>end end species_to_delete</definition>
         <argsstring></argsstring>
         <name>species_to_delete</name>
-        <initializer>= <ref refid="common_functions_8h_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(<ref refid="lancia__inizializzatore__acs_8m_1acd685f63a27f53fc049aff633634ddd6" kindref="member">ratio_firing_disk</ref>*<ref refid="crea__influx_8m_1a3749709d4cc2c50b5107d802173fb144" kindref="member">remaining_species</ref>)</initializer>
+        <initializer>= round(<ref refid="lancia__inizializzatore__acs_8m_1acd685f63a27f53fc049aff633634ddd6" kindref="member">ratio_firing_disk</ref>*<ref refid="crea__influx_8m_1a3749709d4cc2c50b5107d802173fb144" kindref="member">remaining_species</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -453,7 +453,7 @@
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a954c3e86b303e7b5ff41a314b0e845db" kindref="member">remaining_species</ref><sp/>=<sp/><ref refid="crea__concentrazioni__iniziali_8m_1a776a9a06b8375875869043079a11ba0c" kindref="member">tot_species</ref>-l_max;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="38" refid="crea__concentrazioni__iniziali_8m_1a6d872cdbb63424cff04a431f8c23cb99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a6d872cdbb63424cff04a431f8c23cb99" kindref="member">species_to_delete</ref><sp/>=<sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(<ref refid="start_8m_1a83c1660d71068ae836121af0890bb3dd" kindref="member">ratio_firing_disk</ref>*remaining_species);<sp/>%la<sp/>percentuale<sp/>è di<sp/>reazioni<sp/>fra<sp/>quelle<sp/>che<sp/>restano
+<codeline lineno="38" refid="crea__concentrazioni__iniziali_8m_1a6d872cdbb63424cff04a431f8c23cb99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a6d872cdbb63424cff04a431f8c23cb99" kindref="member">species_to_delete</ref><sp/>=<sp/>round(<ref refid="start_8m_1a83c1660d71068ae836121af0890bb3dd" kindref="member">ratio_firing_disk</ref>*remaining_species);<sp/>%la<sp/>percentuale<sp/>è di<sp/>reazioni<sp/>fra<sp/>quelle<sp/>che<sp/>restano
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>species_to_keep<sp/>=<sp/>remaining_species<sp/>-<sp/>species_to_delete<sp/>+<sp/>l_max;
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>
 <sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>

@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CaRNeSS
-   &#160;<span id="projectnumber">4.7 (20131001.59)</span>
+   &#160;<span id="projectnumber">4.8 (20131026.60)</span>
    </div>
    <div id="projectbrief">Catalytic Reaction Networks Stochastic Simulator</div>
   </td>
@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('intro.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><hr/>
-<p> The <b>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</b> is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different interacting molecular species. The model takes inspiration from the original model proposed by Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case. Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction. It is important to notice that there are not indications about the chemical nature of the molecules, species "A" may be both a polipeptide, an amminoacid, a particular protein domain or an RNA strenght.<br/>
+<p> The <b>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</b> is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different interacting molecular species. The model takes inspiration from the original model proposed by Stuart Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case. Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction. It is important to notice that there are not indications about the chemical nature of the molecules, species "A" may be both a polipeptide, an amminoacid, a particular protein domain or an RNA strenght.<br/>
 <br/>
  </p>
 <h1><a class="anchor" id="secUsage"></a>
@@ -183,13 +183,16 @@ Dynamic</h2>
     <tr><td class="paramname">cleavageProbability</td><td>(from 0 to 1) Cleavage probability (Condensation probability is 1 - cleavage probability) </td></tr>
     <tr><td class="paramname">reverseReaction</td><td>(0 or 1) Set to 1 to enable reverse reactions, 0 otherwise </td></tr>
     <tr><td class="paramname">revRctRatio</td><td>(&gt;0) Ratio between forward and backward reactions, it is used in the creation of new reactions only (if reverseReactions = TRUE) </td></tr>
-    <tr><td class="paramname">K_ass</td><td>(&gt; 0) Final Condensation kinetic constant (C.A + B &ndash;&gt; AB + C) where A.C is the molecular complex composed of C (the catalyst) and A (the first substrate) </td></tr>
-    <tr><td class="paramname">K_diss</td><td>(&gt; 0) Cleavage kinetic constant (AB &ndash;&gt; A + B) </td></tr>
-    <tr><td class="paramname">K_cpx</td><td>(&gt; 0) Complex formation kinetic constant (A + C(catalyst) &ndash;&gt; C.A) </td></tr>
-    <tr><td class="paramname">K_cpxDiss</td><td>(&gt; 0) Complex Dissociation kinetic constant (C.A &ndash;&gt; A + C) </td></tr>
-    <tr><td class="paramname">K_nrg</td><td>(&gt; 0) species phosphorilation kinetic constant </td></tr>
-    <tr><td class="paramname">K_nrg_decay</td><td>(&gt; 0) de-energization kinetic constant </td></tr>
+    <tr><td class="paramname">spontRct</td><td>(0 or 1) If 1 spontanoues reactions are considered, otherwise no </td></tr>
+    <tr><td class="paramname">K_ass</td><td>(&gt;= 0) Final Condensation kinetic constant (C.A + B &ndash;&gt; AB + C) where A.C is the molecular complex composed of C (the catalyst) and A (the first substrate) </td></tr>
+    <tr><td class="paramname">K_diss</td><td>(&gt;= 0) Cleavage kinetic constant (AB &ndash;&gt; A + B) </td></tr>
+    <tr><td class="paramname">K_cpx</td><td>(&gt;= 0) Complex formation kinetic constant (A + C(catalyst) &ndash;&gt; C.A) </td></tr>
+    <tr><td class="paramname">K_cpxDiss</td><td>(&gt;= 0) Complex Dissociation kinetic constant (C.A &ndash;&gt; A + C) </td></tr>
+    <tr><td class="paramname">K_nrg</td><td>(&gt;= 0) species phosphorilation kinetic constant </td></tr>
+    <tr><td class="paramname">K_nrg_decay</td><td>(&gt;= 0) de-energization kinetic constant </td></tr>
     <tr><td class="paramname">moleculeDecay_KineticConstant</td><td>(&gt; 0) Molecule decay (efflux) kinetic Constant (Disregarded if the system is closed) </td></tr>
+    <tr><td class="paramname">K_spont_ass</td><td>(&gt;= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues condensations </td></tr>
+    <tr><td class="paramname">K_spont_diss</td><td>(&gt;= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues cleavages </td></tr>
     <tr><td class="paramname">influx_rate</td><td>(&gt;= 0) Concentration per seconds (The species to insert in the system will be randomly chosen according to the _acsinflux.csv file). If equal to 0 the system is closed (maxLOut=0) or only the species that can cross the membrane come in and go out (maxLOut&gt;0). </td></tr>
     <tr><td class="paramname">maxLOut</td><td>Maximum lenght of the species involved in the efflux process (<code>influx_rate</code> &gt; 0), equal to 0 indicates that all the species can be involved in the efflux process (no filter). If influx_rate = 0 the parameter indicates the species that can cross the semipermeable membrane of the protocell. <b>THE COUPLING BETWEEN INFLUX_RATE AND MAXLOUT INDICATES IF WE ARE SIMULATING A PROTOCELL OR A FLOW REACTOR</b> </td></tr>
     <tr><td class="paramname">diffusion_contribute</td><td>(KD) (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length, L^{-KD} </td></tr>
@@ -219,8 +222,8 @@ Acknowledgments</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="index.html">Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.7 (20131001.59)</a></li>
-    <li class="footer">Generated on Tue Oct 1 2013 10:39:59 for CaRNeSS by
+    <li class="navelem"><a class="el" href="index.html">Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131026.60)</a></li>
+    <li class="footer">Generated on Sat Oct 26 2013 15:02:50 for CaRNeSS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

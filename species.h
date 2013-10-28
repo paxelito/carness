@@ -132,7 +132,7 @@ public:
 	void setNewAge(acs_double tmpLastTimeInterval){age += tmpLastTimeInterval;}
 	void rebornsIncrement(){reborns++;}
 	// Concentration and amount update
-	void concToNum(acs_double tmpVolume){amount = round(AVO * concentration * tmpVolume);}
+	void concToNum(acs_double tmpVolume){amount = acsround(AVO * concentration * tmpVolume);}
 	void numToConc(acs_double tmpVolume){concentration = amount / (AVO * tmpVolume);}
     // Reset Functions
     void resetAge(){age=0;}

@@ -38,9 +38,9 @@ Identificator(\-I\-D)&Sequence&Concentration&Diffusion enhancement&Precipitation
 \item {\itshape Concentration locked}\-: 0 -\/$>$ Concentration of the species changes according to the reactions affecting it, 1 -\/$>$ The concentration of the species is locked (permeable species, the concentration of the species is assumed to be constant within the cell and in the environment) \par
  
 \end{DoxyItemize}\hypertarget{page_init_str_subReactions}{}\section{\-\_\-acsreactions.\-csv}\label{page_init_str_subReactions}
-Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{7}
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{8}
 \hline
-Identificator&Reaction type&Species 1&Species 2&Species 3&Reaction counter&Energy type  \\\cline{1-7}
+Identificator&Reaction type&Species 1&Species 2&Species 3 &Reaction counter&Energy type&k spont  \\\cline{1-8}
 \end{TabularC}
 
 \begin{DoxyItemize}
@@ -50,7 +50,8 @@ Identificator&Reaction type&Species 1&Species 2&Species 3&Reaction counter&Energ
 \item {\itshape Species 2}\-: Product I\-D if reaction type = 0, Substrate I\-D reaction type = 1
 \item {\itshape Species 3}\-: Product I\-D if reaction type = 0, Substrate I\-D reaction type = 1
 \item {\itshape Reaction counter}\-: Reaction occurrance counter
-\item {\itshape Energy Type}\-: The reaction energetic configuration, 1 for endoergonic 0 for esoergonic \par
+\item {\itshape Energy Type}\-: The reaction energetic configuration, 1 for endoergonic 0 for esoergonic
+\item {\itshape Spontaneous Constant}\-: Spontaneous reaction constant \par
  
 \end{DoxyItemize}\hypertarget{page_init_str_subCatalysis}{}\section{\-\_\-acscatalysis.\-csv}\label{page_init_str_subCatalysis}
 Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{8}

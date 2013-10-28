@@ -79,6 +79,8 @@ var searchData=
   ['speciesseq',['speciesSeq',['../namespacebuffered_flux_analysis.html#a19a0d4fb7445508e6204894b5f4eca23',1,'bufferedFluxAnalysis']]],
   ['specificincrement',['specificIncrement',['../classspecies.html#a87e85a2397e5ec34518efa235b529d7e',1,'species']]],
   ['split',['split',['../common_functions_8cpp.html#a4d1aa74fac80ae0275c056575fdb6626',1,'split(string str, const char *delim):&#160;commonFunctions.cpp'],['../common_functions_8h.html#a4d1aa74fac80ae0275c056575fdb6626',1,'split(string str, const char *delim):&#160;commonFunctions.cpp']]],
+  ['spontaneous_5fcleavage',['SPONTANEOUS_CLEAVAGE',['../acs__headers_8h.html#adb07a512ddff058539c565dc597f8925',1,'acs_headers.h']]],
+  ['spontaneous_5fcondensation',['SPONTANEOUS_CONDENSATION',['../acs__headers_8h.html#a9248f5baf3277731d21513c01ab14ba2',1,'acs_headers.h']]],
   ['st',['st',['../inizializzatore___a_c_s_8m.html#afbed6b4ecdae7969c5b47d7d4e71495f',1,'inizializzatore_ACS.m']]],
   ['start_2em',['start.m',['../start_8m.html',1,'']]],
   ['stats',['stats',['../stats_8m.html#aa7ae495ee970be20d992bedf6f9f8280',1,'stats.m']]],

@@ -242,7 +242,7 @@
 <codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentration<sp/>=<sp/>tmpConcentration;</highlight></codeline>
 <codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classspecies_1a9842732a5dbe0eb67e24148b5d7ae4a2" kindref="member">concToNum</ref>(tmpVolume);</highlight></codeline>
 <codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classspecies_1a23c19a53390142ba690d0f3db0520d05" kindref="member">numToConc</ref>(tmpVolume);</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(tmpKLoadConc*tmpVolume*<ref refid="acs__headers_8h_1a174754c04acfba9e1f66ba249e68643a" kindref="member">AVO</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>round(tmpKLoadConc*tmpVolume*<ref refid="acs__headers_8h_1a174754c04acfba9e1f66ba249e68643a" kindref="member">AVO</ref>);</highlight></codeline>
 <codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>age<sp/>=<sp/>tmpAge;</highlight></codeline>
 <codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reborns<sp/>=<sp/>tmpReborns;</highlight></codeline>
 <codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffusionEnh<sp/>=tmpDiffusionEnh;</highlight></codeline>

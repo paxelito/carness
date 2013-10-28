@@ -5,7 +5,7 @@
     <title>Essential informations</title>
     <detaileddescription>
 <para><hruler/>
- The <bold>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</bold> is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different interacting molecular species. The model takes inspiration from the original model proposed by Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case. Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction. It is important to notice that there are not indications about the chemical nature of the molecules, species &quot;A&quot; may be both a polipeptide, an amminoacid, a particular protein domain or an RNA strenght.<linebreak/>
+ The <bold>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</bold> is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different interacting molecular species. The model takes inspiration from the original model proposed by Stuart Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case. Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction. It is important to notice that there are not indications about the chemical nature of the molecules, species &quot;A&quot; may be both a polipeptide, an amminoacid, a particular protein domain or an RNA strenght.<linebreak/>
 <linebreak/>
  </para><sect1 id="intro_1secUsage">
 <title>Using the simulator</title>
@@ -208,45 +208,52 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
+<parametername>spontRct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(0 or 1) If 1 spontanoues reactions are considered, otherwise no </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
 <parametername>K_ass</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>(&gt; 0) Final Condensation kinetic constant (C.A + B <ndash/>&gt; AB + C) where A.C is the molecular complex composed of C (the catalyst) and A (the first substrate) </para></parameterdescription>
+<para>(&gt;= 0) Final Condensation kinetic constant (C.A + B <ndash/>&gt; AB + C) where A.C is the molecular complex composed of C (the catalyst) and A (the first substrate) </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>K_diss</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>(&gt; 0) Cleavage kinetic constant (AB <ndash/>&gt; A + B) </para></parameterdescription>
+<para>(&gt;= 0) Cleavage kinetic constant (AB <ndash/>&gt; A + B) </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>K_cpx</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>(&gt; 0) Complex formation kinetic constant (A + C(catalyst) <ndash/>&gt; C.A) </para></parameterdescription>
+<para>(&gt;= 0) Complex formation kinetic constant (A + C(catalyst) <ndash/>&gt; C.A) </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>K_cpxDiss</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>(&gt; 0) Complex Dissociation kinetic constant (C.A <ndash/>&gt; A + C) </para></parameterdescription>
+<para>(&gt;= 0) Complex Dissociation kinetic constant (C.A <ndash/>&gt; A + C) </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>K_nrg</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>(&gt; 0) species phosphorilation kinetic constant </para></parameterdescription>
+<para>(&gt;= 0) species phosphorilation kinetic constant </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>K_nrg_decay</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>(&gt; 0) de-energization kinetic constant </para></parameterdescription>
+<para>(&gt;= 0) de-energization kinetic constant </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -254,6 +261,20 @@
 </parameternamelist>
 <parameterdescription>
 <para>(&gt; 0) Molecule decay (efflux) kinetic Constant (Disregarded if the system is closed) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K_spont_ass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues condensations </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K_spont_diss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues cleavages </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>

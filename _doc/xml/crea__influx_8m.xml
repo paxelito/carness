@@ -58,7 +58,7 @@ for <ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i<
         <definition>end end species_to_delete</definition>
         <argsstring></argsstring>
         <name>species_to_delete</name>
-        <initializer>= <ref refid="common_functions_8h_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(ratio_influx*<ref refid="crea__influx_8m_1a354e9aa3d0786bab7f2475c58693017d" kindref="member">tot_species</ref>)</initializer>
+        <initializer>= round(ratio_influx*<ref refid="crea__influx_8m_1a354e9aa3d0786bab7f2475c58693017d" kindref="member">tot_species</ref>)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -306,7 +306,7 @@ for <ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i<
 <codeline lineno="50"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/>%casuale</highlight></codeline>
 <codeline lineno="51"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/>case<sp/>1</highlight></codeline>
 <codeline lineno="52"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="53" refid="crea__influx_8m_1a6d872cdbb63424cff04a431f8c23cb99" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a6d872cdbb63424cff04a431f8c23cb99" kindref="member">species_to_delete</ref><sp/>=<sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(ratio_influx*<ref refid="crea__concentrazioni__iniziali_8m_1a776a9a06b8375875869043079a11ba0c" kindref="member">tot_species</ref>);</highlight></codeline>
+<codeline lineno="53" refid="crea__influx_8m_1a6d872cdbb63424cff04a431f8c23cb99" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a6d872cdbb63424cff04a431f8c23cb99" kindref="member">species_to_delete</ref><sp/>=<sp/>round(ratio_influx*<ref refid="crea__concentrazioni__iniziali_8m_1a776a9a06b8375875869043079a11ba0c" kindref="member">tot_species</ref>);</highlight></codeline>
 <codeline lineno="54" refid="crea__influx_8m_1ac8f034c683f5b66572af8149f27da7e0" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a529ab6e60f79d401d9fcbab38ef5c25b" kindref="member">species_to_keep</ref><sp/>=<sp/>tot_species<sp/>-<sp/><ref refid="crea__concentrazioni__iniziali_8m_1a6d872cdbb63424cff04a431f8c23cb99" kindref="member">species_to_delete</ref>;</highlight></codeline>
 <codeline lineno="55"><highlight class="normal">%<sp/></highlight></codeline>
 <codeline lineno="56" refid="crea__influx_8m_1a6f6ccfcf58b31cb6412107d9d5281426" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:<ref refid="crea__concentrazioni__iniziali_8m_1a529ab6e60f79d401d9fcbab38ef5c25b" kindref="member">species_to_keep</ref></highlight></codeline>
@@ -337,7 +337,7 @@ for <ref refid="start_8m_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i<
 <codeline lineno="81"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="82"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="conc_analysis_8m_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="83"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="84"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>species_to_delete<sp/>=<sp/><ref refid="common_functions_8cpp_1aaaa7233fe68b91b6333e2729a2d619a1" kindref="member">round</ref>(ratio_influx*remaining_species);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>species_to_delete<sp/>=<sp/>round(ratio_influx*remaining_species);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crea__concentrazioni__iniziali_8m_1a529ab6e60f79d401d9fcbab38ef5c25b" kindref="member">species_to_keep</ref><sp/>=<sp/>remaining_species<sp/>-<sp/>species_to_delete;</highlight></codeline>
 <codeline lineno="86"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="87"><highlight class="normal">%<sp/><sp/><sp/><sp/><sp/></highlight></codeline>

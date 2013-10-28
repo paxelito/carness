@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CaRNeSS
-   &#160;<span id="projectnumber">4.7 (20131001.59)</span>
+   &#160;<span id="projectnumber">4.8 (20131026.60)</span>
    </div>
    <div id="projectbrief">Catalytic Reaction Networks Stochastic Simulator</div>
   </td>
@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('crea__concentrazioni__iniziali_8m_sour
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="crea__concentrazioni__iniziali_8m.html#a954c3e86b303e7b5ff41a314b0e845db">remaining_species</a> = <a class="code" href="crea__concentrazioni__iniziali_8m.html#a776a9a06b8375875869043079a11ba0c">tot_species</a>-l_max;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="crea__concentrazioni__iniziali_8m.html#a6d872cdbb63424cff04a431f8c23cb99">   38</a></span>&#160;        <a class="code" href="crea__concentrazioni__iniziali_8m.html#a6d872cdbb63424cff04a431f8c23cb99">species_to_delete</a> = <a class="code" href="common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1">round</a>(<a class="code" href="start_8m.html#a83c1660d71068ae836121af0890bb3dd">ratio_firing_disk</a>*remaining_species); %la percentuale è di reazioni fra quelle che restano
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="crea__concentrazioni__iniziali_8m.html#a6d872cdbb63424cff04a431f8c23cb99">   38</a></span>&#160;        <a class="code" href="crea__concentrazioni__iniziali_8m.html#a6d872cdbb63424cff04a431f8c23cb99">species_to_delete</a> = round(<a class="code" href="start_8m.html#a83c1660d71068ae836121af0890bb3dd">ratio_firing_disk</a>*remaining_species); %la percentuale è di reazioni fra quelle che restano
         species_to_keep = remaining_species - species_to_delete + l_max;
         
         
@@ -421,7 +421,6 @@ $(document).ready(function(){initNavTree('crea__concentrazioni__iniziali_8m_sour
 <div class="ttc" id="conc_analysis_8m_html_adf3394dfd4755fd0ef2854fe558ff8aa"><div class="ttname"><a href="conc_analysis_8m.html#adf3394dfd4755fd0ef2854fe558ff8aa">if</a></div><div class="ttdeci">fixed Concentration if(evaluated(indice)==1)&amp;&amp;(bindpnt(indice)</div></div>
 <div class="ttc" id="crea__concentrazioni__iniziali_8m_html_abc9be4849231a626a9dffd0bfb31e55d"><div class="ttname"><a href="crea__concentrazioni__iniziali_8m.html#abc9be4849231a626a9dffd0bfb31e55d">valore</a></div><div class="ttdeci">valore(1:max(firing_disk_bck(:, 2)))=0</div></div>
 <div class="ttc" id="lancia__inizializzatore__acs_8m_html_a9bc498ccac8db41438f855f5dd3f4c05"><div class="ttname"><a href="lancia__inizializzatore__acs_8m.html#a9bc498ccac8db41438f855f5dd3f4c05">volume</a></div><div class="ttdeci">volume</div><div class="ttdef"><b>Definition:</b> <a href="lancia__inizializzatore__acs_8m_source.html#l00040">lancia_inizializzatore_acs.m:40</a></div></div>
-<div class="ttc" id="common_functions_8cpp_html_aaaa7233fe68b91b6333e2729a2d619a1"><div class="ttname"><a href="common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1">round</a></div><div class="ttdeci">acs_double round(acs_double tmpX)</div><div class="ttdef"><b>Definition:</b> <a href="common_functions_8cpp_source.html#l00229">commonFunctions.cpp:229</a></div></div>
 <div class="ttc" id="crea__catalizzatori_8m_html_ab5807df6e5701d7529696a19c65fab49"><div class="ttname"><a href="crea__catalizzatori_8m.html#ab5807df6e5701d7529696a19c65fab49">numero_specie</a></div><div class="ttdeci">numero_specie</div><div class="ttdef"><b>Definition:</b> <a href="crea__catalizzatori_8m_source.html#l00005">crea_catalizzatori.m:5</a></div></div>
 <div class="ttc" id="conc_analysis_8m_html_afb358f48b1646c750fb9da6c6585be2b"><div class="ttname"><a href="conc_analysis_8m.html#afb358f48b1646c750fb9da6c6585be2b">end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> <a href="conc_analysis_8m_source.html#l00073">concAnalysis.m:73</a></div></div>
 <div class="ttc" id="lancia__inizializzatore__acs_8m_html_a7c974cc56015b6503e0619d32ebd4180"><div class="ttname"><a href="lancia__inizializzatore__acs_8m.html#a7c974cc56015b6503e0619d32ebd4180">lunghezza_max_fd</a></div><div class="ttdeci">percentuale di specie da cancellare rispetto a tutte quelle che restano dopo aver conservato i polimeri fino a lunghezzamaxfd lunghezza_max_fd</div><div class="ttdef"><b>Definition:</b> <a href="lancia__inizializzatore__acs_8m_source.html#l00083">lancia_inizializzatore_acs.m:83</a></div></div>
@@ -462,7 +461,7 @@ $(document).ready(function(){initNavTree('crea__concentrazioni__iniziali_8m_sour
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b332d76264961ef132272329242bfdf0.html">alessandrofilisetti</a></li><li class="navelem"><a class="el" href="dir_aa442a8060e2d188d99c82c234c5a5b0.html">Documents</a></li><li class="navelem"><a class="el" href="dir_21ed3a790d3d47dec9b1b0286693acfe.html">GIT</a></li><li class="navelem"><a class="el" href="dir_db4b0999f315afd5b53562c9396ed6f4.html">carness</a></li><li class="navelem"><a class="el" href="dir_57b3bf84c49e6a30c9113636c121b1cc.html">_matlabinitializator</a></li><li class="navelem"><a class="el" href="crea__concentrazioni__iniziali_8m.html">crea_concentrazioni_iniziali.m</a></li>
-    <li class="footer">Generated on Tue Oct 1 2013 10:39:59 for CaRNeSS by
+    <li class="footer">Generated on Sat Oct 26 2013 15:02:49 for CaRNeSS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

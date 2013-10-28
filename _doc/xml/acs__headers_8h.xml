@@ -200,7 +200,7 @@
       <sectiondef kind="define">
       <memberdef kind="define" id="acs__headers_8h_1aab38659c2fe462437b89a1e85e619dc7" prot="public" static="no">
         <name>__SOFTVERSION__</name>
-        <initializer>&quot;4.7b20131001.59&quot;</initializer>
+        <initializer>&quot;4.8b20131026.60&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -451,6 +451,28 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="73" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="73" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="acs__headers_8h_1a9248f5baf3277731d21513c01ab14ba2" prot="public" static="no">
+        <name>SPONTANEOUS_CONDENSATION</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="74" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="acs__headers_8h_1adb07a512ddff058539c565dc597f8925" prot="public" static="no">
+        <name>SPONTANEOUS_CLEAVAGE</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="75" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a248fc87e714b5d729453d11fbeec8310" prot="public" static="no">
         <name>SOLUBLE</name>
         <initializer>1</initializer>
@@ -460,7 +482,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="76" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="76" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="78" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1af270dce996bbfb82cc5d337af5b980e5" prot="public" static="no">
         <name>PRECIPITATED</name>
@@ -471,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="77" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="77" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="79" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1ac23ad60cb24df0616d58202351b11e60" prot="public" static="no">
         <name>ESOERGONIC</name>
@@ -482,7 +504,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="80" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="80" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="82" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a83346194720cacc0144e87246d23081b" prot="public" static="no">
         <name>ENDOERGONIC</name>
@@ -493,7 +515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="81" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="81" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="83" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a9c2a0137e4b97849150ab0842da3064c" prot="public" static="no">
         <name>CLEAVAGEBASED</name>
@@ -504,7 +526,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="82" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="82" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="84" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1ad722fbaf2330838fb9522c028141de6c" prot="public" static="no">
         <name>CONDENSATIONBASED</name>
@@ -515,7 +537,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="83" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="83" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="85" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="85" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1aca2c6e3c97c1e9728693b5c3c8c7f229" prot="public" static="no">
         <name>ENERGYBASED</name>
@@ -526,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="84" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="84" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="86" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a3efd65798c1856deacf187790b3f9ef5" prot="public" static="no">
         <name>ENERGYFREE</name>
@@ -537,7 +559,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="85" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="85" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="87" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a903e07285c96e6fbb9aa3577ddd1f327" prot="public" static="no">
         <name>TRUENRG</name>
@@ -548,7 +570,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="86" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="86" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="88" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1ada187b73f4b4a504680ead4f86785021" prot="public" static="no">
         <name>FALSENRG</name>
@@ -559,7 +581,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="87" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="87" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="89" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a2ce381beee4efd263052e93f9cbbfc77" prot="public" static="no">
         <name>ENERGIZABLE</name>
@@ -570,7 +592,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="88" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="88" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="90" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a04e076b71093a6dc76f99298d9cfeb9e" prot="public" static="no">
         <name>NOTENERGIZABLE</name>
@@ -581,7 +603,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="89" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="89" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="91" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a5a83a3ca25e31afb2d58aa40c8b1fbbb" prot="public" static="no">
         <name>SUBSTRATELOAD</name>
@@ -592,7 +614,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="91" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="91" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="93" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a7e521c899f69e37df3501fd0e652c517" prot="public" static="no">
         <name>CATALYSTLOAD</name>
@@ -603,7 +625,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="92" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="92" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="94" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="94" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1afb6d1105a81463fbadceff0217332f68" prot="public" static="no">
         <name>BOTHLOAD</name>
@@ -614,7 +636,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="93" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="93" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="95" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a7eb138e043eb9ec6d717c6178724bbaf" prot="public" static="no">
         <name>COMPLEXLOAD</name>
@@ -625,7 +647,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="94" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="94" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="96" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a15e77522039bb4bb52000b65773c83cf" prot="public" static="no">
         <name>NOTHINGLOAD</name>
@@ -636,7 +658,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="95" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="95" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="97" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1afb2a947dfb1847f71649f82bc1bf0292" prot="public" static="no">
         <name>NEWREACTIONS</name>
@@ -647,7 +669,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="98" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="98" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="100" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a5119e853077046684673dad15af9199f" prot="public" static="no">
         <name>UPGRADEREACTIONS</name>
@@ -658,7 +680,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="99" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="99" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="101" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="acs__headers_8h_1a9ea25e0eb039e29accaed6cb99632deb" prot="public" static="no">
+        <name>NOSPONTANEOUS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="104" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a029d801cdb598a397cb99ea968a64dc2" prot="public" static="no">
         <name>NEP</name>
@@ -669,7 +702,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="102" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="102" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="107" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1a174754c04acfba9e1f66ba249e68643a" prot="public" static="no">
         <name>AVO</name>
@@ -680,7 +713,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="103" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="103" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="108" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="acs__headers_8h_1aa7d0d45ef785688de1c634290ceb02e7" prot="public" static="no">
         <name>MINIMALRCTTIMEMULTI</name>
@@ -691,7 +724,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="106" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="106" bodyend="-1"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="111" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -781,7 +814,7 @@
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CONSTANTS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//----------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="acs__headers_8h_1aab38659c2fe462437b89a1e85e619dc7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SOFTVERSION__<sp/>&quot;4.7b20131001.59&quot;</highlight></codeline>
+<codeline lineno="42" refid="acs__headers_8h_1aab38659c2fe462437b89a1e85e619dc7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SOFTVERSION__<sp/>&quot;4.8b20131026.60&quot;</highlight></codeline>
 <codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DEBUG<sp/>LEVELS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
@@ -813,43 +846,48 @@
 <codeline lineno="71" refid="acs__headers_8h_1a840f787adb443d5d9492b18d3180c233" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENDO_CONDENSATION<sp/>7</highlight></codeline>
 <codeline lineno="72" refid="acs__headers_8h_1a1f0638306dc456453be7d6be35c3f617" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENDO_COMPLEXFORMATION<sp/>8</highlight></codeline>
 <codeline lineno="73" refid="acs__headers_8h_1a66f3205fa4a725d70d3ea246fed2336a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENERGYEFFLUX<sp/>9</highlight></codeline>
-<codeline lineno="74"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SOLUBILITY</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="acs__headers_8h_1a248fc87e714b5d729453d11fbeec8310" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SOLUBLE<sp/>1</highlight></codeline>
-<codeline lineno="77" refid="acs__headers_8h_1af270dce996bbfb82cc5d337af5b980e5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PRECIPITATED<sp/>0</highlight></codeline>
-<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ENERGY</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="acs__headers_8h_1ac23ad60cb24df0616d58202351b11e60" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESOERGONIC<sp/>1</highlight></codeline>
-<codeline lineno="81" refid="acs__headers_8h_1a83346194720cacc0144e87246d23081b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENDOERGONIC<sp/>0</highlight></codeline>
-<codeline lineno="82" refid="acs__headers_8h_1a9c2a0137e4b97849150ab0842da3064c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CLEAVAGEBASED<sp/>1</highlight></codeline>
-<codeline lineno="83" refid="acs__headers_8h_1ad722fbaf2330838fb9522c028141de6c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CONDENSATIONBASED<sp/>0</highlight></codeline>
-<codeline lineno="84" refid="acs__headers_8h_1aca2c6e3c97c1e9728693b5c3c8c7f229" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENERGYBASED<sp/>1</highlight></codeline>
-<codeline lineno="85" refid="acs__headers_8h_1a3efd65798c1856deacf187790b3f9ef5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENERGYFREE<sp/>0</highlight></codeline>
-<codeline lineno="86" refid="acs__headers_8h_1a903e07285c96e6fbb9aa3577ddd1f327" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRUENRG<sp/>&apos;1&apos;</highlight></codeline>
-<codeline lineno="87" refid="acs__headers_8h_1ada187b73f4b4a504680ead4f86785021" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FALSENRG<sp/>&apos;0&apos;</highlight></codeline>
-<codeline lineno="88" refid="acs__headers_8h_1a2ce381beee4efd263052e93f9cbbfc77" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENERGIZABLE<sp/>1</highlight></codeline>
-<codeline lineno="89" refid="acs__headers_8h_1a04e076b71093a6dc76f99298d9cfeb9e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NOTENERGIZABLE<sp/>0</highlight></codeline>
-<codeline lineno="90"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="91" refid="acs__headers_8h_1a5a83a3ca25e31afb2d58aa40c8b1fbbb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUBSTRATELOAD<sp/>0</highlight></codeline>
-<codeline lineno="92" refid="acs__headers_8h_1a7e521c899f69e37df3501fd0e652c517" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CATALYSTLOAD<sp/>1</highlight></codeline>
-<codeline lineno="93" refid="acs__headers_8h_1afb6d1105a81463fbadceff0217332f68" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BOTHLOAD<sp/>2</highlight></codeline>
-<codeline lineno="94" refid="acs__headers_8h_1a7eb138e043eb9ec6d717c6178724bbaf" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COMPLEXLOAD<sp/>3</highlight></codeline>
-<codeline lineno="95" refid="acs__headers_8h_1a15e77522039bb4bb52000b65773c83cf" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NOTHINGLOAD<sp/>4</highlight></codeline>
-<codeline lineno="96"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//<sp/>REACTION<sp/>CREATION<sp/>TYPE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="98" refid="acs__headers_8h_1afb2a947dfb1847f71649f82bc1bf0292" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NEWREACTIONS<sp/>1</highlight></codeline>
-<codeline lineno="99" refid="acs__headers_8h_1a5119e853077046684673dad15af9199f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UPGRADEREACTIONS<sp/>0</highlight></codeline>
-<codeline lineno="100"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPECIAL<sp/>NUMBERS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102" refid="acs__headers_8h_1a029d801cdb598a397cb99ea968a64dc2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NEP<sp/>2.7182818284590452353602874</highlight></codeline>
-<codeline lineno="103" refid="acs__headers_8h_1a174754c04acfba9e1f66ba249e68643a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AVO<sp/>6.02214179e+23</highlight></codeline>
-<codeline lineno="104"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MINIMAL<sp/>MULTIPLICATOR<sp/>FOR<sp/>MINIMAL<sp/>REACTION<sp/>TIME</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="106" refid="acs__headers_8h_1aa7d0d45ef785688de1c634290ceb02e7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MINIMALRCTTIMEMULTI<sp/>100</highlight></codeline>
-<codeline lineno="107"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="74" refid="acs__headers_8h_1a9248f5baf3277731d21513c01ab14ba2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SPONTANEOUS_CONDENSATION<sp/>10</highlight></codeline>
+<codeline lineno="75" refid="acs__headers_8h_1adb07a512ddff058539c565dc597f8925" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SPONTANEOUS_CLEAVAGE<sp/>11</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SOLUBILITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="acs__headers_8h_1a248fc87e714b5d729453d11fbeec8310" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SOLUBLE<sp/>1</highlight></codeline>
+<codeline lineno="79" refid="acs__headers_8h_1af270dce996bbfb82cc5d337af5b980e5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PRECIPITATED<sp/>0</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ENERGY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="acs__headers_8h_1ac23ad60cb24df0616d58202351b11e60" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESOERGONIC<sp/>1</highlight></codeline>
+<codeline lineno="83" refid="acs__headers_8h_1a83346194720cacc0144e87246d23081b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENDOERGONIC<sp/>0</highlight></codeline>
+<codeline lineno="84" refid="acs__headers_8h_1a9c2a0137e4b97849150ab0842da3064c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CLEAVAGEBASED<sp/>1</highlight></codeline>
+<codeline lineno="85" refid="acs__headers_8h_1ad722fbaf2330838fb9522c028141de6c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CONDENSATIONBASED<sp/>0</highlight></codeline>
+<codeline lineno="86" refid="acs__headers_8h_1aca2c6e3c97c1e9728693b5c3c8c7f229" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENERGYBASED<sp/>1</highlight></codeline>
+<codeline lineno="87" refid="acs__headers_8h_1a3efd65798c1856deacf187790b3f9ef5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENERGYFREE<sp/>0</highlight></codeline>
+<codeline lineno="88" refid="acs__headers_8h_1a903e07285c96e6fbb9aa3577ddd1f327" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRUENRG<sp/>&apos;1&apos;</highlight></codeline>
+<codeline lineno="89" refid="acs__headers_8h_1ada187b73f4b4a504680ead4f86785021" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FALSENRG<sp/>&apos;0&apos;</highlight></codeline>
+<codeline lineno="90" refid="acs__headers_8h_1a2ce381beee4efd263052e93f9cbbfc77" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENERGIZABLE<sp/>1</highlight></codeline>
+<codeline lineno="91" refid="acs__headers_8h_1a04e076b71093a6dc76f99298d9cfeb9e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NOTENERGIZABLE<sp/>0</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="acs__headers_8h_1a5a83a3ca25e31afb2d58aa40c8b1fbbb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUBSTRATELOAD<sp/>0</highlight></codeline>
+<codeline lineno="94" refid="acs__headers_8h_1a7e521c899f69e37df3501fd0e652c517" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CATALYSTLOAD<sp/>1</highlight></codeline>
+<codeline lineno="95" refid="acs__headers_8h_1afb6d1105a81463fbadceff0217332f68" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BOTHLOAD<sp/>2</highlight></codeline>
+<codeline lineno="96" refid="acs__headers_8h_1a7eb138e043eb9ec6d717c6178724bbaf" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COMPLEXLOAD<sp/>3</highlight></codeline>
+<codeline lineno="97" refid="acs__headers_8h_1a15e77522039bb4bb52000b65773c83cf" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NOTHINGLOAD<sp/>4</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>REACTION<sp/>CREATION<sp/>TYPE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="acs__headers_8h_1afb2a947dfb1847f71649f82bc1bf0292" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NEWREACTIONS<sp/>1</highlight></codeline>
+<codeline lineno="101" refid="acs__headers_8h_1a5119e853077046684673dad15af9199f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>UPGRADEREACTIONS<sp/>0</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//<sp/>REATIONS<sp/>MISC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="acs__headers_8h_1a9ea25e0eb039e29accaed6cb99632deb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NOSPONTANEOUS<sp/>0</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPECIAL<sp/>NUMBERS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="acs__headers_8h_1a029d801cdb598a397cb99ea968a64dc2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NEP<sp/>2.7182818284590452353602874</highlight></codeline>
+<codeline lineno="108" refid="acs__headers_8h_1a174754c04acfba9e1f66ba249e68643a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AVO<sp/>6.02214179e+23</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MINIMAL<sp/>MULTIPLICATOR<sp/>FOR<sp/>MINIMAL<sp/>REACTION<sp/>TIME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="acs__headers_8h_1aa7d0d45ef785688de1c634290ceb02e7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MINIMALRCTTIMEMULTI<sp/>100</highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h"/>
   </compounddef>

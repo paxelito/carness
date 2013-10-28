@@ -18,7 +18,7 @@ var searchData=
   ['rctparfilenum',['rctParFileNum',['../namespacebuffered_flux_analysis.html#aa203d8968b82cc631fffe3da7c46ddfd',1,'bufferedFluxAnalysis']]],
   ['reaction',['reaction',['../namespacebuffered_flux_analysis.html#ae2f3c773b4d02cc6548fa0199cd93d81',1,'bufferedFluxAnalysis.reaction()'],['../general_concentration_over_threshold_8m.html#a4ba2ecb46f808729569ecce2cc1d34c6',1,'reaction():&#160;generalConcentrationOverThreshold.m']]],
   ['reactionprobability',['reactionProbability',['../crea__catalizzatori_8m.html#aa1e3cee6a6b640a872d1e454e8fb0c98',1,'reactionProbability():&#160;crea_catalizzatori.m'],['../lancia__inizializzatore__acs_8m.html#a9101beaeb03fddb5c6a9e68442177543',1,'reactionProbability():&#160;lancia_inizializzatore_acs.m'],['../start_8m.html#a9101beaeb03fddb5c6a9e68442177543',1,'reactionProbability():&#160;start.m']]],
-  ['reactions',['reactions',['../classreactions.html',1,'reactions'],['../classreactions.html#a496de9cbc128b98213ded20b936752c2',1,'reactions::reactions()']]],
+  ['reactions',['reactions',['../classreactions.html',1,'reactions'],['../classreactions.html#a0b6ca1c86d79bb511f116d86714f74a6',1,'reactions::reactions()']]],
   ['reactions_2ecpp',['reactions.cpp',['../reactions_8cpp.html',1,'']]],
   ['reactions_2ed',['reactions.d',['../reactions_8d.html',1,'']]],
   ['reactions_2eh',['reactions.h',['../reactions_8h.html',1,'']]],
@@ -62,7 +62,6 @@ var searchData=
   ['rline',['rline',['../general_concentration_over_threshold_8m.html#a81318310a01613185f6a3e6183230bd0',1,'rline():&#160;generalConcentrationOverThreshold.m'],['../general_concentration_over_threshold_8m.html#ab5b947e1a8b7cf496ffd4eb21317052e',1,'rline(end):&#160;generalConcentrationOverThreshold.m']]],
   ['rlineb',['rlineb',['../general_concentration_over_threshold_8m.html#a8df79027fd85d4a3668754f36e9e88c1',1,'generalConcentrationOverThreshold.m']]],
   ['rlineid',['rlineID',['../general_concentration_over_threshold_8m.html#a8443a49765859a8631fed7e8a1d27fe5',1,'generalConcentrationOverThreshold.m']]],
-  ['round',['round',['../common_functions_8cpp.html#aaaa7233fe68b91b6333e2729a2d619a1',1,'round(acs_double tmpX):&#160;commonFunctions.cpp'],['../common_functions_8h.html#aaaa7233fe68b91b6333e2729a2d619a1',1,'round(acs_double tmpX):&#160;commonFunctions.cpp']]],
   ['rtime',['rtime',['../namespacebuffered_flux_analysis.html#a3a242047ff630fce5bc0c36591a9b22b',1,'bufferedFluxAnalysis.rtime()'],['../general_concentration_over_threshold_8m.html#afc6b38657a313b9f1de2ee356910b6ee',1,'rtime():&#160;generalConcentrationOverThreshold.m']]],
   ['running_5fversion',['RUNNING_VERSION',['../acs__headers_8h.html#a72244054b9e2e45fe85cbef84bd42904',1,'acs_headers.h']]],
   ['rvalues',['rValues',['../garbage_search_8m.html#a436a6968124e560649654a4abbd9dac6',1,'rValues():&#160;garbageSearch.m'],['../_kill_spam_8m.html#a436a6968124e560649654a4abbd9dac6',1,'rValues():&#160;KillSpam.m'],['../_k_s_search_8m.html#a436a6968124e560649654a4abbd9dac6',1,'rValues():&#160;KSSearch.m']]]

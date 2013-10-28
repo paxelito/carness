@@ -2738,7 +2738,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 						if(temp_mol_I == 100 && temp_mol_II == 2)
 						{
 							cout << "**************************" << endl
-								<< speciesIter->getCatalysisIfCpxID(listCondSecStep) << " " << tempIdCatalysis << " " << temp_reactionID << " "
+								<< speciesIter->getCatalysisIfCpxID(listCondSecStep) << " " << temp_catalysisID << " " << temp_reactionID << " "
 								<< allReactions.at(temp_reactionID).getSpecies_I()
 								<< " " << allReactions.at(temp_reactionID).getSpecies_II()
 								<< " " << allReactions.at(temp_reactionID).getSpecies_III()
@@ -2955,14 +2955,32 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 				temp_mol_I = reactionsIter->getSpecies_I(); // Mol_I
 				temp_mol_II = reactionsIter->getSpecies_II(); // Mol_II
 				temp_mol_III = reactionsIter->getSpecies_III(); // Mol_III
+				temp_mol_IV = 0; // To NOT confuse with species ID
+				temp_catalysisID = 0; // To NOT confuse with catalysis 0, no catalysis are involved in this process.
 				temp_reactionID = reactionsIter->getID(); // reaction ID
 				temp_rctType = reactionsIter->getType();; // reaction type
+				if((temp_rctType == CLEAVAGE) || (temp_rctType == ENDO_CLEAVAGE))
+				{
+					acs_double tempScore = allSpecies.at(temp_mol_I).getAmount() * reactionsIter->getKspont(); // uni-molecular reaction score in case of cleavage
+					if(debugLevel >= MEDIUM_DEBUG) cout << "\t\t\t|- SPONTANEOUS DISSOCIATION: " << tempScore << endl;
+					if(tempScore > 0)
+						allGillespieScores.push_back(gillespie((acs_longInt)allGillespieScores.size(), SPONTANEOUS_CLEAVAGE,tempScore,
+													 temp_mol_I, temp_mol_II, temp_mol_III,temp_mol_IV, temp_reactionID, temp_catalysisID));
+						gillespieTotalScore += tempScore;
+						gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
+						// In the case of cleavage molII and molIII are products, if they are not evaluated yet, hence probability of new species increases
+						if((allSpecies.at(temp_mol_II).getEvaluated() == 0) || (allSpecies.at(temp_mol_III).getEvaluated() == 0)) gillespieNewSpeciesScore += tempScore;
 
+				}else{ // Spontaneous condensation is a bi-molecolar reaction
+					if(debugLevel >= MEDIUM_DEBUG) cout << "\t\t\t|- SPONTANEOUS CONDENSATION" << endl;
+					if(checkAvailability(temp_mol_II, temp_mol_III, allSpecies.at(temp_mol_II).getAmount(), allSpecies.at(temp_mol_III).getAmount()))
+						performSingleGilleSpieIntroduction(allSpecies.at(temp_mol_II).getAmount(), allSpecies.at(temp_mol_III).getAmount(),
+														   temp_mol_II, temp_mol_III, tempIdCatalysis, SPONTANEOUS_CONDENSATION,
+														   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
+				}
 			}
 		}
-	}
-
-
+	} // end IF SPONTANEOUS REACTIONS ARE TURNED ON, ALL REACTIONS MUST BE EVALUATED
 
 
     // Store gillespie computational time and start performReaction Times
@@ -3162,9 +3180,9 @@ acs_double environment::computeSinglGilScore(acs_longInt tmpAmountI, acs_double 
  @version 1.0
  @date 20110222
  */
-void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs_longInt tmpAmountII, acs_longInt tmpIDI, acs_longInt tmpIDII, acs_longInt tmpIDCatalysis, acs_int tmp__rctType,
-                                                        acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III, acs_longInt tmpMol_IV, acs_int tmp_NRGDirection, acs_longInt tmpRctID,
-                                                        bool tmpSameSpeciesControl)
+void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs_longInt tmpAmountII, acs_longInt tmpIDI, acs_longInt tmpIDII, acs_longInt tmpIDCatalysis,
+													 acs_int tmp__rctType, acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III, acs_longInt tmpMol_IV,
+													 acs_int tmp_NRGDirection, acs_longInt tmpRctID, bool tmpSameSpeciesControl)
 {
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performSingleGilleSpieIntroduction start" << endl;
     bool temp_sameSpecies = false;
@@ -3177,23 +3195,28 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
             switch(tmp__rctType)
             {
                 case CONDENSATION:
-                        temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKass();
-                        break;
+					temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKass();
+					break;
                 case ENDO_CONDENSATION:
-                        temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKass();
-                        break;
+					temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKass();
+					break;
                 case CLEAVAGE:
-                        temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKdiss();
-                        break;
+					temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKdiss();
+					break;
                 case ENDO_CLEAVAGE:
-                        temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKdiss();
-                        break;
+					temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKdiss();
+					break;
                 case COMPLEXFORMATION:
-                        temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getK_cpx();
-                        break;
+					temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getK_cpx();
+					break;
                 case ENDO_COMPLEXFORMATION:
-                        temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getK_cpx();
-                        break;
+                    temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getK_cpx();
+					break;
+                case SPONTANEOUS_CONDENSATION:
+                	temp_k_reaction = allReactions.at(tmpRctID).getKspont();
+                	break;
+                case SPONTANEOUS_CLEAVAGE:
+                	temp_k_reaction = allReactions.at(tmpRctID).getKspont();
             }
             if(tmpSameSpeciesControl)
             {
@@ -3257,12 +3280,12 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
 				gillespieTotalScore += temp_score;
 				gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
 				// If the theoretical product is not evaluated gillespieNewSpeciesScore is incremented
-				if((tmp__rctType == CONDENSATION) || (tmp__rctType == ENDO_CONDENSATION))
+				if((tmp__rctType == CONDENSATION) || (tmp__rctType == ENDO_CONDENSATION) || (tmp__rctType == SPONTANEOUS_CONDENSATION))
 				{
-					// IN the case of condensation molIII is the product, in the reaction structure molIII is a substrate but this subroutine is the product, mol_I is che complex and mol_II is the second substrate
+					// IN the case of condensation molIII is the product, in the reaction structure molIII is a substrate but this subroutine is the product, mol_I is the complex and mol_II is the second substrate
 					if(allSpecies.at(tmpMol_III).getEvaluated() == 0)
 						gillespieNewSpeciesScore += temp_score;
-				}else if((tmp__rctType == CLEAVAGE) || (tmp__rctType == ENDO_CLEAVAGE))
+				}else if((tmp__rctType == CLEAVAGE) || (tmp__rctType == ENDO_CLEAVAGE) || (tmp__rctType == SPONTANEOUS_CLEAVAGE))
 				{
 					// In the case of cleavage molII and molIII are products
 					if((allSpecies.at(tmpMol_II).getEvaluated() == 0) || (allSpecies.at(tmpMol_III).getEvaluated() == 0))
@@ -3536,7 +3559,7 @@ bool environment::performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double
 //		ExitWithError("performRefill", "ERROR: The max refill lenght is longer than the initial max length");
 //		refillFlag = false;
 //	}
-	acs_int numberOfMolsToRefill = round(tmpTimeSinceTheLastInFlux/tmpMinimalTimeForOneMols);
+	acs_int numberOfMolsToRefill = acsround(tmpTimeSinceTheLastInFlux/tmpMinimalTimeForOneMols);
 	if(debugLevel >= SMALL_DEBUG ||  numberOfMolsToRefill > 1000)
 	{
 		cout << "\t\t\t\t|- Number of molecules to refill: " << numberOfMolsToRefill << " DT: " << tmpTimeSinceTheLastInFlux << " T: " << tmpMinimalTimeForOneMols << endl;

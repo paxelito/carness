@@ -23,7 +23,7 @@ acs_longInt getIntRandom(acs_longInt tmpFromNum, acs_longInt tmpToNum, MTRand& t
 acs_double getDoubleRandom(acs_double tmpFromNum, acs_double tmpToNum, MTRand& tmpRandomGenerator);
 acs_longInt random_poisson(acs_double tmpLambda, MTRand& tmpRandomGenerator);
 acs_longInt random_binomial(acs_longInt n, acs_double tmpP, MTRand& tmpRandomGenerator);
-acs_double round(acs_double tmpX);
+acs_double acsround(acs_double tmpX);
 string dec2bin(acs_int tmpInt);
 vector<string> split(string str,const char* delim);
 bool ExitWithError(string strFunctionName, string strError);

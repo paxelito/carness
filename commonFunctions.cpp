@@ -226,7 +226,7 @@ acs_longInt random_binomial(acs_longInt n, acs_double tmpP, MTRand& tmpRandomGen
 /**
  Function to round double numbers in integers 
 */
-acs_double round(acs_double tmpX)
+acs_double acsround(acs_double tmpX)
 {
 	// integer part
 	acs_int integerPart = (acs_int)tmpX;
