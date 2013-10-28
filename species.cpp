@@ -312,7 +312,7 @@ void species::increment(acs_double tmpVolume)
  */
 void species::decrement(acs_double tmpVolume)
 {
-    if(!concentrationFixed)
+   if(!concentrationFixed)
    {
        amount--;
        numToConc(tmpVolume);

@@ -4974,7 +4974,7 @@ bool environment::performCleavage(acs_longInt tmpSubstrate, acs_longInt tmpProdu
 		}
 		if(avalability)
 		{
-                        allSpecies.at(tmpSubstrate).decrement(volume);
+            allSpecies.at(tmpSubstrate).decrement(volume);
             if(!allSpecies.at(tmpSubstrate).getConcentrationFixed())
                 decMolSpeciesProcedure(tmpSubstrate); // Update overall number of species and molecules
 			reactionFlag = true;
@@ -5517,6 +5517,78 @@ bool environment::performSpontaneousCleavage(acs_longInt tmpReaction, MTRand& tm
 	incCleavageCounter();
 	return reactionFlag;
 }
+
+/**
+ Perform SPONTANEOUS CONDENSATION reaction
+ @version 1.0
+ @date 2013-10-28
+ @param acs_longInt tmpReaction Reaction ID
+ @param MTRand& tmp__RndDoubleGen random generator
+ */
+bool environment::performSpontaneousCondensation(acs_longInt tmpReaction, MTRand& tmp__RndDoubleGen)
+{
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performCondensation start" << endl;
+
+	bool reactionFlag = false;
+	acs_longInt tmpSub_I = allReactions.at(tmpReaction).getSpecies_II();
+	acs_longInt tmpSub_II = allReactions.at(tmpReaction).getSpecies_III();
+	acs_longInt tmpProduct = allReactions.at(tmpReaction).getSpecies_I();
+	acs_longInt tmpSub_I_Amount;
+	acs_longInt tmpSub_II_Amount;
+
+    try{
+		if(nrgBoolFlag == ENERGYBASED)
+		{
+			tmpSub_I_Amount = allSpecies.at(tmpSub_I).getNOTchargeMols();
+			tmpSub_II_Amount = allSpecies.at(tmpSub_II).getNOTchargeMols();
+		}else {
+			tmpSub_I_Amount = allSpecies.at(tmpSub_I).getAmount();
+			tmpSub_II_Amount = allSpecies.at(tmpSub_II).getAmount();
+		}
+    }catch(exception&e){
+		cout<<"tmpSub_I_Amount = allSpecies.at(tmpSub_I).getNOTchargeMols(); " << endl;
+		cerr << "exceptioncaught:" << e.what() << endl;
+		ExitWithError("","exceptionerrorthrown");
+    }
+
+
+	// check whether all the species amounts to decrement are greater than 1
+	if(tmpSub_I_Amount == 0)
+		ExitWithError("performSpontaneousCondensation", "Substrate not Avalaible!!!");
+	if(tmpSub_II_Amount == 0)
+		ExitWithError("performSpontaneousCondensation", "Complex not Avalaible!!!");
+
+	// The substrate and the complex are consumed (the first substrate has been already decremented during the complex formation reaction
+	if ((tmpSub_I_Amount > 0) && (tmpSub_II_Amount > 0))
+	{
+		// REACTION!!!
+
+        allSpecies.at(tmpSub_I).decrement(volume);
+        if(!allSpecies.at(tmpSub_I).getConcentrationFixed())
+            decMolSpeciesProcedure(tmpSub_I); // decrement total number of molecules and, if so, species
+
+        allSpecies.at(tmpSub_II).decrement(volume);
+        if(!allSpecies.at(tmpSub_II).getConcentrationFixed())
+            decCpxProcedure(tmpSub_II); // decrement total number of complexes token and, if so, types
+
+        reactionFlag = true;
+
+	}else{
+		ExitWithError("performSpontaneousCondensation", "Complex or second substrate are not avalaible");
+	}
+	// Update Reactions structure with a secure check on ID reaction
+    allReactions.at(tmpReaction).updateTotEvents();
+
+	// EVALUATE PRODUCT
+	if(!newSpeciesEvaluationIII(tmpProduct, tmp__RndDoubleGen))
+		ExitWithError("newSpeciesEvaluationIII", "Problems during the new species evalutation");
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performCondensation end" << endl;
+
+	// Update reaction counter
+	incCondensationCounter();
+	return reactionFlag;
+}
+
 
 //TR
 /*
