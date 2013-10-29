@@ -15,10 +15,6 @@ ehthumbs.db
 Icon?
 Thumbs.db
 /Release/
-/Debug
-
+/Debug/
 .cproject
-
-.project
-
 .project
