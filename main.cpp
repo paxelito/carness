@@ -536,6 +536,8 @@ int main (int argc, char *argv[]) {
                                                     << " - Endo Cond: " << puddle->getEndoCondensationCounter() << endl
                                                     << "\t\t|- Cleav: " << puddle->getCleavageCounter()
                                                     << " - Endo Cleav: " << puddle->getEndoCleavageCounter() << endl
+                                                    << "\t\t|- Spont Cleav: " << puddle->getSpontDissCounter()
+                                                    << " - Spont Cond: "<< puddle->getSpontAssCounter() << endl
                                                 	<< "\t\t|- Cpx: " << puddle->getCpxFormCounter()
                                                 	<< " - Cpx Diss: " << puddle->getCpxDissCounter() << endl;
                                         }

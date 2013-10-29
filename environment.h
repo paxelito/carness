@@ -54,6 +54,8 @@ private:
     acs_longInt endoCondensationCounter;   // Number of endoergonic condensation counter
     acs_longInt cpxFormCounter;	   // Complex formation Counter
     acs_longInt cpxDissCounter;		// Complex dissociation counter
+    acs_longInt spontDissCounter; // Spontaneous dissociations counter
+    acs_longInt spontAssCounter; // Spontaneous Associations counter
     int overallLoadedMolsCounter;  // Total number of loaded molecules
     acs_double internalTimesStoredCounter; // Time interval to save certain structures
     acs_int lastEvaluatedSpeceisForNewReactions; // Last species evaluated for new reactions, in such a way once that a species has been evaluated to be involved in new reactions
@@ -76,7 +78,6 @@ private:
     acs_double moleculeDecay_KineticConstant;
 
     // SYSTEM PARAMETERS --------------------------
-
     acs_int energy; // Energy control variable
     acs_double ratioSpeciesEnergizable; // Proabability for a species to be energizable.
     acs_int nrgBoolFlag; // variable indicating the presence (1) or not (0) of the energy
@@ -89,7 +90,7 @@ private:
     bool volumeGrowth; // Boolean variable defining the possibility for the volume to change
     bool stochDivision; // Boolean Variable defining the division process (stochastic or deterministic)
     acs_double randomSeed; //Random seed of the simulation
-    acs_double totalPossibleNumberOfSpecies; // Overall number of species in the firing disk. According to this parameters the initial set of molecules is set
+    //TR acs_double totalPossibleNumberOfSpecies; // Overall number of species in the firing disk. According to this parameters the initial set of molecules is set
     vector<species> allSpecies; // List containing all the species
     vector<species> firingDisk; // Species present in the firing disk
     vector<acs_int> nutrientsForInflux; // Create an influx species IDs list
@@ -116,7 +117,7 @@ private:
     vector<acs_double> nrgBoolFncsProb2BeSelected; // create a Boolean functions parallel list containing the probability for a Bool fnc to be selected
 	
     // SUPPORT VARIABLES ----------------------------
-	acs_double decimalCarrierToLoad; // Decimal part of carrier to load in the next reaction
+	//TR acs_double decimalCarrierToLoad; // Decimal part of carrier to load in the next reaction
 	acs_double decimalMoleculesToEfflux; // Decimal part of molecule to efflux in the next reaction
 	acs_double decimalMoleculesToLoad; // Decimal part of molecules to load in the next reaction
 	acs_double decimalMoleculesToUNLOAD; // Decimal part of molecules to unload because of the energy decay 
@@ -228,6 +229,8 @@ private:
 	acs_longInt getCpxFormCounter()const{return cpxFormCounter;}
 	acs_longInt getCpxDissCounter()const{return cpxDissCounter;}
 	acs_longInt getOverallLoadedMolsCounter()const{return overallLoadedMolsCounter;}
+	acs_longInt getSpontDissCounter()const{return spontDissCounter;}
+	acs_longInt getSpontAssCounter()const{return spontAssCounter;}
 	acs_int getTotNumberOfChargedMols();
 
 	// PROMPT FUNCTIONS
@@ -305,6 +308,8 @@ private:
 	void incCpxDissCounter(){cpxDissCounter++;}
 	void incOverallLoadedMolsCounter(){overallLoadedMolsCounter++;}
 	void decOverallLoadedMolsCounter(){overallLoadedMolsCounter--;}
+	void incSpontDissCounter(){spontDissCounter++;}
+	void incSpontAssCounter(){spontAssCounter++;}
 
 	void resetCleavageCounter(){cleavageCounter = 0;}
 	void resetEndoCleavageCounter(){endoCleavageCounter = 0;}
@@ -313,10 +318,12 @@ private:
 	void resetOverallLoadedMolsCounter(){overallLoadedMolsCounter = 0;}
 	void resetCpxFormCounter(){cpxFormCounter = 0;}
 	void resetCpxDissCounter(){cpxDissCounter = 0;}
+	void resetSpontDissCounter(){spontDissCounter = 0;}
+	void resetSpontAssCounter(){spontAssCounter = 0;}
 
 	void resetReactionsCounter(){resetCleavageCounter(); resetEndoCleavageCounter();
 		resetCondensationCounter(); resetEndoCondensationCounter(); resetOverallLoadedMolsCounter();
-		resetCpxFormCounter(); resetCpxDissCounter();}
+		resetCpxFormCounter(); resetCpxDissCounter(); resetSpontDissCounter(); resetSpontAssCounter();}
 
 	bool addChargeMolToList(acs_int tmpSpeciesID);
 	bool removeChargeMolFromList(acs_int tmpSpeciesID);
