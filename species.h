@@ -40,6 +40,7 @@ private:
     vector<acs_longInt> secondSubstrates;/**< If the species in a complex this is a list of the second substrates with which perform the final condensation*/
     vector<acs_longInt> catalysisIfCpx; /**< Catalysis ID list if complex*/
     vector<acs_double> kCond;			/**< List parallel to secondSubstrates, contain a copy of the k condensation*/
+    vector<acs_longInt> gillespieEngagement; /**< List containing the Gillespie's ID in which the species is involved */
 	
 public:
 	//!< New species constructor (IN AMOUNT)
@@ -140,6 +141,8 @@ public:
     void resetToInitConc(acs_double tmpVolume){concentration=firstConcentration; concToNum(tmpVolume);}
     void setLastSpeciesEvaluated(acs_int tmpID){lastSpeciesEvaluated = tmpID;}
     void insertSecSub(acs_longInt tmpID, acs_double tmpK, acs_longInt tmpCat);
+    void insertGillID(acs_longInt tmpID){gillespieEngagement.push_back(tmpID);}
+    acs_longInt getGillIDpos(acs_longInt tmpID)const{return gillespieEngagement.at(tmpID);}
 };
 
 #endif

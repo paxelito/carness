@@ -13,9 +13,8 @@
 #include "acs_headers.h"
 
 //FUNCTIONS
-int returnSelectionIdFromAWeightProbVector(acs_double *tmpArray, MTRand& tmpRandomGenerator);
-
-acs_longInt returnSelectionIdFromAWeightProbVector(vector<acs_double>& tmpVector, acs_double tmpMaxValue, MTRand& tmpRandomGenerator);
+acs_longInt returnSelectionIdFromAWeightProbVector(acs_double *tmpArray, MTRand& tmpRandomGenerator, acs_int tmpRow = 0);
+acs_longInt returnSelectionIdFromAWeightProbVector(vector<acs_double>& tmpVector, acs_double tmpMaxValue, MTRand& tmpRandomGenerator, acs_int tmpRow = 0);
 acs_longInt returnSelectionIdFromAWeightProbVectorAlreadyNormalized(vector<acs_double>& tmpVector, MTRand& tmpRandomGenerator);
 acs_longInt returnUniformSelection_LONG_IdFromVector(vector<acs_longInt>& tmpVector, MTRand& tmpRandomGenerator);
 

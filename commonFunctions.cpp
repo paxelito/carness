@@ -12,7 +12,7 @@
 #include "commonFunctions.h"
 
 /// This funtion returns a random position in a probability weight array of N elements
-int returnSelectionIdFromAWeightProbVector(acs_double *tmpArray, MTRand& tmpRandomGenerator)
+acs_longInt returnSelectionIdFromAWeightProbVector(acs_double *tmpArray, MTRand& tmpRandomGenerator, acs_int tmpRow)
 {
         // tmpArray is not a vector. Access is made by []
 	acs_double pnt = tmpRandomGenerator();
@@ -37,7 +37,7 @@ int returnSelectionIdFromAWeightProbVector(acs_double *tmpArray, MTRand& tmpRand
  @param acs_double MAX VALUE contained within the QList (being a cumulative list this is the last value)
  @param MTRand& tmpRandomGenerator
  */
-acs_longInt returnSelectionIdFromAWeightProbVector(vector<acs_double>& tmpVector, acs_double tmpMaxValue, MTRand& tmpRandomGenerator)
+acs_longInt returnSelectionIdFromAWeightProbVector(vector<acs_double>& tmpVector, acs_double tmpMaxValue, MTRand& tmpRandomGenerator, acs_int tmpRow)
 {
 
     acs_double pnt = tmpRandomGenerator();
@@ -53,8 +53,8 @@ acs_longInt returnSelectionIdFromAWeightProbVector(vector<acs_double>& tmpVector
             }
         }catch(exception& e)
         {
-            cout << "Error in returnSelectionIdFromAWeightProbVector tmpVector.at(position)..." << endl;
-            cout << "Vector size" << tmpVector.size() << " - position" << position << endl;
+            cout << "Error in returnSelectionIdFromAWeightProbVector tmpVector.at(position)...used in row " << tmpRow << endl;
+            cout << "Vector size " << tmpVector.size() << " - position " << position << endl;
             cerr << "exception caught: " << e.what() << endl;
             ExitWithError("returnSelectionIdFromAWeightProbVector","exception error thrown");
         }

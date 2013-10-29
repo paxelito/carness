@@ -19,6 +19,7 @@
  * interacting molecular species. 
  * The model takes inspiration from the original model proposed by Stuart Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case.
  * Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction.
+ * Since the version 4.8 (20131026.60) spontaneous reactions are considered too.
  * It is important to notice that there are not indications about the chemical nature of the molecules,
  * species "A" may be both a polipeptide, an amminoacid, a particular protein domain or an RNA strenght.<br><br>
  *\section secUsage Using the simulator
@@ -414,14 +415,11 @@ int main (int argc, char *argv[]) {
 	
 	// - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - 
 	
-        //TR if(!puddle->getOnlyEnvironmentCreation()) // old simulator, the previous versions contained also the system creation
-	//TR {
-	
-                /*------------\
-                 |            |
-                 | SIMULATION |
-                 |            |
-                 \ ----------*/
+		/*------------\
+		 |            |
+		 | SIMULATION |
+		 |            |
+		 \ ----------*/
 		
 		//STORE INITIAL STRUCTURES DATA IN ORDER TO REINITIALIZE THE STRUCTURE AFTER EACH SIMULATION
 		puddle->storeInitialStructures();
@@ -486,13 +484,12 @@ int main (int argc, char *argv[]) {
                         // SECONDS / REACTIONS PER SIMULATION
                         // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 
-
                         while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions())	)
                         {
                             // IF NUMBER OF MILLISECONDS IS LESS THAN THE MAX NUMBER
                             if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
                             {
-                                //GILLESPIE COMPUTATION
+                                //GILLESPIE COMPUTATION (CORE OF THE SOFTWARE)
                                 if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
                                         ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
 

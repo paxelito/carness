@@ -40,7 +40,7 @@ private:
     acs_double cleavageProbability; // Cleavage probability (when new reactions are created)
     bool reverseReactions; // if true backward reactions are present
     acs_double revRctRatio; // ratio between forward and backward reactions, it is used only in the creation of new reactions (if reverseReactions = TRUE)
-    bool spontRct; // if true spontaneous reactions are present
+    acs_double spontRct; // if true spontaneous reactions are present
     species nrgCarrier; // !!! declare energy carrier, !!! PRESENTLY this is not used... it was used in previous versions !!!
     acs_longInt numberOfMolecules; // Total number of molecules
     acs_longInt numberOfNewMolecules; // Total number of NEW molecules
