@@ -399,3 +399,16 @@ void species::insertSecSub(acs_longInt tmpID, acs_double tmpK, acs_longInt tmpCa
     	catalysisIfCpx.push_back(tmpCat);
     }
 }
+
+/**
+ * Function to show the species gillespie engagement
+ */
+void species::showGillEngagement()
+{
+	cout << "|- SPECIES " << id << " is engaged in Gillespie reactions: ";
+	for(acs_int i = 0; i < gillespieEngagement.size(); i++)
+	{
+		cout << gillespieEngagement.at(i) << "\t";
+	}
+	cout << endl;
+}

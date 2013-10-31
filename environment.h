@@ -369,6 +369,7 @@ private:
     bool checkAvailability(acs_longInt tmpMI, acs_longInt tmpMII, acs_longInt tmpQI, acs_longInt tmpQII);
     void inserSubListInSpecies();
     void showSubListInSpecies();
+    void showGillEngagementInSpecies();
 	
     // SAVE TO FILE FUNCTIONS
 

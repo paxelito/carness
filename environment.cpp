@@ -2515,6 +2515,9 @@ void environment::inserSubListInSpecies()
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::inserSubListInSpecies end" << endl;
 }
 
+/**
+ * Function to show the substrates list of the complex species
+ */
 void environment::showSubListInSpecies()
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::showSubListInSpecies start" << endl;
@@ -2545,6 +2548,26 @@ void environment::showSubListInSpecies()
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::showSubListInSpecies end" << endl;
 }
 
+/**
+ * Function to show the Gillespie engagement of each species.
+ * @version: 1.0
+ * @date: 20131031
+ * @author: Alessandro Filisetti
+ */
+void environment::showGillEngagementInSpecies()
+{
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::showGillEngagementInSpecies start" << endl;
+	if(debugLevel == RUNNING_VERSION)
+	{
+		cout << "|- Gillespie species engagement ..." << endl;
+	}
+
+	for(vector<species>::iterator tmpSpeciesIterator = allSpecies.begin(); tmpSpeciesIterator != allSpecies.end(); tmpSpeciesIterator++)
+	{
+		tmpSpeciesIterator->showGillEngagement();
+	}
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::showGillEngagementInSpecies end" << endl;
+}
 
 /**
  Check if the reaction catalyze both one reaction and the inverted one
@@ -2694,16 +2717,16 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
     gillespiePartialTimer = clock();
 
     acs_longInt complexID;
-    if(tmpActSTEP == 1) // The reaction is now created just in the first reaction
+    if(tmpActSTEP > 0) // The reaction is now created just in the first reaction (once new gill computation is finished condition will be == 1)
     {
     	if(debugLevel == RUNNING_VERSION) cout << "\t\t|- GILLESPIE STRUCTURE CREATION..." << endl;
+
+    	// FOR EACH SPECIES
 		for(vector<species>::iterator speciesIter = allSpecies.begin(); speciesIter != allSpecies.end(); speciesIter++)
 		{
 			complexID = speciesIter->getID();
 
 			sameSpecies = false; // This flag will be true is a second order reaction will involve the same species
-
-		// MID IS THE CATALYST
 
 		// UPDATE SPECIES AGE .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 
@@ -2808,7 +2831,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 			} //end if total amount greater than 0
 		} // end for each species
 
-		 // IF THERE ARE REACTIONS AND CATALYSIS ************************************************************************************
+		// IF THERE ARE CATALYSIS ************************************************************************************
 
 		if((acs_longInt)allCatalysis.size() > 0)
 		{
@@ -2981,6 +3004,8 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 														 temp_mol_I, temp_mol_II, temp_mol_III,temp_mol_IV, temp_reactionID, temp_catalysisID));
 							gillespieTotalScore += tempScore;
 							gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
+							// UPDATE SPECIES GILLESPIE ENGAGEMENT
+							allSpecies.at(temp_mol_I).insertGillID(allGillespieScores.back().getID());
 							// In the case of cleavage molII and molIII are products, if they are not evaluated yet, hence probability of new species increases
 							if((allSpecies.at(temp_mol_II).getEvaluated() == 0) || (allSpecies.at(temp_mol_III).getEvaluated() == 0)) gillespieNewSpeciesScore += tempScore;
 						}
@@ -3158,8 +3183,8 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 
     // COPY and CLEAN OF GILLESPIE STRUCTURES
     COPYOFallGillespieScores = allGillespieScores;
-    //allGillespieScores.clear();
-    //gillespieCumulativeStepScoreList.clear();
+    allGillespieScores.clear();
+    gillespieCumulativeStepScoreList.clear();
 
     // Store remaining processes time
     remainingProcessesPartialTimes.push_back(((float)clock() - remainingProcessesPartialTimer) / CLOCKS_PER_SEC);
@@ -3255,6 +3280,7 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
             temp_score = computeSinglGilScore(tmpAmountI, allSpecies.at(tmpIDI).getDiffusionEnh(), allSpecies.at(tmpIDI).getSolubility(),
                                               tmpAmountII, allSpecies.at(tmpIDII).getDiffusionEnh(), allSpecies.at(tmpIDII).getSolubility(),
                                               temp_k_reaction, temp_sameSpecies);
+
         }catch(exception&e){
             cout << "temp_score = computeSinglGilScore" << endl;
             cout << "Vectorsize "<< allSpecies.size() << " - position " << tmpIDI << endl;
@@ -3300,6 +3326,9 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
 											tmpIDCatalysis));
 				gillespieTotalScore += temp_score;
 				gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
+				// Update single species gillespie engagements list
+	            allSpecies.at(tmpIDI).insertGillID(allGillespieScores.back().getID());
+	            allSpecies.at(tmpIDII).insertGillID(allGillespieScores.back().getID());
 				// If the theoretical product is not evaluated gillespieNewSpeciesScore is incremented
 				if((tmp__rctType == CONDENSATION) || (tmp__rctType == ENDO_CONDENSATION) || (tmp__rctType == SPONTANEOUS_CONDENSATION))
 				{
@@ -6206,7 +6235,7 @@ void environment::printGillespieStructure()
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::printGillespieStructure start" << endl;
 
 	cout << "---- GILLESPIE STRUCTURE ---- (SIZE " << allGillespieScores.size() << ")"<< endl << endl;
-	cout << "ID\tSCORE\t\t\tRCT\tM1\tM2\tM3\tM4\tRCT\tCAT" << endl;
+	cout << "ID\tSCORE\t\tRCT\tM1\tM2\tM3\tM4\tRCT\tCAT" << endl;
 	for(acs_longInt i = 0; i < (acs_longInt)allGillespieScores.size(); i++)
 	{
 		cout << allGillespieScores.at(i).getID() << "\t" <<

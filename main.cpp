@@ -490,8 +490,12 @@ int main (int argc, char *argv[]) {
                             if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
                             {
                                 //GILLESPIE COMPUTATION (CORE OF THE SOFTWARE)
+                            	if(puddle->getDebugLevel() == SMALL_DEBUG)cout << "Step " << actSTEP << endl;
                                 if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
                                         ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
+                                if(puddle->getDebugLevel() == RUNNING_VERSION)
+                                	puddle->showGillEngagementInSpecies();
+                                cin.ignore().get();
 
                                 // DISPLAY SIMULATION CONTROL VARIABLES
                                 if(puddle->getDebugLevel() >= RUNNING_VERSION)
