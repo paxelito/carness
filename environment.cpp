@@ -2719,7 +2719,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
     acs_longInt complexID;
     if(tmpActSTEP > 0) // The reaction is now created just in the first reaction (once new gill computation is finished condition will be == 1)
     {
-    	if(debugLevel == RUNNING_VERSION) cout << "\t\t|- GILLESPIE STRUCTURE CREATION..." << endl;
+    	if(debugLevel == SMALL_DEBUG) cout << "\t\t|- GILLESPIE STRUCTURE CREATION..." << endl;
 
     	// FOR EACH SPECIES
 		for(vector<species>::iterator speciesIter = allSpecies.begin(); speciesIter != allSpecies.end(); speciesIter++)
@@ -3024,7 +3024,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 			if(debugLevel == SMALL_DEBUG) cout << "step " << tmpActSTEP << endl;
 			if(debugLevel == SMALL_DEBUG) printGillespieStructure();
 		} // end IF SPONTANEOUS REACTIONS ARE TURNED ON, ALL REACTIONS MUST BE EVALUATED
-		if(debugLevel == RUNNING_VERSION)
+		if(debugLevel == SMALL_DEBUG)
 		{
 			cout << "\t\t|- GILLESPIE STRUCTURE CREATION ENDED. Number of possible reactions:" << allGillespieScores.size() << endl;
 		}
@@ -3039,7 +3039,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 	acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
 	if((acs_longInt)allGillespieScores.size() > 0)
 	{
-            if(debugLevel == RUNNING_VERSION) printGillespieStructure();
+            if(debugLevel == SMALL_DEBUG) printGillespieStructure();
 
             // SELECT REACTION
             if((acs_longInt)allGillespieScores.size() == 1)
@@ -3215,6 +3215,7 @@ acs_double environment::computeSinglGilScore(acs_longInt tmpAmountI, acs_double 
 		tempScore = tmpAmountI * tmpDifI * tmpSolI * tmpAmountII * tmpDifII * tmpSolII * tmpK / (AVO * volume);
 	}
 	
+	// cia
 	
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::computeSinglGilScore end" << endl;
 	
@@ -4566,7 +4567,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
     cout<<" allGillespieScores.at(reaction_u)" << endl;
     cout << "Vectorsize " <<allGillespieScores.size()<<" - position " << reaction_u << endl;
     cerr << "exceptioncaught:" << e.what() << endl;
-    printGillespieStructure();
+    if(debugLevel >= SMALL_DEBUG) printGillespieStructure();
     ExitWithError("environment::performReaction","exceptionerrorthrown");
     }
 

@@ -493,9 +493,8 @@ int main (int argc, char *argv[]) {
                             	if(puddle->getDebugLevel() == SMALL_DEBUG)cout << "Step " << actSTEP << endl;
                                 if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
                                         ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
-                                if(puddle->getDebugLevel() == RUNNING_VERSION)
+                                if(puddle->getDebugLevel() == SMALL_DEBUG)
                                 	puddle->showGillEngagementInSpecies();
-                                cin.ignore().get();
 
                                 // DISPLAY SIMULATION CONTROL VARIABLES
                                 if(puddle->getDebugLevel() >= RUNNING_VERSION)
