@@ -1,5 +1,5 @@
-function [firing_disk concentrazioni_iniziali specie_def influx catalizzatore reazione specie_non_esistenti matrice_adiacenza_sub_prod matrice_adiacenza_cat_prod] = inizializzatore_ACS(nGEN, nSIM, nSeconds, nReactions, initialMaxLength, massima_lunghezza_su_cui_calcolare_le_reazioni, overallConcentration, alphabet, complexFormationSymmetry, fino_a_che_lunghezza_i_polimeri_non_catalizzano, reactionProbability, cleavageProbability, diffusion_contribute, solubility_threshold, influx_rate, reverseReactions,K_nrg, moleculeDecay_KineticConstant, ratio_firing_disk, lunghezza_max_fd, scelta_concentrazioni, gamma_powerlaw_concentrazioni,decisione_catalizzatori, lastFiringDiskSpeciesID, ECConcentration, volume, energy, controllo_ACS_nel_ciclo, K_nrg_decay, nome_cartella, funzioni_booleane_in_dec,ratioSpeciesEnergizable,Kass,Kdiss,Kcpx,K_cpx, randomSeed, debugLevel, timeStructuresSavingInterval,maxLOut,simFolder,lMaxInflux,fileTimesSaveInterval,nHours,nAttempts,revRctRatio)
-%function [firing_disk concentrazioni_iniziali specie_def influx catalizzatore reazione specie_non_esistenti matrice_adiacenza_sub_prod matrice_adiacenza_cat_prod] = inizializzatore_ACS(nGEN, nSIM, nSeconds, nReactions, initialMaxLength, massima_lunghezza_su_cui_calcolare_le_reazioni, overallConcentration, alphabet, complexFormationSymmetry, fino_a_che_lunghezza_i_polimeri_non_catalizzano, reactionProbability, cleavageProbability, diffusion_contribute, solubility_threshold, influx_rate, reverseReactions,K_nrg, moleculeDecay_KineticConstant, ratio_firing_disk, lunghezza_max_fd, scelta_concentrazioni, gamma_powerlaw_concentrazioni,decisione_catalizzatori, lastFiringDiskSpeciesID, ECConcentration, volume, energy, controllo_ACS_nel_ciclo, K_nrg_decay, nome_cartella, funzioni_booleane_in_dec,ratioSpeciesEnergizable,Kass,Kdiss,Kcpx,K_cpx,onlyEnvironmentCreation, randomSeed, debugLevel, timeStructuresSavingInterval,maxLOut)
+function [firing_disk concentrazioni_iniziali specie_def influx catalizzatore reazione specie_non_esistenti matrice_adiacenza_sub_prod matrice_adiacenza_cat_prod] = inizializzatore_ACS(nGEN, nSIM, nSeconds, nReactions, initialMaxLength, massima_lunghezza_su_cui_calcolare_le_reazioni, overallConcentration, alphabet, complexFormationSymmetry, fino_a_che_lunghezza_i_polimeri_non_catalizzano, reactionProbability, cleavageProbability, diffusion_contribute, solubility_threshold, influx_rate, reverseReactions,K_nrg, moleculeDecay_KineticConstant, ratio_firing_disk, lunghezza_max_fd, scelta_concentrazioni, gamma_powerlaw_concentrazioni,decisione_catalizzatori, lastFiringDiskSpeciesID, ECConcentration, volume, energy, controllo_ACS_nel_ciclo, K_nrg_decay, nome_cartella, funzioni_booleane_in_dec,ratioSpeciesEnergizable,Kass,Kdiss,Kcpx,K_cpx, randomSeed, debugLevel, timeStructuresSavingInterval,maxLOut,simFolder,lMaxInflux,fileTimesSaveInterval,nHours,nAttempts,revRctRatio,newSpeciesProbMinThreshold,volumeGrowth,stochDivision)
+%function [firing_disk concentrazioni_iniziali specie_def influx catalizzatore reazione specie_non_esistenti matrice_adiacenza_sub_prod matrice_adiacenza_cat_prod] = inizializzatore_ACS(nGEN, nSIM, nSeconds, nReactions, initialMaxLength, massima_lunghezza_su_cui_calcolare_le_reazioni, overallConcentration, alphabet, complexFormationSymmetry, fino_a_che_lunghezza_i_polimeri_non_catalizzano, reactionProbability, cleavageProbability, diffusion_contribute, solubility_threshold, influx_rate, reverseReactions,K_nrg, moleculeDecay_KineticConstant, ratio_firing_disk, lunghezza_max_fd, scelta_concentrazioni, gamma_powerlaw_concentrazioni,decisione_catalizzatori, lastFiringDiskSpeciesID, ECConcentration, volume, energy, controllo_ACS_nel_ciclo, K_nrg_decay, nome_cartella, funzioni_booleane_in_dec,ratioSpeciesEnergizable,Kass,Kdiss,Kcpx,K_cpx, randomSeed, debugLevel, timeStructuresSavingInterval,maxLOut,simFolder,lMaxInflux,fileTimesSaveInterval,nHours,nAttempts,revRctRatio,newSpeciesProbMinThreshold,volumeGrowth,stochDivision)
 
  rand('state',sum(100*clock))
  rand
@@ -80,7 +80,7 @@ count = fprintf(fid1,'%d\n',reverseReactions);
 count = fprintf(fid1,'revRctRatio=');
 count = fprintf(fid1,'%d\n',revRctRatio);
 count = fprintf(fid1,'K_ass=');
-count = fprintf(fid1,'%d\n',Kass); %perchè sono input da file (i prossimi 4)
+count = fprintf(fid1,'%d\n',Kass); %perch? sono input da file (i prossimi 4)
 count = fprintf(fid1,'K_diss=');
 count = fprintf(fid1,'%d\n',Kdiss);
 count = fprintf(fid1,'K_cpx=');
@@ -115,8 +115,16 @@ count = fprintf(fid1,'controllo_ACS_nel_ciclo=');
 count = fprintf(fid1,'%d\n',controllo_ACS_nel_ciclo);
 count = fprintf(fid1,'lMaxInflux=');
 count = fprintf(fid1,'%d\n',lMaxInflux);
+count = fprintf(fid1,'newSpeciesProbMinThreshold=');
+count = fprintf(fid1,'%d\n',newSpeciesProbMinThreshold);
+count = fprintf(fid1,'volumeGrowth=');
+count = fprintf(fid1,'%d\n',volumeGrowth);
+count = fprintf(fid1,'stochDivision=');
+count = fprintf(fid1,'%d\n',stochDivision);
+
 
 st = fclose(fid1); 
+%vettore_rand =[0.5 1 2]; %si usa sotto
 
 
 %--------------------------------------------------------------------------
@@ -134,7 +142,7 @@ st = fclose(fid10);
 %--------------------------------------------------------------------------
 %inizializzazione del firing disk 
 %--------------------------------------------------------------------------
-%so che il numero di combinazioni possibili per x monomenri è x^1 + x ^2 +
+%so che il numero di combinazioni possibili per x monomenri ? x^1 + x ^2 +
 %... + x^initialMaxLength
 
 [firing_disk] = crea_firing_disk(alphabet,massima_lunghezza_su_cui_calcolare_le_reazioni);
@@ -183,6 +191,7 @@ for i=length(specie_def(:,1)):-1:1
     specie_def_2(k,:)=specie_def(i,:);
 end
 specie_def =specie_def_2;
+
     
 
 %--------------------------------------------------------------------------
@@ -196,30 +205,62 @@ specie_def =specie_def_2;
 %scrittura a file
 %-------------------------------------------------
 
+
+
 kk = -1;
 for i=1:length(specie_def(:,1))
         kk = kk+1;
         count = fprintf(fid2,'%d\t',kk);
-        tmpStr = specie_def(i,:);
-        %tmpStr = tmpStr(1:sum(not(isspace(tmpstr))));
-        tmpStr = strtrim(tmpStr);
-        count = fprintf(fid2,'%s',tmpStr);
+        
+        lunghezza_stringa = length(specie_def(1,:));
+        for jjjj=1:length(specie_def(1,:))
+            controllo = 0;
+            for xxxx = 1:length(alphabet)
+                if sum(alphabet(xxxx)==specie_def(i,jjjj))>0
+                    controllo = 1;
+                end
+            end
+            if controllo == 1
+                count = fprintf(fid2,'%c',specie_def(i,jjjj));
+            end
+        end
+        
+           
+%             if 
+% %            
+% 
+%                 gg = input ('')
+% %             specie_def(i,jjjj)
+% %             isspace(specie_def(i,jjjj))
+% %             specie_def(i,jjjj)==('')
+%             if sum(alphabetspecie_def(i,jjjj)) || specie_def(i,jjjj)==(' ')
+%             else
+%                 count = fprintf(fid2,'%c',specie_def(i,jjjj));
+%             end
+%         end
+
+        
+        %tmpStr = specie_def(i,:);
+        %tmpStr = tmpStr(1:sum(not(isspace(tmpStr))));
+        %tmpStr = strtrim(tmpStr);
+        %count = fprintf(fid2,'%c\t',tmpStr);
+        
         count = fprintf(fid2,'\t');
         count = fprintf(fid2,'%d\t',concentrazioni_iniziali(i)); %Concentrazioni
         count = fprintf(fid2,'%d\t',1); %Coefficiente di diffusione						
-        count = fprintf(fid2,'%d\t',1); %Coefficiente di precipitazione o solubilità
+        count = fprintf(fid2,'%d\t',1); %Coefficiente di precipitazione o solubilit?
         count = fprintf(fid2,'%d\t',0); %Coefficiente di degradazione del complesso, ex k -complex ***** !!!!!!!*****
         count = fprintf(fid2,'%d\t',0); %Punto di tagli del complesso (1 -- L-1)
         if concentrazioni_iniziali(i) > 0 || sum(i==catalizzatore(:,2))>0
-            count = fprintf(fid2,'%d\t',1);%Se esiste. esiste se la concentraizone è maggiore di 0 oppure se è catalizzatore di qualche reazione
+            count = fprintf(fid2,'%d\t',1);%Se esiste. esiste se la concentraizone ? maggiore di 0 oppure se ? catalizzatore di qualche reazione
         else
             count = fprintf(fid2,'%d\t',1);
         end
-        count = fprintf(fid2,'%d\t',0); %Età in secondi
+        count = fprintf(fid2,'%d\t',0); %Et? in secondi
         count = fprintf(fid2,'%d\t',0); %Reborn
         count = fprintf(fid2,'%d\t',0); %Catalyst id
         count = fprintf(fid2,'%d\t',0); %substrate id
-        count = fprintf(fid2,'%d\t',K_nrg); %k_fosforilazione velocità con cui l'atp 
+        count = fprintf(fid2,'%d\t',K_nrg); %k_fosforilazione velocit? con cui l'atp 
         count = fprintf(fid2,'%d\t',0); % concentrazione molecole cariche
 %         if rand < ratioSpeciesEnergizable
 %         	count = fprintf(fid2,'%d\n',1); % specie energizzabile
@@ -269,14 +310,17 @@ else
                         tmpKdiss = Kdiss / revRctRatio;
                         count = fprintf(fid4,'%g\t',Kass); %kass
                         count = fprintf(fid4,'%g\t',tmpKdiss); %kdiss
-                        count = fprintf(fid4,'%g\n',Kcpx); %k complex
+                        count = fprintf(fid4,'%g\t',Kcpx); %k complex
                     else
                         tmpKass = Kass / revRctRatio;
                         tmpKcpx = Kcpx / revRctRatio;
                         count = fprintf(fid4,'%g\t',tmpKass); %kass
                         count = fprintf(fid4,'%g\t',Kdiss); %kdiss
-                        count = fprintf(fid4,'%g\n',tmpKcpx); %k complex
+                        count = fprintf(fid4,'%g\t',tmpKcpx); %k complex
+                      
                     end
+                    index_rand = ceil(rand*2);
+                    count = fprintf(fid4,'%g\n',index_rand); %nuovo parametro
 
 
             end
@@ -295,7 +339,7 @@ else
                     count = fprintf(fid3,'%d\t',0);
 
                     if energy == 2
-                        eso_endo = 1; %perchè se non c'è l'energia sono tutte eso
+                        eso_endo = 1; %perch? se non c'? l'energia sono tutte eso
                     else            
                         if rand > energy
                             if reazione(i,2)==1
@@ -335,15 +379,15 @@ else
             count = fprintf(fid2,'\t');
             count = fprintf(fid2,'%d\t',0); %Concentrazioni
             count = fprintf(fid2,'%d\t',0); %Coefficiente di diffusione						
-            count = fprintf(fid2,'%d\t',0); %Coefficiente di precipitazione o solubilità
+            count = fprintf(fid2,'%d\t',0); %Coefficiente di precipitazione o solubilit?
             count = fprintf(fid2,'%d\t',0); %Coefficiente di degradazione (per complessi)
             count = fprintf(fid2,'%d\t',0); %Punto di tagli del complesso (1 -- L-1)	
             count = fprintf(fid2,'%d\t',0); %Se esiste
-            count = fprintf(fid2,'%d\t',0); %Età in secondi
+            count = fprintf(fid2,'%d\t',0); %Et? in secondi
             count = fprintf(fid2,'%d\t',0); %Reborn
             count = fprintf(fid2,'%d\t',0); %Catalyst id
             count = fprintf(fid2,'%d\t',0); %substrate id
-            count = fprintf(fid2,'%d\t',K_nrg); %k_fosforilazione velocità con cui l'atp 
+            count = fprintf(fid2,'%d\t',K_nrg); %k_fosforilazione velocit? con cui l'atp 
             count = fprintf(fid2,'%d\t',0); % concentrazione molecole cariche
            
             if rand < ratioSpeciesEnergizable
