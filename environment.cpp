@@ -2778,54 +2778,60 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 							}
 						}
 
-						if(nrgBoolFlag == ENERGYBASED)
-						{
-							// COMPLEX CHARGED - SECOND SUBSTRATE NOT CHARGED
-							if((nrgBooleanFunction[1] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
+						try{
+							if(nrgBoolFlag == ENERGYBASED)
 							{
-								// Compute the total amount of complexes and second substrates
-								temp_cpxAmount = speciesIter->getChargeMols();
-								temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
-								performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, complexID, temp_mol_II, temp_catalysisID, ENDO_CONDENSATION,
-																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, COMPLEXLOAD, temp_reactionID,false);
-							}
+								// COMPLEX CHARGED - SECOND SUBSTRATE NOT CHARGED
+								if((nrgBooleanFunction[1] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
+								{
+									// Compute the total amount of complexes and second substrates
+									temp_cpxAmount = speciesIter->getChargeMols();
+									temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
+									performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, complexID, temp_mol_II, temp_catalysisID, ENDO_CONDENSATION,
+																	   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, COMPLEXLOAD, temp_reactionID,false);
+								}
 
-							// COMPLEX NOT CHARGED - SECOND SUBSTRATE CHARGED
-							if(nrgBooleanFunction[6] == TRUENRG)
-							{
-								// Compute the total amount of complexes and second substrates
-								temp_cpxAmount = speciesIter->getNOTchargeMols();
-								temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
-								performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, complexID, temp_mol_II, temp_catalysisID, ENDO_CONDENSATION,
-																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,false);
-							}
+								// COMPLEX NOT CHARGED - SECOND SUBSTRATE CHARGED
+								if(nrgBooleanFunction[6] == TRUENRG)
+								{
+									// Compute the total amount of complexes and second substrates
+									temp_cpxAmount = speciesIter->getNOTchargeMols();
+									temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
+									performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, complexID, temp_mol_II, temp_catalysisID, ENDO_CONDENSATION,
+																	   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID,false);
+								}
 
-							// COMPLEX CHARGED - SECOND SUBSTRATE CHARGED
-							if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[4] == TRUENRG))
-							{
-								// Compute the total amount of complexes and second substrates
-								temp_cpxAmount = speciesIter->getChargeMols();
-								temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
-								performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, complexID, temp_mol_II, temp_catalysisID, ENDO_CONDENSATION,
-																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,false);
-							}
+								// COMPLEX CHARGED - SECOND SUBSTRATE CHARGED
+								if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[4] == TRUENRG))
+								{
+									// Compute the total amount of complexes and second substrates
+									temp_cpxAmount = speciesIter->getChargeMols();
+									temp_substrateAmount = allSpecies.at(temp_mol_II).getChargeMols();
+									performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, complexID, temp_mol_II, temp_catalysisID, ENDO_CONDENSATION,
+																	   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID,false);
+								}
 
-							// COMPLEX NOT CHARGED - SECOND SUBSTRATE NOT CHARGED (ONLY IF CONDENSATION ESOERGONIC)
-							if(nrgBooleanFunction[7] == TRUENRG)
-							{
+								// COMPLEX NOT CHARGED - SECOND SUBSTRATE NOT CHARGED (ONLY IF CONDENSATION ESOERGONIC)
+								if(nrgBooleanFunction[7] == TRUENRG)
+								{
+									// Compute the total amount of complexes and second substrates
+									temp_cpxAmount = speciesIter->getNOTchargeMols();
+									temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
+									performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, complexID, temp_mol_II, temp_catalysisID, CONDENSATION,
+																	   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,false);
+								}
+							}else{ // NO ENERGY
 								// Compute the total amount of complexes and second substrates
-								temp_cpxAmount = speciesIter->getNOTchargeMols();
-								temp_substrateAmount = allSpecies.at(temp_mol_II).getNOTchargeMols();
-								performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount, complexID, temp_mol_II, temp_catalysisID, CONDENSATION,
-																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,false);
-							}
-						}else{ // NO ENERGY
-							// Compute the total amount of complexes and second substrates
-							temp_cpxAmount = speciesIter->getAmount();
-							temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
-							performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount_TOT, complexID, temp_mol_II, temp_catalysisID, CONDENSATION,
-															   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, false);
-						} // end if(nrgBoolFlag == ENERGYBASED)
+								temp_cpxAmount = speciesIter->getAmount();
+								temp_substrateAmount_TOT = allSpecies.at(temp_mol_II).getAmount();
+								performSingleGilleSpieIntroduction(temp_cpxAmount, temp_substrateAmount_TOT, complexID, temp_mol_II, temp_catalysisID, CONDENSATION,
+																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, false);
+							} // end if(nrgBoolFlag == ENERGYBASED)
+						}catch(exception&e){
+						     cout << "Source Code Line: " << __LINE__ << endl;
+						     cerr << "exceptioncaught:" << e.what() << endl;
+						     ExitWithError("performOPTGillespieComputation::2nd step condensation","exceptionerrorthrown");
+						}
 					} // for(acs_int listCondSecStep = 0; listCondSecStep < speciesIter->getSecSubListSize(); listCondSecStep++)
 				} // end if(allSpecies.at(mid).getSecSubListSize() > 0)
 			} //end if total amount greater than 0
@@ -2844,6 +2850,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 				}catch(exception&e){
 					cout << "nrgBooleanFunction = dec2bin(allReactions.at(allCatalysis.at(idCat).getReactionID()).getEnergyType());" << endl;
 					cout << "Vectorsize "<<allReactions.size() << " - position " << catalysisIter->getReactionID() << endl;
+					cout << "Line -> " << __LINE__ << endl;
 					cerr << "exceptioncaught:" << e.what() << endl;
 					ExitWithError("performGillespieComputation","exceptionerrorthrown");
 			   }
@@ -2877,35 +2884,41 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 				   }
 
 					// Gillespie record creation according to the energy configuration
-					if(nrgBoolFlag == ENERGYBASED)
-					{
+					try{
+						if(nrgBoolFlag == ENERGYBASED)
+						{
 
-						// CATALYST NOT LOADED, SUBSTRATE LOADED (- -)
-						if(nrgBooleanFunction[11] == TRUENRG)
-						if(checkAvailability(temp_mol_IV, temp_mol_I, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
-							performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, temp_mol_IV, temp_mol_I, tempIdCatalysis, CLEAVAGE,
-								   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
+							// CATALYST NOT LOADED, SUBSTRATE LOADED (- -)
+							if(nrgBooleanFunction[11] == TRUENRG)
+							if(checkAvailability(temp_mol_IV, temp_mol_I, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
+								performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, temp_mol_IV, temp_mol_I, tempIdCatalysis, CLEAVAGE,
+									   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
 
-						// CATALYST NOT LOADED, SUBSTRATE LOADED (- +)
-						if(nrgBooleanFunction[10] == TRUENRG)
-								performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, temp_mol_IV, temp_mol_I, tempIdCatalysis, ENDO_CLEAVAGE,
-																	temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID, false);
-						// CATALYST NOT LOADED, SUBSTRATE LOADED (+ -)
-						if(nrgBooleanFunction[9] == TRUENRG)
-								performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, temp_mol_IV, temp_mol_I, tempIdCatalysis, ENDO_CLEAVAGE,
-																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID, false);
+							// CATALYST NOT LOADED, SUBSTRATE LOADED (- +)
+							if(nrgBooleanFunction[10] == TRUENRG)
+									performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, temp_mol_IV, temp_mol_I, tempIdCatalysis, ENDO_CLEAVAGE,
+																		temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID, false);
+							// CATALYST NOT LOADED, SUBSTRATE LOADED (+ -)
+							if(nrgBooleanFunction[9] == TRUENRG)
+									performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, temp_mol_IV, temp_mol_I, tempIdCatalysis, ENDO_CLEAVAGE,
+																	   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID, false);
 
-						// CATALYST NOT LOADED, SUBSTRATE LOADED (+ +)
-						if(nrgBooleanFunction[8] == TRUENRG)
-							if(checkAvailability(temp_mol_IV, temp_mol_I, temp_catAmount_charged, temp_substrateAmount_charged))
-								performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, temp_mol_IV, temp_mol_I, tempIdCatalysis, ENDO_CLEAVAGE,
-								 temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID, true);
-					}else{
-							// CATALYST NOT LOADED, SUBSTRATE NOT LOADED
-						if(checkAvailability(temp_mol_IV, temp_mol_I, temp_catAmount_TOT, temp_substrateAmount_TOT))
-							performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, temp_mol_IV, temp_mol_I, tempIdCatalysis, CLEAVAGE,
-															   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
-					} // end if(nrgBoolFlag == ENERGYBASED)
+							// CATALYST NOT LOADED, SUBSTRATE LOADED (+ +)
+							if(nrgBooleanFunction[8] == TRUENRG)
+								if(checkAvailability(temp_mol_IV, temp_mol_I, temp_catAmount_charged, temp_substrateAmount_charged))
+									performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, temp_mol_IV, temp_mol_I, tempIdCatalysis, ENDO_CLEAVAGE,
+									 temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID, true);
+						}else{
+								// CATALYST NOT LOADED, SUBSTRATE NOT LOADED
+							if(checkAvailability(temp_mol_IV, temp_mol_I, temp_catAmount_TOT, temp_substrateAmount_TOT))
+								performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, temp_mol_IV, temp_mol_I, tempIdCatalysis, CLEAVAGE,
+																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
+						} // end if(nrgBoolFlag == ENERGYBASED)
+					}catch(exception&e){
+					     cout << "Source Code Line: " << __LINE__ << endl;
+					     cerr << "exceptioncaught:" << e.what() << endl;
+					     ExitWithError("performOPTGillespieComputation::Cleavage","exceptionerrorthrown");
+					}
 				} // end getType() == CLEAVAGE
 
 		//\-- OVERALL CONDENSATION .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
@@ -2942,35 +2955,42 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 					temp_substrateAmount_charged = allSpecies.at(temp_mol_II).getChargeMols();
 					temp_substrateAmount_NotCharged = allSpecies.at(temp_mol_II).getNOTchargeMols();
 
-					if(nrgBoolFlag == ENERGYBASED)
-					{
+					try{
 
-						// CATALYST LOADED, SUBSTRATE LOADED (+ + ...)
-						if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[1] == TRUENRG))
-						if(checkAvailability(temp_mol_I, temp_mol_II, temp_catAmount_charged, temp_substrateAmount_charged))
-							performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, temp_mol_I, temp_mol_II, tempIdCatalysis, ENDO_COMPLEXFORMATION,
-									temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID, true);
+						if(nrgBoolFlag == ENERGYBASED)
+						{
 
-						// CATALYST LOADED, SUBSTRATE NOT LOADED (+ - ...)
-						if((nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG))
-								performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, temp_mol_I, temp_mol_II, tempIdCatalysis, ENDO_COMPLEXFORMATION,
-																	temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID, false);
+							// CATALYST LOADED, SUBSTRATE LOADED (+ + ...)
+							if((nrgBooleanFunction[0] == TRUENRG) || (nrgBooleanFunction[1] == TRUENRG))
+							if(checkAvailability(temp_mol_I, temp_mol_II, temp_catAmount_charged, temp_substrateAmount_charged))
+								performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_charged, temp_mol_I, temp_mol_II, tempIdCatalysis, ENDO_COMPLEXFORMATION,
+										temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, BOTHLOAD, temp_reactionID, true);
 
-						// CATALYST NOT LOADED, SUBSTRATE LOADED (- + ...)
-						if((nrgBooleanFunction[4] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
-								performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, temp_mol_I, temp_mol_II, tempIdCatalysis, ENDO_COMPLEXFORMATION,
-																	temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID, false);
+							// CATALYST LOADED, SUBSTRATE NOT LOADED (+ - ...)
+							if((nrgBooleanFunction[2] == TRUENRG) || (nrgBooleanFunction[3] == TRUENRG))
+									performSingleGilleSpieIntroduction(temp_catAmount_charged, temp_substrateAmount_NotCharged, temp_mol_I, temp_mol_II, tempIdCatalysis, ENDO_COMPLEXFORMATION,
+																		temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, CATALYSTLOAD, temp_reactionID, false);
 
-						// CATALYST NOT LOADED, SUBSTRATE NOT LOADED (- - ...)
-						if((nrgBooleanFunction[6] == TRUENRG) || (nrgBooleanFunction[7] == TRUENRG))
-							if(checkAvailability(temp_mol_I, temp_mol_II, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
-								performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, temp_mol_I, temp_mol_II, tempIdCatalysis, COMPLEXFORMATION,
-									temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,true);
-					}else{ // NO ENERGY
-					   if(checkAvailability(temp_mol_I, temp_mol_II, temp_catAmount_TOT, temp_substrateAmount_TOT))
-							performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, temp_mol_I, temp_mol_II, tempIdCatalysis, COMPLEXFORMATION,
-								   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,true);
-					} // end if(nrgBoolFlag == ENERGYBASED)
+							// CATALYST NOT LOADED, SUBSTRATE LOADED (- + ...)
+							if((nrgBooleanFunction[4] == TRUENRG) || (nrgBooleanFunction[5] == TRUENRG))
+									performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_charged, temp_mol_I, temp_mol_II, tempIdCatalysis, ENDO_COMPLEXFORMATION,
+																		temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, SUBSTRATELOAD, temp_reactionID, false);
+
+							// CATALYST NOT LOADED, SUBSTRATE NOT LOADED (- - ...)
+							if((nrgBooleanFunction[6] == TRUENRG) || (nrgBooleanFunction[7] == TRUENRG))
+								if(checkAvailability(temp_mol_I, temp_mol_II, temp_catAmount_NotCharged, temp_substrateAmount_NotCharged))
+									performSingleGilleSpieIntroduction(temp_catAmount_NotCharged, temp_substrateAmount_NotCharged, temp_mol_I, temp_mol_II, tempIdCatalysis, COMPLEXFORMATION,
+										temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,true);
+						}else{ // NO ENERGY
+						   if(checkAvailability(temp_mol_I, temp_mol_II, temp_catAmount_TOT, temp_substrateAmount_TOT))
+								performSingleGilleSpieIntroduction(temp_catAmount_TOT, temp_substrateAmount_TOT, temp_mol_I, temp_mol_II, tempIdCatalysis, COMPLEXFORMATION,
+									   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID,true);
+						} // end if(nrgBoolFlag == ENERGYBASED)
+					}catch(exception&e){
+					     cout << "Source Code Line: " << __LINE__ << endl;
+					     cerr << "exceptioncaught:" << e.what() << endl;
+					     ExitWithError("performOPTGillespieComputation::1nd step condensation","exceptionerrorthrown");
+					}
 				} // end if(allReactions.at(allCatalysis.at(idCat).getReactionID()).getType() == CONDENSATION)
 			} // end for all catalysis
 		} // end if if((acs_longInt)allCatalysis.size() > 0)
@@ -3011,13 +3031,19 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 						}
 
 					}
-					if((temp_rctType == CONDENSATION) || (temp_rctType == ENDO_CONDENSATION))
-					{ // Spontaneous condensation is a bi-molecolar reaction
-						if(debugLevel >= MEDIUM_DEBUG) cout << "\t\t\t|- SPONTANEOUS CONDENSATION" << endl;
-						if(checkAvailability(temp_mol_II, temp_mol_III, allSpecies.at(temp_mol_II).getAmount(), allSpecies.at(temp_mol_III).getAmount()))
-							performSingleGilleSpieIntroduction(allSpecies.at(temp_mol_II).getAmount(), allSpecies.at(temp_mol_III).getAmount(),
-															   temp_mol_II, temp_mol_III, tempIdCatalysis, SPONTANEOUS_CONDENSATION,
-															   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
+					try{
+						if((temp_rctType == CONDENSATION) || (temp_rctType == ENDO_CONDENSATION))
+						{ // Spontaneous condensation is a bi-molecolar reaction
+							if(debugLevel >= MEDIUM_DEBUG) cout << "\t\t\t|- SPONTANEOUS CONDENSATION" << endl;
+							if(checkAvailability(temp_mol_II, temp_mol_III, allSpecies.at(temp_mol_II).getAmount(), allSpecies.at(temp_mol_III).getAmount()))
+								performSingleGilleSpieIntroduction(allSpecies.at(temp_mol_II).getAmount(), allSpecies.at(temp_mol_III).getAmount(),
+																   temp_mol_II, temp_mol_III, tempIdCatalysis, SPONTANEOUS_CONDENSATION,
+																   temp_mol_I, temp_mol_II, temp_mol_III, temp_mol_IV, NOTHINGLOAD, temp_reactionID, true);
+						}
+					}catch(exception&e){
+					     cout << "Source Code Line: " << __LINE__ << endl;
+					     cerr << "exceptioncaught:" << e.what() << endl;
+					     ExitWithError("performOPTGillespieComputation::spontaneous","exceptionerrorthrown");
 					}
 				}
 			}
@@ -3046,13 +3072,19 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
             {
                 reaction_u = 0;
             }else{
-                reaction_u = returnSelectionIdFromAWeightProbVector(gillespieCumulativeStepScoreList, gillespieCumulativeStepScoreList.back(), tmpRndDoubleGen, __LINE__);
-                if(debugLevel == GILLESPIESTUFF){
-                	printGillespieStructure();
-                	printInitialCondition();
-                	cin.ignore().get();
-                	//cout <<  allGillespieScores.at(reaction_u) << endl;
-                }
+            	try{
+					reaction_u = returnSelectionIdFromAWeightProbVector(gillespieCumulativeStepScoreList, gillespieCumulativeStepScoreList.back(), tmpRndDoubleGen, __LINE__);
+					if(debugLevel == GILLESPIESTUFF){
+						printGillespieStructure();
+						printInitialCondition();
+						cin.ignore().get();
+						//cout <<  allGillespieScores.at(reaction_u) << endl;
+					}
+            	}catch(exception&e){
+				     cout << "Source Code Line: " << __LINE__ << endl;
+				     cerr << "exceptioncaught:" << e.what() << endl;
+				     ExitWithError("performOPTGillespieComputation::Gillespie selection","exceptionerrorthrown");
+				}
             }
 
             // CREATE RANDOM NUMBER TO COMPUTE THE TIME
@@ -3096,8 +3128,14 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
                      ExitWithError("entropy", "Problems during Gillespie score entropy computation");
 
                 // PERFORM REACTION
-                if(!performReaction(reaction_u, tmpRndDoubleGen, tmpActGEN, tmpActSIM, tmpActSTEP, tmpStoringPath))
+                try{
+                	if(!performReaction(reaction_u, tmpRndDoubleGen, tmpActGEN, tmpActSIM, tmpActSTEP, tmpStoringPath))
                                 ExitWithError("performReaction", "Problems during the reaction computation");
+                }catch(exception&e){
+				     cout << "Source Code Line: " << __LINE__ << endl;
+				     cerr << "exceptioncaught:" << e.what() << endl;
+				     ExitWithError("performOPTGillespieComputation::Perform Reaction","exceptionerrorthrown");
+				}
 
                 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 // CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
@@ -3173,20 +3211,38 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 						 << " - Time Since The Last InFlux: " << timeSinceTheLastInFlux << endl;
 				}
 				// PERFORM REFILL !!!
-				if(performRefill(timeSinceTheLastInFlux, minimalTimeForOneMols, tmpRndDoubleGen))
-								timeSinceTheLastInFlux = 0;
+				try{
+					if(performRefill(timeSinceTheLastInFlux, minimalTimeForOneMols, tmpRndDoubleGen))
+									timeSinceTheLastInFlux = 0;
+				}catch(exception&e){
+				     cout << "Source Code Line: " << __LINE__ << endl;
+				     cerr << "exceptioncaught:" << e.what() << endl;
+				     ExitWithError("performOPTGillespieComputation::Perform Refill","exceptionerrorthrown");
+				}
 			}
 			// PERFORM EFFLUX PROCESS
-			performMoleculesEfflux(tmpDeltaT, tmpRndDoubleGen);
+			try{
+				performMoleculesEfflux(tmpDeltaT, tmpRndDoubleGen);
+			}catch(exception&e){
+			     cout << "Source Code Line: " << __LINE__ << endl;
+			     cerr << "exceptioncaught:" << e.what() << endl;
+			     ExitWithError("performOPTGillespieComputation::Perform molecules efflux","exceptionerrorthrown");
+			}
          }
 
     // Perform molecule charging
     if(energy == ENERGYBASED)
         performDETMoleculesCharging(tmpDeltaT, tmpRndDoubleGen);
 
-    // Perform deterministic complex dissociation
-    if(!performDETComplexDissociation(tmpDeltaT, tmpRndDoubleGen))
-    	ExitWithError("performComplexDissociation", "Problems during the COMPLEX DETERMINISTIC DISSOCIATION process in Gillespie");;
+    try{
+		// Perform deterministic complex dissociation
+		if(!performDETComplexDissociation(tmpDeltaT, tmpRndDoubleGen))
+			ExitWithError("performComplexDissociation", "Problems during the COMPLEX DETERMINISTIC DISSOCIATION process in Gillespie");
+    }catch(exception&e){
+	     cout << "Source Code Line: " << __LINE__ << endl;
+	     cerr << "exceptioncaught:" << e.what() << endl;
+	     ExitWithError("performOPTGillespieComputation::complex dissociation","exceptionerrorthrown");
+	}
 
     // COPY and CLEAN OF GILLESPIE STRUCTURES
     COPYOFallGillespieScores = allGillespieScores;
@@ -4637,6 +4693,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 				catch(exception&e)
 				{
 				cout<<" saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());" << endl;
+				cout << __LINE__ << endl;
 				cerr << "exceptioncaught:" << e.what() << endl;
 				ExitWithError("","exceptionerrorthrown");
 				}
