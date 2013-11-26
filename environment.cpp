@@ -3041,13 +3041,20 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 	{
             if(debugLevel == SMALL_DEBUG) printGillespieStructure();
 
-            // SELECT REACTION
+            // SELECT REACTION WITHIN THE GILLESPIE STRUCTURE
             if((acs_longInt)allGillespieScores.size() == 1)
             {
                 reaction_u = 0;
             }else{
                 reaction_u = returnSelectionIdFromAWeightProbVector(gillespieCumulativeStepScoreList, gillespieCumulativeStepScoreList.back(), tmpRndDoubleGen, __LINE__);
+                if(debugLevel == GILLESPIESTUFF){
+                	printGillespieStructure();
+                	printInitialCondition();
+                	cin.ignore().get();
+                	//cout <<  allGillespieScores.at(reaction_u) << endl;
+                }
             }
+
             // CREATE RANDOM NUMBER TO COMPUTE THE TIME
 
             tmpDeltaT = ((1 / gillespieTotalScore) * log(1 / tmpRndDoubleGen()));
@@ -3310,7 +3317,11 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
             {
                 for(vector<gillespie>::iterator tmpAllGillIter = allGillespieScores.begin(); tmpAllGillIter != allGillespieScores.end(); tmpAllGillIter++)
                 {
-                    if((tmpAllGillIter->getMolI() == tmpMol_I) && (tmpAllGillIter->getMolII() == tmpMol_II) && (tmpAllGillIter->getIdReactionType() == tmp__rctType))
+                    if((tmpAllGillIter->getMolI() == tmpMol_I) &&
+                       (tmpAllGillIter->getMolII() == tmpMol_II) &&
+                       (tmpAllGillIter->getMolIII() == tmpMol_III) &&
+                       (tmpAllGillIter->getMolIV() == tmpMol_IV) &&
+                       (tmpAllGillIter->getIdReactionType() == tmp__rctType))
                     {
                     	gillAlreadyPresent = true;
                     	break;
@@ -6190,7 +6201,8 @@ void environment::printInitialCondition()
 		for(acs_longInt i = 0; i < getNumberOfCatalysis(); i++)
 		{
 			cout << allCatalysis.at(i).getCatId() << "\t" << allCatalysis.at(i).getCat() << "\t" << 
-					allCatalysis.at(i).getReactionID() << "\t" << allCatalysis.at(i).getTotAmount() << endl;
+					allCatalysis.at(i).getReactionID() << "\t" << allCatalysis.at(i).getTotAmount()
+					 << "\t" << allCatalysis.at(i).getCpxTarget() << endl;
 		}
 	}else{
 		ExitWithError("printInitialCondition", "!!! THERE ARE NO CATALYSED REACTIONS!!!");

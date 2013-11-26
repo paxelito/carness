@@ -39,7 +39,7 @@ typedef unsigned int acs_int;
 // CONSTANTS
 //----------
 
-#define __SOFTVERSION__ "4.8b20131026.60"
+#define __SOFTVERSION__ "4.8b20131125.61"
 
 // DEBUG LEVELS
 
