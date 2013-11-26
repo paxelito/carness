@@ -491,8 +491,14 @@ int main (int argc, char *argv[]) {
                             {
                                 //GILLESPIE COMPUTATION (CORE OF THE SOFTWARE)
                             	if(puddle->getDebugLevel() == SMALL_DEBUG)cout << "Step " << actSTEP << endl;
-                                if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
-                                        ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
+                            	try{
+                                	if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
+                                        	ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
+                            	}catch(exception&e){
+                           	     cout << "Source Code Line: " << __LINE__ << endl;
+                           	     cerr << "exceptioncaught:" << e.what() << endl;
+                           	     ExitWithError("MAIN function __ Gillespie computation","exceptionerrorthrown");
+                            	}
                                 if(puddle->getDebugLevel() == SMALL_DEBUG)
                                 	puddle->showGillEngagementInSpecies();
 
