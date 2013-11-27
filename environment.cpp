@@ -2278,9 +2278,7 @@ bool environment::structureCoherenceCheckUp()
 										if(allReactions.at(i).getSpecies_I() == allReactions.at(j).getSpecies_I())
 										{
 											if((allReactions.at(i).getSpecies_II() == allReactions.at(j).getSpecies_II() &&
-												allReactions.at(i).getSpecies_III() == allReactions.at(j).getSpecies_III()) ||
-												(allReactions.at(i).getSpecies_II() == allReactions.at(j).getSpecies_III() &&
-												 allReactions.at(i).getSpecies_III() == allReactions.at(j).getSpecies_II()))
+												allReactions.at(i).getSpecies_III() == allReactions.at(j).getSpecies_III()))
 											{
 												flagControl = false;
 												cout << endl << "\t\t\t Reaction " << allReactions.at(i).getID() << " " << allReactions.at(i).getType()
