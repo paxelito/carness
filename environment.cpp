@@ -3390,41 +3390,62 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
 
 				if(!gillAlreadyPresent)
 				{
-					//cout << tmpRctID << " " << tmpIDCatalysis << " " << tmpMol_I << " " << tmpMol_II<< endl;
-					allGillespieScores.push_back(gillespie((acs_longInt)allGillespieScores.size(),
-												tmp__rctType, temp_score, tmpMol_I, tmpMol_II,
-												tmpMol_III, tmpMol_IV, tmp_NRGDirection, tmpRctID,
-												tmpIDCatalysis));
-					gillespieTotalScore += temp_score;
-					gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
-					// Update single species gillespie engagements list
-					allSpecies.at(tmpIDI).insertGillID(allGillespieScores.back().getID());
-					allSpecies.at(tmpIDII).insertGillID(allGillespieScores.back().getID());
-					// If the theoretical product is not evaluated gillespieNewSpeciesScore is incremented
-					if((tmp__rctType == CONDENSATION) || (tmp__rctType == ENDO_CONDENSATION) || (tmp__rctType == SPONTANEOUS_CONDENSATION))
-					{
-						// IN the case of condensation molIII is the product, in the reaction structure molIII is a substrate but this subroutine is the product, mol_I is the complex and mol_II is the second substrate
-						if(allSpecies.at(tmpMol_III).getEvaluated() == 0)
-							gillespieNewSpeciesScore += temp_score;
-					}else if((tmp__rctType == CLEAVAGE) || (tmp__rctType == ENDO_CLEAVAGE) || (tmp__rctType == SPONTANEOUS_CLEAVAGE))
-					{
-						// In the case of cleavage molII and molIII are products
-						if((allSpecies.at(tmpMol_II).getEvaluated() == 0) || (allSpecies.at(tmpMol_III).getEvaluated() == 0))
-							gillespieNewSpeciesScore += temp_score;
-					}
-
-					if( ((tmp__rctType == CLEAVAGE || tmp__rctType == ENDO_CLEAVAGE) && (allReactions.at(tmpRctID).getType() == CONDENSATION))
-						 ||
-						((tmp__rctType == CONDENSATION || tmp__rctType == ENDO_CONDENSATION) && (allReactions.at(tmpRctID).getType() == CLEAVAGE)) )
-					{
-						if(reverseReactions == false)
-						{
-							printGillespieStructure();
-							ExitWithError("performSimgleGilleSpieIntroduction","Reverse reaction is detected although it shouldn't be possible...");
+					try{
+						//cout << tmpRctID << " " << tmpIDCatalysis << " " << tmpMol_I << " " << tmpMol_II<< endl;
+						allGillespieScores.push_back(gillespie((acs_longInt)allGillespieScores.size(),
+													tmp__rctType, temp_score, tmpMol_I, tmpMol_II,
+													tmpMol_III, tmpMol_IV, tmp_NRGDirection, tmpRctID,
+													tmpIDCatalysis));
+						gillespieTotalScore += temp_score;
+						gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
+						// Update single species gillespie engagements list
+						try{
+							allSpecies.at(tmpIDI).insertGillID(allGillespieScores.back().getID());
+							allSpecies.at(tmpIDII).insertGillID(allGillespieScores.back().getID());
+						}catch(exception&e){
+							cout << "!!! ERROR in line " << __LINE__ << endl;
+							cout << "|- Gill size -> " << allGillespieScores.size() << " || gillCumuStepScoreList size -> " << gillespieCumulativeStepScoreList.size() << endl
+								 << " || tmpIDI: " << tmpIDI << " || tmpIDII: " << tmpIDII << endl
+								 << " || M1: " << tmpMol_I << " || M2: " << tmpMol_II << " || M3: " << tmpMol_III << " || M4: " << tmpMol_IV
+								 << " || type: " << tmp__rctType << " || RCTID: "  << tmpRctID << " || Catalysis: " << tmpIDCatalysis << endl;
+							cerr << "exceptioncaught:" << e.what() << endl;
+							ExitWithError("performSimgleGilleSpieIntroduction","exceptionerrorthrown");
 						}
-						reverseReactionsGillScore += temp_score;
+							// If the theoretical product is not evaluated gillespieNewSpeciesScore is incremented
+						if((tmp__rctType == CONDENSATION) || (tmp__rctType == ENDO_CONDENSATION) || (tmp__rctType == SPONTANEOUS_CONDENSATION))
+						{
+							// IN the case of condensation molIII is the product,
+							// in the reaction structure molIII is a substrate but this subroutine is the product,
+							// mol_I is the complex and mol_II is the second substrate
+							if(allSpecies.at(tmpMol_III).getEvaluated() == 0)
+								gillespieNewSpeciesScore += temp_score;
+						}else if((tmp__rctType == CLEAVAGE) || (tmp__rctType == ENDO_CLEAVAGE) || (tmp__rctType == SPONTANEOUS_CLEAVAGE))
+						{
+							// In the case of cleavage molII and molIII are products
+							if((allSpecies.at(tmpMol_II).getEvaluated() == 0) || (allSpecies.at(tmpMol_III).getEvaluated() == 0))
+								gillespieNewSpeciesScore += temp_score;
+						}
 
-					}
+						if( ((tmp__rctType == CLEAVAGE || tmp__rctType == ENDO_CLEAVAGE) && (allReactions.at(tmpRctID).getType() == CONDENSATION))
+							 ||
+							((tmp__rctType == CONDENSATION || tmp__rctType == ENDO_CONDENSATION) && (allReactions.at(tmpRctID).getType() == CLEAVAGE)) )
+						{
+							if(reverseReactions == false)
+							{
+								printGillespieStructure();
+								ExitWithError("performSimgleGilleSpieIntroduction","Reverse reaction is detected although it shouldn't be possible...");
+							}
+							reverseReactionsGillScore += temp_score;
+
+						}
+					}catch(exception&e){
+		                cout << "!!! ERROR in line " << __LINE__ << endl;
+		                cout << "|- Gill size -> " << allGillespieScores.size() << " || gillCumuStepScoreList size -> " << gillespieCumulativeStepScoreList.size()
+		                	 << " || M1: " << tmpMol_I << " || M2: " << tmpMol_II << " || M3: " << tmpMol_III << " || M4: " << tmpMol_IV
+		                	 << " || type: " << tmp__rctType << " || RCTID: "  << tmpRctID << " || Catalysis: " << tmpIDCatalysis << endl;
+		                cerr << "exceptioncaught:" << e.what() << endl;
+		                ExitWithError("performSimgleGilleSpieIntroduction","exceptionerrorthrown");
+		           }
 				}
 			}catch(exception&e){
                 cout << "!!! ERROR in line " << __LINE__ << endl;
