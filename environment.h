@@ -38,6 +38,7 @@ private:
     acs_longInt nonCatalyticLastID; // ID of the non catalytic last species.
     acs_double reactionProbability; // Reaction probability
     acs_double cleavageProbability; // Cleavage probability (when new reactions are created)
+    bool main_rev_rct_allowed; // Possibility to have both forward and backward reactions as main reaction
     bool reverseReactions; // if true backward reactions are present
     acs_double revRctRatio; // ratio between forward and backward reactions, it is used only in the creation of new reactions (if reverseReactions = TRUE)
     acs_double spontRct; // if true spontaneous reactions are present

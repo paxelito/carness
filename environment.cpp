@@ -83,7 +83,7 @@ environment::environment(string tmpInitialPath)
 
     // CONFIGURATION FILE PATH CREATION
     string confFilePath = tmpInitialPath + "acsm2s.conf";
-
+    main_rev_rct_allowed = 0; //Default value if not present in old conf files
     ifstream myfile;
     myfile.open(confFilePath.c_str());
     string strID;
@@ -122,6 +122,7 @@ environment::environment(string tmpInitialPath)
                 if(linered[0] == "nonCatalyticMaxLength") nonCatalyticMaxLength = atoi(linered[1].c_str());
                 if(linered[0] == "reactionProbability") reactionProbability = atof(linered[1].c_str());
                 if(linered[0] == "cleavageProbability") cleavageProbability = atof(linered[1].c_str());
+                if(linered[0] == "main_rev_rct_allowed") main_rev_rct_allowed = atoi(linered[1].c_str());
                 if(linered[0] == "reverseReactions") reverseReactions = atoi(linered[1].c_str());
                 if(linered[0] == "revRctRatio") revRctRatio = atof(linered[1].c_str());
                 if(linered[0] == "spontRct") spontRct = atof(linered[1].c_str());
@@ -2370,59 +2371,62 @@ bool environment::structureCoherenceCheckUp()
 					}
 
 					// NOT INVERSE REACTIONS CONTROL
-					if(allReactions.at(allCatalysis.at(i).getReactionID()).getType() == CLEAVAGE)
-					{ // CLEAVAGE
-						if(!notInverseReactionAlreadyCatalyzed(CLEAVAGE,
-															   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I(),
-															   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()))
-						{
-								flagControl = false;
-								cout << endl << "\t\t\tERROR: Rct Type: " <<  CLEAVAGE  <<
-								" - Catalisys: " << i << " - Catalyst: " <<  allCatalysis.at(i).getCat() <<
-								" - S1: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I() <<
-								" - S2: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II() <<
-								" - Reaction " << allCatalysis.at(i).getReactionID() << endl << "\t\t\t\t" <<
-								": Both forward and backward reaction are catalyzed!!!" << endl <<
-								"\t\t\t\t" << "-----------------------------------------------------" << endl;
-								//break;
-						}
-						// NO SELF-CATALYSIS CONTROL
-	//					if(allCatalysis.at(i).getCat() < (acs_longInt)firingDisk.size())
-	//					{
-	//						if((allCatalysis.at(i).getCat() == allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()) ||
-	//						   (allCatalysis.at(i).getCat() == allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_III()))
-	//						{
-	//							cout << "WARNING*** CLEAVAGE -> Species " << allCatalysis.at(i).getCatId() << " is a firing disk species and it cannot catalize the formation of itself: cat ID "
-	//							     << i << " - Rct ID " << allCatalysis.at(i).getReactionID() << endl;
-	//							//flagControl = false;
-	//						}
-	//					}
-					}else{ // CONDENSATION
-							if(!notInverseReactionAlreadyCatalyzed(CONDENSATION,
-												   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I(),
-												   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()))
-							{
-									flagControl = false;
-									cout << endl << "\t\t\tERROR: Rct Type: " << CONDENSATION <<
-									" - Catalisys: " << i << " - Catalyst: " <<  allCatalysis.at(i).getCat() <<
-									" - S1: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I() <<
-									" - S2: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II() <<
-									" - Reaction " << allCatalysis.at(i).getReactionID() << endl << "\t\t\t\t" <<
-									": Both forward and backward reaction are catalyzed!!!" << endl <<
-									"\t\t\t\t" << "-----------------------------------------------------" << endl;
-									//break;
-							}
-						// NO SELF-CATALYSIS CONTROL
-	//					if(allCatalysis.at(i).getCat() < (acs_longInt)firingDisk.size())
-	//					{
-	//						if((allCatalysis.at(i).getCat() == allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I()))
-	//						{
-	//							cout << "WARNING*** CONDENSATION -> Species " << allCatalysis.at(i).getCatId() << " is a firing disk species and it cannot catalize the formation of itself: cat ID "
-	//							<< i << " - Rct ID " << allCatalysis.at(i).getReactionID() << endl;
-	//							//flagControl = false;
-	//						}
-	//					} // end if(allCatalysis.at(i).getCatId() < (acs_longInt)firingDisk.size())
-					} // end if(allReactions.at(allCatalysis.at(i).getReactionID()).getType() == CLEAVAGE)
+					if(main_rev_rct_allowed == false)
+					{
+						if(allReactions.at(allCatalysis.at(i).getReactionID()).getType() == CLEAVAGE)
+						{ // CLEAVAGE
+								if(!notInverseReactionAlreadyCatalyzed(CLEAVAGE,
+																	   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I(),
+																	   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()))
+								{
+										flagControl = false;
+										cout << endl << "\t\t\tERROR: Rct Type: " <<  CLEAVAGE  <<
+										" - Catalisys: " << i << " - Catalyst: " <<  allCatalysis.at(i).getCat() <<
+										" - S1: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I() <<
+										" - S2: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II() <<
+										" - Reaction " << allCatalysis.at(i).getReactionID() << endl << "\t\t\t\t" <<
+										": Both forward and backward reaction are catalyzed!!!" << endl <<
+										"\t\t\t\t" << "-----------------------------------------------------" << endl;
+										//break;
+								}
+							// NO SELF-CATALYSIS CONTROL
+		//					if(allCatalysis.at(i).getCat() < (acs_longInt)firingDisk.size())
+		//					{
+		//						if((allCatalysis.at(i).getCat() == allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()) ||
+		//						   (allCatalysis.at(i).getCat() == allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_III()))
+		//						{
+		//							cout << "WARNING*** CLEAVAGE -> Species " << allCatalysis.at(i).getCatId() << " is a firing disk species and it cannot catalize the formation of itself: cat ID "
+		//							     << i << " - Rct ID " << allCatalysis.at(i).getReactionID() << endl;
+		//							//flagControl = false;
+		//						}
+		//					}
+						}else{ // CONDENSATION
+								if(!notInverseReactionAlreadyCatalyzed(CONDENSATION,
+													   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I(),
+													   allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II()))
+								{
+										flagControl = false;
+										cout << endl << "\t\t\tERROR: Rct Type: " << CONDENSATION <<
+										" - Catalisys: " << i << " - Catalyst: " <<  allCatalysis.at(i).getCat() <<
+										" - S1: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I() <<
+										" - S2: " << allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_II() <<
+										" - Reaction " << allCatalysis.at(i).getReactionID() << endl << "\t\t\t\t" <<
+										": Both forward and backward reaction are catalyzed!!!" << endl <<
+										"\t\t\t\t" << "-----------------------------------------------------" << endl;
+										//break;
+								}
+							// NO SELF-CATALYSIS CONTROL
+		//					if(allCatalysis.at(i).getCat() < (acs_longInt)firingDisk.size())
+		//					{
+		//						if((allCatalysis.at(i).getCat() == allReactions.at(allCatalysis.at(i).getReactionID()).getSpecies_I()))
+		//						{
+		//							cout << "WARNING*** CONDENSATION -> Species " << allCatalysis.at(i).getCatId() << " is a firing disk species and it cannot catalize the formation of itself: cat ID "
+		//							<< i << " - Rct ID " << allCatalysis.at(i).getReactionID() << endl;
+		//							//flagControl = false;
+		//						}
+		//					} // end if(allCatalysis.at(i).getCatId() < (acs_longInt)firingDisk.size())
+						} // end if(allReactions.at(allCatalysis.at(i).getReactionID()).getType() == CLEAVAGE)
+					} // end if(main_rev_rct_allowed == false)
 				} // end for(acs_longInt i = 0; i < getNumberOfCatalysis() - 1; i++)
 			}else{ // end if(tmpCatNum > 0) If there are catalysis
 				cout << "\t\t\t	CATALYSED REACTIONS NOT PRESENT!!! " << CONDENSATION << endl;
@@ -3397,7 +3401,7 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
 						gillespieTotalScore += temp_score;
 						gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
 						// Update single species gillespie engagements list
-						try{
+/*						try{ // Until the new Gillespie computation enhancement these lines are commented.
 							allSpecies.at(tmpIDI).insertGillID(allGillespieScores.back().getID());
 							allSpecies.at(tmpIDII).insertGillID(allGillespieScores.back().getID());
 						}catch(exception&e){
@@ -3408,7 +3412,7 @@ void environment::performSingleGilleSpieIntroduction(acs_longInt tmpAmountI, acs
 								 << " || type: " << tmp__rctType << " || RCTID: "  << tmpRctID << " || Catalysis: " << tmpIDCatalysis << endl;
 							cerr << "exceptioncaught:" << e.what() << endl;
 							ExitWithError("performSimgleGilleSpieIntroduction","exceptionerrorthrown");
-						}
+						}*/
 							// If the theoretical product is not evaluated gillespieNewSpeciesScore is incremented
 						if((tmp__rctType == CONDENSATION) || (tmp__rctType == ENDO_CONDENSATION) || (tmp__rctType == SPONTANEOUS_CONDENSATION))
 						{
@@ -6188,6 +6192,7 @@ void environment::showGlobalParameter()
 		cout << "\t|- Energy Carriers concentration: " << ECConcentration << endl;
 		cout << "\t|- Reaction Probability: " << reactionProbability << endl;
 		cout << "\t|- cleavage Probability: " << cleavageProbability << endl;
+		cout << "\t|- Reverse reactions as main reactions possibility: " << main_rev_rct_allowed << endl;
 		cout << "\t|- Reverse Reactions: " << reverseReactions << endl;
         cout << "\t|- Ratio between forward and backward reactions: " << revRctRatio << endl;
 		cout << "\t|- ASSOCIATION kinetic constant: " << K_ass << endl;
@@ -6708,6 +6713,9 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
 
     fidFile << "# Cleavage probability (Condensation Probability is 1 - cleavage probability)" << endl;
     fidFile << "cleavageProbability=" << (double)cleavageProbability << endl << endl;
+
+    fidFile << "# Enable the possibility of having reactions AS MAIN REACTIONS" << endl;
+    fidFile << "main_rev_rct_allowed=" << main_rev_rct_allowed << endl << endl;
 
     fidFile << "# Enable reverse reactions" << endl;
     fidFile << "reverseReactions=" << reverseReactions << endl << endl;
