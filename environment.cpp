@@ -1300,7 +1300,7 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
 					if(((acs_longInt)atoi(strID.c_str()) > lastFiringDiskSpeciesID) &&
 					   (allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0))
 					{
-						numberOfNewSpecies++;
+						incNumberOfNewSpecies((acs_longInt)atoi(strID.c_str()));
 						numberOfNewMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
 					}
 				}else{ // If the species is a complex
@@ -1535,7 +1535,7 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
 					if(((acs_longInt)atoi(strID.c_str()) > lastFiringDiskSpeciesID) &&
 					   (allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount() > 0))
 					{
-						numberOfNewSpecies++;
+						incNumberOfNewSpecies((acs_longInt)atoi(strID.c_str()));
 						numberOfNewMolecules += allSpecies.at((acs_longInt)atoi(strID.c_str())).getAmount();
 					}
 				}else{ // If the species is a complex

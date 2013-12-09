@@ -514,7 +514,7 @@ int main (int argc, char *argv[]) {
                                                     << " - S: " << actSIM << "/" << totalNumberOfSimulations
                                                     << " - T: " << puddle->getActualTime() << "/" << puddle->getNseconds()
                                                     << " - R: " << actSTEP // << "/" << puddle->getNreactions()
-                                                    << " - CT (seconds): " << ((float)clock() - tStart) / CLOCKS_PER_SEC
+                                                    << " - CT (seconds): " << (float)(clock() - tStart) / float(CLOCKS_PER_SEC)
                                                     << " - Gill: " << puddle->getNumberOfGillespieCOPYpossibleRcts() << endl
                                                     << "\t- ENVIRONMENT" << endl
                                                     << "\t\t|- S: " << puddle->getNspecies()
