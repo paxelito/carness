@@ -18,3 +18,5 @@ Thumbs.db
 /Debug/
 .cproject
 .project
+
+.DS_Store
