@@ -2699,8 +2699,6 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 	acs_longInt temp_catalysisID;
 	acs_longInt reaction_u; // This variable will contain the ID of the reaction selected amond all the possible one contained in the Gillespie algorithm
 	acs_double tempTime; // Temporary Delta T
-	acs_longInt tmpCatalyst_ID; //temporary catalyst produced degrading the complex to searching for the substrate in condensation reaction
-	acs_longInt tmpSubstrate_ID; //temporary substrate produced degrading the complex to searching for the second substrate of the condensation reaction
 	acs_double tmpDeltaT; // Time interval between two successive generation
 
 	string nrgBooleanFunction = ""; // This string contains the energetic boolean function of the selected reaction
@@ -2737,34 +2735,47 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 				// tmpActSTEP is the simulation step
 				if(tmpActSTEP > 2)
 				{
-					speciesIter->setNewAge(reactionsTime.at((reactionsTime.size() - 1)) - reactionsTime.at((reactionsTime.size() - 2)));
+					try{
+						speciesIter->setNewAge(reactionsTime.at((reactionsTime.size() - 1)) - reactionsTime.at((reactionsTime.size() - 2)));
+					}catch(exception&e){
+						 cout << "Source Code Line: " << __LINE__ << endl;
+						 cout << "ReactionTime size -> " << reactionsTime.size() << endl;
+						 cerr << "exceptioncaught:" << e.what() << endl;
+						 ExitWithError("performOPTGillespieComputation::update species age","exceptionerrorthrown");
+					}
 				}
 			}else{
 				speciesIter->setNewAge(0); // IF THE SPECIES IS DEAD THE AGE OF LAST DEATH REMAINS
 			}
 
-			if((speciesIter->getAmount() > 0) && (speciesIter->getSolubility() == SOLUBLE) && (speciesIter->getComplexCutPnt() > 0)) // If there are some molecule belonging to this species
+			// If there are complex molecules (if the species is a complex)
+			if((speciesIter->getAmount() > 0) && (speciesIter->getSolubility() == SOLUBLE) && (speciesIter->getComplexCutPnt() > 0))
 			{
-				tmpCatalyst_ID = speciesIter->getCatalyst_ID();
-				tmpSubstrate_ID = speciesIter->getSubstrate_ID();
 
 				if(speciesIter->getSecSubListSize() > 0)
 				{
 					// If so, searching for the catalysed reactions involving the substrate
-					// Check whether the temporary catalyst catalyse a condensation reaction containing the temporary substrate as a first or second molecule
+					// Check whether the temporary catalyst catalyses a condensation reaction containing the temporary substrate as a first or second molecule
 					// WHETHER IT IS A CONDENSATION REACTION
 
 					for(acs_int listCondSecStep = 0; listCondSecStep < speciesIter->getSecSubListSize(); listCondSecStep++)
 					{
 						// CONDENSATION SECOND STEP
 						// Assign species to the temp variables
-						temp_mol_I = speciesIter->getCatalyst_ID(); //catalyst
-						temp_mol_II = speciesIter->getSecSubListID(listCondSecStep); // second substrate
-						temp_catalysisID = speciesIter->getCatalysisIfCpxID(listCondSecStep); // Catalysis ID
-						temp_mol_III = allReactions.at(allCatalysis.at(temp_catalysisID).getReactionID()).getSpecies_I(); // Product
-						temp_mol_IV = complexID; // Complex
-						temp_reactionID = allCatalysis.at(temp_catalysisID).getReactionID(); // reaction ID
-						temp_rctType = CONDENSATION; // reaction type
+						try{
+							temp_mol_I = speciesIter->getCatalyst_ID(); //catalyst
+							temp_mol_II = speciesIter->getSecSubListID(listCondSecStep); // second substrate
+							temp_catalysisID = speciesIter->getCatalysisIfCpxID(listCondSecStep); // Catalysis ID
+							temp_mol_III = allReactions.at(allCatalysis.at(temp_catalysisID).getReactionID()).getSpecies_I(); // Product
+							temp_mol_IV = complexID; // Complex
+							temp_reactionID = allCatalysis.at(temp_catalysisID).getReactionID(); // reaction ID
+							temp_rctType = CONDENSATION; // reaction type
+						}catch(exception&e){
+							 cout << "Source Code Line: " << __LINE__ << endl;
+							 cout << "Second condensation step species search, second substrate list size  -> " << speciesIter->getSecSubListSize() << endl;
+							 cerr << "exceptioncaught:" << e.what() << endl;
+							 ExitWithError("performOPTGillespieComputation::searching for second substrates","exceptionerrorthrown");
+						}
 
 						if(debugLevel == COMPLEXSTUFF)
 						{
@@ -3068,170 +3079,171 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 	acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
 	if((acs_longInt)allGillespieScores.size() > 0)
 	{
-            if(debugLevel == SMALL_DEBUG) printGillespieStructure();
+		if(debugLevel == SMALL_DEBUG) printGillespieStructure();
 
-            // SELECT REACTION WITHIN THE GILLESPIE STRUCTURE
-            if((acs_longInt)allGillespieScores.size() == 1)
-            {
-                reaction_u = 0;
-            }else{
-            	try{
-					reaction_u = returnSelectionIdFromAWeightProbVector(gillespieCumulativeStepScoreList, gillespieCumulativeStepScoreList.back(), tmpRndDoubleGen, __LINE__);
-					if(debugLevel == GILLESPIESTUFF){
-						printGillespieStructure();
-						printInitialCondition();
-						cin.ignore().get();
-						//cout <<  allGillespieScores.at(reaction_u) << endl;
-					}
-            	}catch(exception&e){
-				     cout << "Source Code Line: " << __LINE__ << endl;
-				     cerr << "exceptioncaught:" << e.what() << endl;
-				     ExitWithError("performOPTGillespieComputation::Gillespie selection","exceptionerrorthrown");
+		// SELECT REACTION WITHIN THE GILLESPIE STRUCTURE
+		if((acs_longInt)allGillespieScores.size() == 1)
+		{
+			reaction_u = 0;
+		}else{
+			try{
+				reaction_u = returnSelectionIdFromAWeightProbVector(gillespieCumulativeStepScoreList, gillespieCumulativeStepScoreList.back(), tmpRndDoubleGen, __LINE__);
+				if(debugLevel == GILLESPIESTUFF){
+					printGillespieStructure();
+					printInitialCondition();
+					cin.ignore().get();
+					//cout <<  allGillespieScores.at(reaction_u) << endl;
 				}
-            }
+			}catch(exception&e){
+				 cout << "Source Code Line: " << __LINE__ << endl;
+				 cerr << "exceptioncaught:" << e.what() << endl;
+				 ExitWithError("performOPTGillespieComputation::Gillespie selection","exceptionerrorthrown");
+			}
+		}
 
-            // CREATE RANDOM NUMBER TO COMPUTE THE TIME
+		// CREATE RANDOM NUMBER TO COMPUTE THE TIME
 
-            tmpDeltaT = ((1 / gillespieTotalScore) * log(1 / tmpRndDoubleGen()));
+		tmpDeltaT = ((1 / gillespieTotalScore) * log(1 / tmpRndDoubleGen()));
 
-            // If deltaT is lower than 10 seconds, it is fixed to 10 second in order to continue the simulation
-            if((tmpDeltaT) > MINIMALRCTTIMEMULTI*minimalTimeForOneMols)
-            {
+		// If deltaT is lower than 10 seconds, it is fixed to 10 second in order to continue the simulation
+		if((tmpDeltaT) > MINIMALRCTTIMEMULTI*minimalTimeForOneMols)
+		{
+			tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+			goReaction = false;
+		}
+
+		if(debugLevel == SMALL_DEBUG)
+			cout << "gillespieTotalScore: " << gillespieTotalScore << " G size: " << allGillespieScores.size() << " delta T " << tmpDeltaT << endl;
+
+		if(goReaction)
+		{
+			if(reactionsTime.size() > 0)
+			{
+				tempTime = reactionsTime.at(reactionsTime.size() - 1) + tmpDeltaT;
+				timeSinceTheLastInFlux += tmpDeltaT;
+			}else{
+				tempTime = 0.0;
+			}
+			reactionsTime.push_back(tempTime);
+			setActualTime(tempTime);
+			gillespieReactionsSelected.push_back(reaction_u);
+			allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+
+			// =^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^
+			// PERFORM REACTION SELECTED BEFORE
+			// ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=
+			// Compute Gillespie mean
+			gillespieMean = gillespieTotalScore / (acs_longInt)allGillespieScores.size();
+			if(gillespieTotalScore > 0){ratioBetweenNewGillTotGill = gillespieNewSpeciesScore / gillespieTotalScore;}else{ratioBetweenNewGillTotGill=0;}
+			if(gillespieTotalScore > 0){ratioBetweenReverseAndTotalScore = reverseReactionsGillScore / gillespieTotalScore;}else{ratioBetweenReverseAndTotalScore=0;}
+			if(!devStd()) // compute Gillespie score vector standard deviation
+				 ExitWithError("devStd", "Problems during Gillespie score standard deviation computation");
+			if(!entropy()) // compute Gillespie score vector entropy
+				 ExitWithError("entropy", "Problems during Gillespie score entropy computation");
+
+			// PERFORM REACTION
+			try{
+				if(!performReaction(reaction_u, tmpRndDoubleGen, tmpActGEN, tmpActSIM, tmpActSTEP, tmpStoringPath))
+							ExitWithError("performReaction", "Problems during the reaction computation");
+			}catch(exception&e){
+				 cout << "Source Code Line: " << __LINE__ << endl;
+				 cerr << "exceptioncaught:" << e.what() << endl;
+				 ExitWithError("performOPTGillespieComputation::Perform Reaction","exceptionerrorthrown");
+			}
+
+			// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			// CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
+			// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			if(volumeGrowth) changeVolume(tmpDeltaT);
+
+		}else{
+			gillespieMean = 0;
+			gillespieSD = 0;
+			gillespieEntropy = 0;
+			if(reactionsTime.size() > 0)
+			{
+				tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+				timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 				tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-				goReaction = false;
-            }
+			}else{
+				tempTime = 0.0;
+			}
+			reactionsTime.push_back(tempTime);
+			setActualTime(tempTime);
+			gillespieReactionsSelected.push_back(0);
+			allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
-            if(debugLevel == SMALL_DEBUG)
-                cout << "gillespieTotalScore: " << gillespieTotalScore << " G size: " << allGillespieScores.size() << " delta T " << tmpDeltaT << endl;
+			if(debugLevel >= RUNNING_VERSION)
+							cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
+		}
 
-            if(goReaction)
-            {
-                if(reactionsTime.size() > 0)
-                {
-                    tempTime = reactionsTime.at(reactionsTime.size() - 1) + tmpDeltaT;
-                    timeSinceTheLastInFlux += tmpDeltaT;
-                }else{
-                    tempTime = 0.0;
-                }
-                reactionsTime.push_back(tempTime);
-                setActualTime(tempTime);
-                gillespieReactionsSelected.push_back(reaction_u);
-                allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+	}else{ // If there are not possible reactions
+		gillespieMean = 0;
+		gillespieSD = 0;
+		gillespieEntropy = 0;
+		ratioBetweenNewGillTotGill = 0;
+		if(reactionsTime.size() > 0)
+		{
+				tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+				timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+				tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+		}else{
+				tempTime = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+				timeSinceTheLastInFlux = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+				tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+		}
+		reactionsTime.push_back(tempTime);
+		setActualTime(tempTime);
+		gillespieReactionsSelected.push_back(0);
+		allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
-                // =^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^
-                // PERFORM REACTION SELECTED BEFORE
-                // ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=
-                // Compute Gillespie mean
-                gillespieMean = gillespieTotalScore / (acs_longInt)allGillespieScores.size();
-                if(gillespieTotalScore > 0){ratioBetweenNewGillTotGill = gillespieNewSpeciesScore / gillespieTotalScore;}else{ratioBetweenNewGillTotGill=0;}
-                if(gillespieTotalScore > 0){ratioBetweenReverseAndTotalScore = reverseReactionsGillScore / gillespieTotalScore;}else{ratioBetweenReverseAndTotalScore=0;}
-                if(!devStd()) // compute Gillespie score vector standard deviation
-                     ExitWithError("devStd", "Problems during Gillespie score standard deviation computation");
-                if(!entropy()) // compute Gillespie score vector entropy
-                     ExitWithError("entropy", "Problems during Gillespie score entropy computation");
+		if(debugLevel >= RUNNING_VERSION)
+				cout << "\t\t\t|- NO REACTIONS AT THIS STEP" << endl;
+	} // end if((acs_longInt)allGillespieScores.size() > 0)
 
-                // PERFORM REACTION
-                try{
-                	if(!performReaction(reaction_u, tmpRndDoubleGen, tmpActGEN, tmpActSIM, tmpActSTEP, tmpStoringPath))
-                                ExitWithError("performReaction", "Problems during the reaction computation");
-                }catch(exception&e){
-				     cout << "Source Code Line: " << __LINE__ << endl;
-				     cerr << "exceptioncaught:" << e.what() << endl;
-				     ExitWithError("performOPTGillespieComputation::Perform Reaction","exceptionerrorthrown");
-				}
+	// Store perform reaction time and start remaining processes timer
+	performReactionPartialTimes.push_back(((float)clock() - performReactionPartialTimer) / CLOCKS_PER_SEC);
+	remainingProcessesPartialTimer = clock();
 
-                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                // CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
-                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                if(volumeGrowth) changeVolume(tmpDeltaT);
-
-            }else{
-				gillespieMean = 0;
-				gillespieSD = 0;
-				gillespieEntropy = 0;
-				if(reactionsTime.size() > 0)
-				{
-					tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-					timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-					tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-				}else{
-					tempTime = 0.0;
-				}
-				reactionsTime.push_back(tempTime);
-				setActualTime(tempTime);
-				gillespieReactionsSelected.push_back(0);
-				allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
-
-				if(debugLevel >= RUNNING_VERSION)
-								cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
-            }
-
-        }else{ // If there are not possible reactions
-            gillespieMean = 0;
-            gillespieSD = 0;
-            gillespieEntropy = 0;
-            ratioBetweenNewGillTotGill = 0;
-            if(reactionsTime.size() > 0)
-            {
-                    tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-                    timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-                    tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-            }else{
-                    tempTime = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-                    timeSinceTheLastInFlux = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-                    tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-            }
-            reactionsTime.push_back(tempTime);
-            setActualTime(tempTime);
-            gillespieReactionsSelected.push_back(0);
-            allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
-
-            if(debugLevel >= RUNNING_VERSION)
-                    cout << "\t\t\t|- NO REACTIONS AT THIS STEP" << endl;
-        } // end if((acs_longInt)allGillespieScores.size() > 0)
-
-        // Store perform reaction time and start remaining processes timer
-        performReactionPartialTimes.push_back(((float)clock() - performReactionPartialTimer) / CLOCKS_PER_SEC);
-        remainingProcessesPartialTimer = clock();
-
-        // If the system is open influx and efflux processes are performed
-        if(influx_rate > 0)
-        {
-        	//     acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
+	// If the system is open influx and efflux processes are performed
+	if(influx_rate > 0)
+	{
+		//     acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
+		if(debugLevel >= SMALL_DEBUG)
+		{
+			cout << "\t\t\t|- REFILL --------" << endl;
+			cout << "\t\t\t\t|- Minimal Time for one molecule: " << minimalTimeForOneMols <<
+											" - Time since the last influx: " << timeSinceTheLastInFlux <<  endl;
+		}
+		// If the time interval betweem two successive influx is enough to introduce at least one new mol...
+		if(timeSinceTheLastInFlux > minimalTimeForOneMols)
+		{
 			if(debugLevel >= SMALL_DEBUG)
 			{
-				cout << "\t\t\t|- REFILL --------" << endl;
-				cout << "\t\t\t\t|- Minimal Time for one molecule: " << minimalTimeForOneMols <<
-												" - Time since the last influx: " << timeSinceTheLastInFlux <<  endl;
+				cout << "\t\t\t\t|- Time: " << reactionsTime.at(reactionsTime.size() - 1)
+					 << " - Time needed for 1 molecule incoming: " << minimalTimeForOneMols
+					 << " - Time Since The Last InFlux: " << timeSinceTheLastInFlux << endl;
 			}
-			// If the time interval betweem two successive influx is enough to introduce at least one new mol...
-			if(timeSinceTheLastInFlux > minimalTimeForOneMols)
-			{
-				if(debugLevel >= SMALL_DEBUG)
-				{
-					cout << "\t\t\t\t|- Time: " << reactionsTime.at(reactionsTime.size() - 1)
-						 << " - Time needed for 1 molecule incoming: " << minimalTimeForOneMols
-						 << " - Time Since The Last InFlux: " << timeSinceTheLastInFlux << endl;
-				}
-				// PERFORM REFILL !!!
-				try{
-					if(performRefill(timeSinceTheLastInFlux, minimalTimeForOneMols, tmpRndDoubleGen))
-									timeSinceTheLastInFlux = 0;
-				}catch(exception&e){
-				     cout << "Source Code Line: " << __LINE__ << endl;
-				     cerr << "exceptioncaught:" << e.what() << endl;
-				     ExitWithError("performOPTGillespieComputation::Perform Refill","exceptionerrorthrown");
-				}
-			}
-			// PERFORM EFFLUX PROCESS
+			// PERFORM REFILL !!!
 			try{
-				performMoleculesEfflux(tmpDeltaT, tmpRndDoubleGen);
+				if(performRefill(timeSinceTheLastInFlux, minimalTimeForOneMols, tmpRndDoubleGen))
+								timeSinceTheLastInFlux = 0;
 			}catch(exception&e){
-			     cout << "Source Code Line: " << __LINE__ << endl;
-			     cerr << "exceptioncaught:" << e.what() << endl;
-			     ExitWithError("performOPTGillespieComputation::Perform molecules efflux","exceptionerrorthrown");
+				 cout << "Source Code Line: " << __LINE__ << endl;
+				 cerr << "exceptioncaught:" << e.what() << endl;
+				 ExitWithError("performOPTGillespieComputation::Perform Refill","exceptionerrorthrown");
 			}
-         }
+		}
+		// PERFORM EFFLUX PROCESS
+		try{
+			performMoleculesEfflux(tmpDeltaT, tmpRndDoubleGen);
+		}catch(exception&e){
+			 cout << "Source Code Line: " << __LINE__ << endl;
+			 cerr << "exceptioncaught:" << e.what() << endl;
+			 ExitWithError("performOPTGillespieComputation::Perform molecules efflux","exceptionerrorthrown");
+		}
+	 }
+
 
     // Perform molecule charging
     if(energy == ENERGYBASED)
@@ -6125,7 +6137,7 @@ void environment::updateSpeciesAges()
     }
     catch(exception&e)
     {
-        cerr << "exceptioncaught:" << e.what() << endl;
+        cerr << "exceptioncaught:" << e.what() << " line: "<< __LINE__ << endl;
         ExitWithError("error in updateSpeciesAges method","exceptionerrorthrown");
     }
 }

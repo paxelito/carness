@@ -2,6 +2,9 @@ Software documentation is available in the doc folder.
 
 VERSION HISTORY 
 
+Build4.8b20131209.62
+New try and catch have been added to monitor bugs and crashes. 
+
 Build4.8b20131125.61
 A bug in the second step of the condensation has been fixed. 
 

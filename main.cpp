@@ -1,7 +1,7 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131125.61)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131209.62)
  * \author Alessandro Filisetti
- * \version 4.8 (20131125.61)
- * \date 2013-11-25
+ * \version 4.8 (20131209.62)
+ * \date 2013-12-09
  * sourceforge repository -- https://carness.svn.sourceforge.net/svnroot/carness/
  * git repository -- https://github.com/paxelito/carness
  *
