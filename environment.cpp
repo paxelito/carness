@@ -2773,7 +2773,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 								temp_rctType = CONDENSATION; // reaction type
 							}catch(exception&e){
 								 cout << "Source Code Line: " << __LINE__ << endl;
-								 speciesIter->showGillEngagement();
+								 //speciesIter->showGillEngagement();
 								 cout << "Second condensation step species search, second substrate list size  -> " << speciesIter->getSecSubListSize() << endl;
 								 cerr << "exceptioncaught:" << e.what() << endl;
 								 ExitWithError("performOPTGillespieComputation::searching for second substrates","exceptionerrorthrown");
@@ -3052,7 +3052,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 								gillespieTotalScore += tempScore;
 								gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
 								// UPDATE SPECIES GILLESPIE ENGAGEMENT
-								allSpecies.at(temp_mol_I).insertGillID(allGillespieScores.back().getID());
+								// allSpecies.at(temp_mol_I).insertGillID(allGillespieScores.back().getID());
 								// In the case of cleavage molII and molIII are products, if they are not evaluated yet, hence probability of new species increases
 								if((allSpecies.at(temp_mol_II).getEvaluated() == 0) || (allSpecies.at(temp_mol_III).getEvaluated() == 0)) gillespieNewSpeciesScore += tempScore;
 							}

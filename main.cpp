@@ -602,7 +602,7 @@ int main (int argc, char *argv[]) {
                         }
                 }else{ // for if(puddle->getCurrentAttempts() <= puddle->getMAXattempts())
                   // SIMULATION IS STOPPED
-                  ExitWithError("MAIN", "FATAL ERROR: The number of MAXIMUM temptatives has been exceeded!!!");
+                  ExitWithError("MAIN", "FATAL ERROR: The number of MAXIMUM attempts has been exceeded!!!");
                   break;
 
                 }
