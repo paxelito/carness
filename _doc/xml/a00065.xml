@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00065" kind="file">
+    <compoundname>crea_influx_semplice.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00065_1a9e9d25cb3f9488c7e910885a0eed2ffa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>function[influx]</definition>
+        <argsstring>[influx]</argsstring>
+        <name>function</name>
+        <initializer>= crea_influx_semplice(<ref refid="a00071_1a2935a4c4576291c52f0dd2eb070e55e0" kindref="member">lMaxInflux</ref>,<ref refid="a00071_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)
+
+% total Number of <ref refid="a00022" kindref="compound">species</ref>
+sn = 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_influx_semplice.m" line="3" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_influx_semplice.m" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00065_1a6f6ccfcf58b31cb6412107d9d5281426" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <initializer>= 1:<ref refid="a00071_1a2935a4c4576291c52f0dd2eb070e55e0" kindref="member">lMaxInflux</ref>
+   sn = sn + length(<ref refid="a00071_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)^i</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_influx_semplice.m" line="7" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_influx_semplice.m" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00065_1ae426dd61c2988c7949ce81e0d7e08634" prot="public" static="no" mutable="no">
+        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end influx</definition>
+        <argsstring></argsstring>
+        <name>influx</name>
+        <initializer>= zeros(sn,2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_influx_semplice.m" line="11" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_influx_semplice.m" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00065_1ac86694252f8dfdb19aaeadc4b7c342c6" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for j</definition>
+        <argsstring></argsstring>
+        <name>j</name>
+        <initializer>= 1:sn
+   <ref refid="a00065_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>(j,1)=j</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_influx_semplice.m" line="12" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_influx_semplice.m" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00065_1a902e747aeec6b345d3a057099152f41f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>influx</definition>
+        <argsstring>(j, 2)</argsstring>
+        <name>influx</name>
+        <param>
+          <type><ref refid="a00068_1ac86694252f8dfdb19aaeadc4b7c342c6" kindref="member">j</ref></type>
+        </param>
+        <param>
+          <type>2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_influx_semplice.m" line="14" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="a00065_1a9e9d25cb3f9488c7e910885a0eed2ffa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[influx]<sp/>=<sp/>crea_influx_semplice(<ref refid="a00071_1a2935a4c4576291c52f0dd2eb070e55e0" kindref="member">lMaxInflux</ref>,<ref refid="a00107_1aca44f11e84467e8090217b689da68785" kindref="member">alphabet</ref>)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">%<sp/>total<sp/>Number<sp/>of<sp/><ref refid="a00022" kindref="compound">species</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">sn<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="7" refid="a00065_1a6f6ccfcf58b31cb6412107d9d5281426" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>1:<ref refid="a00071_1a2935a4c4576291c52f0dd2eb070e55e0" kindref="member">lMaxInflux</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/>sn<sp/>=<sp/>sn<sp/>+<sp/>length(<ref refid="a00107_1aca44f11e84467e8090217b689da68785" kindref="member">alphabet</ref>)^<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="a00065_1ae426dd61c2988c7949ce81e0d7e08634" refkind="member"><highlight class="normal"><ref refid="a00028_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref><sp/>=<sp/>zeros(sn,2);</highlight></codeline>
+<codeline lineno="12" refid="a00065_1ac86694252f8dfdb19aaeadc4b7c342c6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref><sp/>=<sp/>1:sn</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><ref refid="a00028_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>(<ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>,1)=<ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><ref refid="a00028_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>(<ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>,2)=1./sn;<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/crea_influx_semplice.m"/>
+  </compounddef>
+</doxygen>

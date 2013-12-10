@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00038" kind="file">
+    <compoundname>timesAnalysis_PANINI.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00038_1a370f3dd25136a73d619eba0aa2e3bb4b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>function[out]</definition>
+        <argsstring>[out]</argsstring>
+        <name>function</name>
+        <initializer>= timesAnalysis(<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>)
+% function [<ref refid="a00028_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>] = timesAnalysis(<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>)
+%
+% This function collects all the last <ref refid="a00021" kindref="compound">reactions</ref> contained in the <ref refid="a00071_1af3b4ff50e3fefed842dc431f3d32ff0e" kindref="member">times</ref> <ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref>
+% reactions_parameter files <ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref> performs different scatterplot between different dimensions.
+% Output <ref refid="a00028_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref> is <ref refid="a00035_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref> structure containing two variables:
+% out.timesMatrix = all the last row of the <ref refid="a00071_1af3b4ff50e3fefed842dc431f3d32ff0e" kindref="member">times</ref> files
+% out.cct = the correlation coefficients of the out.timesMatrix matrix
+%
+% INPUT
+% <ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref> = <ref refid="a00071_1af28466084b87af2cdc5c7b48f4661f2d" kindref="member">path</ref> of the simulations root 
+
+<ref refid="a00031_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref> = <ref refid="a00068_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/timesAnalysis_PANINI.m" line="1" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/timesAnalysis_PANINI.m" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="a00038_1a370f3dd25136a73d619eba0aa2e3bb4b" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[out]<sp/>=<sp/>timesAnalysis(<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">%<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[out]<sp/>=<sp/>timesAnalysis(<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>)</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">%</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">%<sp/>This<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>collects<sp/>all<sp/>the<sp/>last<sp/><ref refid="a00021" kindref="compound">reactions</ref><sp/>contained<sp/>in<sp/>the<sp/><ref refid="a00028_1a47868b053902b822eab5c738a67a633a" kindref="member">times</ref><sp/><ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">%<sp/>reactions_parameter<sp/>files<sp/><ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/>performs<sp/>different<sp/>scatterplot<sp/>between<sp/>different<sp/>dimensions.</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">%<sp/>Output<sp/><ref refid="a00028_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref><sp/>is<sp/><ref refid="a00025_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref><sp/>structure<sp/>containing<sp/>two<sp/><ref refid="a00037_1a075795b83d470ba58980e465541f16e9" kindref="member">variables</ref>:</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">%<sp/><ref refid="a00028_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.timesMatrix<sp/>=<sp/>all<sp/>the<sp/>last<sp/>row<sp/>of<sp/>the<sp/><ref refid="a00028_1a47868b053902b822eab5c738a67a633a" kindref="member">times</ref><sp/>files</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">%<sp/><ref refid="a00028_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.cct<sp/>=<sp/>the<sp/>correlation<sp/>coefficients<sp/>of<sp/>the<sp/><ref refid="a00028_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.timesMatrix<sp/>matrix</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">%</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">%<sp/>INPUT</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">%<sp/><ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/><ref refid="a00071_1af28466084b87af2cdc5c7b48f4661f2d" kindref="member">path</ref><sp/>of<sp/>the<sp/>simulations<sp/>root<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="a00023_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref><sp/>=<sp/><ref refid="a00025_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>nargin<sp/>&lt;<sp/>1</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/><ref refid="a00023_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref>();<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="a00025_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="a00023_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(</highlight><highlight class="stringliteral">&apos;start<sp/>analysis&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.<ref refid="a00023_1a63b4c2789d7e1513024181d12e4f1b6b" kindref="member">figureVisible</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">%<sp/>READ<sp/>ALL<sp/>THE<sp/>DIRECTORY<sp/>CONTAINING<sp/>SIMULATIONS</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="a00027_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/>dir(&apos;*sim*&apos;);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">%timesMatrix<sp/>=<sp/>zeros(<ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00027_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>),12);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">timesMatrix<sp/>=<sp/>zeros(<ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(simDirs),11);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">%<sp/>For<sp/>each<sp/>folder<sp/>the<sp/>necessary<sp/>computations<sp/>are<sp/>performed</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">for<sp/><ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>=1:<ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(simDirs)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>Go<sp/>into<sp/>the<sp/>results<sp/>folder</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(strcat(simDirs(<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>Select<sp/>Times<sp/><ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/><ref refid="a00021" kindref="compound">reactions</ref><sp/>files</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>timeFiles<sp/>=<sp/>dir(&apos;*<ref refid="a00028_1a47868b053902b822eab5c738a67a633a" kindref="member">times</ref>*&apos;);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00117_1a9016a8f5eafe76e4e8dbb1bc3ce94af5" kindref="member">rctFiles</ref><sp/>=<sp/>dir(&apos;*reactions_parameters*&apos;);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>For<sp/>each<sp/>time<sp/><ref refid="a00121_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/><ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>=1:<ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(timeFiles)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>timeFiles(<ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>).name<sp/>is<sp/>the<sp/>current<sp/><ref refid="a00121_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>times.<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>=<sp/>computer(&apos;arch&apos;);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>strcmp(os,&apos;maci64&apos;)<sp/>||<sp/>strcmp(os,&apos;maci&apos;)<sp/>||<sp/>strcmp(os,&apos;GLNX86&apos;)<sp/>||<sp/>strcmp(os,&apos;GLNXA64&apos;)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>File<sp/>times<sp/>-<sp/>last<sp/>row</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00028_1a0123952c26dc025261f5f36a9f1a1da5" kindref="member">eval</ref>([&apos;[s,timeLastLine]=system(&apos;&apos;tail<sp/>-n<sp/>1<sp/>&apos;,timeFiles(<ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>).name,&apos;&apos;&apos;);&apos;]);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>isstrprop(timeLastLine(<ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref>),<sp/>&apos;<ref refid="a00028_1aae7c98255a05b6029bdfc5e96dc2ab88" kindref="member">cntrl</ref>&apos;),<sp/>timeLastLine(end)<sp/>=<sp/>[];<sp/>end</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeLastLine<sp/>=<sp/>strread(timeLastLine);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesMatrix(<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,1)<sp/>=<sp/>timeLastLine(1:1);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesMatrix(i,2:8)<sp/>=<sp/>timeLastLine(5:11);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>File<sp/>reations_parameters<sp/>-<sp/>last<sp/>row</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00028_1a0123952c26dc025261f5f36a9f1a1da5" kindref="member">eval</ref>([&apos;[t,rctLastLine]=system(&apos;&apos;tail<sp/>-n<sp/>1<sp/>&apos;,<ref refid="a00117_1a9016a8f5eafe76e4e8dbb1bc3ce94af5" kindref="member">rctFiles</ref>(<ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>).name,&apos;&apos;&apos;);&apos;]);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>isstrprop(rctLastLine(end),<sp/>&apos;cntrl&apos;),<sp/>rctLastLine(end)<sp/>=<sp/>[];<sp/>end</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rctLastLine<sp/>=<sp/>strread(rctLastLine);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesMatrix(i,9)<sp/>=<sp/>rctLastLine(10);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesMatrix(i,10)<sp/>=<sp/>rctLastLine(12);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%timesMatrix(i,11)<sp/>=<sp/>timeLastLine(13);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>Windows<sp/><ref refid="a00100_1ac84174dad0b933ca88ebdb79cf3497ec" kindref="member">procedure</ref><sp/>-<sp/>File<sp/>times<sp/>-<sp/>last<sp/>row</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref><sp/>=<sp/>fopen(timeFiles(<ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>).name,&apos;<ref refid="a00027_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref>&apos;);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tvalues<sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref>,&apos;%<ref refid="a00025_1a9c5a71c46b1abb8b7df5ebeac6c81535" kindref="member">f</ref>&apos;,14);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>Stop<sp/>parameter</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>while<sp/>stop<sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>Keep<sp/>going<sp/>until<sp/>you<sp/>reach<sp/>the<sp/>end<sp/>of<sp/>the<sp/><ref refid="a00121_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tvalues2<sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%f&apos;,14);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>checkTvalues2<sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(Tvalues2);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>checkTvalues<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stop<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tvalues<sp/>=<sp/>Tvalues2;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesMatrix(i,1)<sp/>=<sp/>Tvalues(1);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesMatrix(i,2:8)<sp/>=<sp/>Tvalues(5:11);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>stop;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>File<sp/>reactions_parameters<sp/>-<sp/>last<sp/>row</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(<ref refid="a00117_1a9016a8f5eafe76e4e8dbb1bc3ce94af5" kindref="member">rctFiles</ref>(<ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>).name,&apos;r&apos;);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rvalues<sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%f&apos;,12);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stop<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>while<sp/>stop<sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rvalues2<sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%f&apos;,12);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>checkRvalues2<sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(Rvalues2);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>checkRvalues2<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stop<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rvalues<sp/>=<sp/>Rvalues2;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesMatrix(i,9)<sp/>=<sp/>Rvalues(10);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesMatrix(i,10)<sp/>=<sp/>Rvalues(12);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%timesMatrix(i,11)<sp/>=<sp/>Rvalues(13);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>stop;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(&apos;./../..&apos;);<sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">end</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">%compute<sp/>corrcoef<sp/>of<sp/>timeFile</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">cct<sp/>=<sp/>corrcoef(timesMatrix);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">%<sp/>output<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>variable</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><ref refid="a00028_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.cct<sp/>=<sp/>cct;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="a00028_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.timesMatrix<sp/>=<sp/>timesMatrix;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">%CREATE<sp/>FIGURE<sp/>PARAMS</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">%COLS</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">%<sp/>1.RCTS<sp/>-<sp/>2.PossibleReactions<sp/>-<sp/>3.Computational<sp/>time<sp/>-<sp/>4.<ref refid="a00022" kindref="compound">species</ref><sp/>-<sp/>5.molecules<sp/>-</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">%<sp/>6.cpx<sp/>-<sp/>7.cpx<sp/>mols<sp/>-<sp/>8.bricks<sp/>-<sp/>9.gill<sp/>mean<sp/>-<sp/>10.entropy<sp/>-<sp/>11.prob<sp/>new<sp/><ref refid="a00022" kindref="compound">species</ref></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">xlv<sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;Reactions&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Reactions&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Species&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Complexes&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Species&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Molecules&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Reactions&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Bricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Molecules&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Species&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">ylv<sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;Species&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Molecules&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Molecules&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Complexes<sp/>Molecules&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Bricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Bricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Bricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Entropy&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Entropy&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;Entropy&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">nf<sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;rctVSspecies&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;rctVsMols&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;speciesVSmols&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;cpxVScpxMols&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;speciesVSbricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;molsVSbricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;rctVSbricks&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;bricksVSentropy&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;molsVSentropy&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;speciesVSentropy&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">xtp<sp/>=<sp/>[1,1,4,6,4,5,1,8,5,4];</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">ytp<sp/>=<sp/>[4,5,5,7,8,8,8,10,10,10];</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><ref refid="a00027_1aef429e9a25e0d4d70aa2037a59816956" kindref="member">~isdir</ref>(</highlight><highlight class="stringliteral">&apos;0_statistics&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00068_1abcaf3fe79479456b56924747f1bca0d9" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="a00025_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(&apos;0_statistics&apos;)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">for<sp/><ref refid="a00025_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref>=1:length(xtp)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.<ref refid="a00023_1a63b4c2789d7e1513024181d12e4f1b6b" kindref="member">figureVisible</ref><sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00061_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(&apos;Visible&apos;,&apos;off&apos;)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00061_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(<ref refid="a00025_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref>)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>plot(timesMatrix(:,xtp(<ref refid="a00025_1ab7005e24e9bb6ea9b6e14c4ac2614a31" kindref="member">k</ref>)),timesMatrix(:,ytp(k)),<sp/>&apos;ko&apos;)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>grid<sp/>on</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00028_1ab178d77fe9330d344e5b21984e6dfd70" kindref="member">set</ref>(gca,&apos;fontsize&apos;,15,&apos;fontname&apos;,&apos;<ref refid="a00028_1a47868b053902b822eab5c738a67a633a" kindref="member">times</ref>&apos;);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00028_1aa8934823385223a40006ae4f0df62618" kindref="member">xlabel</ref>(xlv(k),<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00028_1af0c349e5509d59e03a393902ab2d229f" kindref="member">ylabel</ref>(ylv(k),<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00028_1a0123952c26dc025261f5f36a9f1a1da5" kindref="member">eval</ref>([&apos;print<sp/>-depsc<sp/>&apos;,<sp/>int2str(k),<sp/>&apos;_&apos;,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">(nf(k)),&apos;_corr.eps;&apos;]);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00028_1a0123952c26dc025261f5f36a9f1a1da5" kindref="member">eval</ref>([&apos;<ref refid="a00061_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>&apos;,int2str(k),<sp/>&apos;=<sp/>gcf;&apos;]);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>%<ref refid="a00028_1a0123952c26dc025261f5f36a9f1a1da5" kindref="member">eval</ref>([&apos;<ref refid="a00028_1a4a59d6b572aedc6e6a74b744dbf50407" kindref="member">saveas</ref>(figure&apos;,<sp/>int2str(k),<sp/>&apos;,&apos;,<sp/>&apos;&apos;&apos;&apos;,int2str(k),<sp/>&apos;_&apos;,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">(nf(k)),&apos;_corr.fig&apos;&apos;&apos;,&apos;);&apos;]);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00028_1a0123952c26dc025261f5f36a9f1a1da5" kindref="member">eval</ref>([&apos;<ref refid="a00028_1a4a59d6b572aedc6e6a74b744dbf50407" kindref="member">saveas</ref>(figure&apos;,<sp/>int2str(k),<sp/>&apos;,&apos;,<sp/>&apos;&apos;&apos;&apos;,int2str(k),<sp/>&apos;_&apos;,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">(nf(k)),&apos;_corr.fig&apos;&apos;&apos;,&apos;);&apos;]);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">save<sp/>&apos;timeLastRct.csv&apos;<sp/>timesMatrix<sp/>-ASCII<sp/>-TABS</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><ref refid="a00025_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(&apos;../&apos;);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">cd(<ref refid="a00023_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/timesAnalysis_PANINI.m"/>
+  </compounddef>
+</doxygen>

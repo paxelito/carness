@@ -1,0 +1,214 @@
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/main.py" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/main.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBmain\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBmain\&.parser\fP"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.args\fP = parser\&.parse_args()"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.strPath\fP = os\&.path\&.abspath(args\&.strPath)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.tmpDirs\fP = sort(os\&.listdir(strPath))"
+.br
+.ti -1c
+.RI "string \fBmain\&.ndn\fP = '_0_new_allStatResults'"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.newdirAllResults\fP = os\&.path\&.join(strPath, ndn)"
+.br
+.ti -1c
+.RI "int \fBmain\&._CLOSE_\fP = 0"
+.br
+.ti -1c
+.RI "int \fBmain\&._PROTO_\fP = 1"
+.br
+.ti -1c
+.RI "int \fBmain\&._CSTR_\fP = 2"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fname_initRafRes\fP = os\&.path\&.join(newdirAllResults, '0_initRafAnalysis\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fname_initRafResLIST\fP = os\&.path\&.join(newdirAllResults, '0_initRafAnalysisLIST\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fname_initRafResALL\fP = os\&.path\&.join(newdirAllResults, '0_initRafAnalysisALL\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fid_initRafRes\fP = open(fname_initRafRes, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fid_initRafResLIST\fP = open(fname_initRafResLIST, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fid_initRafResALL\fP = open(fname_initRafResALL, 'w')"
+.br
+.ti -1c
+.RI "string \fBmain\&.strToWrite\fP = 'Folder\\tP\\tAC\\tM\\tRAFsize\\tClosureSize\\tCatsSize\\tuRAF\\n'"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.totDirName\fP = os\&.path\&.join(strPath,tmpDir)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.resDirPath\fP = os\&.path\&.abspath(os\&.path\&.join('\&./', args\&.resFolder))"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.conf\fP = readfiles\&.readConfFile(totDirName)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.foodList\fP = dm\&.generateFluxList(totDirName, sysType)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.rcts\fP = readfiles\&.loadAllData(totDirName,'_acsreactions\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.cats\fP = readfiles\&.loadAllData(totDirName,'_acscatalysis\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.numberOfGen\fP = len(glob\&.glob(os\&.path\&.join(resDirPath,'times_*')))"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.strZeros\fP = readfiles\&.zeroBeforeStrNum(ngen, numberOfGen)"
+.br
+.ti -1c
+.RI "string \fBmain\&.fName\fP = 'RAF_structuresInTime_analysis_gen_'"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fname_inTimeRafRes\fP = os\&.path\&.join(newdirAllResults, fName)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fid_inTimeRafRes\fP = open(fname_inTimeRafRes, 'w')"
+.br
+.ti -1c
+.RI "\fBmain\&.potential\fP = False"
+.br
+.ti -1c
+.RI "string \fBmain\&.strRctZero\fP = 'reactions_'"
+.br
+.ti -1c
+.RI "string \fBmain\&.strCatZero\fP = 'catalysis_'"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.rctFilesZero\fP = sorted(glob\&.glob(os\&.path\&.join(resDirPath,strRctZero)))"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.catFilesZero\fP = sorted(glob\&.glob(os\&.path\&.join(resDirPath,strCatZero)))"
+.br
+.ti -1c
+.RI "string \fBmain\&.strRct\fP = 'reactions_'"
+.br
+.ti -1c
+.RI "string \fBmain\&.strCat\fP = 'catalysis_'"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.rctFiles\fP = sorted(glob\&.glob(os\&.path\&.join(resDirPath,strRct)))"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.catFiles\fP = sorted(glob\&.glob(os\&.path\&.join(resDirPath,strCat)))"
+.br
+.ti -1c
+.RI "list \fBmain\&.sngTime\fP = conf[2]"
+.br
+.ti -1c
+.RI "int \fBmain\&.actTime\fP = 0"
+.br
+.ti -1c
+.RI "list \fBmain\&.procrcts\fP = rcts[rcts[:,5] > 0,:]"
+.br
+.ti -1c
+.RI "list \fBmain\&.proccats\fP = cats[cats[:,3] > 0,:]"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.R\fP = raf\&.rafDynamicComputation(fid_inTimeRafRes, actTime, procrcts[:,0:5], proccats[:,0:5], foodList, potential, rcts, cats, debug=args\&.debug)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.lastRct\fP = readfiles\&.loadAllData(totDirName,rctFiles[-1])"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.lastCat\fP = readfiles\&.loadAllData(totDirName,catFiles[-1])"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fname_dynRafRes\fP = os\&.path\&.join(newdirAllResults, fName)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fid_dynRafRes\fP = open(fname_dynRafRes, 'w')"
+.br
+.ti -1c
+.RI "string \fBmain\&.strRctPar\fP = 'reactions_parameters_'"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.rctParamFile\fP = sorted(glob\&.glob(os\&.path\&.join(resDirPath,strRctPar)))"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.fid\fP = open(rctParamFile[0], '\fBr\fP')"
+.br
+.ti -1c
+.RI "int \fBmain\&.previousTime\fP = 0"
+.br
+.ti -1c
+.RI "\fBmain\&.decayTime\fP = args\&.decay"
+.br
+.ti -1c
+.RI "int \fBmain\&.condensation_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBmain\&.endo_condensation_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBmain\&.cleavage_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBmain\&.endo_cleavage_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBmain\&.nAnal\fP = 1"
+.br
+.ti -1c
+.RI "int \fBmain\&.rctCurrID\fP = 0"
+.br
+.ti -1c
+.RI "int \fBmain\&.catCurrID\fP = 0"
+.br
+.ti -1c
+.RI "\fBmain\&.timeInterval\fP = \fBrtime\fP-\fBpreviousTime\fP"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.graph\fP = network\&.removeRareRcts(graph,2,3,4,\fBtimeInterval\fP)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.graphSUB\fP = network\&.removeRareRcts(graphSUB,2,3,4,\fBtimeInterval\fP)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.onrcts\fP = network\&.removeRareRcts(onrcts,5,6,7,\fBtimeInterval\fP)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.oncats\fP = network\&.removeRareRcts(oncats,3,4,5,\fBtimeInterval\fP)"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.positionR\fP = ((onrcts[:,1] == \fBcc\fP) & (onrcts[:,2] == \fBmol_I\fP) & (onrcts[:,3] == \fBmol_II\fP))"
+.br
+.ti -1c
+.RI "tuple \fBmain\&.position\fP = ((oncats[:,1] == \fBcat\fP) & (oncats[:,2] == onrcts[positionR,0]))"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

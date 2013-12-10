@@ -1,0 +1,905 @@
+.TH "acsSCCanalysis" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+acsSCCanalysis \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBzeroBeforeStrNum\fP"
+.br
+.ti -1c
+.RI "def \fBloadReactionGraph\fP"
+.br
+.ti -1c
+.RI "def \fBloadSpecificReactionGraph\fP"
+.br
+.ti -1c
+.RI "def \fBloadSpecificReactionSubGraph\fP"
+.br
+.ti -1c
+.RI "def \fBsaveGraphToFile\fP"
+.br
+.ti -1c
+.RI "def \fBsaveGraphSUBToFile\fP"
+.br
+.ti -1c
+.RI "def \fBsaveNrgToFile\fP"
+.br
+.ti -1c
+.RI "def \fBsaveGillToFile\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBStrPath\fP = os\&.path\&.abspath(StrPath)"
+.br
+.ti -1c
+.RI "tuple \fBtoday\fP = dt\&.date\&.today()"
+.br
+.ti -1c
+.RI "tuple \fBmswindows\fP = (sys\&.platform == 'win32')"
+.br
+.ti -1c
+.RI "string \fBcmdFileName\fP = \fBStrPath\fP+'/'"
+.br
+.ti -1c
+.RI "tuple \fBcmdFileFid\fP = open(\fBcmdFileName\fP, '\fBa\fP')"
+.br
+.ti -1c
+.RI "string \fBstrToWrite\fP = '\\tReaction Probability'"
+.br
+.ti -1c
+.RI "int \fBinitilizeGraphStructure\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBgraph\fP = \fBloadSpecificReactionGraph\fP()"
+.br
+.ti -1c
+.RI "tuple \fBgraphSUB\fP = \fBloadSpecificReactionSubGraph\fP()"
+.br
+.ti -1c
+.RI "tuple \fBtmpRctFileToLoadSplitString\fP = \fBtmpRctFileToLoad\&.split\fP('_')"
+.br
+.ti -1c
+.RI "tuple \fBinitRctId\fP = int(\fBtmpRctFileToLoadSplitString\fP[len(\fBtmpRctFileToLoadSplitString\fP)-2])"
+.br
+.ti -1c
+.RI "list \fBinitTempTime\fP = \fBtmpRctFileToLoadSplitString\fP[len(\fBtmpRctFileToLoadSplitString\fP)-1]"
+.br
+.ti -1c
+.RI "tuple \fBinitTime\fP = float(\fBinitTempTime\fP[0:len(\fBinitTempTime\fP)-4])"
+.br
+.ti -1c
+.RI "tuple \fBtmpDirs\fP = sort(os\&.listdir(\fBStrPath\fP))"
+.br
+.ti -1c
+.RI "tuple \fBtotDirName\fP = os\&.path\&.join(\fBStrPath\fP,tmpDir)"
+.br
+.ti -1c
+.RI "tuple \fBresDirPath\fP = os\&.path\&.abspath(os\&.path\&.join('\&./', 'res'))"
+.br
+.ti -1c
+.RI "tuple \fBnumberOfGen\fP = len(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,'times_*')))"
+.br
+.ti -1c
+.RI "tuple \fBstrZeros\fP = \fBzeroBeforeStrNum\fP(nGen, \fBnumberOfGen\fP)"
+.br
+.ti -1c
+.RI "string \fBparamFile\fP = 'acsm2s\&.conf'"
+.br
+.ti -1c
+.RI "int \fBsimFolder\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBfid\fP = open(\fBparamFile\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "tuple \fBstrLine\fP = \fBline\&.split\fP('=')"
+.br
+.ti -1c
+.RI "tuple \fBrp\fP = float(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBdecayTime\fP = int(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBtotTimes\fP = int(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBnrgType\fP = int(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBtotalRcts\fP = int(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBnrgConc\fP = float(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBinflux_rate\fP = float(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "tuple \fBmaxLOut\fP = float(\fBstrLine\fP[1])"
+.br
+.ti -1c
+.RI "int \fB_ANALTIMEINTERAVAL_\fP = \fBtotTimes\fP/10"
+.br
+.ti -1c
+.RI "int \fB_ANALTIMEINTERAVALNOSAVE_\fP = \fBtotTimes\fP/100"
+.br
+.ti -1c
+.RI "int \fBnrg\fP = 1"
+.br
+.ti -1c
+.RI "tuple \fBspeciesInFlux\fP = range(0,int(pow(2,(\fBmaxLOut\fP+1)) - 2))"
+.br
+.ti -1c
+.RI "tuple \fBfidflux\fP = open('_acsinflux\&.csv', '\fBr\fP')"
+.br
+.ti -1c
+.RI "tuple \fBoverThreshold\fP = float(0)"
+.br
+.ti -1c
+.RI "tuple \fBoverThresholdTOT\fP = float(0)"
+.br
+.ti -1c
+.RI "string \fBtmpFilesToSearch\fP = 'species_'"
+.br
+.ti -1c
+.RI "tuple \fBspeciesFiles\fP = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBtmpFilesToSearch\fP)))"
+.br
+.ti -1c
+.RI "list \fBspeciesFile\fP = \fBspeciesFiles\fP[-1]"
+.br
+.ti -1c
+.RI "tuple \fBfidSpecies\fP = open(\fBspeciesFile\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "int \fBok\fP = 0"
+.br
+.ti -1c
+.RI "list \fBIDsOverThreshold\fP = []"
+.br
+.ti -1c
+.RI "list \fBconcVec\fP = []"
+.br
+.ti -1c
+.RI "tuple \fBindex\fP = int(tmpID)"
+.br
+.ti -1c
+.RI "tuple \fBconc\fP = float(tmpConc)"
+.br
+.ti -1c
+.RI "tuple \fBcpxCut\fP = int(tmpCpxCut)"
+.br
+.ti -1c
+.RI "tuple \fBage\fP = float(tmpAge)"
+.br
+.ti -1c
+.RI "\fBrealT\fP = \fBthreshold\fP"
+.br
+.ti -1c
+.RI "string \fBfolderCat\fP = '__0_iGraph_CAT_'"
+.br
+.ti -1c
+.RI "string \fBfolderSub\fP = '__0_iGraph_SUB_'"
+.br
+.ti -1c
+.RI "tuple \fBnewdir\fP = os\&.path\&.join(os\&.curdir, \fBfolderCat\fP)"
+.br
+.ti -1c
+.RI "tuple \fBnewdirSUB\fP = os\&.path\&.join(os\&.curdir, \fBfolderSub\fP)"
+.br
+.ti -1c
+.RI "string \fBfilextPre\fP = '_'"
+.br
+.ti -1c
+.RI "string \fBrctParamFileQ\fP = 'reactions_parameters_'"
+.br
+.ti -1c
+.RI "tuple \fBrctParamFile\fP = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBrctParamFileQ\fP)))"
+.br
+.ti -1c
+.RI "float \fBrctIDshow\fP = 1\&.0"
+.br
+.ti -1c
+.RI "float \fBrctIDshowNoSave\fP = 1\&.0"
+.br
+.ti -1c
+.RI "\fBrctID\fP = \fBinitRctId\fP"
+.br
+.ti -1c
+.RI "int \fBpreviousTime\fP = 0"
+.br
+.ti -1c
+.RI "int \fBendo_condensation_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBcondensation_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBendo_cleavage_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBcleavage_counter\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBnrgTimeSeries\fP = np\&.array([[0,0,0]])"
+.br
+.ti -1c
+.RI "tuple \fBgillTimeSeries\fP = np\&.array([[0,0,0,0]])"
+.br
+.ti -1c
+.RI "int \fBtmpFlagLastRctSaved\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBreaction\fP = int(tmpReaction)"
+.br
+.ti -1c
+.RI "tuple \fBrtime\fP = float(tmpTime)"
+.br
+.ti -1c
+.RI "tuple \fBcc\fP = int(tmpcc)"
+.br
+.ti -1c
+.RI "tuple \fBcat\fP = int(tmpCat)"
+.br
+.ti -1c
+.RI "tuple \fBmol_I\fP = int(tmpMol_I)"
+.br
+.ti -1c
+.RI "tuple \fBmol_II\fP = int(tmpMol_II)"
+.br
+.ti -1c
+.RI "tuple \fBmol_III\fP = int(tmpMol_III)"
+.br
+.ti -1c
+.RI "tuple \fBloadedMolsConc\fP = float(tmpLoadedMolsConc)"
+.br
+.ti -1c
+.RI "tuple \fBloadedMols\fP = int(tmpLoadedMols)"
+.br
+.ti -1c
+.RI "tuple \fBgillMean\fP = float(tmpGillMean)"
+.br
+.ti -1c
+.RI "tuple \fBgillSD\fP = float(tmpGillSD)"
+.br
+.ti -1c
+.RI "tuple \fBgillEntropy\fP = float(tmpGillEntropy)"
+.br
+.ti -1c
+.RI "tuple \fBnewSpeciesCreationProb\fP = float(tmpNSCprob)"
+.br
+.ti -1c
+.RI "tuple \fBreverseProbability\fP = float(tmpRevProb)"
+.br
+.ti -1c
+.RI "int \fBprintTemporalMessage\fP = 1"
+.br
+.ti -1c
+.RI "\fBtimeInterval\fP = \fBrtime\fP-\fBpreviousTime\fP"
+.br
+.ti -1c
+.RI "tuple \fBposition\fP = ((\fBgraph\fP[:,0] == \fBcat\fP) & (\fBgraph\fP[:,1] == \fBmol_I\fP))"
+.br
+.ti -1c
+.RI "int \fBrealSccs\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBGcatpro\fP = nx\&.DiGraph()"
+.br
+.ti -1c
+.RI "tuple \fBscc\fP = nx\&.strongly_connected_components(\fBGcatpro\fP)"
+.br
+.ti -1c
+.RI "tuple \fBsccN\fP = nx\&.number_strongly_connected_components(\fBGcatpro\fP)"
+.br
+.ti -1c
+.RI "tuple \fBselfLoops\fP = Gcatpro\&.number_of_selfloops()"
+.br
+.ti -1c
+.RI "tuple \fBselfLoopsEgdes\fP = Gcatpro\&.selfloop_edges()"
+.br
+.ti -1c
+.RI "int \fBprod_inSCC\fP = 0"
+.br
+.ti -1c
+.RI "int \fBprod_chain\fP = 0"
+.br
+.ti -1c
+.RI "int \fBprod_bySCC\fP = 0"
+.br
+.ti -1c
+.RI "int \fBprod_overlap\fP = 0"
+.br
+.ti -1c
+.RI "int \fBsccID\fP = 0"
+.br
+.ti -1c
+.RI "int \fBautocatalysis\fP = 0"
+.br
+.ti -1c
+.RI "int \fBprod_inSCC_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBprod_chain_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBprod_bySCC_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBprod_overlap_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBself_loop_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBconc_inSCC\fP = 0"
+.br
+.ti -1c
+.RI "int \fBconc_chain\fP = 0"
+.br
+.ti -1c
+.RI "int \fBconc_bySCC\fP = 0"
+.br
+.ti -1c
+.RI "int \fBconc_overLap\fP = 0"
+.br
+.ti -1c
+.RI "int \fBconc_selfCat\fP = 0"
+.br
+.ti -1c
+.RI "int \fBwasteSpecies\fP = 0"
+.br
+.ti -1c
+.RI "int \fBalreadyAdded_ACS\fP = 0"
+.br
+.ti -1c
+.RI "int \fBalreadyAdded_leaves\fP = 0"
+.br
+.ti -1c
+.RI "int \fBalreadyAdded_chain\fP = 0"
+.br
+.ti -1c
+.RI "int \fBtmpProd_chain\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBincomingNodes\fP = Gcatpro\&.predecessors(IdsOT)"
+.br
+.ti -1c
+.RI "int \fBtempProd_chain_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBnoInAcs\fP = 1"
+.br
+.ti -1c
+.RI "int \fBinSCCFlag\fP = 0"
+.br
+.ti -1c
+.RI "list \fBweightToDistribute\fP = \fBgraph\fP[((\fBgraph\fP[:,0] == sngInNode) & (\fBgraph\fP[:,1] == IdsOT)),5]"
+.br
+.ti -1c
+.RI "tuple \fBinDegreeMean\fP = mean(Gcatpro\&.in_degree()\&.values())"
+.br
+.ti -1c
+.RI "tuple \fBmeanOverThreshold\fP = float(\fBoverThreshold\fP)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def acsSCCanalysis\&.loadReactionGraph ()"
+
+.PP
+Definition at line 31 of file acsSCCanalysis\&.py\&.
+.SS "def acsSCCanalysis\&.loadSpecificReactionGraph ()"
+
+.PP
+Definition at line 64 of file acsSCCanalysis\&.py\&.
+.SS "def acsSCCanalysis\&.loadSpecificReactionSubGraph ()"
+
+.PP
+Definition at line 93 of file acsSCCanalysis\&.py\&.
+.SS "def acsSCCanalysis\&.saveGillToFile ()"
+
+.PP
+Definition at line 154 of file acsSCCanalysis\&.py\&.
+.SS "def acsSCCanalysis\&.saveGraphSUBToFile ()"
+
+.PP
+Definition at line 133 of file acsSCCanalysis\&.py\&.
+.SS "def acsSCCanalysis\&.saveGraphToFile ()"
+
+.PP
+Definition at line 122 of file acsSCCanalysis\&.py\&.
+.SS "def acsSCCanalysis\&.saveNrgToFile ()"
+
+.PP
+Definition at line 144 of file acsSCCanalysis\&.py\&.
+.SS "def acsSCCanalysis\&.zeroBeforeStrNum (tmpl, tmpL)"
+
+.PP
+Definition at line 22 of file acsSCCanalysis\&.py\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int acsSCCanalysis\&._ANALTIMEINTERAVAL_ = \fBtotTimes\fP/10"
+
+.PP
+Definition at line 269 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&._ANALTIMEINTERAVALNOSAVE_ = \fBtotTimes\fP/100"
+
+.PP
+Definition at line 270 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.age = float(tmpAge)"
+
+.PP
+Definition at line 329 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.alreadyAdded_ACS = 0"
+
+.PP
+Definition at line 600 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.alreadyAdded_chain = 0"
+
+.PP
+Definition at line 602 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.alreadyAdded_leaves = 0"
+
+.PP
+Definition at line 601 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.autocatalysis = 0"
+
+.PP
+Definition at line 573 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.cat = int(tmpCat)"
+
+.PP
+Definition at line 411 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.cc = int(tmpcc)"
+
+.PP
+Definition at line 410 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.cleavage_counter = 0"
+
+.PP
+Definition at line 392 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.cmdFileFid = open(\fBcmdFileName\fP, '\fBa\fP')"
+
+.PP
+Definition at line 185 of file acsSCCanalysis\&.py\&.
+.SS "string acsSCCanalysis\&.cmdFileName = \fBStrPath\fP+'/'"
+
+.PP
+Definition at line 182 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.conc = float(tmpConc)"
+
+.PP
+Definition at line 327 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.conc_bySCC = 0"
+
+.PP
+Definition at line 581 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.conc_chain = 0"
+
+.PP
+Definition at line 580 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.conc_inSCC = 0"
+
+.PP
+Definition at line 579 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.conc_overLap = 0"
+
+.PP
+Definition at line 582 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.conc_selfCat = 0"
+
+.PP
+Definition at line 583 of file acsSCCanalysis\&.py\&.
+.SS "list acsSCCanalysis\&.concVec = []"
+
+.PP
+Definition at line 318 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.condensation_counter = 0"
+
+.PP
+Definition at line 390 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.cpxCut = int(tmpCpxCut)"
+
+.PP
+Definition at line 328 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.decayTime = int(\fBstrLine\fP[1])"
+
+.PP
+Definition at line 255 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.endo_cleavage_counter = 0"
+
+.PP
+Definition at line 391 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.endo_condensation_counter = 0"
+
+.PP
+Definition at line 389 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.fid = open(\fBparamFile\fP, '\fBr\fP')"
+
+.PP
+Definition at line 244 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.fidflux = open('_acsinflux\&.csv', '\fBr\fP')"
+
+.PP
+Definition at line 285 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.fidSpecies = open(\fBspeciesFile\fP, '\fBr\fP')"
+
+.PP
+Definition at line 311 of file acsSCCanalysis\&.py\&.
+.SS "string acsSCCanalysis\&.filextPre = '_'"
+
+.PP
+Definition at line 376 of file acsSCCanalysis\&.py\&.
+.SS "string acsSCCanalysis\&.folderCat = '__0_iGraph_CAT_'"
+
+.PP
+Definition at line 348 of file acsSCCanalysis\&.py\&.
+.SS "string acsSCCanalysis\&.folderSub = '__0_iGraph_SUB_'"
+
+.PP
+Definition at line 349 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.Gcatpro = nx\&.DiGraph()"
+
+.PP
+Definition at line 555 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.gillEntropy = float(tmpGillEntropy)"
+
+.PP
+Definition at line 419 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.gillMean = float(tmpGillMean)"
+
+.PP
+Definition at line 417 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.gillSD = float(tmpGillSD)"
+
+.PP
+Definition at line 418 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.gillTimeSeries = np\&.array([[0,0,0,0]])"
+
+.PP
+Definition at line 399 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.graph = \fBloadSpecificReactionGraph\fP()"
+
+.PP
+Definition at line 193 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.graphSUB = \fBloadSpecificReactionSubGraph\fP()"
+
+.PP
+Definition at line 194 of file acsSCCanalysis\&.py\&.
+.SS "list acsSCCanalysis\&.IDsOverThreshold = []"
+
+.PP
+Definition at line 317 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.incomingNodes = Gcatpro\&.predecessors(IdsOT)"
+
+.PP
+Definition at line 605 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.inDegreeMean = mean(Gcatpro\&.in_degree()\&.values())"
+
+.PP
+Definition at line 682 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.index = int(tmpID)"
+
+.PP
+Definition at line 326 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.influx_rate = float(\fBstrLine\fP[1])"
+
+.PP
+Definition at line 264 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.initilizeGraphStructure = 0"
+
+.PP
+Definition at line 189 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.initRctId = int(\fBtmpRctFileToLoadSplitString\fP[len(\fBtmpRctFileToLoadSplitString\fP)-2])"
+
+.PP
+Definition at line 198 of file acsSCCanalysis\&.py\&.
+.SS "list acsSCCanalysis\&.initTempTime = \fBtmpRctFileToLoadSplitString\fP[len(\fBtmpRctFileToLoadSplitString\fP)-1]"
+
+.PP
+Definition at line 199 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.initTime = float(\fBinitTempTime\fP[0:len(\fBinitTempTime\fP)-4])"
+
+.PP
+Definition at line 200 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.inSCCFlag = 0"
+
+.PP
+Definition at line 616 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.loadedMols = int(tmpLoadedMols)"
+
+.PP
+Definition at line 416 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.loadedMolsConc = float(tmpLoadedMolsConc)"
+
+.PP
+Definition at line 415 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.maxLOut = float(\fBstrLine\fP[1])"
+
+.PP
+Definition at line 266 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.meanOverThreshold = float(\fBoverThreshold\fP)"
+
+.PP
+Definition at line 703 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.mol_I = int(tmpMol_I)"
+
+.PP
+Definition at line 412 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.mol_II = int(tmpMol_II)"
+
+.PP
+Definition at line 413 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.mol_III = int(tmpMol_III)"
+
+.PP
+Definition at line 414 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.mswindows = (sys\&.platform == 'win32')"
+
+.PP
+Definition at line 179 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.newdir = os\&.path\&.join(os\&.curdir, \fBfolderCat\fP)"
+
+.PP
+Definition at line 356 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.newdirSUB = os\&.path\&.join(os\&.curdir, \fBfolderSub\fP)"
+
+.PP
+Definition at line 365 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.newSpeciesCreationProb = float(tmpNSCprob)"
+
+.PP
+Definition at line 420 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.noInAcs = 1"
+
+.PP
+Definition at line 612 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.nrg = 1"
+
+.PP
+Definition at line 273 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.nrgConc = float(\fBstrLine\fP[1])"
+
+.PP
+Definition at line 262 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.nrgTimeSeries = np\&.array([[0,0,0]])"
+
+.PP
+Definition at line 397 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.nrgType = int(\fBstrLine\fP[1])"
+
+.PP
+Definition at line 258 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.numberOfGen = len(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,'times_*')))"
+
+.PP
+Definition at line 230 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.ok = 0"
+
+.PP
+Definition at line 316 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.overThreshold = float(0)"
+
+.PP
+Definition at line 299 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.overThresholdTOT = float(0)"
+
+.PP
+Definition at line 300 of file acsSCCanalysis\&.py\&.
+.SS "string acsSCCanalysis\&.paramFile = 'acsm2s\&.conf'"
+
+.PP
+Definition at line 241 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.position = ((\fBgraph\fP[:,0] == \fBcat\fP) & (\fBgraph\fP[:,1] == \fBmol_I\fP))"
+
+.PP
+Definition at line 482 of file acsSCCanalysis\&.py\&.
+.SS "acsSCCanalysis\&.previousTime = 0"
+
+.PP
+Definition at line 386 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.printTemporalMessage = 1"
+
+.PP
+Definition at line 428 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.prod_bySCC = 0"
+
+.PP
+Definition at line 570 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.prod_bySCC_weight = 0"
+
+.PP
+Definition at line 576 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.prod_chain = 0"
+
+.PP
+Definition at line 569 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.prod_chain_weight = 0"
+
+.PP
+Definition at line 575 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.prod_inSCC = 0"
+
+.PP
+Definition at line 568 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.prod_inSCC_weight = 0"
+
+.PP
+Definition at line 574 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.prod_overlap = 0"
+
+.PP
+Definition at line 571 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.prod_overlap_weight = 0"
+
+.PP
+Definition at line 577 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.rctID = \fBinitRctId\fP"
+
+.PP
+Definition at line 385 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.rctIDshow = 1\&.0"
+
+.PP
+Definition at line 383 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.rctIDshowNoSave = 1\&.0"
+
+.PP
+Definition at line 384 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.rctParamFile = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBrctParamFileQ\fP)))"
+
+.PP
+Definition at line 380 of file acsSCCanalysis\&.py\&.
+.SS "string acsSCCanalysis\&.rctParamFileQ = 'reactions_parameters_'"
+
+.PP
+Definition at line 379 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.reaction = int(tmpReaction)"
+
+.PP
+Definition at line 408 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.realSccs = 0"
+
+.PP
+Definition at line 554 of file acsSCCanalysis\&.py\&.
+.SS "acsSCCanalysis\&.realT = \fBthreshold\fP"
+
+.PP
+Definition at line 333 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.resDirPath = os\&.path\&.abspath(os\&.path\&.join('\&./', 'res'))"
+
+.PP
+Definition at line 223 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.reverseProbability = float(tmpRevProb)"
+
+.PP
+Definition at line 421 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.rp = float(\fBstrLine\fP[1])"
+
+.PP
+Definition at line 252 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.rtime = float(tmpTime)"
+
+.PP
+Definition at line 409 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.scc = nx\&.strongly_connected_components(\fBGcatpro\fP)"
+
+.PP
+Definition at line 561 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.sccID = 0"
+
+.PP
+Definition at line 572 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.sccN = nx\&.number_strongly_connected_components(\fBGcatpro\fP)"
+
+.PP
+Definition at line 562 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.self_loop_weight = 0"
+
+.PP
+Definition at line 578 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.selfLoops = Gcatpro\&.number_of_selfloops()"
+
+.PP
+Definition at line 563 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.selfLoopsEgdes = Gcatpro\&.selfloop_edges()"
+
+.PP
+Definition at line 564 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.simFolder = 0"
+
+.PP
+Definition at line 242 of file acsSCCanalysis\&.py\&.
+.SS "list acsSCCanalysis\&.speciesFile = \fBspeciesFiles\fP[-1]"
+
+.PP
+Definition at line 305 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.speciesFiles = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBtmpFilesToSearch\fP)))"
+
+.PP
+Definition at line 304 of file acsSCCanalysis\&.py\&.
+.SS "list acsSCCanalysis\&.speciesInFlux = range(0,int(pow(2,(\fBmaxLOut\fP+1)) - 2))"
+
+.PP
+Definition at line 280 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.strLine = \fBline\&.split\fP('=')"
+
+.PP
+Definition at line 250 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.StrPath = os\&.path\&.abspath(StrPath)"
+
+.PP
+Definition at line 177 of file acsSCCanalysis\&.py\&.
+.SS "string acsSCCanalysis\&.strToWrite = '\\tReaction Probability'"
+
+.PP
+Definition at line 186 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.strZeros = \fBzeroBeforeStrNum\fP(nGen, \fBnumberOfGen\fP)"
+
+.PP
+Definition at line 238 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.tempProd_chain_weight = 0"
+
+.PP
+Definition at line 607 of file acsSCCanalysis\&.py\&.
+.SS "acsSCCanalysis\&.timeInterval = \fBrtime\fP-\fBpreviousTime\fP"
+
+.PP
+Definition at line 451 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.tmpDirs = sort(os\&.listdir(\fBStrPath\fP))"
+
+.PP
+Definition at line 209 of file acsSCCanalysis\&.py\&.
+.SS "string acsSCCanalysis\&.tmpFilesToSearch = 'species_'"
+
+.PP
+Definition at line 303 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.tmpFlagLastRctSaved = 0"
+
+.PP
+Definition at line 401 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.tmpProd_chain = 0"
+
+.PP
+Definition at line 603 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.tmpRctFileToLoadSplitString = \fBtmpRctFileToLoad\&.split\fP('_')"
+
+.PP
+Definition at line 196 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.today = dt\&.date\&.today()"
+
+.PP
+Definition at line 178 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.totalRcts = int(\fBstrLine\fP[1])"
+
+.PP
+Definition at line 260 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.totDirName = os\&.path\&.join(\fBStrPath\fP,tmpDir)"
+
+.PP
+Definition at line 218 of file acsSCCanalysis\&.py\&.
+.SS "tuple acsSCCanalysis\&.totTimes = int(\fBstrLine\fP[1])"
+
+.PP
+Definition at line 256 of file acsSCCanalysis\&.py\&.
+.SS "int acsSCCanalysis\&.wasteSpecies = 0"
+
+.PP
+Definition at line 584 of file acsSCCanalysis\&.py\&.
+.SS "list acsSCCanalysis\&.weightToDistribute = \fBgraph\fP[((\fBgraph\fP[:,0] == sngInNode) & (\fBgraph\fP[:,1] == IdsOT)),5]"
+
+.PP
+Definition at line 622 of file acsSCCanalysis\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

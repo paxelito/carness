@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00112" kind="namespace">
+    <compoundname>lib::graph::network</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00112_1aa023644e6dad3ed7be55a592d8576007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.network.removeRareRcts</definition>
+        <argsstring></argsstring>
+        <name>removeRareRcts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/network.py" line="16" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/network.py" bodystart="16" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="a00112_1a31099e87728bb8b899360bb641bb6b64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.network.fixCondensationReaction</definition>
+        <argsstring></argsstring>
+        <name>fixCondensationReaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/network.py" line="25" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/network.py" bodystart="25" bodyend="43"/>
+        <references refid="a00028_1a576bebae86b11914280920c448def53d">sum</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/network.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

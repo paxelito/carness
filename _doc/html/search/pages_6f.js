@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outcomes',['Outcomes',['../pageoutcomes.html',1,'index']]]
+  ['outcomes',['Outcomes',['../a00006.html',1,'index']]]
 ];

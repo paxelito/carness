@@ -1,0 +1,41 @@
+\hypertarget{a00042}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/under\-Development/acs\-Dyn\-Stat\-In\-Time.py File Reference}
+\label{a00042}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/under\-Development/acs\-Dyn\-Stat\-In\-Time.\-py@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/under\-Development/acs\-Dyn\-Stat\-In\-Time.\-py}}
+}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00099}{acs\-Dyn\-Stat\-In\-Time}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{a00099_a14b76a8235da778083f610cabe968c34}{acs\-Dyn\-Stat\-In\-Time.\-parser}
+\item 
+tuple \hyperlink{a00099_a0fef98b331f3de5212d309bd2d3556e7}{acs\-Dyn\-Stat\-In\-Time.\-args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{a00099_aff72277efad2fb1d2f51e95f6fefc288}{acs\-Dyn\-Stat\-In\-Time.\-str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
+\item 
+string \hyperlink{a00099_a4331412d1cdff7111cdc69adc31528c4}{acs\-Dyn\-Stat\-In\-Time.\-str\-Sub\-Str\-Key} = '$\ast$'
+\item 
+tuple \hyperlink{a00099_a353a268554f9ac8661c5e0142496f580}{acs\-Dyn\-Stat\-In\-Time.\-files\-To\-Anal} = sorted(glob.\-glob(os.\-path.\-join(str\-Path,str\-Sub\-Str\-Key)))
+\item 
+tuple \hyperlink{a00099_abf8db6a4d0dc9132f54755c72c871471}{acs\-Dyn\-Stat\-In\-Time.\-len\-Files\-To\-Anal} = len(files\-To\-Anal)
+\item 
+int \hyperlink{a00099_a4679690d186f44a3ad8e6eb3a545fd39}{acs\-Dyn\-Stat\-In\-Time.\-num\-Of\-Traj} = 0
+\item 
+tuple \hyperlink{a00099_a52808d1f82b263c51e9bfb9e18b053c0}{acs\-Dyn\-Stat\-In\-Time.\-x} = np.\-array(map(list, np.\-loadtxt(file\-To\-Anal, str)), float)
+\item 
+\hyperlink{a00099_ade03788f04a663a14a9abeae4e7ea0e2}{acs\-Dyn\-Stat\-In\-Time.\-xsize} = x.\-shape
+\item 
+list \hyperlink{a00099_a565bd873618e4d135a9903fb70ee5981}{acs\-Dyn\-Stat\-In\-Time.\-run4\-Chem} = xsize\mbox{[}0\mbox{]}
+\item 
+tuple \hyperlink{a00099_aa7979c32d5499d000edacba8fcadd039}{acs\-Dyn\-Stat\-In\-Time.\-y} = np.\-zeros((len\-Files\-To\-Anal,num\-Of\-Traj))
+\item 
+int \hyperlink{a00099_a7ce24ac1959d7d1512b663f20f3e3100}{acs\-Dyn\-Stat\-In\-Time.\-pos} = 0
+\item 
+int \hyperlink{a00099_aa0ad135db98d635147ecbd1480de89df}{acs\-Dyn\-Stat\-In\-Time.\-chem} = 1
+\item 
+string \hyperlink{a00099_acb2620669fa00dd24be0687c86647b43}{acs\-Dyn\-Stat\-In\-Time.\-tmp\-Head} = ''
+\item 
+string \hyperlink{a00099_aa77abf10e3a92416282af2030df3b4b0}{acs\-Dyn\-Stat\-In\-Time.\-filename} = \char`\"{}\-\_\-arranged\-\_\-\char`\"{}
+\end{DoxyCompactItemize}

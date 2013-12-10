@@ -2,22 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="dir_66d19001354beca3375bfcfe54fec246" kind="dir">
     <compoundname>/Users/alessandrofilisetti/Documents/GIT/carness/_analysis</compoundname>
-    <innerfile refid="all_times_analysis_8m">allTimesAnalysis.m</innerfile>
-    <innerfile refid="buffered_flux_analysis_8py">bufferedFluxAnalysis.py</innerfile>
-    <innerfile refid="conc_analysis_8m">concAnalysis.m</innerfile>
-    <innerfile refid="from_within2_between_8py">fromWithin2Between.py</innerfile>
-    <innerfile refid="garbage_search_8m">garbageSearch.m</innerfile>
-    <innerfile refid="general_concentration_over_threshold_8m">generalConcentrationOverThreshold.m</innerfile>
-    <innerfile refid="_kill_spam_8m">KillSpam.m</innerfile>
-    <innerfile refid="_k_s_search_8m">KSSearch.m</innerfile>
-    <innerfile refid="_k_s_search_launcher_8m">KSSearchLauncher.m</innerfile>
-    <innerfile refid="overall_stats_8m">overallStats.m</innerfile>
-    <innerfile refid="read_parameters_8m">readParameters.m</innerfile>
-    <innerfile refid="reset_for_new_simulations_8py">resetForNewSimulations.py</innerfile>
-    <innerfile refid="somma_8m">somma.m</innerfile>
-    <innerfile refid="stats_8m">stats.m</innerfile>
-    <innerfile refid="times_analysis_8m">timesAnalysis.m</innerfile>
-    <innerfile refid="times_analysis___p_a_n_i_n_i_8m">timesAnalysis_PANINI.m</innerfile>
+    <innerdir refid="dir_1242448cf8f960f6284cb07fd182e7a6">/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old</innerdir>
+    <innerdir refid="dir_648969887db231d5c382500c91d9117f">/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

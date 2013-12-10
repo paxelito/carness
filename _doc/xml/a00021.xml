@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00021" kind="class" prot="public">
+    <compoundname>reactions</compoundname>
+    <includes refid="a00093" local="no">reactions.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a00021_1a8260a09e302ff51af7c379741633c45f" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt reactions::id_reaction</definition>
+        <argsstring></argsstring>
+        <name>id_reaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="20" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00021_1a2d78b7f2fbf313ce546fcc05b6b881cf" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int reactions::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 cleavage 0 condensation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="21" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00021_1a39dae13de5205807b0149510f68a3a0b" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt reactions::species_I</definition>
+        <argsstring></argsstring>
+        <name>species_I</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>species[species_II] + species[species_III] </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="22" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00021_1a5d29f38dd995b7346962f0023ea64710" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt reactions::species_II</definition>
+        <argsstring></argsstring>
+        <name>species_II</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="23" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00021_1a7af6aa46f1d8bd13bb156347269fd361" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt reactions::species_III</definition>
+        <argsstring></argsstring>
+        <name>species_III</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="24" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00021_1a5df39ca8d79f8ea8b2ec0b471945b443" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int reactions::events</definition>
+        <argsstring></argsstring>
+        <name>events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reaction counter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="25" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00021_1ae9470ad161585799d95e5dc675bb2353" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int reactions::energyType</definition>
+        <argsstring></argsstring>
+        <name>energyType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Energetic Boolean Function </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="26" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00021_1accac9b65200842458386fbac3e3bf7fe" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+        <definition>acs_double reactions::k_spont</definition>
+        <argsstring></argsstring>
+        <name>k_spont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If spontanoues reactions are turned on this is the kinetic constant of the spontanous reaction </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="27" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a00021_1a0b6ca1c86d79bb511f116d86714f74a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>reactions::reactions</definition>
+        <argsstring>(acs_longInt tmpID, acs_int tmpType, acs_longInt tmpM_I, acs_longInt tmpM_II, acs_longInt tmpM_III, acs_int tmpEvents, acs_int tmpEnergyType, acs_double tmpKspont)</argsstring>
+        <name>reactions</name>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpID</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpType</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpM_I</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpM_II</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpM_III</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpEvents</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpEnergyType</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+          <declname>tmpKspont</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmpID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reaction identificator </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tmpType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>condensation or cleavage </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tmpM_I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>product (if condensation) or substrates (if cleavage) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tmpM_II</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>product (if cleavage) or substrates (if condensation) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tmpM_III</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>product (if cleavage) or substrates (if condensation) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tmpKeq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>equilibrium constant </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="31" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.cpp" bodystart="20" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1ad0c79e56e87891c502d8fcd6c4005987" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>reactions::~reactions</definition>
+        <argsstring>()</argsstring>
+        <name>~reactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="33" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1a5c30ce559254e67f7d4e219a8fe26fcc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt reactions::getID</definition>
+        <argsstring>() const </argsstring>
+        <name>getID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="36" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1ad928f8c901ad8e318e201cedcf1209ba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int reactions::getType</definition>
+        <argsstring>() const </argsstring>
+        <name>getType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="37" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1a90adbdb8288b8c67c7715949848583ab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt reactions::getSpecies_I</definition>
+        <argsstring>() const </argsstring>
+        <name>getSpecies_I</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="38" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1ac0bdd6d9081645bf3a2c5531a71cbe40" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt reactions::getSpecies_II</definition>
+        <argsstring>() const </argsstring>
+        <name>getSpecies_II</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1aaf426633019113ac4ae54cd5597920be" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt reactions::getSpecies_III</definition>
+        <argsstring>() const </argsstring>
+        <name>getSpecies_III</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="40" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1a4fd82a3f1a6474e53709c2a8c04b793c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int reactions::getEvents</definition>
+        <argsstring>() const </argsstring>
+        <name>getEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="41" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1ae6fce196577644283fdab4a78909d891" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int reactions::getEnergyType</definition>
+        <argsstring>() const </argsstring>
+        <name>getEnergyType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="42" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1a3cac13cba00c709df26485bbeffda4f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+        <definition>acs_double reactions::getKspont</definition>
+        <argsstring>() const </argsstring>
+        <name>getKspont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="43" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1ae7a0bcb1c921c25ad5dc637d664f2c94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reactions::updateTotEvents</definition>
+        <argsstring>()</argsstring>
+        <name>updateTotEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="46" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="a00021_1a614a367a15dda1df4160bcdc170a9b32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reactions::resetEventsCounter</definition>
+        <argsstring>()</argsstring>
+        <name>resetEventsCounter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="47" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" line="18" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h" bodystart="17" bodyend="48"/>
+    <listofallmembers>
+      <member refid="a00021_1ae9470ad161585799d95e5dc675bb2353" prot="private" virt="non-virtual"><scope>reactions</scope><name>energyType</name></member>
+      <member refid="a00021_1a5df39ca8d79f8ea8b2ec0b471945b443" prot="private" virt="non-virtual"><scope>reactions</scope><name>events</name></member>
+      <member refid="a00021_1ae6fce196577644283fdab4a78909d891" prot="public" virt="non-virtual"><scope>reactions</scope><name>getEnergyType</name></member>
+      <member refid="a00021_1a4fd82a3f1a6474e53709c2a8c04b793c" prot="public" virt="non-virtual"><scope>reactions</scope><name>getEvents</name></member>
+      <member refid="a00021_1a5c30ce559254e67f7d4e219a8fe26fcc" prot="public" virt="non-virtual"><scope>reactions</scope><name>getID</name></member>
+      <member refid="a00021_1a3cac13cba00c709df26485bbeffda4f0" prot="public" virt="non-virtual"><scope>reactions</scope><name>getKspont</name></member>
+      <member refid="a00021_1a90adbdb8288b8c67c7715949848583ab" prot="public" virt="non-virtual"><scope>reactions</scope><name>getSpecies_I</name></member>
+      <member refid="a00021_1ac0bdd6d9081645bf3a2c5531a71cbe40" prot="public" virt="non-virtual"><scope>reactions</scope><name>getSpecies_II</name></member>
+      <member refid="a00021_1aaf426633019113ac4ae54cd5597920be" prot="public" virt="non-virtual"><scope>reactions</scope><name>getSpecies_III</name></member>
+      <member refid="a00021_1ad928f8c901ad8e318e201cedcf1209ba" prot="public" virt="non-virtual"><scope>reactions</scope><name>getType</name></member>
+      <member refid="a00021_1a8260a09e302ff51af7c379741633c45f" prot="private" virt="non-virtual"><scope>reactions</scope><name>id_reaction</name></member>
+      <member refid="a00021_1accac9b65200842458386fbac3e3bf7fe" prot="private" virt="non-virtual"><scope>reactions</scope><name>k_spont</name></member>
+      <member refid="a00021_1a0b6ca1c86d79bb511f116d86714f74a6" prot="public" virt="non-virtual"><scope>reactions</scope><name>reactions</name></member>
+      <member refid="a00021_1a614a367a15dda1df4160bcdc170a9b32" prot="public" virt="non-virtual"><scope>reactions</scope><name>resetEventsCounter</name></member>
+      <member refid="a00021_1a39dae13de5205807b0149510f68a3a0b" prot="private" virt="non-virtual"><scope>reactions</scope><name>species_I</name></member>
+      <member refid="a00021_1a5d29f38dd995b7346962f0023ea64710" prot="private" virt="non-virtual"><scope>reactions</scope><name>species_II</name></member>
+      <member refid="a00021_1a7af6aa46f1d8bd13bb156347269fd361" prot="private" virt="non-virtual"><scope>reactions</scope><name>species_III</name></member>
+      <member refid="a00021_1a2d78b7f2fbf313ce546fcc05b6b881cf" prot="private" virt="non-virtual"><scope>reactions</scope><name>type</name></member>
+      <member refid="a00021_1ae7a0bcb1c921c25ad5dc637d664f2c94" prot="public" virt="non-virtual"><scope>reactions</scope><name>updateTotEvents</name></member>
+      <member refid="a00021_1ad0c79e56e87891c502d8fcd6c4005987" prot="public" virt="non-virtual"><scope>reactions</scope><name>~reactions</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

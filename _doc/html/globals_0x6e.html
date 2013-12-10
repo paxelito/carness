@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CaRNeSS
-   &#160;<span id="projectnumber">4.8 (20131026.60)</span>
+   &#160;<span id="projectnumber">4.8 (20131209.62)</span>
    </div>
    <div id="projectbrief">Catalytic Reaction Networks Stochastic Simulator</div>
   </td>
@@ -150,85 +150,88 @@ $(document).ready(function(){initNavTree('globals_0x6e.html','');});
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
 <li>name
-: <a class="el" href="garbage_search_8m.html#abbf559a76fab59203496b0847ab9502a">garbageSearch.m</a>
+: <a class="el" href="a00027.html#abbf559a76fab59203496b0847ab9502a">garbageSearch.m</a>
 </li>
 <li>names()
-: <a class="el" href="general_concentration_over_threshold_8m.html#a3af72bbca23cfcc45a9043b1036a3c2f">generalConcentrationOverThreshold.m</a>
+: <a class="el" href="a00028.html#a3af72bbca23cfcc45a9043b1036a3c2f">generalConcentrationOverThreshold.m</a>
 </li>
 <li>nargin&lt; 1params.path=currentDir();params.figureVisible=0;endcd(params.tmpPath);disp('|--------------------------------|');disp('|-Concentration Analysis...|');disp('|--------------------------------|');if~isdir('0_statistics') mkdir('0_statistics');end%READ ALL THE DIRECTORY CONTAINING SIMULATIONSsearch=strcat('*', params.simFolder,'*');simDirs=dir(search);%For each folder the necessary computations are performedfor i=1:length(simDirs)%Go into the results folderif isdir(strcat(simDirs(i).name)) cd(strcat(simDirs(i).name,'/res'));thisSimFolder=strcat(simDirs(i).name,'/res');%Read configuration fileconfParams=readParameters();%File Containing all Timestimes=0:confParams.timeStructuresSavingInterval:confParams.nSeconds;speciesFiles=dir('species_ *');%speciesFiles=speciesFiles(1:end-1);to comment if species_2%does not exist%speciesFiles=speciesFiles(1:length(speciesFiles)-1);%For each species file, from the last to the firstnFile=1;[nSpeciesFile, r]=size(speciesFiles);for j=nSpeciesFile:-1:1%FROM VILLANI MARCOfid=fopen(speciesFiles(j).name,'r');%apro il primo filedisp(sprintf('Processing dir%s, file%s,%d/%d', simDirs(i).name, speciesFiles(j).name, nSpeciesFile-j, nSpeciesFile));%leggo gli oggetti che ci sono in ogni riga-alcuni li memorizzoindice=1;%definisco il parametro di controlo&quot;continua&quot;while indice &gt;
-: <a class="el" href="conc_analysis_8m.html#a389644115bfaaa246f363dc22d48bf07">concAnalysis.m</a>
+: <a class="el" href="a00025.html#a389644115bfaaa246f363dc22d48bf07">concAnalysis.m</a>
 </li>
 <li>NEP
-: <a class="el" href="acs__headers_8h.html#a029d801cdb598a397cb99ea968a64dc2">acs_headers.h</a>
+: <a class="el" href="a00072.html#a029d801cdb598a397cb99ea968a64dc2">acs_headers.h</a>
+</li>
+<li>nets
+: <a class="el" href="a00071.html#a006c95919fb4982bffba044f13cd2a7f">start.m</a>
 </li>
 <li>NEWREACTIONS
-: <a class="el" href="acs__headers_8h.html#afb2a947dfb1847f71649f82bc1bf0292">acs_headers.h</a>
+: <a class="el" href="a00072.html#afb2a947dfb1847f71649f82bc1bf0292">acs_headers.h</a>
 </li>
 <li>newSpeciesProb
-: <a class="el" href="general_concentration_over_threshold_8m.html#aa66147edba72bc0b9cf591cd7475396f">generalConcentrationOverThreshold.m</a>
+: <a class="el" href="a00028.html#aa66147edba72bc0b9cf591cd7475396f">generalConcentrationOverThreshold.m</a>
 </li>
 <li>nFile
-: <a class="el" href="conc_analysis_8m.html#a0df074de7bfa18238647c0c8b555316e">concAnalysis.m</a>
+: <a class="el" href="a00025.html#a0df074de7bfa18238647c0c8b555316e">concAnalysis.m</a>
 </li>
 <li>nGEN
-: <a class="el" href="start_8m.html#a4af22ee598eb5fcc4d0ff8439823e600">start.m</a>
-, <a class="el" href="lancia__inizializzatore__acs_8m.html#a82556659f7ba7219e55a18e9b9e63873">lancia_inizializzatore_acs.m</a>
+: <a class="el" href="a00071.html#a4c8fe523edbe179c5d215da13f469f72">start.m</a>
+, <a class="el" href="a00070.html#a82556659f7ba7219e55a18e9b9e63873">lancia_inizializzatore_acs.m</a>
 </li>
 <li>noInAcs
-: <a class="el" href="general_concentration_over_threshold_8m.html#ac45b9c97670e4b4e103ce174dc2db6b3">generalConcentrationOverThreshold.m</a>
+: <a class="el" href="a00028.html#ac45b9c97670e4b4e103ce174dc2db6b3">generalConcentrationOverThreshold.m</a>
 </li>
 <li>nome_folder
-: <a class="el" href="start_8m.html#a277bc625a7a558f74ccc1eb2963d70d0">start.m</a>
+: <a class="el" href="a00071.html#a277bc625a7a558f74ccc1eb2963d70d0">start.m</a>
 </li>
 <li>nome_prob
-: <a class="el" href="start_8m.html#ab05ea37ca64abe64c55c1f166e3a818b">start.m</a>
+: <a class="el" href="a00071.html#ab05ea37ca64abe64c55c1f166e3a818b">start.m</a>
 </li>
 <li>NOSPONTANEOUS
-: <a class="el" href="acs__headers_8h.html#a9ea25e0eb039e29accaed6cb99632deb">acs_headers.h</a>
+: <a class="el" href="a00072.html#a9ea25e0eb039e29accaed6cb99632deb">acs_headers.h</a>
 </li>
 <li>NOTENERGIZABLE
-: <a class="el" href="acs__headers_8h.html#a04e076b71093a6dc76f99298d9cfeb9e">acs_headers.h</a>
+: <a class="el" href="a00072.html#a04e076b71093a6dc76f99298d9cfeb9e">acs_headers.h</a>
 </li>
 <li>NOTHINGLOAD
-: <a class="el" href="acs__headers_8h.html#a15e77522039bb4bb52000b65773c83cf">acs_headers.h</a>
+: <a class="el" href="a00072.html#a15e77522039bb4bb52000b65773c83cf">acs_headers.h</a>
 </li>
 <li>nReactions
-: <a class="el" href="lancia__inizializzatore__acs_8m.html#a7ab8b9fa18f22ee71429cf8ae50d754b">lancia_inizializzatore_acs.m</a>
-, <a class="el" href="start_8m.html#a8d704532b4b419f1428cb078bb5c7ffe">start.m</a>
+: <a class="el" href="a00070.html#a7ab8b9fa18f22ee71429cf8ae50d754b">lancia_inizializzatore_acs.m</a>
+, <a class="el" href="a00071.html#a8d704532b4b419f1428cb078bb5c7ffe">start.m</a>
 </li>
 <li>nrg
-: <a class="el" href="general_concentration_over_threshold_8m.html#af837f695e5b67c86016c1a82608c38b4">generalConcentrationOverThreshold.m</a>
+: <a class="el" href="a00028.html#af837f695e5b67c86016c1a82608c38b4">generalConcentrationOverThreshold.m</a>
 </li>
 <li>nrgTimeSeries
-: <a class="el" href="general_concentration_over_threshold_8m.html#ad5f4092827ae220bd7c53532aaaa0590">generalConcentrationOverThreshold.m</a>
+: <a class="el" href="a00028.html#ad5f4092827ae220bd7c53532aaaa0590">generalConcentrationOverThreshold.m</a>
 </li>
 <li>nSeconds
-: <a class="el" href="lancia__inizializzatore__acs_8m.html#aaded2f2d61413dc4bddf805e9be03ded">lancia_inizializzatore_acs.m</a>
+: <a class="el" href="a00070.html#aaded2f2d61413dc4bddf805e9be03ded">lancia_inizializzatore_acs.m</a>
 </li>
 <li>nSIM
-: <a class="el" href="lancia__inizializzatore__acs_8m.html#a68c8b36ce2387749248f566faa108e45">lancia_inizializzatore_acs.m</a>
-, <a class="el" href="start_8m.html#a2b9b3728c03157895f28160b24f4c572">start.m</a>
+: <a class="el" href="a00070.html#a68c8b36ce2387749248f566faa108e45">lancia_inizializzatore_acs.m</a>
+, <a class="el" href="a00071.html#adb2acbd590bcb59c7b4e633c250f3f28">start.m</a>
 </li>
 <li>Nsim
-: <a class="el" href="start_8m.html#af882a6050e97fe1c6cc2bb391ea57479">start.m</a>
+: <a class="el" href="a00071.html#af882a6050e97fe1c6cc2bb391ea57479">start.m</a>
 </li>
 <li>numero_elementi
-: <a class="el" href="crea__tutte__le__combinazioni__di__elementi_8m.html#a071e4a20ed3694e1603406261e60409a">crea_tutte_le_combinazioni_di_elementi.m</a>
+: <a class="el" href="a00066.html#a071e4a20ed3694e1603406261e60409a">crea_tutte_le_combinazioni_di_elementi.m</a>
 </li>
 <li>numero_molecole
-: <a class="el" href="crea__concentrazioni__iniziali_8m.html#a88a0f7d52768638928258ed8900a4a30">crea_concentrazioni_iniziali.m</a>
+: <a class="el" href="a00061.html#a88a0f7d52768638928258ed8900a4a30">crea_concentrazioni_iniziali.m</a>
 </li>
 <li>numero_specie
-: <a class="el" href="crea__catalizzatori_8m.html#ab5807df6e5701d7529696a19c65fab49">crea_catalizzatori.m</a>
+: <a class="el" href="a00060.html#ab5807df6e5701d7529696a19c65fab49">crea_catalizzatori.m</a>
 </li>
 <li>numero_specie_da_togliere
-: <a class="el" href="crea__catalizzatori_8m.html#ab149f236ebc8e97056dd65cc2eacb67f">crea_catalizzatori.m</a>
+: <a class="el" href="a00060.html#ab149f236ebc8e97056dd65cc2eacb67f">crea_catalizzatori.m</a>
 </li>
 <li>numScc
-: <a class="el" href="general_concentration_over_threshold_8m.html#a0d0db21d4520f7561ff56e2c80e4fb69">generalConcentrationOverThreshold.m</a>
+: <a class="el" href="a00028.html#a0d0db21d4520f7561ff56e2c80e4fb69">generalConcentrationOverThreshold.m</a>
 </li>
 <li>nZeros
-: <a class="el" href="general_concentration_over_threshold_8m.html#ac4353d99277795cadf898255e2c73c71">generalConcentrationOverThreshold.m</a>
+: <a class="el" href="a00028.html#ac4353d99277795cadf898255e2c73c71">generalConcentrationOverThreshold.m</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -236,7 +239,7 @@ $(document).ready(function(){initNavTree('globals_0x6e.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Oct 26 2013 15:02:51 for CaRNeSS by
+    <li class="footer">Generated on Tue Dec 10 2013 10:10:07 for CaRNeSS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

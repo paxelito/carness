@@ -1,0 +1,296 @@
+.TH "acsAttractorAnalysis" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+acsAttractorAnalysis \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBzeroBeforeStrNum\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBStrPath\fP = os\&.path\&.abspath(StrPath)"
+.br
+.ti -1c
+.RI "tuple \fBtoday\fP = dt\&.date\&.today()"
+.br
+.ti -1c
+.RI "tuple \fBtmpDirs\fP = sort(os\&.listdir(\fBStrPath\fP))"
+.br
+.ti -1c
+.RI "list \fBallSortedSpecies\fP = []"
+.br
+.ti -1c
+.RI "list \fBallConcentrations\fP = []"
+.br
+.ti -1c
+.RI "list \fBallSortedSpeciesNOINFLUX\fP = []"
+.br
+.ti -1c
+.RI "list \fBallConcentrationsNOINFLUX\fP = []"
+.br
+.ti -1c
+.RI "tuple \fBtotDirName\fP = os\&.path\&.join(\fBStrPath\fP,tmpDir)"
+.br
+.ti -1c
+.RI "tuple \fBresDirPath\fP = os\&.path\&.abspath(os\&.path\&.join('\&./', 'res'))"
+.br
+.ti -1c
+.RI "tuple \fBnumberOfGen\fP = len(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,'times_*')))"
+.br
+.ti -1c
+.RI "tuple \fBstrZeros\fP = \fBzeroBeforeStrNum\fP(ngen, \fBnumberOfGen\fP)"
+.br
+.ti -1c
+.RI "string \fBstrSpecies\fP = 'species_'"
+.br
+.ti -1c
+.RI "tuple \fBspeciesFiles\fP = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrSpecies\fP)))"
+.br
+.ti -1c
+.RI "list \fBspeciesFile\fP = \fBspeciesFiles\fP[-1]"
+.br
+.ti -1c
+.RI "tuple \fBfidSpecies\fP = open(\fBspeciesFile\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "list \fBseq\fP = []"
+.br
+.ti -1c
+.RI "list \fBoverallConcList\fP = []"
+.br
+.ti -1c
+.RI "list \fBoverallConcListNOINFLUX\fP = []"
+.br
+.ti -1c
+.RI "int \fBnumberOfFolders\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBpos\fP = \fBseq\&.index\fP(key)"
+.br
+.ti -1c
+.RI "tuple \fBpos2\fP = \fBseq\&.index\fP(key2)"
+.br
+.ti -1c
+.RI "tuple \fBANG_overallResMatrix\fP = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBANG_overallResMatrixNOINFLUX\fP = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBHAM_overallResMatrix\fP = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBHAM_overallResMatrixNOINFLUX\fP = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBEUC_overallResMatrix\fP = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBEUC_overallResMatrixNOINFLUX\fP = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+.br
+.ti -1c
+.RI "tuple \fBvecX\fP = np\&.array(lx)"
+.br
+.ti -1c
+.RI "tuple \fBvecY\fP = np\&.array(ly)"
+.br
+.ti -1c
+.RI "tuple \fBtmpCos\fP = float(np\&.dot(\fBvecX\fP,\fBvecY\fP) / (np\&.linalg\&.norm(\fBvecX\fP) * np\&.linalg\&.norm(\fBvecY\fP)))"
+.br
+.ti -1c
+.RI "int \fBtmpHD\fP = 0"
+.br
+.ti -1c
+.RI "int \fBtmpEU\fP = 0"
+.br
+.ti -1c
+.RI "string \fBndn\fP = '_0_new_allStatResults'"
+.br
+.ti -1c
+.RI "tuple \fBnewdirAllResults\fP = os\&.path\&.join(os\&.curdir, \fBndn\fP)"
+.br
+.ti -1c
+.RI "string \fBoutFnameStat\fP = 'speciesVector\&.csv'"
+.br
+.ti -1c
+.RI "tuple \fBsaveFileStat\fP = open(\fBoutFnameStat\fP, 'w')"
+.br
+.ti -1c
+.RI "string \fBstrTypes\fP = ''"
+.br
+.ti -1c
+.RI "int \fBcnt\fP = 0"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def acsAttractorAnalysis\&.zeroBeforeStrNum (tmpl, tmpL)"
+
+.PP
+Definition at line 25 of file acsAttractorAnalysis\&.py\&.
+.SH "Variable Documentation"
+.PP 
+.SS "list acsAttractorAnalysis\&.allConcentrations = []"
+
+.PP
+Definition at line 50 of file acsAttractorAnalysis\&.py\&.
+.SS "list acsAttractorAnalysis\&.allConcentrationsNOINFLUX = []"
+
+.PP
+Definition at line 52 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.allSortedSpecies = []"
+
+.PP
+Definition at line 49 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.allSortedSpeciesNOINFLUX = []"
+
+.PP
+Definition at line 51 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.ANG_overallResMatrix = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+
+.PP
+Definition at line 171 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.ANG_overallResMatrixNOINFLUX = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+
+.PP
+Definition at line 172 of file acsAttractorAnalysis\&.py\&.
+.SS "int acsAttractorAnalysis\&.cnt = 0"
+
+.PP
+Definition at line 262 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.EUC_overallResMatrix = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+
+.PP
+Definition at line 175 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.EUC_overallResMatrixNOINFLUX = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+
+.PP
+Definition at line 176 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.fidSpecies = open(\fBspeciesFile\fP, '\fBr\fP')"
+
+.PP
+Definition at line 82 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.HAM_overallResMatrix = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+
+.PP
+Definition at line 173 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.HAM_overallResMatrixNOINFLUX = np\&.zeros((\fBnumberOfFolders\fP,\fBnumberOfFolders\fP))"
+
+.PP
+Definition at line 174 of file acsAttractorAnalysis\&.py\&.
+.SS "string acsAttractorAnalysis\&.ndn = '_0_new_allStatResults'"
+
+.PP
+Definition at line 219 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.newdirAllResults = os\&.path\&.join(os\&.curdir, \fBndn\fP)"
+
+.PP
+Definition at line 220 of file acsAttractorAnalysis\&.py\&.
+.SS "int acsAttractorAnalysis\&.numberOfFolders = 0"
+
+.PP
+Definition at line 109 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.numberOfGen = len(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,'times_*')))"
+
+.PP
+Definition at line 69 of file acsAttractorAnalysis\&.py\&.
+.SS "string acsAttractorAnalysis\&.outFnameStat = 'speciesVector\&.csv'"
+
+.PP
+Definition at line 230 of file acsAttractorAnalysis\&.py\&.
+.SS "list acsAttractorAnalysis\&.overallConcList = []"
+
+.PP
+Definition at line 107 of file acsAttractorAnalysis\&.py\&.
+.SS "list acsAttractorAnalysis\&.overallConcListNOINFLUX = []"
+
+.PP
+Definition at line 108 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.pos = \fBseq\&.index\fP(key)"
+
+.PP
+Definition at line 153 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.pos2 = \fBseq\&.index\fP(key2)"
+
+.PP
+Definition at line 159 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.resDirPath = os\&.path\&.abspath(os\&.path\&.join('\&./', 'res'))"
+
+.PP
+Definition at line 63 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.saveFileStat = open(\fBoutFnameStat\fP, 'w')"
+
+.PP
+Definition at line 231 of file acsAttractorAnalysis\&.py\&.
+.SS "list acsAttractorAnalysis\&.seq = []"
+
+.PP
+Definition at line 87 of file acsAttractorAnalysis\&.py\&.
+.SS "list acsAttractorAnalysis\&.speciesFile = \fBspeciesFiles\fP[-1]"
+
+.PP
+Definition at line 78 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.speciesFiles = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrSpecies\fP)))"
+
+.PP
+Definition at line 77 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.StrPath = os\&.path\&.abspath(StrPath)"
+
+.PP
+Definition at line 42 of file acsAttractorAnalysis\&.py\&.
+.SS "string acsAttractorAnalysis\&.strSpecies = 'species_'"
+
+.PP
+Definition at line 74 of file acsAttractorAnalysis\&.py\&.
+.SS "string acsAttractorAnalysis\&.strTypes = ''"
+
+.PP
+Definition at line 233 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.strZeros = \fBzeroBeforeStrNum\fP(ngen, \fBnumberOfGen\fP)"
+
+.PP
+Definition at line 73 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.tmpCos = float(np\&.dot(\fBvecX\fP,\fBvecY\fP) / (np\&.linalg\&.norm(\fBvecX\fP) * np\&.linalg\&.norm(\fBvecY\fP)))"
+
+.PP
+Definition at line 184 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.tmpDirs = sort(os\&.listdir(\fBStrPath\fP))"
+
+.PP
+Definition at line 48 of file acsAttractorAnalysis\&.py\&.
+.SS "int acsAttractorAnalysis\&.tmpEU = 0"
+
+.PP
+Definition at line 189 of file acsAttractorAnalysis\&.py\&.
+.SS "int acsAttractorAnalysis\&.tmpHD = 0"
+
+.PP
+Definition at line 188 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.today = dt\&.date\&.today()"
+
+.PP
+Definition at line 44 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.totDirName = os\&.path\&.join(\fBStrPath\fP,tmpDir)"
+
+.PP
+Definition at line 59 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.vecX = np\&.array(lx)"
+
+.PP
+Definition at line 181 of file acsAttractorAnalysis\&.py\&.
+.SS "tuple acsAttractorAnalysis\&.vecY = np\&.array(ly)"
+
+.PP
+Definition at line 182 of file acsAttractorAnalysis\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

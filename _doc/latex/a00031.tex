@@ -1,0 +1,212 @@
+\hypertarget{a00031}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/\-K\-S\-Search\-Launcher.m File Reference}
+\label{a00031}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/\-K\-S\-Search\-Launcher.\-m@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/\-K\-S\-Search\-Launcher.\-m}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00031_a5e769bbbabcaddc548203741c7100228}{fclose} (\hyperlink{a00031_ae9011d40c6f13e68e6f07156e0da7c5d}{fid})
+\item 
+\hyperlink{a00031_a4241e59001a956990321a269c236c993}{cd} (\hyperlink{a00031_af32eb97339f1e9d37b5540de2cbc79c9}{current\-Dir})
+\item 
+\hyperlink{a00031_a21172d88d238291f06b91067ea53f814}{fprintf} (\hyperlink{a00031_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'N\-E\-T\%d\textbackslash{}n\textbackslash{}n', \hyperlink{a00031_a7265972fe485274cfff77a9bb07b8fce}{x})
+\item 
+\hyperlink{a00031_a2bff3632fad7bca512140377cbce79ef}{fprintf} (\hyperlink{a00031_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'K\-I\-L\-L\-E\-R\-S\textbackslash{}n\textbackslash{}n')
+\item 
+\hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00031_a0921b3966bd3417e73b391d1e3d61c72}{fprintf} (\hyperlink{a00031_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\textbackslash{}n\textbackslash{}n')
+\item 
+\hyperlink{a00031_a4b2068e6157d1e5aeba754398e689fec}{fprintf} (\hyperlink{a00031_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'K\-I\-L\-L\-E\-R\-S-\/S\-P\-A\-M\-M\-E\-R\-S\textbackslash{}n\textbackslash{}n')
+\item 
+\hyperlink{a00031_a194b6c53d0062802894434f7555c8e40}{fprintf} (\hyperlink{a00031_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'S\-P\-A\-M\-M\-E\-R\-S\textbackslash{}n\textbackslash{}n')
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00031_af32eb97339f1e9d37b5540de2cbc79c9}{current\-Dir} = \hyperlink{a00068_a767271ad82d244871370a0f0e6a7f8a4}{cd}()
+\item 
+\hyperlink{a00031_aae5035eb84b89176ed5b06e136325eff}{sim\-Dirs} = dir('sim\-\_\-$\ast$')
+\item 
+\hyperlink{a00031_ae9011d40c6f13e68e6f07156e0da7c5d}{fid} = fopen('results.\-txt','w')
+\item 
+for \hyperlink{a00031_a7265972fe485274cfff77a9bb07b8fce}{x}
+\item 
+\hyperlink{a00031_af04f94b875b4f18fd2d6bd47d989f2b8}{K\-S\-Search}
+\item 
+\hyperlink{a00031_ac9c871eaf7455dc0d274ec20c5c69ac2}{check\-K\-M} = \hyperlink{a00025_ac10445404f4b83302522defb59e25ef7}{isempty}(\hyperlink{a00030_ab372fd9c8bb38cf3c78e995c0698b0ca}{killers\-Matrix})
+\item 
+\hyperlink{a00031_af5946383720aa572eb93e1e63afc23c2}{else} \mbox{[}\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r} \hyperlink{a00035_a6be92348ba85ef257b11d06209e1d7b6}{c}\mbox{]} = \hyperlink{a00062_ae113ea7f9e515a12ac4b5595c6faf61e}{size}(\hyperlink{a00030_ab372fd9c8bb38cf3c78e995c0698b0ca}{killers\-Matrix})
+\item 
+for \hyperlink{a00031_a66a219c6834c25b0073a6bb84e1e0117}{i}
+\item 
+clear \hyperlink{a00031_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j}
+\item 
+clear \hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}
+\item 
+clear \hyperlink{a00031_a8e54ca14679a1ce9245a3b7d55d95570}{c}
+\item 
+\hyperlink{a00031_a67eb148eecfd241148ce3711f058ac2b}{check\-K\-S\-M} = \hyperlink{a00025_ac10445404f4b83302522defb59e25ef7}{isempty}(\hyperlink{a00030_ab18f9eabd5f873bd17d226d786bc22df}{K\-S\-Matrix})
+\item 
+\hyperlink{a00031_ae80cf4c5bf659247b45bbad5d22dec52}{check\-S\-M} = \hyperlink{a00025_ac10445404f4b83302522defb59e25ef7}{isempty}(\hyperlink{a00030_a5bca8ffaecd726e70d088f2e00c9b4e0}{Spammers\-Matrix})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00031_a4241e59001a956990321a269c236c993}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!cd@{cd}}
+\index{cd@{cd}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{cd}]{\setlength{\rightskip}{0pt plus 5cm}cd (
+\begin{DoxyParamCaption}
+\item[{{\bf current\-Dir}}]{}
+\end{DoxyParamCaption}
+)}}\label{a00031_a4241e59001a956990321a269c236c993}
+\hypertarget{a00031_a5e769bbbabcaddc548203741c7100228}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!fclose@{fclose}}
+\index{fclose@{fclose}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{fclose}]{\setlength{\rightskip}{0pt plus 5cm}fclose (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{}
+\end{DoxyParamCaption}
+)}}\label{a00031_a5e769bbbabcaddc548203741c7100228}
+\hypertarget{a00031_a21172d88d238291f06b91067ea53f814}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'N\-E\-T\%d\textbackslash{}n\textbackslash{}n'}]{, }
+\item[{{\bf x}}]{}
+\end{DoxyParamCaption}
+)}}\label{a00031_a21172d88d238291f06b91067ea53f814}
+\hypertarget{a00031_a2bff3632fad7bca512140377cbce79ef}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'K\-I\-L\-L\-E\-R\-S\textbackslash{}n\textbackslash{}n'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00031_a2bff3632fad7bca512140377cbce79ef}
+\hypertarget{a00031_a0921b3966bd3417e73b391d1e3d61c72}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'\textbackslash{}n\textbackslash{}n'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00031_a0921b3966bd3417e73b391d1e3d61c72}
+\hypertarget{a00031_a4b2068e6157d1e5aeba754398e689fec}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'K\-I\-L\-L\-E\-R\-S-\/S\-P\-A\-M\-M\-E\-R\-S\textbackslash{}n\textbackslash{}n'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00031_a4b2068e6157d1e5aeba754398e689fec}
+\hypertarget{a00031_a194b6c53d0062802894434f7555c8e40}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'S\-P\-A\-M\-M\-E\-R\-S\textbackslash{}n\textbackslash{}n'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00031_a194b6c53d0062802894434f7555c8e40}
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00031_a8e54ca14679a1ce9245a3b7d55d95570}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!c@{c}}
+\index{c@{c}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}clear c}}\label{a00031_a8e54ca14679a1ce9245a3b7d55d95570}
+
+
+Definition at line 27 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_ac9c871eaf7455dc0d274ec20c5c69ac2}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!check\-K\-M@{check\-K\-M}}
+\index{check\-K\-M@{check\-K\-M}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{check\-K\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} check\-K\-M = {\bf isempty}({\bf killers\-Matrix})}}\label{a00031_ac9c871eaf7455dc0d274ec20c5c69ac2}
+
+
+Definition at line 12 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_a67eb148eecfd241148ce3711f058ac2b}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!check\-K\-S\-M@{check\-K\-S\-M}}
+\index{check\-K\-S\-M@{check\-K\-S\-M}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{check\-K\-S\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} check\-K\-S\-M = {\bf isempty}({\bf K\-S\-Matrix})}}\label{a00031_a67eb148eecfd241148ce3711f058ac2b}
+
+
+Definition at line 29 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_ae80cf4c5bf659247b45bbad5d22dec52}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!check\-S\-M@{check\-S\-M}}
+\index{check\-S\-M@{check\-S\-M}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{check\-S\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} check\-S\-M = {\bf isempty}({\bf Spammers\-Matrix})}}\label{a00031_ae80cf4c5bf659247b45bbad5d22dec52}
+
+
+Definition at line 46 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_af32eb97339f1e9d37b5540de2cbc79c9}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!current\-Dir@{current\-Dir}}
+\index{current\-Dir@{current\-Dir}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{current\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}current\-Dir = {\bf cd}()}}\label{a00031_af32eb97339f1e9d37b5540de2cbc79c9}
+
+
+Definition at line 1 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_af5946383720aa572eb93e1e63afc23c2}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!else@{else}}
+\index{else@{else}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{else}]{\setlength{\rightskip}{0pt plus 5cm}else\mbox{[}{\bf r} {\bf c}\mbox{]} = {\bf size}({\bf killers\-Matrix})}}\label{a00031_af5946383720aa572eb93e1e63afc23c2}
+
+
+Definition at line 16 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_ae9011d40c6f13e68e6f07156e0da7c5d}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!fid@{fid}}
+\index{fid@{fid}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{fid}]{\setlength{\rightskip}{0pt plus 5cm}fid = fopen('results.\-txt','w')}}\label{a00031_ae9011d40c6f13e68e6f07156e0da7c5d}
+
+
+Definition at line 3 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_a66a219c6834c25b0073a6bb84e1e0117}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!i@{i}}
+\index{i@{i}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} {\bf end} clear i}}\label{a00031_a66a219c6834c25b0073a6bb84e1e0117}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 1:\hyperlink{a00027_ac862e7284527eb913b1351c8bfb8e079}{r}
+            \textcolor{keywordflow}{for} \hyperlink{a00028_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j} = 1:\hyperlink{a00027_a8e54ca14679a1ce9245a3b7d55d95570}{c}
+                \hyperlink{a00027_a21172d88d238291f06b91067ea53f814}{fprintf}(\hyperlink{a00105_a490a31896b3a0812a6e9ed57cd4be1c9}{fid},\textcolor{stringliteral}{'%d\(\backslash\)t'},\hyperlink{a00029_a929016802e1ede2217a41240a6974fa6}{killersMatrix}(\hyperlink{a00027_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i},\hyperlink{a00028_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j}))
+\end{DoxyCode}
+
+
+Definition at line 17 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!j@{j}}
+\index{j@{j}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{j}]{\setlength{\rightskip}{0pt plus 5cm}clear j}}\label{a00031_ad34e9c7e9ae69ae0b9f1866faed5e4ad}
+
+
+Definition at line 25 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_af04f94b875b4f18fd2d6bd47d989f2b8}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!K\-S\-Search@{K\-S\-Search}}
+\index{K\-S\-Search@{K\-S\-Search}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{K\-S\-Search}]{\setlength{\rightskip}{0pt plus 5cm}K\-S\-Search}}\label{a00031_af04f94b875b4f18fd2d6bd47d989f2b8}
+
+
+Definition at line 7 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_ac862e7284527eb913b1351c8bfb8e079}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!r@{r}}
+\index{r@{r}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}clear r}}\label{a00031_ac862e7284527eb913b1351c8bfb8e079}
+
+
+Definition at line 26 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_aae5035eb84b89176ed5b06e136325eff}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!sim\-Dirs@{sim\-Dirs}}
+\index{sim\-Dirs@{sim\-Dirs}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{sim\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}sim\-Dirs = dir('sim\-\_\-$\ast$')}}\label{a00031_aae5035eb84b89176ed5b06e136325eff}
+
+
+Definition at line 2 of file K\-S\-Search\-Launcher.\-m.
+
+\hypertarget{a00031_a7265972fe485274cfff77a9bb07b8fce}{\index{K\-S\-Search\-Launcher.\-m@{K\-S\-Search\-Launcher.\-m}!x@{x}}
+\index{x@{x}!KSSearchLauncher.m@{K\-S\-Search\-Launcher.\-m}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}for x}}\label{a00031_a7265972fe485274cfff77a9bb07b8fce}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 1:length(\hyperlink{a00027_aae5035eb84b89176ed5b06e136325eff}{simDirs})
+    \hyperlink{a00025_a4745c86f44382225b251e3640cb2fe63}{cd}(strcat(\hyperlink{a00027_aae5035eb84b89176ed5b06e136325eff}{simDirs}(\hyperlink{a00027_a7265972fe485274cfff77a9bb07b8fce}{x}).\hyperlink{a00027_abbf559a76fab59203496b0847ab9502a}{name},'/res'))
+\end{DoxyCode}
+
+
+Definition at line 5 of file K\-S\-Search\-Launcher.\-m.
+

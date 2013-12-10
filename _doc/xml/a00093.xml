@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00093" kind="file">
+    <compoundname>reactions.h</compoundname>
+    <includes refid="a00072" local="yes">acs_headers.h</includes>
+    <includes refid="a00076" local="yes">commonFunctions.h</includes>
+    <includedby refid="a00086" local="yes">/Users/alessandrofilisetti/Documents/GIT/carness/environment.h</includedby>
+    <includedby refid="a00092" local="yes">/Users/alessandrofilisetti/Documents/GIT/carness/reactions.cpp</includedby>
+    <incdepgraph>
+      <node id="806">
+        <label>mtrand.h</label>
+        <link refid="a00091"/>
+      </node>
+      <node id="792">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h</label>
+        <link refid="reactions.h"/>
+        <childnode refid="793" relation="include">
+        </childnode>
+        <childnode refid="807" relation="include">
+        </childnode>
+      </node>
+      <node id="802">
+        <label>cmath</label>
+      </node>
+      <node id="797">
+        <label>string</label>
+      </node>
+      <node id="793">
+        <label>acs_headers.h</label>
+        <link refid="a00072"/>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="797" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="800" relation="include">
+        </childnode>
+        <childnode refid="801" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="804" relation="include">
+        </childnode>
+        <childnode refid="805" relation="include">
+        </childnode>
+        <childnode refid="806" relation="include">
+        </childnode>
+      </node>
+      <node id="796">
+        <label>fstream</label>
+      </node>
+      <node id="805">
+        <label>ctime</label>
+      </node>
+      <node id="807">
+        <label>commonFunctions.h</label>
+        <link refid="a00076"/>
+        <childnode refid="793" relation="include">
+        </childnode>
+      </node>
+      <node id="800">
+        <label>vector</label>
+      </node>
+      <node id="799">
+        <label>sstream</label>
+      </node>
+      <node id="803">
+        <label>cstdlib</label>
+      </node>
+      <node id="804">
+        <label>clocale</label>
+      </node>
+      <node id="795">
+        <label>iostream</label>
+      </node>
+      <node id="801">
+        <label>deque</label>
+      </node>
+      <node id="794">
+        <label>stdio.h</label>
+      </node>
+      <node id="798">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="812">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/reactions.cpp</label>
+        <link refid="a00092"/>
+      </node>
+      <node id="808">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h</label>
+        <link refid="reactions.h"/>
+        <childnode refid="809" relation="include">
+        </childnode>
+        <childnode refid="812" relation="include">
+        </childnode>
+      </node>
+      <node id="811">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/main.cpp</label>
+        <link refid="a00089"/>
+      </node>
+      <node id="809">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/environment.h</label>
+        <link refid="a00086"/>
+        <childnode refid="810" relation="include">
+        </childnode>
+        <childnode refid="811" relation="include">
+        </childnode>
+      </node>
+      <node id="810">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp</label>
+        <link refid="a00085"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="a00021" prot="public">reactions</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>reactions.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>acsm2s</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by<sp/>Alessandro<sp/>Filisetti<sp/>on<sp/>31/03/09.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Modified<sp/>by<sp/>Alessandro<sp/>Filisetti<sp/>on<sp/>19/04/2011.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>2011<sp/>Alessandro<sp/>Filisetti.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>Some<sp/>comments<sp/>here</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>REACTIONS</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>REACTIONS</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="a00072" kindref="compound">acs_headers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="a00076" kindref="compound">commonFunctions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="a00021" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="a00021" kindref="compound">reactions</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>id_reaction;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>type;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>species_I;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>species_II;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>species_III;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>events;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>energyType;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>k_spont;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00021_1a0b6ca1c86d79bb511f116d86714f74a6" kindref="member">reactions</ref>(<ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpType,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_I,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_II,<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpM_III,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvents,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergyType,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpKspont);</highlight></codeline>
+<codeline lineno="33" refid="a00021_1ad0c79e56e87891c502d8fcd6c4005987" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00021_1ad0c79e56e87891c502d8fcd6c4005987" kindref="member">~reactions</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>GETTING<sp/>FUNCTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="a00021_1a5c30ce559254e67f7d4e219a8fe26fcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00021_1a5c30ce559254e67f7d4e219a8fe26fcc" kindref="member">getID</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>id_reaction;}</highlight></codeline>
+<codeline lineno="37" refid="a00021_1ad928f8c901ad8e318e201cedcf1209ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/><ref refid="a00021_1ad928f8c901ad8e318e201cedcf1209ba" kindref="member">getType</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type;}</highlight></codeline>
+<codeline lineno="38" refid="a00021_1a90adbdb8288b8c67c7715949848583ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00021_1a90adbdb8288b8c67c7715949848583ab" kindref="member">getSpecies_I</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>species_I;}</highlight></codeline>
+<codeline lineno="39" refid="a00021_1ac0bdd6d9081645bf3a2c5531a71cbe40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00021_1ac0bdd6d9081645bf3a2c5531a71cbe40" kindref="member">getSpecies_II</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>species_II;}</highlight></codeline>
+<codeline lineno="40" refid="a00021_1aaf426633019113ac4ae54cd5597920be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00021_1aaf426633019113ac4ae54cd5597920be" kindref="member">getSpecies_III</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>species_III;}</highlight></codeline>
+<codeline lineno="41" refid="a00021_1a4fd82a3f1a6474e53709c2a8c04b793c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/><ref refid="a00021_1a4fd82a3f1a6474e53709c2a8c04b793c" kindref="member">getEvents</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>events;}</highlight></codeline>
+<codeline lineno="42" refid="a00021_1ae6fce196577644283fdab4a78909d891" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/><ref refid="a00021_1ae6fce196577644283fdab4a78909d891" kindref="member">getEnergyType</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>energyType;}</highlight></codeline>
+<codeline lineno="43" refid="a00021_1a3cac13cba00c709df26485bbeffda4f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/><ref refid="a00021_1a3cac13cba00c709df26485bbeffda4f0" kindref="member">getKspont</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>k_spont;}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>OPERATIVE<sp/>FUNCTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="a00021_1ae7a0bcb1c921c25ad5dc637d664f2c94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00021_1ae7a0bcb1c921c25ad5dc637d664f2c94" kindref="member">updateTotEvents</ref>(){events++;}</highlight></codeline>
+<codeline lineno="47" refid="a00021_1a614a367a15dda1df4160bcdc170a9b32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00021_1a614a367a15dda1df4160bcdc170a9b32" kindref="member">resetEventsCounter</ref>(){events<sp/>=<sp/>0;}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/reactions.h"/>
+  </compounddef>
+</doxygen>

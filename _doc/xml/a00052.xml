@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00052" kind="file">
+    <compoundname>__init__.py</compoundname>
+    <innernamespace refid="a00114">lib::IO</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="a00114" refkind="compound"><highlight class="normal">__all__<sp/>=<sp/>[</highlight><highlight class="stringliteral">&quot;readfiles&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;writefiles&quot;</highlight><highlight class="normal">]</highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/__init__.py"/>
+  </compounddef>
+</doxygen>

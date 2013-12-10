@@ -381,7 +381,12 @@ acs_double species::getLoadedConcentration(acs_double tmpVolume)
 	return tmpConc;
 }
 /**
- \Function to insert the second substrate - and k reaction - to the species (complexes list)
+ Function to insert the second substrate, final condensation rate and the catalysis ID to the species (complexes list)
+ @author Alessandro Filisetti
+ @date 2013-12-10
+ @param acs_longInt tmpID second substrate ID
+ @param acs_double tmpK final condensation ID
+ @param acs_longInt tmpCat catalysis ID
  */
 void species::insertSecSub(acs_longInt tmpID, acs_double tmpK, acs_longInt tmpCat)
 {
@@ -411,4 +416,21 @@ void species::showGillEngagement()
 		cout << gillespieEngagement.at(i) << "\t";
 	}
 	cout << endl;
+}
+
+/**
+  Function to control if the second substrare is already present
+ */
+bool species::checkIFtheSecondSubstrateIsAlreadyPresent(acs_longInt tmpSecSubID)
+{
+	bool alreadyPresent = false;
+	if (secondSubstrates.size() > 0)
+	{
+		for(vector<acs_longInt>::iterator tmpSecSubIter = secondSubstrates.begin(); tmpSecSubIter != secondSubstrates.end(); tmpSecSubIter++)
+		{
+			if (tmpSecSubID == *tmpSecSubIter)
+				alreadyPresent = true;
+		}
+	}
+	return alreadyPresent;
 }

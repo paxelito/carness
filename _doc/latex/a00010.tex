@@ -1,0 +1,11 @@
+The initializator provided with the simulator is located in the {\ttfamily initializator} folder (within the source code folder) and it is developed in Matlab code. All the parameters are set in the {\ttfamily \hyperlink{a00071}{start.\-m}} file (from line 22 to line 63). In addition you find the parameters related to the name of the folder that will contain the simulation ({\ttfamily sim\-Folder.\-name}), the path where that folder will be created ({\ttfamily sim\-Folder.\-path}) and the number of different network ensambles to create ({\ttfamily sim\-Folder.\-nets}). It is important to notice that the initializator has not been thought to be shared, so it is not too much user friendly to be manipulated. Nevertheless it could be very useful with a little bit of practice. \hypertarget{a00010_initSensitivity}{}\section{Screening Parameter}\label{a00010_initSensitivity}
+To initialize structures to perform a sensitivity analysis of a specific parameters follow the following instruction\-:
+\begin{DoxyItemize}
+\item Change the name of the array at row 13 with the name of the parameter you want analyze. This array contains the values of the paramter. Remember to insert the old parameter you are changing in the parameters list with its single value, otherwise it would be a missing parameter.
+\item In the array at row 14 ({\ttfamily nome\-\_\-folder}) you have put the same number of elements of the array containing the screening values. This array contains a numeric tag of the values (used to create the simulations folder names) contained in the values array.
+\item In the code of the {\ttfamily \hyperlink{a00071}{start.\-m}} file (rows 122 to 150) you must change\-:
+\begin{DoxyItemize}
+\item row 121\-: {\ttfamily }\mbox{[}rows,b\mbox{]}=size(reaction\-Probability); --$>$ \mbox{[}rows,b\mbox{]}=size(name\-\_\-of\-\_\-the\-\_\-parameter\-\_\-you\-\_\-have\-\_\-trasformed\-\_\-in\-\_\-array);
+\item row 146\-: {\ttfamily inizializzatore\-\_\-\-A\-C\-S}(... reaction\-Probability(i), ...); -\/$>$ inizializzatore\-\_\-\-A\-C\-S(... name\-\_\-of\-\_\-the\-\_\-parameter\-\_\-you\-\_\-have\-\_\-trasformed\-\_\-in\-\_\-array(i), ...); (remember to remove the index to the reaction\-Probability parameter 
+\end{DoxyItemize}
+\end{DoxyItemize}

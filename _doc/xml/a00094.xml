@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00094" kind="file">
+    <compoundname>species.cpp</compoundname>
+    <includes refid="a00095" local="yes">species.h</includes>
+    <incdepgraph>
+      <node id="828">
+        <label>mtrand.h</label>
+        <link refid="a00091"/>
+      </node>
+      <node id="824">
+        <label>cmath</label>
+      </node>
+      <node id="819">
+        <label>string</label>
+      </node>
+      <node id="815">
+        <label>acs_headers.h</label>
+        <link refid="a00072"/>
+        <childnode refid="816" relation="include">
+        </childnode>
+        <childnode refid="817" relation="include">
+        </childnode>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="819" relation="include">
+        </childnode>
+        <childnode refid="820" relation="include">
+        </childnode>
+        <childnode refid="821" relation="include">
+        </childnode>
+        <childnode refid="822" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="824" relation="include">
+        </childnode>
+        <childnode refid="825" relation="include">
+        </childnode>
+        <childnode refid="826" relation="include">
+        </childnode>
+        <childnode refid="827" relation="include">
+        </childnode>
+        <childnode refid="828" relation="include">
+        </childnode>
+      </node>
+      <node id="814">
+        <label>species.h</label>
+        <link refid="a00095"/>
+        <childnode refid="815" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+      </node>
+      <node id="818">
+        <label>fstream</label>
+      </node>
+      <node id="827">
+        <label>ctime</label>
+      </node>
+      <node id="829">
+        <label>commonFunctions.h</label>
+        <link refid="a00076"/>
+        <childnode refid="815" relation="include">
+        </childnode>
+      </node>
+      <node id="822">
+        <label>vector</label>
+      </node>
+      <node id="821">
+        <label>sstream</label>
+      </node>
+      <node id="825">
+        <label>cstdlib</label>
+      </node>
+      <node id="826">
+        <label>clocale</label>
+      </node>
+      <node id="817">
+        <label>iostream</label>
+      </node>
+      <node id="823">
+        <label>deque</label>
+      </node>
+      <node id="816">
+        <label>stdio.h</label>
+      </node>
+      <node id="820">
+        <label>cstring</label>
+      </node>
+      <node id="813">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp</label>
+        <link refid="species.cpp"/>
+        <childnode refid="814" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="a00095" kindref="compound">species.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="a00022_1a25887c42dfb4b6f33a2d17fdcf74bc47" refkind="member"><highlight class="normal"><ref refid="a00022_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member">species::species</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequence<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;NRG&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentration<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>age<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reborns<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffusionEnh<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>soluble<sp/>=<sp/><ref refid="a00072_1a248fc87e714b5d729453d11fbeec8310" kindref="member">SOLUBLE</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexCuttingPoint<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexDegradationEnh<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluated<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catalyst_ID<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>substrate_ID<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_phospho<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energizable<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastSpeciesEvaluated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>firstConcentration<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="a00022_1a2c407091ff53f0d508b7b9ed8230eee4" refkind="member"><highlight class="normal"><ref refid="a00022_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member">species::species</ref>(<ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpAmount,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpComplexDegEnh,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpComplexCuttingPoint,<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvalueted,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergizable,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpInflux_rate,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpMaxLOut)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>tmpID;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequence<sp/>=<sp/>tmpSequence;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amount<sp/>=<sp/>tmpAmount;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a23c19a53390142ba690d0f3db0520d05" kindref="member">numToConc</ref>(tmpVolume);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>age<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reborns<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffusionEnh<sp/>=tmpDiffusionEnh;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>soluble<sp/>=<sp/>tmpSoluble;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexDegradationEnh<sp/>=<sp/>tmpComplexDegEnh;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexCuttingPoint<sp/>=<sp/>tmpComplexCuttingPoint;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluated<sp/>=<sp/>tmpEvalueted;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catalyst_ID<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>substrate_ID<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_phospho<sp/>=<sp/>tmpK_phospho;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energizable<sp/>=<sp/>tmpEnergizable;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>concentrationFixed<sp/>propriety</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((tmpInflux_rate<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>(tmpMaxLOut<sp/>&gt;<sp/>0))</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(sequence.length()<sp/>&lt;=<sp/>tmpMaxLOut)<sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>firstConcentration<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>0<sp/>because<sp/>the<sp/>species<sp/>is<sp/>created<sp/>during<sp/>on<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>lastSpeciesEvaluated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="a00022_1a0c91a8b735cb484bff240ba5049f6af3" refkind="member"><highlight class="normal"><ref refid="a00022_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member">species::species</ref>(<ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpConcentration,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpComplexDegEnh,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpComplexCuttingPoint,<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvalueted,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergizable,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpInflux_rate,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpMaxLOut)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>tmpID;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequence<sp/>=<sp/>tmpSequence;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentration<sp/>=<sp/>tmpConcentration;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a9842732a5dbe0eb67e24148b5d7ae4a2" kindref="member">concToNum</ref>(tmpVolume);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a23c19a53390142ba690d0f3db0520d05" kindref="member">numToConc</ref>(tmpVolume);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>age<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reborns<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffusionEnh<sp/>=tmpDiffusionEnh;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>soluble<sp/>=<sp/>tmpSoluble;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexDegradationEnh<sp/>=<sp/>tmpComplexDegEnh;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexCuttingPoint<sp/>=<sp/>tmpComplexCuttingPoint;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluated<sp/>=<sp/>tmpEvalueted;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catalyst_ID<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>substrate_ID<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_phospho<sp/>=<sp/>tmpK_phospho;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energizable<sp/>=<sp/>tmpEnergizable;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>concentrationFixed<sp/>propriety</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((tmpInflux_rate<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>(tmpMaxLOut<sp/>&gt;<sp/>0))</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(sequence.length()<sp/>&lt;=<sp/>tmpMaxLOut)<sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>firstConcentration<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>0<sp/>because<sp/>the<sp/>species<sp/>is<sp/>created<sp/>during<sp/>on<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>lastSpeciesEvaluated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="a00022_1a9476b35ac9fe80d8cafdda98782eafcf" refkind="member"><highlight class="normal"><ref refid="a00022_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member">species::species</ref>(<ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpAmount,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpComplexDegEnh,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpComplexCuttingPoint,<sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvalueted,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpAge,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpReborns,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpNotUsedCatID,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpNotUsedSubID,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergizable,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpInflux_rate,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpMaxLOut)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>tmpID;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequence<sp/>=<sp/>tmpSequence;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amount<sp/>=<sp/>tmpAmount;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00022_1a23c19a53390142ba690d0f3db0520d05" kindref="member">numToConc</ref>(tmpVolume);<sp/></highlight><highlight class="comment">//<sp/>The<sp/>concetration<sp/>is<sp/>set<sp/>within<sp/>this<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>age<sp/>=<sp/>tmpAge;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reborns<sp/>=<sp/>tmpReborns;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffusionEnh<sp/>=tmpDiffusionEnh;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>soluble<sp/>=<sp/>tmpSoluble;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexDegradationEnh<sp/>=<sp/>tmpComplexDegEnh;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexCuttingPoint<sp/>=<sp/>tmpComplexCuttingPoint;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluated<sp/>=<sp/>tmpEvalueted;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catalyst_ID<sp/>=<sp/>tmpNotUsedCatID;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>substrate_ID<sp/>=<sp/>tmpNotUsedSubID;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_phospho<sp/>=<sp/>tmpK_phospho;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energizable<sp/>=<sp/>tmpEnergizable;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>concentrationFixed<sp/>propriety</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((tmpInflux_rate<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>(tmpMaxLOut<sp/>&gt;<sp/>0))</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(sequence.length()<sp/>&lt;=<sp/>tmpMaxLOut)<sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>firstConcentration<sp/>=<sp/>concentration;<sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>species<sp/>is<sp/>loaded<sp/>from<sp/>file<sp/>that&apos;s<sp/>the<sp/>very<sp/>initial<sp/>concentration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>lastSpeciesEvaluated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="a00022_1a26eba3e8d86938ad8b2b6b284e9f010f" refkind="member"><highlight class="normal"><ref refid="a00022_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member">species::species</ref>(<ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpConcentration,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpComplexDegEnh,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpComplexCuttingPoint,<sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEvalueted,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpAge,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpReborns,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpNotUsedCatID,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpNotUsedSubID,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpKLoadConc,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergizable,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpInflux_rate,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpMaxLOut)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>tmpID;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequence<sp/>=<sp/>tmpSequence;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentration<sp/>=<sp/>tmpConcentration;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a9842732a5dbe0eb67e24148b5d7ae4a2" kindref="member">concToNum</ref>(tmpVolume);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a23c19a53390142ba690d0f3db0520d05" kindref="member">numToConc</ref>(tmpVolume);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>round(tmpKLoadConc*tmpVolume*<ref refid="a00072_1a174754c04acfba9e1f66ba249e68643a" kindref="member">AVO</ref>);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>age<sp/>=<sp/>tmpAge;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reborns<sp/>=<sp/>tmpReborns;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffusionEnh<sp/>=tmpDiffusionEnh;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>soluble<sp/>=<sp/>tmpSoluble;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexDegradationEnh<sp/>=<sp/>tmpComplexDegEnh;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexCuttingPoint<sp/>=<sp/>tmpComplexCuttingPoint;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluated<sp/>=<sp/>tmpEvalueted;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catalyst_ID<sp/>=<sp/>tmpNotUsedCatID;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>substrate_ID<sp/>=<sp/>tmpNotUsedSubID;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_phospho<sp/>=<sp/>tmpK_phospho;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energizable<sp/>=<sp/>tmpEnergizable;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>concentrationFixed<sp/>propriety</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((tmpInflux_rate<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>(tmpMaxLOut<sp/>&gt;<sp/>0))</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(sequence.length()<sp/>&lt;=<sp/>tmpMaxLOut)<sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>firstConcentration<sp/>=<sp/>tmpConcentration;<sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>species<sp/>is<sp/>loaded<sp/>from<sp/>file<sp/>that&apos;s<sp/>the<sp/>very<sp/>initial<sp/>concentration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>lastSpeciesEvaluated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="a00022_1a59cb623199b038029a7d63a720408cf5" refkind="member"><highlight class="normal"><ref refid="a00022_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member">species::species</ref>(<ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpAmount,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpComplexProb,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpMaxComplexDegKinetic,<sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00016" kindref="compound">MTRand</ref>&amp;<sp/>tmp_RandomGenerator,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergizable)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;four&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>tmpID;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequence<sp/>=<sp/>tmpSequence;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amount<sp/>=<sp/>tmpAmount;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a23c19a53390142ba690d0f3db0520d05" kindref="member">numToConc</ref>(tmpVolume);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>age<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reborns<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffusionEnh<sp/>=tmpDiffusionEnh;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>soluble<sp/>=<sp/>tmpSoluble;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RANDOM<sp/>SELECTION<sp/>BETWEEN<sp/>SPECIES<sp/>AND<sp/>COMPLEX<sp/>ACCORDING<sp/>TO<sp/>THE<sp/>COMPLEX<sp/>CREATION<sp/>PROBABILITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>dice<sp/>=<sp/>tmp_RandomGenerator();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dice<sp/>&lt;=<sp/>tmpComplexProb)<sp/></highlight><highlight class="comment">//COMPLEX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexDegradationEnh<sp/>=<sp/><ref refid="a00075_1aed308af1d3ee40e106e4e23e78644d07" kindref="member">getDoubleRandom</ref>(0.0,<sp/>tmpMaxComplexDegKinetic,<sp/>tmp_RandomGenerator);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexCuttingPoint<sp/>=<sp/><ref refid="a00075_1a6d28311eff309499e66efb5d39a035f4" kindref="member">getIntRandom</ref>(2,<sp/>sequence.length(),<sp/>tmp_RandomGenerator)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/></highlight><highlight class="comment">//SPECIES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexDegradationEnh<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexCuttingPoint<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_phospho<sp/>=<sp/>tmpK_phospho;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energizable<sp/>=<sp/>tmpEnergizable;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>firstConcentration<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>0<sp/>because<sp/>the<sp/>species<sp/>is<sp/>created<sp/>during<sp/>on<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>lastSpeciesEvaluated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274" refid="a00022_1ae0502a70e156c48b917ef2dadf72a859" refkind="member"><highlight class="normal"><ref refid="a00022_1a25887c42dfb4b6f33a2d17fdcf74bc47" kindref="member">species::species</ref>(<ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmpSequence,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpDiffusionEnh,<sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpSoluble,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpMaxComplexDegKinetic,<sp/></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpCuttingPoint,<sp/><ref refid="a00016" kindref="compound">MTRand</ref>&amp;<sp/>tmp_RandomGenerator,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpCatalyst_ID,<sp/></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpSubstrate_ID,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK_phospho,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpEnergizable)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>tmpID;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequence<sp/>=<sp/>tmpSequence;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a23c19a53390142ba690d0f3db0520d05" kindref="member">numToConc</ref>(tmpVolume);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>age<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reborns<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffusionEnh<sp/>=tmpDiffusionEnh;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>soluble<sp/>=<sp/>tmpSoluble;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexDegradationEnh<sp/>=<sp/><ref refid="a00075_1aed308af1d3ee40e106e4e23e78644d07" kindref="member">getDoubleRandom</ref>(tmpMaxComplexDegKinetic,<sp/>tmpMaxComplexDegKinetic,<sp/>tmp_RandomGenerator);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complexCuttingPoint<sp/>=<sp/>tmpCuttingPoint;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catalyst_ID<sp/>=<sp/>tmpCatalyst_ID;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>substrate_ID<sp/>=<sp/>tmpSubstrate_ID;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_phospho<sp/>=<sp/>tmpK_phospho;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energizable<sp/>=<sp/>tmpEnergizable;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>concentrationFixed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>firstConcentration<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>0<sp/>because<sp/>the<sp/>species<sp/>is<sp/>created<sp/>during<sp/>on<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>lastSpeciesEvaluated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302" refid="a00022_1a77f68017e5c50f8943df90efd2e8a0bb" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00022_1a77f68017e5c50f8943df90efd2e8a0bb" kindref="member">species::increment</ref>(<ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!concentrationFixed)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amount++;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a23c19a53390142ba690d0f3db0520d05" kindref="member">numToConc</ref>(tmpVolume);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313" refid="a00022_1ae5142c6ab199459bc1d7d5945c761f0e" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00022_1ae5142c6ab199459bc1d7d5945c761f0e" kindref="member">species::decrement</ref>(<ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!concentrationFixed)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amount--;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a23c19a53390142ba690d0f3db0520d05" kindref="member">numToConc</ref>(tmpVolume);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324" refid="a00022_1a088763fc6b6279040920d219f314c90e" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00022_1a088763fc6b6279040920d219f314c90e" kindref="member">species::setSpecificChargeMols</ref>(<ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpMolsToCharge)</highlight></codeline>
+<codeline lineno="325"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>chargeOK<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>+=<sp/>tmpMolsToCharge;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(chargedMols<sp/>&gt;<sp/>amount)<sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>amount;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargeOK<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>chargeOK;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337" refid="a00022_1a27f9852312659597efe7925124152286" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00022_1a27f9852312659597efe7925124152286" kindref="member">species::setChargeMols</ref>(<ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpMolsToCharge)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>chargeOK<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>tmpMolsToCharge;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(chargedMols<sp/>&gt;<sp/>amount)<sp/>{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols<sp/>=<sp/>amount;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargeOK<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>chargeOK;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350" refid="a00022_1adc36fb991695aed6503b8ed82e06bca5" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00022_1adc36fb991695aed6503b8ed82e06bca5" kindref="member">species::chargeMol</ref>()</highlight></codeline>
+<codeline lineno="351"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>chargeOK<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(chargedMols<sp/>&lt;<sp/>amount)<sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols++;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargeOK<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;+:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>chargedMols<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>tot:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>amount<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>chargeOK;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365" refid="a00022_1acf8588148932adb86229eec28f7cde7c" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00022_1acf8588148932adb86229eec28f7cde7c" kindref="member">species::unchargeMol</ref>()</highlight></codeline>
+<codeline lineno="366"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>unchargeOK<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(chargedMols<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chargedMols--;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unchargeOK<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>unchargeOK;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="a00022_1ab930176d793e5d3b8ce984013d0e0328" refkind="member"><highlight class="normal"><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/><ref refid="a00022_1ab930176d793e5d3b8ce984013d0e0328" kindref="member">species::getLoadedConcentration</ref>(<ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpVolume)</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpConc<sp/>=<sp/>chargedMols<sp/>/<sp/>(<ref refid="a00072_1a174754c04acfba9e1f66ba249e68643a" kindref="member">AVO</ref><sp/>*<sp/>tmpVolume);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout<sp/>&lt;&lt;<sp/>&quot;Amount:<sp/>&quot;<sp/>&lt;&lt;<sp/>amount<sp/>&lt;&lt;<sp/>&quot;<sp/>-<sp/>Conc:&quot;<sp/>&lt;&lt;<sp/>concentration<sp/>&lt;&lt;<sp/>&quot;<sp/>-<sp/>Loaded<sp/>M:&quot;<sp/>&lt;&lt;<sp/>chargedMols<sp/>&lt;&lt;<sp/>&quot;<sp/>-<sp/><sp/>Conc<sp/>C:&quot;<sp/>&lt;&lt;<sp/>tmpConc<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmpConc;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="386" refid="a00022_1a0da8d53a216583f7790b12362da376a3" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00022_1a0da8d53a216583f7790b12362da376a3" kindref="member">species::insertSecSub</ref>(<ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpID,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpK,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpCat)</highlight></codeline>
+<codeline lineno="387"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(secondSubstrates.size()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>tmpFound<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/><ref refid="a00068_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref><sp/>=<sp/>0;<sp/><ref refid="a00068_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref><sp/>&lt;<sp/>(<ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref>)secondSubstrates.size();<sp/><ref refid="a00068_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref>++)</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(secondSubstrates.at(<ref refid="a00068_1a4bfd41b9edb31803d68f4f6362ec4cd7" kindref="member">z</ref>)<sp/>==<sp/>tmpID){tmpFound<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!tmpFound){secondSubstrates.push_back(tmpID);<sp/>kCond.push_back(tmpK);<sp/>catalysisIfCpx.push_back(tmpCat);}</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>secondSubstrates.push_back(tmpID);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kCond.push_back(tmpK);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>catalysisIfCpx.push_back(tmpCat);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="401"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="406" refid="a00022_1a211914e1702d47eb3203730fec2c7b4c" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="a00022_1a211914e1702d47eb3203730fec2c7b4c" kindref="member">species::showGillEngagement</ref>()</highlight></codeline>
+<codeline lineno="407"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;|-<sp/>SPECIES<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>engaged<sp/>in<sp/>Gillespie<sp/>reactions:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/><ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>0;<sp/><ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>&lt;<sp/>gillespieEngagement.size();<sp/><ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>++)</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>gillespieEngagement.at(<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="414"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp"/>
+  </compounddef>
+</doxygen>

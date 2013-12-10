@@ -1,0 +1,143 @@
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/acsAttractorAnalysis.py" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/acsAttractorAnalysis.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBacsAttractorAnalysis\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBacsAttractorAnalysis\&.zeroBeforeStrNum\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.StrPath\fP = os\&.path\&.abspath(StrPath)"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.today\fP = dt\&.date\&.today()"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.tmpDirs\fP = sort(os\&.listdir(StrPath))"
+.br
+.ti -1c
+.RI "list \fBacsAttractorAnalysis\&.allSortedSpecies\fP = []"
+.br
+.ti -1c
+.RI "list \fBacsAttractorAnalysis\&.allConcentrations\fP = []"
+.br
+.ti -1c
+.RI "list \fBacsAttractorAnalysis\&.allSortedSpeciesNOINFLUX\fP = []"
+.br
+.ti -1c
+.RI "list \fBacsAttractorAnalysis\&.allConcentrationsNOINFLUX\fP = []"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.totDirName\fP = os\&.path\&.join(StrPath,tmpDir)"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.resDirPath\fP = os\&.path\&.abspath(os\&.path\&.join('\&./', 'res'))"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.numberOfGen\fP = len(glob\&.glob(os\&.path\&.join(resDirPath,'times_*')))"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.strZeros\fP = zeroBeforeStrNum(ngen, numberOfGen)"
+.br
+.ti -1c
+.RI "string \fBacsAttractorAnalysis\&.strSpecies\fP = 'species_'"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.speciesFiles\fP = sorted(glob\&.glob(os\&.path\&.join(resDirPath,strSpecies)))"
+.br
+.ti -1c
+.RI "list \fBacsAttractorAnalysis\&.speciesFile\fP = \fBspeciesFiles\fP[-1]"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.fidSpecies\fP = open(\fBspeciesFile\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "list \fBacsAttractorAnalysis\&.seq\fP = []"
+.br
+.ti -1c
+.RI "list \fBacsAttractorAnalysis\&.overallConcList\fP = []"
+.br
+.ti -1c
+.RI "list \fBacsAttractorAnalysis\&.overallConcListNOINFLUX\fP = []"
+.br
+.ti -1c
+.RI "int \fBacsAttractorAnalysis\&.numberOfFolders\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.pos\fP = \fBseq\&.index\fP(key)"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.pos2\fP = \fBseq\&.index\fP(key2)"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.ANG_overallResMatrix\fP = np\&.zeros((numberOfFolders,numberOfFolders))"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.ANG_overallResMatrixNOINFLUX\fP = np\&.zeros((numberOfFolders,numberOfFolders))"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.HAM_overallResMatrix\fP = np\&.zeros((numberOfFolders,numberOfFolders))"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.HAM_overallResMatrixNOINFLUX\fP = np\&.zeros((numberOfFolders,numberOfFolders))"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.EUC_overallResMatrix\fP = np\&.zeros((numberOfFolders,numberOfFolders))"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.EUC_overallResMatrixNOINFLUX\fP = np\&.zeros((numberOfFolders,numberOfFolders))"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.vecX\fP = np\&.array(lx)"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.vecY\fP = np\&.array(ly)"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.tmpCos\fP = float(np\&.dot(vecX,vecY) / (np\&.linalg\&.norm(vecX) * np\&.linalg\&.norm(vecY)))"
+.br
+.ti -1c
+.RI "int \fBacsAttractorAnalysis\&.tmpHD\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsAttractorAnalysis\&.tmpEU\fP = 0"
+.br
+.ti -1c
+.RI "string \fBacsAttractorAnalysis\&.ndn\fP = '_0_new_allStatResults'"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.newdirAllResults\fP = os\&.path\&.join(os\&.curdir, ndn)"
+.br
+.ti -1c
+.RI "string \fBacsAttractorAnalysis\&.outFnameStat\fP = 'speciesVector\&.csv'"
+.br
+.ti -1c
+.RI "tuple \fBacsAttractorAnalysis\&.saveFileStat\fP = open(outFnameStat, 'w')"
+.br
+.ti -1c
+.RI "string \fBacsAttractorAnalysis\&.strTypes\fP = ''"
+.br
+.ti -1c
+.RI "int \fBacsAttractorAnalysis\&.cnt\fP = 0"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

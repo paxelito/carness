@@ -2,6 +2,11 @@ Software documentation is available in the doc folder.
 
 VERSION HISTORY 
 
+Build4.8b20131210.63
+A possible bad_allock in complex second substrate association procedure has been fixed
+Documentation has been re-create according to the new version 
+Graphs have been added to the documentation  
+
 Build4.8b20131209.62
 New try and catch have been added to monitor bugs and crashes. 
 

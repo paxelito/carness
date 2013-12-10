@@ -5,22 +5,22 @@
     <innerdir refid="dir_66d19001354beca3375bfcfe54fec246">/Users/alessandrofilisetti/Documents/GIT/carness/_analysis</innerdir>
     <innerdir refid="dir_57b3bf84c49e6a30c9113636c121b1cc">/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator</innerdir>
     <innerdir refid="dir_6edaaf4801aa0ea12467972748371704">/Users/alessandrofilisetti/Documents/GIT/carness/Debug</innerdir>
-    <innerfile refid="acs__headers_8h">acs_headers.h</innerfile>
-    <innerfile refid="catalysis_8cpp">catalysis.cpp</innerfile>
-    <innerfile refid="catalysis_8h">catalysis.h</innerfile>
-    <innerfile refid="common_functions_8cpp">commonFunctions.cpp</innerfile>
-    <innerfile refid="common_functions_8h">commonFunctions.h</innerfile>
-    <innerfile refid="environment_8cpp">environment.cpp</innerfile>
-    <innerfile refid="environment_8h">environment.h</innerfile>
-    <innerfile refid="gillespie_8cpp">gillespie.cpp</innerfile>
-    <innerfile refid="gillespie_8h">gillespie.h</innerfile>
-    <innerfile refid="main_8cpp">main.cpp</innerfile>
-    <innerfile refid="mtrand_8cpp">mtrand.cpp</innerfile>
-    <innerfile refid="mtrand_8h">mtrand.h</innerfile>
-    <innerfile refid="reactions_8cpp">reactions.cpp</innerfile>
-    <innerfile refid="reactions_8h">reactions.h</innerfile>
-    <innerfile refid="species_8cpp">species.cpp</innerfile>
-    <innerfile refid="species_8h">species.h</innerfile>
+    <innerfile refid="a00072">acs_headers.h</innerfile>
+    <innerfile refid="a00073">catalysis.cpp</innerfile>
+    <innerfile refid="a00074">catalysis.h</innerfile>
+    <innerfile refid="a00075">commonFunctions.cpp</innerfile>
+    <innerfile refid="a00076">commonFunctions.h</innerfile>
+    <innerfile refid="a00085">environment.cpp</innerfile>
+    <innerfile refid="a00086">environment.h</innerfile>
+    <innerfile refid="a00087">gillespie.cpp</innerfile>
+    <innerfile refid="a00088">gillespie.h</innerfile>
+    <innerfile refid="a00089">main.cpp</innerfile>
+    <innerfile refid="a00090">mtrand.cpp</innerfile>
+    <innerfile refid="a00091">mtrand.h</innerfile>
+    <innerfile refid="a00092">reactions.cpp</innerfile>
+    <innerfile refid="a00093">reactions.h</innerfile>
+    <innerfile refid="a00094">species.cpp</innerfile>
+    <innerfile refid="a00095">species.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="dir_648969887db231d5c382500c91d9117f" kind="dir">
+    <compoundname>/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment</compoundname>
+    <innerdir refid="dir_b3750e55f00396bd5244ef578e251f95">/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib</innerdir>
+    <innerfile refid="a00039">acsAttractorAnalysis.py</innerfile>
+    <innerfile refid="a00040">acsAttractorAnalysisInTime.py</innerfile>
+    <innerfile refid="a00041">acsBufferedFluxes.py</innerfile>
+    <innerfile refid="a00042">acsDynStatInTime.py</innerfile>
+    <innerfile refid="a00043">acsFromWim2Carness.py</innerfile>
+    <innerfile refid="a00044">acsRAFanalysis.py</innerfile>
+    <innerfile refid="a00045">acsSCCanalysis.py</innerfile>
+    <innerfile refid="a00046">acsSpeciesActivities.py</innerfile>
+    <innerfile refid="a00047">acsStatesAnalysis.py</innerfile>
+    <innerfile refid="a00048">init.py</innerfile>
+    <innerfile refid="a00058">main.py</innerfile>
+    <innerfile refid="a00059">prepareNewSim.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/"/>
+  </compounddef>
+</doxygen>

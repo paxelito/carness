@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="dir_f38b9cc9be8f8dcc2773725189fced3b" kind="dir">
+    <compoundname>/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph</compoundname>
+    <innerfile refid="a00051">__init__.py</innerfile>
+    <innerfile refid="a00054">network.py</innerfile>
+    <innerfile refid="a00055">raf.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/"/>
+  </compounddef>
+</doxygen>

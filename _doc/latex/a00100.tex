@@ -1,0 +1,204 @@
+\hypertarget{a00100}{\section{acs\-From\-Wim2\-Carness Namespace Reference}
+\label{a00100}\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}}
+}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{a00100_aed93287ef2c9a4a9ba68f8ffc75aae17}{parser}
+\item 
+tuple \hyperlink{a00100_ac4c461267ee7f11bbe525de64f56cd10}{args} = parser.\-parse\-\_\-args()
+\item 
+string \hyperlink{a00100_a6f995419ddd7f2de58506d9541238dbc}{ndn} = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'
+\item 
+tuple \hyperlink{a00100_a4af2fb5abbd4a6e8930401e66af5b79d}{newdir\-All\-Results} = os.\-path.\-join(args.\-str\-Out, \hyperlink{a00100_a6f995419ddd7f2de58506d9541238dbc}{ndn})
+\item 
+tuple \hyperlink{a00100_a6df9226d812c675c76a936c215c07e53}{fname\-\_\-init\-Raf\-Res} = os.\-path.\-join(\hyperlink{a00100_a4af2fb5abbd4a6e8930401e66af5b79d}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis.\-csv')
+\item 
+tuple \hyperlink{a00100_a69f06c42408f8a1ae74e34daa83402b7}{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = os.\-path.\-join(\hyperlink{a00100_a4af2fb5abbd4a6e8930401e66af5b79d}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')
+\item 
+tuple \hyperlink{a00100_a89c98e628d7938077b4ed18215d4fd9b}{fname\-\_\-init\-Raf\-Res\-A\-L\-L} = os.\-path.\-join(\hyperlink{a00100_a4af2fb5abbd4a6e8930401e66af5b79d}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')
+\item 
+tuple \hyperlink{a00100_a2f9cfe05abfed3ab6326d0cb094c7c80}{fid\-\_\-init\-Raf\-Res} = open(\hyperlink{a00100_a6df9226d812c675c76a936c215c07e53}{fname\-\_\-init\-Raf\-Res}, 'w')
+\item 
+tuple \hyperlink{a00100_a7af2668de12720f3c7925527002d81b0}{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = open(\hyperlink{a00100_a69f06c42408f8a1ae74e34daa83402b7}{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'w')
+\item 
+tuple \hyperlink{a00100_add1c3bb75f1d98889c27099fc14fc6a8}{fid\-\_\-init\-Raf\-Res\-A\-L\-L} = open(\hyperlink{a00100_a89c98e628d7938077b4ed18215d4fd9b}{fname\-\_\-init\-Raf\-Res\-A\-L\-L}, 'w')
+\item 
+string \hyperlink{a00100_a34b3667c3c217a35a0e9b71458d2b233}{str\-To\-Write} = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\textbackslash{}t\-Cats\textbackslash{}tu\-R\-A\-F\textbackslash{}n\char`\"{}
+\item 
+tuple \hyperlink{a00100_ab599c65fad60b9c6ccc220002ce8f89c}{f} = open(args.\-wim\-File)
+\item 
+tuple \hyperlink{a00100_a2a83f40b2aa2cbcbd487195fef9af340}{lines} = f.\-readlines()
+\item 
+int \hyperlink{a00100_ac84174dad0b933ca88ebdb79cf3497ec}{procedure} = 0
+\item 
+list \hyperlink{a00100_aff8baae5d4cd1678204477dd5e620775}{species\-List} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{a00100_a878da371fd02e9515fe7305e0a57be09}{food\-List} = \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{a00100_a61159eb5aec77b97808ce3fb742d8f6d}{rct} = 0
+\item 
+tuple \hyperlink{a00100_a0437cd4d2a377ca0e34ab59f4bfd833f}{l} = \hyperlink{a00076_a4d1aa74fac80ae0275c056575fdb6626}{line.\-split}()
+\item 
+tuple \hyperlink{a00100_a0d474343423a1a87a760dd91411f96b4}{cat\-Nums} = len(\hyperlink{a00100_a0437cd4d2a377ca0e34ab59f4bfd833f}{l})
+\item 
+tuple \hyperlink{a00100_aea4d714ca7ceaba151380b3aed7c34d8}{cats} = np.\-vstack(\mbox{[}cats,(int(\hyperlink{a00100_a61159eb5aec77b97808ce3fb742d8f6d}{rct}), int(\hyperlink{a00060_a0cd6a44ffb07342cbc7e5ac33bfc9495}{species\-List.\-index}(\hyperlink{a00100_a0437cd4d2a377ca0e34ab59f4bfd833f}{l}\mbox{[}6+\hyperlink{a00100_a0d474343423a1a87a760dd91411f96b4}{cat\-Nums}-\/1\mbox{]}\mbox{[}0\-:len(\hyperlink{a00100_a0437cd4d2a377ca0e34ab59f4bfd833f}{l}\mbox{[}6+\hyperlink{a00100_a0d474343423a1a87a760dd91411f96b4}{cat\-Nums}-\/1\mbox{]})-\/1\mbox{]})), int(\hyperlink{a00100_a61159eb5aec77b97808ce3fb742d8f6d}{rct}), int(0), int(5), int(25), int(5), int(1))\mbox{]})
+\item 
+tuple \hyperlink{a00100_a36370edf2a6a4e19f0a99413aac43096}{rafsets} = raf.\-raf\-Computation(\hyperlink{a00100_a2f9cfe05abfed3ab6326d0cb094c7c80}{fid\-\_\-init\-Raf\-Res}, \hyperlink{a00100_add1c3bb75f1d98889c27099fc14fc6a8}{fid\-\_\-init\-Raf\-Res\-A\-L\-L}, \hyperlink{a00100_a7af2668de12720f3c7925527002d81b0}{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'tmp\-Dir', 0, \hyperlink{a00100_a61159eb5aec77b97808ce3fb742d8f6d}{rct}/float(len(\hyperlink{a00100_aff8baae5d4cd1678204477dd5e620775}{species\-List})), rcts, \hyperlink{a00100_aea4d714ca7ceaba151380b3aed7c34d8}{cats}, \hyperlink{a00100_a878da371fd02e9515fe7305e0a57be09}{food\-List}, 10)
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00100_ac4c461267ee7f11bbe525de64f56cd10}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!args@{args}}
+\index{args@{args}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-args = parser.\-parse\-\_\-args()}}\label{a00100_ac4c461267ee7f11bbe525de64f56cd10}
+
+
+Definition at line 33 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a0d474343423a1a87a760dd91411f96b4}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!cat\-Nums@{cat\-Nums}}
+\index{cat\-Nums@{cat\-Nums}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{cat\-Nums}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-cat\-Nums = len({\bf l})}}\label{a00100_a0d474343423a1a87a760dd91411f96b4}
+
+
+Definition at line 100 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_aea4d714ca7ceaba151380b3aed7c34d8}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!cats@{cats}}
+\index{cats@{cats}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{cats}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-cats = np.\-vstack(\mbox{[}cats,(int({\bf rct}), int({\bf species\-List.\-index}({\bf l}\mbox{[}6+{\bf cat\-Nums}-\/1\mbox{]}\mbox{[}0\-:len({\bf l}\mbox{[}6+{\bf cat\-Nums}-\/1\mbox{]})-\/1\mbox{]})), int({\bf rct}), int(0), int(5), int(25), int(5), int(1))\mbox{]})}}\label{a00100_aea4d714ca7ceaba151380b3aed7c34d8}
+
+
+Definition at line 110 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_ab599c65fad60b9c6ccc220002ce8f89c}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!f@{f}}
+\index{f@{f}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-f = open(args.\-wim\-File)}}\label{a00100_ab599c65fad60b9c6ccc220002ce8f89c}
+
+
+Definition at line 54 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a2f9cfe05abfed3ab6326d0cb094c7c80}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!fid\-\_\-init\-Raf\-Res@{fid\-\_\-init\-Raf\-Res}}
+\index{fid\-\_\-init\-Raf\-Res@{fid\-\_\-init\-Raf\-Res}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-fid\-\_\-init\-Raf\-Res = open({\bf fname\-\_\-init\-Raf\-Res}, 'w')}}\label{a00100_a2f9cfe05abfed3ab6326d0cb094c7c80}
+
+
+Definition at line 48 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_add1c3bb75f1d98889c27099fc14fc6a8}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!fid\-\_\-init\-Raf\-Res\-A\-L\-L@{fid\-\_\-init\-Raf\-Res\-A\-L\-L}}
+\index{fid\-\_\-init\-Raf\-Res\-A\-L\-L@{fid\-\_\-init\-Raf\-Res\-A\-L\-L}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-fid\-\_\-init\-Raf\-Res\-A\-L\-L = open({\bf fname\-\_\-init\-Raf\-Res\-A\-L\-L}, 'w')}}\label{a00100_add1c3bb75f1d98889c27099fc14fc6a8}
+
+
+Definition at line 50 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a7af2668de12720f3c7925527002d81b0}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}}
+\index{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T = open({\bf fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'w')}}\label{a00100_a7af2668de12720f3c7925527002d81b0}
+
+
+Definition at line 49 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a6df9226d812c675c76a936c215c07e53}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!fname\-\_\-init\-Raf\-Res@{fname\-\_\-init\-Raf\-Res}}
+\index{fname\-\_\-init\-Raf\-Res@{fname\-\_\-init\-Raf\-Res}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-fname\-\_\-init\-Raf\-Res = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis.\-csv')}}\label{a00100_a6df9226d812c675c76a936c215c07e53}
+
+
+Definition at line 45 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a89c98e628d7938077b4ed18215d4fd9b}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!fname\-\_\-init\-Raf\-Res\-A\-L\-L@{fname\-\_\-init\-Raf\-Res\-A\-L\-L}}
+\index{fname\-\_\-init\-Raf\-Res\-A\-L\-L@{fname\-\_\-init\-Raf\-Res\-A\-L\-L}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-fname\-\_\-init\-Raf\-Res\-A\-L\-L = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')}}\label{a00100_a89c98e628d7938077b4ed18215d4fd9b}
+
+
+Definition at line 47 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a69f06c42408f8a1ae74e34daa83402b7}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}}
+\index{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')}}\label{a00100_a69f06c42408f8a1ae74e34daa83402b7}
+
+
+Definition at line 46 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a878da371fd02e9515fe7305e0a57be09}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!food\-List@{food\-List}}
+\index{food\-List@{food\-List}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{food\-List}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-From\-Wim2\-Carness.\-food\-List = \mbox{[}$\,$\mbox{]}}}\label{a00100_a878da371fd02e9515fe7305e0a57be09}
+
+
+Definition at line 58 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a0437cd4d2a377ca0e34ab59f4bfd833f}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!l@{l}}
+\index{l@{l}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{l}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-l = {\bf line.\-split}()}}\label{a00100_a0437cd4d2a377ca0e34ab59f4bfd833f}
+
+
+Definition at line 74 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a2a83f40b2aa2cbcbd487195fef9af340}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!lines@{lines}}
+\index{lines@{lines}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{lines}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-lines = f.\-readlines()}}\label{a00100_a2a83f40b2aa2cbcbd487195fef9af340}
+
+
+Definition at line 55 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a6f995419ddd7f2de58506d9541238dbc}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!ndn@{ndn}}
+\index{ndn@{ndn}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-From\-Wim2\-Carness.\-ndn = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'}}\label{a00100_a6f995419ddd7f2de58506d9541238dbc}
+
+
+Definition at line 36 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a4af2fb5abbd4a6e8930401e66af5b79d}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!newdir\-All\-Results@{newdir\-All\-Results}}
+\index{newdir\-All\-Results@{newdir\-All\-Results}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-newdir\-All\-Results = os.\-path.\-join(args.\-str\-Out, {\bf ndn})}}\label{a00100_a4af2fb5abbd4a6e8930401e66af5b79d}
+
+
+Definition at line 37 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_aed93287ef2c9a4a9ba68f8ffc75aae17}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!parser@{parser}}
+\index{parser@{parser}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-parser}}\label{a00100_aed93287ef2c9a4a9ba68f8ffc75aae17}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = ArgumentParser(
+2                                 description=\textcolor{stringliteral}{'From WIM format to my format'}
+3                                 , epilog=\textcolor{stringliteral}{'''From WIM format to my format. '''})
+\end{DoxyCode}
+
+
+Definition at line 26 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_ac84174dad0b933ca88ebdb79cf3497ec}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!procedure@{procedure}}
+\index{procedure@{procedure}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{procedure}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-From\-Wim2\-Carness.\-procedure = 0}}\label{a00100_ac84174dad0b933ca88ebdb79cf3497ec}
+
+
+Definition at line 56 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a36370edf2a6a4e19f0a99413aac43096}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!rafsets@{rafsets}}
+\index{rafsets@{rafsets}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{rafsets}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-From\-Wim2\-Carness.\-rafsets = raf.\-raf\-Computation({\bf fid\-\_\-init\-Raf\-Res}, {\bf fid\-\_\-init\-Raf\-Res\-A\-L\-L}, {\bf fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'tmp\-Dir', 0, {\bf rct}/float(len({\bf species\-List})), rcts, {\bf cats}, {\bf food\-List}, 10)}}\label{a00100_a36370edf2a6a4e19f0a99413aac43096}
+
+
+Definition at line 116 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a61159eb5aec77b97808ce3fb742d8f6d}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!rct@{rct}}
+\index{rct@{rct}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{rct}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-From\-Wim2\-Carness.\-rct = 0}}\label{a00100_a61159eb5aec77b97808ce3fb742d8f6d}
+
+
+Definition at line 59 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_aff8baae5d4cd1678204477dd5e620775}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!species\-List@{species\-List}}
+\index{species\-List@{species\-List}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{species\-List}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-From\-Wim2\-Carness.\-species\-List = \mbox{[}$\,$\mbox{]}}}\label{a00100_aff8baae5d4cd1678204477dd5e620775}
+
+
+Definition at line 57 of file acs\-From\-Wim2\-Carness.\-py.
+
+\hypertarget{a00100_a34b3667c3c217a35a0e9b71458d2b233}{\index{acs\-From\-Wim2\-Carness@{acs\-From\-Wim2\-Carness}!str\-To\-Write@{str\-To\-Write}}
+\index{str\-To\-Write@{str\-To\-Write}!acsFromWim2Carness@{acs\-From\-Wim2\-Carness}}
+\subsubsection[{str\-To\-Write}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-From\-Wim2\-Carness.\-str\-To\-Write = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\textbackslash{}t\-Cats\textbackslash{}tu\-R\-A\-F\textbackslash{}n\char`\"{}}}\label{a00100_a34b3667c3c217a35a0e9b71458d2b233}
+
+
+Definition at line 51 of file acs\-From\-Wim2\-Carness.\-py.
+

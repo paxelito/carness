@@ -1,0 +1,239 @@
+.TH "prepareNewSim" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+prepareNewSim \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBzeroBeforeStrNum\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBparser\fP"
+.br
+.ti -1c
+.RI "tuple \fBargs\fP = parser\&.parse_args()"
+.br
+.ti -1c
+.RI "tuple \fBStrFrom\fP = os\&.path\&.abspath(args\&.StrFrom)"
+.br
+.ti -1c
+.RI "tuple \fBStrTo\fP = os\&.path\&.abspath(args\&.StrTo)"
+.br
+.ti -1c
+.RI "tuple \fBStrFileSpeciesToGetConc\fP = os\&.path\&.abspath(args\&.FileSpeciesToGetConc)"
+.br
+.ti -1c
+.RI "tuple \fBorigin\fP = os\&.getcwd()"
+.br
+.ti -1c
+.RI "int \fB_LASTSPECIES_\fP = 29"
+.br
+.ti -1c
+.RI "tuple \fB_REVRCTS_\fP = int(args\&.revRct)"
+.br
+.ti -1c
+.RI "tuple \fB_RATIOREV_\fP = int(args\&.k_revRct)"
+.br
+.ti -1c
+.RI "float \fB_CLEAVAGE_\fP = 25\&.0"
+.br
+.ti -1c
+.RI "float \fB_CONDENSATION_\fP = 50\&.0"
+.br
+.ti -1c
+.RI "float \fB_COMPLEXFORM_\fP = 50\&.0"
+.br
+.ti -1c
+.RI "tuple \fB_COMPLEXDISS_\fP = float(args\&.kDiss)"
+.br
+.ti -1c
+.RI "tuple \fB_INITSPECIESCONC_\fP = float(args\&.singleInitConc)"
+.br
+.ti -1c
+.RI "tuple \fBfileDest\fP = os\&.path\&.join(\fBStrTo\fP,'_acsinflux\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBsourceResFolder\fP = os\&.path\&.join(\fBStrFrom\fP,'res')"
+.br
+.ti -1c
+.RI "tuple \fBlastSpeciesFile\fP = sorted(glob\&.glob('species_*'))"
+.br
+.ti -1c
+.RI "tuple \fBlastReactionsFile\fP = sorted(glob\&.glob('reactions_1*'))"
+.br
+.ti -1c
+.RI "tuple \fBlastCatalysisFile\fP = sorted(glob\&.glob('catalysis_*'))"
+.br
+.ti -1c
+.RI "tuple \fBmod\fP = open('acsm2s\&.conf')"
+.br
+.ti -1c
+.RI "int \fBid\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBlinesplitted\fP = \fBline\&.split\fP('=')"
+.br
+.ti -1c
+.RI "tuple \fBfile\fP = open('acsm2s\&.conf', 'w')"
+.br
+.ti -1c
+.RI "list \fBconcs\fP = []"
+.br
+.ti -1c
+.RI "tuple \fBspecFileLines\fP = open(\fBStrFileSpeciesToGetConc\fP)"
+.br
+.ti -1c
+.RI "tuple \fBmod_rct\fP = open('_acsreactions\&.csv')"
+.br
+.ti -1c
+.RI "int \fBflag\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBcatRct\fP = linecache\&.getline('_acsreactions\&.csv', int(\fBlinesplitted\fP[2])+1)"
+.br
+.ti -1c
+.RI "tuple \fBcarRctSplit\fP = \fBcatRct\&.split\fP('\\t')"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def prepareNewSim\&.zeroBeforeStrNum (tmpl, tmpL)"
+
+.PP
+Definition at line 12 of file prepareNewSim\&.py\&.
+.SH "Variable Documentation"
+.PP 
+.SS "float prepareNewSim\&._CLEAVAGE_ = 25\&.0"
+
+.PP
+Definition at line 51 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&._COMPLEXDISS_ = float(args\&.kDiss)"
+
+.PP
+Definition at line 54 of file prepareNewSim\&.py\&.
+.SS "float prepareNewSim\&._COMPLEXFORM_ = 50\&.0"
+
+.PP
+Definition at line 53 of file prepareNewSim\&.py\&.
+.SS "float prepareNewSim\&._CONDENSATION_ = 50\&.0"
+
+.PP
+Definition at line 52 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&._INITSPECIESCONC_ = float(args\&.singleInitConc)"
+
+.PP
+Definition at line 55 of file prepareNewSim\&.py\&.
+.SS "int prepareNewSim\&._LASTSPECIES_ = 29"
+
+.PP
+Definition at line 48 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&._RATIOREV_ = int(args\&.k_revRct)"
+
+.PP
+Definition at line 50 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&._REVRCTS_ = int(args\&.revRct)"
+
+.PP
+Definition at line 49 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.args = parser\&.parse_args()"
+
+.PP
+Definition at line 36 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.carRctSplit = \fBcatRct\&.split\fP('\\t')"
+
+.PP
+Definition at line 217 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.catRct = linecache\&.getline('_acsreactions\&.csv', int(\fBlinesplitted\fP[2])+1)"
+
+.PP
+Definition at line 216 of file prepareNewSim\&.py\&.
+.SS "list prepareNewSim\&.concs = []"
+
+.PP
+Definition at line 142 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.file = open('acsm2s\&.conf', 'w')"
+
+.PP
+Definition at line 131 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.fileDest = os\&.path\&.join(\fBStrTo\fP,'_acsinflux\&.csv')"
+
+.PP
+Definition at line 61 of file prepareNewSim\&.py\&.
+.SS "int prepareNewSim\&.flag = 0"
+
+.PP
+Definition at line 211 of file prepareNewSim\&.py\&.
+.SS "int prepareNewSim\&.id = 0"
+
+.PP
+Definition at line 100 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.lastCatalysisFile = sorted(glob\&.glob('catalysis_*'))"
+
+.PP
+Definition at line 74 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.lastReactionsFile = sorted(glob\&.glob('reactions_1*'))"
+
+.PP
+Definition at line 73 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.lastSpeciesFile = sorted(glob\&.glob('species_*'))"
+
+.PP
+Definition at line 71 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.linesplitted = \fBline\&.split\fP('=')"
+
+.PP
+Definition at line 103 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.mod = open('acsm2s\&.conf')"
+
+.PP
+Definition at line 99 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.mod_rct = open('_acsreactions\&.csv')"
+
+.PP
+Definition at line 208 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.origin = os\&.getcwd()"
+
+.PP
+Definition at line 47 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.parser"
+\fBInitial value:\fP
+.PP
+.nf
+1 = ArgumentParser(
+2                                 description='Script to create new init simulation files starting from the end of a previous simulation\&.'
+3                                 , epilog='''Species concentration are initilized according to the sequence uploaded, pay attention to the file selected\&. ''')
+.fi
+.PP
+Definition at line 22 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.sourceResFolder = os\&.path\&.join(\fBStrFrom\fP,'res')"
+
+.PP
+Definition at line 67 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.specFileLines = open(\fBStrFileSpeciesToGetConc\fP)"
+
+.PP
+Definition at line 143 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.StrFileSpeciesToGetConc = os\&.path\&.abspath(args\&.FileSpeciesToGetConc)"
+
+.PP
+Definition at line 41 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.StrFrom = os\&.path\&.abspath(args\&.StrFrom)"
+
+.PP
+Definition at line 39 of file prepareNewSim\&.py\&.
+.SS "tuple prepareNewSim\&.StrTo = os\&.path\&.abspath(args\&.StrTo)"
+
+.PP
+Definition at line 40 of file prepareNewSim\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

@@ -1,4 +1,4 @@
-.TH "/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" 3 "Sat Oct 26 2013" "Version 4.8 (20131026.60)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/commonFunctions.h" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,11 +13,11 @@
 
 .in +1c
 .ti -1c
-.RI "int \fBreturnSelectionIdFromAWeightProbVector\fP (\fBacs_double\fP *tmpArray, \fBMTRand\fP &tmpRandomGenerator)"
+.RI "\fBacs_longInt\fP \fBreturnSelectionIdFromAWeightProbVector\fP (\fBacs_double\fP *tmpArray, \fBMTRand\fP &tmpRandomGenerator, \fBacs_int\fP tmpRow=0)"
 .br
 .RI "\fIThis funtion returns a random position in a probability weight array of N elements\&. \fP"
 .ti -1c
-.RI "\fBacs_longInt\fP \fBreturnSelectionIdFromAWeightProbVector\fP (vector< \fBacs_double\fP > &tmpVector, \fBacs_double\fP tmpMaxValue, \fBMTRand\fP &tmpRandomGenerator)"
+.RI "\fBacs_longInt\fP \fBreturnSelectionIdFromAWeightProbVector\fP (vector< \fBacs_double\fP > &tmpVector, \fBacs_double\fP tmpMaxValue, \fBMTRand\fP &tmpRandomGenerator, \fBacs_int\fP tmpRow=0)"
 .br
 .ti -1c
 .RI "\fBacs_longInt\fP \fBreturnSelectionIdFromAWeightProbVectorAlreadyNormalized\fP (vector< \fBacs_double\fP > &tmpVector, \fBMTRand\fP &tmpRandomGenerator)"
@@ -87,13 +87,13 @@ Definition at line 203 of file commonFunctions\&.cpp\&.
 Function to return a number from a poisson random distribution 
 .PP
 Definition at line 183 of file commonFunctions\&.cpp\&.
-.SS "int returnSelectionIdFromAWeightProbVector (\fBacs_double\fP *tmpArray, \fBMTRand\fP &tmpRandomGenerator)"
+.SS "\fBacs_longInt\fP returnSelectionIdFromAWeightProbVector (\fBacs_double\fP *tmpArray, \fBMTRand\fP &tmpRandomGenerator, \fBacs_int\fPtmpRow = \fC0\fP)"
 
 .PP
 This funtion returns a random position in a probability weight array of N elements\&. 
 .PP
 Definition at line 15 of file commonFunctions\&.cpp\&.
-.SS "\fBacs_longInt\fP returnSelectionIdFromAWeightProbVector (vector< \fBacs_double\fP > &tmpVector, \fBacs_double\fPtmpMaxValue, \fBMTRand\fP &tmpRandomGenerator)"
+.SS "\fBacs_longInt\fP returnSelectionIdFromAWeightProbVector (vector< \fBacs_double\fP > &tmpVector, \fBacs_double\fPtmpMaxValue, \fBMTRand\fP &tmpRandomGenerator, \fBacs_int\fPtmpRow)"
 Return position of a randomly selected element from a vector containing cumulative values for each element 
 .PP
 \fBVersion:\fP

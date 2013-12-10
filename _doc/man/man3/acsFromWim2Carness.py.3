@@ -1,0 +1,85 @@
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/acsFromWim2Carness.py" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/acsFromWim2Carness.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBacsFromWim2Carness\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.parser\fP"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.args\fP = parser\&.parse_args()"
+.br
+.ti -1c
+.RI "string \fBacsFromWim2Carness\&.ndn\fP = '_0_new_allStatResults'"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.newdirAllResults\fP = os\&.path\&.join(args\&.strOut, ndn)"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.fname_initRafRes\fP = os\&.path\&.join(newdirAllResults, '0_initRafAnalysis\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.fname_initRafResLIST\fP = os\&.path\&.join(newdirAllResults, '0_initRafAnalysisLIST\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.fname_initRafResALL\fP = os\&.path\&.join(newdirAllResults, '0_initRafAnalysisALL\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.fid_initRafRes\fP = open(fname_initRafRes, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.fid_initRafResLIST\fP = open(fname_initRafResLIST, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.fid_initRafResALL\fP = open(fname_initRafResALL, 'w')"
+.br
+.ti -1c
+.RI "string \fBacsFromWim2Carness\&.strToWrite\fP = 'Folder\\tP\\tAC\\tM\\tRAFsize\\tClosure\\tCats\\tuRAF\\n'"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.f\fP = open(args\&.wimFile)"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.lines\fP = f\&.readlines()"
+.br
+.ti -1c
+.RI "int \fBacsFromWim2Carness\&.procedure\fP = 0"
+.br
+.ti -1c
+.RI "list \fBacsFromWim2Carness\&.speciesList\fP = []"
+.br
+.ti -1c
+.RI "list \fBacsFromWim2Carness\&.foodList\fP = []"
+.br
+.ti -1c
+.RI "int \fBacsFromWim2Carness\&.rct\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.l\fP = \fBline\&.split\fP()"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.catNums\fP = len(l)"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.cats\fP = np\&.vstack([cats,(int(\fBrct\fP), int(\fBspeciesList\&.index\fP(l[6+catNums-1][0:len(l[6+catNums-1])-1])), int(\fBrct\fP), int(0), int(5), int(25), int(5), int(1))])"
+.br
+.ti -1c
+.RI "tuple \fBacsFromWim2Carness\&.rafsets\fP = raf\&.rafComputation(fid_initRafRes, fid_initRafResALL, fid_initRafResLIST, 'tmpDir', 0, \fBrct\fP/float(len(speciesList)), rcts, cats, foodList, 10)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00113" kind="namespace">
+    <compoundname>lib::graph::raf</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00113_1a56510e9067d8a6c8f90847d6656ce709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.generateClosure</definition>
+        <argsstring></argsstring>
+        <name>generateClosure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="20" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="20" bodyend="45"/>
+        <referencedby refid="a00113_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00055" startline="91" endline="133">lib.graph.raf.rafsearch</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00113_1a9896a4198e08978afb80e86697f1bbd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.RAcondition</definition>
+        <argsstring></argsstring>
+        <name>RAcondition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="46" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="46" bodyend="59"/>
+        <referencedby refid="a00113_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00055" startline="91" endline="133">lib.graph.raf.rafsearch</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00113_1a160a90fb55ff323fc86fcdc65b30b90f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.Fcondition</definition>
+        <argsstring></argsstring>
+        <name>Fcondition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="60" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="60" bodyend="81"/>
+        <referencedby refid="a00113_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00055" startline="91" endline="133">lib.graph.raf.rafsearch</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00113_1aaeb3a479f24daf493cc7052aef879d2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.findCatforRAF</definition>
+        <argsstring></argsstring>
+        <name>findCatforRAF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="82" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="82" bodyend="90"/>
+        <referencedby refid="a00113_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00055" startline="91" endline="133">lib.graph.raf.rafsearch</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00113_1a532a434a0b2fe187a3ff5a8319e4e3b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.rafsearch</definition>
+        <argsstring></argsstring>
+        <name>rafsearch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="91" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="91" bodyend="133"/>
+        <references refid="a00113_1a56510e9067d8a6c8f90847d6656ce709" compoundref="a00055" startline="20" endline="45">lib.graph.raf.generateClosure</references>
+        <references refid="a00113_1a9896a4198e08978afb80e86697f1bbd0" compoundref="a00055" startline="46" endline="59">lib.graph.raf.RAcondition</references>
+        <references refid="a00113_1a160a90fb55ff323fc86fcdc65b30b90f" compoundref="a00055" startline="60" endline="81">lib.graph.raf.Fcondition</references>
+        <references refid="a00113_1aaeb3a479f24daf493cc7052aef879d2c" compoundref="a00055" startline="82" endline="90">lib.graph.raf.findCatforRAF</references>
+        <references refid="a00028_1ab178d77fe9330d344e5b21984e6dfd70">set</references>
+        <referencedby refid="a00113_1a3c9606e9d3274506955225eacf05877e" compoundref="a00055" startline="134" endline="143">lib.graph.raf.rafComputation</referencedby>
+        <referencedby refid="a00113_1a0b49d65e78e62c4ddd5022d4405f8286" compoundref="a00055" startline="144" endline="159">lib.graph.raf.rafDynamicComputation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00113_1a3c9606e9d3274506955225eacf05877e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.rafComputation</definition>
+        <argsstring></argsstring>
+        <name>rafComputation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="134" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="134" bodyend="143"/>
+        <references refid="a00113_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00055" startline="91" endline="133">lib.graph.raf.rafsearch</references>
+      </memberdef>
+      <memberdef kind="function" id="a00113_1a0b49d65e78e62c4ddd5022d4405f8286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.rafDynamicComputation</definition>
+        <argsstring></argsstring>
+        <name>rafDynamicComputation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="144" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="144" bodyend="159"/>
+        <references refid="a00113_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00055" startline="91" endline="133">lib.graph.raf.rafsearch</references>
+        <references refid="a00113_1aa4fb376eecb97a88efdb35aa15466c3b" compoundref="a00055" startline="160" endline="168">lib.graph.raf.findRAFrcts</references>
+      </memberdef>
+      <memberdef kind="function" id="a00113_1aa4fb376eecb97a88efdb35aa15466c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.findRAFrcts</definition>
+        <argsstring></argsstring>
+        <name>findRAFrcts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="160" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="160" bodyend="168"/>
+        <references refid="a00028_1ab178d77fe9330d344e5b21984e6dfd70">set</references>
+        <referencedby refid="a00113_1a0b49d65e78e62c4ddd5022d4405f8286" compoundref="a00055" startline="144" endline="159">lib.graph.raf.rafDynamicComputation</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

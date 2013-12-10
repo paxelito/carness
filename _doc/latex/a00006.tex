@@ -1,0 +1,81 @@
+During the simulation {\bfseries 8} different files concerning species, reactions and catalysis tables, times, reactions parameters, living species, living species amounts and concentration are produced. In the following you find a brief description of all files and some indications about the different time storage. \hypertarget{a00006_outspecies}{}\section{Species}\label{a00006_outspecies}
+Every environment\-::time\-Structures\-Saving\-Interval seconds species structures will be saved in files called species\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$\-\_\-$<$reaction\-Number$>$.\-csv (e.\-g. {\bfseries species\-\_\-1\-\_\-06\-\_\-0016933.\-csv} means species structure, generation number 1, simulation number 6, reaction number 16933).\par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{}) is the same described above, section \hyperlink{a00004_subSpecies}{\-\_\-acsspecies.\-csv} .\hypertarget{a00006_outreactions}{}\section{Reactions}\label{a00006_outreactions}
+Every environment\-::time\-Structures\-Saving\-Interval seconds reactions structures will be saved in files called reactions\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$\-\_\-$<$reaction\-Number$>$.\-csv (e.\-g. {\bfseries reactions\-\_\-1\-\_\-06\-\_\-0016933.\-csv} means reactions structure, generation number 1, simulation number 6, reaction number 16933). \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{}) is the same described above, section \hyperlink{a00004_subReactions}{\-\_\-acsreactions.\-csv} .\hypertarget{a00006_outcatalysis}{}\section{Catalysis}\label{a00006_outcatalysis}
+Every environment\-::time\-Structures\-Saving\-Interval seconds catalysis structures will be saved in files called catalysis\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$\-\_\-$<$reaction\-Number$>$.\-csv (e.\-g. {\bfseries catalysis\-\_\-1\-\_\-06\-\_\-0016933.\-csv} means catalysis structure, generation number 1, simulation number 6, reaction number 16933). \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})is the same described above, section \hyperlink{a00004_subCatalysis}{\-\_\-acscatalysis.\-csv} \-:\hypertarget{a00006_outTimes}{}\section{Times}\label{a00006_outTimes}
+Every simulation generates a times file called times\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$.\-csv (e.\-g. {\bfseries times\-\_\-1\-\_\-03.\-csv} means times file, generation 1, simulation 3) containing values concerning {\bfseries each events} occurred during the simulation. This file is {\bfseries created at the beginning of the simulation} and it is {\bfseries updated after each event}, hence this file will contain a number of rows equal to the number of reaction (of any type) occurred during the simulation. \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{15}
+\hline
+Identificator (reaction)&Reaction Time&Gillespie I\-D selected&Reaction Type&Number of possible reactions&Computational Time (sec) &Number of Species&Number of Molecules&Number of complex species&Number of complexes &Number of bricks&Gillespie Computational Time&Reaction Process Computational Time&Various Processes Computational Time&New species creation probability  \\\cline{1-15}
+\end{TabularC}
+
+\begin{DoxyItemize}
+\item {\itshape Identificator (reaction)}\-: Number of the reaction (S\-T\-E\-P)
+\item {\itshape Reaction Time}\-: Time of the reaction
+\item {\itshape Gillespie I\-D selected}\-: Gillespie structure reaction I\-D
+\item {\itshape Reaction Type}\-: 0 condensation, 1 cleavage, 2 complex formation, 3 complex degradation, 4 species efflux, 6 endergonic cleavage, 7 endoergonic condensation, 8 endoergonic complex creation
+\item {\itshape Number of possible reactions}\-: Total number of possible reactions according to the Gillespie algorithm computation
+\item {\itshape Computational Time (ms)}\-: Computational time between two successive reactions
+\item {\itshape Number of Species}\-: Number of species with at least one molecule
+\item {\itshape Number of Molecules}\-: Number of molecules
+\item {\itshape Number of complex species}\-: Number of complex species with at least one molecule
+\item {\itshape Number of complexes}\-: Number of complex molecules
+\item {\itshape Number of bricks}\-: Number of single bricks (monomers) present in the system
+\item {\itshape Gillespie Computational Time}\-: Number of milliseconds necessary to complete the Gillespie task
+\item {\itshape Reaction Process Computational Time}\-: Number of milliseconds necessary to perform a reaction (and evaluate products) once that the Gillespie algorithm has selected the reaction
+\item {\itshape Various Processes Computational Time}\-: Number of milliseconds necessary to perform several tasks not correlated with the simulation of the phenomena
+\item {\itshape New species creation probability}\-: Given the state of the system, probability to create a new species
+\item {\itshape Reverse Reaction Probability}\-: Given the state of the system, probability for a reverse reaction to occur
+\end{DoxyItemize}\hypertarget{a00006_outReactions}{}\section{Reactions\-\_\-parameters}\label{a00006_outReactions}
+Every simulation generates a reactions parameters file called reactions\-\_\-parameters\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$.\-csv (e.\-g. {\bfseries reactions\-\_\-parameters\-\_\-1\-\_\-07.\-csv} means reactions parameters file, generation 1 simulation number 7) containing informations on {\bfseries cleavage and condensation} reactions. This file is {\bfseries generated at the beginning of each simulation} and it is {\bfseries updated each time that a cleavage or a condensation occur}. \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{13}
+\hline
+Reaction I\-D&Reaction Time&Reaction Type&Catalyst I\-D&Species 1 I\-D&Species 2 I\-D&Species 3 I\-D &Charged Molecules&Charged Concentration&Gillespie Score Average&Gillespie Score Standard Deviation&Entropy&New species creation probability  \\\cline{1-13}
+\end{TabularC}
+
+\begin{DoxyItemize}
+\item {\itshape Reaction I\-D}\-: This I\-D referes to the reaction number (step)
+\item {\itshape Reaction Time}\-: Time of the reaction
+\item {\itshape Reaction Type I\-D}\-: 0 condensation, 1 cleavage, 6 endoergonic cleavage, 7 endoergonic condensation
+\item {\itshape Catalyst I\-D}\-: Catalyst I\-D into the species table
+\item {\itshape Species 1 I\-D}\-: product I\-D in case of condensation, substrate in case of cleavage
+\item {\itshape Species 2 I\-D}\-: substrate I\-D in case of condensation, product in case of cleavage
+\item {\itshape Species 3 I\-D}\-: substrate I\-D in case of condensation, product in case of cleavage
+\item {\itshape Charged Molecules}\-: Number of charged molecules
+\item {\itshape Charged Concentration}\-: Concentration of the charged molecules
+\item {\itshape Gillespie Score Average}\-: Average of the all gillespie algorithm scores
+\item {\itshape Gillespie Score Standard Deviation}\-: Standard Deviation of the all gillespie algorithm scores
+\item {\itshape Entropy}\-: Entropy Misure (test) based on the probabilities that reactions occur
+\item {\itshape New species creation probability}\-: Given the state of the system, probability to create a new species
+\end{DoxyItemize}\hypertarget{a00006_outLivSpecies}{}\section{Living\-\_\-species}\label{a00006_outLivSpecies}
+Each simulation generates a living species file called living\-Species\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$.\-csv (e.\-g. {\bfseries living\-Species\-\_\-1\-\_\-07.\-csv} means living species file, generation 1 simulation number 7) containing all the living species I\-Ds (living species are those species with concentration greater than 0) for each reaction in each raw. This file is {\bfseries generated at the beginning of each simulation} and it is {\bfseries updated each time that a cleavage or a condensation occur}. This file has a variable number of columns equal to the number of living species plus 2 (Reaction I\-D and time of the reaction) \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{3}
+\hline
+Reaction I\-D&Reaction Time&living species I\-Ds..., one for column  \\\cline{1-3}
+\end{TabularC}
+
+\begin{DoxyItemize}
+\item {\itshape Reaction I\-D}\-: This I\-D referes to the reaction number (step)
+\item {\itshape Reaction Time}\-: Time of the reaction
+\item {\itshape Living Species I\-Ds..., one for column}\-: Each column from the thirth to the last one contains living species I\-D
+\end{DoxyItemize}\hypertarget{a00006_outLivAmounts}{}\section{Living\-\_\-species\-\_\-amounts}\label{a00006_outLivAmounts}
+Each simulation generates a living species amount file called living\-Amount\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$.\-csv (e.\-g. {\bfseries living\-Amount\-\_\-1\-\_\-07.\-csv} means living species amount file, generation 1, simulation number 7) containing all the living species amount (living species are those species with concentration greater than 0) for each reaction in each raw. {\bfseries This file is tightly correlated with the {\itshape Living\-\_\-species} file}. Each row contains the total amount of molecules belonging to the species indicated by its I\-D in the living\-Species file. This file is {\bfseries created at the beginning of each simulation} and it is {\bfseries updated each time that a cleavage or a condensation occur}. This file has a variable number of columns equals to the number of living species at time t \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{1}
+\hline
+living species amounts..., one for column  \\\cline{1-1}
+\end{TabularC}
+
+\begin{DoxyItemize}
+\item {\itshape Living Species amounts..., one for column}\-: Each values is related to the species indicated in the living\-Species file. Reaction I\-D and time is that of the living\-Species file
+\end{DoxyItemize}\hypertarget{a00006_outLivConcentrations}{}\section{Living\-\_\-species\-\_\-concentration}\label{a00006_outLivConcentrations}
+Each simulation generates a living species amount file called living\-Concentration\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$.\-csv (e.\-g. {\bfseries living\-Concentration\-\_\-1\-\_\-07.\-csv} means living species amount file, generation 1, simulation number 7) containing all the living species amount (living species are those species with concentration greater than 0) for each reaction in each raw. {\bfseries This file is tightly correlated with the {\itshape Living\-\_\-species} file}. Each row contains the total amount of molecules belonging to the species indicated by its I\-D in the living\-Species file. This file is {\bfseries created at the beginning of each simulation} and it is {\bfseries updated each time that a cleavage or a condensation occur}. This file has a variable number of columns equals to the number of living species at time t \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{1}
+\hline
+living species amounts..., one for column  \\\cline{1-1}
+\end{TabularC}
+
+\begin{DoxyItemize}
+\item {\itshape Living Species amounts..., one for column}\-: Each values is related to the species indicated in the living\-Species file. Reaction I\-D and time is that of the living\-Species file 
+\end{DoxyItemize}

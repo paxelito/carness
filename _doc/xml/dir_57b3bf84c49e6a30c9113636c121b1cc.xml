@@ -2,18 +2,18 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="dir_57b3bf84c49e6a30c9113636c121b1cc" kind="dir">
     <compoundname>/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator</compoundname>
-    <innerfile refid="crea__catalizzatori_8m">crea_catalizzatori.m</innerfile>
-    <innerfile refid="crea__concentrazioni__iniziali_8m">crea_concentrazioni_iniziali.m</innerfile>
-    <innerfile refid="crea__e__controlla__i__catalizzatori_8m">crea_e_controlla_i_catalizzatori.m</innerfile>
-    <innerfile refid="crea__firing__disk_8m">crea_firing_disk.m</innerfile>
-    <innerfile refid="crea__influx_8m">crea_influx.m</innerfile>
-    <innerfile refid="crea__influx__semplice_8m">crea_influx_semplice.m</innerfile>
-    <innerfile refid="crea__tutte__le__combinazioni__di__elementi_8m">crea_tutte_le_combinazioni_di_elementi.m</innerfile>
-    <innerfile refid="initial__distribution_8m">initial_distribution.m</innerfile>
-    <innerfile refid="inizializzatore___a_c_s_8m">inizializzatore_ACS.m</innerfile>
-    <innerfile refid="lancia__acs_8m">lancia_acs.m</innerfile>
-    <innerfile refid="lancia__inizializzatore__acs_8m">lancia_inizializzatore_acs.m</innerfile>
-    <innerfile refid="start_8m">start.m</innerfile>
+    <innerfile refid="a00060">crea_catalizzatori.m</innerfile>
+    <innerfile refid="a00061">crea_concentrazioni_iniziali.m</innerfile>
+    <innerfile refid="a00062">crea_e_controlla_i_catalizzatori.m</innerfile>
+    <innerfile refid="a00063">crea_firing_disk.m</innerfile>
+    <innerfile refid="a00064">crea_influx.m</innerfile>
+    <innerfile refid="a00065">crea_influx_semplice.m</innerfile>
+    <innerfile refid="a00066">crea_tutte_le_combinazioni_di_elementi.m</innerfile>
+    <innerfile refid="a00067">initial_distribution.m</innerfile>
+    <innerfile refid="a00068">inizializzatore_ACS.m</innerfile>
+    <innerfile refid="a00069">lancia_acs.m</innerfile>
+    <innerfile refid="a00070">lancia_inizializzatore_acs.m</innerfile>
+    <innerfile refid="a00071">start.m</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

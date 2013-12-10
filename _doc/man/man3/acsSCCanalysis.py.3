@@ -1,0 +1,404 @@
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/acsSCCanalysis.py" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/acsSCCanalysis.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBacsSCCanalysis\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBacsSCCanalysis\&.zeroBeforeStrNum\fP"
+.br
+.ti -1c
+.RI "def \fBacsSCCanalysis\&.loadReactionGraph\fP"
+.br
+.ti -1c
+.RI "def \fBacsSCCanalysis\&.loadSpecificReactionGraph\fP"
+.br
+.ti -1c
+.RI "def \fBacsSCCanalysis\&.loadSpecificReactionSubGraph\fP"
+.br
+.ti -1c
+.RI "def \fBacsSCCanalysis\&.saveGraphToFile\fP"
+.br
+.ti -1c
+.RI "def \fBacsSCCanalysis\&.saveGraphSUBToFile\fP"
+.br
+.ti -1c
+.RI "def \fBacsSCCanalysis\&.saveNrgToFile\fP"
+.br
+.ti -1c
+.RI "def \fBacsSCCanalysis\&.saveGillToFile\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.StrPath\fP = os\&.path\&.abspath(StrPath)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.today\fP = dt\&.date\&.today()"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.mswindows\fP = (sys\&.platform == 'win32')"
+.br
+.ti -1c
+.RI "string \fBacsSCCanalysis\&.cmdFileName\fP = StrPath+'/'"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.cmdFileFid\fP = open(cmdFileName, '\fBa\fP')"
+.br
+.ti -1c
+.RI "string \fBacsSCCanalysis\&.strToWrite\fP = '\\tReaction Probability'"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.initilizeGraphStructure\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.graph\fP = loadSpecificReactionGraph()"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.graphSUB\fP = loadSpecificReactionSubGraph()"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.tmpRctFileToLoadSplitString\fP = \fBtmpRctFileToLoad\&.split\fP('_')"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.initRctId\fP = int(tmpRctFileToLoadSplitString[len(tmpRctFileToLoadSplitString)-2])"
+.br
+.ti -1c
+.RI "list \fBacsSCCanalysis\&.initTempTime\fP = tmpRctFileToLoadSplitString[len(tmpRctFileToLoadSplitString)-1]"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.initTime\fP = float(initTempTime[0:len(initTempTime)-4])"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.tmpDirs\fP = sort(os\&.listdir(StrPath))"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.totDirName\fP = os\&.path\&.join(StrPath,tmpDir)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.resDirPath\fP = os\&.path\&.abspath(os\&.path\&.join('\&./', 'res'))"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.numberOfGen\fP = len(glob\&.glob(os\&.path\&.join(resDirPath,'times_*')))"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.strZeros\fP = zeroBeforeStrNum(nGen, numberOfGen)"
+.br
+.ti -1c
+.RI "string \fBacsSCCanalysis\&.paramFile\fP = 'acsm2s\&.conf'"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.simFolder\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.fid\fP = open(paramFile, '\fBr\fP')"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.strLine\fP = \fBline\&.split\fP('=')"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.rp\fP = float(strLine[1])"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.decayTime\fP = int(strLine[1])"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.totTimes\fP = int(strLine[1])"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.nrgType\fP = int(strLine[1])"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.totalRcts\fP = int(strLine[1])"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.nrgConc\fP = float(strLine[1])"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.influx_rate\fP = float(strLine[1])"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.maxLOut\fP = float(strLine[1])"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&._ANALTIMEINTERAVAL_\fP = totTimes/10"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&._ANALTIMEINTERAVALNOSAVE_\fP = totTimes/100"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.nrg\fP = 1"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.speciesInFlux\fP = range(0,int(pow(2,(\fBmaxLOut\fP+1)) - 2))"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.fidflux\fP = open('_acsinflux\&.csv', '\fBr\fP')"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.overThreshold\fP = float(0)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.overThresholdTOT\fP = float(0)"
+.br
+.ti -1c
+.RI "string \fBacsSCCanalysis\&.tmpFilesToSearch\fP = 'species_'"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.speciesFiles\fP = sorted(glob\&.glob(os\&.path\&.join(resDirPath,tmpFilesToSearch)))"
+.br
+.ti -1c
+.RI "list \fBacsSCCanalysis\&.speciesFile\fP = \fBspeciesFiles\fP[-1]"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.fidSpecies\fP = open(\fBspeciesFile\fP, '\fBr\fP')"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.ok\fP = 0"
+.br
+.ti -1c
+.RI "list \fBacsSCCanalysis\&.IDsOverThreshold\fP = []"
+.br
+.ti -1c
+.RI "list \fBacsSCCanalysis\&.concVec\fP = []"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.index\fP = int(tmpID)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.conc\fP = float(tmpConc)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.cpxCut\fP = int(tmpCpxCut)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.age\fP = float(tmpAge)"
+.br
+.ti -1c
+.RI "\fBacsSCCanalysis\&.realT\fP = \fBthreshold\fP"
+.br
+.ti -1c
+.RI "string \fBacsSCCanalysis\&.folderCat\fP = '__0_iGraph_CAT_'"
+.br
+.ti -1c
+.RI "string \fBacsSCCanalysis\&.folderSub\fP = '__0_iGraph_SUB_'"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.newdir\fP = os\&.path\&.join(os\&.curdir, \fBfolderCat\fP)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.newdirSUB\fP = os\&.path\&.join(os\&.curdir, \fBfolderSub\fP)"
+.br
+.ti -1c
+.RI "string \fBacsSCCanalysis\&.filextPre\fP = '_'"
+.br
+.ti -1c
+.RI "string \fBacsSCCanalysis\&.rctParamFileQ\fP = 'reactions_parameters_'"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.rctParamFile\fP = sorted(glob\&.glob(os\&.path\&.join(resDirPath,rctParamFileQ)))"
+.br
+.ti -1c
+.RI "float \fBacsSCCanalysis\&.rctIDshow\fP = 1\&.0"
+.br
+.ti -1c
+.RI "float \fBacsSCCanalysis\&.rctIDshowNoSave\fP = 1\&.0"
+.br
+.ti -1c
+.RI "\fBacsSCCanalysis\&.rctID\fP = initRctId"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.previousTime\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.endo_condensation_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.condensation_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.endo_cleavage_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.cleavage_counter\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.nrgTimeSeries\fP = np\&.array([[0,0,0]])"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.gillTimeSeries\fP = np\&.array([[0,0,0,0]])"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.tmpFlagLastRctSaved\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.reaction\fP = int(tmpReaction)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.rtime\fP = float(tmpTime)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.cc\fP = int(tmpcc)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.cat\fP = int(tmpCat)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.mol_I\fP = int(tmpMol_I)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.mol_II\fP = int(tmpMol_II)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.mol_III\fP = int(tmpMol_III)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.loadedMolsConc\fP = float(tmpLoadedMolsConc)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.loadedMols\fP = int(tmpLoadedMols)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.gillMean\fP = float(tmpGillMean)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.gillSD\fP = float(tmpGillSD)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.gillEntropy\fP = float(tmpGillEntropy)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.newSpeciesCreationProb\fP = float(tmpNSCprob)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.reverseProbability\fP = float(tmpRevProb)"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.printTemporalMessage\fP = 1"
+.br
+.ti -1c
+.RI "\fBacsSCCanalysis\&.timeInterval\fP = \fBrtime\fP-\fBpreviousTime\fP"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.position\fP = ((\fBgraph\fP[:,0] == \fBcat\fP) & (\fBgraph\fP[:,1] == \fBmol_I\fP))"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.realSccs\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.Gcatpro\fP = nx\&.DiGraph()"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.scc\fP = nx\&.strongly_connected_components(Gcatpro)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.sccN\fP = nx\&.number_strongly_connected_components(Gcatpro)"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.selfLoops\fP = Gcatpro\&.number_of_selfloops()"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.selfLoopsEgdes\fP = Gcatpro\&.selfloop_edges()"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.prod_inSCC\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.prod_chain\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.prod_bySCC\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.prod_overlap\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.sccID\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.autocatalysis\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.prod_inSCC_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.prod_chain_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.prod_bySCC_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.prod_overlap_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.self_loop_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.conc_inSCC\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.conc_chain\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.conc_bySCC\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.conc_overLap\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.conc_selfCat\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.wasteSpecies\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.alreadyAdded_ACS\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.alreadyAdded_leaves\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.alreadyAdded_chain\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.tmpProd_chain\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.incomingNodes\fP = Gcatpro\&.predecessors(IdsOT)"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.tempProd_chain_weight\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.noInAcs\fP = 1"
+.br
+.ti -1c
+.RI "int \fBacsSCCanalysis\&.inSCCFlag\fP = 0"
+.br
+.ti -1c
+.RI "list \fBacsSCCanalysis\&.weightToDistribute\fP = \fBgraph\fP[((\fBgraph\fP[:,0] == sngInNode) & (\fBgraph\fP[:,1] == IdsOT)),5]"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.inDegreeMean\fP = mean(Gcatpro\&.in_degree()\&.values())"
+.br
+.ti -1c
+.RI "tuple \fBacsSCCanalysis\&.meanOverThreshold\fP = float(overThreshold)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

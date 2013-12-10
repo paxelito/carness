@@ -1,0 +1,1914 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00029" kind="file">
+    <compoundname>KillSpam.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00029_1ad509473eed851f9f5ff4157c02ec8618" prot="public" static="no" mutable="no">
+        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end tmpFolder</definition>
+        <argsstring></argsstring>
+        <name>tmpFolder</name>
+        <initializer>= strcat(&apos;*&apos;,<ref refid="a00032_1aa671e3345005bd599e662bcaa115b18a" kindref="member">param.simFolder</ref>,&apos;*&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="16" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1aae5035eb84b89176ed5b06e136325eff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>simDirs</definition>
+        <argsstring></argsstring>
+        <name>simDirs</name>
+        <initializer>= dir(<ref refid="a00029_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="17" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ae9011d40c6f13e68e6f07156e0da7c5d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>fid</definition>
+        <argsstring></argsstring>
+        <name>fid</name>
+        <initializer>= fopen(&apos;ALL_results_TS1.txt&apos;,&apos;w&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="20" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a7265972fe485274cfff77a9bb07b8fce" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>for x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <initializer>= 1:length(<ref refid="a00031_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>)
+    <ref refid="a00068_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>(strcat(<ref refid="a00031_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(x).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="24" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a1faaaae288fc8ca4ed1751049aa2f84f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>blocked</definition>
+        <argsstring></argsstring>
+        <name>blocked</name>
+        <initializer>= 0:<ref refid="a00032_1aad7be196243f3c9ca83dfee7c9111014" kindref="member">param.lastSpecies</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="27" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ad75735665492cabd747370126464fddf" prot="public" static="no" mutable="no">
+        <type>creating <ref refid="a00021" kindref="compound">reactions</ref> matrix</type>
+        <definition>creating reactions matrix rFiles</definition>
+        <argsstring></argsstring>
+        <name>rFiles</name>
+        <initializer>= dir(&apos;<ref refid="a00021" kindref="compound">reactions</ref>*&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="29" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a4c72dba1fe2ee2fbcc699262a8d0c624" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>reactionsFile</definition>
+        <argsstring></argsstring>
+        <name>reactionsFile</name>
+        <initializer>= <ref refid="a00030_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>(length(<ref refid="a00030_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>)-1).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="30" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a9c951ebd5bc3f1adce943bee1255f4d6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>continua</definition>
+        <argsstring></argsstring>
+        <name>continua</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="32" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ac52097a2745fcef31eb175d2e9485845" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>reactionsMatrix</definition>
+        <argsstring></argsstring>
+        <name>reactionsMatrix</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="33" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a436a6968124e560649654a4abbd9dac6" prot="public" static="no" mutable="no">
+        <type>while <ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
+        <definition>while continua rValues</definition>
+        <argsstring></argsstring>
+        <name>rValues</name>
+        <initializer>= <ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref>,&apos;%d&apos;,7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="35" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a6bd08e37edf4151f5f6d1fc27a6f227a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>if stop</definition>
+        <argsstring></argsstring>
+        <name>stop</name>
+        <initializer>= <ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00030_1a436a6968124e560649654a4abbd9dac6" kindref="member">rValues</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="36" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ad3aa27d88a7e9d77d8334155860269bb" prot="public" static="no" mutable="no">
+        <type>dividing into condensations <ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref> <ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref></type>
+        <definition>else condensations</definition>
+        <argsstring></argsstring>
+        <name>condensations</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="47" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a89060c6979e5a4ff7b0985b35f295695" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cleavages</definition>
+        <argsstring></argsstring>
+        <name>cleavages</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="48" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a1a691fb4f955887edfa538e91479fafe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cleavagesMatrix</definition>
+        <argsstring></argsstring>
+        <name>cleavagesMatrix</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="50" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1afaba8eef2f8f4e4dda2e893a19e55a94" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>condensationsMatrix</definition>
+        <argsstring></argsstring>
+        <name>condensationsMatrix</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="51" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ac870e1cd47f6d78f16a98a24c8392fcf" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>end clear i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <initializer>= 1:rrm
+        <ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00030_1af998036b749d9fa6dd2365f9937279b6" kindref="member">reactionsMatrix</ref>(i,2) == 1
+            <ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref> = <ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="52" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a9eab57ccb42a39c704f47dc30e4f4515" prot="public" static="no" mutable="no">
+        <type>creating <ref refid="a00012" kindref="compound">catalysis</ref> matrix</type>
+        <definition>creating catalysis matrix cFiles</definition>
+        <argsstring></argsstring>
+        <name>cFiles</name>
+        <initializer>= dir(&apos;<ref refid="a00012" kindref="compound">catalysis</ref>*&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="64" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a33e70cf5b45cb59005b82d30202f0b69" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>catalysisFile</definition>
+        <argsstring></argsstring>
+        <name>catalysisFile</name>
+        <initializer>= <ref refid="a00030_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>(length(<ref refid="a00030_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>)).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="65" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a0810027f58d6be965e44b7b84c44ace8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>catalysisMatrix</definition>
+        <argsstring></argsstring>
+        <name>catalysisMatrix</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="68" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ad4ba7701967c1da20171228afccb7081" prot="public" static="no" mutable="no">
+        <type>while <ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
+        <definition>while continua cValues</definition>
+        <argsstring></argsstring>
+        <name>cValues</name>
+        <initializer>= <ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref>,&apos;%<ref refid="a00025_1a9c5a71c46b1abb8b7df5ebeac6c81535" kindref="member">f</ref>&apos;,7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="70" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a91cf6fbebedd86150a36e5ac3d5d3bfc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>break</definition>
+        <argsstring></argsstring>
+        <name>break</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="74" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1aeea253cb98a56047ef20ceed86e2f0ea" prot="public" static="no" mutable="no">
+        <type>identifying outliers</type>
+        <definition>identifying outliers reactionsCounters</definition>
+        <argsstring></argsstring>
+        <name>reactionsCounters</name>
+        <initializer>= <ref refid="a00030_1af998036b749d9fa6dd2365f9937279b6" kindref="member">reactionsMatrix</ref>(:,6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="83" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a60cfb1ca20cbbc81b85a8f56658b7c99" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>outRows</definition>
+        <argsstring></argsstring>
+        <name>outRows</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="90" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>outliersMatrix</definition>
+        <argsstring></argsstring>
+        <name>outliersMatrix</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="91" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a07c9e68cdbafe572c04d3112d64deb88" prot="public" static="no" mutable="no">
+        <type><ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>if possible</definition>
+        <argsstring></argsstring>
+        <name>possible</name>
+        <initializer>== 1
+            <ref refid="a00030_1a60cfb1ca20cbbc81b85a8f56658b7c99" kindref="member">outRows</ref> = <ref refid="a00030_1a60cfb1ca20cbbc81b85a8f56658b7c99" kindref="member">outRows</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="94" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a747bc1d10158c78e88e314825ed41a13" prot="public" static="no" mutable="no">
+        <type>identifying killers</type>
+        <definition>if killRows</definition>
+        <argsstring></argsstring>
+        <name>killRows</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="102" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a929016802e1ede2217a41240a6974fa6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>killersMatrix</definition>
+        <argsstring></argsstring>
+        <name>killersMatrix</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="103" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a98a8838a85ed24032563a44271b1525a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check2</definition>
+        <argsstring></argsstring>
+        <name>check2</name>
+        <initializer>= ismember(<ref refid="a00030_1a9733b61dd859b1133aa3aa849cf70cbc" kindref="member">outliersMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,4),<ref refid="a00030_1a1faaaae288fc8ca4ed1751049aa2f84f" kindref="member">blocked</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="106" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1adfd17509248a56986475a25ee50fe488" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check3</definition>
+        <argsstring></argsstring>
+        <name>check3</name>
+        <initializer>= ismember(<ref refid="a00030_1a9733b61dd859b1133aa3aa849cf70cbc" kindref="member">outliersMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,5),<ref refid="a00030_1a1faaaae288fc8ca4ed1751049aa2f84f" kindref="member">blocked</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="107" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a1a42aaee01b2cc37a3835e0fe30cf9d3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>killerCatalysts</definition>
+        <argsstring></argsstring>
+        <name>killerCatalysts</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="116" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a62227634d3ceda9bf932c630583da2b9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>KCRows</definition>
+        <argsstring></argsstring>
+        <name>KCRows</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="117" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" prot="public" static="no" mutable="no">
+        <type>for</type>
+        <definition>clear j</definition>
+        <argsstring></argsstring>
+        <name>j</name>
+        <initializer>= 1:rcm
+                <ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> killerReaction == <ref refid="a00030_1a244eec8903103b5bbddef461276286ce" kindref="member">catalysisMatrix</ref>(j,3) &amp;&amp; <ref refid="a00030_1a244eec8903103b5bbddef461276286ce" kindref="member">catalysisMatrix</ref>(j,4) &gt; 0
+                    <ref refid="a00029_1a62227634d3ceda9bf932c630583da2b9" kindref="member">KCRows</ref> = <ref refid="a00029_1a62227634d3ceda9bf932c630583da2b9" kindref="member">KCRows</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="120" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>KSMatrix</definition>
+        <argsstring></argsstring>
+        <name>KSMatrix</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="135" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ab21c5bac10f7ac73374c002e908df5ac" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check4</definition>
+        <argsstring></argsstring>
+        <name>check4</name>
+        <initializer>= xor(<ref refid="a00030_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref>,<ref refid="a00030_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="139" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a0c9b097ea561ab0f23a69197786a243a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check6</definition>
+        <argsstring></argsstring>
+        <name>check6</name>
+        <initializer>= ismember(<ref refid="a00030_1ab18f9eabd5f873bd17d226d786bc22df" kindref="member">KSMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,5),<ref refid="a00030_1a90d1d83fdcae4fb1cba5129d5820d33c" kindref="member">cleavagesMatrix</ref>(:,3))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="150" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check7</definition>
+        <argsstring></argsstring>
+        <name>check7</name>
+        <initializer>= ismember(<ref refid="a00030_1ab18f9eabd5f873bd17d226d786bc22df" kindref="member">KSMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,5),<ref refid="a00030_1a244eec8903103b5bbddef461276286ce" kindref="member">catalysisMatrix</ref>(:,2))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="151" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1abee07c73829351d18ba356c86e3e096d" prot="public" static="no" mutable="no">
+        <type><ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>if check5</definition>
+        <argsstring></argsstring>
+        <name>check5</name>
+        <initializer>== 1 || <ref refid="a00030_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref> == 1 || <ref refid="a00030_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref> == 1
+                    <ref refid="a00030_1af25e9bc98875e5cf5352941b503dfb13" kindref="member">KSRows</ref> = <ref refid="a00030_1af25e9bc98875e5cf5352941b503dfb13" kindref="member">KSRows</ref>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="152" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a67eb148eecfd241148ce3711f058ac2b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>if checkKSM</definition>
+        <argsstring></argsstring>
+        <name>checkKSM</name>
+        <initializer>= <ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00030_1ab18f9eabd5f873bd17d226d786bc22df" kindref="member">KSMatrix</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="168" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a25c085d4378366ed81f0f97547802c8f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>KSCatalysts</definition>
+        <argsstring></argsstring>
+        <name>KSCatalysts</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="171" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a56aa0b3ac00410dc36f9043c641ae205" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>KSCRows</definition>
+        <argsstring></argsstring>
+        <name>KSCRows</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="172" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a834631ce660b52d721b1dd57b60d5251" prot="public" static="no" mutable="no">
+        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> identifying spammers</type>
+        <definition>end identifying spammers SpamRows</definition>
+        <argsstring></argsstring>
+        <name>SpamRows</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="189" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1af1801174c9397e7fad0394203f120c31" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SpammersMatrix</definition>
+        <argsstring></argsstring>
+        <name>SpammersMatrix</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="190" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ae80cf4c5bf659247b45bbad5d22dec52" prot="public" static="no" mutable="no">
+        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>if checkSM</definition>
+        <argsstring></argsstring>
+        <name>checkSM</name>
+        <initializer>= <ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00030_1a5bca8ffaecd726e70d088f2e00c9b4e0" kindref="member">SpammersMatrix</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="234" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1aac2cfcb79655911b15197407f3e8c51c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>spammersCatalysts</definition>
+        <argsstring></argsstring>
+        <name>spammersCatalysts</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="237" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a4c9731061d3ea74c9ad35793b15491ab" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>SCRows</definition>
+        <argsstring></argsstring>
+        <name>SCRows</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="238" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ac9c871eaf7455dc0d274ec20c5c69ac2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>if checkKM</definition>
+        <argsstring></argsstring>
+        <name>checkKM</name>
+        <initializer>= <ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00030_1ab372fd9c8bb38cf3c78e995c0698b0ca" kindref="member">killersMatrix</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="259" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1af5946383720aa572eb93e1e63afc23c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>else[r c]</definition>
+        <argsstring>[r c]</argsstring>
+        <name>else</name>
+        <initializer>= <ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00030_1ab372fd9c8bb38cf3c78e995c0698b0ca" kindref="member">killersMatrix</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="262" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1ac862e7284527eb913b1351c8bfb8e079" prot="public" static="no" mutable="no">
+        <type>clear</type>
+        <definition>clear r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="272" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00029_1a8e54ca14679a1ce9245a3b7d55d95570" prot="public" static="no" mutable="no">
+        <type>clear</type>
+        <definition>clear c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="273" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00029_1acfbe15da69f5cf2e58667e2b19b500e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00068_1a4b4c670b101bf7a838f775e008fa6255" kindref="member">function</ref></type>
+        <definition>function KillSpam</definition>
+        <argsstring>(param) currentDir</argsstring>
+        <name>KillSpam</name>
+        <param>
+          <type><ref refid="a00033_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="1" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a60547755325ad4e7a25c614f83776ee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cd</definition>
+        <argsstring>(param.tmpPath)</argsstring>
+        <name>cd</name>
+        <param>
+          <type>param.</type>
+          <declname>tmpPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="4" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a3015506d09b4ef94312c10ce85f4c3ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>disp</definition>
+        <argsstring>(&apos;|-----------------------------------------|&apos;)</argsstring>
+        <name>disp</name>
+        <param>
+          <type>&apos;|-----------------------------------------|&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="6" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a16c8f16b559b22e1f31c9e00f75fe520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>disp</definition>
+        <argsstring>(&apos;|-Killer and Spammer analysis is started|&apos;)</argsstring>
+        <name>disp</name>
+        <param>
+          <type>&apos;|-Killer <ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref> Spammer <ref refid="a00032_1abf6e5638a23a2531114655f3f690b70c" kindref="member">analysis</ref> is started|&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="7" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1aef429e9a25e0d4d70aa2037a59816956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>READ ALL THE DIRECTORY CONTAINING SIMULATIONS <ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>READ ALL THE DIRECTORY CONTAINING SIMULATIONS if ~isdir</definition>
+        <argsstring>(&apos;0_statistics&apos;) mkdir(&apos;0_statistics&apos;)</argsstring>
+        <name>~isdir</name>
+        <param>
+          <type>&apos;0_statistics&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a365d011aeb5adcedc5cc75e7df629a6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cd</definition>
+        <argsstring>(&apos;0_statistics&apos;)</argsstring>
+        <name>cd</name>
+        <param>
+          <type>&apos;0_statistics&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a5e769bbbabcaddc548203741c7100228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fclose</definition>
+        <argsstring>(fid)</argsstring>
+        <name>fclose</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a7eb00a69197e8905221801683c7ec02a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cd</definition>
+        <argsstring>(&apos;../&apos;)</argsstring>
+        <name>cd</name>
+        <param>
+          <type>&apos;../&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a609f02c862f2843febf3408f688be8e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>disp</definition>
+        <argsstring>(strcat(&apos;|-Folder: &apos;, simDirs(x).name,&apos;/res...&apos;))</argsstring>
+        <name>disp</name>
+        <param>
+          <type>strcat(&apos;|-Folder: &apos;, <ref refid="a00031_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="a00031_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res...&apos;)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1af998036b749d9fa6dd2365f9937279b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00029_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref> <ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>break end reactionsMatrix</definition>
+        <argsstring>(continua, 1:6)</argsstring>
+        <name>reactionsMatrix</name>
+        <param>
+          <type><ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
+        </param>
+        <param>
+          <type>1:6</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a01fa14c111dc166a634dbb35b9cf9845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cleavagesMatrix</definition>
+        <argsstring>(cleavages, 1:6)</argsstring>
+        <name>cleavagesMatrix</name>
+        <param>
+          <type><ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref></type>
+        </param>
+        <param>
+          <type>1:6</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1aa0f4762ac55d55c1b1ff073f9a5c3603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>condensationsMatrix</definition>
+        <argsstring>(condensations, 1:6)</argsstring>
+        <name>condensationsMatrix</name>
+        <param>
+          <type><ref refid="a00030_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref></type>
+        </param>
+        <param>
+          <type>1:6</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1acd65be0940a1307851b57c0d864fd32a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end catalysisMatrix</definition>
+        <argsstring>(continua, 1:4)</argsstring>
+        <name>catalysisMatrix</name>
+        <param>
+          <type><ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
+        </param>
+        <param>
+          <type>1:4</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1aa5604b86cead7c2e2115f5e809f94465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>outliersMatrix</definition>
+        <argsstring>(outRows, 1:6)</argsstring>
+        <name>outliersMatrix</name>
+        <param>
+          <type><ref refid="a00030_1a60cfb1ca20cbbc81b85a8f56658b7c99" kindref="member">outRows</ref></type>
+        </param>
+        <param>
+          <type>1:6</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a70d494ea7ebc6a0b4ed59c685a43b83a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>if</definition>
+        <argsstring>((outliersMatrix(i, 2)==1)&amp;&amp;(check2==1 &amp;&amp;check3==1))||(outliersMatrix(i</argsstring>
+        <name>if</name>
+        <param>
+          <type>(<ref refid="a00030_1a9733b61dd859b1133aa3aa849cf70cbc" kindref="member">outliersMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 2)==1)&amp;&amp;(<ref refid="a00030_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref>==1 &amp;&amp;<ref refid="a00030_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref>==1)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="108" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1ab372fd9c8bb38cf3c78e995c0698b0ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>killersMatrix</definition>
+        <argsstring>(killRows, 1:6)</argsstring>
+        <name>killersMatrix</name>
+        <param>
+          <type><ref refid="a00030_1a0e22d9868b850c50dfc13f5d28db8c30" kindref="member">killRows</ref></type>
+        </param>
+        <param>
+          <type>1:6</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a62080a60371e18b8bd9ea0262d930070" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>killerCatalysts</definition>
+        <argsstring>(KCRows, 1)</argsstring>
+        <name>killerCatalysts</name>
+        <param>
+          <type><ref refid="a00029_1a62227634d3ceda9bf932c630583da2b9" kindref="member">KCRows</ref></type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a62e3e9df13337b149661778a56e2f312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>killerCatalysts</definition>
+        <argsstring>(KCRows, 2)</argsstring>
+        <name>killerCatalysts</name>
+        <param>
+          <type><ref refid="a00029_1a62227634d3ceda9bf932c630583da2b9" kindref="member">KCRows</ref></type>
+        </param>
+        <param>
+          <type>2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1af035121149449dd8d2faa4421fb6c880" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>killerCatalysts</definition>
+        <argsstring>(KCRows, 3)</argsstring>
+        <name>killerCatalysts</name>
+        <param>
+          <type><ref refid="a00029_1a62227634d3ceda9bf932c630583da2b9" kindref="member">KCRows</ref></type>
+        </param>
+        <param>
+          <type>3</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="125" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1af25e9bc98875e5cf5352941b503dfb13" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id KSRows</definition>
+        <argsstring>()</argsstring>
+        <name>KSRows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="133" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a9733b61dd859b1133aa3aa849cf70cbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>if outliersMatrix</definition>
+        <argsstring>(i, 2)</argsstring>
+        <name>outliersMatrix</name>
+        <param>
+          <type><ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
+        </param>
+        <param>
+          <type>2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a1ca01da7acca382062218cc1d882bc94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KSMatrix</definition>
+        <argsstring>(KSRows, 1:6)</argsstring>
+        <name>KSMatrix</name>
+        <param>
+          <type><ref refid="a00030_1af25e9bc98875e5cf5352941b503dfb13" kindref="member">KSRows</ref></type>
+        </param>
+        <param>
+          <type>1:6</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="142" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1ab18f9eabd5f873bd17d226d786bc22df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KSMatrix</definition>
+        <argsstring>(i,:)</argsstring>
+        <name>KSMatrix</name>
+        <param>
+          <type><ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
+        </param>
+        <param>
+          <type>:</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a3be68e5139c43e01dd6e45facd01913e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KSCatalysts</definition>
+        <argsstring>(KSCRows, 1)</argsstring>
+        <name>KSCatalysts</name>
+        <param>
+          <type><ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref></type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="178" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a2a6234a34a90f619ed2f13c9563cdc32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KSCatalysts</definition>
+        <argsstring>(KSCRows, 2)</argsstring>
+        <name>KSCatalysts</name>
+        <param>
+          <type><ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref></type>
+        </param>
+        <param>
+          <type>2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a07c9da4b6bdc26219ccd9ed9e328987c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KSCatalysts</definition>
+        <argsstring>(KSCRows, 3)</argsstring>
+        <name>KSCatalysts</name>
+        <param>
+          <type><ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref></type>
+        </param>
+        <param>
+          <type>3</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="180" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a76c07bbe1f939c5ee01da02f76f8bdff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>if</definition>
+        <argsstring>((outliersMatrix(i, 2)==1)&amp;&amp;(check2==0 &amp;&amp;check3==0))||(outliersMatrix(i</argsstring>
+        <name>if</name>
+        <param>
+          <type>(<ref refid="a00030_1a9733b61dd859b1133aa3aa849cf70cbc" kindref="member">outliersMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 2)==1)&amp;&amp;(<ref refid="a00030_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref>==0 &amp;&amp;<ref refid="a00030_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref>==0)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1aeea853e888e4614a63ee71bd8368439c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpammersMatrix</definition>
+        <argsstring>(SpamRows, 1:6)</argsstring>
+        <name>SpammersMatrix</name>
+        <param>
+          <type><ref refid="a00030_1aa9cffa4c2d9962c67a719b05a414e478" kindref="member">SpamRows</ref></type>
+        </param>
+        <param>
+          <type>1:6</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="197" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a85b94912a98c3feaa48ffdd525d4ff9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00030_1aa9cffa4c2d9962c67a719b05a414e478" kindref="member">SpamRows</ref></type>
+        <definition>if SpamRows SpammersMatrix</definition>
+        <argsstring>(:, 7)</argsstring>
+        <name>SpammersMatrix</name>
+        <param>
+          <type>:</type>
+        </param>
+        <param>
+          <type>7</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="202" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a7688a802090342c369d2d6040e3e8a00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpammersMatrix</definition>
+        <argsstring>(i,:)</argsstring>
+        <name>SpammersMatrix</name>
+        <param>
+          <type><ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
+        </param>
+        <param>
+          <type>:</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a5bca8ffaecd726e70d088f2e00c9b4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00031_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></type>
+        <definition>else SpammersMatrix</definition>
+        <argsstring>(i, 7)</argsstring>
+        <name>SpammersMatrix</name>
+        <param>
+          <type><ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
+        </param>
+        <param>
+          <type>7</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="219" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1ae05cc2cc4068134bc594222869ef5918" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>spammerCatalysts</definition>
+        <argsstring>(KSCRows, 1)</argsstring>
+        <name>spammerCatalysts</name>
+        <param>
+          <type><ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref></type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="244" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1ade7eeff57f966a13f6088dbe9bfc7963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>spammerCatalysts</definition>
+        <argsstring>(KSCRows, 2)</argsstring>
+        <name>spammerCatalysts</name>
+        <param>
+          <type><ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref></type>
+        </param>
+        <param>
+          <type>2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="245" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a8af050077bbbc9c6de5a7325eb5d6dac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>spammerCatalysts</definition>
+        <argsstring>(KSCRows, 3)</argsstring>
+        <name>spammerCatalysts</name>
+        <param>
+          <type><ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref></type>
+        </param>
+        <param>
+          <type>3</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="246" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a21172d88d238291f06b91067ea53f814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fprintf</definition>
+        <argsstring>(fid,&apos;NET%d\n\n&apos;, x)</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;NET%d\n\n&apos;</type>
+        </param>
+        <param>
+          <type><ref refid="a00031_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="257" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a2bff3632fad7bca512140377cbce79ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fprintf</definition>
+        <argsstring>(fid,&apos;KILLERS\n\n&apos;)</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;KILLERS\n\n&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="258" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a0921b3966bd3417e73b391d1e3d61c72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end fprintf</definition>
+        <argsstring>(fid,&apos;\n\n&apos;)</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;\n\n&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="268" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1abe270c443eed92d533e6e91da4fe0806" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fprintf</definition>
+        <argsstring>(fid,&apos;Catalysts\n\n&apos;)</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;Catalysts\n\n&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="274" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1ac0d2993e075081dbeec25bf007d724ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fprintf</definition>
+        <argsstring>(fid,&apos;%d\t&apos;, killerCatalysts(i, 2))</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;%d\t&apos;</type>
+        </param>
+        <param>
+          <type><ref refid="a00029_1af035121149449dd8d2faa4421fb6c880" kindref="member">killerCatalysts</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 2)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="277" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1ad3c1eceb2ed9ceccee531f6cecb6f22c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fprintf</definition>
+        <argsstring>(fid,&apos;%d\n\n&apos;, killerCatalysts(i, 3))</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;%d\n\n&apos;</type>
+        </param>
+        <param>
+          <type><ref refid="a00029_1af035121149449dd8d2faa4421fb6c880" kindref="member">killerCatalysts</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 3)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="278" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a71d0eb815b3a7bd6b61df109c8d61f7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end fprintf</definition>
+        <argsstring>(fid,&apos;KILLERS-SPAMMERS\n\n&apos;)</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;KILLERS-SPAMMERS\n\n&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="282" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a6fe14ff39a52618ca1e4d2863e9ff1e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fprintf</definition>
+        <argsstring>(fid,&apos;%d\t&apos;, KSCatalysts(KSCRows, 2))</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;%d\t&apos;</type>
+        </param>
+        <param>
+          <type><ref refid="a00029_1a07c9da4b6bdc26219ccd9ed9e328987c" kindref="member">KSCatalysts</ref>(<ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref>, 2)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="301" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1af3409629d2505f7b20626e054a557f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fprintf</definition>
+        <argsstring>(fid,&apos;%d\n\n&apos;, KSCatalysts(KSCRows, 3))</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;%d\n\n&apos;</type>
+        </param>
+        <param>
+          <type><ref refid="a00029_1a07c9da4b6bdc26219ccd9ed9e328987c" kindref="member">KSCatalysts</ref>(<ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref>, 3)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="302" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a15b6f7d121637092f493c8651442be69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end fprintf</definition>
+        <argsstring>(fid,&apos;SPAMMERS\n\n&apos;)</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;SPAMMERS\n\n&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="306" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a0033ee10cc7a02cb987a451b832a44b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fprintf</definition>
+        <argsstring>(fid,&apos;%d\t&apos;, spammerCatalysts(SCRows, 2))</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;%d\t&apos;</type>
+        </param>
+        <param>
+          <type><ref refid="a00029_1a8af050077bbbc9c6de5a7325eb5d6dac" kindref="member">spammerCatalysts</ref>(<ref refid="a00029_1a4c9731061d3ea74c9ad35793b15491ab" kindref="member">SCRows</ref>, 2)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="325" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1a0d1eade83ed9a6fcb17620c5a3c8d15f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fprintf</definition>
+        <argsstring>(fid,&apos;%d\n\n&apos;, spammerCatalysts(SCRows, 3))</argsstring>
+        <name>fprintf</name>
+        <param>
+          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+        </param>
+        <param>
+          <type>&apos;%d\n\n&apos;</type>
+        </param>
+        <param>
+          <type><ref refid="a00029_1a8af050077bbbc9c6de5a7325eb5d6dac" kindref="member">spammerCatalysts</ref>(<ref refid="a00029_1a4c9731061d3ea74c9ad35793b15491ab" kindref="member">SCRows</ref>, 3)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="326" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00029_1ad0eeb1e0227e246587ed6adcb8d829dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end cd</definition>
+        <argsstring>(currentDir)</argsstring>
+        <name>cd</name>
+        <param>
+          <type><ref refid="a00031_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" line="333" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="a00029_1acfbe15da69f5cf2e58667e2b19b500e7" kindref="member">KillSpam</ref>(<ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="a00023_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref><sp/>=<sp/><ref refid="a00025_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>();</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">cd(<ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="a00023_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(&apos;|-----------------------------------------|&apos;);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="a00023_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(&apos;|-<sp/>Killer<sp/><ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/>Spammer<sp/><ref refid="a00032_1abf6e5638a23a2531114655f3f690b70c" kindref="member">analysis</ref><sp/>is<sp/>started<sp/>|&apos;);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="a00023_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(&apos;|-----------------------------------------|&apos;);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">%<sp/>READ<sp/>ALL<sp/>THE<sp/>DIRECTORY<sp/>CONTAINING<sp/>SIMULATIONS</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>~isdir(&apos;0_statistics&apos;)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00068_1abcaf3fe79479456b56924747f1bca0d9" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="a00029_1ad509473eed851f9f5ff4157c02ec8618" refkind="member"><highlight class="normal"><ref refid="a00027_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref><sp/>=<sp/>strcat(&apos;*&apos;,<ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.<ref refid="a00028_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>,&apos;*&apos;);</highlight></codeline>
+<codeline lineno="17" refid="a00029_1aae5035eb84b89176ed5b06e136325eff" refkind="member"><highlight class="normal"><ref refid="a00027_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/>dir(<ref refid="a00027_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">cd(&apos;0_statistics&apos;);</highlight></codeline>
+<codeline lineno="20" refid="a00029_1ae9011d40c6f13e68e6f07156e0da7c5d" refkind="member"><highlight class="normal"><ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref><sp/>=<sp/>fopen(&apos;ALL_results_TS1.txt&apos;,&apos;w&apos;);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(<ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">cd(&apos;../&apos;);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="a00029_1a7265972fe485274cfff77a9bb07b8fce" refkind="member"><highlight class="normal">for<sp/><ref refid="a00027_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref><sp/>=<sp/>1:length(<ref refid="a00027_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(strcat(<ref refid="a00027_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="a00027_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00023_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(strcat(&apos;<sp/><sp/>|-<sp/>Folder:<sp/>&apos;,<ref refid="a00027_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="a00027_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>).name,&apos;/res...&apos;));</highlight></codeline>
+<codeline lineno="27" refid="a00029_1a1faaaae288fc8ca4ed1751049aa2f84f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1a1faaaae288fc8ca4ed1751049aa2f84f" kindref="member">blocked</ref><sp/>=<sp/>0:<ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.<ref refid="a00032_1aad7be196243f3c9ca83dfee7c9111014" kindref="member">lastSpecies</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>creating<sp/><ref refid="a00021" kindref="compound">reactions</ref><sp/>matrix</highlight></codeline>
+<codeline lineno="29" refid="a00029_1ad75735665492cabd747370126464fddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref><sp/>=<sp/>dir(&apos;<ref refid="a00021" kindref="compound">reactions</ref>*&apos;);</highlight></codeline>
+<codeline lineno="30" refid="a00029_1a4c72dba1fe2ee2fbcc699262a8d0c624" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref><sp/>=<sp/><ref refid="a00027_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>(length(<ref refid="a00027_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>)-1).name;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(<ref refid="a00027_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref>);</highlight></codeline>
+<codeline lineno="32" refid="a00029_1a9c951ebd5bc3f1adce943bee1255f4d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="33" refid="a00029_1ac52097a2745fcef31eb175d2e9485845" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="35" refid="a00029_1a436a6968124e560649654a4abbd9dac6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a436a6968124e560649654a4abbd9dac6" kindref="member">rValues</ref><sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%d&apos;,7);</highlight></codeline>
+<codeline lineno="36" refid="a00029_1a6bd08e37edf4151f5f6d1fc27a6f227a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00027_1a436a6968124e560649654a4abbd9dac6" kindref="member">rValues</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref>(continua,1:6)<sp/>=<sp/>rValues(1:6);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>continua+1;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>%dividing<sp/>into<sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref><sp/><ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref></highlight></codeline>
+<codeline lineno="47" refid="a00029_1ad3aa27d88a7e9d77d8334155860269bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48" refid="a00029_1a89060c6979e5a4ff7b0985b35f295695" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>[rrm<sp/>crm]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref>);</highlight></codeline>
+<codeline lineno="50" refid="a00029_1a1a691fb4f955887edfa538e91479fafe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a1a691fb4f955887edfa538e91479fafe" kindref="member">cleavagesMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="51" refid="a00029_1afaba8eef2f8f4e4dda2e893a19e55a94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1afaba8eef2f8f4e4dda2e893a19e55a94" kindref="member">condensationsMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52" refid="a00029_1ac870e1cd47f6d78f16a98a24c8392fcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/><ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>1:rrm</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>reactionsMatrix(<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,2)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref><sp/>=<sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref>+1;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a1a691fb4f955887edfa538e91479fafe" kindref="member">cleavagesMatrix</ref>(cleavages,1:6)<sp/>=<sp/>reactionsMatrix(i,1:6);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref><sp/>=<sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref>+1;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1afaba8eef2f8f4e4dda2e893a19e55a94" kindref="member">condensationsMatrix</ref>(condensations,1:6)<sp/>=<sp/>reactionsMatrix(i,1:6);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>creating<sp/><ref refid="a00012" kindref="compound">catalysis</ref><sp/>matrix</highlight></codeline>
+<codeline lineno="64" refid="a00029_1a9eab57ccb42a39c704f47dc30e4f4515" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref><sp/>=<sp/>dir(&apos;<ref refid="a00012" kindref="compound">catalysis</ref>*&apos;);</highlight></codeline>
+<codeline lineno="65" refid="a00029_1a33e70cf5b45cb59005b82d30202f0b69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref><sp/>=<sp/><ref refid="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>(length(<ref refid="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>)).name;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(<ref refid="a00027_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="68" refid="a00029_1a0810027f58d6be965e44b7b84c44ace8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a0810027f58d6be965e44b7b84c44ace8" kindref="member">catalysisMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/>continua<sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="70" refid="a00029_1ad4ba7701967c1da20171228afccb7081" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1ad4ba7701967c1da20171228afccb7081" kindref="member">cValues</ref><sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%<ref refid="a00025_1a9c5a71c46b1abb8b7df5ebeac6c81535" kindref="member">f</ref>&apos;,7);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00027_1ad4ba7701967c1da20171228afccb7081" kindref="member">cValues</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="74" refid="a00029_1a91cf6fbebedd86150a36e5ac3d5d3bfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a0810027f58d6be965e44b7b84c44ace8" kindref="member">catalysisMatrix</ref>(continua,1:4)<sp/>=<sp/>cValues(1:4);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>continua+1;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>[rcm<sp/>ccm]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00027_1a0810027f58d6be965e44b7b84c44ace8" kindref="member">catalysisMatrix</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>identifying<sp/>&quot;outliers&quot;</highlight></codeline>
+<codeline lineno="83" refid="a00029_1aeea253cb98a56047ef20ceed86e2f0ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1aeea253cb98a56047ef20ceed86e2f0ea" kindref="member">reactionsCounters</ref><sp/>=<sp/>reactionsMatrix(:,6);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>length(<ref refid="a00029_1aeea253cb98a56047ef20ceed86e2f0ea" kindref="member">reactionsCounters</ref>):-1:1</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1aeea253cb98a56047ef20ceed86e2f0ea" kindref="member">reactionsCounters</ref>(i)<sp/>&lt;<sp/>1</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1aeea253cb98a56047ef20ceed86e2f0ea" kindref="member">reactionsCounters</ref>(i)<sp/>=<sp/>[];</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="90" refid="a00029_1a60cfb1ca20cbbc81b85a8f56658b7c99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1a60cfb1ca20cbbc81b85a8f56658b7c99" kindref="member">outRows</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91" refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:rrm</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a07c9e68cdbafe572c04d3112d64deb88" kindref="member">possible</ref><sp/>=<sp/>ismember(reactionsMatrix(i,6),<ref refid="a00029_1aeea253cb98a56047ef20ceed86e2f0ea" kindref="member">reactionsCounters</ref>);</highlight></codeline>
+<codeline lineno="94" refid="a00029_1a07c9e68cdbafe572c04d3112d64deb88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1a07c9e68cdbafe572c04d3112d64deb88" kindref="member">possible</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a60cfb1ca20cbbc81b85a8f56658b7c99" kindref="member">outRows</ref><sp/>=<sp/><ref refid="a00029_1a60cfb1ca20cbbc81b85a8f56658b7c99" kindref="member">outRows</ref>+1;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(outRows,1:6)<sp/>=<sp/>reactionsMatrix(i,1:6);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>identifying<sp/>&quot;killers&quot;</highlight></codeline>
+<codeline lineno="102" refid="a00029_1a747bc1d10158c78e88e314825ed41a13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1a747bc1d10158c78e88e314825ed41a13" kindref="member">killRows</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="103" refid="a00029_1a929016802e1ede2217a41240a6974fa6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1a929016802e1ede2217a41240a6974fa6" kindref="member">killersMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:outRows</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a62c10db322670bdabb633eb294c4fcec" kindref="member">check1</ref><sp/>=<sp/>ismember(<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,3),<ref refid="a00029_1a1faaaae288fc8ca4ed1751049aa2f84f" kindref="member">blocked</ref>);</highlight></codeline>
+<codeline lineno="106" refid="a00029_1a98a8838a85ed24032563a44271b1525a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref><sp/>=<sp/>ismember(<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,4),blocked);</highlight></codeline>
+<codeline lineno="107" refid="a00029_1adfd17509248a56986475a25ee50fe488" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref><sp/>=<sp/>ismember(<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,5),blocked);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>((<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,2)<sp/>==<sp/>1)<sp/>&amp;&amp;<sp/>(<ref refid="a00027_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref><sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="a00027_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref><sp/>==<sp/>1))<sp/>||<sp/>(<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,2)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="a00027_1a62c10db322670bdabb633eb294c4fcec" kindref="member">check1</ref><sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a747bc1d10158c78e88e314825ed41a13" kindref="member">killRows</ref><sp/>=<sp/><ref refid="a00029_1a747bc1d10158c78e88e314825ed41a13" kindref="member">killRows</ref>+1;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a929016802e1ede2217a41240a6974fa6" kindref="member">killersMatrix</ref>(killRows,1:6)<sp/>=<sp/><ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,1:6);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>killRows<sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rkm<sp/>ckm]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00029_1a929016802e1ede2217a41240a6974fa6" kindref="member">killersMatrix</ref>);</highlight></codeline>
+<codeline lineno="116" refid="a00029_1a1a42aaee01b2cc37a3835e0fe30cf9d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a1a42aaee01b2cc37a3835e0fe30cf9d3" kindref="member">killerCatalysts</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="117" refid="a00029_1a62227634d3ceda9bf932c630583da2b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a62227634d3ceda9bf932c630583da2b9" kindref="member">KCRows</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:rkm</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>killerReaction<sp/>=<sp/>killersMatrix(i,1);</highlight></codeline>
+<codeline lineno="120" refid="a00029_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/><ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref><sp/>=<sp/>1:rcm</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>killerReaction<sp/>==<sp/>catalysisMatrix(<ref refid="a00028_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>,3)<sp/>&amp;&amp;<sp/>catalysisMatrix(j,4)<sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a62227634d3ceda9bf932c630583da2b9" kindref="member">KCRows</ref><sp/>=<sp/><ref refid="a00029_1a62227634d3ceda9bf932c630583da2b9" kindref="member">KCRows</ref>+1;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a1a42aaee01b2cc37a3835e0fe30cf9d3" kindref="member">killerCatalysts</ref>(KCRows,1)<sp/>=<sp/>killerReaction;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a1a42aaee01b2cc37a3835e0fe30cf9d3" kindref="member">killerCatalysts</ref>(KCRows,2)<sp/>=<sp/>catalysisMatrix(j,2);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a1a42aaee01b2cc37a3835e0fe30cf9d3" kindref="member">killerCatalysts</ref>(KCRows,3)<sp/>=<sp/>catalysisMatrix(j,4);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>j;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>identifying<sp/>&quot;killer-spammers&quot;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1af25e9bc98875e5cf5352941b503dfb13" kindref="member">KSRows</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="135" refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:outRows</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref><sp/>=<sp/>ismember(<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,4),blocked);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref><sp/>=<sp/>ismember(<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,5),blocked);</highlight></codeline>
+<codeline lineno="139" refid="a00029_1ab21c5bac10f7ac73374c002e908df5ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1ab21c5bac10f7ac73374c002e908df5ac" kindref="member">check4</ref><sp/>=<sp/>xor(<ref refid="a00027_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref>,<ref refid="a00027_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,2)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="a00029_1ab21c5bac10f7ac73374c002e908df5ac" kindref="member">check4</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KSRows<sp/>=<sp/>KSRows+1;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>(KSRows,1:6)<sp/>=<sp/><ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,1:6);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>KSRows<sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>KSRows:-1:1</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>(i,4)<sp/>&lt;<sp/>6</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1abee07c73829351d18ba356c86e3e096d" kindref="member">check5</ref><sp/>=<sp/>ismember(<ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>(i,5),<ref refid="a00027_1afaba8eef2f8f4e4dda2e893a19e55a94" kindref="member">condensationsMatrix</ref>(:,4:5));</highlight></codeline>
+<codeline lineno="150" refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref><sp/>=<sp/>ismember(<ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>(i,5),<ref refid="a00027_1a1a691fb4f955887edfa538e91479fafe" kindref="member">cleavagesMatrix</ref>(:,3));</highlight></codeline>
+<codeline lineno="151" refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref><sp/>=<sp/>ismember(<ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>(i,5),catalysisMatrix(:,2));</highlight></codeline>
+<codeline lineno="152" refid="a00029_1abee07c73829351d18ba356c86e3e096d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1abee07c73829351d18ba356c86e3e096d" kindref="member">check5</ref><sp/>==<sp/>1<sp/>||<sp/><ref refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref><sp/>==<sp/>1<sp/>||<sp/><ref refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KSRows<sp/>=<sp/>KSRows-1;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>(i,:)<sp/>=<sp/>[];</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1abee07c73829351d18ba356c86e3e096d" kindref="member">check5</ref><sp/>=<sp/>ismember(<ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>(i,4),condensationsMatrix(:,4:5));</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref><sp/>=<sp/>ismember(<ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>(i,4),cleavagesMatrix(:,3));</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref><sp/>=<sp/>ismember(<ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>(i,4),catalysisMatrix(:,2));</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1abee07c73829351d18ba356c86e3e096d" kindref="member">check5</ref><sp/>==<sp/>1<sp/>||<sp/><ref refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref><sp/>==<sp/>1<sp/>||<sp/><ref refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KSRows<sp/>=<sp/>KSRows-1;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>(i,:)<sp/>=<sp/>[];</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="168" refid="a00029_1a67eb148eecfd241148ce3711f058ac2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1a67eb148eecfd241148ce3711f058ac2b" kindref="member">checkKSM</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00029_1aea43faf8d3d68de03c645edc96b0c1c0" kindref="member">KSMatrix</ref>);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1a67eb148eecfd241148ce3711f058ac2b" kindref="member">checkKSM</ref><sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rksm<sp/>cksm]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(KSMatrix);</highlight></codeline>
+<codeline lineno="171" refid="a00029_1a25c085d4378366ed81f0f97547802c8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a25c085d4378366ed81f0f97547802c8f" kindref="member">KSCatalysts</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="172" refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:rksm</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KSReaction<sp/>=<sp/>KSMatrix(i,1);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>j<sp/>=<sp/>1:rcm</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>KSReaction<sp/>==<sp/>catalysisMatrix(j,3)<sp/>&amp;&amp;<sp/>catalysisMatrix(j,4)<sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref><sp/>=<sp/><ref refid="a00029_1a56aa0b3ac00410dc36f9043c641ae205" kindref="member">KSCRows</ref>+1;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a25c085d4378366ed81f0f97547802c8f" kindref="member">KSCatalysts</ref>(KSCRows,1)<sp/>=<sp/>KSReaction;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a25c085d4378366ed81f0f97547802c8f" kindref="member">KSCatalysts</ref>(KSCRows,2)<sp/>=<sp/>catalysisMatrix(j,2);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a25c085d4378366ed81f0f97547802c8f" kindref="member">KSCatalysts</ref>(KSCRows,3)<sp/>=<sp/>catalysisMatrix(j,4);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>j;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>identifying<sp/>&quot;spammers&quot;</highlight></codeline>
+<codeline lineno="189" refid="a00029_1a834631ce660b52d721b1dd57b60d5251" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1a834631ce660b52d721b1dd57b60d5251" kindref="member">SpamRows</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="190" refid="a00029_1af1801174c9397e7fad0394203f120c31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1af1801174c9397e7fad0394203f120c31" kindref="member">SpammersMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:outRows</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a62c10db322670bdabb633eb294c4fcec" kindref="member">check1</ref><sp/>=<sp/>ismember(<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,3),blocked);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check2<sp/>=<sp/>ismember(<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,4),blocked);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check3<sp/>=<sp/>ismember(<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,5),blocked);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>((<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,2)<sp/>==<sp/>1)<sp/>&amp;&amp;<sp/>(check2<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>check3<sp/>==<sp/>0))<sp/>||<sp/>(<ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,2)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="a00027_1a62c10db322670bdabb633eb294c4fcec" kindref="member">check1</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a834631ce660b52d721b1dd57b60d5251" kindref="member">SpamRows</ref><sp/>=<sp/><ref refid="a00029_1a834631ce660b52d721b1dd57b60d5251" kindref="member">SpamRows</ref>+1;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1af1801174c9397e7fad0394203f120c31" kindref="member">SpammersMatrix</ref>(SpamRows,1:6)<sp/>=<sp/><ref refid="a00029_1ad8a18b407726bf44299c9bcf5d1389ff" kindref="member">outliersMatrix</ref>(i,1:6);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>SpamRows<sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1af1801174c9397e7fad0394203f120c31" kindref="member">SpammersMatrix</ref>(:,7)<sp/>=<sp/>zeros(SpamRows,1);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>SpamRows:-1:1</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>SpammersMatrix(i,2)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1abee07c73829351d18ba356c86e3e096d" kindref="member">check5</ref><sp/>=<sp/>ismember(SpammersMatrix(i,4),condensationsMatrix(:,4:5));</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref><sp/>=<sp/>ismember(SpammersMatrix(i,4),cleavagesMatrix(:,3));</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref><sp/>=<sp/>ismember(SpammersMatrix(i,4),catalysisMatrix(:,2));</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1abee07c73829351d18ba356c86e3e096d" kindref="member">check5</ref><sp/>==<sp/>1<sp/>||<sp/><ref refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref><sp/>==<sp/>1<sp/>||<sp/><ref refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpammersMatrix(i,7)<sp/>=<sp/>SpammersMatrix(i,5);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1abee07c73829351d18ba356c86e3e096d" kindref="member">check5</ref><sp/>=<sp/>ismember(SpammersMatrix(i,5),condensationsMatrix(:,4:5));</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref><sp/>=<sp/>ismember(SpammersMatrix(i,5),cleavagesMatrix(:,3));</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref><sp/>=<sp/>ismember(SpammersMatrix(i,5),catalysisMatrix(:,2));</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1abee07c73829351d18ba356c86e3e096d" kindref="member">check5</ref><sp/>==<sp/>1<sp/>||<sp/><ref refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref><sp/>==<sp/>1<sp/>||<sp/><ref refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>SpammersMatrix(i,7)<sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpamRows<sp/>=<sp/>SpamRows-1;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpammersMatrix(i,:)<sp/>=<sp/>[];</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpammersMatrix(i,7)<sp/>=<sp/>SpammersMatrix(i,4);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1abee07c73829351d18ba356c86e3e096d" kindref="member">check5</ref><sp/>=<sp/>ismember(SpammersMatrix(i,3),condensationsMatrix(:,4:5));</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref><sp/>=<sp/>ismember(SpammersMatrix(i,3),cleavagesMatrix(:,3));</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref><sp/>=<sp/>ismember(SpammersMatrix(i,3),catalysisMatrix(:,2));</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1abee07c73829351d18ba356c86e3e096d" kindref="member">check5</ref><sp/>==<sp/>1<sp/>||<sp/><ref refid="a00029_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref><sp/>==<sp/>1<sp/>||<sp/><ref refid="a00029_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpamRows<sp/>=<sp/>SpamRows-1;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpammersMatrix(i,:)<sp/>=<sp/>[];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="234" refid="a00029_1ae80cf4c5bf659247b45bbad5d22dec52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1ae80cf4c5bf659247b45bbad5d22dec52" kindref="member">checkSM</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(SpammersMatrix);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1ae80cf4c5bf659247b45bbad5d22dec52" kindref="member">checkSM</ref><sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[rsm<sp/>csm]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(SpammersMatrix);</highlight></codeline>
+<codeline lineno="237" refid="a00029_1aac2cfcb79655911b15197407f3e8c51c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1aac2cfcb79655911b15197407f3e8c51c" kindref="member">spammersCatalysts</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="238" refid="a00029_1a4c9731061d3ea74c9ad35793b15491ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a4c9731061d3ea74c9ad35793b15491ab" kindref="member">SCRows</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:rsm</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spammerReaction<sp/>=<sp/>SpammersMatrix(i,1);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>j<sp/>=<sp/>1:rcm</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>spammerReaction<sp/>==<sp/>catalysisMatrix(j,3)<sp/>&amp;&amp;<sp/>catalysisMatrix(j,4)<sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1a4c9731061d3ea74c9ad35793b15491ab" kindref="member">SCRows</ref><sp/>=<sp/><ref refid="a00029_1a4c9731061d3ea74c9ad35793b15491ab" kindref="member">SCRows</ref>+1;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1ae05cc2cc4068134bc594222869ef5918" kindref="member">spammerCatalysts</ref>(KSCRows,1)<sp/>=<sp/>spammerReaction;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1ae05cc2cc4068134bc594222869ef5918" kindref="member">spammerCatalysts</ref>(KSCRows,2)<sp/>=<sp/>catalysisMatrix(j,2);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00029_1ae05cc2cc4068134bc594222869ef5918" kindref="member">spammerCatalysts</ref>(KSCRows,3)<sp/>=<sp/>catalysisMatrix(j,4);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>j;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(<ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.tmpPath);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(&apos;0_statistics&apos;);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>fid=fopen(&apos;ALL_results_TS1.txt&apos;,&apos;<ref refid="a00025_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref>&apos;);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;NET<sp/>%d\n\n&apos;,<ref refid="a00027_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;KILLERS\n\n&apos;);</highlight></codeline>
+<codeline lineno="259" refid="a00029_1ac9c871eaf7455dc0d274ec20c5c69ac2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1ac9c871eaf7455dc0d274ec20c5c69ac2" kindref="member">checkKM</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(killersMatrix);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1ac9c871eaf7455dc0d274ec20c5c69ac2" kindref="member">checkKM</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;No<sp/>killers<sp/>were<sp/>found<sp/>in<sp/>this<sp/>net\n&apos;);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="263" refid="a00029_1af5946383720aa572eb93e1e63afc23c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<ref refid="a00027_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref><sp/><ref refid="a00027_1a8e54ca14679a1ce9245a3b7d55d95570" kindref="member">c</ref>]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(killersMatrix);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:<ref refid="a00027_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>j<sp/>=<sp/>1:<ref refid="a00027_1a8e54ca14679a1ce9245a3b7d55d95570" kindref="member">c</ref></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\t&apos;,killersMatrix(i,j));</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;\n\n&apos;);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>j;</highlight></codeline>
+<codeline lineno="272" refid="a00029_1ac862e7284527eb913b1351c8bfb8e079" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/><ref refid="a00027_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="273" refid="a00029_1a8e54ca14679a1ce9245a3b7d55d95570" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/><ref refid="a00027_1a8e54ca14679a1ce9245a3b7d55d95570" kindref="member">c</ref>;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;Catalysts\n\n&apos;);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:KCRows</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\t&apos;,<ref refid="a00029_1a1a42aaee01b2cc37a3835e0fe30cf9d3" kindref="member">killerCatalysts</ref>(i,1));</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\t&apos;,<ref refid="a00029_1a1a42aaee01b2cc37a3835e0fe30cf9d3" kindref="member">killerCatalysts</ref>(i,2));</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\n\n&apos;,<ref refid="a00029_1a1a42aaee01b2cc37a3835e0fe30cf9d3" kindref="member">killerCatalysts</ref>(i,3));</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;KILLERS<sp/>-<sp/>SPAMMERS\n\n&apos;);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1a67eb148eecfd241148ce3711f058ac2b" kindref="member">checkKSM</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(KSMatrix);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1a67eb148eecfd241148ce3711f058ac2b" kindref="member">checkKSM</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;No<sp/>killers-spammers<sp/>were<sp/>found<sp/>in<sp/>this<sp/>net\n\n&apos;);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[r<sp/>c]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(KSMatrix);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:r</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>j<sp/>=<sp/>1:c</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\t&apos;,KSMatrix(i,j));</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;\n\n&apos;);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>j;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>r;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>c;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;Catalysts\n\n&apos;);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:KSCRows</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\t&apos;,<ref refid="a00029_1a25c085d4378366ed81f0f97547802c8f" kindref="member">KSCatalysts</ref>(KSCRows,1));</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\t&apos;,<ref refid="a00029_1a25c085d4378366ed81f0f97547802c8f" kindref="member">KSCatalysts</ref>(KSCRows,2));</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\n\n&apos;,<ref refid="a00029_1a25c085d4378366ed81f0f97547802c8f" kindref="member">KSCatalysts</ref>(KSCRows,3));</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;SPAMMERS\n\n&apos;);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00029_1ae80cf4c5bf659247b45bbad5d22dec52" kindref="member">checkSM</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(SpammersMatrix);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00029_1ae80cf4c5bf659247b45bbad5d22dec52" kindref="member">checkSM</ref><sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;No<sp/>spammers<sp/>were<sp/>found<sp/>in<sp/>this<sp/>net\n\n&apos;);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[r<sp/>c]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(SpammersMatrix);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:r</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>j<sp/>=<sp/>1:c</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\t&apos;,SpammersMatrix(i,j));</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;\n\n&apos;);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>j;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>r;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>c;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;Catalysts\n\n&apos;);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:SCRows</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\t&apos;,<ref refid="a00029_1ae05cc2cc4068134bc594222869ef5918" kindref="member">spammerCatalysts</ref>(SCRows,1));</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\t&apos;,<ref refid="a00029_1ae05cc2cc4068134bc594222869ef5918" kindref="member">spammerCatalysts</ref>(SCRows,2));</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\n\n&apos;,<ref refid="a00029_1ae05cc2cc4068134bc594222869ef5918" kindref="member">spammerCatalysts</ref>(SCRows,3));</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(&apos;../&apos;);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="333"><highlight class="normal">cd(<ref refid="a00023_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref>);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m"/>
+  </compounddef>
+</doxygen>

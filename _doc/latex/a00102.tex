@@ -1,0 +1,1218 @@
+\hypertarget{a00102}{\section{acs\-S\-C\-Canalysis Namespace Reference}
+\label{a00102}\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{a00102_ab46df2a2027edcf1b07fc012b691b9d6}{zero\-Before\-Str\-Num}
+\item 
+def \hyperlink{a00102_a4c179674ced261fa5a003a679647d7f3}{load\-Reaction\-Graph}
+\item 
+def \hyperlink{a00102_a7517a12f1c90a0ae0e997161079676bd}{load\-Specific\-Reaction\-Graph}
+\item 
+def \hyperlink{a00102_ab9d3c9c8514469b4dea42d8caacb3937}{load\-Specific\-Reaction\-Sub\-Graph}
+\item 
+def \hyperlink{a00102_abf8df0ca8eb1c3ae9aeb0b20813d93d2}{save\-Graph\-To\-File}
+\item 
+def \hyperlink{a00102_a5c959ea7dd3d2bd42004f1e5fd41f249}{save\-Graph\-S\-U\-B\-To\-File}
+\item 
+def \hyperlink{a00102_a541e9f38936fdf58fde0869521fdc5fc}{save\-Nrg\-To\-File}
+\item 
+def \hyperlink{a00102_ae6d4582e548a062fb38bf6aaa62e1558}{save\-Gill\-To\-File}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{a00102_af8add8b37a9c8a7825c0e8f0e7dfd6c1}{Str\-Path} = os.\-path.\-abspath(Str\-Path)
+\item 
+tuple \hyperlink{a00102_a5498b0a6851ae4d3b2c3035093564e47}{today} = dt.\-date.\-today()
+\item 
+tuple \hyperlink{a00102_a2abf09620dd1dd990036c67c626b3dee}{mswindows} = (sys.\-platform == \char`\"{}win32\char`\"{})
+\item 
+string \hyperlink{a00102_a32551f85ad3cd8080b8ad81828276368}{cmd\-File\-Name} = \hyperlink{a00102_af8add8b37a9c8a7825c0e8f0e7dfd6c1}{Str\-Path}+'/'
+\item 
+tuple \hyperlink{a00102_a0a501feb02e67bd6a8ba75490709cf89}{cmd\-File\-Fid} = open(\hyperlink{a00102_a32551f85ad3cd8080b8ad81828276368}{cmd\-File\-Name}, '\hyperlink{a00035_a2ffdbad9ea59541e59cbd2b938e0770c}{a}')
+\item 
+string \hyperlink{a00102_a1966f0657c6b477eeb60bde732a201cc}{str\-To\-Write} = \char`\"{}\textbackslash{}t\-Reaction Probability\char`\"{}
+\item 
+int \hyperlink{a00102_ac6ad18bfc83e8ea3254897d46f990855}{initilize\-Graph\-Structure} = 0
+\item 
+tuple \hyperlink{a00102_ab45392da38059bf7557c22cbc73e5580}{graph} = \hyperlink{a00102_a7517a12f1c90a0ae0e997161079676bd}{load\-Specific\-Reaction\-Graph}()
+\item 
+tuple \hyperlink{a00102_ae307841da4a073fad4f6eaa172b0b970}{graph\-S\-U\-B} = \hyperlink{a00102_ab9d3c9c8514469b4dea42d8caacb3937}{load\-Specific\-Reaction\-Sub\-Graph}()
+\item 
+tuple \hyperlink{a00102_add910e17b3f1fe61cdbaf8ce60ec0e20}{tmp\-Rct\-File\-To\-Load\-Split\-String} = \hyperlink{a00076_a4d1aa74fac80ae0275c056575fdb6626}{tmp\-Rct\-File\-To\-Load.\-split}(\char`\"{}\-\_\-\char`\"{})
+\item 
+tuple \hyperlink{a00102_a212643643fc6b002e8797f16633bb16d}{init\-Rct\-Id} = int(\hyperlink{a00102_add910e17b3f1fe61cdbaf8ce60ec0e20}{tmp\-Rct\-File\-To\-Load\-Split\-String}\mbox{[}len(\hyperlink{a00102_add910e17b3f1fe61cdbaf8ce60ec0e20}{tmp\-Rct\-File\-To\-Load\-Split\-String})-\/2\mbox{]})
+\item 
+list \hyperlink{a00102_adc4403c4cfe080918c8b9da692c50509}{init\-Temp\-Time} = \hyperlink{a00102_add910e17b3f1fe61cdbaf8ce60ec0e20}{tmp\-Rct\-File\-To\-Load\-Split\-String}\mbox{[}len(\hyperlink{a00102_add910e17b3f1fe61cdbaf8ce60ec0e20}{tmp\-Rct\-File\-To\-Load\-Split\-String})-\/1\mbox{]}
+\item 
+tuple \hyperlink{a00102_a826c1b0585b4e8474c76f92bd7583836}{init\-Time} = float(\hyperlink{a00102_adc4403c4cfe080918c8b9da692c50509}{init\-Temp\-Time}\mbox{[}0\-:len(\hyperlink{a00102_adc4403c4cfe080918c8b9da692c50509}{init\-Temp\-Time})-\/4\mbox{]})
+\item 
+tuple \hyperlink{a00102_ace4c571efd2e5ecd266ce5701f761a83}{tmp\-Dirs} = sort(os.\-listdir(\hyperlink{a00102_af8add8b37a9c8a7825c0e8f0e7dfd6c1}{Str\-Path}))
+\item 
+tuple \hyperlink{a00102_a5903034df3d32525785e697152efbeb3}{tot\-Dir\-Name} = os.\-path.\-join(\hyperlink{a00102_af8add8b37a9c8a7825c0e8f0e7dfd6c1}{Str\-Path},tmp\-Dir)
+\item 
+tuple \hyperlink{a00102_a9ededb3cd7c63befde39ad68e5f9e006}{res\-Dir\-Path} = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))
+\item 
+tuple \hyperlink{a00102_a9a81829f850e2e125e3c94214da7a1f0}{number\-Of\-Gen} = len(glob.\-glob(os.\-path.\-join(\hyperlink{a00102_a9ededb3cd7c63befde39ad68e5f9e006}{res\-Dir\-Path},'times\-\_\-$\ast$')))
+\item 
+tuple \hyperlink{a00102_a8ba6aefb71b3d1e575eac38627f143d6}{str\-Zeros} = \hyperlink{a00102_ab46df2a2027edcf1b07fc012b691b9d6}{zero\-Before\-Str\-Num}(n\-Gen, \hyperlink{a00102_a9a81829f850e2e125e3c94214da7a1f0}{number\-Of\-Gen})
+\item 
+string \hyperlink{a00102_a7160f8e48b4aafebbd75e9037fc9fef7}{param\-File} = \char`\"{}acsm2s.\-conf\char`\"{}
+\item 
+int \hyperlink{a00102_a58095f64afeda893517e81226e1963c3}{sim\-Folder} = 0
+\item 
+tuple \hyperlink{a00102_a424e2204e89264a827e6cad861ebcbc1}{fid} = open(\hyperlink{a00102_a7160f8e48b4aafebbd75e9037fc9fef7}{param\-File}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+tuple \hyperlink{a00102_a072631e11db72789389935b0f9efff8d}{str\-Line} = \hyperlink{a00076_a4d1aa74fac80ae0275c056575fdb6626}{line.\-split}('=')
+\item 
+tuple \hyperlink{a00102_a98150f532e09ebae495212500d2f1799}{rp} = float(\hyperlink{a00102_a072631e11db72789389935b0f9efff8d}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{a00102_a80a6d3cf3f4ccdc596054300761972a9}{decay\-Time} = int(\hyperlink{a00102_a072631e11db72789389935b0f9efff8d}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{a00102_a20df40e09bc9514382d71f15783c7856}{tot\-Times} = int(\hyperlink{a00102_a072631e11db72789389935b0f9efff8d}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{a00102_a0d0c83fd90489be59b1f5a31dadf4469}{nrg\-Type} = int(\hyperlink{a00102_a072631e11db72789389935b0f9efff8d}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{a00102_a9f0e87ff21f3597668f5ad076224da87}{total\-Rcts} = int(\hyperlink{a00102_a072631e11db72789389935b0f9efff8d}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{a00102_a24d5f5a61d56c596017396ad272ef4a4}{nrg\-Conc} = float(\hyperlink{a00102_a072631e11db72789389935b0f9efff8d}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{a00102_a3a8adee26325d72aca909e91b0fd3ea5}{influx\-\_\-rate} = float(\hyperlink{a00102_a072631e11db72789389935b0f9efff8d}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+tuple \hyperlink{a00102_a47da7b9153a0e4a33512f6d2675b8c1a}{max\-L\-Out} = float(\hyperlink{a00102_a072631e11db72789389935b0f9efff8d}{str\-Line}\mbox{[}1\mbox{]})
+\item 
+int \hyperlink{a00102_a46f1fb71bdcdb1c8679ae847d0d4b63f}{\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-\_\-} = \hyperlink{a00102_a20df40e09bc9514382d71f15783c7856}{tot\-Times}/10
+\item 
+int \hyperlink{a00102_a7665e828ed7f27f4ba353e9645ad716d}{\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-N\-O\-S\-A\-V\-E\-\_\-} = \hyperlink{a00102_a20df40e09bc9514382d71f15783c7856}{tot\-Times}/100
+\item 
+int \hyperlink{a00102_a948683f966c62ac856582281c3cda1f4}{nrg} = 1
+\item 
+tuple \hyperlink{a00102_a36f6b63269e716f42cd38a36a781a4cf}{species\-In\-Flux} = range(0,int(pow(2,(\hyperlink{a00102_a47da7b9153a0e4a33512f6d2675b8c1a}{max\-L\-Out}+1)) -\/ 2))
+\item 
+tuple \hyperlink{a00102_a0c40e4d9928e8df792b31c7a431d3fba}{fidflux} = open('\-\_\-acsinflux.\-csv', '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+tuple \hyperlink{a00102_a12e61f8d7aadb52256a7728af342bae3}{over\-Threshold} = float(0)
+\item 
+tuple \hyperlink{a00102_a93de20dd9ebf791127ac5aefc0a2df8d}{over\-Threshold\-T\-O\-T} = float(0)
+\item 
+string \hyperlink{a00102_a141356fc914110fdf3ec4f0fc3beaab5}{tmp\-Files\-To\-Search} = 'species\-\_\-'
+\item 
+tuple \hyperlink{a00102_a4f47408478e9a0590d016df50cf42141}{species\-Files} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00102_a9ededb3cd7c63befde39ad68e5f9e006}{res\-Dir\-Path},\hyperlink{a00102_a141356fc914110fdf3ec4f0fc3beaab5}{tmp\-Files\-To\-Search})))
+\item 
+list \hyperlink{a00102_a1d066fa24dced2da12ffd9a8514a17ba}{species\-File} = \hyperlink{a00102_a4f47408478e9a0590d016df50cf42141}{species\-Files}\mbox{[}-\/1\mbox{]}
+\item 
+tuple \hyperlink{a00102_aba2f982879776e057b35971b3653549e}{fid\-Species} = open(\hyperlink{a00102_a1d066fa24dced2da12ffd9a8514a17ba}{species\-File}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+int \hyperlink{a00102_a9ce833d782f17d858941cfa76914599a}{ok} = 0
+\item 
+list \hyperlink{a00102_a578f0f0f1e87579d73b11f8720610b1e}{I\-Ds\-Over\-Threshold} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{a00102_a1681853ab5f5859e51f219caa07a8539}{conc\-Vec} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{a00102_aaac3bb67a998c4a09aeed8f1adec2f9c}{index} = int(tmp\-I\-D)
+\item 
+tuple \hyperlink{a00102_a6ec435b19c74f79f32a0eae7bb2bd1c8}{conc} = float(tmp\-Conc)
+\item 
+tuple \hyperlink{a00102_a06673ec4592e44a89a443073b8a29011}{cpx\-Cut} = int(tmp\-Cpx\-Cut)
+\item 
+tuple \hyperlink{a00102_a98baad82b74a27e8b8c58aa985b7d374}{age} = float(tmp\-Age)
+\item 
+\hyperlink{a00102_a1c9b45f6074222ace96b7ab38cb8e23b}{real\-T} = \hyperlink{a00036_aa022cbb28f80299d572def08e7a5ccfd}{threshold}
+\item 
+string \hyperlink{a00102_a1cbfd083273176eebfe0260e8384acef}{folder\-Cat} = '\-\_\-\-\_\-0\-\_\-i\-Graph\-\_\-\-C\-A\-T\-\_\-'
+\item 
+string \hyperlink{a00102_a90c2bcabbdb271c2c3347ebea4c259bc}{folder\-Sub} = '\-\_\-\-\_\-0\-\_\-i\-Graph\-\_\-\-S\-U\-B\-\_\-'
+\item 
+tuple \hyperlink{a00102_a440179ca1c764cabcf9181985ae5dfb8}{newdir} = os.\-path.\-join(os.\-curdir, \hyperlink{a00102_a1cbfd083273176eebfe0260e8384acef}{folder\-Cat})
+\item 
+tuple \hyperlink{a00102_adb3b62d0896774bc87adfee19d047aa8}{newdir\-S\-U\-B} = os.\-path.\-join(os.\-curdir, \hyperlink{a00102_a90c2bcabbdb271c2c3347ebea4c259bc}{folder\-Sub})
+\item 
+string \hyperlink{a00102_a60ff937c050eef601bd84134d1913d8a}{filext\-Pre} = '\-\_\-'
+\item 
+string \hyperlink{a00102_aff5ea475bb2c78122a231a915dc88e89}{rct\-Param\-File\-Q} = 'reactions\-\_\-parameters\-\_\-'
+\item 
+tuple \hyperlink{a00102_ac700504fc38d7684ec9fae104d7d90a3}{rct\-Param\-File} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00102_a9ededb3cd7c63befde39ad68e5f9e006}{res\-Dir\-Path},\hyperlink{a00102_aff5ea475bb2c78122a231a915dc88e89}{rct\-Param\-File\-Q})))
+\item 
+float \hyperlink{a00102_a8a780c7762bc8a40f296abfd474b7ce4}{rct\-I\-Dshow} = 1.\-0
+\item 
+float \hyperlink{a00102_a3942b0b71d5893c244f7f49929db336b}{rct\-I\-Dshow\-No\-Save} = 1.\-0
+\item 
+\hyperlink{a00102_a78ffc7d3b69c53ec5389a151e7fdcb83}{rct\-I\-D} = \hyperlink{a00102_a212643643fc6b002e8797f16633bb16d}{init\-Rct\-Id}
+\item 
+int \hyperlink{a00102_aff96a31e98ac46cb47a67b74f5d87351}{previous\-Time} = 0
+\item 
+int \hyperlink{a00102_a20a51ec68106a5a97fb3a72f417ca4e6}{endo\-\_\-condensation\-\_\-counter} = 0
+\item 
+int \hyperlink{a00102_a144441bdbe6e835849cf165ea2946848}{condensation\-\_\-counter} = 0
+\item 
+int \hyperlink{a00102_af5702a39b502da88dde8c38417a0efbd}{endo\-\_\-cleavage\-\_\-counter} = 0
+\item 
+int \hyperlink{a00102_a0dd6730b063ac11ae4620c4a0778f6d9}{cleavage\-\_\-counter} = 0
+\item 
+tuple \hyperlink{a00102_ad4d4abc783f2f7f8d1084b1144b4fe2f}{nrg\-Time\-Series} = np.\-array(\mbox{[}\mbox{[}0,0,0\mbox{]}\mbox{]})
+\item 
+tuple \hyperlink{a00102_a99669fe823cebc560b46c3746f9183e7}{gill\-Time\-Series} = np.\-array(\mbox{[}\mbox{[}0,0,0,0\mbox{]}\mbox{]})
+\item 
+int \hyperlink{a00102_a6e8aff976901d1424dd1ff00c3387014}{tmp\-Flag\-Last\-Rct\-Saved} = 0
+\item 
+tuple \hyperlink{a00102_a58c3618ec28f27dfbf09e0d3aba05bc7}{reaction} = int(tmp\-Reaction)
+\item 
+tuple \hyperlink{a00102_a162a08b0497058c76e7e885c03a01336}{rtime} = float(tmp\-Time)
+\item 
+tuple \hyperlink{a00102_a67fcb77a15f51e94c98bb48b05865715}{cc} = int(tmpcc)
+\item 
+tuple \hyperlink{a00102_aea872e34fe0da6302f6195f1b2315148}{cat} = int(tmp\-Cat)
+\item 
+tuple \hyperlink{a00102_ae13d6607ffa236891a9af05bfa88cfcc}{mol\-\_\-\-I} = int(tmp\-Mol\-\_\-\-I)
+\item 
+tuple \hyperlink{a00102_a8f2878f5909e4aeb9155a1103eaba413}{mol\-\_\-\-I\-I} = int(tmp\-Mol\-\_\-\-I\-I)
+\item 
+tuple \hyperlink{a00102_a20047e8516f386a7e98ffa0efec09471}{mol\-\_\-\-I\-I\-I} = int(tmp\-Mol\-\_\-\-I\-I\-I)
+\item 
+tuple \hyperlink{a00102_abe83f5e0ae3bd65da15a697a979aeea1}{loaded\-Mols\-Conc} = float(tmp\-Loaded\-Mols\-Conc)
+\item 
+tuple \hyperlink{a00102_ab4566d46d368eb4f93ff6db5191648bd}{loaded\-Mols} = int(tmp\-Loaded\-Mols)
+\item 
+tuple \hyperlink{a00102_a4e862896701636d17752f14810ff687f}{gill\-Mean} = float(tmp\-Gill\-Mean)
+\item 
+tuple \hyperlink{a00102_acdb3e72aea08c29494799fd08763b406}{gill\-S\-D} = float(tmp\-Gill\-S\-D)
+\item 
+tuple \hyperlink{a00102_a4c214eb4f6812d6182bae32715bce3ad}{gill\-Entropy} = float(tmp\-Gill\-Entropy)
+\item 
+tuple \hyperlink{a00102_a47b24df6e487f6dd90158dde93cc7c93}{new\-Species\-Creation\-Prob} = float(tmp\-N\-S\-Cprob)
+\item 
+tuple \hyperlink{a00102_aa7db2dba66810044f9c5238eccc995b7}{reverse\-Probability} = float(tmp\-Rev\-Prob)
+\item 
+int \hyperlink{a00102_a3de1ee32e24403b152d565d8c52cf7fd}{print\-Temporal\-Message} = 1
+\item 
+\hyperlink{a00102_a7d0f86310c439e970e0b41121364027c}{time\-Interval} = \hyperlink{a00102_a162a08b0497058c76e7e885c03a01336}{rtime}-\/\hyperlink{a00102_aff96a31e98ac46cb47a67b74f5d87351}{previous\-Time}
+\item 
+tuple \hyperlink{a00102_ac09e85f8df5b7c8c7d2caf87e9193421}{position} = ((\hyperlink{a00102_ab45392da38059bf7557c22cbc73e5580}{graph}\mbox{[}\-:,0\mbox{]} == \hyperlink{a00102_aea872e34fe0da6302f6195f1b2315148}{cat}) \& (\hyperlink{a00102_ab45392da38059bf7557c22cbc73e5580}{graph}\mbox{[}\-:,1\mbox{]} == \hyperlink{a00102_ae13d6607ffa236891a9af05bfa88cfcc}{mol\-\_\-\-I}))
+\item 
+int \hyperlink{a00102_ac6aaa0ac5d13b0736ab3179dc1ed388d}{real\-Sccs} = 0
+\item 
+tuple \hyperlink{a00102_ad88c3dd8eb89ddbe8720462b03f35003}{Gcatpro} = nx.\-Di\-Graph()
+\item 
+tuple \hyperlink{a00102_a2094b7f0917a16a948a2d1c4d700e84c}{scc} = nx.\-strongly\-\_\-connected\-\_\-components(\hyperlink{a00102_ad88c3dd8eb89ddbe8720462b03f35003}{Gcatpro})
+\item 
+tuple \hyperlink{a00102_a185cbf8ef1ec67f52695562582418793}{scc\-N} = nx.\-number\-\_\-strongly\-\_\-connected\-\_\-components(\hyperlink{a00102_ad88c3dd8eb89ddbe8720462b03f35003}{Gcatpro})
+\item 
+tuple \hyperlink{a00102_a8fec45ae9b70981ce94eaeed14d888b1}{self\-Loops} = Gcatpro.\-number\-\_\-of\-\_\-selfloops()
+\item 
+tuple \hyperlink{a00102_ad34596e89eef2cfb696f61a810765c7a}{self\-Loops\-Egdes} = Gcatpro.\-selfloop\-\_\-edges()
+\item 
+int \hyperlink{a00102_adbc76b0558ceb74d798b35146a583474}{prod\-\_\-in\-S\-C\-C} = 0
+\item 
+int \hyperlink{a00102_ab307c6047e4d16ec0335266b24e7db5a}{prod\-\_\-chain} = 0
+\item 
+int \hyperlink{a00102_abb2ac92624837ae48b882d145c5aab11}{prod\-\_\-by\-S\-C\-C} = 0
+\item 
+int \hyperlink{a00102_a213e964195f0666d00663ca874a09caa}{prod\-\_\-overlap} = 0
+\item 
+int \hyperlink{a00102_a1dd3c43841ba4485a66889600f099a0c}{scc\-I\-D} = 0
+\item 
+int \hyperlink{a00102_a70ccd5d519e878c6c8a7d0aa73caf46c}{autocatalysis} = 0
+\item 
+int \hyperlink{a00102_aa22adccedd9ae548d0687df507ebd92d}{prod\-\_\-in\-S\-C\-C\-\_\-weight} = 0
+\item 
+int \hyperlink{a00102_a6736365f1f19058f6e1d57287383dbcc}{prod\-\_\-chain\-\_\-weight} = 0
+\item 
+int \hyperlink{a00102_a5f45dbe461b3b18021c93780e87cc40e}{prod\-\_\-by\-S\-C\-C\-\_\-weight} = 0
+\item 
+int \hyperlink{a00102_ab78b07d6cd1a94356c4fee43dfc1272a}{prod\-\_\-overlap\-\_\-weight} = 0
+\item 
+int \hyperlink{a00102_ae9790fbc87f233c94224436a9cbd59c1}{self\-\_\-loop\-\_\-weight} = 0
+\item 
+int \hyperlink{a00102_a3fcb8f9c7e88b5c53f1201a383b38666}{conc\-\_\-in\-S\-C\-C} = 0
+\item 
+int \hyperlink{a00102_a3188cc39362e42ecb36d23a98f2b5a78}{conc\-\_\-chain} = 0
+\item 
+int \hyperlink{a00102_aac2f508d526d62bd7f9d4f5a5f8b1821}{conc\-\_\-by\-S\-C\-C} = 0
+\item 
+int \hyperlink{a00102_afd3169174539244248b78c8da2bba265}{conc\-\_\-over\-Lap} = 0
+\item 
+int \hyperlink{a00102_a9e8cc07f7d7f892f3f72274318dcbcef}{conc\-\_\-self\-Cat} = 0
+\item 
+int \hyperlink{a00102_ace0de61f3c6aa14b4197156be3a68280}{waste\-Species} = 0
+\item 
+int \hyperlink{a00102_a38f20e6b1cad6a61f1c9b87b37c76f63}{already\-Added\-\_\-\-A\-C\-S} = 0
+\item 
+int \hyperlink{a00102_ac842390795cf193351c795945cde8e77}{already\-Added\-\_\-leaves} = 0
+\item 
+int \hyperlink{a00102_ac1b286545469555eb284f9b5f2bd984f}{already\-Added\-\_\-chain} = 0
+\item 
+int \hyperlink{a00102_aee6b4f50387d471b70458cf703c0863b}{tmp\-Prod\-\_\-chain} = 0
+\item 
+tuple \hyperlink{a00102_a540ba5319ee67d8a2323099dad73ba36}{incoming\-Nodes} = Gcatpro.\-predecessors(Ids\-O\-T)
+\item 
+int \hyperlink{a00102_aaf17c99825e0961e4cfaa173ddfffe84}{temp\-Prod\-\_\-chain\-\_\-weight} = 0
+\item 
+int \hyperlink{a00102_a4766b3ca835449f1aa287fda699c7f96}{no\-In\-Acs} = 1
+\item 
+int \hyperlink{a00102_a6405b6b05e7b87812422cc30d2034904}{in\-S\-C\-C\-Flag} = 0
+\item 
+list \hyperlink{a00102_a5162bfbe5eb2618736d1f77bb3125a9b}{weight\-To\-Distribute} = \hyperlink{a00102_ab45392da38059bf7557c22cbc73e5580}{graph}\mbox{[}((\hyperlink{a00102_ab45392da38059bf7557c22cbc73e5580}{graph}\mbox{[}\-:,0\mbox{]} == sng\-In\-Node) \& (\hyperlink{a00102_ab45392da38059bf7557c22cbc73e5580}{graph}\mbox{[}\-:,1\mbox{]} == Ids\-O\-T)),5\mbox{]}
+\item 
+tuple \hyperlink{a00102_a5004d18b8cfa2803620a9cd7f32d9775}{in\-Degree\-Mean} = mean(Gcatpro.\-in\-\_\-degree().values())
+\item 
+tuple \hyperlink{a00102_af10c3623be709892f4bdc4df5a3d52b0}{mean\-Over\-Threshold} = float(\hyperlink{a00102_a12e61f8d7aadb52256a7728af342bae3}{over\-Threshold})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00102_a4c179674ced261fa5a003a679647d7f3}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!load\-Reaction\-Graph@{load\-Reaction\-Graph}}
+\index{load\-Reaction\-Graph@{load\-Reaction\-Graph}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{load\-Reaction\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-S\-C\-Canalysis.\-load\-Reaction\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00102_a4c179674ced261fa5a003a679647d7f3}
+
+
+Definition at line 31 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a7517a12f1c90a0ae0e997161079676bd}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!load\-Specific\-Reaction\-Graph@{load\-Specific\-Reaction\-Graph}}
+\index{load\-Specific\-Reaction\-Graph@{load\-Specific\-Reaction\-Graph}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{load\-Specific\-Reaction\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-S\-C\-Canalysis.\-load\-Specific\-Reaction\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00102_a7517a12f1c90a0ae0e997161079676bd}
+
+
+Definition at line 64 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ab9d3c9c8514469b4dea42d8caacb3937}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!load\-Specific\-Reaction\-Sub\-Graph@{load\-Specific\-Reaction\-Sub\-Graph}}
+\index{load\-Specific\-Reaction\-Sub\-Graph@{load\-Specific\-Reaction\-Sub\-Graph}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{load\-Specific\-Reaction\-Sub\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-S\-C\-Canalysis.\-load\-Specific\-Reaction\-Sub\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00102_ab9d3c9c8514469b4dea42d8caacb3937}
+
+
+Definition at line 93 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ae6d4582e548a062fb38bf6aaa62e1558}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!save\-Gill\-To\-File@{save\-Gill\-To\-File}}
+\index{save\-Gill\-To\-File@{save\-Gill\-To\-File}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{save\-Gill\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-S\-C\-Canalysis.\-save\-Gill\-To\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00102_ae6d4582e548a062fb38bf6aaa62e1558}
+
+
+Definition at line 154 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a5c959ea7dd3d2bd42004f1e5fd41f249}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!save\-Graph\-S\-U\-B\-To\-File@{save\-Graph\-S\-U\-B\-To\-File}}
+\index{save\-Graph\-S\-U\-B\-To\-File@{save\-Graph\-S\-U\-B\-To\-File}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{save\-Graph\-S\-U\-B\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-S\-C\-Canalysis.\-save\-Graph\-S\-U\-B\-To\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00102_a5c959ea7dd3d2bd42004f1e5fd41f249}
+
+
+Definition at line 133 of file acs\-S\-C\-Canalysis.\-py.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00102_a5c959ea7dd3d2bd42004f1e5fd41f249_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00102_abf8df0ca8eb1c3ae9aeb0b20813d93d2}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!save\-Graph\-To\-File@{save\-Graph\-To\-File}}
+\index{save\-Graph\-To\-File@{save\-Graph\-To\-File}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{save\-Graph\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-S\-C\-Canalysis.\-save\-Graph\-To\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00102_abf8df0ca8eb1c3ae9aeb0b20813d93d2}
+
+
+Definition at line 122 of file acs\-S\-C\-Canalysis.\-py.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00102_abf8df0ca8eb1c3ae9aeb0b20813d93d2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00102_a541e9f38936fdf58fde0869521fdc5fc}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!save\-Nrg\-To\-File@{save\-Nrg\-To\-File}}
+\index{save\-Nrg\-To\-File@{save\-Nrg\-To\-File}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{save\-Nrg\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-S\-C\-Canalysis.\-save\-Nrg\-To\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{a00102_a541e9f38936fdf58fde0869521fdc5fc}
+
+
+Definition at line 144 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ab46df2a2027edcf1b07fc012b691b9d6}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}}
+\index{zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{zero\-Before\-Str\-Num}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-S\-C\-Canalysis.\-zero\-Before\-Str\-Num (
+\begin{DoxyParamCaption}
+\item[{}]{tmpl, }
+\item[{}]{tmp\-L}
+\end{DoxyParamCaption}
+)}}\label{a00102_ab46df2a2027edcf1b07fc012b691b9d6}
+
+
+Definition at line 22 of file acs\-S\-C\-Canalysis.\-py.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00102_ab46df2a2027edcf1b07fc012b691b9d6_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00102_a46f1fb71bdcdb1c8679ae847d0d4b63f}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-\_\-@{\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-\_\-}}
+\index{\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-\_\-@{\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-\_\-}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-\_\- = {\bf tot\-Times}/10}}\label{a00102_a46f1fb71bdcdb1c8679ae847d0d4b63f}
+
+
+Definition at line 269 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a7665e828ed7f27f4ba353e9645ad716d}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-N\-O\-S\-A\-V\-E\-\_\-@{\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-N\-O\-S\-A\-V\-E\-\_\-}}
+\index{\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-N\-O\-S\-A\-V\-E\-\_\-@{\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-N\-O\-S\-A\-V\-E\-\_\-}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-N\-O\-S\-A\-V\-E\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-\_\-\-A\-N\-A\-L\-T\-I\-M\-E\-I\-N\-T\-E\-R\-A\-V\-A\-L\-N\-O\-S\-A\-V\-E\-\_\- = {\bf tot\-Times}/100}}\label{a00102_a7665e828ed7f27f4ba353e9645ad716d}
+
+
+Definition at line 270 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a98baad82b74a27e8b8c58aa985b7d374}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!age@{age}}
+\index{age@{age}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{age}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-age = float(tmp\-Age)}}\label{a00102_a98baad82b74a27e8b8c58aa985b7d374}
+
+
+Definition at line 329 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a38f20e6b1cad6a61f1c9b87b37c76f63}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!already\-Added\-\_\-\-A\-C\-S@{already\-Added\-\_\-\-A\-C\-S}}
+\index{already\-Added\-\_\-\-A\-C\-S@{already\-Added\-\_\-\-A\-C\-S}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{already\-Added\-\_\-\-A\-C\-S}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-already\-Added\-\_\-\-A\-C\-S = 0}}\label{a00102_a38f20e6b1cad6a61f1c9b87b37c76f63}
+
+
+Definition at line 600 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ac1b286545469555eb284f9b5f2bd984f}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!already\-Added\-\_\-chain@{already\-Added\-\_\-chain}}
+\index{already\-Added\-\_\-chain@{already\-Added\-\_\-chain}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{already\-Added\-\_\-chain}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-already\-Added\-\_\-chain = 0}}\label{a00102_ac1b286545469555eb284f9b5f2bd984f}
+
+
+Definition at line 602 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ac842390795cf193351c795945cde8e77}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!already\-Added\-\_\-leaves@{already\-Added\-\_\-leaves}}
+\index{already\-Added\-\_\-leaves@{already\-Added\-\_\-leaves}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{already\-Added\-\_\-leaves}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-already\-Added\-\_\-leaves = 0}}\label{a00102_ac842390795cf193351c795945cde8e77}
+
+
+Definition at line 601 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a70ccd5d519e878c6c8a7d0aa73caf46c}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!autocatalysis@{autocatalysis}}
+\index{autocatalysis@{autocatalysis}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{autocatalysis}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-autocatalysis = 0}}\label{a00102_a70ccd5d519e878c6c8a7d0aa73caf46c}
+
+
+Definition at line 573 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_aea872e34fe0da6302f6195f1b2315148}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!cat@{cat}}
+\index{cat@{cat}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{cat}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-cat = int(tmp\-Cat)}}\label{a00102_aea872e34fe0da6302f6195f1b2315148}
+
+
+Definition at line 411 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a67fcb77a15f51e94c98bb48b05865715}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!cc@{cc}}
+\index{cc@{cc}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{cc}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-cc = int(tmpcc)}}\label{a00102_a67fcb77a15f51e94c98bb48b05865715}
+
+
+Definition at line 410 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a0dd6730b063ac11ae4620c4a0778f6d9}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!cleavage\-\_\-counter@{cleavage\-\_\-counter}}
+\index{cleavage\-\_\-counter@{cleavage\-\_\-counter}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{cleavage\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-cleavage\-\_\-counter = 0}}\label{a00102_a0dd6730b063ac11ae4620c4a0778f6d9}
+
+
+Definition at line 392 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a0a501feb02e67bd6a8ba75490709cf89}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!cmd\-File\-Fid@{cmd\-File\-Fid}}
+\index{cmd\-File\-Fid@{cmd\-File\-Fid}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{cmd\-File\-Fid}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-cmd\-File\-Fid = open({\bf cmd\-File\-Name}, '{\bf a}')}}\label{a00102_a0a501feb02e67bd6a8ba75490709cf89}
+
+
+Definition at line 185 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a32551f85ad3cd8080b8ad81828276368}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!cmd\-File\-Name@{cmd\-File\-Name}}
+\index{cmd\-File\-Name@{cmd\-File\-Name}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{cmd\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-S\-C\-Canalysis.\-cmd\-File\-Name = {\bf Str\-Path}+'/'}}\label{a00102_a32551f85ad3cd8080b8ad81828276368}
+
+
+Definition at line 182 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a6ec435b19c74f79f32a0eae7bb2bd1c8}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!conc@{conc}}
+\index{conc@{conc}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{conc}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-conc = float(tmp\-Conc)}}\label{a00102_a6ec435b19c74f79f32a0eae7bb2bd1c8}
+
+
+Definition at line 327 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_aac2f508d526d62bd7f9d4f5a5f8b1821}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!conc\-\_\-by\-S\-C\-C@{conc\-\_\-by\-S\-C\-C}}
+\index{conc\-\_\-by\-S\-C\-C@{conc\-\_\-by\-S\-C\-C}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{conc\-\_\-by\-S\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-conc\-\_\-by\-S\-C\-C = 0}}\label{a00102_aac2f508d526d62bd7f9d4f5a5f8b1821}
+
+
+Definition at line 581 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a3188cc39362e42ecb36d23a98f2b5a78}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!conc\-\_\-chain@{conc\-\_\-chain}}
+\index{conc\-\_\-chain@{conc\-\_\-chain}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{conc\-\_\-chain}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-conc\-\_\-chain = 0}}\label{a00102_a3188cc39362e42ecb36d23a98f2b5a78}
+
+
+Definition at line 580 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a3fcb8f9c7e88b5c53f1201a383b38666}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!conc\-\_\-in\-S\-C\-C@{conc\-\_\-in\-S\-C\-C}}
+\index{conc\-\_\-in\-S\-C\-C@{conc\-\_\-in\-S\-C\-C}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{conc\-\_\-in\-S\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-conc\-\_\-in\-S\-C\-C = 0}}\label{a00102_a3fcb8f9c7e88b5c53f1201a383b38666}
+
+
+Definition at line 579 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_afd3169174539244248b78c8da2bba265}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!conc\-\_\-over\-Lap@{conc\-\_\-over\-Lap}}
+\index{conc\-\_\-over\-Lap@{conc\-\_\-over\-Lap}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{conc\-\_\-over\-Lap}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-conc\-\_\-over\-Lap = 0}}\label{a00102_afd3169174539244248b78c8da2bba265}
+
+
+Definition at line 582 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a9e8cc07f7d7f892f3f72274318dcbcef}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!conc\-\_\-self\-Cat@{conc\-\_\-self\-Cat}}
+\index{conc\-\_\-self\-Cat@{conc\-\_\-self\-Cat}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{conc\-\_\-self\-Cat}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-conc\-\_\-self\-Cat = 0}}\label{a00102_a9e8cc07f7d7f892f3f72274318dcbcef}
+
+
+Definition at line 583 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a1681853ab5f5859e51f219caa07a8539}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!conc\-Vec@{conc\-Vec}}
+\index{conc\-Vec@{conc\-Vec}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{conc\-Vec}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-S\-C\-Canalysis.\-conc\-Vec = \mbox{[}$\,$\mbox{]}}}\label{a00102_a1681853ab5f5859e51f219caa07a8539}
+
+
+Definition at line 318 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a144441bdbe6e835849cf165ea2946848}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!condensation\-\_\-counter@{condensation\-\_\-counter}}
+\index{condensation\-\_\-counter@{condensation\-\_\-counter}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{condensation\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-condensation\-\_\-counter = 0}}\label{a00102_a144441bdbe6e835849cf165ea2946848}
+
+
+Definition at line 390 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a06673ec4592e44a89a443073b8a29011}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!cpx\-Cut@{cpx\-Cut}}
+\index{cpx\-Cut@{cpx\-Cut}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{cpx\-Cut}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-cpx\-Cut = int(tmp\-Cpx\-Cut)}}\label{a00102_a06673ec4592e44a89a443073b8a29011}
+
+
+Definition at line 328 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a80a6d3cf3f4ccdc596054300761972a9}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!decay\-Time@{decay\-Time}}
+\index{decay\-Time@{decay\-Time}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{decay\-Time}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-decay\-Time = int({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{a00102_a80a6d3cf3f4ccdc596054300761972a9}
+
+
+Definition at line 255 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_af5702a39b502da88dde8c38417a0efbd}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!endo\-\_\-cleavage\-\_\-counter@{endo\-\_\-cleavage\-\_\-counter}}
+\index{endo\-\_\-cleavage\-\_\-counter@{endo\-\_\-cleavage\-\_\-counter}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{endo\-\_\-cleavage\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-endo\-\_\-cleavage\-\_\-counter = 0}}\label{a00102_af5702a39b502da88dde8c38417a0efbd}
+
+
+Definition at line 391 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a20a51ec68106a5a97fb3a72f417ca4e6}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!endo\-\_\-condensation\-\_\-counter@{endo\-\_\-condensation\-\_\-counter}}
+\index{endo\-\_\-condensation\-\_\-counter@{endo\-\_\-condensation\-\_\-counter}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{endo\-\_\-condensation\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-endo\-\_\-condensation\-\_\-counter = 0}}\label{a00102_a20a51ec68106a5a97fb3a72f417ca4e6}
+
+
+Definition at line 389 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a424e2204e89264a827e6cad861ebcbc1}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!fid@{fid}}
+\index{fid@{fid}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{fid}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-fid = open({\bf param\-File}, '{\bf r}')}}\label{a00102_a424e2204e89264a827e6cad861ebcbc1}
+
+
+Definition at line 244 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a0c40e4d9928e8df792b31c7a431d3fba}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!fidflux@{fidflux}}
+\index{fidflux@{fidflux}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{fidflux}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-fidflux = open('\-\_\-acsinflux.\-csv', '{\bf r}')}}\label{a00102_a0c40e4d9928e8df792b31c7a431d3fba}
+
+
+Definition at line 285 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_aba2f982879776e057b35971b3653549e}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!fid\-Species@{fid\-Species}}
+\index{fid\-Species@{fid\-Species}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{fid\-Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-fid\-Species = open({\bf species\-File}, '{\bf r}')}}\label{a00102_aba2f982879776e057b35971b3653549e}
+
+
+Definition at line 311 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a60ff937c050eef601bd84134d1913d8a}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!filext\-Pre@{filext\-Pre}}
+\index{filext\-Pre@{filext\-Pre}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{filext\-Pre}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-S\-C\-Canalysis.\-filext\-Pre = '\-\_\-'}}\label{a00102_a60ff937c050eef601bd84134d1913d8a}
+
+
+Definition at line 376 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a1cbfd083273176eebfe0260e8384acef}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!folder\-Cat@{folder\-Cat}}
+\index{folder\-Cat@{folder\-Cat}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{folder\-Cat}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-S\-C\-Canalysis.\-folder\-Cat = '\-\_\-\-\_\-0\-\_\-i\-Graph\-\_\-\-C\-A\-T\-\_\-'}}\label{a00102_a1cbfd083273176eebfe0260e8384acef}
+
+
+Definition at line 348 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a90c2bcabbdb271c2c3347ebea4c259bc}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!folder\-Sub@{folder\-Sub}}
+\index{folder\-Sub@{folder\-Sub}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{folder\-Sub}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-S\-C\-Canalysis.\-folder\-Sub = '\-\_\-\-\_\-0\-\_\-i\-Graph\-\_\-\-S\-U\-B\-\_\-'}}\label{a00102_a90c2bcabbdb271c2c3347ebea4c259bc}
+
+
+Definition at line 349 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ad88c3dd8eb89ddbe8720462b03f35003}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!Gcatpro@{Gcatpro}}
+\index{Gcatpro@{Gcatpro}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{Gcatpro}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-Gcatpro = nx.\-Di\-Graph()}}\label{a00102_ad88c3dd8eb89ddbe8720462b03f35003}
+
+
+Definition at line 555 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a4c214eb4f6812d6182bae32715bce3ad}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!gill\-Entropy@{gill\-Entropy}}
+\index{gill\-Entropy@{gill\-Entropy}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{gill\-Entropy}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-gill\-Entropy = float(tmp\-Gill\-Entropy)}}\label{a00102_a4c214eb4f6812d6182bae32715bce3ad}
+
+
+Definition at line 419 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a4e862896701636d17752f14810ff687f}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!gill\-Mean@{gill\-Mean}}
+\index{gill\-Mean@{gill\-Mean}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{gill\-Mean}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-gill\-Mean = float(tmp\-Gill\-Mean)}}\label{a00102_a4e862896701636d17752f14810ff687f}
+
+
+Definition at line 417 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_acdb3e72aea08c29494799fd08763b406}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!gill\-S\-D@{gill\-S\-D}}
+\index{gill\-S\-D@{gill\-S\-D}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{gill\-S\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-gill\-S\-D = float(tmp\-Gill\-S\-D)}}\label{a00102_acdb3e72aea08c29494799fd08763b406}
+
+
+Definition at line 418 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a99669fe823cebc560b46c3746f9183e7}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!gill\-Time\-Series@{gill\-Time\-Series}}
+\index{gill\-Time\-Series@{gill\-Time\-Series}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{gill\-Time\-Series}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-gill\-Time\-Series = np.\-array(\mbox{[}\mbox{[}0,0,0,0\mbox{]}\mbox{]})}}\label{a00102_a99669fe823cebc560b46c3746f9183e7}
+
+
+Definition at line 399 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ab45392da38059bf7557c22cbc73e5580}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!graph@{graph}}
+\index{graph@{graph}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{graph}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-graph = {\bf load\-Specific\-Reaction\-Graph}()}}\label{a00102_ab45392da38059bf7557c22cbc73e5580}
+
+
+Definition at line 193 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ae307841da4a073fad4f6eaa172b0b970}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!graph\-S\-U\-B@{graph\-S\-U\-B}}
+\index{graph\-S\-U\-B@{graph\-S\-U\-B}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{graph\-S\-U\-B}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-graph\-S\-U\-B = {\bf load\-Specific\-Reaction\-Sub\-Graph}()}}\label{a00102_ae307841da4a073fad4f6eaa172b0b970}
+
+
+Definition at line 194 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a578f0f0f1e87579d73b11f8720610b1e}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!I\-Ds\-Over\-Threshold@{I\-Ds\-Over\-Threshold}}
+\index{I\-Ds\-Over\-Threshold@{I\-Ds\-Over\-Threshold}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{I\-Ds\-Over\-Threshold}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-S\-C\-Canalysis.\-I\-Ds\-Over\-Threshold = \mbox{[}$\,$\mbox{]}}}\label{a00102_a578f0f0f1e87579d73b11f8720610b1e}
+
+
+Definition at line 317 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a540ba5319ee67d8a2323099dad73ba36}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!incoming\-Nodes@{incoming\-Nodes}}
+\index{incoming\-Nodes@{incoming\-Nodes}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{incoming\-Nodes}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-incoming\-Nodes = Gcatpro.\-predecessors(Ids\-O\-T)}}\label{a00102_a540ba5319ee67d8a2323099dad73ba36}
+
+
+Definition at line 605 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a5004d18b8cfa2803620a9cd7f32d9775}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!in\-Degree\-Mean@{in\-Degree\-Mean}}
+\index{in\-Degree\-Mean@{in\-Degree\-Mean}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{in\-Degree\-Mean}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-in\-Degree\-Mean = mean(Gcatpro.\-in\-\_\-degree().values())}}\label{a00102_a5004d18b8cfa2803620a9cd7f32d9775}
+
+
+Definition at line 682 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_aaac3bb67a998c4a09aeed8f1adec2f9c}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!index@{index}}
+\index{index@{index}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-index = int(tmp\-I\-D)}}\label{a00102_aaac3bb67a998c4a09aeed8f1adec2f9c}
+
+
+Definition at line 326 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a3a8adee26325d72aca909e91b0fd3ea5}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!influx\-\_\-rate@{influx\-\_\-rate}}
+\index{influx\-\_\-rate@{influx\-\_\-rate}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{influx\-\_\-rate}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-influx\-\_\-rate = float({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{a00102_a3a8adee26325d72aca909e91b0fd3ea5}
+
+
+Definition at line 264 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ac6ad18bfc83e8ea3254897d46f990855}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!initilize\-Graph\-Structure@{initilize\-Graph\-Structure}}
+\index{initilize\-Graph\-Structure@{initilize\-Graph\-Structure}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{initilize\-Graph\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-initilize\-Graph\-Structure = 0}}\label{a00102_ac6ad18bfc83e8ea3254897d46f990855}
+
+
+Definition at line 189 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a212643643fc6b002e8797f16633bb16d}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!init\-Rct\-Id@{init\-Rct\-Id}}
+\index{init\-Rct\-Id@{init\-Rct\-Id}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{init\-Rct\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-init\-Rct\-Id = int({\bf tmp\-Rct\-File\-To\-Load\-Split\-String}\mbox{[}len({\bf tmp\-Rct\-File\-To\-Load\-Split\-String})-\/2\mbox{]})}}\label{a00102_a212643643fc6b002e8797f16633bb16d}
+
+
+Definition at line 198 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_adc4403c4cfe080918c8b9da692c50509}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!init\-Temp\-Time@{init\-Temp\-Time}}
+\index{init\-Temp\-Time@{init\-Temp\-Time}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{init\-Temp\-Time}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-S\-C\-Canalysis.\-init\-Temp\-Time = {\bf tmp\-Rct\-File\-To\-Load\-Split\-String}\mbox{[}len({\bf tmp\-Rct\-File\-To\-Load\-Split\-String})-\/1\mbox{]}}}\label{a00102_adc4403c4cfe080918c8b9da692c50509}
+
+
+Definition at line 199 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a826c1b0585b4e8474c76f92bd7583836}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!init\-Time@{init\-Time}}
+\index{init\-Time@{init\-Time}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{init\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-init\-Time = float({\bf init\-Temp\-Time}\mbox{[}0\-:len({\bf init\-Temp\-Time})-\/4\mbox{]})}}\label{a00102_a826c1b0585b4e8474c76f92bd7583836}
+
+
+Definition at line 200 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a6405b6b05e7b87812422cc30d2034904}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!in\-S\-C\-C\-Flag@{in\-S\-C\-C\-Flag}}
+\index{in\-S\-C\-C\-Flag@{in\-S\-C\-C\-Flag}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{in\-S\-C\-C\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-in\-S\-C\-C\-Flag = 0}}\label{a00102_a6405b6b05e7b87812422cc30d2034904}
+
+
+Definition at line 616 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ab4566d46d368eb4f93ff6db5191648bd}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!loaded\-Mols@{loaded\-Mols}}
+\index{loaded\-Mols@{loaded\-Mols}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{loaded\-Mols}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-loaded\-Mols = int(tmp\-Loaded\-Mols)}}\label{a00102_ab4566d46d368eb4f93ff6db5191648bd}
+
+
+Definition at line 416 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_abe83f5e0ae3bd65da15a697a979aeea1}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!loaded\-Mols\-Conc@{loaded\-Mols\-Conc}}
+\index{loaded\-Mols\-Conc@{loaded\-Mols\-Conc}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{loaded\-Mols\-Conc}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-loaded\-Mols\-Conc = float(tmp\-Loaded\-Mols\-Conc)}}\label{a00102_abe83f5e0ae3bd65da15a697a979aeea1}
+
+
+Definition at line 415 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a47da7b9153a0e4a33512f6d2675b8c1a}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!max\-L\-Out@{max\-L\-Out}}
+\index{max\-L\-Out@{max\-L\-Out}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{max\-L\-Out}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-max\-L\-Out = float({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{a00102_a47da7b9153a0e4a33512f6d2675b8c1a}
+
+
+Definition at line 266 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_af10c3623be709892f4bdc4df5a3d52b0}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!mean\-Over\-Threshold@{mean\-Over\-Threshold}}
+\index{mean\-Over\-Threshold@{mean\-Over\-Threshold}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{mean\-Over\-Threshold}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-mean\-Over\-Threshold = float({\bf over\-Threshold})}}\label{a00102_af10c3623be709892f4bdc4df5a3d52b0}
+
+
+Definition at line 703 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ae13d6607ffa236891a9af05bfa88cfcc}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!mol\-\_\-\-I@{mol\-\_\-\-I}}
+\index{mol\-\_\-\-I@{mol\-\_\-\-I}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{mol\-\_\-\-I}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-mol\-\_\-\-I = int(tmp\-Mol\-\_\-\-I)}}\label{a00102_ae13d6607ffa236891a9af05bfa88cfcc}
+
+
+Definition at line 412 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a8f2878f5909e4aeb9155a1103eaba413}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!mol\-\_\-\-I\-I@{mol\-\_\-\-I\-I}}
+\index{mol\-\_\-\-I\-I@{mol\-\_\-\-I\-I}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{mol\-\_\-\-I\-I}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-mol\-\_\-\-I\-I = int(tmp\-Mol\-\_\-\-I\-I)}}\label{a00102_a8f2878f5909e4aeb9155a1103eaba413}
+
+
+Definition at line 413 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a20047e8516f386a7e98ffa0efec09471}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!mol\-\_\-\-I\-I\-I@{mol\-\_\-\-I\-I\-I}}
+\index{mol\-\_\-\-I\-I\-I@{mol\-\_\-\-I\-I\-I}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{mol\-\_\-\-I\-I\-I}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-mol\-\_\-\-I\-I\-I = int(tmp\-Mol\-\_\-\-I\-I\-I)}}\label{a00102_a20047e8516f386a7e98ffa0efec09471}
+
+
+Definition at line 414 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a2abf09620dd1dd990036c67c626b3dee}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!mswindows@{mswindows}}
+\index{mswindows@{mswindows}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{mswindows}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-mswindows = (sys.\-platform == \char`\"{}win32\char`\"{})}}\label{a00102_a2abf09620dd1dd990036c67c626b3dee}
+
+
+Definition at line 179 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a440179ca1c764cabcf9181985ae5dfb8}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!newdir@{newdir}}
+\index{newdir@{newdir}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{newdir}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-newdir = os.\-path.\-join(os.\-curdir, {\bf folder\-Cat})}}\label{a00102_a440179ca1c764cabcf9181985ae5dfb8}
+
+
+Definition at line 356 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_adb3b62d0896774bc87adfee19d047aa8}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!newdir\-S\-U\-B@{newdir\-S\-U\-B}}
+\index{newdir\-S\-U\-B@{newdir\-S\-U\-B}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{newdir\-S\-U\-B}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-newdir\-S\-U\-B = os.\-path.\-join(os.\-curdir, {\bf folder\-Sub})}}\label{a00102_adb3b62d0896774bc87adfee19d047aa8}
+
+
+Definition at line 365 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a47b24df6e487f6dd90158dde93cc7c93}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!new\-Species\-Creation\-Prob@{new\-Species\-Creation\-Prob}}
+\index{new\-Species\-Creation\-Prob@{new\-Species\-Creation\-Prob}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{new\-Species\-Creation\-Prob}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-new\-Species\-Creation\-Prob = float(tmp\-N\-S\-Cprob)}}\label{a00102_a47b24df6e487f6dd90158dde93cc7c93}
+
+
+Definition at line 420 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a4766b3ca835449f1aa287fda699c7f96}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!no\-In\-Acs@{no\-In\-Acs}}
+\index{no\-In\-Acs@{no\-In\-Acs}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{no\-In\-Acs}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-no\-In\-Acs = 1}}\label{a00102_a4766b3ca835449f1aa287fda699c7f96}
+
+
+Definition at line 612 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a948683f966c62ac856582281c3cda1f4}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!nrg@{nrg}}
+\index{nrg@{nrg}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{nrg}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-nrg = 1}}\label{a00102_a948683f966c62ac856582281c3cda1f4}
+
+
+Definition at line 273 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a24d5f5a61d56c596017396ad272ef4a4}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!nrg\-Conc@{nrg\-Conc}}
+\index{nrg\-Conc@{nrg\-Conc}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{nrg\-Conc}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-nrg\-Conc = float({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{a00102_a24d5f5a61d56c596017396ad272ef4a4}
+
+
+Definition at line 262 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ad4d4abc783f2f7f8d1084b1144b4fe2f}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!nrg\-Time\-Series@{nrg\-Time\-Series}}
+\index{nrg\-Time\-Series@{nrg\-Time\-Series}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{nrg\-Time\-Series}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-nrg\-Time\-Series = np.\-array(\mbox{[}\mbox{[}0,0,0\mbox{]}\mbox{]})}}\label{a00102_ad4d4abc783f2f7f8d1084b1144b4fe2f}
+
+
+Definition at line 397 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a0d0c83fd90489be59b1f5a31dadf4469}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!nrg\-Type@{nrg\-Type}}
+\index{nrg\-Type@{nrg\-Type}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{nrg\-Type}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-nrg\-Type = int({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{a00102_a0d0c83fd90489be59b1f5a31dadf4469}
+
+
+Definition at line 258 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a9a81829f850e2e125e3c94214da7a1f0}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!number\-Of\-Gen@{number\-Of\-Gen}}
+\index{number\-Of\-Gen@{number\-Of\-Gen}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{number\-Of\-Gen}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-number\-Of\-Gen = len(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},'times\-\_\-$\ast$')))}}\label{a00102_a9a81829f850e2e125e3c94214da7a1f0}
+
+
+Definition at line 230 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a9ce833d782f17d858941cfa76914599a}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!ok@{ok}}
+\index{ok@{ok}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{ok}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-ok = 0}}\label{a00102_a9ce833d782f17d858941cfa76914599a}
+
+
+Definition at line 316 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a12e61f8d7aadb52256a7728af342bae3}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!over\-Threshold@{over\-Threshold}}
+\index{over\-Threshold@{over\-Threshold}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{over\-Threshold}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-over\-Threshold = float(0)}}\label{a00102_a12e61f8d7aadb52256a7728af342bae3}
+
+
+Definition at line 299 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a93de20dd9ebf791127ac5aefc0a2df8d}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!over\-Threshold\-T\-O\-T@{over\-Threshold\-T\-O\-T}}
+\index{over\-Threshold\-T\-O\-T@{over\-Threshold\-T\-O\-T}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{over\-Threshold\-T\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-over\-Threshold\-T\-O\-T = float(0)}}\label{a00102_a93de20dd9ebf791127ac5aefc0a2df8d}
+
+
+Definition at line 300 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a7160f8e48b4aafebbd75e9037fc9fef7}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!param\-File@{param\-File}}
+\index{param\-File@{param\-File}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{param\-File}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-S\-C\-Canalysis.\-param\-File = \char`\"{}acsm2s.\-conf\char`\"{}}}\label{a00102_a7160f8e48b4aafebbd75e9037fc9fef7}
+
+
+Definition at line 241 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ac09e85f8df5b7c8c7d2caf87e9193421}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!position@{position}}
+\index{position@{position}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-position = (({\bf graph}\mbox{[}\-:,0\mbox{]} == {\bf cat}) \& ({\bf graph}\mbox{[}\-:,1\mbox{]} == {\bf mol\-\_\-\-I}))}}\label{a00102_ac09e85f8df5b7c8c7d2caf87e9193421}
+
+
+Definition at line 482 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_aff96a31e98ac46cb47a67b74f5d87351}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!previous\-Time@{previous\-Time}}
+\index{previous\-Time@{previous\-Time}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{previous\-Time}]{\setlength{\rightskip}{0pt plus 5cm}acs\-S\-C\-Canalysis.\-previous\-Time = 0}}\label{a00102_aff96a31e98ac46cb47a67b74f5d87351}
+
+
+Definition at line 386 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a3de1ee32e24403b152d565d8c52cf7fd}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!print\-Temporal\-Message@{print\-Temporal\-Message}}
+\index{print\-Temporal\-Message@{print\-Temporal\-Message}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{print\-Temporal\-Message}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-print\-Temporal\-Message = 1}}\label{a00102_a3de1ee32e24403b152d565d8c52cf7fd}
+
+
+Definition at line 428 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_abb2ac92624837ae48b882d145c5aab11}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!prod\-\_\-by\-S\-C\-C@{prod\-\_\-by\-S\-C\-C}}
+\index{prod\-\_\-by\-S\-C\-C@{prod\-\_\-by\-S\-C\-C}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{prod\-\_\-by\-S\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-prod\-\_\-by\-S\-C\-C = 0}}\label{a00102_abb2ac92624837ae48b882d145c5aab11}
+
+
+Definition at line 570 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a5f45dbe461b3b18021c93780e87cc40e}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!prod\-\_\-by\-S\-C\-C\-\_\-weight@{prod\-\_\-by\-S\-C\-C\-\_\-weight}}
+\index{prod\-\_\-by\-S\-C\-C\-\_\-weight@{prod\-\_\-by\-S\-C\-C\-\_\-weight}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{prod\-\_\-by\-S\-C\-C\-\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-prod\-\_\-by\-S\-C\-C\-\_\-weight = 0}}\label{a00102_a5f45dbe461b3b18021c93780e87cc40e}
+
+
+Definition at line 576 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ab307c6047e4d16ec0335266b24e7db5a}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!prod\-\_\-chain@{prod\-\_\-chain}}
+\index{prod\-\_\-chain@{prod\-\_\-chain}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{prod\-\_\-chain}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-prod\-\_\-chain = 0}}\label{a00102_ab307c6047e4d16ec0335266b24e7db5a}
+
+
+Definition at line 569 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a6736365f1f19058f6e1d57287383dbcc}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!prod\-\_\-chain\-\_\-weight@{prod\-\_\-chain\-\_\-weight}}
+\index{prod\-\_\-chain\-\_\-weight@{prod\-\_\-chain\-\_\-weight}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{prod\-\_\-chain\-\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-prod\-\_\-chain\-\_\-weight = 0}}\label{a00102_a6736365f1f19058f6e1d57287383dbcc}
+
+
+Definition at line 575 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_adbc76b0558ceb74d798b35146a583474}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!prod\-\_\-in\-S\-C\-C@{prod\-\_\-in\-S\-C\-C}}
+\index{prod\-\_\-in\-S\-C\-C@{prod\-\_\-in\-S\-C\-C}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{prod\-\_\-in\-S\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-prod\-\_\-in\-S\-C\-C = 0}}\label{a00102_adbc76b0558ceb74d798b35146a583474}
+
+
+Definition at line 568 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_aa22adccedd9ae548d0687df507ebd92d}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!prod\-\_\-in\-S\-C\-C\-\_\-weight@{prod\-\_\-in\-S\-C\-C\-\_\-weight}}
+\index{prod\-\_\-in\-S\-C\-C\-\_\-weight@{prod\-\_\-in\-S\-C\-C\-\_\-weight}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{prod\-\_\-in\-S\-C\-C\-\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-prod\-\_\-in\-S\-C\-C\-\_\-weight = 0}}\label{a00102_aa22adccedd9ae548d0687df507ebd92d}
+
+
+Definition at line 574 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a213e964195f0666d00663ca874a09caa}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!prod\-\_\-overlap@{prod\-\_\-overlap}}
+\index{prod\-\_\-overlap@{prod\-\_\-overlap}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{prod\-\_\-overlap}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-prod\-\_\-overlap = 0}}\label{a00102_a213e964195f0666d00663ca874a09caa}
+
+
+Definition at line 571 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ab78b07d6cd1a94356c4fee43dfc1272a}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!prod\-\_\-overlap\-\_\-weight@{prod\-\_\-overlap\-\_\-weight}}
+\index{prod\-\_\-overlap\-\_\-weight@{prod\-\_\-overlap\-\_\-weight}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{prod\-\_\-overlap\-\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-prod\-\_\-overlap\-\_\-weight = 0}}\label{a00102_ab78b07d6cd1a94356c4fee43dfc1272a}
+
+
+Definition at line 577 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a78ffc7d3b69c53ec5389a151e7fdcb83}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!rct\-I\-D@{rct\-I\-D}}
+\index{rct\-I\-D@{rct\-I\-D}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{rct\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-rct\-I\-D = {\bf init\-Rct\-Id}}}\label{a00102_a78ffc7d3b69c53ec5389a151e7fdcb83}
+
+
+Definition at line 385 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a8a780c7762bc8a40f296abfd474b7ce4}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!rct\-I\-Dshow@{rct\-I\-Dshow}}
+\index{rct\-I\-Dshow@{rct\-I\-Dshow}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{rct\-I\-Dshow}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-rct\-I\-Dshow = 1.\-0}}\label{a00102_a8a780c7762bc8a40f296abfd474b7ce4}
+
+
+Definition at line 383 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a3942b0b71d5893c244f7f49929db336b}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!rct\-I\-Dshow\-No\-Save@{rct\-I\-Dshow\-No\-Save}}
+\index{rct\-I\-Dshow\-No\-Save@{rct\-I\-Dshow\-No\-Save}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{rct\-I\-Dshow\-No\-Save}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-rct\-I\-Dshow\-No\-Save = 1.\-0}}\label{a00102_a3942b0b71d5893c244f7f49929db336b}
+
+
+Definition at line 384 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ac700504fc38d7684ec9fae104d7d90a3}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!rct\-Param\-File@{rct\-Param\-File}}
+\index{rct\-Param\-File@{rct\-Param\-File}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{rct\-Param\-File}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-rct\-Param\-File = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf rct\-Param\-File\-Q})))}}\label{a00102_ac700504fc38d7684ec9fae104d7d90a3}
+
+
+Definition at line 380 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_aff5ea475bb2c78122a231a915dc88e89}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!rct\-Param\-File\-Q@{rct\-Param\-File\-Q}}
+\index{rct\-Param\-File\-Q@{rct\-Param\-File\-Q}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{rct\-Param\-File\-Q}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-S\-C\-Canalysis.\-rct\-Param\-File\-Q = 'reactions\-\_\-parameters\-\_\-'}}\label{a00102_aff5ea475bb2c78122a231a915dc88e89}
+
+
+Definition at line 379 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a58c3618ec28f27dfbf09e0d3aba05bc7}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!reaction@{reaction}}
+\index{reaction@{reaction}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{reaction}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-reaction = int(tmp\-Reaction)}}\label{a00102_a58c3618ec28f27dfbf09e0d3aba05bc7}
+
+
+Definition at line 408 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ac6aaa0ac5d13b0736ab3179dc1ed388d}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!real\-Sccs@{real\-Sccs}}
+\index{real\-Sccs@{real\-Sccs}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{real\-Sccs}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-real\-Sccs = 0}}\label{a00102_ac6aaa0ac5d13b0736ab3179dc1ed388d}
+
+
+Definition at line 554 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a1c9b45f6074222ace96b7ab38cb8e23b}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!real\-T@{real\-T}}
+\index{real\-T@{real\-T}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{real\-T}]{\setlength{\rightskip}{0pt plus 5cm}acs\-S\-C\-Canalysis.\-real\-T = {\bf threshold}}}\label{a00102_a1c9b45f6074222ace96b7ab38cb8e23b}
+
+
+Definition at line 333 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a9ededb3cd7c63befde39ad68e5f9e006}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!res\-Dir\-Path@{res\-Dir\-Path}}
+\index{res\-Dir\-Path@{res\-Dir\-Path}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{res\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-res\-Dir\-Path = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))}}\label{a00102_a9ededb3cd7c63befde39ad68e5f9e006}
+
+
+Definition at line 223 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_aa7db2dba66810044f9c5238eccc995b7}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!reverse\-Probability@{reverse\-Probability}}
+\index{reverse\-Probability@{reverse\-Probability}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{reverse\-Probability}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-reverse\-Probability = float(tmp\-Rev\-Prob)}}\label{a00102_aa7db2dba66810044f9c5238eccc995b7}
+
+
+Definition at line 421 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a98150f532e09ebae495212500d2f1799}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!rp@{rp}}
+\index{rp@{rp}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{rp}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-rp = float({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{a00102_a98150f532e09ebae495212500d2f1799}
+
+
+Definition at line 252 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a162a08b0497058c76e7e885c03a01336}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!rtime@{rtime}}
+\index{rtime@{rtime}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{rtime}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-rtime = float(tmp\-Time)}}\label{a00102_a162a08b0497058c76e7e885c03a01336}
+
+
+Definition at line 409 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a2094b7f0917a16a948a2d1c4d700e84c}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!scc@{scc}}
+\index{scc@{scc}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{scc}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-scc = nx.\-strongly\-\_\-connected\-\_\-components({\bf Gcatpro})}}\label{a00102_a2094b7f0917a16a948a2d1c4d700e84c}
+
+
+Definition at line 561 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a1dd3c43841ba4485a66889600f099a0c}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!scc\-I\-D@{scc\-I\-D}}
+\index{scc\-I\-D@{scc\-I\-D}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{scc\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-scc\-I\-D = 0}}\label{a00102_a1dd3c43841ba4485a66889600f099a0c}
+
+
+Definition at line 572 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a185cbf8ef1ec67f52695562582418793}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!scc\-N@{scc\-N}}
+\index{scc\-N@{scc\-N}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{scc\-N}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-scc\-N = nx.\-number\-\_\-strongly\-\_\-connected\-\_\-components({\bf Gcatpro})}}\label{a00102_a185cbf8ef1ec67f52695562582418793}
+
+
+Definition at line 562 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ae9790fbc87f233c94224436a9cbd59c1}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!self\-\_\-loop\-\_\-weight@{self\-\_\-loop\-\_\-weight}}
+\index{self\-\_\-loop\-\_\-weight@{self\-\_\-loop\-\_\-weight}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{self\-\_\-loop\-\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-self\-\_\-loop\-\_\-weight = 0}}\label{a00102_ae9790fbc87f233c94224436a9cbd59c1}
+
+
+Definition at line 578 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a8fec45ae9b70981ce94eaeed14d888b1}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!self\-Loops@{self\-Loops}}
+\index{self\-Loops@{self\-Loops}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{self\-Loops}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-self\-Loops = Gcatpro.\-number\-\_\-of\-\_\-selfloops()}}\label{a00102_a8fec45ae9b70981ce94eaeed14d888b1}
+
+
+Definition at line 563 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ad34596e89eef2cfb696f61a810765c7a}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!self\-Loops\-Egdes@{self\-Loops\-Egdes}}
+\index{self\-Loops\-Egdes@{self\-Loops\-Egdes}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{self\-Loops\-Egdes}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-self\-Loops\-Egdes = Gcatpro.\-selfloop\-\_\-edges()}}\label{a00102_ad34596e89eef2cfb696f61a810765c7a}
+
+
+Definition at line 564 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a58095f64afeda893517e81226e1963c3}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!sim\-Folder@{sim\-Folder}}
+\index{sim\-Folder@{sim\-Folder}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{sim\-Folder}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-sim\-Folder = 0}}\label{a00102_a58095f64afeda893517e81226e1963c3}
+
+
+Definition at line 242 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a1d066fa24dced2da12ffd9a8514a17ba}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!species\-File@{species\-File}}
+\index{species\-File@{species\-File}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{species\-File}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-S\-C\-Canalysis.\-species\-File = {\bf species\-Files}\mbox{[}-\/1\mbox{]}}}\label{a00102_a1d066fa24dced2da12ffd9a8514a17ba}
+
+
+Definition at line 305 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a4f47408478e9a0590d016df50cf42141}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!species\-Files@{species\-Files}}
+\index{species\-Files@{species\-Files}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{species\-Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-species\-Files = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf tmp\-Files\-To\-Search})))}}\label{a00102_a4f47408478e9a0590d016df50cf42141}
+
+
+Definition at line 304 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a36f6b63269e716f42cd38a36a781a4cf}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!species\-In\-Flux@{species\-In\-Flux}}
+\index{species\-In\-Flux@{species\-In\-Flux}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{species\-In\-Flux}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-S\-C\-Canalysis.\-species\-In\-Flux = range(0,int(pow(2,({\bf max\-L\-Out}+1)) -\/ 2))}}\label{a00102_a36f6b63269e716f42cd38a36a781a4cf}
+
+
+Definition at line 280 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a072631e11db72789389935b0f9efff8d}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!str\-Line@{str\-Line}}
+\index{str\-Line@{str\-Line}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{str\-Line}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-str\-Line = {\bf line.\-split}('=')}}\label{a00102_a072631e11db72789389935b0f9efff8d}
+
+
+Definition at line 250 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_af8add8b37a9c8a7825c0e8f0e7dfd6c1}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!Str\-Path@{Str\-Path}}
+\index{Str\-Path@{Str\-Path}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{Str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-Str\-Path = os.\-path.\-abspath(Str\-Path)}}\label{a00102_af8add8b37a9c8a7825c0e8f0e7dfd6c1}
+
+
+Definition at line 177 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a1966f0657c6b477eeb60bde732a201cc}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!str\-To\-Write@{str\-To\-Write}}
+\index{str\-To\-Write@{str\-To\-Write}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{str\-To\-Write}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-S\-C\-Canalysis.\-str\-To\-Write = \char`\"{}\textbackslash{}t\-Reaction Probability\char`\"{}}}\label{a00102_a1966f0657c6b477eeb60bde732a201cc}
+
+
+Definition at line 186 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a8ba6aefb71b3d1e575eac38627f143d6}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!str\-Zeros@{str\-Zeros}}
+\index{str\-Zeros@{str\-Zeros}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{str\-Zeros}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-str\-Zeros = {\bf zero\-Before\-Str\-Num}(n\-Gen, {\bf number\-Of\-Gen})}}\label{a00102_a8ba6aefb71b3d1e575eac38627f143d6}
+
+
+Definition at line 238 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_aaf17c99825e0961e4cfaa173ddfffe84}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!temp\-Prod\-\_\-chain\-\_\-weight@{temp\-Prod\-\_\-chain\-\_\-weight}}
+\index{temp\-Prod\-\_\-chain\-\_\-weight@{temp\-Prod\-\_\-chain\-\_\-weight}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{temp\-Prod\-\_\-chain\-\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-temp\-Prod\-\_\-chain\-\_\-weight = 0}}\label{a00102_aaf17c99825e0961e4cfaa173ddfffe84}
+
+
+Definition at line 607 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a7d0f86310c439e970e0b41121364027c}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!time\-Interval@{time\-Interval}}
+\index{time\-Interval@{time\-Interval}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{time\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}acs\-S\-C\-Canalysis.\-time\-Interval = {\bf rtime}-\/{\bf previous\-Time}}}\label{a00102_a7d0f86310c439e970e0b41121364027c}
+
+
+Definition at line 451 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ace4c571efd2e5ecd266ce5701f761a83}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!tmp\-Dirs@{tmp\-Dirs}}
+\index{tmp\-Dirs@{tmp\-Dirs}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{tmp\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-tmp\-Dirs = sort(os.\-listdir({\bf Str\-Path}))}}\label{a00102_ace4c571efd2e5ecd266ce5701f761a83}
+
+
+Definition at line 209 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a141356fc914110fdf3ec4f0fc3beaab5}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!tmp\-Files\-To\-Search@{tmp\-Files\-To\-Search}}
+\index{tmp\-Files\-To\-Search@{tmp\-Files\-To\-Search}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{tmp\-Files\-To\-Search}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-S\-C\-Canalysis.\-tmp\-Files\-To\-Search = 'species\-\_\-'}}\label{a00102_a141356fc914110fdf3ec4f0fc3beaab5}
+
+
+Definition at line 303 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a6e8aff976901d1424dd1ff00c3387014}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!tmp\-Flag\-Last\-Rct\-Saved@{tmp\-Flag\-Last\-Rct\-Saved}}
+\index{tmp\-Flag\-Last\-Rct\-Saved@{tmp\-Flag\-Last\-Rct\-Saved}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{tmp\-Flag\-Last\-Rct\-Saved}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-tmp\-Flag\-Last\-Rct\-Saved = 0}}\label{a00102_a6e8aff976901d1424dd1ff00c3387014}
+
+
+Definition at line 401 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_aee6b4f50387d471b70458cf703c0863b}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!tmp\-Prod\-\_\-chain@{tmp\-Prod\-\_\-chain}}
+\index{tmp\-Prod\-\_\-chain@{tmp\-Prod\-\_\-chain}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{tmp\-Prod\-\_\-chain}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-tmp\-Prod\-\_\-chain = 0}}\label{a00102_aee6b4f50387d471b70458cf703c0863b}
+
+
+Definition at line 603 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_add910e17b3f1fe61cdbaf8ce60ec0e20}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!tmp\-Rct\-File\-To\-Load\-Split\-String@{tmp\-Rct\-File\-To\-Load\-Split\-String}}
+\index{tmp\-Rct\-File\-To\-Load\-Split\-String@{tmp\-Rct\-File\-To\-Load\-Split\-String}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{tmp\-Rct\-File\-To\-Load\-Split\-String}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-tmp\-Rct\-File\-To\-Load\-Split\-String = {\bf tmp\-Rct\-File\-To\-Load.\-split}(\char`\"{}\-\_\-\char`\"{})}}\label{a00102_add910e17b3f1fe61cdbaf8ce60ec0e20}
+
+
+Definition at line 196 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a5498b0a6851ae4d3b2c3035093564e47}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!today@{today}}
+\index{today@{today}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{today}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-today = dt.\-date.\-today()}}\label{a00102_a5498b0a6851ae4d3b2c3035093564e47}
+
+
+Definition at line 178 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a9f0e87ff21f3597668f5ad076224da87}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!total\-Rcts@{total\-Rcts}}
+\index{total\-Rcts@{total\-Rcts}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{total\-Rcts}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-total\-Rcts = int({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{a00102_a9f0e87ff21f3597668f5ad076224da87}
+
+
+Definition at line 260 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a5903034df3d32525785e697152efbeb3}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!tot\-Dir\-Name@{tot\-Dir\-Name}}
+\index{tot\-Dir\-Name@{tot\-Dir\-Name}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{tot\-Dir\-Name}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-tot\-Dir\-Name = os.\-path.\-join({\bf Str\-Path},tmp\-Dir)}}\label{a00102_a5903034df3d32525785e697152efbeb3}
+
+
+Definition at line 218 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a20df40e09bc9514382d71f15783c7856}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!tot\-Times@{tot\-Times}}
+\index{tot\-Times@{tot\-Times}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{tot\-Times}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-S\-C\-Canalysis.\-tot\-Times = int({\bf str\-Line}\mbox{[}1\mbox{]})}}\label{a00102_a20df40e09bc9514382d71f15783c7856}
+
+
+Definition at line 256 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_ace0de61f3c6aa14b4197156be3a68280}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!waste\-Species@{waste\-Species}}
+\index{waste\-Species@{waste\-Species}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{waste\-Species}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-S\-C\-Canalysis.\-waste\-Species = 0}}\label{a00102_ace0de61f3c6aa14b4197156be3a68280}
+
+
+Definition at line 584 of file acs\-S\-C\-Canalysis.\-py.
+
+\hypertarget{a00102_a5162bfbe5eb2618736d1f77bb3125a9b}{\index{acs\-S\-C\-Canalysis@{acs\-S\-C\-Canalysis}!weight\-To\-Distribute@{weight\-To\-Distribute}}
+\index{weight\-To\-Distribute@{weight\-To\-Distribute}!acsSCCanalysis@{acs\-S\-C\-Canalysis}}
+\subsubsection[{weight\-To\-Distribute}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-S\-C\-Canalysis.\-weight\-To\-Distribute = {\bf graph}\mbox{[}(({\bf graph}\mbox{[}\-:,0\mbox{]} == sng\-In\-Node) \& ({\bf graph}\mbox{[}\-:,1\mbox{]} == Ids\-O\-T)),5\mbox{]}}}\label{a00102_a5162bfbe5eb2618736d1f77bb3125a9b}
+
+
+Definition at line 622 of file acs\-S\-C\-Canalysis.\-py.
+

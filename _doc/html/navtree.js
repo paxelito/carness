@@ -1,13 +1,13 @@
 var NAVTREE =
 [
   [ "CaRNeSS", "index.html", [
-    [ "Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131026.60)", "index.html", "index" ],
+    [ "Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131209.62)", "index.html", "index" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
+        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
+        [ "Variables", "namespacemembers_vars.html", "namespacemembers_vars" ]
       ] ]
     ] ],
     [ "Classes", null, [
@@ -33,13 +33,16 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_k_s_search_8m.html",
-"buffered_flux_analysis_8py.html#a496cf2986cc324a0421c288991e1be93",
-"classenvironment.html#ad78fcf39a80e447a9aa2f84ab74335e5",
-"crea__concentrazioni__iniziali_8m.html#abc9be4849231a626a9dffd0bfb31e55d",
-"general_concentration_over_threshold_8m.html#a4a03f3c7d6cb2560e3b52bfda636de2a",
-"inizializzatore___a_c_s_8m.html#a153e3250d4161f9bea4c140498016d94",
-"start_8m.html#a637d2af7e7b03600bcaf1931b999e3fc"
+"a00002.html",
+"a00016.html",
+"a00027.html#a4c72dba1fe2ee2fbcc699262a8d0c624",
+"a00028.html#aeb4896ef772d3a8b71682107881e86b1",
+"a00034.html#ad71f20889e7a6394d3c15e5e9381394d",
+"a00045.html#a213e964195f0666d00663ca874a09caa",
+"a00048.html#ab7609fccbc57f56e33a59e0fc6865c54",
+"a00065.html#a9e9d25cb3f9488c7e910885a0eed2ffa",
+"a00075.html",
+"namespacemembers.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

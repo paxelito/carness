@@ -1,0 +1,38 @@
+<map id="environment::performCondensation" name="environment::performCondensation">
+<area shape="rect" id="node2" href="$a00075.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="1175,1285,1275,1312"/>
+<area shape="rect" id="node3" href="$a00014.html#a094499a0f1bb3c2342a3b16944f5280d" title="environment::incMolProcedure" alt="" coords="595,371,797,397"/>
+<area shape="rect" id="node6" href="$a00014.html#a7ac85445b4710257723c581c35cc5ac8" title="environment::incSpeciesProcedure" alt="" coords="581,421,811,448"/>
+<area shape="rect" id="node9" href="$a00014.html#a10fad450cf5ef3a1c7cf75d616105069" title="environment::decMolSpecies\lProcedure" alt="" coords="313,122,506,163"/>
+<area shape="rect" id="node14" href="$a00014.html#a16d09f818d3012f88e8e4c9a7759b6bd" title="environment::decCpxProcedure" alt="" coords="305,312,514,339"/>
+<area shape="rect" id="node17" href="$a00014.html#a4fe7891fb38f3f25bb82769af0ddfe19" title="environment::newSpeciesEvaluationIII" alt="" coords="285,627,533,653"/>
+<area shape="rect" id="node37" href="$a00014.html#a3fae8e57fad9ef5b182e32d9bb9989af" title="environment::incCondensation\lCounter" alt="" coords="308,1550,511,1591"/>
+<area shape="rect" id="node4" href="$a00014.html#ae356db3b6ee374b998e9f041216b4b75" title="environment::incNumberOfMols" alt="" coords="867,297,1077,324"/>
+<area shape="rect" id="node5" href="$a00014.html#a1addb84f0c8d391f97ad2347a64208bb" title="environment::incNumberOf\lNewMols" alt="" coords="881,231,1063,273"/>
+<area shape="rect" id="node7" href="$a00014.html#a1055886a34a9a01ec37db31c69e460e0" title="environment::incNumberOf\lNewSpecies" alt="" coords="881,414,1063,455"/>
+<area shape="rect" id="node8" href="$a00014.html#a5c86f93c84f9931640843c38eccb9bf4" title="environment::incNumberOf\lSpecies" alt="" coords="881,349,1063,390"/>
+<area shape="rect" id="node10" href="$a00014.html#a69a926e0b9bb4f4b29876d0e45b54d84" title="environment::decNumberOf\lSpecies" alt="" coords="603,187,789,229"/>
+<area shape="rect" id="node11" href="$a00014.html#af042f7904c92fdd239995bebbab2cf60" title="environment::decNumberOfMols" alt="" coords="589,5,803,32"/>
+<area shape="rect" id="node12" href="$a00014.html#a5fa52a4f8e73a71fa41d3a1641e50535" title="environment::decNumberOf\lNewSpecies" alt="" coords="603,57,789,98"/>
+<area shape="rect" id="node13" href="$a00014.html#ae9bbd78076706050ced4dd7fb99036f1" title="environment::decNumberOf\lNewMols" alt="" coords="603,122,789,163"/>
+<area shape="rect" id="node15" href="$a00014.html#aadd057e7038269e6fac314a12a3bf334" title="environment::decNumberOfCpx" alt="" coords="591,253,801,280"/>
+<area shape="rect" id="node16" href="$a00014.html#a756dc43b6b47498ba457613749324b15" title="environment::decNumberOf\lCpxMols" alt="" coords="603,305,789,346"/>
+<area shape="rect" id="node18" href="$a00014.html#af795a4d1f04dfbfcbdf321e20e74f9c2" title="environment::createDiffusion\lRenforcement" alt="" coords="600,590,792,631"/>
+<area shape="rect" id="node19" href="$a00014.html#a496ba50d3a345cd842ce42406946405c" title="environment::setSolubility" alt="" coords="609,656,783,683"/>
+<area shape="rect" id="node20" href="$a00014.html#a48d8fd9d8d5c9c31f0b4af87c8cbd28f" title="environment::printAllSpecies\lIdAndSequence" alt="" coords="601,707,791,749"/>
+<area shape="rect" id="node21" href="$a00014.html#a0fd3cb062d35d2f6dd8961e95dd477b7" title="environment::computeSngSpecies\lRctsNumber" alt="" coords="583,473,809,514"/>
+<area shape="rect" id="node23" href="$a00014.html#a76794f37d6d94b7504c58f0f4a4709ca" title="environment::createReactions\lForThisSpecies" alt="" coords="597,1034,795,1075"/>
+<area shape="rect" id="node26" href="$a00075.html#a6d28311eff309499e66efb5d39a035f4" title="getIntRandom" alt="" coords="1173,611,1278,637"/>
+<area shape="rect" id="node35" href="$a00075.html#aa6403f90846f5fb19fcfb8b81aeee73c" title="This funtion returns a random position in a probability weight array of N elements. " alt="" coords="594,1099,798,1141"/>
+<area shape="rect" id="node36" href="$a00014.html#ace92235425bfbe692e3873ba5bb07639" title="environment::updateReactions" alt="" coords="595,815,797,841"/>
+<area shape="rect" id="node22" href="$a00075.html#a78d5b4a67b6e66b8ceaa85874a2a12b7" title="random_binomial" alt="" coords="910,480,1034,507"/>
+<area shape="rect" id="node24" href="$a00014.html#a53282cca8882e86652ab0a22e6966d17" title="environment::selectWhether\lCleavageOrCond" alt="" coords="878,1230,1066,1271"/>
+<area shape="rect" id="node25" href="$a00075.html#a1cb9cc6ac8ec2ef62b8eb1970e73a11b" title="returnUniformSelection\l_LONG_IdFromVector" alt="" coords="893,633,1051,674"/>
+<area shape="rect" id="node27" href="$a00014.html#a4e26cc574e20a5afcfbbe5887109c5af" title="environment::returnPosSpecies\lAlreadyPresent" alt="" coords="868,698,1076,739"/>
+<area shape="rect" id="node29" href="$a00014.html#a5160dec152ed0369fe8af9aff3253a9e" title="environment::notInverseReaction\lAlreadyCatalyzed" alt="" coords="863,1099,1081,1141"/>
+<area shape="rect" id="node30" href="$a00014.html#abf45b6406f8c0e95c4c5edf6b374e112" title="environment::getNumberOf\lReactions" alt="" coords="1134,1034,1317,1075"/>
+<area shape="rect" id="node31" href="$a00014.html#a6feec5685b519ba0cdae0e5c59dffff0" title="environment::returnPosReaction\lAlreadyPresent" alt="" coords="865,1034,1079,1075"/>
+<area shape="rect" id="node32" href="$a00075.html#a4135ff15fd24eb8fbfee3d00e1cfbf20" title="returnSelectionIdFromAWeight\lProbVectorAlreadyNormalized" alt="" coords="870,1165,1074,1206"/>
+<area shape="rect" id="node33" href="$a00014.html#a21609adb1a83a4cb7eaec78a90acd624" title="environment::getNumberOf\lCatalysis" alt="" coords="1134,917,1317,958"/>
+<area shape="rect" id="node34" href="$a00014.html#ac4c90b07b8e75ea03e2ced0ea644a69f" title="environment::checkIfTheReaction\lIsAlreadyCatalyzedByThisSpecies" alt="" coords="859,917,1085,958"/>
+<area shape="rect" id="node28" href="$a00014.html#ab98d4ad28b101f08279aa3458d5dfda3" title="environment::getNumberOf\lTheoreticalSpecies" alt="" coords="1134,698,1317,739"/>
+</map>

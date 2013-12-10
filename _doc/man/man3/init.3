@@ -1,0 +1,331 @@
+.TH "init" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+init \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBparser\fP"
+.br
+.ti -1c
+.RI "tuple \fBargs\fP = parser\&.parse_args()"
+.br
+.ti -1c
+.RI "string \fBndn\fP = '_0_new_allStatResults'"
+.br
+.ti -1c
+.RI "tuple \fBnewdirAllResults\fP = os\&.path\&.join(args\&.strOut, \fBndn\fP)"
+.br
+.ti -1c
+.RI "tuple \fBfname_initRafRes\fP = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysis\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBfname_initRafResSUM\fP = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysisSUM\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBfname_initRafResLIST\fP = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysisLIST\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBfname_initRafResALL\fP = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysisALL\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBfid_initRafRes\fP = open(\fBfname_initRafRes\fP, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBfid_initRafResSUM\fP = open(\fBfname_initRafResSUM\fP, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBfid_initRafResLIST\fP = open(\fBfname_initRafResLIST\fP, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBfid_initRafResALL\fP = open(\fBfname_initRafResALL\fP, 'w')"
+.br
+.ti -1c
+.RI "string \fBstrToWrite\fP = 'Folder\\tP\\tAC\\tM\\tRAFsize\\tClosure\\tCats\\tuRAF\\n'"
+.br
+.ti -1c
+.RI "tuple \fBfoodList\fP = range(args\&.lastFood+1)"
+.br
+.ti -1c
+.RI "tuple \fBavgCon\fP = dn\&.rangeFloat(float(args\&.avgCon[0]), float(args\&.avgCon[1]), float(args\&.avgCon[2]))"
+.br
+.ti -1c
+.RI "int \fBraffound\fP = 0"
+.br
+.ti -1c
+.RI "list \fBalphabet\fP = ['\fBA\fP', '\fBB\fP']"
+.br
+.ti -1c
+.RI "list \fBspecies\fP = []"
+.br
+.ti -1c
+.RI "int \fBtotSpecies\fP = 2"
+.br
+.ti -1c
+.RI "tuple \fBtotCleavage\fP = \fBsum\fP(map(lambda x: len(\fBx\fP)-1,\fBspecies\fP))"
+.br
+.ti -1c
+.RI "int \fBtotCond\fP = \fBtotSpecies\fP**2"
+.br
+.ti -1c
+.RI "\fBtotRcts\fP = \fBtotCleavage\fP+\fBtotCond\fP"
+.br
+.ti -1c
+.RI "tuple \fBrctToCat\fP = int(round(\fBtotRcts\fP * \fBtotSpecies\fP * prob))"
+.br
+.ti -1c
+.RI "int \fBnCleavage\fP = 0"
+.br
+.ti -1c
+.RI "int \fBnCondensa\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBinitSpeciesListLength\fP = len(\fBspecies\fP)"
+.br
+.ti -1c
+.RI "tuple \fBconf\fP = (1,1,2000,0,200000,0,0,2,args\&.lastFood,prob)"
+.br
+.ti -1c
+.RI "int \fBrctType\fP = 1"
+.br
+.ti -1c
+.RI "tuple \fBmolToCleav\fP = ran\&.choice(\fBspecies\fP[len(\fBalphabet\fP):\fBinitSpeciesListLength\fP-1])"
+.br
+.ti -1c
+.RI "tuple \fBcutPt\fP = ran\&.randint(1,len(\fBmolToCleav\fP)-1)"
+.br
+.ti -1c
+.RI "list \fBtmp1\fP = \fBmolToCleav\fP[0:\fBcutPt\fP]"
+.br
+.ti -1c
+.RI "tuple \fBtmp1id\fP = \fBspecies\&.index\fP(\fBtmp1\fP)"
+.br
+.ti -1c
+.RI "\fBfind1\fP = True"
+.br
+.ti -1c
+.RI "list \fBtmp2\fP = \fBmolToCleav\fP[cutPt:len(\fBmolToCleav\fP)]"
+.br
+.ti -1c
+.RI "tuple \fBtmp2id\fP = \fBspecies\&.index\fP(\fBtmp2\fP)"
+.br
+.ti -1c
+.RI "tuple \fBsub1\fP = ran\&.choice(\fBspecies\fP[:\fBinitSpeciesListLength\fP-1])"
+.br
+.ti -1c
+.RI "tuple \fBidsub1\fP = \fBspecies\&.index\fP(\fBsub1\fP)"
+.br
+.ti -1c
+.RI "tuple \fBsub2\fP = ran\&.choice(\fBspecies\fP[:\fBinitSpeciesListLength\fP-1])"
+.br
+.ti -1c
+.RI "tuple \fBidsub2\fP = \fBspecies\&.index\fP(\fBsub2\fP)"
+.br
+.ti -1c
+.RI "\fBprod\fP = \fBsub1\fP+\fBsub2\fP"
+.br
+.ti -1c
+.RI "tuple \fBtmpprodid\fP = \fBspecies\&.index\fP(\fBprod\fP)"
+.br
+.ti -1c
+.RI "int \fBcatalyst\fP = -1"
+.br
+.ti -1c
+.RI "\fBcatFound\fP = False"
+.br
+.ti -1c
+.RI "tuple \fBrafsets\fP = raf\&.rafComputation(\fBfid_initRafRes\fP, \fBfid_initRafResALL\fP, \fBfid_initRafResLIST\fP, 'tmpDir', prob, averageConn, rcts, cats, \fBfoodList\fP, maxlength)"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "list init\&.alphabet = ['\fBA\fP', '\fBB\fP']"
+
+.PP
+Definition at line 79 of file init\&.py\&.
+.SS "tuple init\&.args = parser\&.parse_args()"
+
+.PP
+Definition at line 39 of file init\&.py\&.
+.SS "tuple init\&.avgCon = dn\&.rangeFloat(float(args\&.avgCon[0]), float(args\&.avgCon[1]), float(args\&.avgCon[2]))"
+
+.PP
+Definition at line 72 of file init\&.py\&.
+.SS "tuple init\&.catalyst = -1"
+
+.PP
+Definition at line 158 of file init\&.py\&.
+.SS "init\&.catFound = False"
+
+.PP
+Definition at line 159 of file init\&.py\&.
+.SS "tuple init\&.conf = (1,1,2000,0,200000,0,0,2,args\&.lastFood,prob)"
+
+.PP
+Definition at line 104 of file init\&.py\&.
+.SS "tuple init\&.cutPt = ran\&.randint(1,len(\fBmolToCleav\fP)-1)"
+
+.PP
+Definition at line 121 of file init\&.py\&.
+.SS "tuple init\&.fid_initRafRes = open(\fBfname_initRafRes\fP, 'w')"
+
+.PP
+Definition at line 59 of file init\&.py\&.
+.SS "tuple init\&.fid_initRafResALL = open(\fBfname_initRafResALL\fP, 'w')"
+
+.PP
+Definition at line 62 of file init\&.py\&.
+.SS "tuple init\&.fid_initRafResLIST = open(\fBfname_initRafResLIST\fP, 'w')"
+
+.PP
+Definition at line 61 of file init\&.py\&.
+.SS "tuple init\&.fid_initRafResSUM = open(\fBfname_initRafResSUM\fP, 'w')"
+
+.PP
+Definition at line 60 of file init\&.py\&.
+.SS "init\&.find1 = True"
+
+.PP
+Definition at line 125 of file init\&.py\&.
+.SS "tuple init\&.fname_initRafRes = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysis\&.csv')"
+
+.PP
+Definition at line 55 of file init\&.py\&.
+.SS "tuple init\&.fname_initRafResALL = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysisALL\&.csv')"
+
+.PP
+Definition at line 58 of file init\&.py\&.
+.SS "tuple init\&.fname_initRafResLIST = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysisLIST\&.csv')"
+
+.PP
+Definition at line 57 of file init\&.py\&.
+.SS "tuple init\&.fname_initRafResSUM = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysisSUM\&.csv')"
+
+.PP
+Definition at line 56 of file init\&.py\&.
+.SS "tuple init\&.foodList = range(args\&.lastFood+1)"
+
+.PP
+Definition at line 69 of file init\&.py\&.
+.SS "tuple init\&.idsub1 = \fBspecies\&.index\fP(\fBsub1\fP)"
+
+.PP
+Definition at line 143 of file init\&.py\&.
+.SS "tuple init\&.idsub2 = \fBspecies\&.index\fP(\fBsub2\fP)"
+
+.PP
+Definition at line 146 of file init\&.py\&.
+.SS "tuple init\&.initSpeciesListLength = len(\fBspecies\fP)"
+
+.PP
+Definition at line 101 of file init\&.py\&.
+.SS "tuple init\&.molToCleav = ran\&.choice(\fBspecies\fP[len(\fBalphabet\fP):\fBinitSpeciesListLength\fP-1])"
+
+.PP
+Definition at line 120 of file init\&.py\&.
+.SS "int init\&.nCleavage = 0"
+
+.PP
+Definition at line 99 of file init\&.py\&.
+.SS "int init\&.nCondensa = 0"
+
+.PP
+Definition at line 100 of file init\&.py\&.
+.SS "string init\&.ndn = '_0_new_allStatResults'"
+
+.PP
+Definition at line 45 of file init\&.py\&.
+.SS "tuple init\&.newdirAllResults = os\&.path\&.join(args\&.strOut, \fBndn\fP)"
+
+.PP
+Definition at line 46 of file init\&.py\&.
+.SS "tuple init\&.parser"
+\fBInitial value:\fP
+.PP
+.nf
+1 = ArgumentParser(
+2                                 description='This script re-arrange results in a more friendly way from the angle analysis in time\&.'
+3                                 , epilog='''File with angle trajectories are created\&. ''')
+.fi
+.PP
+Definition at line 23 of file init\&.py\&.
+.SS "init\&.prod = \fBsub1\fP+\fBsub2\fP"
+
+.PP
+Definition at line 147 of file init\&.py\&.
+.SS "int init\&.raffound = 0"
+
+.PP
+Definition at line 76 of file init\&.py\&.
+.SS "tuple init\&.rafsets = raf\&.rafComputation(\fBfid_initRafRes\fP, \fBfid_initRafResALL\fP, \fBfid_initRafResLIST\fP, 'tmpDir', prob, averageConn, rcts, cats, \fBfoodList\fP, maxlength)"
+
+.PP
+Definition at line 167 of file init\&.py\&.
+.SS "tuple init\&.rctToCat = int(round(\fBtotRcts\fP * \fBtotSpecies\fP * prob))"
+
+.PP
+Definition at line 96 of file init\&.py\&.
+.SS "int init\&.rctType = 1"
+
+.PP
+Definition at line 110 of file init\&.py\&.
+.SS "list init\&.species = []"
+
+.PP
+Definition at line 80 of file init\&.py\&.
+.SS "tuple init\&.strToWrite = 'Folder\\tP\\tAC\\tM\\tRAFsize\\tClosure\\tCats\\tuRAF\\n'"
+
+.PP
+Definition at line 63 of file init\&.py\&.
+.SS "tuple init\&.sub1 = ran\&.choice(\fBspecies\fP[:\fBinitSpeciesListLength\fP-1])"
+
+.PP
+Definition at line 142 of file init\&.py\&.
+.SS "tuple init\&.sub2 = ran\&.choice(\fBspecies\fP[:\fBinitSpeciesListLength\fP-1])"
+
+.PP
+Definition at line 145 of file init\&.py\&.
+.SS "list init\&.tmp1 = \fBmolToCleav\fP[0:\fBcutPt\fP]"
+
+.PP
+Definition at line 122 of file init\&.py\&.
+.SS "tuple init\&.tmp1id = \fBspecies\&.index\fP(\fBtmp1\fP)"
+
+.PP
+Definition at line 124 of file init\&.py\&.
+.SS "list init\&.tmp2 = \fBmolToCleav\fP[cutPt:len(\fBmolToCleav\fP)]"
+
+.PP
+Definition at line 130 of file init\&.py\&.
+.SS "tuple init\&.tmp2id = \fBspecies\&.index\fP(\fBtmp2\fP)"
+
+.PP
+Definition at line 132 of file init\&.py\&.
+.SS "tuple init\&.tmpprodid = \fBspecies\&.index\fP(\fBprod\fP)"
+
+.PP
+Definition at line 149 of file init\&.py\&.
+.SS "tuple init\&.totCleavage = \fBsum\fP(map(lambda x: len(\fBx\fP)-1,\fBspecies\fP))"
+
+.PP
+Definition at line 86 of file init\&.py\&.
+.SS "int init\&.totCond = \fBtotSpecies\fP**2"
+
+.PP
+Definition at line 87 of file init\&.py\&.
+.SS "init\&.totRcts = \fBtotCleavage\fP+\fBtotCond\fP"
+
+.PP
+Definition at line 88 of file init\&.py\&.
+.SS "int init\&.totSpecies = 2"
+
+.PP
+Definition at line 84 of file init\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

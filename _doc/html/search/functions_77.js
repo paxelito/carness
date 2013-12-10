@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['writeoverallstatonfile',['writeOverallStatOnFile',['../namespacefilisetti_library.html#ae3ba725da6eaf6bcf202c0dafc445414',1,'filisettiLibrary']]],
-  ['writeoverallstatonfilewhereisay',['writeOverallStatOnFileWhereISay',['../namespacefilisetti_library.html#a296429c499a8e6125c0f5d63eebe71a8',1,'filisettiLibrary']]]
+  ['write_5finit_5fraf_5fall',['write_init_raf_all',['../a00116.html#ad13fc2e762b8deaeb661f939e26e706f',1,'lib::IO::writefiles']]],
+  ['write_5finit_5fraf_5flist',['write_init_raf_list',['../a00116.html#a33a9a95566de3841055c5dbf7fdc3505',1,'lib::IO::writefiles']]]
 ];

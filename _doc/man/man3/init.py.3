@@ -1,0 +1,154 @@
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBinit\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBinit\&.parser\fP"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.args\fP = parser\&.parse_args()"
+.br
+.ti -1c
+.RI "string \fBinit\&.ndn\fP = '_0_new_allStatResults'"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.newdirAllResults\fP = os\&.path\&.join(args\&.strOut, ndn)"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.fname_initRafRes\fP = os\&.path\&.join(newdirAllResults, '0_initRafAnalysis\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.fname_initRafResSUM\fP = os\&.path\&.join(newdirAllResults, '0_initRafAnalysisSUM\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.fname_initRafResLIST\fP = os\&.path\&.join(newdirAllResults, '0_initRafAnalysisLIST\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.fname_initRafResALL\fP = os\&.path\&.join(newdirAllResults, '0_initRafAnalysisALL\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.fid_initRafRes\fP = open(fname_initRafRes, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.fid_initRafResSUM\fP = open(fname_initRafResSUM, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.fid_initRafResLIST\fP = open(fname_initRafResLIST, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.fid_initRafResALL\fP = open(fname_initRafResALL, 'w')"
+.br
+.ti -1c
+.RI "string \fBinit\&.strToWrite\fP = 'Folder\\tP\\tAC\\tM\\tRAFsize\\tClosure\\tCats\\tuRAF\\n'"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.foodList\fP = range(args\&.lastFood+1)"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.avgCon\fP = dn\&.rangeFloat(float(args\&.avgCon[0]), float(args\&.avgCon[1]), float(args\&.avgCon[2]))"
+.br
+.ti -1c
+.RI "int \fBinit\&.raffound\fP = 0"
+.br
+.ti -1c
+.RI "list \fBinit\&.alphabet\fP = ['\fBA\fP', '\fBB\fP']"
+.br
+.ti -1c
+.RI "list \fBinit\&.species\fP = []"
+.br
+.ti -1c
+.RI "int \fBinit\&.totSpecies\fP = 2"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.totCleavage\fP = \fBsum\fP(map(lambda x: len(\fBx\fP)-1,\fBspecies\fP))"
+.br
+.ti -1c
+.RI "int \fBinit\&.totCond\fP = totSpecies**2"
+.br
+.ti -1c
+.RI "\fBinit\&.totRcts\fP = totCleavage+totCond"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.rctToCat\fP = int(round(totRcts * totSpecies * prob))"
+.br
+.ti -1c
+.RI "int \fBinit\&.nCleavage\fP = 0"
+.br
+.ti -1c
+.RI "int \fBinit\&.nCondensa\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.initSpeciesListLength\fP = len(\fBspecies\fP)"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.conf\fP = (1,1,2000,0,200000,0,0,2,args\&.lastFood,prob)"
+.br
+.ti -1c
+.RI "int \fBinit\&.rctType\fP = 1"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.molToCleav\fP = ran\&.choice(\fBspecies\fP[len(\fBalphabet\fP):initSpeciesListLength-1])"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.cutPt\fP = ran\&.randint(1,len(molToCleav)-1)"
+.br
+.ti -1c
+.RI "list \fBinit\&.tmp1\fP = molToCleav[0:cutPt]"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.tmp1id\fP = \fBspecies\&.index\fP(tmp1)"
+.br
+.ti -1c
+.RI "\fBinit\&.find1\fP = True"
+.br
+.ti -1c
+.RI "list \fBinit\&.tmp2\fP = molToCleav[cutPt:len(molToCleav)]"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.tmp2id\fP = \fBspecies\&.index\fP(tmp2)"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.sub1\fP = ran\&.choice(\fBspecies\fP[:initSpeciesListLength-1])"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.idsub1\fP = \fBspecies\&.index\fP(sub1)"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.sub2\fP = ran\&.choice(\fBspecies\fP[:initSpeciesListLength-1])"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.idsub2\fP = \fBspecies\&.index\fP(sub2)"
+.br
+.ti -1c
+.RI "\fBinit\&.prod\fP = sub1+sub2"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.tmpprodid\fP = \fBspecies\&.index\fP(prod)"
+.br
+.ti -1c
+.RI "int \fBinit\&.catalyst\fP = -1"
+.br
+.ti -1c
+.RI "\fBinit\&.catFound\fP = False"
+.br
+.ti -1c
+.RI "tuple \fBinit\&.rafsets\fP = raf\&.rafComputation(fid_initRafRes, fid_initRafResALL, fid_initRafResLIST, 'tmpDir', prob, averageConn, rcts, cats, foodList, maxlength)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

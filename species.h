@@ -141,6 +141,7 @@ public:
     void resetToInitConc(acs_double tmpVolume){concentration=firstConcentration; concToNum(tmpVolume);}
     void setLastSpeciesEvaluated(acs_int tmpID){lastSpeciesEvaluated = tmpID;}
     void insertSecSub(acs_longInt tmpID, acs_double tmpK, acs_longInt tmpCat);
+    bool checkIFtheSecondSubstrateIsAlreadyPresent(acs_longInt tmpSecSubID);
     void insertGillID(acs_longInt tmpID){gillespieEngagement.push_back(tmpID);}
     acs_longInt getGillIDpos(acs_longInt tmpID)const{return gillespieEngagement.at(tmpID);}
     void showGillEngagement();

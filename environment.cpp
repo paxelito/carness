@@ -2506,11 +2506,11 @@ void environment::inserSubListInSpecies()
 								tmpSpeciesIterator->insertSecSub(allReactions.at(tmpRct).getSpecies_II(),tmpCatalysisIterator->getKass(),tmpCatalysisIterator->getCatId());
 							//cout << allReactions.at(tmpRct).getSpecies_II() << " " << tmpCatalysisIterator->getKass() << endl;
 						}
-    				}
-    			}
-    		}
-    	}
-    }
+    				} // if((allReactions.at(tmpRct).getType()) == CONDENSATION || (reverseReactions == true))
+    			} // if(tmpCatalysisIterator->getCat() == tmpCat)
+    		} // for(vector<catalysis>::iterator tmpCatalysisIterator = allCatalysis.begin(); tmpCatalysisIterator != allCatalysis.end(); tmpCatalysisIterator++)
+    	} // if(tmpSpeciesIterator->getComplexCutPnt() > 0)
+    } //  for(vector<species>::iterator tmpSpeciesIterator = allSpecies.begin(); tmpSpeciesIterator != allSpecies.end(); tmpSpeciesIterator++)
 
     //showSubListInSpecies();
 
@@ -2772,6 +2772,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 							temp_rctType = CONDENSATION; // reaction type
 						}catch(exception&e){
 							 cout << "Source Code Line: " << __LINE__ << endl;
+							 speciesIter->showGillEngagement();
 							 cout << "Second condensation step species search, second substrate list size  -> " << speciesIter->getSecSubListSize() << endl;
 							 cerr << "exceptioncaught:" << e.what() << endl;
 							 ExitWithError("performOPTGillespieComputation::searching for second substrates","exceptionerrorthrown");
@@ -2875,18 +2876,18 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 			   // TRY HAS BEEN ALREADY USED
 				if((allReactions.at(catalysisIter->getReactionID()).getType() == CLEAVAGE) || (reverseReactions == true))
 				{
-					temp_mol_I = allReactions.at(catalysisIter->getReactionID()).getSpecies_I();     // SUBSTRATE
-					temp_mol_II = allReactions.at(catalysisIter->getReactionID()).getSpecies_II();   // PRODUCT 1
-					temp_mol_III = allReactions.at(catalysisIter->getReactionID()).getSpecies_III(); // PRODUCT 2
-					temp_mol_IV = catalysisIter->getCat();	// CATALYST
-					temp_reactionID = catalysisIter->getReactionID(); // REACTION ID
+					try{
+						temp_mol_I = allReactions.at(catalysisIter->getReactionID()).getSpecies_I();     // SUBSTRATE
+						temp_mol_II = allReactions.at(catalysisIter->getReactionID()).getSpecies_II();   // PRODUCT 1
+						temp_mol_III = allReactions.at(catalysisIter->getReactionID()).getSpecies_III(); // PRODUCT 2
+						temp_mol_IV = catalysisIter->getCat();	// CATALYST
+						temp_reactionID = catalysisIter->getReactionID(); // REACTION ID
 
-					// Compute the overall number of molecules for the species involved
-					temp_catAmount_TOT = allSpecies.at(temp_mol_IV).getAmount();
-					temp_catAmount_charged = allSpecies.at(temp_mol_IV).getChargeMols();
-					temp_catAmount_NotCharged = allSpecies.at(temp_mol_IV).getNOTchargeMols();
+						// Compute the overall number of molecules for the species involved
+						temp_catAmount_TOT = allSpecies.at(temp_mol_IV).getAmount();
+						temp_catAmount_charged = allSpecies.at(temp_mol_IV).getChargeMols();
+						temp_catAmount_NotCharged = allSpecies.at(temp_mol_IV).getNOTchargeMols();
 
-				   try{
 						temp_substrateAmount_TOT = allSpecies.at(temp_mol_I).getAmount();
 						temp_substrateAmount_charged = allSpecies.at(temp_mol_I).getChargeMols();
 						temp_substrateAmount_NotCharged = allSpecies.at(temp_mol_I).getNOTchargeMols();
@@ -3178,27 +3179,33 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 		}
 
 	}else{ // If there are not possible reactions
-		gillespieMean = 0;
-		gillespieSD = 0;
-		gillespieEntropy = 0;
-		ratioBetweenNewGillTotGill = 0;
-		if(reactionsTime.size() > 0)
-		{
-				tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-				timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-				tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-		}else{
-				tempTime = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-				timeSinceTheLastInFlux = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-				tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-		}
-		reactionsTime.push_back(tempTime);
-		setActualTime(tempTime);
-		gillespieReactionsSelected.push_back(0);
-		allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+		try{
+			gillespieMean = 0;
+			gillespieSD = 0;
+			gillespieEntropy = 0;
+			ratioBetweenNewGillTotGill = 0;
+			if(reactionsTime.size() > 0)
+			{
+					tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+					timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+					tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+			}else{
+					tempTime = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+					timeSinceTheLastInFlux = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+					tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+			}
+			reactionsTime.push_back(tempTime);
+			setActualTime(tempTime);
+			gillespieReactionsSelected.push_back(0);
+			allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
-		if(debugLevel >= RUNNING_VERSION)
-				cout << "\t\t\t|- NO REACTIONS AT THIS STEP" << endl;
+			if(debugLevel >= RUNNING_VERSION)
+					cout << "\t\t\t|- NO REACTIONS AT THIS STEP" << endl;
+		}catch(exception&e){
+			 cout << "Source Code Line: " << __LINE__ << endl;
+			 cerr << "exceptioncaught:" << e.what() << endl;
+			 ExitWithError("performOPTGillespieComputation::Perform Reaction","exceptionerrorthrown");
+		}
 	} // end if((acs_longInt)allGillespieScores.size() > 0)
 
 	// Store perform reaction time and start remaining processes timer
@@ -3243,7 +3250,6 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 			 ExitWithError("performOPTGillespieComputation::Perform molecules efflux","exceptionerrorthrown");
 		}
 	 }
-
 
     // Perform molecule charging
     if(energy == ENERGYBASED)
@@ -6060,7 +6066,8 @@ bool environment::complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGe
                         allSpecies.at(i).setDiffusion(tmpDiffusionContribute);
                     }
                     // Add the second substrate to the complex species
-                    allSpecies.at(i).insertSecSub(tmpSecSub_ID,allCatalysis.at(tmpCatID).getKass(), tmpCatID);
+                    if(!allSpecies.at(i).checkIFtheSecondSubstrateIsAlreadyPresent(tmpSecSub_ID))
+                    	allSpecies.at(i).insertSecSub(tmpSecSub_ID,allCatalysis.at(tmpCatID).getKass(), tmpCatID);
                     break;
                 }
             }
@@ -6088,7 +6095,7 @@ bool environment::complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGe
 
             // Add the second substrate to the complex species
             if(debugLevel == COMPLEXSTUFF) cout << "COMPLEX STUFF |- Catalysis: " << tmpCatID << endl;
-            allSpecies.at(allSpecies.size()-1).insertSecSub(tmpSecSub_ID,allCatalysis.at(tmpCatID).getKass(), tmpCatID);
+            allSpecies.at(tmpIdSpeciesToEvaluate).insertSecSub(tmpSecSub_ID,allCatalysis.at(tmpCatID).getKass(), tmpCatID);
 
             if(tmpCpxType == ESOERGONIC)
             {

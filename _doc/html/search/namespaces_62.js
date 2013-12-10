@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bufferedfluxanalysis',['bufferedFluxAnalysis',['../namespacebuffered_flux_analysis.html',1,'']]]
+  ['bufferedfluxanalysis',['bufferedFluxAnalysis',['../a00105.html',1,'']]]
 ];

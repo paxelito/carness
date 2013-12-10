@@ -1,15 +1,15 @@
 var hierarchy =
 [
-    [ "catalysis", "classcatalysis.html", null ],
-    [ "commonFunctions", "classcommon_functions.html", null ],
-    [ "environment", "classenvironment.html", null ],
-    [ "gillespie", "classgillespie.html", null ],
-    [ "MTRand_int32", "class_m_t_rand__int32.html", [
-      [ "MTRand", "class_m_t_rand.html", null ],
-      [ "MTRand53", "class_m_t_rand53.html", null ],
-      [ "MTRand_closed", "class_m_t_rand__closed.html", null ],
-      [ "MTRand_open", "class_m_t_rand__open.html", null ]
+    [ "catalysis", "a00012.html", null ],
+    [ "commonFunctions", "a00013.html", null ],
+    [ "environment", "a00014.html", null ],
+    [ "gillespie", "a00015.html", null ],
+    [ "MTRand_int32", "a00019.html", [
+      [ "MTRand", "a00016.html", null ],
+      [ "MTRand53", "a00017.html", null ],
+      [ "MTRand_closed", "a00018.html", null ],
+      [ "MTRand_open", "a00020.html", null ]
     ] ],
-    [ "reactions", "classreactions.html", null ],
-    [ "species", "classspecies.html", null ]
+    [ "reactions", "a00021.html", null ],
+    [ "species", "a00022.html", null ]
 ];

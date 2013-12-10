@@ -1,4 +1,4 @@
-.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" 3 "Sat Oct 26 2013" "Version 4.8 (20131026.60)" "CaRNeSS" \" -*- nroff -*-
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/start.m" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -40,18 +40,16 @@ BOOLEANE nell che verranno
 .br
 successivamente assegnate con 
 .br
-probabilità uniforme alle 
+probabilit uniforme alle 
 .br
-\fBreazioni\fP la funzione è divisa 
+\fBreazioni\fP la funzione divisa \fBa\fP 
 .br
-\fBa\fP la prima \fBmetà\fP corrisponde 
-.br
-alla \fBcondensazione\fP (8 bit)"
+la prima \fBmet\fP corrisponde alla \fBcondensazione\fP (8 bit)"
 .br
 .ti -1c
 .RI "converto in decimale for per 
 .br
-default è uniforme \fBfunzioni_booleane_in_dec\fP (\fBi\fP, 2)"
+default uniforme \fBfunzioni_booleane_in_dec\fP (\fBi\fP, 2)"
 .br
 .in -1c
 .SS "Variables"
@@ -85,13 +83,13 @@ matrici o vettori \fBreactionProbability\fP = [0\&.000516529"
 .RI "\fBnome_prob\fP = [0\&.125"
 .br
 .ti -1c
-.RI "\fBlMaxInflux\fP = [4]"
+.RI "\fBlMaxInflux\fP = [2]"
 .br
 .ti -1c
 .RI "\fBparametro_screening\fP = \fBlMaxInflux\fP"
 .br
 .ti -1c
-.RI "\fBnome_folder\fP = [4]"
+.RI "\fBnome_folder\fP = [2]"
 .br
 .ti -1c
 .RI "****************************************************************************************************************************************************Inserimento 
@@ -103,7 +101,7 @@ dei PARAMETRI \fBFISSI\fP"
 .br
 dei PARAMETRI quelli che 
 .br
-restano cioè costanti in tutti 
+restano cio costanti in tutti 
 .br
 gli esperimenti della serie \fBnSIM\fP =1"
 .br
@@ -156,12 +154,12 @@ vari living \fBnReactions\fP =200000000"
 .ti -1c
 .RI "Lunghezza massima delle specie 
 .br
-da creare \fBvirtual_fd_max_length\fP = 4"
+da creare \fBmassima_lunghezza_su_cui_calcolare_le_reazioni\fP = 6"
 .br
 .ti -1c
 .RI "Lunghezza massima fino alla 
 .br
-quale creare le \fBreazioni\fP \fBmaxLOut\fP = 0"
+quale creare le \fBreazioni\fP \fBmaxLOut\fP = 2"
 .br
 .ti -1c
 .RI "\fBse\fP =0 non viene considerato"
@@ -248,11 +246,9 @@ nel sistema che possono essere
 .br
 energizzate per ogni specie 
 .br
-create \fBc\fP è una certa 
+create \fBc\fP una certa probabilit 
 .br
-probabilità di essere 
-.br
-energizzabile o meno \fBmoleculeDecay_KineticConstant\fP =0\&.02"
+di essere energizzabile o meno \fBmoleculeDecay_KineticConstant\fP =0\&.02"
 .br
 .ti -1c
 .RI "\fBdiffusion_contribute\fP =0"
@@ -274,7 +270,7 @@ quelle che restano dopo aver
 .br
 conservato \fBi\fP polimeri fino \fBa\fP 
 .br
-lunghezzamaxfd \fBlunghezza_max_fd\fP = 4"
+lunghezzamaxfd \fBlunghezza_max_fd\fP = 7"
 .br
 .ti -1c
 .RI "\fBlunghezza\fP dei monomeri 
@@ -299,22 +295,31 @@ powerlaw con esponente gamma \fBgamma_powerlaw_concentrazioni\fP = 2\&.1"
 .RI "parametri per la distribuzione dei \fBcatalizzatori\fP"
 .br
 .ti -1c
-.RI "controllo che non ci siano 
+.RI "\fBcontrollo\fP che non ci siano 
 .br
 cicli nell \fBinflux\fP"
+.br
+.ti -1c
+.RI "NUOVO PARAMETRO \fBvolumeGrowth\fP = 0"
+.br
+.ti -1c
+.RI "NUOVO PARAMETRO \fBstochDivision\fP = 0"
+.br
+.ti -1c
+.RI "NUOVO PARAMETRO \fBsimFolder\fP \fBnets\fP = 10"
 .br
 .ti -1c
 .RI "Number of different networks \fBensambles\fP"
 .br
 .ti -1c
-.RI "Nome della cartella dove verrˆ 
+.RI "Nome della cartella dove verr 
 .br
 salvata la \fBsimulazione\fP 
 .br
-\fBsimFolder\fP \fBpath\fP = '~/Documents/init/'"
+\fBsimFolder\fP \fBpath\fP = 'SIMS'"
 .br
 .ti -1c
-.RI "Percorso dove verrˆ creata la 
+.RI "Percorso dove verr creata la 
 .br
 cartella \fBsimFolder\fP dove 
 .br
@@ -367,11 +372,9 @@ BOOLEANE nell che verranno
 .br
 successivamente assegnate con 
 .br
-probabilità uniforme alle 
+probabilit uniforme alle 
 .br
-\fBreazioni\fP la funzione è divisa 
-.br
-\fBa\fP \fBmetà\fP"
+\fBreazioni\fP la funzione divisa \fBa\fP \fBmet\fP"
 .br
 .ti -1c
 .RI "introduzione delle FUNZIONI 
@@ -380,15 +383,15 @@ BOOLEANE nell che verranno
 .br
 successivamente assegnate con 
 .br
-probabilità uniforme alle 
+probabilit uniforme alle 
 .br
-\fBreazioni\fP la funzione è divisa 
+\fBreazioni\fP la funzione divisa \fBa\fP 
 .br
-\fBa\fP la prima \fBmetà\fP corrisponde 
+la prima \fBmet\fP corrisponde alla 
 .br
-alla la seconda parte al 
+la seconda parte al cleavage(4 
 .br
-cleavage(4 bit)\&.%esempio \fBfunzioni_booleane_in_dec\fP = bi2de(funzioni_booleane,'left-msb')"
+bit)\&.%esempio \fBfunzioni_booleane_in_dec\fP = bi2de(funzioni_booleane,'left-msb')"
 .br
 .ti -1c
 .RI "\fBparte2_nome_cartella\fP = num2str(\fBnome_folder\fP(\fBi\fP))"
@@ -399,11 +402,11 @@ cleavage(4 bit)\&.%esempio \fBfunzioni_booleane_in_dec\fP = bi2de(funzioni_boole
 .in -1c
 .SH "Function Documentation"
 .PP 
-.SS "introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle \fBreazioni\fP la funzione è divisa \fBa\fP la prima \fBmetà\fP corrisponde alla condensazione (8bit)"
+.SS "introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilit uniforme alle \fBreazioni\fP la funzione divisa \fBa\fP la prima \fBmet\fP corrisponde alla condensazione (8bit)"
 
 .SS "\fBif\fP exist (simFolder\&.name, 'dir')"
 
-.SS "converto in decimale for per default è uniforme funzioni_booleane_in_dec (\fBi\fP, 2)"
+.SS "converto in decimale for per default uniforme funzioni_booleane_in_dec (\fBi\fP, 2)"
 
 .SS "Numero massimo di reazioni (secondo parametro di \fBstop\fP oltre al numero disecondi)\fC [pure virtual]\fP"
 
@@ -420,7 +423,7 @@ cleavage(4 bit)\&.%esempio \fBfunzioni_booleane_in_dec\fP = bi2de(funzioni_boole
 .SS "Numero di al momento significa che alla fine di ogni generazione da ogni \fBfile\fP di fine sim partono altre lasciare ad !\fBlastFiringDiskSpeciesID\fP = 0"
 
 .PP
-Definition at line 76 of file start\&.m\&.
+Definition at line 79 of file start\&.m\&.
 .SS "livello di dettaglio messaggi durante lasciare a"
 
 .PP
@@ -464,7 +467,7 @@ Definition at line 54 of file start\&.m\&.
 .SS "introduzione delle FUNZIONI BOOLEANE nell energia"
 
 .PP
-Definition at line 108 of file start\&.m\&.
+Definition at line 111 of file start\&.m\&.
 .SS "energy =0"
 
 .PP
@@ -472,11 +475,11 @@ Definition at line 39 of file start\&.m\&.
 .SS "Number of different networks ensambles"
 
 .PP
-Definition at line 69 of file start\&.m\&.
+Definition at line 72 of file start\&.m\&.
 .SS "\fBend\fP fid20 = fopen('lanciatore\&.sh','w')"
 
 .PP
-Definition at line 89 of file start\&.m\&.
+Definition at line 92 of file start\&.m\&.
 .SS "definisce il tempo in cui vengono salvati \fBi\fP \fBfile\fP durante la \fBsimulazione\fP fileTimesSaveInterval =0"
 
 .PP
@@ -489,10 +492,10 @@ Definition at line 41 of file start\&.m\&.
 
 .PP
 Definition at line 20 of file start\&.m\&.
-.SS "introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle \fBreazioni\fP la funzione è divisa \fBa\fP la prima \fBmetà\fP corrisponde alla la seconda parte al cleavage (4 bit)\&. %esempio funzioni_booleane_in_dec = bi2de(funzioni_booleane,'left-msb')"
+.SS "converto in decimale funzioni_booleane_in_dec = bi2de(funzioni_booleane,'left-msb')"
 
 .PP
-Definition at line 116 of file start\&.m\&.
+Definition at line 119 of file start\&.m\&.
 .SS "parametro uniforme sulle powerlaw con esponente gamma gamma_powerlaw_concentrazioni = 2\&.1"
 
 .PP
@@ -500,20 +503,20 @@ Definition at line 61 of file start\&.m\&.
 .SS "Numero di generazioni"
 
 .PP
-Definition at line 75 of file start\&.m\&.
+Definition at line 78 of file start\&.m\&.
 .SS "\fBend\fP************************************************************************** ********************* ***** S T \fBA\fP R T***** ********************* for i"
 \fBInitial value:\fP
 .PP
 .nf
-= 1:virtual_fd_max_length
+= 1:massima_lunghezza_su_cui_calcolare_le_reazioni
     lastFiringDiskSpeciesID = lastFiringDiskSpeciesID + length(alphabet)^i
 .fi
 .PP
-Definition at line 77 of file start\&.m\&.
-.SS "controllo che non ci siano cicli nell influx"
+Definition at line 80 of file start\&.m\&.
+.SS "\fBcontrollo\fP che non ci siano cicli nell influx"
 
 .PP
-Definition at line 69 of file start\&.m\&.
+Definition at line 68 of file start\&.m\&.
 .SS "influx_rate"
 \fBInitial value:\fP
 .PP
@@ -550,12 +553,12 @@ Definition at line 46 of file start\&.m\&.
 .SS "\fBend\fP lastFiringDiskSpeciesID = lastFiringDiskSpeciesID -1"
 
 .PP
-Definition at line 80 of file start\&.m\&.
-.SS "\fBse\fP è il sistema è chiuso lMaxInflux = [4]"
+Definition at line 83 of file start\&.m\&.
+.SS "\fBse\fP il sistema chiuso lMaxInflux = [2]"
 
 .PP
 Definition at line 13 of file start\&.m\&.
-.SS "percentuale di specie da cancellare rispetto \fBa\fP tutte quelle che restano dopo aver conservato \fBi\fP polimeri fino \fBa\fP lunghezzamaxfd lunghezza_max_fd = 4"
+.SS "percentuale di specie da cancellare rispetto \fBa\fP tutte quelle che restano dopo aver conservato \fBi\fP polimeri fino \fBa\fP lunghezzamaxfd lunghezza_max_fd = 7"
 
 .PP
 Definition at line 59 of file start\&.m\&.
@@ -563,23 +566,31 @@ Definition at line 59 of file start\&.m\&.
 
 .PP
 Definition at line 60 of file start\&.m\&.
-.SS "Lunghezza massima fino alla quale creare le \fBreazioni\fP maxLOut = 0"
+.SS "Lunghezza massima delle specie da creare massima_lunghezza_su_cui_calcolare_le_reazioni = 6"
+
+.PP
+Definition at line 33 of file start\&.m\&.
+.SS "Lunghezza massima fino alla quale creare le \fBreazioni\fP maxLOut = 2"
 
 .PP
 Definition at line 34 of file start\&.m\&.
-.SS "introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilità uniforme alle \fBreazioni\fP la funzione è divisa \fBa\fP metà"
+.SS "introduzione delle FUNZIONI BOOLEANE nell che verranno successivamente assegnate con probabilit uniforme alle \fBreazioni\fP la funzione divisa \fBa\fP met"
 
 .PP
-Definition at line 108 of file start\&.m\&.
-.SS "percentuale di specie presenti nel sistema che possono essere energizzate per ogni specie create \fBc\fP è una certa probabilità di essere energizzabile o meno moleculeDecay_KineticConstant =0\&.02"
+Definition at line 111 of file start\&.m\&.
+.SS "percentuale di specie presenti nel sistema che possono essere energizzate per ogni specie create \fBc\fP una certa probabilit di essere energizzabile o meno moleculeDecay_KineticConstant =0\&.02"
 
 .PP
 Definition at line 53 of file start\&.m\&.
-.SS "Percorso dove verrˆ creata la cartella \fBsimFolder\fP dove verranno salvati tutti \fBi\fP \fBfile\fP********************************************************************** nGEN =10"
+.SS "NUOVO PARAMETRO \fBsimFolder\fP nets = 10"
 
 .PP
-Definition at line 75 of file start\&.m\&.
-.SS "nome_folder = [4]"
+Definition at line 72 of file start\&.m\&.
+.SS "Percorso dove verr creata la cartella \fBsimFolder\fP dove verranno salvati tutti \fBi\fP \fBfile\fP********************************************************************** nGEN =10"
+
+.PP
+Definition at line 78 of file start\&.m\&.
+.SS "nome_folder = [2]"
 
 .PP
 Definition at line 15 of file start\&.m\&.
@@ -591,14 +602,14 @@ Definition at line 12 of file start\&.m\&.
 
 .PP
 Definition at line 29 of file start\&.m\&.
-.SS "************************************************************************** ************************************************************************** Inserimento dei PARAMETRI quelli che restano cioè costanti in tutti gli esperimenti della serie nSIM =1"
+.SS "************************************************************************** ************************************************************************** Inserimento dei PARAMETRI quelli che restano cio costanti in tutti gli esperimenti della serie nSIM =1"
 
 .PP
 Definition at line 23 of file start\&.m\&.
 .SS "Numero di al momento significa che alla fine di ogni generazione da ogni \fBfile\fP di fine sim partono altre Nsim"
 
 .PP
-Definition at line 75 of file start\&.m\&.
+Definition at line 78 of file start\&.m\&.
 .SS "overallConcentration =0\&.0333"
 
 .PP
@@ -610,15 +621,15 @@ Definition at line 14 of file start\&.m\&.
 .SS "parte2_nome_cartella = num2str(\fBnome_folder\fP(\fBi\fP))"
 
 .PP
-Definition at line 138 of file start\&.m\&.
+Definition at line 142 of file start\&.m\&.
 .SS "parte3_nome_cartella = ('_rete_n_')"
 
 .PP
-Definition at line 139 of file start\&.m\&.
-.SS "\fBconcAnalysis\fP(params) clear all close all params path = '~/Documents/init/'"
+Definition at line 143 of file start\&.m\&.
+.SS "\fBconcAnalysis\fP(params) clear all close all params path = 'SIMS'"
 
 .PP
-Definition at line 71 of file start\&.m\&.
+Definition at line 74 of file start\&.m\&.
 .SS "Numero di secondi randomSeed =0"
 
 .PP
@@ -663,6 +674,10 @@ Definition at line 26 of file start\&.m\&.
 
 .PP
 Definition at line 55 of file start\&.m\&.
+.SS "NUOVO PARAMETRO stochDivision = 0"
+
+.PP
+Definition at line 70 of file start\&.m\&.
 .SS "parametro switch"
 
 .PP
@@ -670,7 +685,7 @@ Definition at line 60 of file start\&.m\&.
 .SS "thisFolder = pwd"
 
 .PP
-Definition at line 83 of file start\&.m\&.
+Definition at line 86 of file start\&.m\&.
 .SS "Definisce il tempo in cui vengono salvati \fBi\fP dati sui \fBfile\fP times"
 
 .PP
@@ -679,14 +694,14 @@ Definition at line 28 of file start\&.m\&.
 
 .PP
 Definition at line 27 of file start\&.m\&.
-.SS "Lunghezza massima delle specie da creare virtual_fd_max_length = 4"
-
-.PP
-Definition at line 33 of file start\&.m\&.
 .SS "volume =1e-18"
 
 .PP
 Definition at line 38 of file start\&.m\&.
+.SS "NUOVO PARAMETRO volumeGrowth = 0"
+
+.PP
+Definition at line 69 of file start\&.m\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for CaRNeSS from the source code\&.

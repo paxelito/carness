@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="dir_b3750e55f00396bd5244ef578e251f95" kind="dir">
+    <compoundname>/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib</compoundname>
+    <innerdir refid="dir_8edb74ad4c64a7a72e2fdc15109db5be">/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/dyn</innerdir>
+    <innerdir refid="dir_f38b9cc9be8f8dcc2773725189fced3b">/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/graph</innerdir>
+    <innerdir refid="dir_a51d38254de93c3c42158fdf6f6531dc">/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO</innerdir>
+    <innerfile refid="a00049">__init__.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/"/>
+  </compounddef>
+</doxygen>

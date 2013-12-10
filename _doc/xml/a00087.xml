@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00087" kind="file">
+    <compoundname>gillespie.cpp</compoundname>
+    <includes refid="a00088" local="yes">gillespie.h</includes>
+    <incdepgraph>
+      <node id="710">
+        <label>mtrand.h</label>
+        <link refid="a00091"/>
+      </node>
+      <node id="706">
+        <label>cmath</label>
+      </node>
+      <node id="695">
+        <label>/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.cpp</label>
+        <link refid="gillespie.cpp"/>
+        <childnode refid="696" relation="include">
+        </childnode>
+      </node>
+      <node id="701">
+        <label>string</label>
+      </node>
+      <node id="697">
+        <label>acs_headers.h</label>
+        <link refid="a00072"/>
+        <childnode refid="698" relation="include">
+        </childnode>
+        <childnode refid="699" relation="include">
+        </childnode>
+        <childnode refid="700" relation="include">
+        </childnode>
+        <childnode refid="701" relation="include">
+        </childnode>
+        <childnode refid="702" relation="include">
+        </childnode>
+        <childnode refid="703" relation="include">
+        </childnode>
+        <childnode refid="704" relation="include">
+        </childnode>
+        <childnode refid="705" relation="include">
+        </childnode>
+        <childnode refid="706" relation="include">
+        </childnode>
+        <childnode refid="707" relation="include">
+        </childnode>
+        <childnode refid="708" relation="include">
+        </childnode>
+        <childnode refid="709" relation="include">
+        </childnode>
+        <childnode refid="710" relation="include">
+        </childnode>
+      </node>
+      <node id="700">
+        <label>fstream</label>
+      </node>
+      <node id="709">
+        <label>ctime</label>
+      </node>
+      <node id="704">
+        <label>vector</label>
+      </node>
+      <node id="703">
+        <label>sstream</label>
+      </node>
+      <node id="707">
+        <label>cstdlib</label>
+      </node>
+      <node id="708">
+        <label>clocale</label>
+      </node>
+      <node id="699">
+        <label>iostream</label>
+      </node>
+      <node id="705">
+        <label>deque</label>
+      </node>
+      <node id="696">
+        <label>gillespie.h</label>
+        <link refid="a00088"/>
+        <childnode refid="697" relation="include">
+        </childnode>
+      </node>
+      <node id="698">
+        <label>stdio.h</label>
+      </node>
+      <node id="702">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>gillespie.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>acsm2s</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by<sp/>Alessandro<sp/>Filisetti<sp/>on<sp/>22/04/09.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>2009<sp/>__MyCompanyName__.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/></highlight><highlight class="comment">//prova2<sp/>svn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="a00088" kindref="compound">gillespie.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="a00015_1af763c24d6107109108d32b5cc21c116a" refkind="member"><highlight class="normal"><ref refid="a00015_1a1487279f0440557a26662ff6356b8c17" kindref="member">gillespie::gillespie</ref>(<ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpIDU,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpIdReactionType,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpScore,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpMolI,<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpMolII,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpMolIII,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpMolIV,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpIdReaction,<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpIdCatalysis)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id_u<sp/>=<sp/>tmpIDU;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idReactionType<sp/>=<sp/>tmpIdReactionType;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>score<sp/>=<sp/>tmpScore;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>molI<sp/>=<sp/>tmpMolI;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>molII<sp/>=<sp/>tmpMolII;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>molIII<sp/>=<sp/>tmpMolIII;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>molIV<sp/>=<sp/>tmpMolIV;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idReaction<sp/>=<sp/>tmpIdReaction;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idCatalysis<sp/>=<sp/>tmpIdCatalysis;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nrgSide<sp/>=<sp/><ref refid="a00072_1a15e77522039bb4bb52000b65773c83cf" kindref="member">NOTHINGLOAD</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="a00015_1a0a38f4fd563208beba389f7f8e8eed4a" refkind="member"><highlight class="normal"><ref refid="a00015_1a1487279f0440557a26662ff6356b8c17" kindref="member">gillespie::gillespie</ref>(<ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpIDU,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpIdReactionType,<sp/><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpScore,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpMolI,<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpMolII,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpMolIII,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpMolIV,<sp/><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpNRGside,<sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpIdReaction,<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpIdCatalysis)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id_u<sp/>=<sp/>tmpIDU;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idReactionType<sp/>=<sp/>tmpIdReactionType;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>score<sp/>=<sp/>tmpScore;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>molI<sp/>=<sp/>tmpMolI;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>molII<sp/>=<sp/>tmpMolII;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>molIII<sp/>=<sp/>tmpMolIII;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>molIV<sp/>=<sp/>tmpMolIV;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idReaction<sp/>=<sp/>tmpIdReaction;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idCatalysis<sp/>=<sp/>tmpIdCatalysis;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nrgSide<sp/>=<sp/>tmpNRGside;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.cpp"/>
+  </compounddef>
+</doxygen>

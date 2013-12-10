@@ -1,0 +1,443 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="a00015" kind="class" prot="public">
+    <compoundname>gillespie</compoundname>
+    <includes refid="a00088" local="no">gillespie.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="a00015_1ad2d81c2b7559a29e929465615a9b9304" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::id_u</definition>
+        <argsstring></argsstring>
+        <name>id_u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ID </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="15" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00015_1ad80d2ec8997c1070cd7902e6b57421f3" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int gillespie::idReactionType</definition>
+        <argsstring></argsstring>
+        <name>idReactionType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reaction type (go to acs_header.h for more informations) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="16" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00015_1a0d4da8dc4cce6dc4afac568285d05630" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+        <definition>acs_double gillespie::score</definition>
+        <argsstring></argsstring>
+        <name>score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Single Gillespie propensity </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="17" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00015_1a6cd3f0f3dd2bc19429e3aaba80526652" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::molI</definition>
+        <argsstring></argsstring>
+        <name>molI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>According to the specific reaction type molI,II,III and IV represents different species (catalyst rather than substract...) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="18" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00015_1a6ac2d144656fc4d30f2efd9563c0182b" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::molII</definition>
+        <argsstring></argsstring>
+        <name>molII</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="19" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00015_1afeb354097e0d6f051677adbfb86fa2c1" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::molIII</definition>
+        <argsstring></argsstring>
+        <name>molIII</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="20" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00015_1a39f4883cf382db32e12fdf926a31d33a" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::molIV</definition>
+        <argsstring></argsstring>
+        <name>molIV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="21" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00015_1a228d24cfcc9583469a8db9550fe38ed8" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::idReaction</definition>
+        <argsstring></argsstring>
+        <name>idReaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reactions object foreing key </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="22" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00015_1a86bfe89b068963d1f02753ce3a19a6cb" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::idCatalysis</definition>
+        <argsstring></argsstring>
+        <name>idCatalysis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>catalysis object foreing key </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="23" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00015_1afcb586c854d91b04f676b406d80d859d" prot="private" static="no" mutable="no">
+        <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int gillespie::nrgSide</definition>
+        <argsstring></argsstring>
+        <name>nrgSide</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>catalystLoaded, SubstrateLoaded, BothLoaded, NOenergy </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="24" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a00015_1a1487279f0440557a26662ff6356b8c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gillespie::gillespie</definition>
+        <argsstring>()</argsstring>
+        <name>gillespie</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1af763c24d6107109108d32b5cc21c116a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gillespie::gillespie</definition>
+        <argsstring>(acs_longInt tmpIDU, acs_int tmpIdReactionType, acs_double tmpScore, acs_longInt tmpMolI, acs_longInt tmpMolII, acs_longInt tmpMolIII, acs_longInt tmpMolIV, acs_longInt tmpIdReaction, acs_longInt tmpIdCatalysis)</argsstring>
+        <name>gillespie</name>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpIDU</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpIdReactionType</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+          <declname>tmpScore</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpMolI</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpMolII</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpMolIII</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpMolIV</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpIdReaction</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpIdCatalysis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gillespie Obj constructor <simplesect kind="version"><para>1.0 </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmpRndDoubleGen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>randomGenerator reference </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="27" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.cpp" bodystart="21" bodyend="36"/>
+        <references refid="a00072_1a15e77522039bb4bb52000b65773c83cf" compoundref="a00072" startline="97">NOTHINGLOAD</references>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1a0a38f4fd563208beba389f7f8e8eed4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gillespie::gillespie</definition>
+        <argsstring>(acs_longInt tmpIDU, acs_int tmpIdReactionType, acs_double tmpScore, acs_longInt tmpMolI, acs_longInt tmpMolII, acs_longInt tmpMolIII, acs_longInt tmpMolIV, acs_int tmpNRGside, acs_longInt tmpIdReaction, acs_longInt tmpIdCatalysis)</argsstring>
+        <name>gillespie</name>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpIDU</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpIdReactionType</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+          <declname>tmpScore</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpMolI</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpMolII</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpMolIII</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpMolIV</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpNRGside</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpIdReaction</declname>
+        </param>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpIdCatalysis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="30" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.cpp" bodystart="38" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1a33a97651932d8f82d82d164c94a2eae7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gillespie::~gillespie</definition>
+        <argsstring>()</argsstring>
+        <name>~gillespie</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="33" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1a6aba3b283efc955bd4869f663ab877d6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::getID</definition>
+        <argsstring>() const </argsstring>
+        <name>getID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="36" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1a25d1e86363cdd7fabbb624b85620d1db" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int gillespie::getIdReactionType</definition>
+        <argsstring>() const </argsstring>
+        <name>getIdReactionType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="37" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1aa0ba52c30f6172a034e3b29afd074106" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+        <definition>acs_double gillespie::getScore</definition>
+        <argsstring>() const </argsstring>
+        <name>getScore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="38" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1a8de52ad4b41daa64e69c897541b69629" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::getMolI</definition>
+        <argsstring>() const </argsstring>
+        <name>getMolI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1a842457bf58d6af34b992a2c3fe27e4f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::getMolII</definition>
+        <argsstring>() const </argsstring>
+        <name>getMolII</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="40" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1ab3d608ab2016a5a06408a76a1d12aabf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::getMolIII</definition>
+        <argsstring>() const </argsstring>
+        <name>getMolIII</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="41" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1a01e1fb80634ae8fd32ce20fd7b5181ba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::getMolIV</definition>
+        <argsstring>() const </argsstring>
+        <name>getMolIV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="42" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1a8d4daffecd91b32fb59a94eae6de8d0e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::getReactionID</definition>
+        <argsstring>() const </argsstring>
+        <name>getReactionID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="43" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1a0f2202c3d3662ce7cec6b127f066f715" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt gillespie::getCatalysisID</definition>
+        <argsstring>() const </argsstring>
+        <name>getCatalysisID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="44" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="a00015_1ad668afc14941b6842c703046a1a2d4c1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+        <definition>acs_int gillespie::getNRGside</definition>
+        <argsstring>() const </argsstring>
+        <name>getNRGside</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="45" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alessandro Filisetti </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+<simplesect kind="date"><para>2009-04-21 </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" line="13" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/gillespie.h" bodystart="12" bodyend="49"/>
+    <listofallmembers>
+      <member refid="a00015_1a0f2202c3d3662ce7cec6b127f066f715" prot="public" virt="non-virtual"><scope>gillespie</scope><name>getCatalysisID</name></member>
+      <member refid="a00015_1a6aba3b283efc955bd4869f663ab877d6" prot="public" virt="non-virtual"><scope>gillespie</scope><name>getID</name></member>
+      <member refid="a00015_1a25d1e86363cdd7fabbb624b85620d1db" prot="public" virt="non-virtual"><scope>gillespie</scope><name>getIdReactionType</name></member>
+      <member refid="a00015_1a8de52ad4b41daa64e69c897541b69629" prot="public" virt="non-virtual"><scope>gillespie</scope><name>getMolI</name></member>
+      <member refid="a00015_1a842457bf58d6af34b992a2c3fe27e4f6" prot="public" virt="non-virtual"><scope>gillespie</scope><name>getMolII</name></member>
+      <member refid="a00015_1ab3d608ab2016a5a06408a76a1d12aabf" prot="public" virt="non-virtual"><scope>gillespie</scope><name>getMolIII</name></member>
+      <member refid="a00015_1a01e1fb80634ae8fd32ce20fd7b5181ba" prot="public" virt="non-virtual"><scope>gillespie</scope><name>getMolIV</name></member>
+      <member refid="a00015_1ad668afc14941b6842c703046a1a2d4c1" prot="public" virt="non-virtual"><scope>gillespie</scope><name>getNRGside</name></member>
+      <member refid="a00015_1a8d4daffecd91b32fb59a94eae6de8d0e" prot="public" virt="non-virtual"><scope>gillespie</scope><name>getReactionID</name></member>
+      <member refid="a00015_1aa0ba52c30f6172a034e3b29afd074106" prot="public" virt="non-virtual"><scope>gillespie</scope><name>getScore</name></member>
+      <member refid="a00015_1a1487279f0440557a26662ff6356b8c17" prot="public" virt="non-virtual"><scope>gillespie</scope><name>gillespie</name></member>
+      <member refid="a00015_1af763c24d6107109108d32b5cc21c116a" prot="public" virt="non-virtual"><scope>gillespie</scope><name>gillespie</name></member>
+      <member refid="a00015_1a0a38f4fd563208beba389f7f8e8eed4a" prot="public" virt="non-virtual"><scope>gillespie</scope><name>gillespie</name></member>
+      <member refid="a00015_1ad2d81c2b7559a29e929465615a9b9304" prot="private" virt="non-virtual"><scope>gillespie</scope><name>id_u</name></member>
+      <member refid="a00015_1a86bfe89b068963d1f02753ce3a19a6cb" prot="private" virt="non-virtual"><scope>gillespie</scope><name>idCatalysis</name></member>
+      <member refid="a00015_1a228d24cfcc9583469a8db9550fe38ed8" prot="private" virt="non-virtual"><scope>gillespie</scope><name>idReaction</name></member>
+      <member refid="a00015_1ad80d2ec8997c1070cd7902e6b57421f3" prot="private" virt="non-virtual"><scope>gillespie</scope><name>idReactionType</name></member>
+      <member refid="a00015_1a6cd3f0f3dd2bc19429e3aaba80526652" prot="private" virt="non-virtual"><scope>gillespie</scope><name>molI</name></member>
+      <member refid="a00015_1a6ac2d144656fc4d30f2efd9563c0182b" prot="private" virt="non-virtual"><scope>gillespie</scope><name>molII</name></member>
+      <member refid="a00015_1afeb354097e0d6f051677adbfb86fa2c1" prot="private" virt="non-virtual"><scope>gillespie</scope><name>molIII</name></member>
+      <member refid="a00015_1a39f4883cf382db32e12fdf926a31d33a" prot="private" virt="non-virtual"><scope>gillespie</scope><name>molIV</name></member>
+      <member refid="a00015_1afcb586c854d91b04f676b406d80d859d" prot="private" virt="non-virtual"><scope>gillespie</scope><name>nrgSide</name></member>
+      <member refid="a00015_1a0d4da8dc4cce6dc4afac568285d05630" prot="private" virt="non-virtual"><scope>gillespie</scope><name>score</name></member>
+      <member refid="a00015_1a33a97651932d8f82d82d164c94a2eae7" prot="public" virt="non-virtual"><scope>gillespie</scope><name>~gillespie</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -2,14 +2,14 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="dir_6edaaf4801aa0ea12467972748371704" kind="dir">
     <compoundname>/Users/alessandrofilisetti/Documents/GIT/carness/Debug</compoundname>
-    <innerfile refid="catalysis_8d">catalysis.d</innerfile>
-    <innerfile refid="common_functions_8d">commonFunctions.d</innerfile>
-    <innerfile refid="environment_8d">environment.d</innerfile>
-    <innerfile refid="gillespie_8d">gillespie.d</innerfile>
-    <innerfile refid="main_8d">main.d</innerfile>
-    <innerfile refid="mtrand_8d">mtrand.d</innerfile>
-    <innerfile refid="reactions_8d">reactions.d</innerfile>
-    <innerfile refid="species_8d">species.d</innerfile>
+    <innerfile refid="a00077">catalysis.d</innerfile>
+    <innerfile refid="a00078">commonFunctions.d</innerfile>
+    <innerfile refid="a00079">environment.d</innerfile>
+    <innerfile refid="a00080">gillespie.d</innerfile>
+    <innerfile refid="a00081">main.d</innerfile>
+    <innerfile refid="a00082">mtrand.d</innerfile>
+    <innerfile refid="a00083">reactions.d</innerfile>
+    <innerfile refid="a00084">species.d</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,0 +1,73 @@
+.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/acsRAFanalysis.py" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/acsRAFanalysis.py \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBacsRAFanalysis\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.parser\fP"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.args\fP = parser\&.parse_args()"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.strPath\fP = os\&.path\&.abspath(args\&.strPath)"
+.br
+.ti -1c
+.RI "int \fBacsRAFanalysis\&._CLOSE_\fP = 0"
+.br
+.ti -1c
+.RI "int \fBacsRAFanalysis\&._PROTO_\fP = 1"
+.br
+.ti -1c
+.RI "int \fBacsRAFanalysis\&._CSTR_\fP = 2"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.conf\fP = rf\&.readConfFile(strPath)"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.closure\fP = dm\&.generateFluxList(strPath, sysType)"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.foodSet\fP = deepcopy(closure)"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.rcts\fP = rf\&.loadAllData(strPath,'_acsreactions\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.cats\fP = rf\&.loadAllData(strPath,'_acscatalysis\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.RA\fP = raf\&.RAcondition(strPath,closure,rcts,cats)"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.RAF\fP = raf\&.Fcondition(strPath,closure,RA,rcts)"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.RAFlpre\fP = len(RAF)"
+.br
+.ti -1c
+.RI "list \fBacsRAFanalysis\&.redRcts\fP = rcts[RAF,:]"
+.br
+.ti -1c
+.RI "int \fBacsRAFanalysis\&.RAFlpost\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBacsRAFanalysis\&.catalists\fP = raf\&.findCatforRAF(cats, RAF, closure)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

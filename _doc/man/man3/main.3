@@ -1,0 +1,471 @@
+.TH "main" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+main \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBparser\fP"
+.br
+.ti -1c
+.RI "tuple \fBargs\fP = parser\&.parse_args()"
+.br
+.ti -1c
+.RI "tuple \fBstrPath\fP = os\&.path\&.abspath(args\&.strPath)"
+.br
+.ti -1c
+.RI "tuple \fBtmpDirs\fP = sort(os\&.listdir(\fBstrPath\fP))"
+.br
+.ti -1c
+.RI "string \fBndn\fP = '_0_new_allStatResults'"
+.br
+.ti -1c
+.RI "tuple \fBnewdirAllResults\fP = os\&.path\&.join(\fBstrPath\fP, \fBndn\fP)"
+.br
+.ti -1c
+.RI "int \fB_CLOSE_\fP = 0"
+.br
+.ti -1c
+.RI "int \fB_PROTO_\fP = 1"
+.br
+.ti -1c
+.RI "int \fB_CSTR_\fP = 2"
+.br
+.ti -1c
+.RI "tuple \fBfname_initRafRes\fP = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysis\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBfname_initRafResLIST\fP = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysisLIST\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBfname_initRafResALL\fP = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysisALL\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBfid_initRafRes\fP = open(\fBfname_initRafRes\fP, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBfid_initRafResLIST\fP = open(\fBfname_initRafResLIST\fP, 'w')"
+.br
+.ti -1c
+.RI "tuple \fBfid_initRafResALL\fP = open(\fBfname_initRafResALL\fP, 'w')"
+.br
+.ti -1c
+.RI "string \fBstrToWrite\fP = 'Folder\\tP\\tAC\\tM\\tRAFsize\\tClosureSize\\tCatsSize\\tuRAF\\n'"
+.br
+.ti -1c
+.RI "tuple \fBtotDirName\fP = os\&.path\&.join(\fBstrPath\fP,tmpDir)"
+.br
+.ti -1c
+.RI "tuple \fBresDirPath\fP = os\&.path\&.abspath(os\&.path\&.join('\&./', args\&.resFolder))"
+.br
+.ti -1c
+.RI "tuple \fBconf\fP = readfiles\&.readConfFile(\fBtotDirName\fP)"
+.br
+.ti -1c
+.RI "tuple \fBfoodList\fP = dm\&.generateFluxList(\fBtotDirName\fP, sysType)"
+.br
+.ti -1c
+.RI "tuple \fBrcts\fP = readfiles\&.loadAllData(\fBtotDirName\fP,'_acsreactions\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBcats\fP = readfiles\&.loadAllData(\fBtotDirName\fP,'_acscatalysis\&.csv')"
+.br
+.ti -1c
+.RI "tuple \fBnumberOfGen\fP = len(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,'times_*')))"
+.br
+.ti -1c
+.RI "tuple \fBstrZeros\fP = readfiles\&.zeroBeforeStrNum(ngen, \fBnumberOfGen\fP)"
+.br
+.ti -1c
+.RI "string \fBfName\fP = 'RAF_structuresInTime_analysis_gen_'"
+.br
+.ti -1c
+.RI "tuple \fBfname_inTimeRafRes\fP = os\&.path\&.join(\fBnewdirAllResults\fP, \fBfName\fP)"
+.br
+.ti -1c
+.RI "tuple \fBfid_inTimeRafRes\fP = open(\fBfname_inTimeRafRes\fP, 'w')"
+.br
+.ti -1c
+.RI "\fBpotential\fP = False"
+.br
+.ti -1c
+.RI "string \fBstrRctZero\fP = 'reactions_'"
+.br
+.ti -1c
+.RI "string \fBstrCatZero\fP = 'catalysis_'"
+.br
+.ti -1c
+.RI "tuple \fBrctFilesZero\fP = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrRctZero\fP)))"
+.br
+.ti -1c
+.RI "tuple \fBcatFilesZero\fP = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrCatZero\fP)))"
+.br
+.ti -1c
+.RI "string \fBstrRct\fP = 'reactions_'"
+.br
+.ti -1c
+.RI "string \fBstrCat\fP = 'catalysis_'"
+.br
+.ti -1c
+.RI "tuple \fBrctFiles\fP = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrRct\fP)))"
+.br
+.ti -1c
+.RI "tuple \fBcatFiles\fP = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrCat\fP)))"
+.br
+.ti -1c
+.RI "list \fBsngTime\fP = \fBconf\fP[2]"
+.br
+.ti -1c
+.RI "int \fBactTime\fP = 0"
+.br
+.ti -1c
+.RI "list \fBprocrcts\fP = \fBrcts\fP[\fBrcts\fP[:,5] > 0,:]"
+.br
+.ti -1c
+.RI "list \fBproccats\fP = \fBcats\fP[\fBcats\fP[:,3] > 0,:]"
+.br
+.ti -1c
+.RI "tuple \fBR\fP = raf\&.rafDynamicComputation(\fBfid_inTimeRafRes\fP, \fBactTime\fP, \fBprocrcts\fP[:,0:5], \fBproccats\fP[:,0:5], \fBfoodList\fP, \fBpotential\fP, \fBrcts\fP, \fBcats\fP, debug=args\&.debug)"
+.br
+.ti -1c
+.RI "tuple \fBlastRct\fP = readfiles\&.loadAllData(\fBtotDirName\fP,\fBrctFiles\fP[-1])"
+.br
+.ti -1c
+.RI "tuple \fBlastCat\fP = readfiles\&.loadAllData(\fBtotDirName\fP,\fBcatFiles\fP[-1])"
+.br
+.ti -1c
+.RI "tuple \fBfname_dynRafRes\fP = os\&.path\&.join(\fBnewdirAllResults\fP, \fBfName\fP)"
+.br
+.ti -1c
+.RI "tuple \fBfid_dynRafRes\fP = open(\fBfname_dynRafRes\fP, 'w')"
+.br
+.ti -1c
+.RI "string \fBstrRctPar\fP = 'reactions_parameters_'"
+.br
+.ti -1c
+.RI "tuple \fBrctParamFile\fP = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrRctPar\fP)))"
+.br
+.ti -1c
+.RI "tuple \fBfid\fP = open(\fBrctParamFile\fP[0], '\fBr\fP')"
+.br
+.ti -1c
+.RI "int \fBpreviousTime\fP = 0"
+.br
+.ti -1c
+.RI "\fBdecayTime\fP = args\&.decay"
+.br
+.ti -1c
+.RI "int \fBcondensation_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBendo_condensation_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBcleavage_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBendo_cleavage_counter\fP = 0"
+.br
+.ti -1c
+.RI "int \fBnAnal\fP = 1"
+.br
+.ti -1c
+.RI "int \fBrctCurrID\fP = 0"
+.br
+.ti -1c
+.RI "int \fBcatCurrID\fP = 0"
+.br
+.ti -1c
+.RI "\fBtimeInterval\fP = \fBrtime\fP-\fBpreviousTime\fP"
+.br
+.ti -1c
+.RI "tuple \fBgraph\fP = network\&.removeRareRcts(graph,2,3,4,\fBtimeInterval\fP)"
+.br
+.ti -1c
+.RI "tuple \fBgraphSUB\fP = network\&.removeRareRcts(graphSUB,2,3,4,\fBtimeInterval\fP)"
+.br
+.ti -1c
+.RI "tuple \fBonrcts\fP = network\&.removeRareRcts(onrcts,5,6,7,\fBtimeInterval\fP)"
+.br
+.ti -1c
+.RI "tuple \fBoncats\fP = network\&.removeRareRcts(oncats,3,4,5,\fBtimeInterval\fP)"
+.br
+.ti -1c
+.RI "tuple \fBpositionR\fP = ((\fBonrcts\fP[:,1] == \fBcc\fP) & (\fBonrcts\fP[:,2] == \fBmol_I\fP) & (\fBonrcts\fP[:,3] == \fBmol_II\fP))"
+.br
+.ti -1c
+.RI "tuple \fBposition\fP = ((\fBoncats\fP[:,1] == \fBcat\fP) & (\fBoncats\fP[:,2] == \fBonrcts\fP[\fBpositionR\fP,0]))"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "int main\&._CLOSE_ = 0"
+
+.PP
+Definition at line 57 of file main\&.py\&.
+.SS "int main\&._CSTR_ = 2"
+
+.PP
+Definition at line 59 of file main\&.py\&.
+.SS "int main\&._PROTO_ = 1"
+
+.PP
+Definition at line 58 of file main\&.py\&.
+.SS "int main\&.actTime = 0"
+
+.PP
+Definition at line 144 of file main\&.py\&.
+.SS "tuple main\&.args = parser\&.parse_args()"
+
+.PP
+Definition at line 40 of file main\&.py\&.
+.SS "int main\&.catCurrID = 0"
+
+.PP
+Definition at line 191 of file main\&.py\&.
+.SS "tuple main\&.catFiles = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrCat\fP)))"
+
+.PP
+Definition at line 137 of file main\&.py\&.
+.SS "tuple main\&.catFilesZero = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrCatZero\fP)))"
+
+.PP
+Definition at line 132 of file main\&.py\&.
+.SS "tuple main\&.cats = readfiles\&.loadAllData(\fBtotDirName\fP,'_acscatalysis\&.csv')"
+
+.PP
+Definition at line 95 of file main\&.py\&.
+.SS "int main\&.cleavage_counter = 0"
+
+.PP
+Definition at line 187 of file main\&.py\&.
+.SS "int main\&.condensation_counter = 0"
+
+.PP
+Definition at line 185 of file main\&.py\&.
+.SS "tuple main\&.conf = readfiles\&.readConfFile(\fBtotDirName\fP)"
+
+.PP
+Definition at line 84 of file main\&.py\&.
+.SS "main\&.decayTime = args\&.decay"
+
+.PP
+Definition at line 184 of file main\&.py\&.
+.SS "int main\&.endo_cleavage_counter = 0"
+
+.PP
+Definition at line 188 of file main\&.py\&.
+.SS "int main\&.endo_condensation_counter = 0"
+
+.PP
+Definition at line 186 of file main\&.py\&.
+.SS "tuple main\&.fid = open(\fBrctParamFile\fP[0], '\fBr\fP')"
+
+.PP
+Definition at line 182 of file main\&.py\&.
+.SS "tuple main\&.fid_dynRafRes = open(\fBfname_dynRafRes\fP, 'w')"
+
+.PP
+Definition at line 174 of file main\&.py\&.
+.SS "tuple main\&.fid_initRafRes = open(\fBfname_initRafRes\fP, 'w')"
+
+.PP
+Definition at line 65 of file main\&.py\&.
+.SS "tuple main\&.fid_initRafResALL = open(\fBfname_initRafResALL\fP, 'w')"
+
+.PP
+Definition at line 67 of file main\&.py\&.
+.SS "tuple main\&.fid_initRafResLIST = open(\fBfname_initRafResLIST\fP, 'w')"
+
+.PP
+Definition at line 66 of file main\&.py\&.
+.SS "tuple main\&.fid_inTimeRafRes = open(\fBfname_inTimeRafRes\fP, 'w')"
+
+.PP
+Definition at line 119 of file main\&.py\&.
+.SS "string main\&.fName = 'RAF_structuresInTime_analysis_gen_'"
+
+.PP
+Definition at line 117 of file main\&.py\&.
+.SS "tuple main\&.fname_dynRafRes = os\&.path\&.join(\fBnewdirAllResults\fP, \fBfName\fP)"
+
+.PP
+Definition at line 173 of file main\&.py\&.
+.SS "tuple main\&.fname_initRafRes = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysis\&.csv')"
+
+.PP
+Definition at line 62 of file main\&.py\&.
+.SS "tuple main\&.fname_initRafResALL = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysisALL\&.csv')"
+
+.PP
+Definition at line 64 of file main\&.py\&.
+.SS "tuple main\&.fname_initRafResLIST = os\&.path\&.join(\fBnewdirAllResults\fP, '0_initRafAnalysisLIST\&.csv')"
+
+.PP
+Definition at line 63 of file main\&.py\&.
+.SS "tuple main\&.fname_inTimeRafRes = os\&.path\&.join(\fBnewdirAllResults\fP, \fBfName\fP)"
+
+.PP
+Definition at line 118 of file main\&.py\&.
+.SS "tuple main\&.foodList = dm\&.generateFluxList(\fBtotDirName\fP, sysType)"
+
+.PP
+Definition at line 89 of file main\&.py\&.
+.SS "tuple main\&.graph = network\&.removeRareRcts(graph,2,3,4,\fBtimeInterval\fP)"
+
+.PP
+Definition at line 205 of file main\&.py\&.
+.SS "tuple main\&.graphSUB = network\&.removeRareRcts(graphSUB,2,3,4,\fBtimeInterval\fP)"
+
+.PP
+Definition at line 206 of file main\&.py\&.
+.SS "tuple main\&.lastCat = readfiles\&.loadAllData(\fBtotDirName\fP,\fBcatFiles\fP[-1])"
+
+.PP
+Definition at line 166 of file main\&.py\&.
+.SS "tuple main\&.lastRct = readfiles\&.loadAllData(\fBtotDirName\fP,\fBrctFiles\fP[-1])"
+
+.PP
+Definition at line 165 of file main\&.py\&.
+.SS "int main\&.nAnal = 1"
+
+.PP
+Definition at line 189 of file main\&.py\&.
+.SS "string main\&.ndn = '_0_new_allStatResults'"
+
+.PP
+Definition at line 50 of file main\&.py\&.
+.SS "tuple main\&.newdirAllResults = os\&.path\&.join(\fBstrPath\fP, \fBndn\fP)"
+
+.PP
+Definition at line 51 of file main\&.py\&.
+.SS "tuple main\&.numberOfGen = len(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,'times_*')))"
+
+.PP
+Definition at line 102 of file main\&.py\&.
+.SS "tuple main\&.oncats = network\&.removeRareRcts(oncats,3,4,5,\fBtimeInterval\fP)"
+
+.PP
+Definition at line 208 of file main\&.py\&.
+.SS "tuple main\&.onrcts = network\&.removeRareRcts(onrcts,5,6,7,\fBtimeInterval\fP)"
+
+.PP
+Definition at line 207 of file main\&.py\&.
+.SS "tuple main\&.parser"
+\fBInitial value:\fP
+.PP
+.nf
+1 = ArgumentParser(
+2                                 description='Main script of ACS analysis\&.'
+3                                 , epilog='''ACS ANALYSIS Main File\&. ''')
+.fi
+.PP
+Definition at line 28 of file main\&.py\&.
+.SS "tuple main\&.position = ((\fBoncats\fP[:,1] == \fBcat\fP) & (\fBoncats\fP[:,2] == \fBonrcts\fP[\fBpositionR\fP,0]))"
+
+.PP
+Definition at line 233 of file main\&.py\&.
+.SS "list main\&.positionR = ((\fBonrcts\fP[:,1] == \fBcc\fP) & (\fBonrcts\fP[:,2] == \fBmol_I\fP) & (\fBonrcts\fP[:,3] == \fBmol_II\fP))"
+
+.PP
+Definition at line 221 of file main\&.py\&.
+.SS "main\&.potential = False"
+
+.PP
+Definition at line 122 of file main\&.py\&.
+.SS "main\&.previousTime = 0"
+
+.PP
+Definition at line 183 of file main\&.py\&.
+.SS "list main\&.proccats = \fBcats\fP[\fBcats\fP[:,3] > 0,:]"
+
+.PP
+Definition at line 153 of file main\&.py\&.
+.SS "list main\&.procrcts = \fBrcts\fP[\fBrcts\fP[:,5] > 0,:]"
+
+.PP
+Definition at line 152 of file main\&.py\&.
+.SS "tuple main\&.R = raf\&.rafDynamicComputation(\fBfid_inTimeRafRes\fP, \fBactTime\fP, \fBprocrcts\fP[:,0:5], \fBproccats\fP[:,0:5], \fBfoodList\fP, \fBpotential\fP, \fBrcts\fP, \fBcats\fP, debug=args\&.debug)"
+
+.PP
+Definition at line 154 of file main\&.py\&.
+.SS "int main\&.rctCurrID = 0"
+
+.PP
+Definition at line 190 of file main\&.py\&.
+.SS "tuple main\&.rctFiles = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrRct\fP)))"
+
+.PP
+Definition at line 136 of file main\&.py\&.
+.SS "tuple main\&.rctFilesZero = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrRctZero\fP)))"
+
+.PP
+Definition at line 131 of file main\&.py\&.
+.SS "tuple main\&.rctParamFile = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrRctPar\fP)))"
+
+.PP
+Definition at line 181 of file main\&.py\&.
+.SS "tuple main\&.rcts = readfiles\&.loadAllData(\fBtotDirName\fP,'_acsreactions\&.csv')"
+
+.PP
+Definition at line 94 of file main\&.py\&.
+.SS "tuple main\&.resDirPath = os\&.path\&.abspath(os\&.path\&.join('\&./', args\&.resFolder))"
+
+.PP
+Definition at line 79 of file main\&.py\&.
+.SS "list main\&.sngTime = \fBconf\fP[2]"
+
+.PP
+Definition at line 143 of file main\&.py\&.
+.SS "string main\&.strCat = 'catalysis_'"
+
+.PP
+Definition at line 134 of file main\&.py\&.
+.SS "string main\&.strCatZero = 'catalysis_'"
+
+.PP
+Definition at line 130 of file main\&.py\&.
+.SS "tuple main\&.strPath = os\&.path\&.abspath(args\&.strPath)"
+
+.PP
+Definition at line 43 of file main\&.py\&.
+.SS "string main\&.strRct = 'reactions_'"
+
+.PP
+Definition at line 133 of file main\&.py\&.
+.SS "string main\&.strRctPar = 'reactions_parameters_'"
+
+.PP
+Definition at line 180 of file main\&.py\&.
+.SS "string main\&.strRctZero = 'reactions_'"
+
+.PP
+Definition at line 129 of file main\&.py\&.
+.SS "string main\&.strToWrite = 'Folder\\tP\\tAC\\tM\\tRAFsize\\tClosureSize\\tCatsSize\\tuRAF\\n'"
+
+.PP
+Definition at line 68 of file main\&.py\&.
+.SS "tuple main\&.strZeros = readfiles\&.zeroBeforeStrNum(ngen, \fBnumberOfGen\fP)"
+
+.PP
+Definition at line 111 of file main\&.py\&.
+.SS "main\&.timeInterval = \fBrtime\fP-\fBpreviousTime\fP"
+
+.PP
+Definition at line 200 of file main\&.py\&.
+.SS "tuple main\&.tmpDirs = sort(os\&.listdir(\fBstrPath\fP))"
+
+.PP
+Definition at line 44 of file main\&.py\&.
+.SS "tuple main\&.totDirName = os\&.path\&.join(\fBstrPath\fP,tmpDir)"
+
+.PP
+Definition at line 73 of file main\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.

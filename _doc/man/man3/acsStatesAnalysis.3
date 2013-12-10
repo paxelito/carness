@@ -1,0 +1,575 @@
+.TH "acsStatesAnalysis" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+acsStatesAnalysis \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBzeroBeforeStrNum\fP"
+.br
+.ti -1c
+.RI "def \fBreturnZeroSpeciesList\fP"
+.br
+.ti -1c
+.RI "def \fBdistanceMisures\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "tuple \fBtoday\fP = dt\&.date\&.today()"
+.br
+.ti -1c
+.RI "tuple \fBStrPath\fP = os\&.path\&.abspath(StrPath)"
+.br
+.ti -1c
+.RI "tuple \fBtmpDirs\fP = sort(os\&.listdir(\fBStrPath\fP))"
+.br
+.ti -1c
+.RI "string \fBcurrentDir\fP = ''"
+.br
+.ti -1c
+.RI "string \fBndn\fP = \fBcurrentDir\fP+'_0_new_allStatResults'"
+.br
+.ti -1c
+.RI "tuple \fBnewdirAllResults\fP = os\&.path\&.join(os\&.curdir, \fBndn\fP)"
+.br
+.ti -1c
+.RI "tuple \fBpreviousFILE_FID\fP = open('STAT_t_tminus_1\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBpreviousNOINFLUX_FILE_FID\fP = open('STAT_t_tminus_1_NOINFLUX\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBstartFILE_FID\fP = open('STAT_t_start\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBstartNOINFLUX_FILE_FID\fP = open('STAT_t_start_NOINFLUX\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBHAM_previousFILE_FID\fP = open('STAT_HAM_t_tminus_1\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBHAM_previousNOINFLUX_FILE_FID\fP = open('STAT_HAM_t_tminus_1_NOINFLUX\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBHAM_startFILE_FID\fP = open('STAT_HAM_t_start\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBHAM_startNOINFLUX_FILE_FID\fP = open('STAT_HAM_t_start_NOINFLUX\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBEUC_previousFILE_FID\fP = open('STAT_EUC_t_tminus_1\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBEUC_previousNOINFLUX_FILE_FID\fP = open('STAT_EUC_t_tminus_1_NOINFLUX\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBEUC_startFILE_FID\fP = open('STAT_EUC_t_start\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBEUC_startNOINFLUX_FILE_FID\fP = open('STAT_EUC_t_start_NOINFLUX\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBANG_middlePreviousFILE_FID\fP = open('STAT_ANG_t_middle_NOINFLUX\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBHAM_middlePreviousFILE_FID\fP = open('STAT_HAM_t_middle_NOINFLUX\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBEUC_middlePreviousFILE_FID\fP = open('STAT_EUC_t_middle_NOINFLUX\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBpreviousFILE_FID_group\fP = open('STAT_t_tminus_1_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBpreviousNOINFLUX_FILE_FID_group\fP = open('STAT_t_tminus_1_NOINFLUX_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBstartFILE_FID_group\fP = open('STAT_t_start_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBstartNOINFLUX_FILE_FID_group\fP = open('STAT_t_start_NOINFLUX_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBHAM_previousFILE_FID_group\fP = open('STAT_HAM_t_tminus_1_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBHAM_previousNOINFLUX_FILE_FID_group\fP = open('STAT_HAM_t_tminus_1_NOINFLUX_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBHAM_startFILE_FID_group\fP = open('STAT_HAM_t_start_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBHAM_startNOINFLUX_FILE_FID_group\fP = open('STAT_HAM_t_start_NOINFLUX_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBEUC_previousFILE_FID_group\fP = open('STAT_EUC_t_tminus_1_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBEUC_previousNOINFLUX_FILE_FID_group\fP = open('STAT_EUC_t_tminus_1_NOINFLUX_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBEUC_startFILE_FID_group\fP = open('STAT_EUC_t_start_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBEUC_startNOINFLUX_FILE_FID_group\fP = open('STAT_EUC_t_start_NOINFLUX_group\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBnewSpecies_FID\fP = open('STAT_GENERAL_newSpecies\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBlivingSpecies_FID\fP = open('STAT_GENERAL_livingSpecies\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBmols_FID\fP = open('STAT_GENERAL_mols\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBtotMass_FID\fP = open('STAT_GENERAL_overallMass\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBtotOverallMass_FID\fP = open('STAT_GENERAL_overallTotMass\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBcomplex_FID\fP = open('STAT_GENERAL_complex\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBcomplexMols_FID\fP = open('STAT_GENERAL_complexMols\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBevaluatedFID\fP = open('STAT_GENERAL_evaluated\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBzeroOneSpeciesFID\fP = open('STAT_GENERAL_zeroOneSpecies\&.csv', 'w')"
+.br
+.ti -1c
+.RI "tuple \fBbiodeversityFID\fP = open('STAT_GENERAL_bioDiversity\&.csv', 'w')"
+.br
+.ti -1c
+.RI "int \fBvalidDir\fP = 1"
+.br
+.ti -1c
+.RI "tuple \fBtotDirName\fP = os\&.path\&.join(\fBStrPath\fP,tmpDir)"
+.br
+.ti -1c
+.RI "tuple \fBresDirPath\fP = os\&.path\&.abspath(os\&.path\&.join('\&./', 'res'))"
+.br
+.ti -1c
+.RI "tuple \fBnumberOfGen\fP = len(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,'times_*')))"
+.br
+.ti -1c
+.RI "list \fBgroup_A_prev\fP = []"
+.br
+.ti -1c
+.RI "list \fBgroup_A_start\fP = []"
+.br
+.ti -1c
+.RI "list \fBgroup_A_prev_NI\fP = []"
+.br
+.ti -1c
+.RI "list \fBgroup_A_start_NI\fP = []"
+.br
+.ti -1c
+.RI "tuple \fBstrZeros\fP = \fBzeroBeforeStrNum\fP(ngen, \fBnumberOfGen\fP)"
+.br
+.ti -1c
+.RI "string \fBstrSpeciesZero\fP = 'species_'"
+.br
+.ti -1c
+.RI "tuple \fBspeciesFilesZero\fP = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrSpeciesZero\fP)))"
+.br
+.ti -1c
+.RI "string \fBstrSpecies\fP = 'species_'"
+.br
+.ti -1c
+.RI "tuple \fBspeciesFiles\fP = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrSpecies\fP)))"
+.br
+.ti -1c
+.RI "tuple \fBzeroList\fP = \fBreturnZeroSpeciesList\fP(\fBspeciesFiles\fP[-1])"
+.br
+.ti -1c
+.RI "tuple \fBspeciesConcs\fP = np\&.zeros((len(\fBspeciesFiles\fP)+1,len(\fBzeroList\fP)))"
+.br
+.ti -1c
+.RI "list \fBseqOLD\fP = []"
+.br
+.ti -1c
+.RI "list \fBseqSTART\fP = []"
+.br
+.ti -1c
+.RI "list \fBtotMass\fP = []"
+.br
+.ti -1c
+.RI "list \fBseqMIDDLE_NOINFLUX\fP = []"
+.br
+.ti -1c
+.RI "int \fBoldNumberOfSpecies\fP = 0"
+.br
+.ti -1c
+.RI "tuple \fBfidSpecies\fP = open(sngSpeciesFile, '\fBr\fP')"
+.br
+.ti -1c
+.RI "list \fBseq\fP = []"
+.br
+.ti -1c
+.RI "int \fBtmpMols\fP = 0"
+.br
+.ti -1c
+.RI "int \fBbioDivInd\fP = 0"
+.br
+.ti -1c
+.RI "\fBdeltaNspecies\fP = numberOfSpecies-\fBoldNumberOfSpecies\fP"
+.br
+.ti -1c
+.RI "tuple \fBstrtoW\fP = str(\fBdeltaNspecies\fP)"
+.br
+.ti -1c
+.RI "tuple \fBtmpMisure\fP = \fBdistanceMisures\fP(\fBseq\fP, \fBconc\fP, \fBseqOLD\fP, \fBconcOLD\fP, idS)"
+.br
+.ti -1c
+.RI "list \fBseqOLDNOINFLUX\fP = seqNOINFLUX[:]"
+.br
+.ti -1c
+.RI "list \fBconcOLD\fP = \fBconc\fP[:]"
+.br
+.ti -1c
+.RI "string \fBfilename\fP = 'STAT_species_Concentrations_'"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "def acsStatesAnalysis\&.distanceMisures (tmpSeqX, tmpConcX, tmpSeqY, tmpConcY, tmpIDs)"
+
+.PP
+.nf
+Function to compute the angle between two multidimensional vectors
+.fi
+.PP
+ 
+.PP
+Definition at line 45 of file acsStatesAnalysis\&.py\&.
+.SS "def acsStatesAnalysis\&.returnZeroSpeciesList (tmpLastSpeciesFile)"
+
+.PP
+.nf
+Function to create a zero vector for each species (NO COMPLEXES)
+.fi
+.PP
+ 
+.PP
+Definition at line 31 of file acsStatesAnalysis\&.py\&.
+.SS "def acsStatesAnalysis\&.zeroBeforeStrNum (tmpl, tmpL)"
+
+.PP
+.nf
+Function to create string zero string vector before graph filename.
+According to the total number of reactions N zeros will be add before the instant reaction number 
+(e.g. reaction 130 of 10000 the string became '00130')
+.fi
+.PP
+ 
+.PP
+Definition at line 21 of file acsStatesAnalysis\&.py\&.
+.SH "Variable Documentation"
+.PP 
+.SS "tuple acsStatesAnalysis\&.ANG_middlePreviousFILE_FID = open('STAT_ANG_t_middle_NOINFLUX\&.csv', 'w')"
+
+.PP
+Definition at line 140 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.biodeversityFID = open('STAT_GENERAL_bioDiversity\&.csv', 'w')"
+
+.PP
+Definition at line 168 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.bioDivInd = 0"
+
+.PP
+Definition at line 273 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.complex_FID = open('STAT_GENERAL_complex\&.csv', 'w')"
+
+.PP
+Definition at line 164 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.complexMols_FID = open('STAT_GENERAL_complexMols\&.csv', 'w')"
+
+.PP
+Definition at line 165 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.concOLD = \fBconc\fP[:]"
+
+.PP
+Definition at line 351 of file acsStatesAnalysis\&.py\&.
+.SS "string acsStatesAnalysis\&.currentDir = ''"
+
+.PP
+Definition at line 113 of file acsStatesAnalysis\&.py\&.
+.SS "acsStatesAnalysis\&.deltaNspecies = numberOfSpecies-\fBoldNumberOfSpecies\fP"
+
+.PP
+Definition at line 279 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.EUC_middlePreviousFILE_FID = open('STAT_EUC_t_middle_NOINFLUX\&.csv', 'w')"
+
+.PP
+Definition at line 142 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.EUC_previousFILE_FID = open('STAT_EUC_t_tminus_1\&.csv', 'w')"
+
+.PP
+Definition at line 135 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.EUC_previousFILE_FID_group = open('STAT_EUC_t_tminus_1_group\&.csv', 'w')"
+
+.PP
+Definition at line 154 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.EUC_previousNOINFLUX_FILE_FID = open('STAT_EUC_t_tminus_1_NOINFLUX\&.csv', 'w')"
+
+.PP
+Definition at line 136 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.EUC_previousNOINFLUX_FILE_FID_group = open('STAT_EUC_t_tminus_1_NOINFLUX_group\&.csv', 'w')"
+
+.PP
+Definition at line 155 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.EUC_startFILE_FID = open('STAT_EUC_t_start\&.csv', 'w')"
+
+.PP
+Definition at line 137 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.EUC_startFILE_FID_group = open('STAT_EUC_t_start_group\&.csv', 'w')"
+
+.PP
+Definition at line 156 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.EUC_startNOINFLUX_FILE_FID = open('STAT_EUC_t_start_NOINFLUX\&.csv', 'w')"
+
+.PP
+Definition at line 138 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.EUC_startNOINFLUX_FILE_FID_group = open('STAT_EUC_t_start_NOINFLUX_group\&.csv', 'w')"
+
+.PP
+Definition at line 157 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.evaluatedFID = open('STAT_GENERAL_evaluated\&.csv', 'w')"
+
+.PP
+Definition at line 166 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.fidSpecies = open(sngSpeciesFile, '\fBr\fP')"
+
+.PP
+Definition at line 230 of file acsStatesAnalysis\&.py\&.
+.SS "string acsStatesAnalysis\&.filename = 'STAT_species_Concentrations_'"
+
+.PP
+Definition at line 410 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.group_A_prev = []"
+
+.PP
+Definition at line 186 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.group_A_prev_NI = []"
+
+.PP
+Definition at line 188 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.group_A_start = []"
+
+.PP
+Definition at line 187 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.group_A_start_NI = []"
+
+.PP
+Definition at line 189 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.HAM_middlePreviousFILE_FID = open('STAT_HAM_t_middle_NOINFLUX\&.csv', 'w')"
+
+.PP
+Definition at line 141 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.HAM_previousFILE_FID = open('STAT_HAM_t_tminus_1\&.csv', 'w')"
+
+.PP
+Definition at line 130 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.HAM_previousFILE_FID_group = open('STAT_HAM_t_tminus_1_group\&.csv', 'w')"
+
+.PP
+Definition at line 149 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.HAM_previousNOINFLUX_FILE_FID = open('STAT_HAM_t_tminus_1_NOINFLUX\&.csv', 'w')"
+
+.PP
+Definition at line 131 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.HAM_previousNOINFLUX_FILE_FID_group = open('STAT_HAM_t_tminus_1_NOINFLUX_group\&.csv', 'w')"
+
+.PP
+Definition at line 150 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.HAM_startFILE_FID = open('STAT_HAM_t_start\&.csv', 'w')"
+
+.PP
+Definition at line 132 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.HAM_startFILE_FID_group = open('STAT_HAM_t_start_group\&.csv', 'w')"
+
+.PP
+Definition at line 151 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.HAM_startNOINFLUX_FILE_FID = open('STAT_HAM_t_start_NOINFLUX\&.csv', 'w')"
+
+.PP
+Definition at line 133 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.HAM_startNOINFLUX_FILE_FID_group = open('STAT_HAM_t_start_NOINFLUX_group\&.csv', 'w')"
+
+.PP
+Definition at line 152 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.livingSpecies_FID = open('STAT_GENERAL_livingSpecies\&.csv', 'w')"
+
+.PP
+Definition at line 160 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.mols_FID = open('STAT_GENERAL_mols\&.csv', 'w')"
+
+.PP
+Definition at line 161 of file acsStatesAnalysis\&.py\&.
+.SS "string acsStatesAnalysis\&.ndn = \fBcurrentDir\fP+'_0_new_allStatResults'"
+
+.PP
+Definition at line 114 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.newdirAllResults = os\&.path\&.join(os\&.curdir, \fBndn\fP)"
+
+.PP
+Definition at line 115 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.newSpecies_FID = open('STAT_GENERAL_newSpecies\&.csv', 'w')"
+
+.PP
+Definition at line 159 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.numberOfGen = len(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,'times_*')))"
+
+.PP
+Definition at line 184 of file acsStatesAnalysis\&.py\&.
+.SS "acsStatesAnalysis\&.oldNumberOfSpecies = 0"
+
+.PP
+Definition at line 222 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.previousFILE_FID = open('STAT_t_tminus_1\&.csv', 'w')"
+
+.PP
+Definition at line 125 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.previousFILE_FID_group = open('STAT_t_tminus_1_group\&.csv', 'w')"
+
+.PP
+Definition at line 144 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.previousNOINFLUX_FILE_FID = open('STAT_t_tminus_1_NOINFLUX\&.csv', 'w')"
+
+.PP
+Definition at line 126 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.previousNOINFLUX_FILE_FID_group = open('STAT_t_tminus_1_NOINFLUX_group\&.csv', 'w')"
+
+.PP
+Definition at line 145 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.resDirPath = os\&.path\&.abspath(os\&.path\&.join('\&./', 'res'))"
+
+.PP
+Definition at line 178 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.seq = []"
+
+.PP
+Definition at line 234 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.seqMIDDLE_NOINFLUX = []"
+
+.PP
+Definition at line 220 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.seqOLD = []"
+
+.PP
+Definition at line 217 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.seqOLDNOINFLUX = seqNOINFLUX[:]"
+
+.PP
+Definition at line 350 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.seqSTART = []"
+
+.PP
+Definition at line 218 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.speciesConcs = np\&.zeros((len(\fBspeciesFiles\fP)+1,len(\fBzeroList\fP)))"
+
+.PP
+Definition at line 214 of file acsStatesAnalysis\&.py\&.
+.SS "acsStatesAnalysis\&.speciesFiles = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrSpecies\fP)))"
+
+.PP
+Definition at line 204 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.speciesFilesZero = sorted(glob\&.glob(os\&.path\&.join(\fBresDirPath\fP,\fBstrSpeciesZero\fP)))"
+
+.PP
+Definition at line 199 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.startFILE_FID = open('STAT_t_start\&.csv', 'w')"
+
+.PP
+Definition at line 127 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.startFILE_FID_group = open('STAT_t_start_group\&.csv', 'w')"
+
+.PP
+Definition at line 146 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.startNOINFLUX_FILE_FID = open('STAT_t_start_NOINFLUX\&.csv', 'w')"
+
+.PP
+Definition at line 128 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.startNOINFLUX_FILE_FID_group = open('STAT_t_start_NOINFLUX_group\&.csv', 'w')"
+
+.PP
+Definition at line 147 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.StrPath = os\&.path\&.abspath(StrPath)"
+
+.PP
+Definition at line 101 of file acsStatesAnalysis\&.py\&.
+.SS "string acsStatesAnalysis\&.strSpecies = 'species_'"
+
+.PP
+Definition at line 201 of file acsStatesAnalysis\&.py\&.
+.SS "string acsStatesAnalysis\&.strSpeciesZero = 'species_'"
+
+.PP
+Definition at line 198 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.strtoW = str(\fBdeltaNspecies\fP)"
+
+.PP
+Definition at line 281 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.strZeros = \fBzeroBeforeStrNum\fP(ngen, \fBnumberOfGen\fP)"
+
+.PP
+Definition at line 195 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.tmpDirs = sort(os\&.listdir(\fBStrPath\fP))"
+
+.PP
+Definition at line 103 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.tmpMisure = \fBdistanceMisures\fP(\fBseq\fP, \fBconc\fP, \fBseqOLD\fP, \fBconcOLD\fP, idS)"
+
+.PP
+Definition at line 302 of file acsStatesAnalysis\&.py\&.
+.SS "int acsStatesAnalysis\&.tmpMols = 0"
+
+.PP
+Definition at line 235 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.today = dt\&.date\&.today()"
+
+.PP
+Definition at line 99 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.totDirName = os\&.path\&.join(\fBStrPath\fP,tmpDir)"
+
+.PP
+Definition at line 174 of file acsStatesAnalysis\&.py\&.
+.SS "list acsStatesAnalysis\&.totMass = []"
+
+.PP
+Definition at line 219 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.totMass_FID = open('STAT_GENERAL_overallMass\&.csv', 'w')"
+
+.PP
+Definition at line 162 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.totOverallMass_FID = open('STAT_GENERAL_overallTotMass\&.csv', 'w')"
+
+.PP
+Definition at line 163 of file acsStatesAnalysis\&.py\&.
+.SS "int acsStatesAnalysis\&.validDir = 1"
+
+.PP
+Definition at line 171 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.zeroList = \fBreturnZeroSpeciesList\fP(\fBspeciesFiles\fP[-1])"
+
+.PP
+Definition at line 207 of file acsStatesAnalysis\&.py\&.
+.SS "tuple acsStatesAnalysis\&.zeroOneSpeciesFID = open('STAT_GENERAL_zeroOneSpecies\&.csv', 'w')"
+
+.PP
+Definition at line 167 of file acsStatesAnalysis\&.py\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CaRNeSS from the source code\&.
