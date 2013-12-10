@@ -40,6 +40,7 @@ var searchData=
   ['checkavailability',['checkAvailability',['../a00014.html#ad3ebcd7ab1c9ba1a0f65b264b97adf33',1,'environment']]],
   ['checkifonlymutualcatalysis',['checkIfOnlyMutualCatalysis',['../a00014.html#abdafaeba15b5d32fd35569869c6244d5',1,'environment']]],
   ['checkifthereactionisalreadycatalyzedbythisspecies',['checkIfTheReactionIsAlreadyCatalyzedByThisSpecies',['../a00014.html#ac4c90b07b8e75ea03e2ced0ea644a69f',1,'environment']]],
+  ['checkifthesecondsubstrateisalreadypresent',['checkIFtheSecondSubstrateIsAlreadyPresent',['../a00022.html#af04a95fb2b35bf988271a60413ec508e',1,'species']]],
   ['checkkm',['checkKM',['../a00029.html#ac9c871eaf7455dc0d274ec20c5c69ac2',1,'checkKM():&#160;KillSpam.m'],['../a00031.html#ac9c871eaf7455dc0d274ec20c5c69ac2',1,'checkKM():&#160;KSSearchLauncher.m']]],
   ['checkksm',['checkKSM',['../a00029.html#a67eb148eecfd241148ce3711f058ac2b',1,'checkKSM():&#160;KillSpam.m'],['../a00031.html#a67eb148eecfd241148ce3711f058ac2b',1,'checkKSM():&#160;KSSearchLauncher.m']]],
   ['checksm',['checkSM',['../a00029.html#ae80cf4c5bf659247b45bbad5d22dec52',1,'checkSM():&#160;KillSpam.m'],['../a00031.html#ae80cf4c5bf659247b45bbad5d22dec52',1,'checkSM():&#160;KSSearchLauncher.m']]],
@@ -134,5 +135,5 @@ var searchData=
   ['currentfolder',['currentFolder',['../a00028.html#af393966a41271e721a03e544a1650f4a',1,'generalConcentrationOverThreshold.m']]],
   ['cutpt',['cutPt',['../a00107.html#a21af3c3590a35942a68743431e4be468',1,'init']]],
   ['cvalues',['cValues',['../a00027.html#ad4ba7701967c1da20171228afccb7081',1,'cValues():&#160;garbageSearch.m'],['../a00029.html#ad4ba7701967c1da20171228afccb7081',1,'cValues():&#160;KillSpam.m'],['../a00030.html#ad4ba7701967c1da20171228afccb7081',1,'cValues():&#160;KSSearch.m']]],
-  ['catalytic_20rections_20network_20stochastic_20simulator_20_2d_20carness_204_2e8_20_2820131209_2e62_29',['Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131209.62)',['../a00011.html',1,'']]]
+  ['catalytic_20rections_20network_20stochastic_20simulator_20_2d_20carness_204_2e8_20_2820131210_2e63_29',['Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131210.63)',['../a00011.html',1,'']]]
 ];

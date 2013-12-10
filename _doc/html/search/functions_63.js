@@ -11,6 +11,7 @@ var searchData=
   ['checkavailability',['checkAvailability',['../a00014.html#ad3ebcd7ab1c9ba1a0f65b264b97adf33',1,'environment']]],
   ['checkifonlymutualcatalysis',['checkIfOnlyMutualCatalysis',['../a00014.html#abdafaeba15b5d32fd35569869c6244d5',1,'environment']]],
   ['checkifthereactionisalreadycatalyzedbythisspecies',['checkIfTheReactionIsAlreadyCatalyzedByThisSpecies',['../a00014.html#ac4c90b07b8e75ea03e2ced0ea644a69f',1,'environment']]],
+  ['checkifthesecondsubstrateisalreadypresent',['checkIFtheSecondSubstrateIsAlreadyPresent',['../a00022.html#af04a95fb2b35bf988271a60413ec508e',1,'species']]],
   ['clearallstructures',['clearAllStructures',['../a00014.html#aa860227725dbe5b0251a25f440773161',1,'environment']]],
   ['cleavagesmatrix',['cleavagesMatrix',['../a00027.html#a01fa14c111dc166a634dbb35b9cf9845',1,'cleavagesMatrix(cleavages, 1:6):&#160;garbageSearch.m'],['../a00029.html#a01fa14c111dc166a634dbb35b9cf9845',1,'cleavagesMatrix(cleavages, 1:6):&#160;KillSpam.m'],['../a00030.html#a90d1d83fdcae4fb1cba5129d5820d33c',1,'cleavagesMatrix(i, 1:6):&#160;KSSearch.m']]],
   ['complesso',['complesso',['../a00068.html#ad4d1a2311b23c0f860b99297ddc57214',1,'inizializzatore_ACS.m']]],

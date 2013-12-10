@@ -514,6 +514,7 @@
     <member refid="a00022_1acc180a103e6681da2add266aafda3eb9" kind="function"><name>resetToInitConc</name></member>
     <member refid="a00022_1a8daa007da55f042b9c436f956836f4d8" kind="function"><name>setLastSpeciesEvaluated</name></member>
     <member refid="a00022_1a0da8d53a216583f7790b12362da376a3" kind="function"><name>insertSecSub</name></member>
+    <member refid="a00022_1af04a95fb2b35bf988271a60413ec508e" kind="function"><name>checkIFtheSecondSubstrateIsAlreadyPresent</name></member>
     <member refid="a00022_1aeca516fc712a2bfa19ec560961ed03f7" kind="function"><name>insertGillID</name></member>
     <member refid="a00022_1a1a5c93a3fd5a2605d5e2fd14d29b97cd" kind="function"><name>getGillIDpos</name></member>
     <member refid="a00022_1a211914e1702d47eb3203730fec2c7b4c" kind="function"><name>showGillEngagement</name></member>

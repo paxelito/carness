@@ -1,4 +1,4 @@
-.TH "species" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.TH "species" 3 "Tue Dec 10 2013" "Version 4.8 (20131210.63)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -197,6 +197,9 @@ This class contains declarations of the species class\&.
 .br
 .ti -1c
 .RI "void \fBinsertSecSub\fP (\fBacs_longInt\fP tmpID, \fBacs_double\fP tmpK, \fBacs_longInt\fP tmpCat)"
+.br
+.ti -1c
+.RI "bool \fBcheckIFtheSecondSubstrateIsAlreadyPresent\fP (\fBacs_longInt\fP tmpSecSubID)"
 .br
 .ti -1c
 .RI "void \fBinsertGillID\fP (\fBacs_longInt\fP tmpID)"
@@ -429,6 +432,10 @@ Definition at line 83 of file species\&.h\&.
 to charge molecules 
 .PP
 Definition at line 350 of file species\&.cpp\&.
+.SS "bool species::checkIFtheSecondSubstrateIsAlreadyPresent (\fBacs_longInt\fPtmpSecSubID)"
+Function to control if the second substrare is already present 
+.PP
+Definition at line 424 of file species\&.cpp\&.
 .SS "void species::concToNum (\fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
@@ -496,7 +503,7 @@ Definition at line 106 of file species\&.h\&.
 .SS "\fBacs_longInt\fP species::getGillIDpos (\fBacs_longInt\fPtmpID) const\fC [inline]\fP"
 
 .PP
-Definition at line 145 of file species\&.h\&.
+Definition at line 146 of file species\&.h\&.
 .SS "\fBacs_longInt\fP species::getID () const\fC [inline]\fP"
 
 .PP
@@ -564,11 +571,32 @@ Definition at line 302 of file species\&.cpp\&.
 .SS "void species::insertGillID (\fBacs_longInt\fPtmpID)\fC [inline]\fP"
 
 .PP
-Definition at line 144 of file species\&.h\&.
+Definition at line 145 of file species\&.h\&.
 .SS "void species::insertSecSub (\fBacs_longInt\fPtmpID, \fBacs_double\fPtmpK, \fBacs_longInt\fPtmpCat)"
-to insert the second substrate - and k reaction - to the species (complexes list) 
+Function to insert the second substrate, final condensation rate and the catalysis ID to the species (complexes list) 
 .PP
-Definition at line 386 of file species\&.cpp\&.
+\fBAuthor:\fP
+.RS 4
+Alessandro Filisetti 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+2013-12-10 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIacs_longInt\fP tmpID second substrate ID 
+.br
+\fIacs_double\fP tmpK final condensation ID 
+.br
+\fIacs_longInt\fP tmpCat catalysis ID 
+.RE
+.PP
+
+.PP
+Definition at line 391 of file species\&.cpp\&.
 .SS "void species::numToConc (\fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP
@@ -632,7 +660,7 @@ Definition at line 324 of file species\&.cpp\&.
 .SS "void species::showGillEngagement ()"
 Function to show the species gillespie engagement 
 .PP
-Definition at line 406 of file species\&.cpp\&.
+Definition at line 411 of file species\&.cpp\&.
 .SS "void species::specificIncrement (\fBacs_int\fPtmpIncrement, \fBacs_double\fPtmpVolume)\fC [inline]\fP"
 
 .PP

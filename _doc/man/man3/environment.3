@@ -1,4 +1,4 @@
-.TH "environment" 3 "Tue Dec 10 2013" "Version 4.8 (20131209.62)" "CaRNeSS" \" -*- nroff -*-
+.TH "environment" 3 "Tue Dec 10 2013" "Version 4.8 (20131210.63)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -715,7 +715,7 @@ Alessandro Filisetti
 .PP
 
 .PP
-Definition at line 6157 of file environment\&.cpp\&.
+Definition at line 6158 of file environment\&.cpp\&.
 .SS "bool environment::checkAvailability (\fBacs_longInt\fPtmpMI, \fBacs_longInt\fPtmpMII, \fBacs_longInt\fPtmpQI, \fBacs_longInt\fPtmpQII)"
 Return TRUE if there are sufficient molecules for the reaction\&. It is used for the reaction in which catalyst and substrate are the same molecules 
 .PP
@@ -782,7 +782,7 @@ Clear all structures after each simulation
 .PP
 
 .PP
-Definition at line 6405 of file environment\&.cpp\&.
+Definition at line 6406 of file environment\&.cpp\&.
 .SS "bool environment::complexEvaluation (stringtmpComplex, \fBMTRand\fP &tmp___RndDoubleGen, \fBacs_int\fPtmpCuttingPnt, \fBacs_longInt\fPtmpCatalyst_ID, \fBacs_longInt\fPtmpSubstrate_ID, \fBacs_longInt\fPtmpCatID, \fBacs_longInt\fPtmpSecSub_ID, booltmpCpxType)"
 Complex evaluation 
 .PP
@@ -1141,11 +1141,11 @@ Definition at line 311 of file environment\&.h\&.
 .SS "bool environment::devStd ()"
 
 .PP
-Definition at line 7370 of file environment\&.cpp\&.
+Definition at line 7371 of file environment\&.cpp\&.
 .SS "bool environment::entropy ()"
 
 .PP
-Definition at line 7388 of file environment\&.cpp\&.
+Definition at line 7389 of file environment\&.cpp\&.
 .SS "\fBacs_double\fP environment::getActualTime () const\fC [inline]\fP"
 
 .PP
@@ -2102,7 +2102,7 @@ Print all the energized molecules  1\&.0
 .PP
 
 .PP
-Definition at line 6381 of file environment\&.cpp\&.
+Definition at line 6382 of file environment\&.cpp\&.
 .SS "void environment::printAllSpeciesIdAndSequence ()"
 Show all the species with their ID 
 .PP
@@ -2113,7 +2113,7 @@ Show all the species with their ID
 .PP
 
 .PP
-Definition at line 6325 of file environment\&.cpp\&.
+Definition at line 6326 of file environment\&.cpp\&.
 .SS "void environment::printGillespieStructure ()"
 Show all the Gillespie Structure 
 .PP
@@ -2124,7 +2124,7 @@ Show all the Gillespie Structure
 .PP
 
 .PP
-Definition at line 6353 of file environment\&.cpp\&.
+Definition at line 6354 of file environment\&.cpp\&.
 .SS "void environment::printInitialCondition ()"
 Show all initial species in table format 
 .PP
@@ -2135,7 +2135,7 @@ Show all initial species in table format
 .PP
 
 .PP
-Definition at line 6267 of file environment\&.cpp\&.
+Definition at line 6268 of file environment\&.cpp\&.
 .SS "void environment::printNutrientsAndProbability ()"
 This Function populates two vectors containing all the nutrients and all the probabilities for the influx selected species from the firing disk according to the max length of the influx This function print to monitor the content of the vectors nutrientsForInflux and nutrientsProb2BeSelected 
 .PP
@@ -2187,7 +2187,7 @@ set the concentrations to the initial values and reset internal statistics and c
 .PP
 
 .PP
-Definition at line 6472 of file environment\&.cpp\&.
+Definition at line 6473 of file environment\&.cpp\&.
 .SS "void environment::resetCondensationCounter ()\fC [inline]\fP"
 
 .PP
@@ -2276,7 +2276,7 @@ Save the catalysis structures in a file named catalysis_[currentSims]_[currentSt
 .PP
 
 .PP
-Definition at line 6978 of file environment\&.cpp\&.
+Definition at line 6979 of file environment\&.cpp\&.
 .SS "bool environment::saveConfigurationFileSTD (stringtmpStoringPath)"
 Save a file with the configuration parameters 
 .PP
@@ -2292,7 +2292,7 @@ Save a file with the configuration parameters
 .PP
 
 .PP
-Definition at line 6613 of file environment\&.cpp\&.
+Definition at line 6614 of file environment\&.cpp\&.
 .SS "bool environment::saveInfluxStructureSTD (stringtmpStoringPath)"
 Save influx structure on file, standard C++ 
 .PP
@@ -2313,7 +2313,7 @@ Save influx structure on file, standard C++
 .PP
 
 .PP
-Definition at line 6783 of file environment\&.cpp\&.
+Definition at line 6784 of file environment\&.cpp\&.
 .SS "bool environment::saveLivingSpeciesAmountSTD (\fBacs_int\fPtmp__CurrentGen, \fBacs_int\fPtmp__CurrentSim, stringtmp__StoringPath)"
 Save living species total AMOUNT in a file named livingAmount_[CurrentGen]_[currentSim]\&.csv\&. The file is saved in the directory indicated as a second parameter in the run command - Standard C++ 
 .PP
@@ -2329,7 +2329,7 @@ Save living species total AMOUNT in a file named livingAmount_[CurrentGen]_[curr
 .PP
 
 .PP
-Definition at line 7242 of file environment\&.cpp\&.
+Definition at line 7243 of file environment\&.cpp\&.
 .SS "bool environment::saveLivingSpeciesConcentrationSTD (\fBacs_int\fPtmp__CurrentGen, \fBacs_int\fPtmp__CurrentSim, stringtmp__StoringPath)"
 Save living species total CONCENTRATION in a file named livingAmount_[CurrentGen]_[currentSim]\&.csv\&. The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2345,7 +2345,7 @@ Save living species total CONCENTRATION in a file named livingAmount_[CurrentGen
 .PP
 
 .PP
-Definition at line 7308 of file environment\&.cpp\&.
+Definition at line 7309 of file environment\&.cpp\&.
 .SS "bool environment::saveLivingSpeciesIDSTD (\fBacs_int\fPtmp__CurrentGen, \fBacs_int\fPtmp__CurrentSim, \fBacs_int\fPtmp__CurrentStep, stringtmp__StoringPath)"
 Save living species in a file named living_species_[currentSim]\&.csv\&. Standard C++ The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2361,7 +2361,7 @@ Save living species in a file named living_species_[currentSim]\&.csv\&. Standar
 .PP
 
 .PP
-Definition at line 7181 of file environment\&.cpp\&.
+Definition at line 7182 of file environment\&.cpp\&.
 .SS "bool environment::saveNrgBoolFncStructureSTD (stringtmpStoringPath)"
 Save Energetic Boolean Function on file, standard C++ 
 .PP
@@ -2382,7 +2382,7 @@ Save Energetic Boolean Function on file, standard C++
 .PP
 
 .PP
-Definition at line 6821 of file environment\&.cpp\&.
+Definition at line 6822 of file environment\&.cpp\&.
 .SS "bool environment::saveReactionsParametersSTD (\fBacs_int\fPtmp__CurrentGen, \fBacs_int\fPtmp__CurrentSim, \fBacs_int\fPtmp__CurrentStep, stringtmp__StoringPath, \fBacs_int\fPtmpRctType, \fBacs_longInt\fPtmpCat, \fBacs_longInt\fPtmpMol_I, \fBacs_longInt\fPtmpMol_II, \fBacs_longInt\fPtmpMol_III)"
 Save the reactions parameters in a file named reactions_parameters_[currentSim]\&.csv\&. The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2398,7 +2398,7 @@ Save the reactions parameters in a file named reactions_parameters_[currentSim]\
 .PP
 
 .PP
-Definition at line 7122 of file environment\&.cpp\&.
+Definition at line 7123 of file environment\&.cpp\&.
 .SS "bool environment::saveReactionsStructureSTD (\fBacs_int\fPtmpCurrentGen, \fBacs_int\fPtmpCurrentSim, \fBacs_int\fPtmpCurrentStep, stringtmpStoringPath)"
 Save the reactions structures in a file named reactions_[currentSims]_[currentStep]\&.csv\&. This is file is equal to the acs_reactions\&.csv input file\&. The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2409,7 +2409,7 @@ Save the reactions structures in a file named reactions_[currentSims]_[currentSt
 .PP
 
 .PP
-Definition at line 6924 of file environment\&.cpp\&.
+Definition at line 6925 of file environment\&.cpp\&.
 .SS "bool environment::saveSpeciesStructureSTD (\fBacs_int\fPtmpCurrentGen, \fBacs_int\fPtmpCurrentSim, \fBacs_int\fPtmpCurrentStep, stringtmpStoringPath)"
 Save the species structures in a file named species_[currentSims]_[currentStep]\&.csv\&. This is file is equal to the acs_species\&.csv input file\&. C++ standard The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2425,7 +2425,7 @@ Save the species structures in a file named species_[currentSims]_[currentStep]\
 .PP
 
 .PP
-Definition at line 6859 of file environment\&.cpp\&.
+Definition at line 6860 of file environment\&.cpp\&.
 .SS "bool environment::saveTimesSTD (\fBacs_int\fPtmpCurrentGen, \fBacs_int\fPtmpCurrentSim, \fBacs_int\fPtmpCurrentStep, stringtmpStoringPath)"
 Save the reactions times in a file named times_[currentSim]\&.csv\&. Standard C++ The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2441,7 +2441,7 @@ Save the reactions times in a file named times_[currentSim]\&.csv\&. Standard C+
 .PP
 
 .PP
-Definition at line 7035 of file environment\&.cpp\&.
+Definition at line 7036 of file environment\&.cpp\&.
 .SS "\fBacs_int\fP environment::selectWhetherCleavageOrCond (\fBMTRand\fP &tmp__RndDoubleGen)"
 Select reaction type (cleavage or condensation) according to the cleavage probability 
 .PP
@@ -2547,7 +2547,7 @@ Shows all parameters uploaded from the configuration file
 .PP
 
 .PP
-Definition at line 6174 of file environment\&.cpp\&.
+Definition at line 6175 of file environment\&.cpp\&.
 .SS "void environment::showSubListInSpecies ()"
 Function to show the substrates list of the complex species 
 .PP
@@ -2562,7 +2562,7 @@ Store initial structures into storing variables
 .PP
 
 .PP
-Definition at line 6567 of file environment\&.cpp\&.
+Definition at line 6568 of file environment\&.cpp\&.
 .SS "bool environment::structureCoherenceCheckUp ()"
 This function check the coherence of the data structures\&. IF IT FAULTS THE SYSTEM RETURNS ERROR!!! IT IS VERY RECOMMENDED RUN THIS FUNCTION ALWAYS AFTER THE INITIALIZATION 
 .PP
@@ -2620,7 +2620,7 @@ Update the species age
 .PP
 
 .PP
-Definition at line 6125 of file environment\&.cpp\&.
+Definition at line 6126 of file environment\&.cpp\&.
 .SS "string environment::zeroBeforeStringNumberSTD (\fBacs_int\fPtmpTotN, \fBacs_int\fPtmpCurrentN)"
 This function creates a chain of zero as STRING according to tmpTotN and tmpCurrent N in order to make possible a sorting (e\&.g\&. tmpTotN = 1000, tmpCurrentN = 3, return 0003 
 .PP
@@ -2638,7 +2638,7 @@ This function creates a chain of zero as STRING according to tmpTotN and tmpCurr
 .PP
 
 .PP
-Definition at line 6590 of file environment\&.cpp\&.
+Definition at line 6591 of file environment\&.cpp\&.
 
 .SH "Author"
 .PP 

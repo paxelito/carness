@@ -9,6 +9,7 @@ var a00022 =
     [ "species", "a00022.html#ae0502a70e156c48b917ef2dadf72a859", null ],
     [ "~species", "a00022.html#a4ec3e21535ff68a06dba4e1eed935dc0", null ],
     [ "chargeMol", "a00022.html#adc36fb991695aed6503b8ed82e06bca5", null ],
+    [ "checkIFtheSecondSubstrateIsAlreadyPresent", "a00022.html#af04a95fb2b35bf988271a60413ec508e", null ],
     [ "concToNum", "a00022.html#a9842732a5dbe0eb67e24148b5d7ae4a2", null ],
     [ "decrement", "a00022.html#ae5142c6ab199459bc1d7d5945c761f0e", null ],
     [ "getAge", "a00022.html#a209c36c4e7eda0608f14cc003c344d65", null ],

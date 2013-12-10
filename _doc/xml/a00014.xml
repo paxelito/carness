@@ -1451,7 +1451,7 @@
         <references refid="a00075_1aed580149796de6350e6fcfae9b2adb30" compoundref="a00075" startline="302" endline="305">fromStrToBool</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <references refid="a00072_1a72244054b9e2e45fe85cbef84bd42904" compoundref="a00072" startline="47">RUNNING_VERSION</references>
-        <references refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6174" endline="6261">showGlobalParameter</references>
+        <references refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6175" endline="6262">showGlobalParameter</references>
         <references refid="a00072_1aca2c6e3c97c1e9728693b5c3c8c7f229" compoundref="a00072" startline="86">ENERGYBASED</references>
         <references refid="a00072_1a3efd65798c1856deacf187790b3f9ef5" compoundref="a00072" startline="87">ENERGYFREE</references>
         <references refid="a00014_1a5c8713237992b28c39199a7aea3f9ea0" compoundref="a00086" startline="325" endline="327">resetReactionsCounter</references>
@@ -2225,9 +2225,9 @@
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="211" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3486" bodyend="3503"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a248fc87e714b5d729453d11fbeec8310" compoundref="a00072" startline="78">SOLUBLE</references>
-        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6405" endline="6466">clearAllStructures</referencedby>
-        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6472" endline="6561">resetConcentrationToInitialConditions</referencedby>
-        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7035" endline="7114">saveTimesSTD</referencedby>
+        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6406" endline="6467">clearAllStructures</referencedby>
+        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6473" endline="6562">resetConcentrationToInitialConditions</referencedby>
+        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7036" endline="7115">saveTimesSTD</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a8796aead7bcc4a3f91eec7bc908dfa5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2277,9 +2277,9 @@
         <references refid="a00072_1a248fc87e714b5d729453d11fbeec8310" compoundref="a00072" startline="78">SOLUBLE</references>
         <referencedby refid="a00014_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00085" startline="3718" endline="3800">performRefill</referencedby>
         <referencedby refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="4369" endline="4521">performMoleculesEfflux</referencedby>
-        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6405" endline="6466">clearAllStructures</referencedby>
-        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6472" endline="6561">resetConcentrationToInitialConditions</referencedby>
-        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7035" endline="7114">saveTimesSTD</referencedby>
+        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6406" endline="6467">clearAllStructures</referencedby>
+        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6473" endline="6562">resetConcentrationToInitialConditions</referencedby>
+        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7036" endline="7115">saveTimesSTD</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a453d88017912e8b5973310ea2b044266" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2302,9 +2302,9 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="214" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3557" bodyend="3571"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
-        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6405" endline="6466">clearAllStructures</referencedby>
-        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6472" endline="6561">resetConcentrationToInitialConditions</referencedby>
-        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7035" endline="7114">saveTimesSTD</referencedby>
+        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6406" endline="6467">clearAllStructures</referencedby>
+        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6473" endline="6562">resetConcentrationToInitialConditions</referencedby>
+        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7036" endline="7115">saveTimesSTD</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1ab564c7ddffd3dba896d5b049e1257793" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2327,9 +2327,9 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="215" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3578" bodyend="3592"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
-        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6405" endline="6466">clearAllStructures</referencedby>
-        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6472" endline="6561">resetConcentrationToInitialConditions</referencedby>
-        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7035" endline="7114">saveTimesSTD</referencedby>
+        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6406" endline="6467">clearAllStructures</referencedby>
+        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6473" endline="6562">resetConcentrationToInitialConditions</referencedby>
+        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7036" endline="7115">saveTimesSTD</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1aa8c94019533639038f99587fc2b029dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2353,7 +2353,7 @@
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="216" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="3599" bodyend="3614"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a248fc87e714b5d729453d11fbeec8310" compoundref="a00072" startline="78">SOLUBLE</references>
-        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7035" endline="7114">saveTimesSTD</referencedby>
+        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7036" endline="7115">saveTimesSTD</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a3d44f3f4a8f9010fa99c49f5cc961416" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
@@ -2397,7 +2397,7 @@
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="219" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="219" bodyend="219"/>
         <referencedby refid="a00014_1a4e26cc574e20a5afcfbbe5887109c5af" compoundref="a00085" startline="1874" endline="1894">returnPosSpeciesAlreadyPresent</referencedby>
         <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6267" endline="6319">printInitialCondition</referencedby>
+        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6268" endline="6320">printInitialCondition</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1abf45b6406f8c0e95c4c5edf6b374e112" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2415,7 +2415,7 @@
         <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">updateReactions</referencedby>
         <referencedby refid="a00014_1a6feec5685b519ba0cdae0e5c59dffff0" compoundref="a00085" startline="1904" endline="1929">returnPosReactionAlreadyPresent</referencedby>
         <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6267" endline="6319">printInitialCondition</referencedby>
+        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6268" endline="6320">printInitialCondition</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a21609adb1a83a4cb7eaec78a90acd624" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -2434,7 +2434,7 @@
         <referencedby refid="a00014_1ac4c90b07b8e75ea03e2ced0ea644a69f" compoundref="a00085" startline="1937" endline="1958">checkIfTheReactionIsAlreadyCatalyzedByThisSpecies</referencedby>
         <referencedby refid="a00014_1abdafaeba15b5d32fd35569869c6244d5" compoundref="a00085" startline="1965" endline="1995">checkIfOnlyMutualCatalysis</referencedby>
         <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6267" endline="6319">printInitialCondition</referencedby>
+        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6268" endline="6320">printInitialCondition</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a79255c58733b08407dc81d89e306d74f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
@@ -2654,7 +2654,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="238" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6174" bodyend="6261"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="238" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6175" bodyend="6262"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a72244054b9e2e45fe85cbef84bd42904" compoundref="a00072" startline="47">RUNNING_VERSION</references>
         <references refid="a00072_1aab38659c2fe462437b89a1e85e619dc7" compoundref="a00072" startline="42">__SOFTVERSION__</references>
@@ -2674,7 +2674,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="239" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6267" bodyend="6319"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="239" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6268" bodyend="6320"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00014_1ab98d4ad28b101f08279aa3458d5dfda3" compoundref="a00086" startline="219" endline="219">getNumberOfTheoreticalSpecies</references>
         <references refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" compoundref="a00027" startline="76">i</references>
@@ -2696,7 +2696,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="240" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6325" bodyend="6347"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="240" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6326" bodyend="6348"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" compoundref="a00027" startline="76">i</references>
         <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="5851" endline="6012">newSpeciesEvaluationIII</referencedby>
@@ -2713,7 +2713,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="241" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6353" bodyend="6373"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="241" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6354" bodyend="6374"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" compoundref="a00027" startline="76">i</references>
         <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3280">performOPTGillespieComputation</referencedby>
@@ -2748,7 +2748,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="243" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6381" bodyend="6400"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="243" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6382" bodyend="6401"/>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
       </memberdef>
       <memberdef kind="function" id="a00014_1aee77384e63261db28ef5677844bdbaf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -2955,7 +2955,7 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="252" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1478" bodyend="1564"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
         <references refid="a00025_1a0e465545a27eaf9ca2c9710f744963c4" compoundref="a00025" startline="172">species</references>
         <references refid="a00014_1a1055886a34a9a01ec37db31c69e460e0" compoundref="a00086" startline="292" endline="292">incNumberOfNewSpecies</references>
         <references refid="a00014_1a69ae530ef6f9298e3ab8304157709404" compoundref="a00086" startline="287" endline="287">incNumberOfCpx</references>
@@ -2997,7 +2997,7 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="253" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1674" bodyend="1716"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
       </memberdef>
       <memberdef kind="function" id="a00014_1a6dd31bae82367ebe7d6a6bb062b8cd07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3034,7 +3034,7 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="254" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1766" bodyend="1809"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
         <references refid="a00014_1af293fafca4582120d88f888d70d8623a" compoundref="a00085" startline="2462" endline="2518">inserSubListInSpecies</references>
       </memberdef>
       <memberdef kind="function" id="a00014_1a9ceec5e00b0f5a51dd125c583b8ac5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -3376,7 +3376,7 @@
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="264" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="1819" bodyend="1831"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="5851" endline="6012">newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a496ba50d3a345cd842ce42406946405c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -3680,17 +3680,17 @@
         <references refid="a00072_1ab0ead5a0a8c59ad5f4d9fcf0be28a5d7" compoundref="a00072" startline="49">MEDIUM_DEBUG</references>
         <references refid="a00072_1adb07a512ddff058539c565dc597f8925" compoundref="a00072" startline="75">SPONTANEOUS_CLEAVAGE</references>
         <references refid="a00072_1a9248f5baf3277731d21513c01ab14ba2" compoundref="a00072" startline="74">SPONTANEOUS_CONDENSATION</references>
-        <references refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="6353" endline="6373">printGillespieStructure</references>
+        <references refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="6354" endline="6374">printGillespieStructure</references>
         <references refid="a00072_1a174754c04acfba9e1f66ba249e68643a" compoundref="a00072" startline="108">AVO</references>
         <references refid="a00075_1aa6403f90846f5fb19fcfb8b81aeee73c" compoundref="a00075" startline="15" endline="31">returnSelectionIdFromAWeightProbVector</references>
         <references refid="a00072_1a27f5d30679c0e8877ba9246eb1a48ff4" compoundref="a00072" startline="53">GILLESPIESTUFF</references>
-        <references refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6267" endline="6319">printInitialCondition</references>
+        <references refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6268" endline="6320">printInitialCondition</references>
         <references refid="a00072_1aa7d0d45ef785688de1c634290ceb02e7" compoundref="a00072" startline="111">MINIMALRCTTIMEMULTI</references>
         <references refid="a00014_1a9bc445da3e89d09d4fce11c83f3dedb0" compoundref="a00086" startline="343" endline="343">setActualTime</references>
-        <references refid="a00014_1ae7fd21d14f81c4854b3a6163b0278857" compoundref="a00085" startline="7370" endline="7386">devStd</references>
-        <references refid="a00014_1a4e9b60ec8b05e888cf0e55def03ee906" compoundref="a00085" startline="7388" endline="7406">entropy</references>
+        <references refid="a00014_1ae7fd21d14f81c4854b3a6163b0278857" compoundref="a00085" startline="7371" endline="7387">devStd</references>
+        <references refid="a00014_1a4e9b60ec8b05e888cf0e55def03ee906" compoundref="a00085" startline="7389" endline="7407">entropy</references>
         <references refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="4668" endline="4887">performReaction</references>
-        <references refid="a00014_1a0156a2d7219396e58a930731966b0c66" compoundref="a00085" startline="6157" endline="6162">changeVolume</references>
+        <references refid="a00014_1a0156a2d7219396e58a930731966b0c66" compoundref="a00085" startline="6158" endline="6163">changeVolume</references>
         <references refid="a00072_1a72244054b9e2e45fe85cbef84bd42904" compoundref="a00072" startline="47">RUNNING_VERSION</references>
         <references refid="a00014_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00085" startline="3718" endline="3800">performRefill</references>
         <references refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="4369" endline="4521">performMoleculesEfflux</references>
@@ -3781,17 +3781,17 @@
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="272" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="4668" bodyend="4887"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
-        <references refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="6353" endline="6373">printGillespieStructure</references>
+        <references refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="6354" endline="6374">printGillespieStructure</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <references refid="a00072_1aeeaf3e004dff03f70f94e0cf7d623b3c" compoundref="a00072" startline="64">CONDENSATION</references>
         <references refid="a00014_1a1baf5512b7e0a8fb6f8f890ba9f99cd1" compoundref="a00085" startline="4898" endline="5001">performCondensation</references>
         <references refid="a00072_1a72244054b9e2e45fe85cbef84bd42904" compoundref="a00072" startline="47">RUNNING_VERSION</references>
         <references refid="a00014_1a14bad649a73246617361f0e1765f49f8" compoundref="a00086" startline="153" endline="153">getActualTime</references>
         <references refid="a00014_1a77e995bee54ab4e09f165a857a7b0272" compoundref="a00086" startline="160" endline="160">getFileTimesSavingInterval</references>
-        <references refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7122" endline="7173">saveReactionsParametersSTD</references>
-        <references refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7181" endline="7234">saveLivingSpeciesIDSTD</references>
-        <references refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7242" endline="7300">saveLivingSpeciesAmountSTD</references>
-        <references refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7308" endline="7364">saveLivingSpeciesConcentrationSTD</references>
+        <references refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7123" endline="7174">saveReactionsParametersSTD</references>
+        <references refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7182" endline="7235">saveLivingSpeciesIDSTD</references>
+        <references refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7243" endline="7301">saveLivingSpeciesAmountSTD</references>
+        <references refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7309" endline="7365">saveLivingSpeciesConcentrationSTD</references>
         <references refid="a00072_1a840f787adb443d5d9492b18d3180c233" compoundref="a00072" startline="71">ENDO_CONDENSATION</references>
         <references refid="a00014_1aa7a2cc95d8ba242c805a8fda063b23a7" compoundref="a00085" startline="5015" endline="5138">perform_endo_Condensation</references>
         <references refid="a00072_1af490eeb67f57decd4fc403c50ec1afa0" compoundref="a00072" startline="65">CLEAVAGE</references>
@@ -3858,7 +3858,7 @@
         <references refid="a00014_1a496ba50d3a345cd842ce42406946405c" compoundref="a00085" startline="1840" endline="1864">setSolubility</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <references refid="a00072_1ac2a71f467524d5299cbff5df96be638a" compoundref="a00072" startline="50">HIGH_DEBUG</references>
-        <references refid="a00014_1a48d8fd9d8d5c9c31f0b4af87c8cbd28f" compoundref="a00085" startline="6325" endline="6347">printAllSpeciesIdAndSequence</references>
+        <references refid="a00014_1a48d8fd9d8d5c9c31f0b4af87c8cbd28f" compoundref="a00085" startline="6326" endline="6348">printAllSpeciesIdAndSequence</references>
         <references refid="a00072_1a72244054b9e2e45fe85cbef84bd42904" compoundref="a00072" startline="47">RUNNING_VERSION</references>
         <references refid="a00014_1a0fd3cb062d35d2f6dd8961e95dd477b7" compoundref="a00085" startline="481" endline="512">computeSngSpeciesRctsNumber</references>
         <references refid="a00072_1a248fc87e714b5d729453d11fbeec8310" compoundref="a00072" startline="78">SOLUBLE</references>
@@ -3973,7 +3973,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="274" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6025" bodyend="6119"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="274" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6025" bodyend="6120"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
         <references refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" compoundref="a00027" startline="76">i</references>
@@ -4119,7 +4119,7 @@
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <references refid="a00014_1ae1270b9c235dd6b28413075197dba8e0" compoundref="a00085" startline="3288" endline="3307">computeSinglGilScore</references>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
-        <references refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="6353" endline="6373">printGillespieStructure</references>
+        <references refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="6354" endline="6374">printGillespieStructure</references>
         <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3280">performOPTGillespieComputation</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a0156a2d7219396e58a930731966b0c66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -4139,7 +4139,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="280" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6157" bodyend="6162"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="280" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6158" bodyend="6163"/>
         <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3280">performOPTGillespieComputation</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a5c86f93c84f9931640843c38eccb9bf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -4216,7 +4216,7 @@
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="287" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="287" bodyend="287"/>
         <referencedby refid="a00014_1aee77384e63261db28ef5677844bdbaf6" compoundref="a00085" startline="1249" endline="1331">createInitialMoleculesPopulationFromFileSTD</referencedby>
         <referencedby refid="a00014_1aa70e1394bf2240f6e5f14d4cbf369a3b" compoundref="a00085" startline="1478" endline="1564">createInitialMoleculesPopulationFromSpecificFileSTD</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1aadd057e7038269e6fac314a12a3bf334" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4248,7 +4248,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="289" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="289" bodyend="289"/>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a756dc43b6b47498ba457613749324b15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4561,7 +4561,7 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="310" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="310" bodyend="310"/>
         <referencedby refid="a00014_1adbaf165a12edd62c614a455544807ea3" compoundref="a00085" startline="3937" endline="4168">performDETMoleculesCharging</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a6686b0489ed94f11c4b03c011978f9af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4754,8 +4754,8 @@
         <references refid="a00014_1a9c22cb9b69207398e35c9c155e2e35ce" compoundref="a00086" startline="322" endline="322">resetSpontDissCounter</references>
         <references refid="a00014_1a98baed580212dad8ef48a22bfe7e1295" compoundref="a00086" startline="323" endline="323">resetSpontAssCounter</references>
         <referencedby refid="a00014_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00085" startline="80" endline="197">environment</referencedby>
-        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6405" endline="6466">clearAllStructures</referencedby>
-        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6472" endline="6561">resetConcentrationToInitialConditions</referencedby>
+        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6406" endline="6467">clearAllStructures</referencedby>
+        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6473" endline="6562">resetConcentrationToInitialConditions</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a7981c34d16c0b1e9e6ca3ea69aa3a8a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -4827,7 +4827,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="333" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6405" bodyend="6466"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="333" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6406" bodyend="6467"/>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
         <references refid="a00014_1a7a321296874fa1320da225cdbbf56a64" compoundref="a00085" startline="3486" endline="3503">getTotalNumberOfSpecies</references>
         <references refid="a00014_1a57e7ac49955f4717096cb6696ee03a61" compoundref="a00085" startline="3533" endline="3549">getTotalNumberOfMolecules</references>
@@ -4849,11 +4849,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="335" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6472" bodyend="6561"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="335" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6473" bodyend="6562"/>
         <references refid="a00072_1a72244054b9e2e45fe85cbef84bd42904" compoundref="a00072" startline="47">RUNNING_VERSION</references>
         <references refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">structureCoherenceCheckUp</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
-        <references refid="a00014_1a7fc3937fb586db93c33f7f091dc99626" compoundref="a00085" startline="6567" endline="6575">storeInitialStructures</references>
+        <references refid="a00014_1a7fc3937fb586db93c33f7f091dc99626" compoundref="a00085" startline="6568" endline="6576">storeInitialStructures</references>
         <references refid="a00014_1a7a321296874fa1320da225cdbbf56a64" compoundref="a00085" startline="3486" endline="3503">getTotalNumberOfSpecies</references>
         <references refid="a00014_1a57e7ac49955f4717096cb6696ee03a61" compoundref="a00085" startline="3533" endline="3549">getTotalNumberOfMolecules</references>
         <references refid="a00014_1a453d88017912e8b5973310ea2b044266" compoundref="a00085" startline="3557" endline="3571">getTotalNumberOfComplexSpecies</references>
@@ -4874,8 +4874,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="336" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6567" bodyend="6575"/>
-        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6472" endline="6561">resetConcentrationToInitialConditions</referencedby>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="336" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6568" bodyend="6576"/>
+        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6473" endline="6562">resetConcentrationToInitialConditions</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a8a53821ad1675b0da50591616aac3b74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -5096,8 +5096,8 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="343" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" bodystart="343" bodyend="343"/>
         <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3280">performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6405" endline="6466">clearAllStructures</referencedby>
-        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6472" endline="6561">resetConcentrationToInitialConditions</referencedby>
+        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6406" endline="6467">clearAllStructures</referencedby>
+        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6473" endline="6562">resetConcentrationToInitialConditions</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1adab0607255ca5927b69cb6882917e031" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -5111,7 +5111,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="345" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6125" bodyend="6149"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="345" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6126" bodyend="6150"/>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
@@ -5576,7 +5576,7 @@
         <references refid="a00072_1a83346194720cacc0144e87246d23081b" compoundref="a00072" startline="83">ENDOERGONIC</references>
         <references refid="a00014_1a10fad450cf5ef3a1c7cf75d616105069" compoundref="a00086" startline="297" endline="297">decMolSpeciesProcedure</references>
         <references refid="a00072_1a186bfb39322832c790ce5403bc04330d" compoundref="a00072" startline="52">COMPLEXSTUFF</references>
-        <references refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">complexEvaluation</references>
+        <references refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">complexEvaluation</references>
         <references refid="a00014_1afd3d590aa9b6a644cb360cc5fd47e16a" compoundref="a00086" startline="308" endline="308">incCpxFormCounter</references>
         <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="4668" endline="4887">performReaction</referencedby>
       </memberdef>
@@ -5648,7 +5648,7 @@
         <references refid="a00014_1af21c066ce18c8a39740f66a995782fb9" compoundref="a00086" startline="302" endline="302">unchargeMolProcess</references>
         <references refid="a00072_1a7e521c899f69e37df3501fd0e652c517" compoundref="a00072" startline="94">CATALYSTLOAD</references>
         <references refid="a00072_1afb6d1105a81463fbadceff0217332f68" compoundref="a00072" startline="95">BOTHLOAD</references>
-        <references refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">complexEvaluation</references>
+        <references refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">complexEvaluation</references>
         <references refid="a00072_1ac23ad60cb24df0616d58202351b11e60" compoundref="a00072" startline="82">ESOERGONIC</references>
         <references refid="a00014_1afd3d590aa9b6a644cb360cc5fd47e16a" compoundref="a00086" startline="308" endline="308">incCpxFormCounter</references>
         <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="4668" endline="4887">performReaction</referencedby>
@@ -5925,7 +5925,7 @@
         <references refid="a00072_1af490eeb67f57decd4fc403c50ec1afa0" compoundref="a00072" startline="65">CLEAVAGE</references>
         <references refid="a00014_1a5160dec152ed0369fe8af9aff3253a9e" compoundref="a00085" startline="2578" endline="2623">notInverseReactionAlreadyCatalyzed</references>
         <references refid="a00072_1aeeaf3e004dff03f70f94e0cf7d623b3c" compoundref="a00072" startline="64">CONDENSATION</references>
-        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6472" endline="6561">resetConcentrationToInitialConditions</referencedby>
+        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6473" endline="6562">resetConcentrationToInitialConditions</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a5160dec152ed0369fe8af9aff3253a9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -6124,7 +6124,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="377" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6613" bodyend="6775"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="377" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6614" bodyend="6776"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
@@ -6156,7 +6156,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="378" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6783" bodyend="6813"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="378" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6784" bodyend="6814"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
@@ -6187,7 +6187,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="379" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6821" bodyend="6851"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="379" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6822" bodyend="6852"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
@@ -6228,19 +6228,19 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="380" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6590" bodyend="6606"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="380" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6591" bodyend="6607"/>
         <references refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" compoundref="a00027" startline="76">i</references>
         <referencedby refid="a00014_1aa70e1394bf2240f6e5f14d4cbf369a3b" compoundref="a00085" startline="1478" endline="1564">createInitialMoleculesPopulationFromSpecificFileSTD</referencedby>
         <referencedby refid="a00014_1a743956229b11d7860dbc89a18f869586" compoundref="a00085" startline="1674" endline="1716">createInitialReactionsLayerFromSpecificFileSTD</referencedby>
         <referencedby refid="a00014_1a6dd31bae82367ebe7d6a6bb062b8cd07" compoundref="a00085" startline="1766" endline="1809">createInitialCatalysisLayerFromSpecificFileSTD</referencedby>
-        <referencedby refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="6859" endline="6917">saveSpeciesStructureSTD</referencedby>
-        <referencedby refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="6924" endline="6971">saveReactionsStructureSTD</referencedby>
-        <referencedby refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="6978" endline="7027">saveCatalysisStructureSTD</referencedby>
-        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7035" endline="7114">saveTimesSTD</referencedby>
-        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7122" endline="7173">saveReactionsParametersSTD</referencedby>
-        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7181" endline="7234">saveLivingSpeciesIDSTD</referencedby>
-        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7242" endline="7300">saveLivingSpeciesAmountSTD</referencedby>
-        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7308" endline="7364">saveLivingSpeciesConcentrationSTD</referencedby>
+        <referencedby refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="6860" endline="6918">saveSpeciesStructureSTD</referencedby>
+        <referencedby refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="6925" endline="6972">saveReactionsStructureSTD</referencedby>
+        <referencedby refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="6979" endline="7028">saveCatalysisStructureSTD</referencedby>
+        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7036" endline="7115">saveTimesSTD</referencedby>
+        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7123" endline="7174">saveReactionsParametersSTD</referencedby>
+        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7182" endline="7235">saveLivingSpeciesIDSTD</referencedby>
+        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7243" endline="7301">saveLivingSpeciesAmountSTD</referencedby>
+        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7309" endline="7365">saveLivingSpeciesConcentrationSTD</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -6271,10 +6271,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="381" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6859" bodyend="6917"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="381" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6860" bodyend="6918"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <referencedby refid="a00089_1acac21f7e718db9d00451e3caaaacc25f" compoundref="a00089" startline="633" endline="642">saveToFile</referencedby>
@@ -6308,10 +6308,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="382" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6924" bodyend="6971"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="382" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6925" bodyend="6972"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <referencedby refid="a00089_1acac21f7e718db9d00451e3caaaacc25f" compoundref="a00089" startline="633" endline="642">saveToFile</referencedby>
@@ -6345,10 +6345,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="383" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6978" bodyend="7027"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="383" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="6979" bodyend="7028"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <referencedby refid="a00089_1acac21f7e718db9d00451e3caaaacc25f" compoundref="a00089" startline="633" endline="642">saveToFile</referencedby>
@@ -6383,10 +6383,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="384" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7035" bodyend="7114"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="384" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7036" bodyend="7115"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <references refid="a00014_1a7a321296874fa1320da225cdbbf56a64" compoundref="a00085" startline="3486" endline="3503">getTotalNumberOfSpecies</references>
@@ -6445,10 +6445,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="385" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7122" bodyend="7173"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="385" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7123" bodyend="7174"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1ac2a71f467524d5299cbff5df96be638a" compoundref="a00072" startline="50">HIGH_DEBUG</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <references refid="a00072_1a174754c04acfba9e1f66ba249e68643a" compoundref="a00072" startline="108">AVO</references>
@@ -6483,10 +6483,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="387" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7181" bodyend="7234"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="387" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7182" bodyend="7235"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <references refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" compoundref="a00027" startline="76">i</references>
@@ -6517,10 +6517,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="388" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7242" bodyend="7300"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="388" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7243" bodyend="7301"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <references refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" compoundref="a00027" startline="76">i</references>
@@ -6551,10 +6551,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="389" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7308" bodyend="7364"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="389" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7309" bodyend="7365"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <references refid="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" compoundref="a00072" startline="48">SMALL_DEBUG</references>
-        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6590" endline="6606">zeroBeforeStringNumberSTD</references>
+        <references refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="6591" endline="6607">zeroBeforeStringNumberSTD</references>
         <references refid="a00028_1a34c820385e9209f49c18739329ad9206" compoundref="a00028" startline="1">out</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <references refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" compoundref="a00027" startline="76">i</references>
@@ -6571,7 +6571,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="394" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7370" bodyend="7386"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="394" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7371" bodyend="7387"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3280">performOPTGillespieComputation</referencedby>
       </memberdef>
@@ -6586,7 +6586,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="395" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7388" bodyend="7406"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/environment.h" line="395" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/environment.cpp" bodystart="7389" bodyend="7407"/>
         <references refid="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" compoundref="a00072" startline="51">FINDERRORDURINGRUNTIME</references>
         <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3280">performOPTGillespieComputation</referencedby>
       </memberdef>

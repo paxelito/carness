@@ -200,10 +200,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/main.cpp" line="350" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/main.cpp" bodystart="633" bodyend="642"/>
-        <references refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="6859" endline="6917">environment::saveSpeciesStructureSTD</references>
+        <references refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="6860" endline="6918">environment::saveSpeciesStructureSTD</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
-        <references refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="6924" endline="6971">environment::saveReactionsStructureSTD</references>
-        <references refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="6978" endline="7027">environment::saveCatalysisStructureSTD</references>
+        <references refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="6925" endline="6972">environment::saveReactionsStructureSTD</references>
+        <references refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="6979" endline="7028">environment::saveCatalysisStructureSTD</references>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00089_1a2bf310904bc4e1fb5669e548525c4ba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -269,7 +269,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/main.cpp" line="351" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/main.cpp" bodystart="653" bodyend="658"/>
-        <references refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7035" endline="7114">environment::saveTimesSTD</references>
+        <references refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7036" endline="7115">environment::saveTimesSTD</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
@@ -336,15 +336,15 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/main.cpp" line="352" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/main.cpp" bodystart="669" bodyend="690"/>
-        <references refid="a00014_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00085" startline="6613" endline="6775">environment::saveConfigurationFileSTD</references>
+        <references refid="a00014_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00085" startline="6614" endline="6776">environment::saveConfigurationFileSTD</references>
         <references refid="a00075_1aa678d0a98232158c48108227b98de4b6" compoundref="a00075" startline="269" endline="274">ExitWithError</references>
         <references refid="a00014_1a6f0b4481779cd12dbcd8155916c7d703" compoundref="a00086" startline="205" endline="205">environment::getInflux</references>
-        <references refid="a00014_1a8f831e2db11fa5d840484345dac64fc7" compoundref="a00085" startline="6783" endline="6813">environment::saveInfluxStructureSTD</references>
+        <references refid="a00014_1a8f831e2db11fa5d840484345dac64fc7" compoundref="a00085" startline="6784" endline="6814">environment::saveInfluxStructureSTD</references>
         <references refid="a00014_1ab463a460de102c79c1044ab8a2c176ae" compoundref="a00086" startline="167" endline="167">environment::getEnergy</references>
-        <references refid="a00014_1a1412b9b1c3bd3e42bcb481f5e18ea931" compoundref="a00085" startline="6821" endline="6851">environment::saveNrgBoolFncStructureSTD</references>
-        <references refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="6859" endline="6917">environment::saveSpeciesStructureSTD</references>
-        <references refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="6924" endline="6971">environment::saveReactionsStructureSTD</references>
-        <references refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="6978" endline="7027">environment::saveCatalysisStructureSTD</references>
+        <references refid="a00014_1a1412b9b1c3bd3e42bcb481f5e18ea931" compoundref="a00085" startline="6822" endline="6852">environment::saveNrgBoolFncStructureSTD</references>
+        <references refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="6860" endline="6918">environment::saveSpeciesStructureSTD</references>
+        <references refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="6925" endline="6972">environment::saveReactionsStructureSTD</references>
+        <references refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="6979" endline="7028">environment::saveCatalysisStructureSTD</references>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00089_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -380,16 +380,16 @@
         <references refid="a00014_1a29eeb7a1b4689c10fd872e82179b4d84" compoundref="a00085" startline="1724" endline="1758">environment::createInitialCatalysisLayerFromFileSTD</references>
         <references refid="a00014_1a2de42381b0b9cba889bbb95c1456cfe5" compoundref="a00086" startline="218" endline="218">environment::getDebugLevel</references>
         <references refid="a00072_1ab0ead5a0a8c59ad5f4d9fcf0be28a5d7" compoundref="a00072" startline="49">MEDIUM_DEBUG</references>
-        <references refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6267" endline="6319">environment::printInitialCondition</references>
+        <references refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6268" endline="6320">environment::printInitialCondition</references>
         <references refid="a00089_1a4665c5f33b43dfc8fae4757552028cc0" compoundref="a00089" startline="669" endline="690">saveInitialConditionsToFile</references>
         <references refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">environment::structureCoherenceCheckUp</references>
-        <references refid="a00014_1a7fc3937fb586db93c33f7f091dc99626" compoundref="a00085" startline="6567" endline="6575">environment::storeInitialStructures</references>
+        <references refid="a00014_1a7fc3937fb586db93c33f7f091dc99626" compoundref="a00085" startline="6568" endline="6576">environment::storeInitialStructures</references>
         <references refid="a00072_1a72244054b9e2e45fe85cbef84bd42904" compoundref="a00072" startline="47">RUNNING_VERSION</references>
         <references refid="a00014_1a5a8522899b3e84b9c394d5d83d1e5c63" compoundref="a00086" startline="152" endline="152">environment::getNsim</references>
         <references refid="a00014_1afad68362d5f4ec0689941e3c1b92c2e8" compoundref="a00086" startline="151" endline="151">environment::getNgen</references>
         <references refid="a00014_1a0851e3481e6fec7f4feef126d5a6704c" compoundref="a00086" startline="158" endline="158">environment::getCurrentAttempts</references>
         <references refid="a00014_1ae626b961a53eeb5e08b4190da235e8dd" compoundref="a00086" startline="157" endline="157">environment::getMAXattempts</references>
-        <references refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6472" endline="6561">environment::resetConcentrationToInitialConditions</references>
+        <references refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6473" endline="6562">environment::resetConcentrationToInitialConditions</references>
         <references refid="a00089_1acac21f7e718db9d00451e3caaaacc25f" compoundref="a00089" startline="633" endline="642">saveToFile</references>
         <references refid="a00072_1a972f6696f10f8159f336357f003493b6" compoundref="a00072" startline="46">MINIMAL_PROMPT</references>
         <references refid="a00014_1a14bad649a73246617361f0e1765f49f8" compoundref="a00086" startline="153" endline="153">environment::getActualTime</references>
@@ -429,8 +429,8 @@
         <references refid="a00014_1a77e995bee54ab4e09f165a857a7b0272" compoundref="a00086" startline="160" endline="160">environment::getFileTimesSavingInterval</references>
         <references refid="a00089_1a2bf310904bc4e1fb5669e548525c4ba7" compoundref="a00089" startline="653" endline="658">saveTimesToFile</references>
         <references refid="a00014_1aac3eed768b89e3a70017075b68046ede" compoundref="a00086" startline="346" endline="346">environment::increaseAttempts</references>
-        <references refid="a00014_1adab0607255ca5927b69cb6882917e031" compoundref="a00085" startline="6125" endline="6149">environment::updateSpeciesAges</references>
-        <references refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6405" endline="6466">environment::clearAllStructures</references>
+        <references refid="a00014_1adab0607255ca5927b69cb6882917e031" compoundref="a00085" startline="6126" endline="6150">environment::updateSpeciesAges</references>
+        <references refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6406" endline="6467">environment::clearAllStructures</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

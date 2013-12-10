@@ -1881,11 +1881,52 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>to insert the second substrate - and k reaction - to the species (complexes list) </para>        </detaileddescription>
+<para>Function to insert the second substrate, final condensation rate and the catalysis ID to the species (complexes list) <simplesect kind="author"><para>Alessandro Filisetti </para></simplesect>
+<simplesect kind="date"><para>2013-12-10 </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>acs_longInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tmpID second substrate ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>acs_double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tmpK final condensation ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>acs_longInt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tmpCat catalysis ID </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="143" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="386" bodyend="401"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="143" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="391" bodyend="406"/>
         <references refid="a00068_1a4bfd41b9edb31803d68f4f6362ec4cd7" compoundref="a00068" startline="179">z</references>
+      </memberdef>
+      <memberdef kind="function" id="a00022_1af04a95fb2b35bf988271a60413ec508e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool species::checkIFtheSecondSubstrateIsAlreadyPresent</definition>
+        <argsstring>(acs_longInt tmpSecSubID)</argsstring>
+        <name>checkIFtheSecondSubstrateIsAlreadyPresent</name>
+        <param>
+          <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpSecSubID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to control if the second substrare is already present </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="144" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="424" bodyend="436"/>
       </memberdef>
       <memberdef kind="function" id="a00022_1aeca516fc712a2bfa19ec560961ed03f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1902,7 +1943,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="144" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="144" bodyend="144"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="145" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="145" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="a00022_1a1a5c93a3fd5a2605d5e2fd14d29b97cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -1919,7 +1960,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="145" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="145" bodyend="145"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="146" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="146" bodyend="146"/>
       </memberdef>
       <memberdef kind="function" id="a00022_1a211914e1702d47eb3203730fec2c7b4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1932,7 +1973,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
 <para>Function to show the species gillespie engagement </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="146" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="406" bodyend="414"/>
+        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="147" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="411" bodyend="419"/>
         <references refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" compoundref="a00027" startline="76">i</references>
       </memberdef>
       </sectiondef>
@@ -1942,7 +1983,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
 <para>class species <simplesect kind="authors"><para>Alessandro Filisetti </para></simplesect>
 <simplesect kind="version"><para>1.1 questa modifica è di prova per subversion</para></simplesect>
 Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for Living Technology. All rights reserved. Test paxelito SVN </para>    </detaileddescription>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="19" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="18" bodyend="147"/>
+    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="19" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="18" bodyend="148"/>
     <listofallmembers>
       <member refid="a00022_1a2dc379bb9d2499ff2867ffc1a37d594e" prot="private" virt="non-virtual"><scope>species</scope><name>age</name></member>
       <member refid="a00022_1a51a3fc22c56e6f4735b2e39fb2f8b7c8" prot="private" virt="non-virtual"><scope>species</scope><name>amount</name></member>
@@ -1950,6 +1991,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
       <member refid="a00022_1a671fcbf4dcfd3c0fad123a4943113b1e" prot="private" virt="non-virtual"><scope>species</scope><name>catalyst_ID</name></member>
       <member refid="a00022_1ab978f3fd309f561a7d8be3c88495b698" prot="private" virt="non-virtual"><scope>species</scope><name>chargedMols</name></member>
       <member refid="a00022_1adc36fb991695aed6503b8ed82e06bca5" prot="public" virt="non-virtual"><scope>species</scope><name>chargeMol</name></member>
+      <member refid="a00022_1af04a95fb2b35bf988271a60413ec508e" prot="public" virt="non-virtual"><scope>species</scope><name>checkIFtheSecondSubstrateIsAlreadyPresent</name></member>
       <member refid="a00022_1a117a357afdddc2702fe23f4136e3118d" prot="private" virt="non-virtual"><scope>species</scope><name>complexCuttingPoint</name></member>
       <member refid="a00022_1a494133660b93a1857149b06e17e417a3" prot="private" virt="non-virtual"><scope>species</scope><name>complexDegradationEnh</name></member>
       <member refid="a00022_1a517eb31083d23ac153e067a3c67b563b" prot="private" virt="non-virtual"><scope>species</scope><name>concentration</name></member>

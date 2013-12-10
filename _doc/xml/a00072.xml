@@ -200,7 +200,7 @@
       <sectiondef kind="define">
       <memberdef kind="define" id="a00072_1aab38659c2fe462437b89a1e85e619dc7" prot="public" static="no">
         <name>__SOFTVERSION__</name>
-        <initializer>&quot;4.8b20131209.62&quot;</initializer>
+        <initializer>&quot;4.8b20131210.63&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -208,8 +208,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="42" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="42" bodyend="-1"/>
-        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6174" endline="6261">environment::showGlobalParameter</referencedby>
-        <referencedby refid="a00014_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00085" startline="6613" endline="6775">environment::saveConfigurationFileSTD</referencedby>
+        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6175" endline="6262">environment::showGlobalParameter</referencedby>
+        <referencedby refid="a00014_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00085" startline="6614" endline="6776">environment::saveConfigurationFileSTD</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a972f6696f10f8159f336357f003493b6" prot="public" static="no">
         <name>MINIMAL_PROMPT</name>
@@ -241,8 +241,8 @@
         <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3280">environment::performOPTGillespieComputation</referencedby>
         <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="4668" endline="4887">environment::performReaction</referencedby>
         <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="5851" endline="6012">environment::newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6174" endline="6261">environment::showGlobalParameter</referencedby>
-        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6472" endline="6561">environment::resetConcentrationToInitialConditions</referencedby>
+        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6175" endline="6262">environment::showGlobalParameter</referencedby>
+        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="6473" endline="6562">environment::resetConcentrationToInitialConditions</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" prot="public" static="no">
@@ -278,15 +278,15 @@
         <referencedby refid="a00014_1a5c5e57b0558067cbf55c894f33d0a121" compoundref="a00085" startline="5565" endline="5648">environment::performComplexDissociation</referencedby>
         <referencedby refid="a00014_1a4949138a3771b7f6ec2bfe82cbad947e" compoundref="a00085" startline="5657" endline="5718">environment::performSpontaneousCleavage</referencedby>
         <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="5851" endline="6012">environment::newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">environment::complexEvaluation</referencedby>
-        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6405" endline="6466">environment::clearAllStructures</referencedby>
-        <referencedby refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="6859" endline="6917">environment::saveSpeciesStructureSTD</referencedby>
-        <referencedby refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="6924" endline="6971">environment::saveReactionsStructureSTD</referencedby>
-        <referencedby refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="6978" endline="7027">environment::saveCatalysisStructureSTD</referencedby>
-        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7035" endline="7114">environment::saveTimesSTD</referencedby>
-        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7181" endline="7234">environment::saveLivingSpeciesIDSTD</referencedby>
-        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7242" endline="7300">environment::saveLivingSpeciesAmountSTD</referencedby>
-        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7308" endline="7364">environment::saveLivingSpeciesConcentrationSTD</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="6406" endline="6467">environment::clearAllStructures</referencedby>
+        <referencedby refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="6860" endline="6918">environment::saveSpeciesStructureSTD</referencedby>
+        <referencedby refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="6925" endline="6972">environment::saveReactionsStructureSTD</referencedby>
+        <referencedby refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="6979" endline="7028">environment::saveCatalysisStructureSTD</referencedby>
+        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7036" endline="7115">environment::saveTimesSTD</referencedby>
+        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7182" endline="7235">environment::saveLivingSpeciesIDSTD</referencedby>
+        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7243" endline="7301">environment::saveLivingSpeciesAmountSTD</referencedby>
+        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7309" endline="7365">environment::saveLivingSpeciesConcentrationSTD</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1ab0ead5a0a8c59ad5f4d9fcf0be28a5d7" prot="public" static="no">
@@ -317,7 +317,7 @@
         <referencedby refid="a00014_1ad3ebcd7ab1c9ba1a0f65b264b97adf33" compoundref="a00085" startline="2635" endline="2655">environment::checkAvailability</referencedby>
         <referencedby refid="a00014_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00085" startline="3718" endline="3800">environment::performRefill</referencedby>
         <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="5851" endline="6012">environment::newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7122" endline="7173">environment::saveReactionsParametersSTD</referencedby>
+        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7123" endline="7174">environment::saveReactionsParametersSTD</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" prot="public" static="no">
         <name>FINDERRORDURINGRUNTIME</name>
@@ -386,24 +386,24 @@
         <referencedby refid="a00014_1a4949138a3771b7f6ec2bfe82cbad947e" compoundref="a00085" startline="5657" endline="5718">environment::performSpontaneousCleavage</referencedby>
         <referencedby refid="a00014_1acc764a05297ae00db52360f3df5ed1d5" compoundref="a00085" startline="5727" endline="5789">environment::performSpontaneousCondensation</referencedby>
         <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="5851" endline="6012">environment::newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">environment::complexEvaluation</referencedby>
-        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6174" endline="6261">environment::showGlobalParameter</referencedby>
-        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6267" endline="6319">environment::printInitialCondition</referencedby>
-        <referencedby refid="a00014_1a48d8fd9d8d5c9c31f0b4af87c8cbd28f" compoundref="a00085" startline="6325" endline="6347">environment::printAllSpeciesIdAndSequence</referencedby>
-        <referencedby refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="6353" endline="6373">environment::printGillespieStructure</referencedby>
-        <referencedby refid="a00014_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00085" startline="6613" endline="6775">environment::saveConfigurationFileSTD</referencedby>
-        <referencedby refid="a00014_1a8f831e2db11fa5d840484345dac64fc7" compoundref="a00085" startline="6783" endline="6813">environment::saveInfluxStructureSTD</referencedby>
-        <referencedby refid="a00014_1a1412b9b1c3bd3e42bcb481f5e18ea931" compoundref="a00085" startline="6821" endline="6851">environment::saveNrgBoolFncStructureSTD</referencedby>
-        <referencedby refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="6859" endline="6917">environment::saveSpeciesStructureSTD</referencedby>
-        <referencedby refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="6924" endline="6971">environment::saveReactionsStructureSTD</referencedby>
-        <referencedby refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="6978" endline="7027">environment::saveCatalysisStructureSTD</referencedby>
-        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7035" endline="7114">environment::saveTimesSTD</referencedby>
-        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7122" endline="7173">environment::saveReactionsParametersSTD</referencedby>
-        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7181" endline="7234">environment::saveLivingSpeciesIDSTD</referencedby>
-        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7242" endline="7300">environment::saveLivingSpeciesAmountSTD</referencedby>
-        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7308" endline="7364">environment::saveLivingSpeciesConcentrationSTD</referencedby>
-        <referencedby refid="a00014_1ae7fd21d14f81c4854b3a6163b0278857" compoundref="a00085" startline="7370" endline="7386">environment::devStd</referencedby>
-        <referencedby refid="a00014_1a4e9b60ec8b05e888cf0e55def03ee906" compoundref="a00085" startline="7388" endline="7406">environment::entropy</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6175" endline="6262">environment::showGlobalParameter</referencedby>
+        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6268" endline="6320">environment::printInitialCondition</referencedby>
+        <referencedby refid="a00014_1a48d8fd9d8d5c9c31f0b4af87c8cbd28f" compoundref="a00085" startline="6326" endline="6348">environment::printAllSpeciesIdAndSequence</referencedby>
+        <referencedby refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="6354" endline="6374">environment::printGillespieStructure</referencedby>
+        <referencedby refid="a00014_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00085" startline="6614" endline="6776">environment::saveConfigurationFileSTD</referencedby>
+        <referencedby refid="a00014_1a8f831e2db11fa5d840484345dac64fc7" compoundref="a00085" startline="6784" endline="6814">environment::saveInfluxStructureSTD</referencedby>
+        <referencedby refid="a00014_1a1412b9b1c3bd3e42bcb481f5e18ea931" compoundref="a00085" startline="6822" endline="6852">environment::saveNrgBoolFncStructureSTD</referencedby>
+        <referencedby refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="6860" endline="6918">environment::saveSpeciesStructureSTD</referencedby>
+        <referencedby refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="6925" endline="6972">environment::saveReactionsStructureSTD</referencedby>
+        <referencedby refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="6979" endline="7028">environment::saveCatalysisStructureSTD</referencedby>
+        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7036" endline="7115">environment::saveTimesSTD</referencedby>
+        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7123" endline="7174">environment::saveReactionsParametersSTD</referencedby>
+        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7182" endline="7235">environment::saveLivingSpeciesIDSTD</referencedby>
+        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7243" endline="7301">environment::saveLivingSpeciesAmountSTD</referencedby>
+        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7309" endline="7365">environment::saveLivingSpeciesConcentrationSTD</referencedby>
+        <referencedby refid="a00014_1ae7fd21d14f81c4854b3a6163b0278857" compoundref="a00085" startline="7371" endline="7387">environment::devStd</referencedby>
+        <referencedby refid="a00014_1a4e9b60ec8b05e888cf0e55def03ee906" compoundref="a00085" startline="7389" endline="7407">environment::entropy</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a186bfb39322832c790ce5403bc04330d" prot="public" static="no">
         <name>COMPLEXSTUFF</name>
@@ -418,7 +418,7 @@
         <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3280">environment::performOPTGillespieComputation</referencedby>
         <referencedby refid="a00014_1a6ae793f9d2dca0632239be955dd83cee" compoundref="a00085" startline="3809" endline="3928">environment::performDETComplexDissociation</referencedby>
         <referencedby refid="a00014_1aaf4f4f6be28edb182d2a2516c9394f9b" compoundref="a00085" startline="5379" endline="5457">environment::performComplexFormation</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">environment::complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a27f5d30679c0e8877ba9246eb1a48ff4" prot="public" static="no">
         <name>GILLESPIESTUFF</name>
@@ -667,7 +667,7 @@
         <referencedby refid="a00014_1a4fb98d7cad06ef479e2643785231feb9" compoundref="a00085" startline="4176" endline="4209">environment::setLivingSpeciesIDsAndAmounts</referencedby>
         <referencedby refid="a00014_1ac5528a39937cdc76f0dd23c27542110c" compoundref="a00085" startline="4217" endline="4256">environment::setNotChargedAndChargedSpeciesIDsAndAmounts</referencedby>
         <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="5851" endline="6012">environment::newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">environment::complexEvaluation</referencedby>
         <referencedby refid="a00022_1a25887c42dfb4b6f33a2d17fdcf74bc47" compoundref="a00094" startline="16" endline="38">species::species</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1af270dce996bbfb82cc5d337af5b980e5" prot="public" static="no">
@@ -695,7 +695,7 @@
         <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
         <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
         <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="5467" endline="5553">environment::perform_endo_ComplexFormation</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">environment::complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a83346194720cacc0144e87246d23081b" prot="public" static="no">
         <name>ENDOERGONIC</name>
@@ -811,7 +811,7 @@
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="91" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="91" bodyend="-1"/>
         <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
         <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6119">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">environment::complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a5a83a3ca25e31afb2d58aa40c8b1fbbb" prot="public" static="no">
         <name>SUBSTRATELOAD</name>
@@ -928,7 +928,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="107" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="107" bodyend="-1"/>
-        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6174" endline="6261">environment::showGlobalParameter</referencedby>
+        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6175" endline="6262">environment::showGlobalParameter</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a174754c04acfba9e1f66ba249e68643a" prot="public" static="no">
         <name>AVO</name>
@@ -943,8 +943,8 @@
         <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3280">environment::performOPTGillespieComputation</referencedby>
         <referencedby refid="a00014_1ae1270b9c235dd6b28413075197dba8e0" compoundref="a00085" startline="3288" endline="3307">environment::computeSinglGilScore</referencedby>
         <referencedby refid="a00014_1adbaf165a12edd62c614a455544807ea3" compoundref="a00085" startline="3937" endline="4168">environment::performDETMoleculesCharging</referencedby>
-        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6174" endline="6261">environment::showGlobalParameter</referencedby>
-        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7122" endline="7173">environment::saveReactionsParametersSTD</referencedby>
+        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6175" endline="6262">environment::showGlobalParameter</referencedby>
+        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7123" endline="7174">environment::saveReactionsParametersSTD</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
         <referencedby refid="a00022_1a26eba3e8d86938ad8b2b6b284e9f010f" compoundref="a00094" startline="180" endline="215">species::species</referencedby>
         <referencedby refid="a00022_1ab930176d793e5d3b8ce984013d0e0328" compoundref="a00094" startline="377" endline="382">species::getLoadedConcentration</referencedby>
@@ -1051,7 +1051,7 @@
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CONSTANTS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//----------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="a00072_1aab38659c2fe462437b89a1e85e619dc7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SOFTVERSION__<sp/>&quot;4.8b20131209.62&quot;</highlight></codeline>
+<codeline lineno="42" refid="a00072_1aab38659c2fe462437b89a1e85e619dc7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SOFTVERSION__<sp/>&quot;4.8b20131210.63&quot;</highlight></codeline>
 <codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DEBUG<sp/>LEVELS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
