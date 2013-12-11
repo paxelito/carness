@@ -2678,6 +2678,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
     ratioBetweenNewGillTotGill = 0;
     reverseReactionsGillScore = 0; // the sum of the gillespie scores related to the reverse reactions
     ratioBetweenReverseAndTotalScore = 0; // Ratio between the reverse reaction scores and all the reaction scores
+    acs_double minimalTimeForOneMols; // Minimal time necessary for a mol to come in the system
 	acs_longInt temp_mol_I; // temp_mol_I II III and IV will contain the molecules IDs according to the different reactions
 	acs_longInt temp_mol_II;
 	acs_longInt temp_mol_III;
@@ -3101,7 +3102,11 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 		}
 
 		bool goReaction = true;
-		acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
+
+		// Compute the minimalTimForOneMols, if the reaction time is greater than this value the system is moved forward of minimalTimForOneMols seconds.
+		if(influx_rate > 0){ minimalTimeForOneMols = 1 / (influx_rate * AVO);}
+		else{minimalTimeForOneMols = nSeconds;}
+
 		if((acs_longInt)allGillespieScores.size() > 0)
 		{
 			if(debugLevel == SMALL_DEBUG) printGillespieStructure();
