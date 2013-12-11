@@ -3091,8 +3091,14 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 
     try{
 		// Store gillespie computational time and start performReaction Times
-		gillespiePartialTimes.push_back(((float)clock() - gillespiePartialTimer) / CLOCKS_PER_SEC);
-		performReactionPartialTimer = clock();
+    	try{
+			gillespiePartialTimes.push_back(((float)clock() - gillespiePartialTimer) / CLOCKS_PER_SEC);
+			performReactionPartialTimer = clock();
+    	}catch(exception&e){
+			 cout << "Source Code Line: " << __LINE__ << endl;
+			 cerr << "exceptioncaught:" << e.what() << endl;
+			 ExitWithError("performOPTGillespieComputation::Time registration","exceptionerrorthrown");
+		}
 
 		bool goReaction = true;
 		acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
@@ -3136,25 +3142,38 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 
 			if(goReaction)
 			{
-				if(reactionsTime.size() > 0)
-				{
-					tempTime = reactionsTime.at(reactionsTime.size() - 1) + tmpDeltaT;
-					timeSinceTheLastInFlux += tmpDeltaT;
-				}else{
-					tempTime = 0.0;
+				try{
+					if(reactionsTime.size() > 0)
+					{
+						tempTime = reactionsTime.at(reactionsTime.size() - 1) + tmpDeltaT;
+						timeSinceTheLastInFlux += tmpDeltaT;
+					}else{
+						tempTime = 0.0;
+					}
+					reactionsTime.push_back(tempTime);
+					setActualTime(tempTime);
+					gillespieReactionsSelected.push_back(reaction_u);
+					allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+				}catch(exception&e){
+					 cout << "Source Code Line: " << __LINE__ << endl;
+					 cerr << "exceptioncaught:" << e.what() << endl;
+					 ExitWithError("performOPTGillespieComputation::Times registrations","exceptionerrorthrown");
 				}
-				reactionsTime.push_back(tempTime);
-				setActualTime(tempTime);
-				gillespieReactionsSelected.push_back(reaction_u);
-				allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
 				// =^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^
 				// PERFORM REACTION SELECTED BEFORE
 				// ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=
 				// Compute Gillespie mean
-				gillespieMean = gillespieTotalScore / (acs_longInt)allGillespieScores.size();
-				if(gillespieTotalScore > 0){ratioBetweenNewGillTotGill = gillespieNewSpeciesScore / gillespieTotalScore;}else{ratioBetweenNewGillTotGill=0;}
-				if(gillespieTotalScore > 0){ratioBetweenReverseAndTotalScore = reverseReactionsGillScore / gillespieTotalScore;}else{ratioBetweenReverseAndTotalScore=0;}
+				try{
+					gillespieMean = gillespieTotalScore / (acs_longInt)allGillespieScores.size();
+					if(gillespieTotalScore > 0){ratioBetweenNewGillTotGill = gillespieNewSpeciesScore / gillespieTotalScore;}else{ratioBetweenNewGillTotGill=0;}
+					if(gillespieTotalScore > 0){ratioBetweenReverseAndTotalScore = reverseReactionsGillScore / gillespieTotalScore;}else{ratioBetweenReverseAndTotalScore=0;}
+				}catch(exception&e){
+					 cout << "Source Code Line: " << __LINE__ << endl;
+					 cerr << "exceptioncaught:" << e.what() << endl;
+					 ExitWithError("performOPTGillespieComputation::Gillespie statistics","exceptionerrorthrown");
+				}
+
 				if(!devStd()) // compute Gillespie score vector standard deviation
 					 ExitWithError("devStd", "Problems during Gillespie score standard deviation computation");
 				if(!entropy()) // compute Gillespie score vector entropy
@@ -3176,24 +3195,30 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 				if(volumeGrowth) changeVolume(tmpDeltaT);
 
 			}else{
-				gillespieMean = 0;
-				gillespieSD = 0;
-				gillespieEntropy = 0;
-				if(reactionsTime.size() > 0)
-				{
-					tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-					timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-					tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
-				}else{
-					tempTime = 0.0;
-				}
-				reactionsTime.push_back(tempTime);
-				setActualTime(tempTime);
-				gillespieReactionsSelected.push_back(0);
-				allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+				try{
+					gillespieMean = 0;
+					gillespieSD = 0;
+					gillespieEntropy = 0;
+					if(reactionsTime.size() > 0)
+					{
+						tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+						timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+						tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+					}else{
+						tempTime = 0.0;
+					}
+					reactionsTime.push_back(tempTime);
+					setActualTime(tempTime);
+					gillespieReactionsSelected.push_back(0);
+					allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
-				if(debugLevel >= RUNNING_VERSION)
-								cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
+					if(debugLevel >= RUNNING_VERSION)
+									cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
+				}catch(exception&e){
+					 cout << "Source Code Line: " << __LINE__ << endl;
+					 cerr << "exceptioncaught:" << e.what() << endl;
+					 ExitWithError("performOPTGillespieComputation::No reactions","exceptionerrorthrown");
+				}
 			}
 
 		}else{ // If there are not possible reactions
@@ -3228,8 +3253,14 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 
 
 		// Store perform reaction time and start remaining processes timer
-		performReactionPartialTimes.push_back(((float)clock() - performReactionPartialTimer) / CLOCKS_PER_SEC);
-		remainingProcessesPartialTimer = clock();
+		try{
+			performReactionPartialTimes.push_back(((float)clock() - performReactionPartialTimer) / CLOCKS_PER_SEC);
+			remainingProcessesPartialTimer = clock();
+		}catch(exception&e){
+			 cout << "Source Code Line: " << __LINE__ << endl;
+			 cerr << "exceptioncaught:" << e.what() << endl;
+			 ExitWithError("performOPTGillespieComputation::Time registration","exceptionerrorthrown");
+		}
 
 		// If the system is open influx and efflux processes are performed
 		if(influx_rate > 0)
