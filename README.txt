@@ -2,6 +2,10 @@ Software documentation is available in the doc folder.
 
 VERSION HISTORY 
 
+Build4.8b20131212.64
+All the computational time stat procedures now work with normal variables insteaf of vectors. 
+Documentation Updated
+
 Build4.8b20131210.63
 A possible bad_allock in complex second substrate association procedure has been fixed
 Documentation has been re-create according to the new version 
