@@ -1,6 +1,7 @@
 <map id="environment::incSpontAssCounter" name="environment::incSpontAssCounter">
-<area shape="rect" id="node2" href="$a00014.html#acc764a05297ae00db52360f3df5ed1d5" title="environment::performSpontaneous\lCondensation" alt="" coords="232,5,459,46"/>
-<area shape="rect" id="node3" href="$a00014.html#a1db4e67ba458a54f4fab3e10a203765c" title="environment::performReaction" alt="" coords="507,12,709,39"/>
+<area shape="rect" id="node2" href="$a00014.html#acc764a05297ae00db52360f3df5ed1d5" title="environment::performSpontaneous\lCondensation" alt="" coords="232,38,459,79"/>
+<area shape="rect" id="node3" href="$a00014.html#a1db4e67ba458a54f4fab3e10a203765c" title="environment::performReaction" alt="" coords="507,45,709,72"/>
 <area shape="rect" id="node4" href="$a00014.html#a90fba3b2cc589f32c97a74540620bd84" title="environment::performOPTGillespie\lComputation" alt="" coords="757,5,984,46"/>
+<area shape="rect" id="node6" href="$a00014.html#aa4fba7d5679a16fd6ef1a9a2041779a2" title="environment::perform\l_FIXED_GillespieComputation" alt="" coords="769,70,972,111"/>
 <area shape="rect" id="node5" href="$a00089.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1032,12,1083,39"/>
 </map>

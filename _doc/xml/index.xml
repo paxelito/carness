@@ -240,13 +240,14 @@
     <member refid="a00014_1a6feec5685b519ba0cdae0e5c59dffff0" kind="function"><name>returnPosReactionAlreadyPresent</name></member>
     <member refid="a00014_1ac4c90b07b8e75ea03e2ced0ea644a69f" kind="function"><name>checkIfTheReactionIsAlreadyCatalyzedByThisSpecies</name></member>
     <member refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" kind="function"><name>performOPTGillespieComputation</name></member>
+    <member refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" kind="function"><name>perform_FIXED_GillespieComputation</name></member>
     <member refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" kind="function"><name>performReaction</name></member>
     <member refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" kind="function"><name>newSpeciesEvaluationIII</name></member>
     <member refid="a00014_1a5ee6b203f077de1467aa72042814db7d" kind="function"><name>complexEvaluation</name></member>
     <member refid="a00014_1ae1270b9c235dd6b28413075197dba8e0" kind="function"><name>computeSinglGilScore</name></member>
     <member refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" kind="function"><name>performSingleGilleSpieIntroduction</name></member>
     <member refid="a00014_1a0156a2d7219396e58a930731966b0c66" kind="function"><name>changeVolume</name></member>
-    <member refid="a00014_1a5c86f93c84f9931640843c38eccb9bf4" kind="function"><name>incNumberOfSpecies</name></member>
+    <member refid="a00014_1a9fdf3a3b16809edd87c1b1963ef0a67f" kind="function"><name>incNumberOfSpecies</name></member>
     <member refid="a00014_1a69a926e0b9bb4f4b29876d0e45b54d84" kind="function"><name>decNumberOfSpecies</name></member>
     <member refid="a00014_1ae356db3b6ee374b998e9f041216b4b75" kind="function"><name>incNumberOfMols</name></member>
     <member refid="a00014_1af042f7904c92fdd239995bebbab2cf60" kind="function"><name>decNumberOfMols</name></member>
@@ -259,9 +260,9 @@
     <member refid="a00014_1a1addb84f0c8d391f97ad2347a64208bb" kind="function"><name>incNumberOfNewMols</name></member>
     <member refid="a00014_1ae9bbd78076706050ced4dd7fb99036f1" kind="function"><name>decNumberOfNewMols</name></member>
     <member refid="a00014_1a10fad450cf5ef3a1c7cf75d616105069" kind="function"><name>decMolSpeciesProcedure</name></member>
+    <member refid="a00014_1a7e0e11e36d7bcd6ef438c426aa8754a0" kind="function"><name>incMolSpeciesProcedure</name></member>
     <member refid="a00014_1a16d09f818d3012f88e8e4c9a7759b6bd" kind="function"><name>decCpxProcedure</name></member>
     <member refid="a00014_1a094499a0f1bb3c2342a3b16944f5280d" kind="function"><name>incMolProcedure</name></member>
-    <member refid="a00014_1a7ac85445b4710257723c581c35cc5ac8" kind="function"><name>incSpeciesProcedure</name></member>
     <member refid="a00014_1af21c066ce18c8a39740f66a995782fb9" kind="function"><name>unchargeMolProcess</name></member>
     <member refid="a00014_1a480887ed06f63d34e014c19ea302d3d5" kind="function"><name>incCleavageCounter</name></member>
     <member refid="a00014_1ab0fc2cd6ed209d61286b837bd5460d90" kind="function"><name>incEndoCleavageCounter</name></member>

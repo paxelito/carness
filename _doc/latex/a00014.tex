@@ -225,6 +225,8 @@ bool \hyperlink{a00014_ac4c90b07b8e75ea03e2ced0ea644a69f}{check\-If\-The\-Reacti
 \item 
 bool \hyperlink{a00014_a90fba3b2cc589f32c97a74540620bd84}{perform\-O\-P\-T\-Gillespie\-Computation} (\hyperlink{a00016}{M\-T\-Rand} \&tmp\-Rnd\-Double\-Gen, clock\-\_\-t \&tmp\-Time\-Elapsed, \hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-Act\-G\-E\-N, \hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-Act\-S\-I\-M, \hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-Act\-S\-T\-E\-P, string tmp\-Storing\-Path)
 \item 
+bool \hyperlink{a00014_aa4fba7d5679a16fd6ef1a9a2041779a2}{perform\-\_\-\-F\-I\-X\-E\-D\-\_\-\-Gillespie\-Computation} (\hyperlink{a00016}{M\-T\-Rand} \&tmp\-Rnd\-Double\-Gen, clock\-\_\-t \&tmp\-Time\-Elapsed, \hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-Act\-G\-E\-N, \hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-Act\-S\-I\-M, \hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-Act\-S\-T\-E\-P, string tmp\-Storing\-Path)
+\item 
 bool \hyperlink{a00014_a1db4e67ba458a54f4fab3e10a203765c}{perform\-Reaction} (\hyperlink{a00072_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} reaction\-\_\-u, \hyperlink{a00016}{M\-T\-Rand} \&tmp\-\_\-\-Rnd\-Double\-Gen, \hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-\_\-\-Act\-G\-E\-N, \hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-\_\-\-Act\-S\-I\-M, \hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-\_\-\-Act\-S\-T\-E\-P, string tmp\-\_\-\-Storing\-Path)
 \item 
 bool \hyperlink{a00014_a4fe7891fb38f3f25bb82769af0ddfe19}{new\-Species\-Evaluation\-I\-I\-I} (\hyperlink{a00072_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} tmp\-New\-Species, \hyperlink{a00016}{M\-T\-Rand} \&tmp\-\_\-\-\_\-\-\_\-\-Rnd\-Double\-Gen)
@@ -237,7 +239,7 @@ void \hyperlink{a00014_a30a0827eed2860d03d5fa5318fcf86b0}{perform\-Single\-Gille
 \item 
 void \hyperlink{a00014_a0156a2d7219396e58a930731966b0c66}{change\-Volume} (\hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-Time\-Since\-Last\-Reaction)
 \item 
-void \hyperlink{a00014_a5c86f93c84f9931640843c38eccb9bf4}{inc\-Number\-Of\-Species} ()
+void \hyperlink{a00014_a9fdf3a3b16809edd87c1b1963ef0a67f}{inc\-Number\-Of\-Species} (\hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-I\-D)
 \item 
 void \hyperlink{a00014_a69a926e0b9bb4f4b29876d0e45b54d84}{dec\-Number\-Of\-Species} (\hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-I\-D)
 \item 
@@ -263,11 +265,11 @@ void \hyperlink{a00014_ae9bbd78076706050ced4dd7fb99036f1}{dec\-Number\-Of\-New\-
 \item 
 void \hyperlink{a00014_a10fad450cf5ef3a1c7cf75d616105069}{dec\-Mol\-Species\-Procedure} (\hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-\_\-\-I\-D)
 \item 
+void \hyperlink{a00014_a7e0e11e36d7bcd6ef438c426aa8754a0}{inc\-Mol\-Species\-Procedure} (\hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-\_\-\-I\-D)
+\item 
 void \hyperlink{a00014_a16d09f818d3012f88e8e4c9a7759b6bd}{dec\-Cpx\-Procedure} (\hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-\_\-\-I\-D)
 \item 
 void \hyperlink{a00014_a094499a0f1bb3c2342a3b16944f5280d}{inc\-Mol\-Procedure} (\hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-\_\-\-I\-D)
-\item 
-void \hyperlink{a00014_a7ac85445b4710257723c581c35cc5ac8}{inc\-Species\-Procedure} (\hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-\_\-\-I\-D)
 \item 
 void \hyperlink{a00014_af21c066ce18c8a39740f66a995782fb9}{uncharge\-Mol\-Process} (\hyperlink{a00072_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-\_\-\-I\-D)
 \item 
@@ -507,7 +509,7 @@ Perform vector uncharged\-I\-Dlist update adding a new charge molecule vector un
 \end{DoxyParams}
 
 
-Definition at line 4313 of file environment.\-cpp.
+Definition at line 5050 of file environment.\-cpp.
 
 
 
@@ -535,7 +537,7 @@ Alessandro Filisetti
 \end{DoxyAuthor}
 
 
-Definition at line 6158 of file environment.\-cpp.
+Definition at line 6877 of file environment.\-cpp.
 
 
 
@@ -683,7 +685,7 @@ Clear all structures after each simulation \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 6406 of file environment.\-cpp.
+Definition at line 7125 of file environment.\-cpp.
 
 
 
@@ -746,7 +748,7 @@ Complex evaluation \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 6025 of file environment.\-cpp.
+Definition at line 6744 of file environment.\-cpp.
 
 
 
@@ -784,7 +786,7 @@ Here is the caller graph for this function\-:\nopagebreak
 \item[{bool}]{tmp\-Same\-Mol}
 \end{DoxyParamCaption}
 )}}\label{a00014_ae1270b9c235dd6b28413075197dba8e0}
-Compute a single gillespie score according to the amount and peoprieties of the species involved \begin{DoxyVersion}{Version}
+Compute a single gillespie score according to the amount and properties of the species involved \begin{DoxyVersion}{Version}
 1.\-0 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
@@ -792,7 +794,7 @@ Compute a single gillespie score according to the amount and peoprieties of the 
 \end{DoxyDate}
 
 
-Definition at line 3288 of file environment.\-cpp.
+Definition at line 4026 of file environment.\-cpp.
 
 
 
@@ -1270,7 +1272,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a16d09f818d3012f88e8e4c9a7759b6bd}
 
 
-Definition at line 298 of file environment.\-h.
+Definition at line 300 of file environment.\-h.
 
 
 
@@ -1303,7 +1305,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a10fad450cf5ef3a1c7cf75d616105069}
 
 
-Definition at line 297 of file environment.\-h.
+Definition at line 298 of file environment.\-h.
 
 
 
@@ -1336,7 +1338,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_aadd057e7038269e6fac314a12a3bf334}
 
 
-Definition at line 288 of file environment.\-h.
+Definition at line 289 of file environment.\-h.
 
 
 
@@ -1358,7 +1360,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a756dc43b6b47498ba457613749324b15}
 
 
-Definition at line 290 of file environment.\-h.
+Definition at line 291 of file environment.\-h.
 
 
 
@@ -1380,7 +1382,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_af042f7904c92fdd239995bebbab2cf60}
 
 
-Definition at line 286 of file environment.\-h.
+Definition at line 287 of file environment.\-h.
 
 
 
@@ -1402,7 +1404,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_ae9bbd78076706050ced4dd7fb99036f1}
 
 
-Definition at line 295 of file environment.\-h.
+Definition at line 296 of file environment.\-h.
 
 
 
@@ -1424,7 +1426,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a5fa52a4f8e73a71fa41d3a1641e50535}
 
 
-Definition at line 293 of file environment.\-h.
+Definition at line 294 of file environment.\-h.
 
 
 
@@ -1446,7 +1448,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a69a926e0b9bb4f4b29876d0e45b54d84}
 
 
-Definition at line 284 of file environment.\-h.
+Definition at line 285 of file environment.\-h.
 
 
 
@@ -1468,7 +1470,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a6686b0489ed94f11c4b03c011978f9af}
 
 
-Definition at line 311 of file environment.\-h.
+Definition at line 312 of file environment.\-h.
 
 
 
@@ -1490,7 +1492,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{a00014_ae7fd21d14f81c4854b3a6163b0278857}
 
 
-Definition at line 7371 of file environment.\-cpp.
+Definition at line 8090 of file environment.\-cpp.
 
 
 
@@ -1512,7 +1514,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{a00014_a4e9b60ec8b05e888cf0e55def03ee906}
 
 
-Definition at line 7389 of file environment.\-cpp.
+Definition at line 8108 of file environment.\-cpp.
 
 
 
@@ -2738,7 +2740,7 @@ This Function returns the total amount of M\-O\-L\-E\-C\-U\-L\-E\-S in the tmp\-
 \end{DoxyParams}
 
 
-Definition at line 3578 of file environment.\-cpp.
+Definition at line 4316 of file environment.\-cpp.
 
 
 
@@ -2765,7 +2767,7 @@ This Function returns the total amount of C\-O\-M\-P\-L\-E\-X S\-P\-E\-C\-I\-E\-
 \end{DoxyParams}
 
 
-Definition at line 3557 of file environment.\-cpp.
+Definition at line 4295 of file environment.\-cpp.
 
 
 
@@ -2792,7 +2794,7 @@ This Function returns the total amount of M\-O\-L\-E\-C\-U\-L\-E\-S in the tmp\-
 \end{DoxyParams}
 
 
-Definition at line 3533 of file environment.\-cpp.
+Definition at line 4271 of file environment.\-cpp.
 
 
 
@@ -2819,7 +2821,7 @@ This Function returns the total amount of M\-O\-N\-O\-M\-E\-R\-S in the tmp\-Spe
 \end{DoxyParams}
 
 
-Definition at line 3599 of file environment.\-cpp.
+Definition at line 4337 of file environment.\-cpp.
 
 
 
@@ -2846,7 +2848,7 @@ This Function returns the total amount of M\-O\-L\-E\-C\-U\-L\-E\-S in the tmp\-
 \end{DoxyParams}
 
 
-Definition at line 3510 of file environment.\-cpp.
+Definition at line 4248 of file environment.\-cpp.
 
 
 
@@ -2873,7 +2875,7 @@ This Function returns the total amount of M\-O\-L\-E\-C\-U\-L\-E\-S in the tmp\-
 \end{DoxyParams}
 
 
-Definition at line 3486 of file environment.\-cpp.
+Definition at line 4224 of file environment.\-cpp.
 
 
 
@@ -2895,7 +2897,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{a00014_aadb5c442d5c9d16a0d6b2e90715dda94}
 Get the total number of charged molecules 
 
-Definition at line 3619 of file environment.\-cpp.
+Definition at line 4357 of file environment.\-cpp.
 
 
 
@@ -2939,7 +2941,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a480887ed06f63d34e014c19ea302d3d5}
 
 
-Definition at line 304 of file environment.\-h.
+Definition at line 305 of file environment.\-h.
 
 
 
@@ -2961,7 +2963,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a3fae8e57fad9ef5b182e32d9bb9989af}
 
 
-Definition at line 306 of file environment.\-h.
+Definition at line 307 of file environment.\-h.
 
 
 
@@ -2983,7 +2985,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a73f88a08ff9206e48063cccb1729ee6b}
 
 
-Definition at line 309 of file environment.\-h.
+Definition at line 310 of file environment.\-h.
 
 
 
@@ -3005,7 +3007,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_afd3d590aa9b6a644cb360cc5fd47e16a}
 
 
-Definition at line 308 of file environment.\-h.
+Definition at line 309 of file environment.\-h.
 
 
 
@@ -3027,7 +3029,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_ab0fc2cd6ed209d61286b837bd5460d90}
 
 
-Definition at line 305 of file environment.\-h.
+Definition at line 306 of file environment.\-h.
 
 
 
@@ -3049,7 +3051,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a01812d540519696ab07c9f822119cc64}
 
 
-Definition at line 307 of file environment.\-h.
+Definition at line 308 of file environment.\-h.
 
 
 
@@ -3071,7 +3073,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a094499a0f1bb3c2342a3b16944f5280d}
 
 
-Definition at line 299 of file environment.\-h.
+Definition at line 301 of file environment.\-h.
 
 
 
@@ -3084,13 +3086,35 @@ Here is the call graph for this function\-:\nopagebreak
 \end{figure}
 
 
+\hypertarget{a00014_a7e0e11e36d7bcd6ef438c426aa8754a0}{\index{environment@{environment}!inc\-Mol\-Species\-Procedure@{inc\-Mol\-Species\-Procedure}}
+\index{inc\-Mol\-Species\-Procedure@{inc\-Mol\-Species\-Procedure}!environment@{environment}}
+\subsubsection[{inc\-Mol\-Species\-Procedure}]{\setlength{\rightskip}{0pt plus 5cm}void environment\-::inc\-Mol\-Species\-Procedure (
+\begin{DoxyParamCaption}
+\item[{{\bf acs\-\_\-int}}]{tmp\-\_\-\-I\-D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a7e0e11e36d7bcd6ef438c426aa8754a0}
+
+
+Definition at line 299 of file environment.\-h.
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00014_a7e0e11e36d7bcd6ef438c426aa8754a0_cgraph}
+\end{center}
+\end{figure}
+
+
 
 
 Here is the caller graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{a00014_a094499a0f1bb3c2342a3b16944f5280d_icgraph}
+\includegraphics[width=350pt]{a00014_a7e0e11e36d7bcd6ef438c426aa8754a0_icgraph}
 \end{center}
 \end{figure}
 
@@ -3104,7 +3128,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a69ae530ef6f9298e3ab8304157709404}
 
 
-Definition at line 287 of file environment.\-h.
+Definition at line 288 of file environment.\-h.
 
 
 
@@ -3126,7 +3150,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_ab101d2158575829ddfe846087040f2fa}
 
 
-Definition at line 289 of file environment.\-h.
+Definition at line 290 of file environment.\-h.
 
 
 
@@ -3148,7 +3172,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_ae356db3b6ee374b998e9f041216b4b75}
 
 
-Definition at line 285 of file environment.\-h.
+Definition at line 286 of file environment.\-h.
 
 
 
@@ -3170,7 +3194,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a1addb84f0c8d391f97ad2347a64208bb}
 
 
-Definition at line 294 of file environment.\-h.
+Definition at line 295 of file environment.\-h.
 
 
 
@@ -3192,11 +3216,12 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a1055886a34a9a01ec37db31c69e460e0}
 
 
-Definition at line 292 of file environment.\-h.
+Definition at line 293 of file environment.\-h.
 
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -3205,24 +3230,25 @@ Here is the caller graph for this function\-:\nopagebreak
 \end{figure}
 
 
-\hypertarget{a00014_a5c86f93c84f9931640843c38eccb9bf4}{\index{environment@{environment}!inc\-Number\-Of\-Species@{inc\-Number\-Of\-Species}}
+\hypertarget{a00014_a9fdf3a3b16809edd87c1b1963ef0a67f}{\index{environment@{environment}!inc\-Number\-Of\-Species@{inc\-Number\-Of\-Species}}
 \index{inc\-Number\-Of\-Species@{inc\-Number\-Of\-Species}!environment@{environment}}
 \subsubsection[{inc\-Number\-Of\-Species}]{\setlength{\rightskip}{0pt plus 5cm}void environment\-::inc\-Number\-Of\-Species (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf acs\-\_\-int}}]{tmp\-I\-D}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a5c86f93c84f9931640843c38eccb9bf4}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a9fdf3a3b16809edd87c1b1963ef0a67f}
 
 
-Definition at line 283 of file environment.\-h.
+Definition at line 284 of file environment.\-h.
 
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{a00014_a5c86f93c84f9931640843c38eccb9bf4_icgraph}
+\includegraphics[width=350pt]{a00014_a9fdf3a3b16809edd87c1b1963ef0a67f_icgraph}
 \end{center}
 \end{figure}
 
@@ -3236,7 +3262,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a719b14624d9a2f891b8d4eb47649a00e}
 
 
-Definition at line 310 of file environment.\-h.
+Definition at line 311 of file environment.\-h.
 
 
 
@@ -3258,7 +3284,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_aac3eed768b89e3a70017075b68046ede}
 
 
-Definition at line 346 of file environment.\-h.
+Definition at line 347 of file environment.\-h.
 
 
 
@@ -3267,39 +3293,6 @@ Here is the caller graph for this function\-:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=308pt]{a00014_aac3eed768b89e3a70017075b68046ede_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00014_a7ac85445b4710257723c581c35cc5ac8}{\index{environment@{environment}!inc\-Species\-Procedure@{inc\-Species\-Procedure}}
-\index{inc\-Species\-Procedure@{inc\-Species\-Procedure}!environment@{environment}}
-\subsubsection[{inc\-Species\-Procedure}]{\setlength{\rightskip}{0pt plus 5cm}void environment\-::inc\-Species\-Procedure (
-\begin{DoxyParamCaption}
-\item[{{\bf acs\-\_\-int}}]{tmp\-\_\-\-I\-D}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a7ac85445b4710257723c581c35cc5ac8}
-
-
-Definition at line 300 of file environment.\-h.
-
-
-
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{a00014_a7ac85445b4710257723c581c35cc5ac8_cgraph}
-\end{center}
-\end{figure}
-
-
-
-
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{a00014_a7ac85445b4710257723c581c35cc5ac8_icgraph}
 \end{center}
 \end{figure}
 
@@ -3313,7 +3306,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_aa2632ded9c384c3183c3ebebb530e2d7}
 
 
-Definition at line 313 of file environment.\-h.
+Definition at line 314 of file environment.\-h.
 
 
 
@@ -3335,7 +3328,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a0c22436405fc1ec79d33485c2e80d817}
 
 
-Definition at line 312 of file environment.\-h.
+Definition at line 313 of file environment.\-h.
 
 
 
@@ -3399,7 +3392,7 @@ Evaluate new species (Optimized function with new species reactions update proce
 \end{DoxyParams}
 
 
-Definition at line 5851 of file environment.\-cpp.
+Definition at line 6573 of file environment.\-cpp.
 
 
 
@@ -3473,7 +3466,7 @@ Nutrients amount fixing process. The amount of nutrients has to be fixed accordi
 \end{DoxyVersion}
 
 
-Definition at line 3685 of file environment.\-cpp.
+Definition at line 4423 of file environment.\-cpp.
 
 \hypertarget{a00014_ade26b82a3b48a5bda7e5751cbfd31b04}{\index{environment@{environment}!perform\-\_\-endo\-\_\-\-Cleavage@{perform\-\_\-endo\-\_\-\-Cleavage}}
 \index{perform\-\_\-endo\-\_\-\-Cleavage@{perform\-\_\-endo\-\_\-\-Cleavage}!environment@{environment}}
@@ -3513,7 +3506,7 @@ Perform E\-N\-D\-O\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E reaction \begin{DoxyVersion}{Ve
 \end{DoxyParams}
 
 
-Definition at line 5258 of file environment.\-cpp.
+Definition at line 5988 of file environment.\-cpp.
 
 
 
@@ -3566,7 +3559,7 @@ Perform E\-N\-D\-O C\-O\-M\-P\-L\-E\-X F\-O\-R\-M\-A\-T\-I\-O\-N reaction \begin
 \end{DoxyParams}
 
 
-Definition at line 5467 of file environment.\-cpp.
+Definition at line 6197 of file environment.\-cpp.
 
 
 
@@ -3629,7 +3622,7 @@ Perform E\-N\-D\-O C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N reaction \begin{DoxyVersio
 \end{DoxyParams}
 
 
-Definition at line 5015 of file environment.\-cpp.
+Definition at line 5747 of file environment.\-cpp.
 
 
 
@@ -3649,6 +3642,33 @@ Here is the caller graph for this function\-:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{a00014_aa7a2cc95d8ba242c805a8fda063b23a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00014_aa4fba7d5679a16fd6ef1a9a2041779a2}{\index{environment@{environment}!perform\-\_\-\-F\-I\-X\-E\-D\-\_\-\-Gillespie\-Computation@{perform\-\_\-\-F\-I\-X\-E\-D\-\_\-\-Gillespie\-Computation}}
+\index{perform\-\_\-\-F\-I\-X\-E\-D\-\_\-\-Gillespie\-Computation@{perform\-\_\-\-F\-I\-X\-E\-D\-\_\-\-Gillespie\-Computation}!environment@{environment}}
+\subsubsection[{perform\-\_\-\-F\-I\-X\-E\-D\-\_\-\-Gillespie\-Computation}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::perform\-\_\-\-F\-I\-X\-E\-D\-\_\-\-Gillespie\-Computation (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-T\-Rand} \&}]{tmp\-Rnd\-Double\-Gen, }
+\item[{clock\-\_\-t \&}]{tmp\-Time\-Elapsed, }
+\item[{{\bf acs\-\_\-int}}]{tmp\-Act\-G\-E\-N, }
+\item[{{\bf acs\-\_\-int}}]{tmp\-Act\-S\-I\-M, }
+\item[{{\bf acs\-\_\-int}}]{tmp\-Act\-S\-T\-E\-P, }
+\item[{string}]{tmp\-Storing\-Path}
+\end{DoxyParamCaption}
+)}}\label{a00014_aa4fba7d5679a16fd6ef1a9a2041779a2}
+
+
+Definition at line 3346 of file environment.\-cpp.
+
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{a00014_aa4fba7d5679a16fd6ef1a9a2041779a2_cgraph}
 \end{center}
 \end{figure}
 
@@ -3688,7 +3708,7 @@ Perform C\-L\-E\-A\-V\-A\-G\-E reaction \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 5151 of file environment.\-cpp.
+Definition at line 5881 of file environment.\-cpp.
 
 
 
@@ -3741,7 +3761,7 @@ Perform C\-O\-M\-P\-L\-E\-X D\-I\-S\-A\-S\-S\-O\-C\-I\-A\-T\-I\-O\-N reaction \b
 \end{DoxyParams}
 
 
-Definition at line 5565 of file environment.\-cpp.
+Definition at line 6295 of file environment.\-cpp.
 
 
 
@@ -3793,7 +3813,7 @@ Perform C\-O\-M\-P\-L\-E\-X F\-O\-R\-M\-A\-T\-I\-O\-N reaction \begin{DoxyVersio
 \end{DoxyParams}
 
 
-Definition at line 5379 of file environment.\-cpp.
+Definition at line 6109 of file environment.\-cpp.
 
 
 
@@ -3849,7 +3869,7 @@ Perform C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N reaction \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 4898 of file environment.\-cpp.
+Definition at line 5635 of file environment.\-cpp.
 
 
 
@@ -3896,7 +3916,7 @@ This function perform the deterministic dissociation of the complex \begin{DoxyV
 \end{DoxyParams}
 
 
-Definition at line 3809 of file environment.\-cpp.
+Definition at line 4546 of file environment.\-cpp.
 
 
 
@@ -3943,7 +3963,7 @@ This function perform the pseudo-\/deterministic molecules charging process \beg
 \end{DoxyParams}
 
 
-Definition at line 3937 of file environment.\-cpp.
+Definition at line 4674 of file environment.\-cpp.
 
 
 
@@ -3987,7 +4007,7 @@ Perform E\-N\-E\-R\-G\-Y E\-F\-F\-L\-U\-X reaction \begin{DoxyVersion}{Version}
 \end{DoxyParams}
 
 
-Definition at line 4611 of file environment.\-cpp.
+Definition at line 5348 of file environment.\-cpp.
 
 
 
@@ -4034,7 +4054,7 @@ Perform M\-O\-L\-E\-C\-U\-L\-E E\-F\-F\-L\-U\-X reaction \begin{DoxyVersion}{Ver
 \end{DoxyParams}
 
 
-Definition at line 4531 of file environment.\-cpp.
+Definition at line 5268 of file environment.\-cpp.
 
 
 
@@ -4081,7 +4101,7 @@ This function perform the deterministic molecules efflux process \begin{DoxyVers
 \end{DoxyParams}
 
 
-Definition at line 4369 of file environment.\-cpp.
+Definition at line 5106 of file environment.\-cpp.
 
 
 
@@ -4199,7 +4219,7 @@ Perform the reaction after the Gillespie computation \begin{DoxyVersion}{Version
 \end{DoxyParams}
 
 
-Definition at line 4668 of file environment.\-cpp.
+Definition at line 5405 of file environment.\-cpp.
 
 
 
@@ -4249,7 +4269,7 @@ Perform Refill according to the time interval and the total amount of refill \be
 \end{DoxyParams}
 
 
-Definition at line 3718 of file environment.\-cpp.
+Definition at line 4456 of file environment.\-cpp.
 
 
 
@@ -4300,7 +4320,7 @@ Compute and introduct a single Gillespie entry within the Gillespie Structure \b
 \end{DoxyDate}
 
 
-Definition at line 3314 of file environment.\-cpp.
+Definition at line 4052 of file environment.\-cpp.
 
 
 
@@ -4347,7 +4367,7 @@ Perform S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S C\-L\-E\-A\-V\-A\-G\-E reaction \begin{D
 \end{DoxyParams}
 
 
-Definition at line 5657 of file environment.\-cpp.
+Definition at line 6379 of file environment.\-cpp.
 
 
 
@@ -4394,7 +4414,7 @@ Perform S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N react
 \end{DoxyParams}
 
 
-Definition at line 5727 of file environment.\-cpp.
+Definition at line 6449 of file environment.\-cpp.
 
 
 
@@ -4430,7 +4450,7 @@ Print all the energized molecules  1.\-0 \begin{DoxyDate}{Date}
 \end{DoxyDate}
 
 
-Definition at line 6382 of file environment.\-cpp.
+Definition at line 7101 of file environment.\-cpp.
 
 
 
@@ -4455,7 +4475,7 @@ Show all the species with their I\-D \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 6326 of file environment.\-cpp.
+Definition at line 7045 of file environment.\-cpp.
 
 
 
@@ -4480,7 +4500,7 @@ Show all the Gillespie Structure \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 6354 of file environment.\-cpp.
+Definition at line 7073 of file environment.\-cpp.
 
 
 
@@ -4505,7 +4525,7 @@ Show all initial species in table format \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 6268 of file environment.\-cpp.
+Definition at line 6987 of file environment.\-cpp.
 
 
 
@@ -4544,7 +4564,7 @@ This Function populates two vectors containing all the nutrients and all the pro
 \end{DoxyDate}
 
 
-Definition at line 3660 of file environment.\-cpp.
+Definition at line 4398 of file environment.\-cpp.
 
 \hypertarget{a00014_aa4830018af0b99eddefcdefad877b305}{\index{environment@{environment}!remove\-Charge\-Mol\-From\-List@{remove\-Charge\-Mol\-From\-List}}
 \index{remove\-Charge\-Mol\-From\-List@{remove\-Charge\-Mol\-From\-List}!environment@{environment}}
@@ -4566,7 +4586,7 @@ Perform vector uncharged\-I\-Dlist update removing a new charge molecule vectors
 \end{DoxyParams}
 
 
-Definition at line 4265 of file environment.\-cpp.
+Definition at line 5002 of file environment.\-cpp.
 
 
 
@@ -4588,7 +4608,7 @@ Here is the call graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a0b1e324c651c86cb54279e022c14dc6d}
 
 
-Definition at line 315 of file environment.\-h.
+Definition at line 316 of file environment.\-h.
 
 
 
@@ -4613,7 +4633,7 @@ set the concentrations to the initial values and reset internal statistics and c
 \end{DoxyVersion}
 
 
-Definition at line 6473 of file environment.\-cpp.
+Definition at line 7192 of file environment.\-cpp.
 
 
 
@@ -4646,7 +4666,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_ac7deab8db2f581077da735c3542d8f1b}
 
 
-Definition at line 317 of file environment.\-h.
+Definition at line 318 of file environment.\-h.
 
 
 
@@ -4668,7 +4688,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a987dc7b9f211f34564343ee0eaa20dc1}
 
 
-Definition at line 321 of file environment.\-h.
+Definition at line 322 of file environment.\-h.
 
 
 
@@ -4690,7 +4710,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a4cf4413f3028f8c5e33991ad5ba18e21}
 
 
-Definition at line 320 of file environment.\-h.
+Definition at line 321 of file environment.\-h.
 
 
 
@@ -4712,7 +4732,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a3362d147de095640619d9b44f7f20bba}
 
 
-Definition at line 316 of file environment.\-h.
+Definition at line 317 of file environment.\-h.
 
 
 
@@ -4734,7 +4754,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a55cff0bc2f8de4d3e4db471cad580a86}
 
 
-Definition at line 318 of file environment.\-h.
+Definition at line 319 of file environment.\-h.
 
 
 
@@ -4756,7 +4776,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_abc04de785dddab4703fdcf52ccdf85f9}
 
 
-Definition at line 319 of file environment.\-h.
+Definition at line 320 of file environment.\-h.
 
 
 
@@ -4778,7 +4798,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a5c8713237992b28c39199a7aea3f9ea0}
 
 
-Definition at line 325 of file environment.\-h.
+Definition at line 326 of file environment.\-h.
 
 
 
@@ -4811,7 +4831,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a98baed580212dad8ef48a22bfe7e1295}
 
 
-Definition at line 323 of file environment.\-h.
+Definition at line 324 of file environment.\-h.
 
 
 
@@ -4833,7 +4853,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a9c22cb9b69207398e35c9c155e2e35ce}
 
 
-Definition at line 322 of file environment.\-h.
+Definition at line 323 of file environment.\-h.
 
 
 
@@ -4956,7 +4976,7 @@ Save the catalysis structures in a file named catalysis\-\_\-\mbox{[}current\-Si
 \end{DoxyVersion}
 
 
-Definition at line 6979 of file environment.\-cpp.
+Definition at line 7698 of file environment.\-cpp.
 
 
 
@@ -4995,7 +5015,7 @@ Save a file with the configuration parameters \begin{DoxyVersion}{Version}
 \end{DoxyDate}
 
 
-Definition at line 6614 of file environment.\-cpp.
+Definition at line 7333 of file environment.\-cpp.
 
 
 
@@ -5039,7 +5059,7 @@ Save influx structure on file, standard C++
 \end{DoxyDate}
 
 
-Definition at line 6784 of file environment.\-cpp.
+Definition at line 7503 of file environment.\-cpp.
 
 
 
@@ -5080,7 +5100,7 @@ Save living species total A\-M\-O\-U\-N\-T in a file named living\-Amount\-\_\-\
 \end{DoxyDate}
 
 
-Definition at line 7243 of file environment.\-cpp.
+Definition at line 7962 of file environment.\-cpp.
 
 
 
@@ -5121,7 +5141,7 @@ Save living species total C\-O\-N\-C\-E\-N\-T\-R\-A\-T\-I\-O\-N in a file named 
 \end{DoxyDate}
 
 
-Definition at line 7309 of file environment.\-cpp.
+Definition at line 8028 of file environment.\-cpp.
 
 
 
@@ -5163,7 +5183,7 @@ Save living species in a file named living\-\_\-species\-\_\-\mbox{[}current\-Si
 \end{DoxyDate}
 
 
-Definition at line 7182 of file environment.\-cpp.
+Definition at line 7901 of file environment.\-cpp.
 
 
 
@@ -5207,7 +5227,7 @@ Save Energetic Boolean Function on file, standard C++
 \end{DoxyDate}
 
 
-Definition at line 6822 of file environment.\-cpp.
+Definition at line 7541 of file environment.\-cpp.
 
 
 
@@ -5254,7 +5274,7 @@ Save the reactions parameters in a file named reactions\-\_\-parameters\-\_\-\mb
 \end{DoxyDate}
 
 
-Definition at line 7123 of file environment.\-cpp.
+Definition at line 7842 of file environment.\-cpp.
 
 
 
@@ -5293,7 +5313,7 @@ Save the reactions structures in a file named reactions\-\_\-\mbox{[}current\-Si
 \end{DoxyVersion}
 
 
-Definition at line 6925 of file environment.\-cpp.
+Definition at line 7644 of file environment.\-cpp.
 
 
 
@@ -5335,7 +5355,7 @@ Save the species structures in a file named species\-\_\-\mbox{[}current\-Sims\m
 \end{DoxyDate}
 
 
-Definition at line 6860 of file environment.\-cpp.
+Definition at line 7579 of file environment.\-cpp.
 
 
 
@@ -5377,7 +5397,7 @@ Save the reactions times in a file named times\-\_\-\mbox{[}current\-Sim\mbox{]}
 \end{DoxyDate}
 
 
-Definition at line 7036 of file environment.\-cpp.
+Definition at line 7755 of file environment.\-cpp.
 
 
 
@@ -5442,7 +5462,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_a9bc445da3e89d09d4fce11c83f3dedb0}
 
 
-Definition at line 343 of file environment.\-h.
+Definition at line 344 of file environment.\-h.
 
 
 
@@ -5470,7 +5490,7 @@ This function populates to lists, the first containing all the living species I\
 \end{DoxyDate}
 
 
-Definition at line 4176 of file environment.\-cpp.
+Definition at line 4913 of file environment.\-cpp.
 
 
 
@@ -5498,7 +5518,7 @@ This function populates to lists, the first one contains the I\-Ds of the unchar
 \end{DoxyDate}
 
 
-Definition at line 4217 of file environment.\-cpp.
+Definition at line 4954 of file environment.\-cpp.
 
 
 
@@ -5589,7 +5609,7 @@ Shows all parameters uploaded from the configuration file \begin{DoxyVersion}{Ve
 \end{DoxyVersion}
 
 
-Definition at line 6175 of file environment.\-cpp.
+Definition at line 6894 of file environment.\-cpp.
 
 
 
@@ -5625,7 +5645,7 @@ Store initial structures into storing variables \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 6568 of file environment.\-cpp.
+Definition at line 7287 of file environment.\-cpp.
 
 
 
@@ -5686,7 +5706,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00014_af21c066ce18c8a39740f66a995782fb9}
 
 
-Definition at line 302 of file environment.\-h.
+Definition at line 303 of file environment.\-h.
 
 
 
@@ -5776,7 +5796,7 @@ Update the species age \begin{DoxyVersion}{Version}
 \end{DoxyVersion}
 
 
-Definition at line 6126 of file environment.\-cpp.
+Definition at line 6845 of file environment.\-cpp.
 
 
 
@@ -5820,7 +5840,7 @@ This function creates a chain of zero as S\-T\-R\-I\-N\-G according to tmp\-Tot\
 \end{DoxyParams}
 
 
-Definition at line 6591 of file environment.\-cpp.
+Definition at line 7310 of file environment.\-cpp.
 
 
 

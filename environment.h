@@ -133,12 +133,12 @@ private:
     acs_double ratioBetweenNewGillTotGill; // gillespieNewSpeciesScore / gillespieTotalScore
     acs_double reverseReactionsGillScore; // the sum of the gillespie scores related to the reverse reactions
     acs_double ratioBetweenReverseAndTotalScore; // Ratio between the reverse reaction scores and all the reaction scores
+    acs_double gillespieTime;
+    acs_double performReactionTime;
+    acs_double remainingProcessesTime;
     clock_t gillespiePartialTimer; // Gillespie algorithm computational time
-    vector<acs_double> gillespiePartialTimes;
     clock_t performReactionPartialTimer; // The time necessary for the evaluation of a new species
-    vector<acs_double> performReactionPartialTimes;
     clock_t remainingProcessesPartialTimer; // THe time needed for all the other procedure
-    vector<acs_double> remainingProcessesPartialTimes;
 
 	// METHODS ---------------------------|
 	
@@ -281,8 +281,8 @@ private:
 	void changeVolume(acs_int tmpTimeSinceLastReaction);
 	
 	// Change overall COUNTER number of species, molecules, complexes type and complexes token
-	void incNumberOfSpecies(){numberOfSpecies++;}
-	void decNumberOfSpecies(acs_int tmpID){if(allSpecies.at(tmpID).getAmount() == 0) numberOfSpecies--; }
+	void incNumberOfSpecies(acs_int tmpID){if(allSpecies.at(tmpID).getAmount() == 1) numberOfSpecies++;}
+	void decNumberOfSpecies(acs_int tmpID){if(allSpecies.at(tmpID).getAmount() == 0) numberOfSpecies--;}
 	void incNumberOfMols(){numberOfMolecules++;}
 	void decNumberOfMols(){numberOfMolecules--;}
 	void incNumberOfCpx(){numberOfCpx++;}
@@ -290,15 +290,15 @@ private:
 	void incNumberOfCpxMols(){numberOfCpxMols++;}
 	void decNumberOfCpxMols(){numberOfCpxMols--;}
 	
-	void incNumberOfNewSpecies(acs_int tmpID){if(tmpID > lastFiringDiskSpeciesID) numberOfNewSpecies++;}
+	void incNumberOfNewSpecies(acs_int tmpID){if((tmpID > lastFiringDiskSpeciesID)&&(allSpecies.at(tmpID).getAmount() == 1)) numberOfNewSpecies++;}
 	void decNumberOfNewSpecies(acs_int tmpID){if((tmpID > lastFiringDiskSpeciesID)&&(allSpecies.at(tmpID).getAmount() == 0)) numberOfNewSpecies--;}
 	void incNumberOfNewMols(acs_int tmpID){if(tmpID > lastFiringDiskSpeciesID) numberOfNewMolecules++;}
 	void decNumberOfNewMols(acs_int tmpID){if(tmpID > lastFiringDiskSpeciesID) numberOfNewMolecules--;}
 	
 	void decMolSpeciesProcedure(acs_int tmp_ID){decNumberOfSpecies(tmp_ID); decNumberOfMols(); decNumberOfNewSpecies(tmp_ID); decNumberOfNewMols(tmp_ID);}
+	void incMolSpeciesProcedure(acs_int tmp_ID){incNumberOfSpecies(tmp_ID); incNumberOfMols(); incNumberOfNewSpecies(tmp_ID); incNumberOfNewMols(tmp_ID);}
 	void decCpxProcedure(acs_int tmp_ID){decNumberOfCpx(tmp_ID);decNumberOfCpxMols();}
 	void incMolProcedure(acs_int tmp_ID){incNumberOfMols();incNumberOfNewMols(tmp_ID);}
-	void incSpeciesProcedure(acs_int tmp_ID){if(allSpecies.at(tmp_ID).getAmount() == 1){incNumberOfNewSpecies(tmp_ID); incNumberOfSpecies();}}
 	//void chargeMolProcess(acs_int tmp_ID){}
     void unchargeMolProcess(acs_int tmp_ID){allSpecies[tmp_ID].unchargeMol();decOverallLoadedMolsCounter();}// removeChargeMolFromList(tmp_ID);}
 	

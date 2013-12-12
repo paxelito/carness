@@ -1122,7 +1122,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="87" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="87" bodyend="87"/>
-        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="4611" endline="4655">environment::performEnergyEfflux</referencedby>
+        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="5348" endline="5392">environment::performEnergyEfflux</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00022_1ade5b59eab17c02ff322dcf068f923f9d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="a00072_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
@@ -1149,7 +1149,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="89" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="89" bodyend="89"/>
-        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="4611" endline="4655">environment::performEnergyEfflux</referencedby>
+        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="5348" endline="5392">environment::performEnergyEfflux</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00022_1af7293ab371ab92d6d16866ea281e901a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="a00072_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
@@ -1163,7 +1163,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="90" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="90" bodyend="90"/>
-        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="4611" endline="4655">environment::performEnergyEfflux</referencedby>
+        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="5348" endline="5392">environment::performEnergyEfflux</referencedby>
         <referencedby refid="a00014_1a69d18914fe7c8e96b10992668960b83b" compoundref="a00086" startline="169" endline="169">environment::getADP</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00022_1a3af3e7879c333a55f189cd351f8358ef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
@@ -1178,7 +1178,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="91" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" bodystart="91" bodyend="91"/>
-        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="4611" endline="4655">environment::performEnergyEfflux</referencedby>
+        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="5348" endline="5392">environment::performEnergyEfflux</referencedby>
         <referencedby refid="a00014_1a02346c5d824e83e0a76dd01f4672ad8b" compoundref="a00086" startline="170" endline="170">environment::getATP</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00022_1a2baa5d157d49282cee8b59a2db0217b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
@@ -1598,7 +1598,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="123" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="313" bodyend="320"/>
         <references refid="a00022_1a23c19a53390142ba690d0f3db0520d05" compoundref="a00095" startline="137" endline="137">numToConc</references>
-        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="4611" endline="4655">environment::performEnergyEfflux</referencedby>
+        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="5348" endline="5392">environment::performEnergyEfflux</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00022_1a27f9852312659597efe7925124152286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1659,7 +1659,7 @@ Created by Alessandro Filisetti on 19/02/09. Copyright 2009 European Centre for 
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/species.h" line="127" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/species.cpp" bodystart="365" bodyend="373"/>
-        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="4611" endline="4655">environment::performEnergyEfflux</referencedby>
+        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="5348" endline="5392">environment::performEnergyEfflux</referencedby>
       </memberdef>
       <memberdef kind="function" id="a00022_1a089da38f8016bd588fa262cd836d1c4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

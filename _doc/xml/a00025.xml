@@ -332,7 +332,7 @@
         <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
         <referencedby refid="a00014_1aee77384e63261db28ef5677844bdbaf6" compoundref="a00085" startline="1249" endline="1331">environment::createInitialMoleculesPopulationFromFileSTD</referencedby>
         <referencedby refid="a00014_1aa70e1394bf2240f6e5f14d4cbf369a3b" compoundref="a00085" startline="1478" endline="1564">environment::createInitialMoleculesPopulationFromSpecificFileSTD</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6025" endline="6120">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6744" endline="6839">environment::complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="a00025_1a045ecd9b02a87529b837dde223b08719" prot="public" static="no" mutable="no">
         <type>Clear temp variable used <ref refid="a00028_1af71dbe52628a3f83a77ab494817525c6" kindref="member">to</ref> store binding points <ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref> evaluation flags for each <ref refid="a00068_1a4e8353d6c62cf54bf4a1a8f63e56b8c3" kindref="member">file</ref> clear</type>

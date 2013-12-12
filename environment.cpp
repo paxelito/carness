@@ -3093,14 +3093,10 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
     try{
 		// Store gillespie computational time and start performReaction Times
     	try{
-			gillespiePartialTimes.push_back(((float)clock() - gillespiePartialTimer) / CLOCKS_PER_SEC);
+    		gillespieTime = ((acs_double)clock() - gillespiePartialTimer) / CLOCKS_PER_SEC;
 			performReactionPartialTimer = clock();
     	}catch(exception&e){
 			cout << "Source Code Line: " << __LINE__ << endl;
-			cout << "CLOCK: " << (float)clock() << " - gillespiePartialTimer: " << gillespiePartialTimer << endl;
-			cout << "gillespiePartialTimes dimension: " << gillespiePartialTimes.size() << endl;
-			cout << "gillespiePartialTimes capacity: " << gillespiePartialTimes.capacity() << endl;
-			cout << "gillespiePartialTimes Max dimension: " << gillespiePartialTimes.max_size() << endl;
 			cerr << "exceptioncaught:" << e.what() << endl;
 			ExitWithError("performOPTGillespieComputation::Time registration","exceptionerrorthrown");
 		}
@@ -3263,7 +3259,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 
 		// Store perform reaction time and start remaining processes timer
 		try{
-			performReactionPartialTimes.push_back(((float)clock() - performReactionPartialTimer) / CLOCKS_PER_SEC);
+			performReactionTime = ((acs_double)clock() - performReactionPartialTimer) / CLOCKS_PER_SEC;
 			remainingProcessesPartialTimer = clock();
 		}catch(exception&e){
 			 cout << "Source Code Line: " << __LINE__ << endl;
@@ -3335,7 +3331,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
     gillespieCumulativeStepScoreList.clear();
 
     // Store remaining processes time
-    remainingProcessesPartialTimes.push_back(((float)clock() - remainingProcessesPartialTimer) / CLOCKS_PER_SEC);
+    remainingProcessesTime = ((acs_double)clock() - remainingProcessesPartialTimer) / CLOCKS_PER_SEC;
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::performOPTGillespieComputation end" << endl;
 
@@ -3771,7 +3767,7 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
     try{
 		// Store gillespie computational time and start performReaction Times
     	try{
-			gillespiePartialTimes.push_back(((float)clock() - gillespiePartialTimer) / CLOCKS_PER_SEC);
+    		gillespieTime = ((acs_double)clock() - gillespiePartialTimer) / CLOCKS_PER_SEC;
 			performReactionPartialTimer = clock();
     	}catch(exception&e){
 			 cout << "Source Code Line: " << __LINE__ << endl;
@@ -3937,7 +3933,7 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 
 		// Store perform reaction time and start remaining processes timer
 		try{
-			performReactionPartialTimes.push_back(((float)clock() - performReactionPartialTimer) / CLOCKS_PER_SEC);
+			performReactionTime = ((acs_double)clock() - performReactionPartialTimer) / CLOCKS_PER_SEC;
 			remainingProcessesPartialTimer = clock();
 		}catch(exception&e){
 			 cout << "Source Code Line: " << __LINE__ << endl;
@@ -4009,7 +4005,7 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
     gillespieCumulativeStepScoreList.clear();
 
     // Store remaining processes time
-    remainingProcessesPartialTimes.push_back(((float)clock() - remainingProcessesPartialTimer) / CLOCKS_PER_SEC);
+    remainingProcessesTime = ((acs_double)clock() - remainingProcessesPartialTimer) / CLOCKS_PER_SEC;
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::perform_FIXED_GillespieComputation end" << endl;
 
@@ -4521,8 +4517,7 @@ bool environment::performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double
 
                 }
 
-                incMolProcedure(IDspecies);
-                incSpeciesProcedure(IDspecies);
+                incMolSpeciesProcedure(IDspecies);
 
                 if(debugLevel >= SMALL_DEBUG)
                 {
@@ -5667,15 +5662,13 @@ bool environment::performCondensation(acs_longInt tmpCatalyst, acs_longInt tmpSu
 		ExitWithError("performCondensation", "Substrate not Avalaible!!!");
 	if(tmpCpxAmount == 0)
 		ExitWithError("performCondensation", "Complex not Avalaible!!!");		
-
-	
 		
 	// the catalyst come to be free
 	if (debugLevel >= SMALL_DEBUG) 
 	{
 		cout << "CONDENSATION BEFORE complexes: " << tmpCpxAmount
 			 << " - substrates: " << tmpSubAmount
-                         << " - catalyst: " << allSpecies.at(tmpCatalyst).getAmount() << endl;
+             << " - catalyst: " << allSpecies.at(tmpCatalyst).getAmount() << endl;
 	}
 	
     // REACTION!!!
@@ -5691,11 +5684,8 @@ bool environment::performCondensation(acs_longInt tmpCatalyst, acs_longInt tmpSu
         ExitWithError("","exceptionerrorthrown");
     }
 
-    if(!allSpecies.at(tmpCatalyst).getConcentrationFixed())
-    {
-        incMolProcedure(tmpCatalyst); // Increment total number of molecules and species
-        incSpeciesProcedure(tmpCatalyst);
-    }
+    // Increment total number of molecules and species
+    if(!allSpecies.at(tmpCatalyst).getConcentrationFixed()){ incMolSpeciesProcedure(tmpCatalyst);}
 
 	// The substrate and the complex are consumed (the first substrate has been already decremented during the complex formation reaction
 	if ((tmpSubAmount > 0) && (tmpCpxAmount > 0))
@@ -5793,11 +5783,9 @@ bool environment::perform_endo_Condensation(acs_longInt tmpCatalyst, acs_longInt
 	
 	// REACTION! the catalyst come to be free
         allSpecies.at(tmpCatalyst).increment(volume);
-    if(!allSpecies.at(tmpCatalyst).getConcentrationFixed())
-    {
-        incMolProcedure(tmpCatalyst); // Increment total number of molecules and species
-        incSpeciesProcedure(tmpCatalyst);
-    }
+
+    // Increment total number of molecules and species
+    if(!allSpecies.at(tmpCatalyst).getConcentrationFixed()){ incMolSpeciesProcedure(tmpCatalyst);}
 			
 	// The substrate and the complex are consumed (the first substrate has been already decremented during the complex formation reaction
 	if((tmpSubAmount > 0) && (tmpCpxAmount > 0))
@@ -6350,18 +6338,10 @@ bool environment::performComplexDissociation(acs_longInt tmpComplex, acs_longInt
 
         // UPDATE CATALYST AND SUBSTRATE
         allSpecies.at(tmpCatalyst).increment(volume);
-        if(!allSpecies.at(tmpCatalyst).getConcentrationFixed())
-        {
-            incMolProcedure(tmpCatalyst); // Increment total number of catalyst
-            incSpeciesProcedure(tmpCatalyst);
-        }
+        if(!allSpecies.at(tmpCatalyst).getConcentrationFixed()) incMolSpeciesProcedure(tmpCatalyst);
 
         allSpecies.at(tmpSubstrate).increment(volume);
-        if(!allSpecies.at(tmpSubstrate).getConcentrationFixed())
-        {
-            incMolProcedure(tmpSubstrate); // Increment total number of substrate
-            incSpeciesProcedure(tmpSubstrate);
-        }
+        if(!allSpecies.at(tmpSubstrate).getConcentrationFixed()) incMolSpeciesProcedure(tmpSubstrate);
 
         if(debugLevel >= SMALL_DEBUG)
         {
@@ -6601,11 +6581,8 @@ bool environment::newSpeciesEvaluationIII(acs_longInt tmpNewSpecies, MTRand& tmp
 		if(allSpecies.at(tmpNewSpecies).getAmount() == 0)
 			allSpecies.at(tmpNewSpecies).rebornsIncrement(); // IF THE SPECIES REAPPEAR THE REBORN COUNTER IS UPDATED
 		allSpecies.at(tmpNewSpecies).increment(volume); // INCREMENT THE NUMBER OF ELEMENTS OF THIS SPECIES (conc fixed check is inside the function)
-		if(!allSpecies.at(tmpNewSpecies).getConcentrationFixed())
-		{
-			incMolProcedure(tmpNewSpecies); // Increment overall amount of species
-			incSpeciesProcedure(tmpNewSpecies);
-		}
+		if(!allSpecies.at(tmpNewSpecies).getConcentrationFixed()) incMolSpeciesProcedure(tmpNewSpecies);
+
 
 		tmpNotEqualSeqBetweenTwoSpecies = false; // IF THE SPECIES IS ALREADY PRESENT
 		if(allSpecies.at(tmpNewSpecies).getEvaluated() == 1) // IF THE SPECIES HAS BEEN ALREADY EVALUATED TOO
@@ -7813,9 +7790,9 @@ bool environment::saveTimesSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs
                 << getTotalNumberOfComplexSpecies() << "\t"
                 << getTotalNumberOfComplexes() << "\t"
                 << getTotalNumberOfMonomers() << "\t"
-                << (double)gillespiePartialTimes.at(tmpCurrentStep-1) << "\t"
-                << (double)performReactionPartialTimes.at(tmpCurrentStep-1) << "\t"
-                << (double)remainingProcessesPartialTimes.at(tmpCurrentStep-1) << "\t"
+                << (double)gillespieTime << "\t"
+                << (double)performReactionTime << "\t"
+                << (double)remainingProcessesTime << "\t"
                 << (double)ratioBetweenNewGillTotGill << endl;
         }else{
             fidFile << tmpCurrentStep << "\t"
