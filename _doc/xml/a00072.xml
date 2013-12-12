@@ -200,7 +200,7 @@
       <sectiondef kind="define">
       <memberdef kind="define" id="a00072_1aab38659c2fe462437b89a1e85e619dc7" prot="public" static="no">
         <name>__SOFTVERSION__</name>
-        <initializer>&quot;4.8b20131210.63&quot;</initializer>
+        <initializer>&quot;4.8b20131212.64&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -208,8 +208,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="42" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="42" bodyend="-1"/>
-        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6894" endline="6981">environment::showGlobalParameter</referencedby>
-        <referencedby refid="a00014_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00085" startline="7333" endline="7495">environment::saveConfigurationFileSTD</referencedby>
+        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6883" endline="6970">environment::showGlobalParameter</referencedby>
+        <referencedby refid="a00014_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00085" startline="7304" endline="7466">environment::saveConfigurationFileSTD</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a972f6696f10f8159f336357f003493b6" prot="public" static="no">
         <name>MINIMAL_PROMPT</name>
@@ -233,17 +233,17 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="47" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="47" bodyend="-1"/>
-        <referencedby refid="a00014_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00085" startline="80" endline="197">environment::environment</referencedby>
-        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">environment::structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1af293fafca4582120d88f888d70d8623a" compoundref="a00085" startline="2462" endline="2518">environment::inserSubListInSpecies</referencedby>
-        <referencedby refid="a00014_1a5cb194f927ddc7a804a942ca71f062af" compoundref="a00085" startline="2523" endline="2551">environment::showSubListInSpecies</referencedby>
-        <referencedby refid="a00014_1aef1d3687767151218f3b7379dc230430" compoundref="a00085" startline="2559" endline="2572">environment::showGillEngagementInSpecies</referencedby>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
-        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6573" endline="6731">environment::newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6894" endline="6981">environment::showGlobalParameter</referencedby>
-        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="7192" endline="7281">environment::resetConcentrationToInitialConditions</referencedby>
+        <referencedby refid="a00014_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00085" startline="80" endline="198">environment::environment</referencedby>
+        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2005" endline="2455">environment::structureCoherenceCheckUp</referencedby>
+        <referencedby refid="a00014_1af293fafca4582120d88f888d70d8623a" compoundref="a00085" startline="2463" endline="2519">environment::inserSubListInSpecies</referencedby>
+        <referencedby refid="a00014_1a5cb194f927ddc7a804a942ca71f062af" compoundref="a00085" startline="2524" endline="2552">environment::showSubListInSpecies</referencedby>
+        <referencedby refid="a00014_1aef1d3687767151218f3b7379dc230430" compoundref="a00085" startline="2560" endline="2573">environment::showGillEngagementInSpecies</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6562" endline="6720">environment::newSpeciesEvaluationIII</referencedby>
+        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6883" endline="6970">environment::showGlobalParameter</referencedby>
+        <referencedby refid="a00014_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00085" startline="7173" endline="7252">environment::resetConcentrationToInitialConditions</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a6f7711b8195edb3c3541c153ebcb4bfa" prot="public" static="no">
@@ -256,39 +256,39 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="48" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="48" bodyend="-1"/>
-        <referencedby refid="a00014_1a0fd3cb062d35d2f6dd8961e95dd477b7" compoundref="a00085" startline="481" endline="512">environment::computeSngSpeciesRctsNumber</referencedby>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
-        <referencedby refid="a00014_1aee77384e63261db28ef5677844bdbaf6" compoundref="a00085" startline="1249" endline="1331">environment::createInitialMoleculesPopulationFromFileSTD</referencedby>
-        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">environment::structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1af293fafca4582120d88f888d70d8623a" compoundref="a00085" startline="2462" endline="2518">environment::inserSubListInSpecies</referencedby>
-        <referencedby refid="a00014_1a5160dec152ed0369fe8af9aff3253a9e" compoundref="a00085" startline="2578" endline="2623">environment::notInverseReactionAlreadyCatalyzed</referencedby>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4052" endline="4216">environment::performSingleGilleSpieIntroduction</referencedby>
-        <referencedby refid="a00014_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00085" startline="4456" endline="4537">environment::performRefill</referencedby>
-        <referencedby refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="5106" endline="5258">environment::performMoleculesEfflux</referencedby>
-        <referencedby refid="a00014_1ad072a40a7d9521379c7ff50ed8110fbe" compoundref="a00085" startline="5268" endline="5339">environment::performMoleculeEfflux</referencedby>
-        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="5348" endline="5392">environment::performEnergyEfflux</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
-        <referencedby refid="a00014_1a1baf5512b7e0a8fb6f8f890ba9f99cd1" compoundref="a00085" startline="5635" endline="5733">environment::performCondensation</referencedby>
-        <referencedby refid="a00014_1aa7a2cc95d8ba242c805a8fda063b23a7" compoundref="a00085" startline="5747" endline="5868">environment::perform_endo_Condensation</referencedby>
-        <referencedby refid="a00014_1aa4ed307a123c402166cfc7f6ed99043a" compoundref="a00085" startline="5881" endline="5974">environment::performCleavage</referencedby>
-        <referencedby refid="a00014_1ade26b82a3b48a5bda7e5751cbfd31b04" compoundref="a00085" startline="5988" endline="6098">environment::perform_endo_Cleavage</referencedby>
-        <referencedby refid="a00014_1aaf4f4f6be28edb182d2a2516c9394f9b" compoundref="a00085" startline="6109" endline="6187">environment::performComplexFormation</referencedby>
-        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6197" endline="6283">environment::perform_endo_ComplexFormation</referencedby>
-        <referencedby refid="a00014_1a5c5e57b0558067cbf55c894f33d0a121" compoundref="a00085" startline="6295" endline="6370">environment::performComplexDissociation</referencedby>
-        <referencedby refid="a00014_1a4949138a3771b7f6ec2bfe82cbad947e" compoundref="a00085" startline="6379" endline="6440">environment::performSpontaneousCleavage</referencedby>
-        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6573" endline="6731">environment::newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6744" endline="6839">environment::complexEvaluation</referencedby>
-        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="7125" endline="7186">environment::clearAllStructures</referencedby>
-        <referencedby refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="7579" endline="7637">environment::saveSpeciesStructureSTD</referencedby>
-        <referencedby refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="7644" endline="7691">environment::saveReactionsStructureSTD</referencedby>
-        <referencedby refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="7698" endline="7747">environment::saveCatalysisStructureSTD</referencedby>
-        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7755" endline="7834">environment::saveTimesSTD</referencedby>
-        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7901" endline="7954">environment::saveLivingSpeciesIDSTD</referencedby>
-        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7962" endline="8020">environment::saveLivingSpeciesAmountSTD</referencedby>
-        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="8028" endline="8084">environment::saveLivingSpeciesConcentrationSTD</referencedby>
+        <referencedby refid="a00014_1a0fd3cb062d35d2f6dd8961e95dd477b7" compoundref="a00085" startline="482" endline="513">environment::computeSngSpeciesRctsNumber</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="942" endline="1220">environment::updateReactions</referencedby>
+        <referencedby refid="a00014_1aee77384e63261db28ef5677844bdbaf6" compoundref="a00085" startline="1250" endline="1332">environment::createInitialMoleculesPopulationFromFileSTD</referencedby>
+        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2005" endline="2455">environment::structureCoherenceCheckUp</referencedby>
+        <referencedby refid="a00014_1af293fafca4582120d88f888d70d8623a" compoundref="a00085" startline="2463" endline="2519">environment::inserSubListInSpecies</referencedby>
+        <referencedby refid="a00014_1a5160dec152ed0369fe8af9aff3253a9e" compoundref="a00085" startline="2579" endline="2624">environment::notInverseReactionAlreadyCatalyzed</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4041" endline="4205">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00014_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00085" startline="4445" endline="4526">environment::performRefill</referencedby>
+        <referencedby refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="5095" endline="5247">environment::performMoleculesEfflux</referencedby>
+        <referencedby refid="a00014_1ad072a40a7d9521379c7ff50ed8110fbe" compoundref="a00085" startline="5257" endline="5328">environment::performMoleculeEfflux</referencedby>
+        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="5337" endline="5381">environment::performEnergyEfflux</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a1baf5512b7e0a8fb6f8f890ba9f99cd1" compoundref="a00085" startline="5624" endline="5722">environment::performCondensation</referencedby>
+        <referencedby refid="a00014_1aa7a2cc95d8ba242c805a8fda063b23a7" compoundref="a00085" startline="5736" endline="5857">environment::perform_endo_Condensation</referencedby>
+        <referencedby refid="a00014_1aa4ed307a123c402166cfc7f6ed99043a" compoundref="a00085" startline="5870" endline="5963">environment::performCleavage</referencedby>
+        <referencedby refid="a00014_1ade26b82a3b48a5bda7e5751cbfd31b04" compoundref="a00085" startline="5977" endline="6087">environment::perform_endo_Cleavage</referencedby>
+        <referencedby refid="a00014_1aaf4f4f6be28edb182d2a2516c9394f9b" compoundref="a00085" startline="6098" endline="6176">environment::performComplexFormation</referencedby>
+        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6186" endline="6272">environment::perform_endo_ComplexFormation</referencedby>
+        <referencedby refid="a00014_1a5c5e57b0558067cbf55c894f33d0a121" compoundref="a00085" startline="6284" endline="6359">environment::performComplexDissociation</referencedby>
+        <referencedby refid="a00014_1a4949138a3771b7f6ec2bfe82cbad947e" compoundref="a00085" startline="6368" endline="6429">environment::performSpontaneousCleavage</referencedby>
+        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6562" endline="6720">environment::newSpeciesEvaluationIII</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6733" endline="6828">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1aa860227725dbe5b0251a25f440773161" compoundref="a00085" startline="7114" endline="7167">environment::clearAllStructures</referencedby>
+        <referencedby refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="7550" endline="7608">environment::saveSpeciesStructureSTD</referencedby>
+        <referencedby refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="7615" endline="7662">environment::saveReactionsStructureSTD</referencedby>
+        <referencedby refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="7669" endline="7718">environment::saveCatalysisStructureSTD</referencedby>
+        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7726" endline="7805">environment::saveTimesSTD</referencedby>
+        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7872" endline="7925">environment::saveLivingSpeciesIDSTD</referencedby>
+        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7933" endline="7991">environment::saveLivingSpeciesAmountSTD</referencedby>
+        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7999" endline="8055">environment::saveLivingSpeciesConcentrationSTD</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1ab0ead5a0a8c59ad5f4d9fcf0be28a5d7" prot="public" static="no">
@@ -301,10 +301,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="49" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="49" bodyend="-1"/>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">environment::structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2005" endline="2455">environment::structureCoherenceCheckUp</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1ac2a71f467524d5299cbff5df96be638a" prot="public" static="no">
@@ -317,10 +317,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="50" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="50" bodyend="-1"/>
-        <referencedby refid="a00014_1ad3ebcd7ab1c9ba1a0f65b264b97adf33" compoundref="a00085" startline="2635" endline="2655">environment::checkAvailability</referencedby>
-        <referencedby refid="a00014_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00085" startline="4456" endline="4537">environment::performRefill</referencedby>
-        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6573" endline="6731">environment::newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7842" endline="7893">environment::saveReactionsParametersSTD</referencedby>
+        <referencedby refid="a00014_1ad3ebcd7ab1c9ba1a0f65b264b97adf33" compoundref="a00085" startline="2636" endline="2656">environment::checkAvailability</referencedby>
+        <referencedby refid="a00014_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00085" startline="4445" endline="4526">environment::performRefill</referencedby>
+        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6562" endline="6720">environment::newSpeciesEvaluationIII</referencedby>
+        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7813" endline="7864">environment::saveReactionsParametersSTD</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a0934dca9b46dc1ce8ccae606a6511f63" prot="public" static="no">
         <name>FINDERRORDURINGRUNTIME</name>
@@ -332,82 +332,82 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="51" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="51" bodyend="-1"/>
-        <referencedby refid="a00014_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00085" startline="80" endline="197">environment::environment</referencedby>
-        <referencedby refid="a00014_1a0fd3cb062d35d2f6dd8961e95dd477b7" compoundref="a00085" startline="481" endline="512">environment::computeSngSpeciesRctsNumber</referencedby>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
-        <referencedby refid="a00014_1a53282cca8882e86652ab0a22e6966d17" compoundref="a00085" startline="1227" endline="1241">environment::selectWhetherCleavageOrCond</referencedby>
-        <referencedby refid="a00014_1aee77384e63261db28ef5677844bdbaf6" compoundref="a00085" startline="1249" endline="1331">environment::createInitialMoleculesPopulationFromFileSTD</referencedby>
-        <referencedby refid="a00014_1aa70e1394bf2240f6e5f14d4cbf369a3b" compoundref="a00085" startline="1478" endline="1564">environment::createInitialMoleculesPopulationFromSpecificFileSTD</referencedby>
-        <referencedby refid="a00014_1a902df40829dad9a885122082ec8fff7a" compoundref="a00085" startline="1572" endline="1596">environment::createInfluxLayersFromFileSTD</referencedby>
-        <referencedby refid="a00014_1abe1a616460ea328067874df715679319" compoundref="a00085" startline="1604" endline="1627">environment::createNrgBooleanFunctionsFromFileSTD</referencedby>
-        <referencedby refid="a00014_1a2f181e0d3ad1e8062ba0a8c9358ebc58" compoundref="a00085" startline="1635" endline="1666">environment::createInitialReactionsLayerFromFileSTD</referencedby>
-        <referencedby refid="a00014_1a743956229b11d7860dbc89a18f869586" compoundref="a00085" startline="1674" endline="1716">environment::createInitialReactionsLayerFromSpecificFileSTD</referencedby>
-        <referencedby refid="a00014_1a29eeb7a1b4689c10fd872e82179b4d84" compoundref="a00085" startline="1724" endline="1758">environment::createInitialCatalysisLayerFromFileSTD</referencedby>
-        <referencedby refid="a00014_1a6dd31bae82367ebe7d6a6bb062b8cd07" compoundref="a00085" startline="1766" endline="1809">environment::createInitialCatalysisLayerFromSpecificFileSTD</referencedby>
-        <referencedby refid="a00014_1af795a4d1f04dfbfcbdf321e20e74f9c2" compoundref="a00085" startline="1819" endline="1831">environment::createDiffusionRenforcement</referencedby>
-        <referencedby refid="a00014_1a496ba50d3a345cd842ce42406946405c" compoundref="a00085" startline="1840" endline="1864">environment::setSolubility</referencedby>
-        <referencedby refid="a00014_1a4e26cc574e20a5afcfbbe5887109c5af" compoundref="a00085" startline="1874" endline="1894">environment::returnPosSpeciesAlreadyPresent</referencedby>
-        <referencedby refid="a00014_1a6feec5685b519ba0cdae0e5c59dffff0" compoundref="a00085" startline="1904" endline="1929">environment::returnPosReactionAlreadyPresent</referencedby>
-        <referencedby refid="a00014_1ac4c90b07b8e75ea03e2ced0ea644a69f" compoundref="a00085" startline="1937" endline="1958">environment::checkIfTheReactionIsAlreadyCatalyzedByThisSpecies</referencedby>
-        <referencedby refid="a00014_1abdafaeba15b5d32fd35569869c6244d5" compoundref="a00085" startline="1965" endline="1995">environment::checkIfOnlyMutualCatalysis</referencedby>
-        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">environment::structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1af293fafca4582120d88f888d70d8623a" compoundref="a00085" startline="2462" endline="2518">environment::inserSubListInSpecies</referencedby>
-        <referencedby refid="a00014_1a5cb194f927ddc7a804a942ca71f062af" compoundref="a00085" startline="2523" endline="2551">environment::showSubListInSpecies</referencedby>
-        <referencedby refid="a00014_1aef1d3687767151218f3b7379dc230430" compoundref="a00085" startline="2559" endline="2572">environment::showGillEngagementInSpecies</referencedby>
-        <referencedby refid="a00014_1a5160dec152ed0369fe8af9aff3253a9e" compoundref="a00085" startline="2578" endline="2623">environment::notInverseReactionAlreadyCatalyzed</referencedby>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1ae1270b9c235dd6b28413075197dba8e0" compoundref="a00085" startline="4026" endline="4045">environment::computeSinglGilScore</referencedby>
-        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4052" endline="4216">environment::performSingleGilleSpieIntroduction</referencedby>
-        <referencedby refid="a00014_1a7a321296874fa1320da225cdbbf56a64" compoundref="a00085" startline="4224" endline="4241">environment::getTotalNumberOfSpecies</referencedby>
-        <referencedby refid="a00014_1a8796aead7bcc4a3f91eec7bc908dfa5b" compoundref="a00085" startline="4248" endline="4264">environment::getTotalNumberOfPossibleCatalysts</referencedby>
-        <referencedby refid="a00014_1a57e7ac49955f4717096cb6696ee03a61" compoundref="a00085" startline="4271" endline="4287">environment::getTotalNumberOfMolecules</referencedby>
-        <referencedby refid="a00014_1a453d88017912e8b5973310ea2b044266" compoundref="a00085" startline="4295" endline="4309">environment::getTotalNumberOfComplexSpecies</referencedby>
-        <referencedby refid="a00014_1ab564c7ddffd3dba896d5b049e1257793" compoundref="a00085" startline="4316" endline="4330">environment::getTotalNumberOfComplexes</referencedby>
-        <referencedby refid="a00014_1aa8c94019533639038f99587fc2b029dc" compoundref="a00085" startline="4337" endline="4352">environment::getTotalNumberOfMonomers</referencedby>
-        <referencedby refid="a00014_1aadb5c442d5c9d16a0d6b2e90715dda94" compoundref="a00085" startline="4357" endline="4367">environment::getTotNumberOfChargedMols</referencedby>
-        <referencedby refid="a00014_1ad8fcefe5325382fb307627c7e8362ba8" compoundref="a00085" startline="4398" endline="4417">environment::printNutrientsAndProbability</referencedby>
-        <referencedby refid="a00014_1a9ceec5e00b0f5a51dd125c583b8ac5ec" compoundref="a00085" startline="4423" endline="4445">environment::nutrientsAmountsFixing</referencedby>
-        <referencedby refid="a00014_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00085" startline="4456" endline="4537">environment::performRefill</referencedby>
-        <referencedby refid="a00014_1a6ae793f9d2dca0632239be955dd83cee" compoundref="a00085" startline="4546" endline="4665">environment::performDETComplexDissociation</referencedby>
-        <referencedby refid="a00014_1adbaf165a12edd62c614a455544807ea3" compoundref="a00085" startline="4674" endline="4905">environment::performDETMoleculesCharging</referencedby>
-        <referencedby refid="a00014_1a4fb98d7cad06ef479e2643785231feb9" compoundref="a00085" startline="4913" endline="4946">environment::setLivingSpeciesIDsAndAmounts</referencedby>
-        <referencedby refid="a00014_1ac5528a39937cdc76f0dd23c27542110c" compoundref="a00085" startline="4954" endline="4993">environment::setNotChargedAndChargedSpeciesIDsAndAmounts</referencedby>
-        <referencedby refid="a00014_1aa4830018af0b99eddefcdefad877b305" compoundref="a00085" startline="5002" endline="5041">environment::removeChargeMolFromList</referencedby>
-        <referencedby refid="a00014_1a7981c34d16c0b1e9e6ca3ea69aa3a8a3" compoundref="a00085" startline="5050" endline="5097">environment::addChargeMolToList</referencedby>
-        <referencedby refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="5106" endline="5258">environment::performMoleculesEfflux</referencedby>
-        <referencedby refid="a00014_1ad072a40a7d9521379c7ff50ed8110fbe" compoundref="a00085" startline="5268" endline="5339">environment::performMoleculeEfflux</referencedby>
-        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="5348" endline="5392">environment::performEnergyEfflux</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
-        <referencedby refid="a00014_1a1baf5512b7e0a8fb6f8f890ba9f99cd1" compoundref="a00085" startline="5635" endline="5733">environment::performCondensation</referencedby>
-        <referencedby refid="a00014_1aa7a2cc95d8ba242c805a8fda063b23a7" compoundref="a00085" startline="5747" endline="5868">environment::perform_endo_Condensation</referencedby>
-        <referencedby refid="a00014_1aa4ed307a123c402166cfc7f6ed99043a" compoundref="a00085" startline="5881" endline="5974">environment::performCleavage</referencedby>
-        <referencedby refid="a00014_1ade26b82a3b48a5bda7e5751cbfd31b04" compoundref="a00085" startline="5988" endline="6098">environment::perform_endo_Cleavage</referencedby>
-        <referencedby refid="a00014_1aaf4f4f6be28edb182d2a2516c9394f9b" compoundref="a00085" startline="6109" endline="6187">environment::performComplexFormation</referencedby>
-        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6197" endline="6283">environment::perform_endo_ComplexFormation</referencedby>
-        <referencedby refid="a00014_1a5c5e57b0558067cbf55c894f33d0a121" compoundref="a00085" startline="6295" endline="6370">environment::performComplexDissociation</referencedby>
-        <referencedby refid="a00014_1a4949138a3771b7f6ec2bfe82cbad947e" compoundref="a00085" startline="6379" endline="6440">environment::performSpontaneousCleavage</referencedby>
-        <referencedby refid="a00014_1acc764a05297ae00db52360f3df5ed1d5" compoundref="a00085" startline="6449" endline="6511">environment::performSpontaneousCondensation</referencedby>
-        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6573" endline="6731">environment::newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6744" endline="6839">environment::complexEvaluation</referencedby>
-        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6894" endline="6981">environment::showGlobalParameter</referencedby>
-        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6987" endline="7039">environment::printInitialCondition</referencedby>
-        <referencedby refid="a00014_1a48d8fd9d8d5c9c31f0b4af87c8cbd28f" compoundref="a00085" startline="7045" endline="7067">environment::printAllSpeciesIdAndSequence</referencedby>
-        <referencedby refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="7073" endline="7093">environment::printGillespieStructure</referencedby>
-        <referencedby refid="a00014_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00085" startline="7333" endline="7495">environment::saveConfigurationFileSTD</referencedby>
-        <referencedby refid="a00014_1a8f831e2db11fa5d840484345dac64fc7" compoundref="a00085" startline="7503" endline="7533">environment::saveInfluxStructureSTD</referencedby>
-        <referencedby refid="a00014_1a1412b9b1c3bd3e42bcb481f5e18ea931" compoundref="a00085" startline="7541" endline="7571">environment::saveNrgBoolFncStructureSTD</referencedby>
-        <referencedby refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="7579" endline="7637">environment::saveSpeciesStructureSTD</referencedby>
-        <referencedby refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="7644" endline="7691">environment::saveReactionsStructureSTD</referencedby>
-        <referencedby refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="7698" endline="7747">environment::saveCatalysisStructureSTD</referencedby>
-        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7755" endline="7834">environment::saveTimesSTD</referencedby>
-        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7842" endline="7893">environment::saveReactionsParametersSTD</referencedby>
-        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7901" endline="7954">environment::saveLivingSpeciesIDSTD</referencedby>
-        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7962" endline="8020">environment::saveLivingSpeciesAmountSTD</referencedby>
-        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="8028" endline="8084">environment::saveLivingSpeciesConcentrationSTD</referencedby>
-        <referencedby refid="a00014_1ae7fd21d14f81c4854b3a6163b0278857" compoundref="a00085" startline="8090" endline="8106">environment::devStd</referencedby>
-        <referencedby refid="a00014_1a4e9b60ec8b05e888cf0e55def03ee906" compoundref="a00085" startline="8108" endline="8126">environment::entropy</referencedby>
+        <referencedby refid="a00014_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00085" startline="80" endline="198">environment::environment</referencedby>
+        <referencedby refid="a00014_1a0fd3cb062d35d2f6dd8961e95dd477b7" compoundref="a00085" startline="482" endline="513">environment::computeSngSpeciesRctsNumber</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="942" endline="1220">environment::updateReactions</referencedby>
+        <referencedby refid="a00014_1a53282cca8882e86652ab0a22e6966d17" compoundref="a00085" startline="1228" endline="1242">environment::selectWhetherCleavageOrCond</referencedby>
+        <referencedby refid="a00014_1aee77384e63261db28ef5677844bdbaf6" compoundref="a00085" startline="1250" endline="1332">environment::createInitialMoleculesPopulationFromFileSTD</referencedby>
+        <referencedby refid="a00014_1aa70e1394bf2240f6e5f14d4cbf369a3b" compoundref="a00085" startline="1479" endline="1565">environment::createInitialMoleculesPopulationFromSpecificFileSTD</referencedby>
+        <referencedby refid="a00014_1a902df40829dad9a885122082ec8fff7a" compoundref="a00085" startline="1573" endline="1597">environment::createInfluxLayersFromFileSTD</referencedby>
+        <referencedby refid="a00014_1abe1a616460ea328067874df715679319" compoundref="a00085" startline="1605" endline="1628">environment::createNrgBooleanFunctionsFromFileSTD</referencedby>
+        <referencedby refid="a00014_1a2f181e0d3ad1e8062ba0a8c9358ebc58" compoundref="a00085" startline="1636" endline="1667">environment::createInitialReactionsLayerFromFileSTD</referencedby>
+        <referencedby refid="a00014_1a743956229b11d7860dbc89a18f869586" compoundref="a00085" startline="1675" endline="1717">environment::createInitialReactionsLayerFromSpecificFileSTD</referencedby>
+        <referencedby refid="a00014_1a29eeb7a1b4689c10fd872e82179b4d84" compoundref="a00085" startline="1725" endline="1759">environment::createInitialCatalysisLayerFromFileSTD</referencedby>
+        <referencedby refid="a00014_1a6dd31bae82367ebe7d6a6bb062b8cd07" compoundref="a00085" startline="1767" endline="1810">environment::createInitialCatalysisLayerFromSpecificFileSTD</referencedby>
+        <referencedby refid="a00014_1af795a4d1f04dfbfcbdf321e20e74f9c2" compoundref="a00085" startline="1820" endline="1832">environment::createDiffusionRenforcement</referencedby>
+        <referencedby refid="a00014_1a496ba50d3a345cd842ce42406946405c" compoundref="a00085" startline="1841" endline="1865">environment::setSolubility</referencedby>
+        <referencedby refid="a00014_1a4e26cc574e20a5afcfbbe5887109c5af" compoundref="a00085" startline="1875" endline="1895">environment::returnPosSpeciesAlreadyPresent</referencedby>
+        <referencedby refid="a00014_1a6feec5685b519ba0cdae0e5c59dffff0" compoundref="a00085" startline="1905" endline="1930">environment::returnPosReactionAlreadyPresent</referencedby>
+        <referencedby refid="a00014_1ac4c90b07b8e75ea03e2ced0ea644a69f" compoundref="a00085" startline="1938" endline="1959">environment::checkIfTheReactionIsAlreadyCatalyzedByThisSpecies</referencedby>
+        <referencedby refid="a00014_1abdafaeba15b5d32fd35569869c6244d5" compoundref="a00085" startline="1966" endline="1996">environment::checkIfOnlyMutualCatalysis</referencedby>
+        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2005" endline="2455">environment::structureCoherenceCheckUp</referencedby>
+        <referencedby refid="a00014_1af293fafca4582120d88f888d70d8623a" compoundref="a00085" startline="2463" endline="2519">environment::inserSubListInSpecies</referencedby>
+        <referencedby refid="a00014_1a5cb194f927ddc7a804a942ca71f062af" compoundref="a00085" startline="2524" endline="2552">environment::showSubListInSpecies</referencedby>
+        <referencedby refid="a00014_1aef1d3687767151218f3b7379dc230430" compoundref="a00085" startline="2560" endline="2573">environment::showGillEngagementInSpecies</referencedby>
+        <referencedby refid="a00014_1a5160dec152ed0369fe8af9aff3253a9e" compoundref="a00085" startline="2579" endline="2624">environment::notInverseReactionAlreadyCatalyzed</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1ae1270b9c235dd6b28413075197dba8e0" compoundref="a00085" startline="4015" endline="4034">environment::computeSinglGilScore</referencedby>
+        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4041" endline="4205">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00014_1a7a321296874fa1320da225cdbbf56a64" compoundref="a00085" startline="4213" endline="4230">environment::getTotalNumberOfSpecies</referencedby>
+        <referencedby refid="a00014_1a8796aead7bcc4a3f91eec7bc908dfa5b" compoundref="a00085" startline="4237" endline="4253">environment::getTotalNumberOfPossibleCatalysts</referencedby>
+        <referencedby refid="a00014_1a57e7ac49955f4717096cb6696ee03a61" compoundref="a00085" startline="4260" endline="4276">environment::getTotalNumberOfMolecules</referencedby>
+        <referencedby refid="a00014_1a453d88017912e8b5973310ea2b044266" compoundref="a00085" startline="4284" endline="4298">environment::getTotalNumberOfComplexSpecies</referencedby>
+        <referencedby refid="a00014_1ab564c7ddffd3dba896d5b049e1257793" compoundref="a00085" startline="4305" endline="4319">environment::getTotalNumberOfComplexes</referencedby>
+        <referencedby refid="a00014_1aa8c94019533639038f99587fc2b029dc" compoundref="a00085" startline="4326" endline="4341">environment::getTotalNumberOfMonomers</referencedby>
+        <referencedby refid="a00014_1aadb5c442d5c9d16a0d6b2e90715dda94" compoundref="a00085" startline="4346" endline="4356">environment::getTotNumberOfChargedMols</referencedby>
+        <referencedby refid="a00014_1ad8fcefe5325382fb307627c7e8362ba8" compoundref="a00085" startline="4387" endline="4406">environment::printNutrientsAndProbability</referencedby>
+        <referencedby refid="a00014_1a9ceec5e00b0f5a51dd125c583b8ac5ec" compoundref="a00085" startline="4412" endline="4434">environment::nutrientsAmountsFixing</referencedby>
+        <referencedby refid="a00014_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00085" startline="4445" endline="4526">environment::performRefill</referencedby>
+        <referencedby refid="a00014_1a6ae793f9d2dca0632239be955dd83cee" compoundref="a00085" startline="4535" endline="4654">environment::performDETComplexDissociation</referencedby>
+        <referencedby refid="a00014_1adbaf165a12edd62c614a455544807ea3" compoundref="a00085" startline="4663" endline="4894">environment::performDETMoleculesCharging</referencedby>
+        <referencedby refid="a00014_1a4fb98d7cad06ef479e2643785231feb9" compoundref="a00085" startline="4902" endline="4935">environment::setLivingSpeciesIDsAndAmounts</referencedby>
+        <referencedby refid="a00014_1ac5528a39937cdc76f0dd23c27542110c" compoundref="a00085" startline="4943" endline="4982">environment::setNotChargedAndChargedSpeciesIDsAndAmounts</referencedby>
+        <referencedby refid="a00014_1aa4830018af0b99eddefcdefad877b305" compoundref="a00085" startline="4991" endline="5030">environment::removeChargeMolFromList</referencedby>
+        <referencedby refid="a00014_1a7981c34d16c0b1e9e6ca3ea69aa3a8a3" compoundref="a00085" startline="5039" endline="5086">environment::addChargeMolToList</referencedby>
+        <referencedby refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="5095" endline="5247">environment::performMoleculesEfflux</referencedby>
+        <referencedby refid="a00014_1ad072a40a7d9521379c7ff50ed8110fbe" compoundref="a00085" startline="5257" endline="5328">environment::performMoleculeEfflux</referencedby>
+        <referencedby refid="a00014_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00085" startline="5337" endline="5381">environment::performEnergyEfflux</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a1baf5512b7e0a8fb6f8f890ba9f99cd1" compoundref="a00085" startline="5624" endline="5722">environment::performCondensation</referencedby>
+        <referencedby refid="a00014_1aa7a2cc95d8ba242c805a8fda063b23a7" compoundref="a00085" startline="5736" endline="5857">environment::perform_endo_Condensation</referencedby>
+        <referencedby refid="a00014_1aa4ed307a123c402166cfc7f6ed99043a" compoundref="a00085" startline="5870" endline="5963">environment::performCleavage</referencedby>
+        <referencedby refid="a00014_1ade26b82a3b48a5bda7e5751cbfd31b04" compoundref="a00085" startline="5977" endline="6087">environment::perform_endo_Cleavage</referencedby>
+        <referencedby refid="a00014_1aaf4f4f6be28edb182d2a2516c9394f9b" compoundref="a00085" startline="6098" endline="6176">environment::performComplexFormation</referencedby>
+        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6186" endline="6272">environment::perform_endo_ComplexFormation</referencedby>
+        <referencedby refid="a00014_1a5c5e57b0558067cbf55c894f33d0a121" compoundref="a00085" startline="6284" endline="6359">environment::performComplexDissociation</referencedby>
+        <referencedby refid="a00014_1a4949138a3771b7f6ec2bfe82cbad947e" compoundref="a00085" startline="6368" endline="6429">environment::performSpontaneousCleavage</referencedby>
+        <referencedby refid="a00014_1acc764a05297ae00db52360f3df5ed1d5" compoundref="a00085" startline="6438" endline="6500">environment::performSpontaneousCondensation</referencedby>
+        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6562" endline="6720">environment::newSpeciesEvaluationIII</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6733" endline="6828">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6883" endline="6970">environment::showGlobalParameter</referencedby>
+        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6976" endline="7028">environment::printInitialCondition</referencedby>
+        <referencedby refid="a00014_1a48d8fd9d8d5c9c31f0b4af87c8cbd28f" compoundref="a00085" startline="7034" endline="7056">environment::printAllSpeciesIdAndSequence</referencedby>
+        <referencedby refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="7062" endline="7082">environment::printGillespieStructure</referencedby>
+        <referencedby refid="a00014_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00085" startline="7304" endline="7466">environment::saveConfigurationFileSTD</referencedby>
+        <referencedby refid="a00014_1a8f831e2db11fa5d840484345dac64fc7" compoundref="a00085" startline="7474" endline="7504">environment::saveInfluxStructureSTD</referencedby>
+        <referencedby refid="a00014_1a1412b9b1c3bd3e42bcb481f5e18ea931" compoundref="a00085" startline="7512" endline="7542">environment::saveNrgBoolFncStructureSTD</referencedby>
+        <referencedby refid="a00014_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00085" startline="7550" endline="7608">environment::saveSpeciesStructureSTD</referencedby>
+        <referencedby refid="a00014_1ad381c4ce24045d504539bb7c74800739" compoundref="a00085" startline="7615" endline="7662">environment::saveReactionsStructureSTD</referencedby>
+        <referencedby refid="a00014_1a0a799b3a42bd90845a915298e184708c" compoundref="a00085" startline="7669" endline="7718">environment::saveCatalysisStructureSTD</referencedby>
+        <referencedby refid="a00014_1a73e83c4fcfe612514714a6692270351e" compoundref="a00085" startline="7726" endline="7805">environment::saveTimesSTD</referencedby>
+        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7813" endline="7864">environment::saveReactionsParametersSTD</referencedby>
+        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7872" endline="7925">environment::saveLivingSpeciesIDSTD</referencedby>
+        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7933" endline="7991">environment::saveLivingSpeciesAmountSTD</referencedby>
+        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7999" endline="8055">environment::saveLivingSpeciesConcentrationSTD</referencedby>
+        <referencedby refid="a00014_1ae7fd21d14f81c4854b3a6163b0278857" compoundref="a00085" startline="8061" endline="8077">environment::devStd</referencedby>
+        <referencedby refid="a00014_1a4e9b60ec8b05e888cf0e55def03ee906" compoundref="a00085" startline="8079" endline="8097">environment::entropy</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a186bfb39322832c790ce5403bc04330d" prot="public" static="no">
         <name>COMPLEXSTUFF</name>
@@ -419,11 +419,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="52" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="52" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a6ae793f9d2dca0632239be955dd83cee" compoundref="a00085" startline="4546" endline="4665">environment::performDETComplexDissociation</referencedby>
-        <referencedby refid="a00014_1aaf4f4f6be28edb182d2a2516c9394f9b" compoundref="a00085" startline="6109" endline="6187">environment::performComplexFormation</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6744" endline="6839">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a6ae793f9d2dca0632239be955dd83cee" compoundref="a00085" startline="4535" endline="4654">environment::performDETComplexDissociation</referencedby>
+        <referencedby refid="a00014_1aaf4f4f6be28edb182d2a2516c9394f9b" compoundref="a00085" startline="6098" endline="6176">environment::performComplexFormation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6733" endline="6828">environment::complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a27f5d30679c0e8877ba9246eb1a48ff4" prot="public" static="no">
         <name>GILLESPIESTUFF</name>
@@ -435,9 +435,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="53" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="53" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6573" endline="6731">environment::newSpeciesEvaluationIII</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6562" endline="6720">environment::newSpeciesEvaluationIII</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a4cb4f6978b0d938a0523bd6946e7609d" prot="public" static="no">
         <name>RANDOMRANGE</name>
@@ -493,16 +493,16 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="64" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="64" bodyend="-1"/>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
-        <referencedby refid="a00014_1a53282cca8882e86652ab0a22e6966d17" compoundref="a00085" startline="1227" endline="1241">environment::selectWhetherCleavageOrCond</referencedby>
-        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">environment::structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1af293fafca4582120d88f888d70d8623a" compoundref="a00085" startline="2462" endline="2518">environment::inserSubListInSpecies</referencedby>
-        <referencedby refid="a00014_1a5160dec152ed0369fe8af9aff3253a9e" compoundref="a00085" startline="2578" endline="2623">environment::notInverseReactionAlreadyCatalyzed</referencedby>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4052" endline="4216">environment::performSingleGilleSpieIntroduction</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="942" endline="1220">environment::updateReactions</referencedby>
+        <referencedby refid="a00014_1a53282cca8882e86652ab0a22e6966d17" compoundref="a00085" startline="1228" endline="1242">environment::selectWhetherCleavageOrCond</referencedby>
+        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2005" endline="2455">environment::structureCoherenceCheckUp</referencedby>
+        <referencedby refid="a00014_1af293fafca4582120d88f888d70d8623a" compoundref="a00085" startline="2463" endline="2519">environment::inserSubListInSpecies</referencedby>
+        <referencedby refid="a00014_1a5160dec152ed0369fe8af9aff3253a9e" compoundref="a00085" startline="2579" endline="2624">environment::notInverseReactionAlreadyCatalyzed</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4041" endline="4205">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1af490eeb67f57decd4fc403c50ec1afa0" prot="public" static="no">
         <name>CLEAVAGE</name>
@@ -514,15 +514,15 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="65" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="65" bodyend="-1"/>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
-        <referencedby refid="a00014_1a53282cca8882e86652ab0a22e6966d17" compoundref="a00085" startline="1227" endline="1241">environment::selectWhetherCleavageOrCond</referencedby>
-        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">environment::structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1a5160dec152ed0369fe8af9aff3253a9e" compoundref="a00085" startline="2578" endline="2623">environment::notInverseReactionAlreadyCatalyzed</referencedby>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4052" endline="4216">environment::performSingleGilleSpieIntroduction</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="942" endline="1220">environment::updateReactions</referencedby>
+        <referencedby refid="a00014_1a53282cca8882e86652ab0a22e6966d17" compoundref="a00085" startline="1228" endline="1242">environment::selectWhetherCleavageOrCond</referencedby>
+        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2005" endline="2455">environment::structureCoherenceCheckUp</referencedby>
+        <referencedby refid="a00014_1a5160dec152ed0369fe8af9aff3253a9e" compoundref="a00085" startline="2579" endline="2624">environment::notInverseReactionAlreadyCatalyzed</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4041" endline="4205">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a44658f1c8c0e272eb0404d42e537928e" prot="public" static="no">
         <name>COMPLEXFORMATION</name>
@@ -534,10 +534,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="66" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="66" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4052" endline="4216">environment::performSingleGilleSpieIntroduction</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4041" endline="4205">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1ab9c64bfc35cc5e2e712759d474091c4d" prot="public" static="no">
         <name>COMPLEXDEGRADATION</name>
@@ -549,7 +549,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="67" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="67" bodyend="-1"/>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1ac25e9340e22e7e130dccfb4773224d21" prot="public" static="no">
         <name>SPECIESDECAY</name>
@@ -561,7 +561,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="68" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="68" bodyend="-1"/>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1ac5482213f767aca98865e7ea785882d4" prot="public" static="no">
         <name>PHOSPHORILATION</name>
@@ -584,10 +584,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="70" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="70" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4052" endline="4216">environment::performSingleGilleSpieIntroduction</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4041" endline="4205">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a840f787adb443d5d9492b18d3180c233" prot="public" static="no">
         <name>ENDO_CONDENSATION</name>
@@ -599,12 +599,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="71" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="71" bodyend="-1"/>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4052" endline="4216">environment::performSingleGilleSpieIntroduction</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="942" endline="1220">environment::updateReactions</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4041" endline="4205">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a1f0638306dc456453be7d6be35c3f617" prot="public" static="no">
         <name>ENDO_COMPLEXFORMATION</name>
@@ -616,10 +616,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="72" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="72" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4052" endline="4216">environment::performSingleGilleSpieIntroduction</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4041" endline="4205">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a66f3205fa4a725d70d3ea246fed2336a" prot="public" static="no">
         <name>ENERGYEFFLUX</name>
@@ -631,7 +631,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="73" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="73" bodyend="-1"/>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a9248f5baf3277731d21513c01ab14ba2" prot="public" static="no">
         <name>SPONTANEOUS_CONDENSATION</name>
@@ -643,10 +643,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="74" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="74" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4052" endline="4216">environment::performSingleGilleSpieIntroduction</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4041" endline="4205">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1adb07a512ddff058539c565dc597f8925" prot="public" static="no">
         <name>SPONTANEOUS_CLEAVAGE</name>
@@ -658,10 +658,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="75" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="75" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4052" endline="4216">environment::performSingleGilleSpieIntroduction</referencedby>
-        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5405" endline="5624">environment::performReaction</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00085" startline="4041" endline="4205">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00014_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00085" startline="5394" endline="5613">environment::performReaction</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a248fc87e714b5d729453d11fbeec8310" prot="public" static="no">
         <name>SOLUBLE</name>
@@ -673,16 +673,16 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="78" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="78" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1a7a321296874fa1320da225cdbbf56a64" compoundref="a00085" startline="4224" endline="4241">environment::getTotalNumberOfSpecies</referencedby>
-        <referencedby refid="a00014_1a8796aead7bcc4a3f91eec7bc908dfa5b" compoundref="a00085" startline="4248" endline="4264">environment::getTotalNumberOfPossibleCatalysts</referencedby>
-        <referencedby refid="a00014_1a57e7ac49955f4717096cb6696ee03a61" compoundref="a00085" startline="4271" endline="4287">environment::getTotalNumberOfMolecules</referencedby>
-        <referencedby refid="a00014_1aa8c94019533639038f99587fc2b029dc" compoundref="a00085" startline="4337" endline="4352">environment::getTotalNumberOfMonomers</referencedby>
-        <referencedby refid="a00014_1a4fb98d7cad06ef479e2643785231feb9" compoundref="a00085" startline="4913" endline="4946">environment::setLivingSpeciesIDsAndAmounts</referencedby>
-        <referencedby refid="a00014_1ac5528a39937cdc76f0dd23c27542110c" compoundref="a00085" startline="4954" endline="4993">environment::setNotChargedAndChargedSpeciesIDsAndAmounts</referencedby>
-        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6573" endline="6731">environment::newSpeciesEvaluationIII</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6744" endline="6839">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a7a321296874fa1320da225cdbbf56a64" compoundref="a00085" startline="4213" endline="4230">environment::getTotalNumberOfSpecies</referencedby>
+        <referencedby refid="a00014_1a8796aead7bcc4a3f91eec7bc908dfa5b" compoundref="a00085" startline="4237" endline="4253">environment::getTotalNumberOfPossibleCatalysts</referencedby>
+        <referencedby refid="a00014_1a57e7ac49955f4717096cb6696ee03a61" compoundref="a00085" startline="4260" endline="4276">environment::getTotalNumberOfMolecules</referencedby>
+        <referencedby refid="a00014_1aa8c94019533639038f99587fc2b029dc" compoundref="a00085" startline="4326" endline="4341">environment::getTotalNumberOfMonomers</referencedby>
+        <referencedby refid="a00014_1a4fb98d7cad06ef479e2643785231feb9" compoundref="a00085" startline="4902" endline="4935">environment::setLivingSpeciesIDsAndAmounts</referencedby>
+        <referencedby refid="a00014_1ac5528a39937cdc76f0dd23c27542110c" compoundref="a00085" startline="4943" endline="4982">environment::setNotChargedAndChargedSpeciesIDsAndAmounts</referencedby>
+        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6562" endline="6720">environment::newSpeciesEvaluationIII</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6733" endline="6828">environment::complexEvaluation</referencedby>
         <referencedby refid="a00022_1a25887c42dfb4b6f33a2d17fdcf74bc47" compoundref="a00094" startline="16" endline="38">species::species</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1af270dce996bbfb82cc5d337af5b980e5" prot="public" static="no">
@@ -695,7 +695,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="79" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="79" bodyend="-1"/>
-        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">environment::structureCoherenceCheckUp</referencedby>
+        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2005" endline="2455">environment::structureCoherenceCheckUp</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1ac23ad60cb24df0616d58202351b11e60" prot="public" static="no">
         <name>ESOERGONIC</name>
@@ -707,10 +707,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="82" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="82" bodyend="-1"/>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
-        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6197" endline="6283">environment::perform_endo_ComplexFormation</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6744" endline="6839">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="942" endline="1220">environment::updateReactions</referencedby>
+        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6186" endline="6272">environment::perform_endo_ComplexFormation</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6733" endline="6828">environment::complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a83346194720cacc0144e87246d23081b" prot="public" static="no">
         <name>ENDOERGONIC</name>
@@ -722,7 +722,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="83" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="83" bodyend="-1"/>
-        <referencedby refid="a00014_1aaf4f4f6be28edb182d2a2516c9394f9b" compoundref="a00085" startline="6109" endline="6187">environment::performComplexFormation</referencedby>
+        <referencedby refid="a00014_1aaf4f4f6be28edb182d2a2516c9394f9b" compoundref="a00085" startline="6098" endline="6176">environment::performComplexFormation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a9c2a0137e4b97849150ab0842da3064c" prot="public" static="no">
         <name>CLEAVAGEBASED</name>
@@ -756,16 +756,16 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="86" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="86" bodyend="-1"/>
-        <referencedby refid="a00014_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00085" startline="80" endline="197">environment::environment</referencedby>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1adbaf165a12edd62c614a455544807ea3" compoundref="a00085" startline="4674" endline="4905">environment::performDETMoleculesCharging</referencedby>
-        <referencedby refid="a00014_1ac5528a39937cdc76f0dd23c27542110c" compoundref="a00085" startline="4954" endline="4993">environment::setNotChargedAndChargedSpeciesIDsAndAmounts</referencedby>
-        <referencedby refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="5106" endline="5258">environment::performMoleculesEfflux</referencedby>
-        <referencedby refid="a00014_1a1baf5512b7e0a8fb6f8f890ba9f99cd1" compoundref="a00085" startline="5635" endline="5733">environment::performCondensation</referencedby>
-        <referencedby refid="a00014_1acc764a05297ae00db52360f3df5ed1d5" compoundref="a00085" startline="6449" endline="6511">environment::performSpontaneousCondensation</referencedby>
+        <referencedby refid="a00014_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00085" startline="80" endline="198">environment::environment</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="942" endline="1220">environment::updateReactions</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1adbaf165a12edd62c614a455544807ea3" compoundref="a00085" startline="4663" endline="4894">environment::performDETMoleculesCharging</referencedby>
+        <referencedby refid="a00014_1ac5528a39937cdc76f0dd23c27542110c" compoundref="a00085" startline="4943" endline="4982">environment::setNotChargedAndChargedSpeciesIDsAndAmounts</referencedby>
+        <referencedby refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="5095" endline="5247">environment::performMoleculesEfflux</referencedby>
+        <referencedby refid="a00014_1a1baf5512b7e0a8fb6f8f890ba9f99cd1" compoundref="a00085" startline="5624" endline="5722">environment::performCondensation</referencedby>
+        <referencedby refid="a00014_1acc764a05297ae00db52360f3df5ed1d5" compoundref="a00085" startline="6438" endline="6500">environment::performSpontaneousCondensation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a3efd65798c1856deacf187790b3f9ef5" prot="public" static="no">
         <name>ENERGYFREE</name>
@@ -777,7 +777,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="87" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="87" bodyend="-1"/>
-        <referencedby refid="a00014_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00085" startline="80" endline="197">environment::environment</referencedby>
+        <referencedby refid="a00014_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00085" startline="80" endline="198">environment::environment</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a903e07285c96e6fbb9aa3577ddd1f327" prot="public" static="no">
         <name>TRUENRG</name>
@@ -789,8 +789,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="88" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="88" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1ada187b73f4b4a504680ead4f86785021" prot="public" static="no">
         <name>FALSENRG</name>
@@ -813,8 +813,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="90" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="90" bodyend="-1"/>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="942" endline="1220">environment::updateReactions</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a04e076b71093a6dc76f99298d9cfeb9e" prot="public" static="no">
         <name>NOTENERGIZABLE</name>
@@ -826,9 +826,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="91" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="91" bodyend="-1"/>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6744" endline="6839">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="942" endline="1220">environment::updateReactions</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6733" endline="6828">environment::complexEvaluation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a5a83a3ca25e31afb2d58aa40c8b1fbbb" prot="public" static="no">
         <name>SUBSTRATELOAD</name>
@@ -840,11 +840,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="93" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="93" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa7a2cc95d8ba242c805a8fda063b23a7" compoundref="a00085" startline="5747" endline="5868">environment::perform_endo_Condensation</referencedby>
-        <referencedby refid="a00014_1ade26b82a3b48a5bda7e5751cbfd31b04" compoundref="a00085" startline="5988" endline="6098">environment::perform_endo_Cleavage</referencedby>
-        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6197" endline="6283">environment::perform_endo_ComplexFormation</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa7a2cc95d8ba242c805a8fda063b23a7" compoundref="a00085" startline="5736" endline="5857">environment::perform_endo_Condensation</referencedby>
+        <referencedby refid="a00014_1ade26b82a3b48a5bda7e5751cbfd31b04" compoundref="a00085" startline="5977" endline="6087">environment::perform_endo_Cleavage</referencedby>
+        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6186" endline="6272">environment::perform_endo_ComplexFormation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a7e521c899f69e37df3501fd0e652c517" prot="public" static="no">
         <name>CATALYSTLOAD</name>
@@ -856,10 +856,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="94" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="94" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1ade26b82a3b48a5bda7e5751cbfd31b04" compoundref="a00085" startline="5988" endline="6098">environment::perform_endo_Cleavage</referencedby>
-        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6197" endline="6283">environment::perform_endo_ComplexFormation</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1ade26b82a3b48a5bda7e5751cbfd31b04" compoundref="a00085" startline="5977" endline="6087">environment::perform_endo_Cleavage</referencedby>
+        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6186" endline="6272">environment::perform_endo_ComplexFormation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1afb6d1105a81463fbadceff0217332f68" prot="public" static="no">
         <name>BOTHLOAD</name>
@@ -871,9 +871,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="95" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="95" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6197" endline="6283">environment::perform_endo_ComplexFormation</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00085" startline="6186" endline="6272">environment::perform_endo_ComplexFormation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a7eb138e043eb9ec6d717c6178724bbaf" prot="public" static="no">
         <name>COMPLEXLOAD</name>
@@ -885,9 +885,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="96" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="96" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa7a2cc95d8ba242c805a8fda063b23a7" compoundref="a00085" startline="5747" endline="5868">environment::perform_endo_Condensation</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa7a2cc95d8ba242c805a8fda063b23a7" compoundref="a00085" startline="5736" endline="5857">environment::perform_endo_Condensation</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a15e77522039bb4bb52000b65773c83cf" prot="public" static="no">
         <name>NOTHINGLOAD</name>
@@ -899,8 +899,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="97" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="97" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
         <referencedby refid="a00015_1af763c24d6107109108d32b5cc21c116a" compoundref="a00087" startline="21" endline="36">gillespie::gillespie</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1afb2a947dfb1847f71649f82bc1bf0292" prot="public" static="no">
@@ -913,8 +913,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="100" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="100" bodyend="-1"/>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6573" endline="6731">environment::newSpeciesEvaluationIII</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00085" startline="6562" endline="6720">environment::newSpeciesEvaluationIII</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a5119e853077046684673dad15af9199f" prot="public" static="no">
         <name>UPGRADEREACTIONS</name>
@@ -937,8 +937,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="104" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="104" bodyend="-1"/>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="941" endline="1219">environment::updateReactions</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00085" startline="942" endline="1220">environment::updateReactions</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a029d801cdb598a397cb99ea968a64dc2" prot="public" static="no">
         <name>NEP</name>
@@ -950,7 +950,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="107" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="107" bodyend="-1"/>
-        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6894" endline="6981">environment::showGlobalParameter</referencedby>
+        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6883" endline="6970">environment::showGlobalParameter</referencedby>
       </memberdef>
       <memberdef kind="define" id="a00072_1a174754c04acfba9e1f66ba249e68643a" prot="public" static="no">
         <name>AVO</name>
@@ -962,12 +962,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="108" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="108" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
-        <referencedby refid="a00014_1ae1270b9c235dd6b28413075197dba8e0" compoundref="a00085" startline="4026" endline="4045">environment::computeSinglGilScore</referencedby>
-        <referencedby refid="a00014_1adbaf165a12edd62c614a455544807ea3" compoundref="a00085" startline="4674" endline="4905">environment::performDETMoleculesCharging</referencedby>
-        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6894" endline="6981">environment::showGlobalParameter</referencedby>
-        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7842" endline="7893">environment::saveReactionsParametersSTD</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1ae1270b9c235dd6b28413075197dba8e0" compoundref="a00085" startline="4015" endline="4034">environment::computeSinglGilScore</referencedby>
+        <referencedby refid="a00014_1adbaf165a12edd62c614a455544807ea3" compoundref="a00085" startline="4663" endline="4894">environment::performDETMoleculesCharging</referencedby>
+        <referencedby refid="a00014_1af959a6b6a72cb6226fef7f0e7fab5c0c" compoundref="a00085" startline="6883" endline="6970">environment::showGlobalParameter</referencedby>
+        <referencedby refid="a00014_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00085" startline="7813" endline="7864">environment::saveReactionsParametersSTD</referencedby>
         <referencedby refid="a00089_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00089" startline="354" endline="617">main</referencedby>
         <referencedby refid="a00022_1a26eba3e8d86938ad8b2b6b284e9f010f" compoundref="a00094" startline="180" endline="215">species::species</referencedby>
         <referencedby refid="a00022_1ab930176d793e5d3b8ce984013d0e0328" compoundref="a00094" startline="377" endline="382">species::getLoadedConcentration</referencedby>
@@ -984,8 +984,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" line="111" column="9" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/acs_headers.h" bodystart="111" bodyend="-1"/>
-        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2668" endline="3344">environment::performOPTGillespieComputation</referencedby>
-        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3346" endline="4018">environment::perform_FIXED_GillespieComputation</referencedby>
+        <referencedby refid="a00014_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00085" startline="2669" endline="3337">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00014_1aa4fba7d5679a16fd6ef1a9a2041779a2" compoundref="a00085" startline="3339" endline="4007">environment::perform_FIXED_GillespieComputation</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -1075,7 +1075,7 @@
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CONSTANTS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//----------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="a00072_1aab38659c2fe462437b89a1e85e619dc7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SOFTVERSION__<sp/>&quot;4.8b20131210.63&quot;</highlight></codeline>
+<codeline lineno="42" refid="a00072_1aab38659c2fe462437b89a1e85e619dc7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SOFTVERSION__<sp/>&quot;4.8b20131212.64&quot;</highlight></codeline>
 <codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DEBUG<sp/>LEVELS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>

@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
   <compounddef id="a00011" kind="page">
     <compoundname>index</compoundname>
-    <title>Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131210.63)</title>
+    <title>Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131212.64)</title>
     <innerpage refid="a00002">Essential informations</innerpage>
     <innerpage refid="a00004">Initial Data Structures</innerpage>
     <innerpage refid="a00006">Outcomes</innerpage>
@@ -10,8 +10,8 @@
     <innerpage refid="a00010">The initializator (a very brief description)</innerpage>
     <detaileddescription>
 <para><simplesect kind="author"><para>Alessandro Filisetti </para></simplesect>
-<simplesect kind="version"><para>4.8 (20131210.63) </para></simplesect>
-<simplesect kind="date"><para>2013-12-10 sourceforge repository <ndash/> <ulink url="https://carness.svn.sourceforge.net/svnroot/carness/">https://carness.svn.sourceforge.net/svnroot/carness/</ulink> git repository <ndash/> <ulink url="https://github.com/paxelito/carness">https://github.com/paxelito/carness</ulink></para></simplesect>
+<simplesect kind="version"><para>4.8 (20131212.64) </para></simplesect>
+<simplesect kind="date"><para>2013-12-12 sourceforge repository <ndash/> <ulink url="https://carness.svn.sourceforge.net/svnroot/carness/">https://carness.svn.sourceforge.net/svnroot/carness/</ulink> git repository <ndash/> <ulink url="https://github.com/paxelito/carness">https://github.com/paxelito/carness</ulink></para></simplesect>
 This manual is divided in the following sections:<itemizedlist>
 <listitem><para><ref refid="a00002" kindref="compound">Essential informations</ref></para></listitem><listitem><para><ref refid="a00004" kindref="compound">Initial Data Structures</ref></para></listitem><listitem><para><ref refid="a00006" kindref="compound">Outcomes</ref></para></listitem><listitem><para><ref refid="a00008" kindref="compound">Gillespie Class</ref></para></listitem><listitem><para><ref refid="a00010" kindref="compound">The initializator (a very brief description)</ref> </para></listitem></itemizedlist>
 </para>    </detaileddescription>

@@ -315,23 +315,23 @@
         </inbodydescription>
         <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="76" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="76" bodyend="-1"/>
         <referencedby refid="a00076_1a78d5b4a67b6e66b8ceaa85874a2a12b7" compoundref="a00075" startline="203" endline="224">random_binomial</referencedby>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1a4e26cc574e20a5afcfbbe5887109c5af" compoundref="a00085" startline="1874" endline="1894">environment::returnPosSpeciesAlreadyPresent</referencedby>
-        <referencedby refid="a00014_1a6feec5685b519ba0cdae0e5c59dffff0" compoundref="a00085" startline="1904" endline="1929">environment::returnPosReactionAlreadyPresent</referencedby>
-        <referencedby refid="a00014_1ac4c90b07b8e75ea03e2ced0ea644a69f" compoundref="a00085" startline="1937" endline="1958">environment::checkIfTheReactionIsAlreadyCatalyzedByThisSpecies</referencedby>
-        <referencedby refid="a00014_1abdafaeba15b5d32fd35569869c6244d5" compoundref="a00085" startline="1965" endline="1995">environment::checkIfOnlyMutualCatalysis</referencedby>
-        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2004" endline="2454">environment::structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1a5cb194f927ddc7a804a942ca71f062af" compoundref="a00085" startline="2523" endline="2551">environment::showSubListInSpecies</referencedby>
-        <referencedby refid="a00014_1a6ae793f9d2dca0632239be955dd83cee" compoundref="a00085" startline="4546" endline="4665">environment::performDETComplexDissociation</referencedby>
-        <referencedby refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="5106" endline="5258">environment::performMoleculesEfflux</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6744" endline="6839">environment::complexEvaluation</referencedby>
-        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6987" endline="7039">environment::printInitialCondition</referencedby>
-        <referencedby refid="a00014_1a48d8fd9d8d5c9c31f0b4af87c8cbd28f" compoundref="a00085" startline="7045" endline="7067">environment::printAllSpeciesIdAndSequence</referencedby>
-        <referencedby refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="7073" endline="7093">environment::printGillespieStructure</referencedby>
-        <referencedby refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="7310" endline="7326">environment::zeroBeforeStringNumberSTD</referencedby>
-        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7901" endline="7954">environment::saveLivingSpeciesIDSTD</referencedby>
-        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7962" endline="8020">environment::saveLivingSpeciesAmountSTD</referencedby>
-        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="8028" endline="8084">environment::saveLivingSpeciesConcentrationSTD</referencedby>
+        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00014_1a4e26cc574e20a5afcfbbe5887109c5af" compoundref="a00085" startline="1875" endline="1895">environment::returnPosSpeciesAlreadyPresent</referencedby>
+        <referencedby refid="a00014_1a6feec5685b519ba0cdae0e5c59dffff0" compoundref="a00085" startline="1905" endline="1930">environment::returnPosReactionAlreadyPresent</referencedby>
+        <referencedby refid="a00014_1ac4c90b07b8e75ea03e2ced0ea644a69f" compoundref="a00085" startline="1938" endline="1959">environment::checkIfTheReactionIsAlreadyCatalyzedByThisSpecies</referencedby>
+        <referencedby refid="a00014_1abdafaeba15b5d32fd35569869c6244d5" compoundref="a00085" startline="1966" endline="1996">environment::checkIfOnlyMutualCatalysis</referencedby>
+        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2005" endline="2455">environment::structureCoherenceCheckUp</referencedby>
+        <referencedby refid="a00014_1a5cb194f927ddc7a804a942ca71f062af" compoundref="a00085" startline="2524" endline="2552">environment::showSubListInSpecies</referencedby>
+        <referencedby refid="a00014_1a6ae793f9d2dca0632239be955dd83cee" compoundref="a00085" startline="4535" endline="4654">environment::performDETComplexDissociation</referencedby>
+        <referencedby refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="5095" endline="5247">environment::performMoleculesEfflux</referencedby>
+        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6733" endline="6828">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6976" endline="7028">environment::printInitialCondition</referencedby>
+        <referencedby refid="a00014_1a48d8fd9d8d5c9c31f0b4af87c8cbd28f" compoundref="a00085" startline="7034" endline="7056">environment::printAllSpeciesIdAndSequence</referencedby>
+        <referencedby refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="7062" endline="7082">environment::printGillespieStructure</referencedby>
+        <referencedby refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="7281" endline="7297">environment::zeroBeforeStringNumberSTD</referencedby>
+        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7872" endline="7925">environment::saveLivingSpeciesIDSTD</referencedby>
+        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7933" endline="7991">environment::saveLivingSpeciesAmountSTD</referencedby>
+        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7999" endline="8055">environment::saveLivingSpeciesConcentrationSTD</referencedby>
         <referencedby refid="a00019_1a0c57076fe30358e0700a7ce1baa0ea27" compoundref="a00090" startline="23" endline="33">MTRand_int32::seed</referencedby>
         <referencedby refid="a00022_1a211914e1702d47eb3203730fec2c7b4c" compoundref="a00094" startline="411" endline="419">species::showGillEngagement</referencedby>
       </memberdef>

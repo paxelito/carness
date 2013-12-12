@@ -172,6 +172,7 @@ environment::environment(string tmpInitialPath)
     // INITIALIZE TIME TO 0
     actualTime = 0;
 
+    currentTotalTime = 0;
     numberOfSpecies = 0;
     numberOfNewSpecies = 0;
     numberOfMolecules = 0;
@@ -2738,10 +2739,9 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 					if(tmpActSTEP > 2)
 					{
 						try{
-							speciesIter->setNewAge(reactionsTime.at((reactionsTime.size() - 1)) - reactionsTime.at((reactionsTime.size() - 2)));
+							speciesIter->setNewAge(actualTime - speciesIter->getAge());
 						}catch(exception&e){
 							 cout << "Source Code Line: " << __LINE__ << endl;
-							 cout << "ReactionTime size -> " << reactionsTime.size() << endl;
 							 cerr << "exceptioncaught:" << e.what() << endl;
 							 ExitWithError("performOPTGillespieComputation::update species age","exceptionerrorthrown");
 						}
@@ -3148,16 +3148,15 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 			if(goReaction)
 			{
 				try{
-					if(reactionsTime.size() > 0)
+					if(tmpActSTEP > 1)
 					{
-						tempTime = reactionsTime.at(reactionsTime.size() - 1) + tmpDeltaT;
+						tempTime = actualTime + tmpDeltaT;
 						timeSinceTheLastInFlux += tmpDeltaT;
 					}else{
 						tempTime = 0.0;
 					}
-					reactionsTime.push_back(tempTime);
 					setActualTime(tempTime);
-					gillespieReactionsSelected.push_back(reaction_u);
+					gillespieReactionSelected = reaction_u;
 					allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 				}catch(exception&e){
 					 cout << "Source Code Line: " << __LINE__ << endl;
@@ -3204,17 +3203,16 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 					gillespieMean = 0;
 					gillespieSD = 0;
 					gillespieEntropy = 0;
-					if(reactionsTime.size() > 0)
+					if(tmpActSTEP > 1)
 					{
-						tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+						tempTime = actualTime + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 						timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 						tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 					}else{
 						tempTime = 0.0;
 					}
-					reactionsTime.push_back(tempTime);
 					setActualTime(tempTime);
-					gillespieReactionsSelected.push_back(0);
+					gillespieReactionSelected = 0;
 					allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
 					if(debugLevel >= RUNNING_VERSION)
@@ -3232,9 +3230,9 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 				gillespieSD = 0;
 				gillespieEntropy = 0;
 				ratioBetweenNewGillTotGill = 0;
-				if(reactionsTime.size() > 0)
+				if(tmpActSTEP > 0)
 				{
-						tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+						tempTime = actualTime + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 						timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 						tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 				}else{
@@ -3242,9 +3240,8 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 						timeSinceTheLastInFlux = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 						tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 				}
-				reactionsTime.push_back(tempTime);
 				setActualTime(tempTime);
-				gillespieReactionsSelected.push_back(0);
+				gillespieReactionSelected = 0;
 				allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
 				if(debugLevel >= RUNNING_VERSION)
@@ -3282,7 +3279,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 			{
 				if(debugLevel >= SMALL_DEBUG)
 				{
-					cout << "\t\t\t\t|- Time: " << reactionsTime.at(reactionsTime.size() - 1)
+					cout << "\t\t\t\t|- Time: " << actualTime
 						 << " - Time needed for 1 molecule incoming: " << minimalTimeForOneMols
 						 << " - Time Since The Last InFlux: " << timeSinceTheLastInFlux << endl;
 				}
@@ -3412,10 +3409,9 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 					if(tmpActSTEP > 2)
 					{
 						try{
-							speciesIter->setNewAge(reactionsTime.at((reactionsTime.size() - 1)) - reactionsTime.at((reactionsTime.size() - 2)));
+							speciesIter->setNewAge(actualTime - speciesIter->getAge());
 						}catch(exception&e){
 							 cout << "Source Code Line: " << __LINE__ << endl;
-							 cout << "ReactionTime size -> " << reactionsTime.size() << endl;
 							 cerr << "exceptioncaught:" << e.what() << endl;
 							 ExitWithError("performOPTGillespieComputation::update species age","exceptionerrorthrown");
 						}
@@ -3822,16 +3818,15 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 			if(goReaction)
 			{
 				try{
-					if(reactionsTime.size() > 0)
+					if(tmpActSTEP > 1)
 					{
-						tempTime = reactionsTime.at(reactionsTime.size() - 1) + tmpDeltaT;
+						tempTime = actualTime + tmpDeltaT;
 						timeSinceTheLastInFlux += tmpDeltaT;
 					}else{
 						tempTime = 0.0;
 					}
-					reactionsTime.push_back(tempTime);
 					setActualTime(tempTime);
-					gillespieReactionsSelected.push_back(reaction_u);
+					gillespieReactionSelected = reaction_u;
 					allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 				}catch(exception&e){
 					 cout << "Source Code Line: " << __LINE__ << endl;
@@ -3878,17 +3873,16 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 					gillespieMean = 0;
 					gillespieSD = 0;
 					gillespieEntropy = 0;
-					if(reactionsTime.size() > 0)
+					if(tmpActSTEP > 1)
 					{
-						tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+						tempTime = actualTime + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 						timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 						tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 					}else{
 						tempTime = 0.0;
 					}
-					reactionsTime.push_back(tempTime);
 					setActualTime(tempTime);
-					gillespieReactionsSelected.push_back(0);
+					gillespieReactionSelected = 0;
 					allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
 					if(debugLevel >= RUNNING_VERSION)
@@ -3906,9 +3900,9 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 				gillespieSD = 0;
 				gillespieEntropy = 0;
 				ratioBetweenNewGillTotGill = 0;
-				if(reactionsTime.size() > 0)
+				if(tmpActSTEP > 1)
 				{
-						tempTime = reactionsTime.at(reactionsTime.size() - 1) + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
+						tempTime = actualTime + MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 						timeSinceTheLastInFlux += MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 						tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 				}else{
@@ -3916,9 +3910,8 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 						timeSinceTheLastInFlux = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 						tmpDeltaT = MINIMALRCTTIMEMULTI*minimalTimeForOneMols;
 				}
-				reactionsTime.push_back(tempTime);
 				setActualTime(tempTime);
-				gillespieReactionsSelected.push_back(0);
+				gillespieReactionSelected = 0;
 				allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
 				if(debugLevel >= RUNNING_VERSION)
@@ -3956,7 +3949,7 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 			{
 				if(debugLevel >= SMALL_DEBUG)
 				{
-					cout << "\t\t\t\t|- Time: " << reactionsTime.at(reactionsTime.size() - 1)
+					cout << "\t\t\t\t|- Time: " << actualTime
 						 << " - Time needed for 1 molecule incoming: " << minimalTimeForOneMols
 						 << " - Time Since The Last InFlux: " << timeSinceTheLastInFlux << endl;
 				}
@@ -6848,7 +6841,7 @@ void environment::updateSpeciesAges()
                 // UPDATE SPECIES AGE ----------------
                 if((tmpAllSpeciesIter->getAmount() > 0) & (tmpAllSpeciesIter->getComplexCutPnt() == 0))
                 {
-                    tmpAllSpeciesIter->setNewAge(reactionsTime.at((reactionsTime.size() - 1)) - reactionsTime.at((reactionsTime.size() - 2)));
+                    tmpAllSpeciesIter->setNewAge(actualTime - tmpAllSpeciesIter->getAge());
                 }else{
                     tmpAllSpeciesIter->setNewAge(0); // IF THE SPECIES IS DEAD THE AGE OF LAST DEATH REMAINS
                 }
@@ -7126,24 +7119,18 @@ void environment::clearAllStructures()
 		cout << "\t\t|- Number of Reactions: " << allReactions.size() << endl;
 		cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
 		cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
-		cout << "\t\t|- Number of Reactions Time: " << reactionsTime.size() << endl;
-		cout << "\t\t|- Number of Reactions Selected: " << gillespieReactionsSelected.size() << endl;		
 	}
        // printAllSpeciesIdAndSequence();
 	allSpecies.clear();
 	allReactions.clear();
 	allCatalysis.clear();
 	allTimes.clear();
-	reactionsTime.clear();
-	gillespieReactionsSelected.clear();
 	if(debugLevel >= SMALL_DEBUG)
 	{
 		cout << "\t\t|- Number of Species: " << allSpecies.size() << endl;
 		cout << "\t\t|- Number of Reactions: " << allReactions.size() << endl;
 		cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
 		cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
-		cout << "\t\t|- Number of Reactions Time: " << reactionsTime.size() << endl;
-		cout << "\t\t|- Number of Reactions Selected: " << gillespieReactionsSelected.size() << endl;		
 	}
 	allSpecies = initialAllSpecies;
         //printAllSpeciesIdAndSequence();
@@ -7157,8 +7144,6 @@ void environment::clearAllStructures()
 		cout << "\t\t|- Number of Reactions: " << allReactions.size() << endl;
 		cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
 		cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
-		cout << "\t\t|- Number of Reactions Time: " << reactionsTime.size() << endl;
-		cout << "\t\t|- Number of Reactions Selected: " << gillespieReactionsSelected.size() << endl;		
 	}
 	
 	// Reset total amount of species, complexes and energy carriers for the next simulation
@@ -7194,8 +7179,6 @@ void environment::resetConcentrationToInitialConditions()
             cout << "\t\t|- Number of Reactions: " << allReactions.size() << endl;
             cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
             cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
-            cout << "\t\t|- Number of Reactions Time: " << reactionsTime.size() << endl;
-            cout << "\t\t|- Number of Reactions Selected: " << gillespieReactionsSelected.size() << endl;
     }
 
     // RESET REACTIONS COUNTER
@@ -7220,15 +7203,9 @@ void environment::resetConcentrationToInitialConditions()
     //allReactions.clear();
     //allCatalysis.clear();
 	allTimes.clear();
-	reactionsTime.clear();
-	gillespieReactionsSelected.clear();
 
 	if(debugLevel >= RUNNING_VERSION)
-        {
             cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
-            cout << "\t\t|- Number of Reactions Time: " << reactionsTime.size() << endl;
-            cout << "\t\t|- Number of Reactions Selected: " << gillespieReactionsSelected.size() << endl;
-	}
 
 	//LOADING SPECIES FROM FILE
 //	if(!createInitialMoleculesPopulationFromSpecificFile(tmpSpeciesFilePath, tmpActGEN, tmpActSIM))
@@ -7254,8 +7231,6 @@ void environment::resetConcentrationToInitialConditions()
 		cout << "\t\t|- Number of Reactions: " << allReactions.size() << endl;
 		cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
 		cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
-		cout << "\t\t|- Number of Reactions Time: " << reactionsTime.size() << endl;
-		cout << "\t\t|- Number of Reactions Selected: " << gillespieReactionsSelected.size() << endl;		
 	}
 
         // Reset total amount of species, complexes and energy carriers for the next simulation
@@ -7780,9 +7755,9 @@ bool environment::saveTimesSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs
         if(COPYOFallGillespieScores.size() > 0)
         {
             fidFile << tmpCurrentStep << "\t"
-                << (double)reactionsTime.at(tmpCurrentStep-1) << "\t"
-                << gillespieReactionsSelected.at(tmpCurrentStep-1) << "\t"
-                << COPYOFallGillespieScores.at(gillespieReactionsSelected.at(tmpCurrentStep-1)).getIdReactionType() << "\t"
+                << (double)actualTime << "\t"
+                << gillespieReactionSelected << "\t"
+                << COPYOFallGillespieScores.at(gillespieReactionSelected).getIdReactionType() << "\t"
                 << COPYOFallGillespieScores.size() << "\t"
                 << (double)allTimes.at(tmpCurrentStep-1) << "\t"
                 << getTotalNumberOfSpecies() << "\t"
@@ -7796,8 +7771,8 @@ bool environment::saveTimesSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs
                 << (double)ratioBetweenNewGillTotGill << endl;
         }else{
             fidFile << tmpCurrentStep << "\t"
-                << (double)reactionsTime.at(tmpCurrentStep-1) << "\t"
-                << gillespieReactionsSelected.at(tmpCurrentStep-1) << "\t"
+                << (double)actualTime << "\t"
+                << gillespieReactionSelected << "\t"
                 << 0 << "\t"
                 << 0 << "\t"
                 << 0 << "\t"
@@ -7864,7 +7839,7 @@ bool environment::saveReactionsParametersSTD(acs_int tmp__CurrentGen, acs_int tm
     }
 
     fidFile << tmp__CurrentStep << "\t"
-    << (double)reactionsTime.at(tmp__CurrentStep-1) << "\t"
+    << (double)actualTime << "\t"
     << tmpRctType << "\t"
     << tmpCat << "\t"
     << tmpMol_I << "\t"
@@ -7924,7 +7899,7 @@ bool environment::saveLivingSpeciesIDSTD(acs_int tmp__CurrentGen, acs_int tmp__C
             ExitWithError("error in method saveTimesSTD","exceptionerrorthrown");
         }
 
-        fidFile << tmp__CurrentStep << "\t" << (double)reactionsTime.at(tmp__CurrentStep-1);
+        fidFile << tmp__CurrentStep << "\t" << (double)actualTime;
         for(acs_longInt i = 0; i < (acs_longInt)allSpecies.size(); i++)
         {
             if((allSpecies.at(i).getAmount() > 0) & (allSpecies.at(i).getComplexCutPnt() == 0))

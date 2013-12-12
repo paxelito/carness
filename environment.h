@@ -79,6 +79,7 @@ private:
     acs_double moleculeDecay_KineticConstant;
 
     // SYSTEM PARAMETERS --------------------------
+    acs_double currentTotalTime; // Current physical time
     acs_int energy; // Energy control variable
     acs_double ratioSpeciesEnergizable; // Proabability for a species to be energizable.
     acs_int nrgBoolFlag; // variable indicating the presence (1) or not (0) of the energy
@@ -104,8 +105,6 @@ private:
     vector<gillespie> allGillespieScores; // List containing the Gilespie structure
     vector<gillespie> COPYOFallGillespieScores; // List containing a copy of Gilespie structure to save to file
     vector<acs_double> gillespieCumulativeStepScoreList; // List containing cumulative gillespie score values
-    vector<acs_double> reactionsTime; // List of all reaction time
-    vector<acs_longInt> gillespieReactionsSelected; // List of the reactions selected by means of the Gillespie algorithm
     vector<acs_double> allTimes; // List of the computational times of each reaction
     int debugLevel; // level of message details show during the simution
     vector<acs_int> livingSpeciesIDsList; // this list contains all the living species ID. It will be updated after each efflux action
@@ -125,6 +124,7 @@ private:
 	acs_double decimalComplexesToDissociate; // Decimal part of complex to dissociate.
 	
     // STATISTICAL VARIABLES ------------------------
+    acs_longInt gillespieReactionSelected; // ID of the selected Gillespie Reaction
 	acs_double gillespieMean;       // Mean of all the Gillespie Scores
     acs_double gillespieSD;         // Standard deviation of all the Gillespie Scores
     acs_double gillespieEntropy;    // sum of all the p(log(p)) of the Gillespie Scores

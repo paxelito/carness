@@ -702,7 +702,7 @@ Perform vector unchargedIDlist update adding a new charge molecule vector unchar
 .PP
 
 .PP
-Definition at line 5050 of file environment\&.cpp\&.
+Definition at line 5039 of file environment\&.cpp\&.
 .SS "void environment::changeVolume (\fBacs_int\fPtmpTimeSinceLastReaction)"
 Change volume function  1\&.0 
 .PP
@@ -718,7 +718,7 @@ Alessandro Filisetti
 .PP
 
 .PP
-Definition at line 6877 of file environment\&.cpp\&.
+Definition at line 6866 of file environment\&.cpp\&.
 .SS "bool environment::checkAvailability (\fBacs_longInt\fPtmpMI, \fBacs_longInt\fPtmpMII, \fBacs_longInt\fPtmpQI, \fBacs_longInt\fPtmpQII)"
 Return TRUE if there are sufficient molecules for the reaction\&. It is used for the reaction in which catalyst and substrate are the same molecules 
 .PP
@@ -745,7 +745,7 @@ Return TRUE if there are sufficient molecules for the reaction\&. It is used for
 .PP
 
 .PP
-Definition at line 2635 of file environment\&.cpp\&.
+Definition at line 2636 of file environment\&.cpp\&.
 .SS "bool environment::checkIfOnlyMutualCatalysis (\fBacs_int\fPtmpCat, \fBacs_int\fPtmpCandidateProduct)"
 This function return false if the tmpCandidateProduct is a catalyst of tmpCat 
 .PP
@@ -756,7 +756,7 @@ This function return false if the tmpCandidateProduct is a catalyst of tmpCat
 .PP
 
 .PP
-Definition at line 1965 of file environment\&.cpp\&.
+Definition at line 1966 of file environment\&.cpp\&.
 .SS "bool environment::checkIfTheReactionIsAlreadyCatalyzedByThisSpecies (\fBacs_longInt\fPtmpSPeciesID, \fBacs_longInt\fPtmpIdReaction)"
 If the reaction is not new this function checks if the reactions has been already catalysed by this species 
 .PP
@@ -774,7 +774,7 @@ If the reaction is not new this function checks if the reactions has been alread
 .PP
 
 .PP
-Definition at line 1937 of file environment\&.cpp\&.
+Definition at line 1938 of file environment\&.cpp\&.
 .SS "void environment::clearAllStructures ()"
 Clear all structures after each simulation 
 .PP
@@ -785,7 +785,7 @@ Clear all structures after each simulation
 .PP
 
 .PP
-Definition at line 7125 of file environment\&.cpp\&.
+Definition at line 7114 of file environment\&.cpp\&.
 .SS "bool environment::complexEvaluation (stringtmpComplex, \fBMTRand\fP &tmp___RndDoubleGen, \fBacs_int\fPtmpCuttingPnt, \fBacs_longInt\fPtmpCatalyst_ID, \fBacs_longInt\fPtmpSubstrate_ID, \fBacs_longInt\fPtmpCatID, \fBacs_longInt\fPtmpSecSub_ID, booltmpCpxType)"
 Complex evaluation 
 .PP
@@ -818,7 +818,7 @@ Complex evaluation
 .PP
 
 .PP
-Definition at line 6744 of file environment\&.cpp\&.
+Definition at line 6733 of file environment\&.cpp\&.
 .SS "\fBacs_double\fP environment::computeSinglGilScore (\fBacs_longInt\fPtmpAmountI, \fBacs_double\fPtmpDifI, \fBacs_int\fPtmpSolI, \fBacs_longInt\fPtmpAmountII, \fBacs_double\fPtmpDifII, \fBacs_int\fPtmpSolII, \fBacs_double\fPtmpK, booltmpSameMol)"
 Compute a single gillespie score according to the amount and properties of the species involved 
 .PP
@@ -834,7 +834,7 @@ Compute a single gillespie score according to the amount and properties of the s
 .PP
 
 .PP
-Definition at line 4026 of file environment\&.cpp\&.
+Definition at line 4015 of file environment\&.cpp\&.
 .SS "\fBacs_int\fP environment::computeSngSpeciesRctsNumber (\fBacs_longInt\fPtmpTotalNumberOfReactions, \fBMTRand\fP &tmpRndDoubleGen)"
 Initial molecule population creation\&. If the number of species stored in the configuration file is grater than the possible number of species according to the alphabet and maximum length all species up to the MAX length will be created 
 .PP
@@ -872,7 +872,7 @@ Initial molecule population creation\&. If the number of species stored in the c
 .PP
 
 .PP
-Definition at line 481 of file environment\&.cpp\&.
+Definition at line 482 of file environment\&.cpp\&.
 .SS "\fBacs_double\fP environment::createDiffusionRenforcement (\fBacs_double\fPtmpDiffEnh, \fBacs_int\fPtmpNewSpeciesLength)"
 Create the diffusion constant renforcement according to the species length 
 .PP
@@ -892,7 +892,7 @@ Create the diffusion constant renforcement according to the species length
 .PP
 
 .PP
-Definition at line 1819 of file environment\&.cpp\&.
+Definition at line 1820 of file environment\&.cpp\&.
 .SS "bool environment::createInfluxLayersFromFileSTD (stringtmpInfluxFilePath)"
 Create influx layer from file C++ libraries 
 .PP
@@ -913,7 +913,7 @@ Create influx layer from file C++ libraries
 .PP
 
 .PP
-Definition at line 1572 of file environment\&.cpp\&.
+Definition at line 1573 of file environment\&.cpp\&.
 .SS "bool environment::createInitialCatalysisLayerFromFileSTD (stringtmpCatalysisFilePath)"
 Catalysis from file using standard C++ libraries 
 .PP
@@ -934,7 +934,7 @@ Catalysis from file using standard C++ libraries
 .PP
 
 .PP
-Definition at line 1724 of file environment\&.cpp\&.
+Definition at line 1725 of file environment\&.cpp\&.
 .SS "bool environment::createInitialCatalysisLayerFromSpecificFileSTD (stringtmpCatalysisFilePath, \fBacs_int\fPtmpActGEN, \fBacs_int\fPtmpActSIM)"
 catalysis from file using standard C++ libraries 
 .PP
@@ -955,7 +955,7 @@ catalysis from file using standard C++ libraries
 .PP
 
 .PP
-Definition at line 1766 of file environment\&.cpp\&.
+Definition at line 1767 of file environment\&.cpp\&.
 .SS "bool environment::createInitialMoleculesPopulationFromFileSTD (stringtmpSpeciesFilePath)"
 Initial molecule population creation from file using standard C++ libraries 
 .PP
@@ -976,7 +976,7 @@ Initial molecule population creation from file using standard C++ libraries
 .PP
 
 .PP
-Definition at line 1249 of file environment\&.cpp\&.
+Definition at line 1250 of file environment\&.cpp\&.
 .SS "bool environment::createInitialMoleculesPopulationFromSpecificFileSTD (stringtmpSpeciesFilePath, \fBacs_int\fPtmpActGEN, \fBacs_int\fPtmpActSIM)"
 Initial molecule population creation from file 
 .PP
@@ -1012,7 +1012,7 @@ Initial molecule population creation from file
 .PP
 
 .PP
-Definition at line 1478 of file environment\&.cpp\&.
+Definition at line 1479 of file environment\&.cpp\&.
 .SS "bool environment::createInitialReactionsLayerFromFileSTD (stringtmpSpeciesFilePath)"
 Reactions from file using standard C++ libraries 
 .PP
@@ -1033,7 +1033,7 @@ Reactions from file using standard C++ libraries
 .PP
 
 .PP
-Definition at line 1635 of file environment\&.cpp\&.
+Definition at line 1636 of file environment\&.cpp\&.
 .SS "bool environment::createInitialReactionsLayerFromSpecificFileSTD (stringtmpReactionsFilePath, \fBacs_int\fPtmpActGEN, \fBacs_int\fPtmpActSIM)"
 Reactions from file using standard C++ libraries 
 .PP
@@ -1054,7 +1054,7 @@ Reactions from file using standard C++ libraries
 .PP
 
 .PP
-Definition at line 1674 of file environment\&.cpp\&.
+Definition at line 1675 of file environment\&.cpp\&.
 .SS "bool environment::createNrgBooleanFunctionsFromFileSTD (stringtmpBoolNrgFilePath)"
 load energy boolean function (in decimal format) - Standard C++ 
 .PP
@@ -1075,7 +1075,7 @@ load energy boolean function (in decimal format) - Standard C++
 .PP
 
 .PP
-Definition at line 1604 of file environment\&.cpp\&.
+Definition at line 1605 of file environment\&.cpp\&.
 .SS "bool environment::createReactionsForThisSpecies (\fBacs_longInt\fPtmpsID, \fBacs_int\fPtmpReactionsForThisSpecies, \fBMTRand\fP &tmp_RndDoubleGen, vector< \fBacs_longInt\fP > &tmpIDOfCandidateSpecies, \fBacs_int\fPtmpRctCreationType)"
 Creation of all the reactions related to one specific species 
 .PP
@@ -1104,7 +1104,7 @@ Creation of all the reactions related to one specific species
 .PP
 
 .PP
-Definition at line 525 of file environment\&.cpp\&.
+Definition at line 526 of file environment\&.cpp\&.
 .SS "void environment::decCpxProcedure (\fBacs_int\fPtmp_ID)\fC [inline]\fP"
 
 .PP
@@ -1144,11 +1144,11 @@ Definition at line 312 of file environment\&.h\&.
 .SS "bool environment::devStd ()"
 
 .PP
-Definition at line 8090 of file environment\&.cpp\&.
+Definition at line 8061 of file environment\&.cpp\&.
 .SS "bool environment::entropy ()"
 
 .PP
-Definition at line 8108 of file environment\&.cpp\&.
+Definition at line 8079 of file environment\&.cpp\&.
 .SS "\fBacs_double\fP environment::getActualTime () const\fC [inline]\fP"
 
 .PP
@@ -1435,7 +1435,7 @@ This Function returns the total amount of MOLECULES in the tmpSpeciesvector The 
 .PP
 
 .PP
-Definition at line 4316 of file environment\&.cpp\&.
+Definition at line 4305 of file environment\&.cpp\&.
 .SS "\fBacs_longInt\fP environment::getTotalNumberOfComplexSpecies ()"
 This Function returns the total amount of COMPLEX SPECIES in the tmpSpeciesvector The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -1446,7 +1446,7 @@ This Function returns the total amount of COMPLEX SPECIES in the tmpSpeciesvecto
 .PP
 
 .PP
-Definition at line 4295 of file environment\&.cpp\&.
+Definition at line 4284 of file environment\&.cpp\&.
 .SS "\fBacs_longInt\fP environment::getTotalNumberOfMolecules ()"
 This Function returns the total amount of MOLECULES in the tmpSpeciesvector The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -1457,7 +1457,7 @@ This Function returns the total amount of MOLECULES in the tmpSpeciesvector The 
 .PP
 
 .PP
-Definition at line 4271 of file environment\&.cpp\&.
+Definition at line 4260 of file environment\&.cpp\&.
 .SS "\fBacs_longInt\fP environment::getTotalNumberOfMonomers ()"
 This Function returns the total amount of MONOMERS in the tmpSpeciesvector The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -1468,7 +1468,7 @@ This Function returns the total amount of MONOMERS in the tmpSpeciesvector The f
 .PP
 
 .PP
-Definition at line 4337 of file environment\&.cpp\&.
+Definition at line 4326 of file environment\&.cpp\&.
 .SS "\fBacs_longInt\fP environment::getTotalNumberOfPossibleCatalysts ()"
 This Function returns the total amount of MOLECULES in the tmpSpeciesvector The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -1479,7 +1479,7 @@ This Function returns the total amount of MOLECULES in the tmpSpeciesvector The 
 .PP
 
 .PP
-Definition at line 4248 of file environment\&.cpp\&.
+Definition at line 4237 of file environment\&.cpp\&.
 .SS "\fBacs_longInt\fP environment::getTotalNumberOfSpecies ()"
 This Function returns the total amount of MOLECULES in the tmpSpeciesvector The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -1490,11 +1490,11 @@ This Function returns the total amount of MOLECULES in the tmpSpeciesvector The 
 .PP
 
 .PP
-Definition at line 4224 of file environment\&.cpp\&.
+Definition at line 4213 of file environment\&.cpp\&.
 .SS "\fBacs_int\fP environment::getTotNumberOfChargedMols ()"
 Get the total number of charged molecules 
 .PP
-Definition at line 4357 of file environment\&.cpp\&.
+Definition at line 4346 of file environment\&.cpp\&.
 .SS "\fBacs_double\fP environment::getVolume () const\fC [inline]\fP"
 
 .PP
@@ -1591,7 +1591,7 @@ Alessandro Filisetti
 .PP
 
 .PP
-Definition at line 2462 of file environment\&.cpp\&.
+Definition at line 2463 of file environment\&.cpp\&.
 .SS "bool environment::newSpeciesEvaluationIII (\fBacs_longInt\fPtmpNewSpecies, \fBMTRand\fP &tmp___RndDoubleGen)"
 Evaluate new species (Optimized function with new species reactions update process) 
 .PP
@@ -1609,7 +1609,7 @@ Evaluate new species (Optimized function with new species reactions update proce
 .PP
 
 .PP
-Definition at line 6573 of file environment\&.cpp\&.
+Definition at line 6562 of file environment\&.cpp\&.
 .SS "bool environment::notInverseReactionAlreadyCatalyzed (\fBacs_int\fPtmpRct, \fBacs_longInt\fPtmpID_I, \fBacs_longInt\fPtmpID_II)"
 Check if the reaction catalyze both one reaction and the inverted one 
 .PP
@@ -1620,7 +1620,7 @@ Check if the reaction catalyze both one reaction and the inverted one
 .PP
 
 .PP
-Definition at line 2578 of file environment\&.cpp\&.
+Definition at line 2579 of file environment\&.cpp\&.
 .SS "void environment::nutrientsAmountsFixing ()"
 Nutrients amount fixing process\&. The amount of nutrients has to be fixed according to the initial theoretical distribution 
 .PP
@@ -1631,7 +1631,7 @@ Nutrients amount fixing process\&. The amount of nutrients has to be fixed accor
 .PP
 
 .PP
-Definition at line 4423 of file environment\&.cpp\&.
+Definition at line 4412 of file environment\&.cpp\&.
 .SS "bool environment::perform_endo_Cleavage (\fBacs_longInt\fPtmpSubstrate, \fBacs_longInt\fPtmpProduct_I, \fBacs_longInt\fPtmpProduct_II, \fBacs_int\fPtmpNRGside, \fBacs_longInt\fPtmpIdReaction, \fBacs_longInt\fPtmpIdCatalysis, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform ENDO_CLEAVAGE reaction 
 .PP
@@ -1664,7 +1664,7 @@ Perform ENDO_CLEAVAGE reaction
 .PP
 
 .PP
-Definition at line 5988 of file environment\&.cpp\&.
+Definition at line 5977 of file environment\&.cpp\&.
 .SS "bool environment::perform_endo_ComplexFormation (\fBacs_longInt\fPtmpCatalyst, \fBacs_longInt\fPtmpSubstrate, \fBacs_longInt\fPtmpCatID, \fBacs_longInt\fPtmpSecSub, \fBacs_int\fPtmpNRGSide, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform ENDO COMPLEX FORMATION reaction 
 .PP
@@ -1689,7 +1689,7 @@ Perform ENDO COMPLEX FORMATION reaction
 .PP
 
 .PP
-Definition at line 6197 of file environment\&.cpp\&.
+Definition at line 6186 of file environment\&.cpp\&.
 .SS "bool environment::perform_endo_Condensation (\fBacs_longInt\fPtmpCatalyst, \fBacs_longInt\fPtmpSubstrate, \fBacs_longInt\fPtmpProduct, \fBacs_longInt\fPtmpComplex, \fBacs_int\fPtmpNRGside, \fBacs_longInt\fPtmpIdReaction, \fBacs_longInt\fPtmpIdCatalysis, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform ENDO CONDENSATION reaction 
 .PP
@@ -1722,11 +1722,11 @@ Perform ENDO CONDENSATION reaction
 .PP
 
 .PP
-Definition at line 5747 of file environment\&.cpp\&.
+Definition at line 5736 of file environment\&.cpp\&.
 .SS "bool environment::perform_FIXED_GillespieComputation (\fBMTRand\fP &tmpRndDoubleGen, clock_t &tmpTimeElapsed, \fBacs_int\fPtmpActGEN, \fBacs_int\fPtmpActSIM, \fBacs_int\fPtmpActSTEP, stringtmpStoringPath)"
 
 .PP
-Definition at line 3346 of file environment\&.cpp\&.
+Definition at line 3339 of file environment\&.cpp\&.
 .SS "bool environment::performCleavage (\fBacs_longInt\fPtmpSubstrate, \fBacs_longInt\fPtmpProduct_I, \fBacs_longInt\fPtmpProduct_II, \fBacs_longInt\fPtmpIdReaction, \fBacs_longInt\fPtmpIdCatalysis, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform CLEAVAGE reaction 
 .PP
@@ -1757,7 +1757,7 @@ Perform CLEAVAGE reaction
 .PP
 
 .PP
-Definition at line 5881 of file environment\&.cpp\&.
+Definition at line 5870 of file environment\&.cpp\&.
 .SS "bool environment::performComplexDissociation (\fBacs_longInt\fPtmpComplex, \fBacs_longInt\fPtmpCatalyst, \fBacs_longInt\fPtmpSubstrate, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform COMPLEX DISASSOCIATION reaction 
 .PP
@@ -1784,7 +1784,7 @@ Perform COMPLEX DISASSOCIATION reaction
 .PP
 
 .PP
-Definition at line 6295 of file environment\&.cpp\&.
+Definition at line 6284 of file environment\&.cpp\&.
 .SS "bool environment::performComplexFormation (\fBacs_longInt\fPtmpCatalyst, \fBacs_longInt\fPtmpSubstrate, \fBacs_longInt\fPtmpCatID, \fBacs_longInt\fPtmpSecSub, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform COMPLEX FORMATION reaction 
 .PP
@@ -1809,7 +1809,7 @@ Perform COMPLEX FORMATION reaction
 .PP
 
 .PP
-Definition at line 6109 of file environment\&.cpp\&.
+Definition at line 6098 of file environment\&.cpp\&.
 .SS "bool environment::performCondensation (\fBacs_longInt\fPtmpCatalyst, \fBacs_longInt\fPtmpSubstrate, \fBacs_longInt\fPtmpProduct, \fBacs_longInt\fPtmpComplex, \fBacs_longInt\fPtmpIdReaction, \fBacs_longInt\fPtmpIdCatalysis, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform CONDENSATION reaction 
 .PP
@@ -1836,7 +1836,7 @@ Perform CONDENSATION reaction
 .PP
 
 .PP
-Definition at line 5635 of file environment\&.cpp\&.
+Definition at line 5624 of file environment\&.cpp\&.
 .SS "bool environment::performDETComplexDissociation (\fBacs_double\fPtmpTimeInterval, \fBMTRand\fP &tmp_RndDoubleGen)"
 This function perform the deterministic dissociation of the complex 
 .PP
@@ -1859,7 +1859,7 @@ This function perform the deterministic dissociation of the complex
 .PP
 
 .PP
-Definition at line 4546 of file environment\&.cpp\&.
+Definition at line 4535 of file environment\&.cpp\&.
 .SS "bool environment::performDETMoleculesCharging (\fBacs_double\fPtmpTimeInterval, \fBMTRand\fP &tmp_RndDoubleGen)"
 This function perform the pseudo-deterministic molecules charging process 
 .PP
@@ -1882,7 +1882,7 @@ This function perform the pseudo-deterministic molecules charging process
 .PP
 
 .PP
-Definition at line 4674 of file environment\&.cpp\&.
+Definition at line 4663 of file environment\&.cpp\&.
 .SS "bool environment::performEnergyEfflux (\fBMTRand\fP &tmp__RndDoubleGen)"
 Perform ENERGY EFFLUX reaction 
 .PP
@@ -1903,7 +1903,7 @@ Perform ENERGY EFFLUX reaction
 .PP
 
 .PP
-Definition at line 5348 of file environment\&.cpp\&.
+Definition at line 5337 of file environment\&.cpp\&.
 .SS "bool environment::performMoleculeEfflux (\fBacs_longInt\fPtmpSpecies, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform MOLECULE EFFLUX reaction 
 .PP
@@ -1926,7 +1926,7 @@ Perform MOLECULE EFFLUX reaction
 .PP
 
 .PP
-Definition at line 5268 of file environment\&.cpp\&.
+Definition at line 5257 of file environment\&.cpp\&.
 .SS "bool environment::performMoleculesEfflux (\fBacs_double\fPtmpTimeInterval, \fBMTRand\fP &tmp_RndDoubleGen)"
 This function perform the deterministic molecules efflux process 
 .PP
@@ -1949,7 +1949,7 @@ This function perform the deterministic molecules efflux process
 .PP
 
 .PP
-Definition at line 5106 of file environment\&.cpp\&.
+Definition at line 5095 of file environment\&.cpp\&.
 .SS "bool environment::performOPTGillespieComputation (\fBMTRand\fP &tmpRndDoubleGen, clock_t &tmpTimeElapsed, \fBacs_int\fPtmpActGEN, \fBacs_int\fPtmpActSIM, \fBacs_int\fPtmpActSTEP, stringtmpStoringPath)"
 Perform all the gillespie algorithm procedure (OPTIMIZED VERSION) 
 .PP
@@ -1980,7 +1980,7 @@ Perform all the gillespie algorithm procedure (OPTIMIZED VERSION)
 .PP
 
 .PP
-Definition at line 2668 of file environment\&.cpp\&.
+Definition at line 2669 of file environment\&.cpp\&.
 .SS "bool environment::performReaction (\fBacs_longInt\fPreaction_u, \fBMTRand\fP &tmp_RndDoubleGen, \fBacs_int\fPtmp_ActGEN, \fBacs_int\fPtmp_ActSIM, \fBacs_int\fPtmp_ActSTEP, stringtmp_StoringPath)"
 Perform the reaction after the Gillespie computation 
 .PP
@@ -2011,7 +2011,7 @@ Perform the reaction after the Gillespie computation
 .PP
 
 .PP
-Definition at line 5405 of file environment\&.cpp\&.
+Definition at line 5394 of file environment\&.cpp\&.
 .SS "bool environment::performRefill (\fBacs_double\fPtmpTimeSinceTheLastInFlux, \fBacs_double\fPtmpMinimalTimeForOneMols, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform Refill according to the time interval and the total amount of refill 
 .PP
@@ -2036,7 +2036,7 @@ Perform Refill according to the time interval and the total amount of refill
 .PP
 
 .PP
-Definition at line 4456 of file environment\&.cpp\&.
+Definition at line 4445 of file environment\&.cpp\&.
 .SS "void environment::performSingleGilleSpieIntroduction (\fBacs_longInt\fPtmpAmountI, \fBacs_longInt\fPtmpAmountII, \fBacs_longInt\fPtmpIDI, \fBacs_longInt\fPtmpIDII, \fBacs_longInt\fPtmpIDCatalysis, \fBacs_int\fPtmp__rctType, \fBacs_longInt\fPtmpMol_I, \fBacs_longInt\fPtmpMol_II, \fBacs_longInt\fPtmpMol_III, \fBacs_longInt\fPtmpMol_IV, \fBacs_int\fPtmp_NRGDirection, \fBacs_longInt\fPtmpRctID, booltmpSameSpeciesControl)"
 Compute and introduct a single Gillespie entry within the Gillespie Structure 
 .PP
@@ -2052,7 +2052,7 @@ Compute and introduct a single Gillespie entry within the Gillespie Structure
 .PP
 
 .PP
-Definition at line 4052 of file environment\&.cpp\&.
+Definition at line 4041 of file environment\&.cpp\&.
 .SS "bool environment::performSpontaneousCleavage (\fBacs_longInt\fPtmpReaction, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform SPONTANEOUS CLEAVAGE reaction 
 .PP
@@ -2075,7 +2075,7 @@ Perform SPONTANEOUS CLEAVAGE reaction
 .PP
 
 .PP
-Definition at line 6379 of file environment\&.cpp\&.
+Definition at line 6368 of file environment\&.cpp\&.
 .SS "bool environment::performSpontaneousCondensation (\fBacs_longInt\fPtmpReaction, \fBMTRand\fP &tmp__RndDoubleGen)"
 Perform SPONTANEOUS CONDENSATION reaction 
 .PP
@@ -2098,7 +2098,7 @@ Perform SPONTANEOUS CONDENSATION reaction
 .PP
 
 .PP
-Definition at line 6449 of file environment\&.cpp\&.
+Definition at line 6438 of file environment\&.cpp\&.
 .SS "void environment::printAllChargeMols ()"
 Print all the energized molecules  1\&.0 
 .PP
@@ -2109,7 +2109,7 @@ Print all the energized molecules  1\&.0
 .PP
 
 .PP
-Definition at line 7101 of file environment\&.cpp\&.
+Definition at line 7090 of file environment\&.cpp\&.
 .SS "void environment::printAllSpeciesIdAndSequence ()"
 Show all the species with their ID 
 .PP
@@ -2120,7 +2120,7 @@ Show all the species with their ID
 .PP
 
 .PP
-Definition at line 7045 of file environment\&.cpp\&.
+Definition at line 7034 of file environment\&.cpp\&.
 .SS "void environment::printGillespieStructure ()"
 Show all the Gillespie Structure 
 .PP
@@ -2131,7 +2131,7 @@ Show all the Gillespie Structure
 .PP
 
 .PP
-Definition at line 7073 of file environment\&.cpp\&.
+Definition at line 7062 of file environment\&.cpp\&.
 .SS "void environment::printInitialCondition ()"
 Show all initial species in table format 
 .PP
@@ -2142,7 +2142,7 @@ Show all initial species in table format
 .PP
 
 .PP
-Definition at line 6987 of file environment\&.cpp\&.
+Definition at line 6976 of file environment\&.cpp\&.
 .SS "void environment::printNutrientsAndProbability ()"
 This Function populates two vectors containing all the nutrients and all the probabilities for the influx selected species from the firing disk according to the max length of the influx This function print to monitor the content of the vectors nutrientsForInflux and nutrientsProb2BeSelected 
 .PP
@@ -2158,7 +2158,7 @@ This Function populates two vectors containing all the nutrients and all the pro
 .PP
 
 .PP
-Definition at line 4398 of file environment\&.cpp\&.
+Definition at line 4387 of file environment\&.cpp\&.
 .SS "bool environment::removeChargeMolFromList (\fBacs_int\fPtmpSpeciesID)"
 Perform vector unchargedIDlist update removing a new charge molecule vectors unchargedIDlist and cumUnchargedAmountList are involved 
 .PP
@@ -2179,7 +2179,7 @@ Perform vector unchargedIDlist update removing a new charge molecule vectors unc
 .PP
 
 .PP
-Definition at line 5002 of file environment\&.cpp\&.
+Definition at line 4991 of file environment\&.cpp\&.
 .SS "void environment::resetCleavageCounter ()\fC [inline]\fP"
 
 .PP
@@ -2194,7 +2194,7 @@ set the concentrations to the initial values and reset internal statistics and c
 .PP
 
 .PP
-Definition at line 7192 of file environment\&.cpp\&.
+Definition at line 7173 of file environment\&.cpp\&.
 .SS "void environment::resetCondensationCounter ()\fC [inline]\fP"
 
 .PP
@@ -2252,7 +2252,7 @@ Return the reaction ID if the reaction is already present, otherwise it returns 
 .PP
 
 .PP
-Definition at line 1904 of file environment\&.cpp\&.
+Definition at line 1905 of file environment\&.cpp\&.
 .SS "\fBacs_longInt\fP environment::returnPosSpeciesAlreadyPresent (stringtmpNewSequence)"
 This functions returns the ID of the species whether this one is already present, otherwise the new ID is created as the number of elements in the species vector 
 .PP
@@ -2272,7 +2272,7 @@ This functions returns the ID of the species whether this one is already present
 .PP
 
 .PP
-Definition at line 1874 of file environment\&.cpp\&.
+Definition at line 1875 of file environment\&.cpp\&.
 .SS "bool environment::saveCatalysisStructureSTD (\fBacs_int\fPtmpCurrentGen, \fBacs_int\fPtmpCurrentSim, \fBacs_int\fPtmpCurrentStep, stringtmpStoringPath)"
 Save the catalysis structures in a file named catalysis_[currentSims]_[currentStep]\&.csv\&. This is file is equal to the acs_catalysis\&.csv input file\&. Standard C++ The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2283,7 +2283,7 @@ Save the catalysis structures in a file named catalysis_[currentSims]_[currentSt
 .PP
 
 .PP
-Definition at line 7698 of file environment\&.cpp\&.
+Definition at line 7669 of file environment\&.cpp\&.
 .SS "bool environment::saveConfigurationFileSTD (stringtmpStoringPath)"
 Save a file with the configuration parameters 
 .PP
@@ -2299,7 +2299,7 @@ Save a file with the configuration parameters
 .PP
 
 .PP
-Definition at line 7333 of file environment\&.cpp\&.
+Definition at line 7304 of file environment\&.cpp\&.
 .SS "bool environment::saveInfluxStructureSTD (stringtmpStoringPath)"
 Save influx structure on file, standard C++ 
 .PP
@@ -2320,7 +2320,7 @@ Save influx structure on file, standard C++
 .PP
 
 .PP
-Definition at line 7503 of file environment\&.cpp\&.
+Definition at line 7474 of file environment\&.cpp\&.
 .SS "bool environment::saveLivingSpeciesAmountSTD (\fBacs_int\fPtmp__CurrentGen, \fBacs_int\fPtmp__CurrentSim, stringtmp__StoringPath)"
 Save living species total AMOUNT in a file named livingAmount_[CurrentGen]_[currentSim]\&.csv\&. The file is saved in the directory indicated as a second parameter in the run command - Standard C++ 
 .PP
@@ -2336,7 +2336,7 @@ Save living species total AMOUNT in a file named livingAmount_[CurrentGen]_[curr
 .PP
 
 .PP
-Definition at line 7962 of file environment\&.cpp\&.
+Definition at line 7933 of file environment\&.cpp\&.
 .SS "bool environment::saveLivingSpeciesConcentrationSTD (\fBacs_int\fPtmp__CurrentGen, \fBacs_int\fPtmp__CurrentSim, stringtmp__StoringPath)"
 Save living species total CONCENTRATION in a file named livingAmount_[CurrentGen]_[currentSim]\&.csv\&. The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2352,7 +2352,7 @@ Save living species total CONCENTRATION in a file named livingAmount_[CurrentGen
 .PP
 
 .PP
-Definition at line 8028 of file environment\&.cpp\&.
+Definition at line 7999 of file environment\&.cpp\&.
 .SS "bool environment::saveLivingSpeciesIDSTD (\fBacs_int\fPtmp__CurrentGen, \fBacs_int\fPtmp__CurrentSim, \fBacs_int\fPtmp__CurrentStep, stringtmp__StoringPath)"
 Save living species in a file named living_species_[currentSim]\&.csv\&. Standard C++ The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2368,7 +2368,7 @@ Save living species in a file named living_species_[currentSim]\&.csv\&. Standar
 .PP
 
 .PP
-Definition at line 7901 of file environment\&.cpp\&.
+Definition at line 7872 of file environment\&.cpp\&.
 .SS "bool environment::saveNrgBoolFncStructureSTD (stringtmpStoringPath)"
 Save Energetic Boolean Function on file, standard C++ 
 .PP
@@ -2389,7 +2389,7 @@ Save Energetic Boolean Function on file, standard C++
 .PP
 
 .PP
-Definition at line 7541 of file environment\&.cpp\&.
+Definition at line 7512 of file environment\&.cpp\&.
 .SS "bool environment::saveReactionsParametersSTD (\fBacs_int\fPtmp__CurrentGen, \fBacs_int\fPtmp__CurrentSim, \fBacs_int\fPtmp__CurrentStep, stringtmp__StoringPath, \fBacs_int\fPtmpRctType, \fBacs_longInt\fPtmpCat, \fBacs_longInt\fPtmpMol_I, \fBacs_longInt\fPtmpMol_II, \fBacs_longInt\fPtmpMol_III)"
 Save the reactions parameters in a file named reactions_parameters_[currentSim]\&.csv\&. The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2405,7 +2405,7 @@ Save the reactions parameters in a file named reactions_parameters_[currentSim]\
 .PP
 
 .PP
-Definition at line 7842 of file environment\&.cpp\&.
+Definition at line 7813 of file environment\&.cpp\&.
 .SS "bool environment::saveReactionsStructureSTD (\fBacs_int\fPtmpCurrentGen, \fBacs_int\fPtmpCurrentSim, \fBacs_int\fPtmpCurrentStep, stringtmpStoringPath)"
 Save the reactions structures in a file named reactions_[currentSims]_[currentStep]\&.csv\&. This is file is equal to the acs_reactions\&.csv input file\&. The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2416,7 +2416,7 @@ Save the reactions structures in a file named reactions_[currentSims]_[currentSt
 .PP
 
 .PP
-Definition at line 7644 of file environment\&.cpp\&.
+Definition at line 7615 of file environment\&.cpp\&.
 .SS "bool environment::saveSpeciesStructureSTD (\fBacs_int\fPtmpCurrentGen, \fBacs_int\fPtmpCurrentSim, \fBacs_int\fPtmpCurrentStep, stringtmpStoringPath)"
 Save the species structures in a file named species_[currentSims]_[currentStep]\&.csv\&. This is file is equal to the acs_species\&.csv input file\&. C++ standard The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2432,7 +2432,7 @@ Save the species structures in a file named species_[currentSims]_[currentStep]\
 .PP
 
 .PP
-Definition at line 7579 of file environment\&.cpp\&.
+Definition at line 7550 of file environment\&.cpp\&.
 .SS "bool environment::saveTimesSTD (\fBacs_int\fPtmpCurrentGen, \fBacs_int\fPtmpCurrentSim, \fBacs_int\fPtmpCurrentStep, stringtmpStoringPath)"
 Save the reactions times in a file named times_[currentSim]\&.csv\&. Standard C++ The file is saved in the directory indicated as a second parameter in the run command 
 .PP
@@ -2448,7 +2448,7 @@ Save the reactions times in a file named times_[currentSim]\&.csv\&. Standard C+
 .PP
 
 .PP
-Definition at line 7755 of file environment\&.cpp\&.
+Definition at line 7726 of file environment\&.cpp\&.
 .SS "\fBacs_int\fP environment::selectWhetherCleavageOrCond (\fBMTRand\fP &tmp__RndDoubleGen)"
 Select reaction type (cleavage or condensation) according to the cleavage probability 
 .PP
@@ -2466,7 +2466,7 @@ Select reaction type (cleavage or condensation) according to the cleavage probab
 .PP
 
 .PP
-Definition at line 1227 of file environment\&.cpp\&.
+Definition at line 1228 of file environment\&.cpp\&.
 .SS "void environment::setActualTime (\fBacs_double\fPtmpActualTime)\fC [inline]\fP"
 
 .PP
@@ -2486,7 +2486,7 @@ This function populates to lists, the first containing all the living species ID
 .PP
 
 .PP
-Definition at line 4913 of file environment\&.cpp\&.
+Definition at line 4902 of file environment\&.cpp\&.
 .SS "void environment::setNotChargedAndChargedSpeciesIDsAndAmounts ()"
 This function populates to lists, the first one contains the IDs of the uncharged mols and the second one contains the cumulative amount of uncharged molecules 
 .PP
@@ -2502,7 +2502,7 @@ This function populates to lists, the first one contains the IDs of the uncharge
 .PP
 
 .PP
-Definition at line 4954 of file environment\&.cpp\&.
+Definition at line 4943 of file environment\&.cpp\&.
 .SS "bool environment::setSolubility (\fBacs_int\fPtmpNewSpeciesLength, \fBMTRand\fP &tmpRndDoubleGen)"
 Create the precipitation constant renforcement according to the species length 
 .PP
@@ -2522,7 +2522,7 @@ Create the precipitation constant renforcement according to the species length
 .PP
 
 .PP
-Definition at line 1840 of file environment\&.cpp\&.
+Definition at line 1841 of file environment\&.cpp\&.
 .SS "void environment::showGillEngagementInSpecies ()"
 Function to show the Gillespie engagement of each species\&. 
 .PP
@@ -2543,7 +2543,7 @@ Function to show the Gillespie engagement of each species\&.
 .PP
 
 .PP
-Definition at line 2559 of file environment\&.cpp\&.
+Definition at line 2560 of file environment\&.cpp\&.
 .SS "void environment::showGlobalParameter ()"
 Shows all parameters uploaded from the configuration file 
 .PP
@@ -2554,11 +2554,11 @@ Shows all parameters uploaded from the configuration file
 .PP
 
 .PP
-Definition at line 6894 of file environment\&.cpp\&.
+Definition at line 6883 of file environment\&.cpp\&.
 .SS "void environment::showSubListInSpecies ()"
 Function to show the substrates list of the complex species 
 .PP
-Definition at line 2523 of file environment\&.cpp\&.
+Definition at line 2524 of file environment\&.cpp\&.
 .SS "void environment::storeInitialStructures ()"
 Store initial structures into storing variables 
 .PP
@@ -2569,7 +2569,7 @@ Store initial structures into storing variables
 .PP
 
 .PP
-Definition at line 7287 of file environment\&.cpp\&.
+Definition at line 7258 of file environment\&.cpp\&.
 .SS "bool environment::structureCoherenceCheckUp ()"
 This function check the coherence of the data structures\&. IF IT FAULTS THE SYSTEM RETURNS ERROR!!! IT IS VERY RECOMMENDED RUN THIS FUNCTION ALWAYS AFTER THE INITIALIZATION 
 .PP
@@ -2585,7 +2585,7 @@ This function check the coherence of the data structures\&. IF IT FAULTS THE SYS
 .PP
 
 .PP
-Definition at line 2004 of file environment\&.cpp\&.
+Definition at line 2005 of file environment\&.cpp\&.
 .SS "void environment::unchargeMolProcess (\fBacs_int\fPtmp_ID)\fC [inline]\fP"
 
 .PP
@@ -2616,7 +2616,7 @@ Old Species Reactions and Catalysis update process
 .PP
 
 .PP
-Definition at line 941 of file environment\&.cpp\&.
+Definition at line 942 of file environment\&.cpp\&.
 .SS "void environment::updateSpeciesAges ()"
 Update the species age 
 .PP
@@ -2627,7 +2627,7 @@ Update the species age
 .PP
 
 .PP
-Definition at line 6845 of file environment\&.cpp\&.
+Definition at line 6834 of file environment\&.cpp\&.
 .SS "string environment::zeroBeforeStringNumberSTD (\fBacs_int\fPtmpTotN, \fBacs_int\fPtmpCurrentN)"
 This function creates a chain of zero as STRING according to tmpTotN and tmpCurrent N in order to make possible a sorting (e\&.g\&. tmpTotN = 1000, tmpCurrentN = 3, return 0003 
 .PP
@@ -2645,7 +2645,7 @@ This function creates a chain of zero as STRING according to tmpTotN and tmpCurr
 .PP
 
 .PP
-Definition at line 7310 of file environment\&.cpp\&.
+Definition at line 7281 of file environment\&.cpp\&.
 
 .SH "Author"
 .PP 

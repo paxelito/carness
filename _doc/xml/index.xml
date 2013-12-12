@@ -80,6 +80,7 @@
     <member refid="a00014_1a1e46ccd6a6409f7e36db2eea514ca84c" kind="variable"><name>condensation_KineticConstant</name></member>
     <member refid="a00014_1ae060f8fa78b638e0c5275f072723c143" kind="variable"><name>complexDeg_KineticConstant</name></member>
     <member refid="a00014_1a72fc96eddfe3e3d8b57f49a50b86379d" kind="variable"><name>moleculeDecay_KineticConstant</name></member>
+    <member refid="a00014_1a14d3787b6eaf1e27f62b4ba5c342cf47" kind="variable"><name>currentTotalTime</name></member>
     <member refid="a00014_1a7cb65b93413dbf1fa09ea2bc13e562d4" kind="variable"><name>energy</name></member>
     <member refid="a00014_1a7a43d63293e98500c328940c0391fa26" kind="variable"><name>ratioSpeciesEnergizable</name></member>
     <member refid="a00014_1ac678bf1039e1c7659b3d8af10154c81d" kind="variable"><name>nrgBoolFlag</name></member>
@@ -104,8 +105,6 @@
     <member refid="a00014_1a167ebf489bf4002ccb2f677afcf1110e" kind="variable"><name>allGillespieScores</name></member>
     <member refid="a00014_1aba29bc82de55164ab0458f69772bab18" kind="variable"><name>COPYOFallGillespieScores</name></member>
     <member refid="a00014_1aa6c52cb7e7bd2786770ba8e7c1c57b49" kind="variable"><name>gillespieCumulativeStepScoreList</name></member>
-    <member refid="a00014_1ab100931f365a07fbe2504416e5000be1" kind="variable"><name>reactionsTime</name></member>
-    <member refid="a00014_1a9a1ed7b9440b15456ed2346c3985369f" kind="variable"><name>gillespieReactionsSelected</name></member>
     <member refid="a00014_1aeba1a5cacbf0dfb5fe03bcd3d2ebc51b" kind="variable"><name>allTimes</name></member>
     <member refid="a00014_1ac019eb665ccede1b0322d89b01d99182" kind="variable"><name>debugLevel</name></member>
     <member refid="a00014_1a5081f77f88f64058218aa874f736e3aa" kind="variable"><name>livingSpeciesIDsList</name></member>
@@ -120,6 +119,7 @@
     <member refid="a00014_1ada0015e4b148b45227ffdcad63eaf389" kind="variable"><name>decimalMoleculesToLoad</name></member>
     <member refid="a00014_1a973d3c945427e6d08521ae4ef4b19f33" kind="variable"><name>decimalMoleculesToUNLOAD</name></member>
     <member refid="a00014_1a48c6498bbf54456a1d81d6e837a593c1" kind="variable"><name>decimalComplexesToDissociate</name></member>
+    <member refid="a00014_1a2ee2adff1fd91195729cd5470b0de2fb" kind="variable"><name>gillespieReactionSelected</name></member>
     <member refid="a00014_1a5e0df47dc701f009dcc92bbe17bd299f" kind="variable"><name>gillespieMean</name></member>
     <member refid="a00014_1ae28e58ae543007a45edb275a615e7a26" kind="variable"><name>gillespieSD</name></member>
     <member refid="a00014_1ab6c610b2bd0b83c661782b8a7e8a2664" kind="variable"><name>gillespieEntropy</name></member>
@@ -128,12 +128,12 @@
     <member refid="a00014_1ad9f0a98b3446a65dc19ecc8597b3c51c" kind="variable"><name>ratioBetweenNewGillTotGill</name></member>
     <member refid="a00014_1a98f9d88a2571a97c4af17d4b533ea8b3" kind="variable"><name>reverseReactionsGillScore</name></member>
     <member refid="a00014_1ac900b3cdf833213a438245ca3dc2a684" kind="variable"><name>ratioBetweenReverseAndTotalScore</name></member>
+    <member refid="a00014_1aa8fe21d790ee9b886416620072ad5218" kind="variable"><name>gillespieTime</name></member>
+    <member refid="a00014_1a9f389f0f2d08ad39f190780600e42cf4" kind="variable"><name>performReactionTime</name></member>
+    <member refid="a00014_1ab9095e7a0fb641b980b53b49a26b23c0" kind="variable"><name>remainingProcessesTime</name></member>
     <member refid="a00014_1af00dbd7d74da103460cca40a68965d61" kind="variable"><name>gillespiePartialTimer</name></member>
-    <member refid="a00014_1a863d1b31ca5e9dbe914129b2032c753d" kind="variable"><name>gillespiePartialTimes</name></member>
     <member refid="a00014_1a71824d4ebf5f9b2279b4df3d444c018d" kind="variable"><name>performReactionPartialTimer</name></member>
-    <member refid="a00014_1a209d549c458453c406d6db7a3d6916ed" kind="variable"><name>performReactionPartialTimes</name></member>
     <member refid="a00014_1a5323e5b2f846899b86ed66d2d56e363c" kind="variable"><name>remainingProcessesPartialTimer</name></member>
-    <member refid="a00014_1a43728f22535ad50a45bda96a737c15d9" kind="variable"><name>remainingProcessesPartialTimes</name></member>
     <member refid="a00014_1aa44bbabec52bf2d61a19685a30e68de1" kind="function"><name>environment</name></member>
     <member refid="a00014_1ae323954bd5b674bf34d954c3f7b67629" kind="function"><name>~environment</name></member>
     <member refid="a00014_1afad68362d5f4ec0689941e3c1b92c2e8" kind="function"><name>getNgen</name></member>
