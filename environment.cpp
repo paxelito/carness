@@ -3157,7 +3157,8 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 					}
 					setActualTime(tempTime);
 					gillespieReactionSelected = reaction_u;
-					allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+					allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
+					//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 				}catch(exception&e){
 					 cout << "Source Code Line: " << __LINE__ << endl;
 					 cerr << "exceptioncaught:" << e.what() << endl;
@@ -3186,7 +3187,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 				// PERFORM REACTION
 				try{
 					if(!performReaction(reaction_u, tmpRndDoubleGen, tmpActGEN, tmpActSIM, tmpActSTEP, tmpStoringPath))
-								ExitWithError("performReaction", "Problems during the reaction computation");
+							ExitWithError("performReaction", "Problems during the reaction computation");
 				}catch(exception&e){
 					 cout << "Source Code Line: " << __LINE__ << endl;
 					 cerr << "exceptioncaught:" << e.what() << endl;
@@ -3213,7 +3214,8 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 					}
 					setActualTime(tempTime);
 					gillespieReactionSelected = 0;
-					allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+					allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
+					//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
 					if(debugLevel >= RUNNING_VERSION)
 									cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
@@ -3242,7 +3244,8 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
 				}
 				setActualTime(tempTime);
 				gillespieReactionSelected = 0;
-				allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+				allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
+				//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
 				if(debugLevel >= RUNNING_VERSION)
 						cout << "\t\t\t|- NO REACTIONS AT THIS STEP" << endl;
@@ -3827,7 +3830,8 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 					}
 					setActualTime(tempTime);
 					gillespieReactionSelected = reaction_u;
-					allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+					allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
+					//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 				}catch(exception&e){
 					 cout << "Source Code Line: " << __LINE__ << endl;
 					 cerr << "exceptioncaught:" << e.what() << endl;
@@ -3883,7 +3887,8 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 					}
 					setActualTime(tempTime);
 					gillespieReactionSelected = 0;
-					allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+					allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
+					//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
 					if(debugLevel >= RUNNING_VERSION)
 									cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
@@ -3912,7 +3917,8 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 				}
 				setActualTime(tempTime);
 				gillespieReactionSelected = 0;
-				allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
+				allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
+				//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 
 				if(debugLevel >= RUNNING_VERSION)
 						cout << "\t\t\t|- NO REACTIONS AT THIS STEP" << endl;
@@ -7118,19 +7124,18 @@ void environment::clearAllStructures()
 		cout << "\t\t|- Number of Species: " << allSpecies.size() << endl;
 		cout << "\t\t|- Number of Reactions: " << allReactions.size() << endl;
 		cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
-		cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
 	}
        // printAllSpeciesIdAndSequence();
 	allSpecies.clear();
 	allReactions.clear();
 	allCatalysis.clear();
-	allTimes.clear();
+	//allTimes.clear();
+	allTime = 0;
 	if(debugLevel >= SMALL_DEBUG)
 	{
 		cout << "\t\t|- Number of Species: " << allSpecies.size() << endl;
 		cout << "\t\t|- Number of Reactions: " << allReactions.size() << endl;
 		cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
-		cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
 	}
 	allSpecies = initialAllSpecies;
         //printAllSpeciesIdAndSequence();
@@ -7143,7 +7148,6 @@ void environment::clearAllStructures()
 		cout << "\t\t|- Number of Species: " << allSpecies.size() << endl;
 		cout << "\t\t|- Number of Reactions: " << allReactions.size() << endl;
 		cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
-		cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
 	}
 	
 	// Reset total amount of species, complexes and energy carriers for the next simulation
@@ -7178,7 +7182,6 @@ void environment::resetConcentrationToInitialConditions()
             cout << "\t\t|- Number of Species: " << allSpecies.size() << endl;
             cout << "\t\t|- Number of Reactions: " << allReactions.size() << endl;
             cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
-            cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
     }
 
     // RESET REACTIONS COUNTER
@@ -7202,10 +7205,8 @@ void environment::resetConcentrationToInitialConditions()
     //allSpecies.clear();
     //allReactions.clear();
     //allCatalysis.clear();
-	allTimes.clear();
-
-	if(debugLevel >= RUNNING_VERSION)
-            cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
+	// allTimes.clear();
+	allTime = 0;
 
 	//LOADING SPECIES FROM FILE
 //	if(!createInitialMoleculesPopulationFromSpecificFile(tmpSpeciesFilePath, tmpActGEN, tmpActSIM))
@@ -7230,7 +7231,6 @@ void environment::resetConcentrationToInitialConditions()
 		cout << "\t\t|- Number of Species: " << allSpecies.size() << endl;
 		cout << "\t\t|- Number of Reactions: " << allReactions.size() << endl;
 		cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
-		cout << "\t\t|- Number of Times: " << allTimes.size() << endl;
 	}
 
         // Reset total amount of species, complexes and energy carriers for the next simulation
@@ -7247,6 +7247,7 @@ void environment::resetConcentrationToInitialConditions()
 	decimalMoleculesToUNLOAD = 0;
 	decimalComplexesToDissociate = 0;
 	setActualTime(0);
+	allTime = 0;
 	resetReactionsCounter();
 	
 }
@@ -7759,7 +7760,7 @@ bool environment::saveTimesSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs
                 << gillespieReactionSelected << "\t"
                 << COPYOFallGillespieScores.at(gillespieReactionSelected).getIdReactionType() << "\t"
                 << COPYOFallGillespieScores.size() << "\t"
-                << (double)allTimes.at(tmpCurrentStep-1) << "\t"
+                << (double)allTime << "\t"
                 << getTotalNumberOfSpecies() << "\t"
                 << getTotalNumberOfMolecules() << "\t"
                 << getTotalNumberOfComplexSpecies() << "\t"

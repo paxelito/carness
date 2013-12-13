@@ -133,6 +133,7 @@ private:
     acs_double ratioBetweenNewGillTotGill; // gillespieNewSpeciesScore / gillespieTotalScore
     acs_double reverseReactionsGillScore; // the sum of the gillespie scores related to the reverse reactions
     acs_double ratioBetweenReverseAndTotalScore; // Ratio between the reverse reaction scores and all the reaction scores
+    acs_double allTime; // Computational Time for each reaction
     acs_double gillespieTime;
     acs_double performReactionTime;
     acs_double remainingProcessesTime;
