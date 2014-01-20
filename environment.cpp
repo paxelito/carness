@@ -3318,7 +3318,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_
     try{
 		// Perform deterministic complex dissociation
 		if(!performDETComplexDissociation(tmpDeltaT, tmpRndDoubleGen))
-			ExitWithError("performComplexDissociation", "Problems during the COMPLEX DETERMINISTIC DISSOCIATION process in Gillespie");
+			ExitWithError("performComplexDetDissociation", "Problems during the COMPLEX DETERMINISTIC DISSOCIATION process in Gillespie");
     }catch(exception&e){
 	     cout << "Source Code Line: " << __LINE__ << endl;
 	     cerr << "exceptioncaught:" << e.what() << endl;
@@ -6309,23 +6309,12 @@ bool environment::performComplexDissociation(acs_longInt tmpComplex, acs_longInt
                  << " - Substrates[" << allSpecies.at(tmpSubstrate).getSequence() << "]: " << allSpecies.at(tmpSubstrate).getAmount() << endl;
         }
 
-        if(rndNumb > ratioLoadedCpx)
+        if((rndNumb < ratioLoadedCpx) && (energy > 0))
         {
-            // DECREMENT TOTAL AMOUNT OF THIS COMPLEX (not loaded)
-            if(allSpecies.at(tmpComplex).getNOTchargeMols() < 1)
-            {
-                ExitWithError("performComplexDissociation", "There are not avalaible not loaded complexes to dissociate");
-            }else{
-                allSpecies.at(tmpComplex).decrement(volume);
-                if(!allSpecies.at(tmpComplex).getConcentrationFixed())
-                    decCpxProcedure(tmpComplex);
-                reactionFlag = true;
-            }
-        }else{
             // DECREMENT TOTAL AMOUNT OF THIS COMPLEX (loaded)
             if(allSpecies.at(tmpComplex).getChargeMols() < 1)
             {
-                ExitWithError("performComplexDissociation", "There are not avalaible loaded complexes to dissociate");
+                ExitWithError("performComplexDissociation", "There are not available loaded complexes to dissociate");
             }else{
                 unchargeMolProcess(tmpComplex);
                 allSpecies.at(tmpComplex).decrement(volume);
@@ -6333,6 +6322,17 @@ bool environment::performComplexDissociation(acs_longInt tmpComplex, acs_longInt
                     decCpxProcedure(tmpComplex);
                 reactionFlag = true;
             }
+        }else{
+        	 // DECREMENT TOTAL AMOUNT OF THIS COMPLEX (not loaded)
+			if(allSpecies.at(tmpComplex).getNOTchargeMols() < 1)
+			{
+				ExitWithError("performComplexDissociation", "There are not available not loaded complexes to dissociate");
+			}else{
+				allSpecies.at(tmpComplex).decrement(volume);
+				if(!allSpecies.at(tmpComplex).getConcentrationFixed())
+					decCpxProcedure(tmpComplex);
+				reactionFlag = true;
+			}
         }
 
         // UPDATE CATALYST AND SUBSTRATE
@@ -6373,7 +6373,7 @@ bool environment::performComplexDissociation(acs_longInt tmpComplex, acs_longInt
  */
 bool environment::performSpontaneousCleavage(acs_longInt tmpReaction, MTRand& tmp__RndDoubleGen)
 {
-        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performComplexDissociation start" << endl;
+        if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::performSpontaneousCleavage start" << endl;
 
         if(debugLevel >= SMALL_DEBUG)
             cout << "\t\t\t|-REACTION " <<  tmpReaction << " will spontaneously occur" << endl;

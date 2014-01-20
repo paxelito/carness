@@ -2,6 +2,9 @@ Software documentation is available in the doc folder.
 
 VERSION HISTORY 
 
+Build4.8b20140120.65
+A possible bug in complex dissociation procedure has been fixed. 
+
 Build4.8b20131212.64
 All the computational time stat procedures now work with normal variables insteaf of vectors. 
 Documentation Updated
