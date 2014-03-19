@@ -565,7 +565,7 @@ bool environment::createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpR
 							speciesAvailableForReactions.push_back(tmpIDOfCandidateSpecies.at(i));
 				}
             }else{
-                    ExitWithError("createReactionsForThisSpecies", "A Complex Cannot be envolved in a reaction as product or substrate");
+                    ExitWithError("createReactionsForThisSpecies", "A Complex cannot be envolved in a reaction as product or substrate");
             }
         }catch(exception&e)
         {
