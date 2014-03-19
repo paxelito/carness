@@ -13,7 +13,7 @@
 *- \subpage pageGillespie
 *- \subpage pageInitializator
 *
- * \page intro Essential informations
+ * \page intro Essential information
  * <hr>
  * The <b>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</b> is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different
  * interacting molecular species. 
