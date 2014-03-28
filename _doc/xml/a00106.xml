@@ -1,84 +1,40 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="a00106" kind="namespace">
-    <compoundname>fromWithin2Between</compoundname>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="a00106_1a0f4d3ac33db22359da335b2db8cece7f" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple fromWithin2Between.zeroSIM</definition>
-        <argsstring></argsstring>
-        <name>zeroSIM</name>
-        <initializer>= <ref refid="a00106_1a6f865e0e97da35920db45f5491a1300f" kindref="member">zeroBeforeStrNum</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,numSim)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" line="35" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" bodystart="35" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00106_1a1cd31aebf09d421ec4c6ef89fa122662" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple fromWithin2Between.zeroGEN</definition>
-        <argsstring></argsstring>
-        <name>zeroGEN</name>
-        <initializer>= <ref refid="a00106_1a6f865e0e97da35920db45f5491a1300f" kindref="member">zeroBeforeStrNum</ref>(<ref refid="a00068_1ac86694252f8dfdb19aaeadc4b7c342c6" kindref="member">j</ref>,numGen)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" bodystart="39" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00106_1abe0ecb557a225c5832c6567139bf91b4" prot="public" static="no" mutable="no">
-        <type>string</type>
-        <definition>string fromWithin2Between.folderNew</definition>
-        <argsstring></argsstring>
-        <name>folderNew</name>
-        <initializer>= &quot;s_&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" line="41" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" bodystart="41" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00106_1a47de7eeb1d8dcbb763d1f9db53fe958f" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple fromWithin2Between.resdir</definition>
-        <argsstring></argsstring>
-        <name>resdir</name>
-        <initializer>= os.path.join(os.curdir, &quot;res&quot;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" line="52" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" bodystart="52" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
+    <compoundname>lib::graph::network</compoundname>
       <sectiondef kind="func">
-      <memberdef kind="function" id="a00106_1a6f865e0e97da35920db45f5491a1300f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a00106_1aa023644e6dad3ed7be55a592d8576007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def fromWithin2Between.zeroBeforeStrNum</definition>
+        <definition>def lib.graph.network.removeRareRcts</definition>
         <argsstring></argsstring>
-        <name>zeroBeforeStrNum</name>
+        <name>removeRareRcts</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" line="10" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" bodystart="10" bodyend="30"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/network.py" line="16" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/network.py" bodystart="16" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="a00106_1a31099e87728bb8b899360bb641bb6b64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.network.fixCondensationReaction</definition>
+        <argsstring></argsstring>
+        <name>fixCondensationReaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/network.py" line="25" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/network.py" bodystart="25" bodyend="44"/>
+        <references refid="a00022_1a576bebae86b11914280920c448def53d">sum</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py" line="1" column="1"/>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/network.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

@@ -1,83 +1,41 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="a00030" kind="file">
-    <compoundname>KSSearch.m</compoundname>
+    <compoundname>stats.m</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="a00030_1a1faaaae288fc8ca4ed1751049aa2f84f" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>blocked</definition>
+      <memberdef kind="variable" id="a00030_1a5318eae09f2b8ac76b2d6df39ba9c1cd" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params deltaT</definition>
         <argsstring></argsstring>
-        <name>blocked</name>
-        <initializer>= 0:5</initializer>
+        <name>deltaT</name>
+        <initializer>= 10</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="1" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="1" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="7" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="7" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00030_1ad75735665492cabd747370126464fddf" prot="public" static="no" mutable="no">
-        <type>creating <ref refid="a00021" kindref="compound">reactions</ref> matrix</type>
-        <definition>creating reactions matrix rFiles</definition>
+      <memberdef kind="variable" id="a00030_1aa9758857dd92f7845934f06daa7c4120" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params totT</definition>
         <argsstring></argsstring>
-        <name>rFiles</name>
-        <initializer>= dir(&apos;<ref refid="a00021" kindref="compound">reactions</ref>*&apos;)</initializer>
+        <name>totT</name>
+        <initializer>= 1000</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="4" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="4" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="8" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="8" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00030_1a4c72dba1fe2ee2fbcc699262a8d0c624" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>reactionsFile</definition>
+      <memberdef kind="variable" id="a00030_1a4b295f592934e78a05958a54046ceb68" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params showFig</definition>
         <argsstring></argsstring>
-        <name>reactionsFile</name>
-        <initializer>= <ref refid="a00030_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>(length(<ref refid="a00030_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>)-1).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref></initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="5" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="5" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1ae9011d40c6f13e68e6f07156e0da7c5d" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>fid</definition>
-        <argsstring></argsstring>
-        <name>fid</name>
-        <initializer>= fopen(<ref refid="a00030_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="6" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="6" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>continua</definition>
-        <argsstring></argsstring>
-        <name>continua</name>
-        <initializer>= 1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="7" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="7" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1ac52097a2745fcef31eb175d2e9485845" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>reactionsMatrix</definition>
-        <argsstring></argsstring>
-        <name>reactionsMatrix</name>
+        <name>showFig</name>
         <initializer>= 0</initializer>
         <briefdescription>
         </briefdescription>
@@ -85,41 +43,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="8" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="8" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="9" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="9" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00030_1a436a6968124e560649654a4abbd9dac6" prot="public" static="no" mutable="no">
-        <type>while <ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
-        <definition>while continua rValues</definition>
+      <memberdef kind="variable" id="a00030_1a63b4c2789d7e1513024181d12e4f1b6b" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params figureVisible</definition>
         <argsstring></argsstring>
-        <name>rValues</name>
-        <initializer>= <ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref>,&apos;%d&apos;,7)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="10" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="10" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1a6bd08e37edf4151f5f6d1fc27a6f227a" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>if stop</definition>
-        <argsstring></argsstring>
-        <name>stop</name>
-        <initializer>= <ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00030_1a436a6968124e560649654a4abbd9dac6" kindref="member">rValues</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="11" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="11" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1ad3aa27d88a7e9d77d8334155860269bb" prot="public" static="no" mutable="no">
-        <type>dividing into condensations <ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref> <ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref></type>
-        <definition>else condensations</definition>
-        <argsstring></argsstring>
-        <name>condensations</name>
+        <name>figureVisible</name>
         <initializer>= 0</initializer>
         <briefdescription>
         </briefdescription>
@@ -127,13 +57,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="22" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="22" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="57" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="57" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00030_1a89060c6979e5a4ff7b0985b35f295695" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>cleavages</definition>
+      <memberdef kind="variable" id="a00030_1aa022cbb28f80299d572def08e7a5ccfd" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params threshold</definition>
         <argsstring></argsstring>
-        <name>cleavages</name>
+        <name>threshold</name>
         <initializer>= 0</initializer>
         <briefdescription>
         </briefdescription>
@@ -141,395 +71,114 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="23" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="23" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="83" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="83" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00030_1a1a691fb4f955887edfa538e91479fafe" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>cleavagesMatrix</definition>
+      <memberdef kind="variable" id="a00030_1afb6aa83fb78c663f3b39be2380842a8b" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params decayTime</definition>
         <argsstring></argsstring>
-        <name>cleavagesMatrix</name>
-        <initializer>= 0</initializer>
+        <name>decayTime</name>
+        <initializer>= 10</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="25" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="25" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="84" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="84" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00030_1afaba8eef2f8f4e4dda2e893a19e55a94" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>condensationsMatrix</definition>
+      <memberdef kind="variable" id="a00030_1a4e4b89515d35d0cba5873e282e55dc8c" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params tmpResFold</definition>
         <argsstring></argsstring>
-        <name>condensationsMatrix</name>
-        <initializer>= 0</initializer>
+        <name>tmpResFold</name>
+        <initializer>= &apos;res&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="26" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="26" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="85" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="85" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00030_1ae938073aeda31fad21f2546017d92d4d" prot="public" static="no" mutable="no">
-        <type>for</type>
-        <definition>end end end clear i</definition>
+      <memberdef kind="variable" id="a00030_1ab3d8fca9a15f5a064b07181a35ebdbb7" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params distinctiveSubStr</definition>
         <argsstring></argsstring>
-        <name>i</name>
-        <initializer>= 1:rrm
-    <ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00030_1af998036b749d9fa6dd2365f9937279b6" kindref="member">reactionsMatrix</ref>(i,2) == 0
-        <ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref> = <ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref>+1</initializer>
+        <name>distinctiveSubStr</name>
+        <initializer>= &apos;sim&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="27" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="27" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="86" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="86" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00030_1a9eab57ccb42a39c704f47dc30e4f4515" prot="public" static="no" mutable="no">
-        <type>creating <ref refid="a00012" kindref="compound">catalysis</ref> matrix</type>
-        <definition>creating catalysis matrix cFiles</definition>
+      <memberdef kind="variable" id="a00030_1a71a9d71e2c994a7a8552d39b41b6e256" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params tmpIDsim</definition>
         <argsstring></argsstring>
-        <name>cFiles</name>
-        <initializer>= dir(&apos;<ref refid="a00012" kindref="compound">catalysis</ref>*&apos;)</initializer>
+        <name>tmpIDsim</name>
+        <initializer>= &apos;5&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="39" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="87" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="87" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00030_1a33e70cf5b45cb59005b82d30202f0b69" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>catalysisFile</definition>
+      <memberdef kind="variable" id="a00030_1a3b01c97f207a2997c3bd0c2718441509" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params tmpRctFileToLoad</definition>
         <argsstring></argsstring>
-        <name>catalysisFile</name>
-        <initializer>= <ref refid="a00030_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>(length(<ref refid="a00030_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>)).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref></initializer>
+        <name>tmpRctFileToLoad</name>
+        <initializer>= &apos;&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="40" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="40" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="88" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="88" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00030_1a0810027f58d6be965e44b7b84c44ace8" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>catalysisMatrix</definition>
+      <memberdef kind="variable" id="a00030_1ae5d21adddbfe36d5b10d43a2e8b39123" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params tmpRctSUBFileToLoad</definition>
         <argsstring></argsstring>
-        <name>catalysisMatrix</name>
-        <initializer>= 0</initializer>
+        <name>tmpRctSUBFileToLoad</name>
+        <initializer>= &apos;&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="43" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="43" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1ad4ba7701967c1da20171228afccb7081" prot="public" static="no" mutable="no">
-        <type>while <ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
-        <definition>while continua cValues</definition>
-        <argsstring></argsstring>
-        <name>cValues</name>
-        <initializer>= <ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref>,&apos;%<ref refid="a00025_1a9c5a71c46b1abb8b7df5ebeac6c81535" kindref="member">f</ref>&apos;,7)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="45" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="45" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1aeea253cb98a56047ef20ceed86e2f0ea" prot="public" static="no" mutable="no">
-        <type>identifying outliers</type>
-        <definition>identifying outliers reactionsCounters</definition>
-        <argsstring></argsstring>
-        <name>reactionsCounters</name>
-        <initializer>= sort(<ref refid="a00030_1af998036b749d9fa6dd2365f9937279b6" kindref="member">reactionsMatrix</ref>(:,6))&apos;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="57" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1ab4459bcd3f7a26410560d9bd951f12bd" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>fpc</definition>
-        <argsstring></argsstring>
-        <name>fpc</name>
-        <initializer>= ceil(rrm/20*19)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="58" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="58" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1a7ec5b1f1e07b66a5d6fc972cb8b03c1f" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>outliersCounter</definition>
-        <argsstring></argsstring>
-        <name>outliersCounter</name>
-        <initializer>= <ref refid="a00030_1aeea253cb98a56047ef20ceed86e2f0ea" kindref="member">reactionsCounters</ref>(fpc:rrm)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="59" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="59" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1a60cfb1ca20cbbc81b85a8f56658b7c99" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>outRows</definition>
-        <argsstring></argsstring>
-        <name>outRows</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="66" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="66" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1ad8a18b407726bf44299c9bcf5d1389ff" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>outliersMatrix</definition>
-        <argsstring></argsstring>
-        <name>outliersMatrix</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="67" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="67" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1a07c9e68cdbafe572c04d3112d64deb88" prot="public" static="no" mutable="no">
-        <type><ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
-        <definition>if possible</definition>
-        <argsstring></argsstring>
-        <name>possible</name>
-        <initializer>== 1
-        <ref refid="a00030_1a60cfb1ca20cbbc81b85a8f56658b7c99" kindref="member">outRows</ref> = <ref refid="a00030_1a60cfb1ca20cbbc81b85a8f56658b7c99" kindref="member">outRows</ref>+1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="70" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="70" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1a0e22d9868b850c50dfc13f5d28db8c30" prot="public" static="no" mutable="no">
-        <type>identifying killers</type>
-        <definition>identifying killers killRows</definition>
-        <argsstring></argsstring>
-        <name>killRows</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="78" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="78" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1a929016802e1ede2217a41240a6974fa6" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>killersMatrix</definition>
-        <argsstring></argsstring>
-        <name>killersMatrix</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="79" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="79" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1a98a8838a85ed24032563a44271b1525a" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>check2</definition>
-        <argsstring></argsstring>
-        <name>check2</name>
-        <initializer>= ismember(<ref refid="a00030_1a9733b61dd859b1133aa3aa849cf70cbc" kindref="member">outliersMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,4),<ref refid="a00030_1a1faaaae288fc8ca4ed1751049aa2f84f" kindref="member">blocked</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="82" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="82" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1adfd17509248a56986475a25ee50fe488" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>check3</definition>
-        <argsstring></argsstring>
-        <name>check3</name>
-        <initializer>= ismember(<ref refid="a00030_1a9733b61dd859b1133aa3aa849cf70cbc" kindref="member">outliersMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,5),<ref refid="a00030_1a1faaaae288fc8ca4ed1751049aa2f84f" kindref="member">blocked</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="83" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="83" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1aea43faf8d3d68de03c645edc96b0c1c0" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>KSMatrix</definition>
-        <argsstring></argsstring>
-        <name>KSMatrix</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="93" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="93" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1ab21c5bac10f7ac73374c002e908df5ac" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>check4</definition>
-        <argsstring></argsstring>
-        <name>check4</name>
-        <initializer>= xor(<ref refid="a00030_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref>,<ref refid="a00030_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="97" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="97" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1a0c9b097ea561ab0f23a69197786a243a" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>check6</definition>
-        <argsstring></argsstring>
-        <name>check6</name>
-        <initializer>= ismember(<ref refid="a00030_1ab18f9eabd5f873bd17d226d786bc22df" kindref="member">KSMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,5),<ref refid="a00030_1a90d1d83fdcae4fb1cba5129d5820d33c" kindref="member">cleavagesMatrix</ref>(:,3))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="108" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="108" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1a0bbe7d2ceb7b248f0826d069d5a1b735" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>check7</definition>
-        <argsstring></argsstring>
-        <name>check7</name>
-        <initializer>= ismember(<ref refid="a00030_1ab18f9eabd5f873bd17d226d786bc22df" kindref="member">KSMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,5),<ref refid="a00030_1a244eec8903103b5bbddef461276286ce" kindref="member">catalysisMatrix</ref>(:,2))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="109" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="109" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1abee07c73829351d18ba356c86e3e096d" prot="public" static="no" mutable="no">
-        <type><ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
-        <definition>if check5</definition>
-        <argsstring></argsstring>
-        <name>check5</name>
-        <initializer>== 1 || <ref refid="a00030_1a0c9b097ea561ab0f23a69197786a243a" kindref="member">check6</ref> == 1 || <ref refid="a00030_1a0bbe7d2ceb7b248f0826d069d5a1b735" kindref="member">check7</ref> == 1
-                <ref refid="a00030_1af25e9bc98875e5cf5352941b503dfb13" kindref="member">KSRows</ref> = <ref refid="a00030_1af25e9bc98875e5cf5352941b503dfb13" kindref="member">KSRows</ref>-1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="110" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="110" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1aa9cffa4c2d9962c67a719b05a414e478" prot="public" static="no" mutable="no">
-        <type>identifying spammers</type>
-        <definition>identifying spammers SpamRows</definition>
-        <argsstring></argsstring>
-        <name>SpamRows</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="128" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="128" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00030_1af1801174c9397e7fad0394203f120c31" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>SpammersMatrix</definition>
-        <argsstring></argsstring>
-        <name>SpammersMatrix</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="129" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" bodystart="129" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="89" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" bodystart="89" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="a00030_1af998036b749d9fa6dd2365f9937279b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00029_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref> <ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
-        <definition>break end reactionsMatrix</definition>
-        <argsstring>(continua, 1:6)</argsstring>
-        <name>reactionsMatrix</name>
-        <param>
-          <type><ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
-        </param>
-        <param>
-          <type>1:6</type>
-        </param>
+      <memberdef kind="function" id="a00030_1aa7ae495ee970be20d992bedf6f9f8280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00062_1a4b4c670b101bf7a838f775e008fa6255" kindref="member">function</ref></type>
+        <definition>function stats</definition>
+        <argsstring>()%clear all%close all%%params.path</argsstring>
+        <name>stats</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="16" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="1" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a00030_1a5f84f51058cdb4f43c29d2c875659f42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
-        <definition>end fclose</definition>
-        <argsstring>(fid)</argsstring>
-        <name>fclose</name>
-        <param>
-          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="19" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1a90d1d83fdcae4fb1cba5129d5820d33c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a00030_1a18a344cbdf9b3218a438bca78547ab9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>cleavagesMatrix</definition>
-        <argsstring>(i, 1:6)</argsstring>
-        <name>cleavagesMatrix</name>
+        <definition>concAnalysis</definition>
+        <argsstring>(params)%clear all%close all%%params.path</argsstring>
+        <name>concAnalysis</name>
         <param>
-          <type><ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
-        </param>
-        <param>
-          <type>1:6</type>
+          <type>params</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -537,261 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="30" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1a84a949cdae2c03193c84caf27f855b30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>condensationsMatrix</definition>
-        <argsstring>(i, 1:6)</argsstring>
-        <name>condensationsMatrix</name>
-        <param>
-          <type><ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
-        </param>
-        <param>
-          <type>1:6</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="33" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1a244eec8903103b5bbddef461276286ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00029_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref> <ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
-        <definition>break end catalysisMatrix</definition>
-        <argsstring>(continua, 1:7)</argsstring>
-        <name>catalysisMatrix</name>
-        <param>
-          <type><ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
-        </param>
-        <param>
-          <type>1:7</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="51" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1aa5604b86cead7c2e2115f5e809f94465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>outliersMatrix</definition>
-        <argsstring>(outRows, 1:6)</argsstring>
-        <name>outliersMatrix</name>
-        <param>
-          <type><ref refid="a00030_1a60cfb1ca20cbbc81b85a8f56658b7c99" kindref="member">outRows</ref></type>
-        </param>
-        <param>
-          <type>1:6</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="72" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1a2d244f3b52c3ed088d60a879743dde0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>if</definition>
-        <argsstring>((outliersMatrix(i, 2)==0)&amp;&amp;(check2==1 &amp;&amp;check3==1))||(outliersMatrix(i</argsstring>
-        <name>if</name>
-        <param>
-          <type>(<ref refid="a00030_1a9733b61dd859b1133aa3aa849cf70cbc" kindref="member">outliersMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 2)==0)&amp;&amp;(<ref refid="a00030_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref>==1 &amp;&amp;<ref refid="a00030_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref>==1)</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="84" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1ab372fd9c8bb38cf3c78e995c0698b0ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>killersMatrix</definition>
-        <argsstring>(killRows, 1:6)</argsstring>
-        <name>killersMatrix</name>
-        <param>
-          <type><ref refid="a00030_1a0e22d9868b850c50dfc13f5d28db8c30" kindref="member">killRows</ref></type>
-        </param>
-        <param>
-          <type>1:6</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="86" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1af25e9bc98875e5cf5352941b503dfb13" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>id</type>
-        <definition>id KSRows</definition>
-        <argsstring>()</argsstring>
-        <name>KSRows</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="91" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1a9733b61dd859b1133aa3aa849cf70cbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
-        <definition>if outliersMatrix</definition>
-        <argsstring>(i, 2)</argsstring>
-        <name>outliersMatrix</name>
-        <param>
-          <type><ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
-        </param>
-        <param>
-          <type>2</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="98" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1a1ca01da7acca382062218cc1d882bc94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>KSMatrix</definition>
-        <argsstring>(KSRows, 1:6)</argsstring>
-        <name>KSMatrix</name>
-        <param>
-          <type><ref refid="a00030_1af25e9bc98875e5cf5352941b503dfb13" kindref="member">KSRows</ref></type>
-        </param>
-        <param>
-          <type>1:6</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="100" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1ab18f9eabd5f873bd17d226d786bc22df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>KSMatrix</definition>
-        <argsstring>(i,:)</argsstring>
-        <name>KSMatrix</name>
-        <param>
-          <type><ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
-        </param>
-        <param>
-          <type>:</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="112" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1a01d55766b8058903dd360b4bda71f9f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>if</definition>
-        <argsstring>((outliersMatrix(i, 2)==0)&amp;&amp;(check2==0 &amp;&amp;check3==0))||(outliersMatrix(i</argsstring>
-        <name>if</name>
-        <param>
-          <type>(<ref refid="a00030_1a9733b61dd859b1133aa3aa849cf70cbc" kindref="member">outliersMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 2)==0)&amp;&amp;(<ref refid="a00030_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref>==0 &amp;&amp;<ref refid="a00030_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref>==0)</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="134" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1aeea853e888e4614a63ee71bd8368439c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>SpammersMatrix</definition>
-        <argsstring>(SpamRows, 1:6)</argsstring>
-        <name>SpammersMatrix</name>
-        <param>
-          <type><ref refid="a00030_1aa9cffa4c2d9962c67a719b05a414e478" kindref="member">SpamRows</ref></type>
-        </param>
-        <param>
-          <type>1:6</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="136" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1a85b94912a98c3feaa48ffdd525d4ff9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00030_1aa9cffa4c2d9962c67a719b05a414e478" kindref="member">SpamRows</ref></type>
-        <definition>if SpamRows SpammersMatrix</definition>
-        <argsstring>(:, 7)</argsstring>
-        <name>SpammersMatrix</name>
-        <param>
-          <type>:</type>
-        </param>
-        <param>
-          <type>7</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="141" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1a7688a802090342c369d2d6040e3e8a00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>SpammersMatrix</definition>
-        <argsstring>(i,:)</argsstring>
-        <name>SpammersMatrix</name>
-        <param>
-          <type><ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
-        </param>
-        <param>
-          <type>:</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="156" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00030_1a5bca8ffaecd726e70d088f2e00c9b4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00031_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></type>
-        <definition>else SpammersMatrix</definition>
-        <argsstring>(i, 7)</argsstring>
-        <name>SpammersMatrix</name>
-        <param>
-          <type><ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref></type>
-        </param>
-        <param>
-          <type>7</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m" line="158" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m" line="13" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -799,179 +194,99 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="a00030_1a1faaaae288fc8ca4ed1751049aa2f84f" refkind="member"><highlight class="normal"><ref refid="a00029_1a1faaaae288fc8ca4ed1751049aa2f84f" kindref="member">blocked</ref><sp/>=<sp/>0:5;</highlight></codeline>
+<codeline lineno="1"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="a00030_1aa7ae495ee970be20d992bedf6f9f8280" kindref="member">stats</ref>()</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal">%<sp/>creating<sp/><ref refid="a00021" kindref="compound">reactions</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="4" refid="a00030_1ad75735665492cabd747370126464fddf" refkind="member"><highlight class="normal"><ref refid="a00027_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref><sp/>=<sp/>dir(</highlight><highlight class="stringliteral">&apos;reactions*&apos;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="5" refid="a00030_1a4c72dba1fe2ee2fbcc699262a8d0c624" refkind="member"><highlight class="normal"><ref refid="a00027_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref><sp/>=<sp/><ref refid="a00027_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>(length(<ref refid="a00027_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>)-1).name;</highlight></codeline>
-<codeline lineno="6" refid="a00030_1ae9011d40c6f13e68e6f07156e0da7c5d" refkind="member"><highlight class="normal"><ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref><sp/>=<sp/>fopen(<ref refid="a00027_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref>);</highlight></codeline>
-<codeline lineno="7" refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" refkind="member"><highlight class="normal"><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="8" refid="a00030_1ac52097a2745fcef31eb175d2e9485845" refkind="member"><highlight class="normal"><ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>&gt;<sp/>0</highlight></codeline>
-<codeline lineno="10" refid="a00030_1a436a6968124e560649654a4abbd9dac6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a436a6968124e560649654a4abbd9dac6" kindref="member">rValues</ref><sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref>,</highlight><highlight class="stringliteral">&apos;%d&apos;</highlight><highlight class="normal">,7);</highlight></codeline>
-<codeline lineno="11" refid="a00030_1a6bd08e37edf4151f5f6d1fc27a6f227a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00027_1a436a6968124e560649654a4abbd9dac6" kindref="member">rValues</ref>);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref>(<ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref>,1:6)<sp/>=<sp/><ref refid="a00027_1a436a6968124e560649654a4abbd9dac6" kindref="member">rValues</ref>(1:6);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref>+1;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(<ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref>);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal">%dividing<sp/>into<sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref><sp/><ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref></highlight></codeline>
-<codeline lineno="22" refid="a00030_1ad3aa27d88a7e9d77d8334155860269bb" refkind="member"><highlight class="normal"><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="23" refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" refkind="member"><highlight class="normal"><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">[rrm<sp/>crm]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref>);</highlight></codeline>
-<codeline lineno="25" refid="a00030_1a1a691fb4f955887edfa538e91479fafe" refkind="member"><highlight class="normal"><ref refid="a00027_1a1a691fb4f955887edfa538e91479fafe" kindref="member">cleavagesMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="26" refid="a00030_1afaba8eef2f8f4e4dda2e893a19e55a94" refkind="member"><highlight class="normal"><ref refid="a00027_1afaba8eef2f8f4e4dda2e893a19e55a94" kindref="member">condensationsMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="27" refid="a00030_1ae938073aeda31fad21f2546017d92d4d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>1:rrm</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref>(<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,2)<sp/>==<sp/>0</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref><sp/>=<sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref>+1;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a1a691fb4f955887edfa538e91479fafe" kindref="member">cleavagesMatrix</ref>(<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,1:6)<sp/>=<sp/><ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref>(<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,1:6);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref><sp/>=<sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref>+1;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1afaba8eef2f8f4e4dda2e893a19e55a94" kindref="member">condensationsMatrix</ref>(<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,1:6)<sp/>=<sp/><ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref>(<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,1:6);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="36"><highlight class="normal">clear<sp/><ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">%<sp/>creating<sp/><ref refid="a00012" kindref="compound">catalysis</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="39" refid="a00030_1a9eab57ccb42a39c704f47dc30e4f4515" refkind="member"><highlight class="normal"><ref refid="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref><sp/>=<sp/>dir(</highlight><highlight class="stringliteral">&apos;catalysis*&apos;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="40" refid="a00030_1a33e70cf5b45cb59005b82d30202f0b69" refkind="member"><highlight class="normal"><ref refid="a00027_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref><sp/>=<sp/><ref refid="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>(length(<ref refid="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>)).name;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref><sp/>=<sp/>fopen(<ref refid="a00027_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref>);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="43" refid="a00030_1a0810027f58d6be965e44b7b84c44ace8" refkind="member"><highlight class="normal"><ref refid="a00027_1a0810027f58d6be965e44b7b84c44ace8" kindref="member">catalysisMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>&gt;<sp/>0</highlight></codeline>
-<codeline lineno="45" refid="a00030_1ad4ba7701967c1da20171228afccb7081" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1ad4ba7701967c1da20171228afccb7081" kindref="member">cValues</ref><sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref>,</highlight><highlight class="stringliteral">&apos;%f&apos;</highlight><highlight class="normal">,7);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00027_1ad4ba7701967c1da20171228afccb7081" kindref="member">cValues</ref>);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a0810027f58d6be965e44b7b84c44ace8" kindref="member">catalysisMatrix</ref>(<ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref>,1:7)<sp/>=<sp/><ref refid="a00027_1ad4ba7701967c1da20171228afccb7081" kindref="member">cValues</ref>(1:7);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref>+1;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(<ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref>);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal">%<sp/>identifying<sp/></highlight><highlight class="stringliteral">&quot;outliers&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="a00030_1aeea253cb98a56047ef20ceed86e2f0ea" refkind="member"><highlight class="normal"><ref refid="a00029_1aeea253cb98a56047ef20ceed86e2f0ea" kindref="member">reactionsCounters</ref><sp/>=<sp/>sort(<ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref>(:,6))</highlight><highlight class="stringliteral">&apos;;</highlight></codeline>
-<codeline lineno="58" refid="a00030_1ab4459bcd3f7a26410560d9bd951f12bd" refkind="member"><highlight class="stringliteral">fpc<sp/>=<sp/>ceil(rrm/20*19);</highlight></codeline>
-<codeline lineno="59" refid="a00030_1a7ec5b1f1e07b66a5d6fc972cb8b03c1f" refkind="member"><highlight class="stringliteral">outliersCounter<sp/>=<sp/>reactionsCounters(fpc:rrm);</highlight></codeline>
-<codeline lineno="60"><highlight class="stringliteral">for<sp/>i<sp/>=<sp/>length(outliersCounter):-1:1</highlight></codeline>
-<codeline lineno="61"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>outliersCounter(i)<sp/>&lt;<sp/>1000</highlight></codeline>
-<codeline lineno="62"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outliersCounter(i)<sp/>=<sp/>[];</highlight></codeline>
-<codeline lineno="63"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="64"><highlight class="stringliteral">end</highlight></codeline>
-<codeline lineno="65"><highlight class="stringliteral">clear<sp/>i;</highlight></codeline>
-<codeline lineno="66" refid="a00030_1a60cfb1ca20cbbc81b85a8f56658b7c99" refkind="member"><highlight class="stringliteral">outRows<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="67" refid="a00030_1ad8a18b407726bf44299c9bcf5d1389ff" refkind="member"><highlight class="stringliteral">outliersMatrix<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="68"><highlight class="stringliteral">for<sp/>i<sp/>=<sp/>1:rrm</highlight></codeline>
-<codeline lineno="69"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>possible<sp/>=<sp/>ismember(reactionsMatrix(i,6),outliersCounter);</highlight></codeline>
-<codeline lineno="70" refid="a00030_1a07c9e68cdbafe572c04d3112d64deb88" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>possible<sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="71"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outRows<sp/>=<sp/>outRows+1;</highlight></codeline>
-<codeline lineno="72"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outliersMatrix(outRows,1:6)<sp/>=<sp/>reactionsMatrix(i,1:6);</highlight></codeline>
-<codeline lineno="73"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="74"><highlight class="stringliteral">end</highlight></codeline>
-<codeline lineno="75"><highlight class="stringliteral">clear<sp/>i;</highlight></codeline>
-<codeline lineno="76"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="77"><highlight class="stringliteral">%<sp/>identifying<sp/>&quot;killers&quot;</highlight></codeline>
-<codeline lineno="78" refid="a00030_1a0e22d9868b850c50dfc13f5d28db8c30" refkind="member"><highlight class="stringliteral">killRows<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="79" refid="a00030_1a929016802e1ede2217a41240a6974fa6" refkind="member"><highlight class="stringliteral">killersMatrix<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="80"><highlight class="stringliteral">for<sp/>i<sp/>=<sp/>1:outRows</highlight></codeline>
-<codeline lineno="81"><highlight class="stringliteral"><sp/><sp/><sp/>check1<sp/>=<sp/>ismember(outliersMatrix(i,3),blocked);</highlight></codeline>
-<codeline lineno="82" refid="a00030_1a98a8838a85ed24032563a44271b1525a" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/>check2<sp/>=<sp/>ismember(outliersMatrix(i,4),blocked);</highlight></codeline>
-<codeline lineno="83" refid="a00030_1adfd17509248a56986475a25ee50fe488" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/>check3<sp/>=<sp/>ismember(outliersMatrix(i,5),blocked);</highlight></codeline>
-<codeline lineno="84"><highlight class="stringliteral"><sp/><sp/><sp/>if<sp/>((outliersMatrix(i,2)<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>(check2<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>check3<sp/>==<sp/>1))<sp/>||<sp/>(outliersMatrix(i,2)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>check1<sp/>==<sp/>1)</highlight></codeline>
-<codeline lineno="85"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>killRows<sp/>=<sp/>killRows+1;</highlight></codeline>
-<codeline lineno="86"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>killersMatrix(killRows,1:6)<sp/>=<sp/>outliersMatrix(i,1:6);</highlight></codeline>
-<codeline lineno="87"><highlight class="stringliteral"><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="88"><highlight class="stringliteral">end</highlight></codeline>
-<codeline lineno="89"><highlight class="stringliteral">clear<sp/>i;</highlight></codeline>
-<codeline lineno="90"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="91"><highlight class="stringliteral">%<sp/>identifying<sp/>&quot;killer-spammers&quot;</highlight></codeline>
-<codeline lineno="92"><highlight class="stringliteral">KSRows<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="93" refid="a00030_1aea43faf8d3d68de03c645edc96b0c1c0" refkind="member"><highlight class="stringliteral">KSMatrix<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="94"><highlight class="stringliteral">for<sp/>i<sp/>=<sp/>1:outRows</highlight></codeline>
-<codeline lineno="95"><highlight class="stringliteral"><sp/><sp/><sp/>check2<sp/>=<sp/>ismember(outliersMatrix(i,4),blocked);</highlight></codeline>
-<codeline lineno="96"><highlight class="stringliteral"><sp/><sp/><sp/>check3<sp/>=<sp/>ismember(outliersMatrix(i,5),blocked);</highlight></codeline>
-<codeline lineno="97" refid="a00030_1ab21c5bac10f7ac73374c002e908df5ac" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/>check4<sp/>=<sp/>xor(check2,check3);</highlight></codeline>
-<codeline lineno="98"><highlight class="stringliteral"><sp/><sp/><sp/>if<sp/>outliersMatrix(i,2)<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>check4<sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="99"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KSRows<sp/>=<sp/>KSRows+1;</highlight></codeline>
-<codeline lineno="100"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KSMatrix(KSRows,1:6)<sp/>=<sp/>outliersMatrix(i,1:6);</highlight></codeline>
-<codeline lineno="101"><highlight class="stringliteral"><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="102"><highlight class="stringliteral">end</highlight></codeline>
-<codeline lineno="103"><highlight class="stringliteral">clear<sp/>i;</highlight></codeline>
-<codeline lineno="104"><highlight class="stringliteral">if<sp/>KSRows<sp/>&gt;<sp/>0</highlight></codeline>
-<codeline lineno="105"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>KSRows:-1:1</highlight></codeline>
-<codeline lineno="106"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>KSMatrix(i,4)<sp/>&lt;<sp/>6</highlight></codeline>
-<codeline lineno="107"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check5<sp/>=<sp/>ismember(KSMatrix(i,5),condensationsMatrix(:,4:5));</highlight></codeline>
-<codeline lineno="108" refid="a00030_1a0c9b097ea561ab0f23a69197786a243a" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check6<sp/>=<sp/>ismember(KSMatrix(i,5),cleavagesMatrix(:,3));</highlight></codeline>
-<codeline lineno="109" refid="a00030_1a0bbe7d2ceb7b248f0826d069d5a1b735" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check7<sp/>=<sp/>ismember(KSMatrix(i,5),catalysisMatrix(:,2));</highlight></codeline>
-<codeline lineno="110" refid="a00030_1abee07c73829351d18ba356c86e3e096d" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>check5<sp/>==<sp/>1<sp/>||<sp/>check6<sp/>==<sp/>1<sp/>||<sp/>check7<sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="111"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KSRows<sp/>=<sp/>KSRows-1;</highlight></codeline>
-<codeline lineno="112"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KSMatrix(i,:)<sp/>=<sp/>[];</highlight></codeline>
-<codeline lineno="113"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="114"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
-<codeline lineno="115"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check5<sp/>=<sp/>ismember(KSMatrix(i,4),condensationsMatrix(:,4:5));</highlight></codeline>
-<codeline lineno="116"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check6<sp/>=<sp/>ismember(KSMatrix(i,4),cleavagesMatrix(:,3));</highlight></codeline>
-<codeline lineno="117"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check7<sp/>=<sp/>ismember(KSMatrix(i,4),catalysisMatrix(:,2));</highlight></codeline>
-<codeline lineno="118"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>check5<sp/>==<sp/>1<sp/>||<sp/>check6<sp/>==<sp/>1<sp/>||<sp/>check7<sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="119"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KSRows<sp/>=<sp/>KSRows-1;</highlight></codeline>
-<codeline lineno="120"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KSMatrix(i,:)<sp/>=<sp/>[];</highlight></codeline>
-<codeline lineno="121"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="122"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="123"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="124"><highlight class="stringliteral">end</highlight></codeline>
-<codeline lineno="125"><highlight class="stringliteral">clear<sp/>i;</highlight></codeline>
-<codeline lineno="126"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="127"><highlight class="stringliteral">%<sp/>identifying<sp/>&quot;spammers&quot;</highlight></codeline>
-<codeline lineno="128" refid="a00030_1aa9cffa4c2d9962c67a719b05a414e478" refkind="member"><highlight class="stringliteral">SpamRows<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="129" refid="a00030_1af1801174c9397e7fad0394203f120c31" refkind="member"><highlight class="stringliteral">SpammersMatrix<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="130"><highlight class="stringliteral">for<sp/>i<sp/>=<sp/>1:outRows</highlight></codeline>
-<codeline lineno="131"><highlight class="stringliteral"><sp/><sp/><sp/>check1<sp/>=<sp/>ismember(outliersMatrix(i,3),blocked);</highlight></codeline>
-<codeline lineno="132"><highlight class="stringliteral"><sp/><sp/><sp/>check2<sp/>=<sp/>ismember(outliersMatrix(i,4),blocked);</highlight></codeline>
-<codeline lineno="133"><highlight class="stringliteral"><sp/><sp/><sp/>check3<sp/>=<sp/>ismember(outliersMatrix(i,5),blocked);</highlight></codeline>
-<codeline lineno="134"><highlight class="stringliteral"><sp/><sp/><sp/>if<sp/>((outliersMatrix(i,2)<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>(check2<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>check3<sp/>==<sp/>0))<sp/>||<sp/>(outliersMatrix(i,2)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>check1<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="135"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpamRows<sp/>=<sp/>SpamRows+1;</highlight></codeline>
-<codeline lineno="136"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpammersMatrix(SpamRows,1:6)<sp/>=<sp/>outliersMatrix(i,1:6);</highlight></codeline>
-<codeline lineno="137"><highlight class="stringliteral"><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="138"><highlight class="stringliteral">end</highlight></codeline>
-<codeline lineno="139"><highlight class="stringliteral">clear<sp/>i;</highlight></codeline>
-<codeline lineno="140"><highlight class="stringliteral">if<sp/>SpamRows<sp/>&gt;<sp/>0</highlight></codeline>
-<codeline lineno="141"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>SpammersMatrix(:,7)<sp/>=<sp/>zeros(SpamRows,1);</highlight></codeline>
-<codeline lineno="142"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>SpamRows:-1:1</highlight></codeline>
-<codeline lineno="143"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>SpammersMatrix(i,2)<sp/>==<sp/>0</highlight></codeline>
-<codeline lineno="144"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check5<sp/>=<sp/>ismember(SpammersMatrix(i,4),condensationsMatrix(:,4:5));</highlight></codeline>
-<codeline lineno="145"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check6<sp/>=<sp/>ismember(SpammersMatrix(i,4),cleavagesMatrix(:,3));</highlight></codeline>
-<codeline lineno="146"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check7<sp/>=<sp/>ismember(SpammersMatrix(i,4),catalysisMatrix(:,2));</highlight></codeline>
-<codeline lineno="147"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>check5<sp/>==<sp/>1<sp/>||<sp/>check6<sp/>==<sp/>1<sp/>||<sp/>check7<sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="148"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpammersMatrix(i,7)<sp/>=<sp/>SpammersMatrix(i,5);</highlight></codeline>
-<codeline lineno="149"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="150"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check5<sp/>=<sp/>ismember(SpammersMatrix(i,5),condensationsMatrix(:,4:5));</highlight></codeline>
-<codeline lineno="151"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check6<sp/>=<sp/>ismember(SpammersMatrix(i,5),cleavagesMatrix(:,3));</highlight></codeline>
-<codeline lineno="152"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check7<sp/>=<sp/>ismember(SpammersMatrix(i,5),catalysisMatrix(:,2));</highlight></codeline>
-<codeline lineno="153"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>check5<sp/>==<sp/>1<sp/>||<sp/>check6<sp/>==<sp/>1<sp/>||<sp/>check7<sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="154"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>SpammersMatrix(i,7)<sp/>&gt;<sp/>0</highlight></codeline>
-<codeline lineno="155"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpamRows<sp/>=<sp/>SpamRows-1;</highlight></codeline>
-<codeline lineno="156"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpammersMatrix(i,:)<sp/>=<sp/>[];</highlight></codeline>
-<codeline lineno="157"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
-<codeline lineno="158"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpammersMatrix(i,7)<sp/>=<sp/>SpammersMatrix(i,4);</highlight></codeline>
-<codeline lineno="159"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="160"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="161"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
-<codeline lineno="162"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check5<sp/>=<sp/>ismember(SpammersMatrix(i,3),condensationsMatrix(:,4:5));</highlight></codeline>
-<codeline lineno="163"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check6<sp/>=<sp/>ismember(SpammersMatrix(i,3),cleavagesMatrix(:,3));</highlight></codeline>
-<codeline lineno="164"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check7<sp/>=<sp/>ismember(SpammersMatrix(i,3),catalysisMatrix(:,2));</highlight></codeline>
-<codeline lineno="165"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>check5<sp/>==<sp/>1<sp/>||<sp/>check6<sp/>==<sp/>1<sp/>||<sp/>check7<sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="166"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpamRows<sp/>=<sp/>SpamRows-1;</highlight></codeline>
-<codeline lineno="167"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpammersMatrix(i,:)<sp/>=<sp/>[];</highlight></codeline>
-<codeline lineno="168"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="169"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="170"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>end</highlight></codeline>
-<codeline lineno="171"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
-<codeline lineno="172"><highlight class="stringliteral">end</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">%<sp/>clear<sp/>all<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">%<sp/>params.path<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN2&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7" refid="a00030_1a5318eae09f2b8ac76b2d6df39ba9c1cd" refkind="member"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="8" refid="a00030_1aa9758857dd92f7845934f06daa7c4120" refkind="member"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="9" refid="a00030_1a4b295f592934e78a05958a54046ceb68" refkind="member"><highlight class="normal">%<sp/>params.showFig<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">%<sp/><ref refid="a00030_1a18a344cbdf9b3218a438bca78547ab9e" kindref="member">concAnalysis</ref>(params)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">%<sp/>clear<sp/>all<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">%<sp/>params.path<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN3&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">%<sp/>params.showFig<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">%<sp/><ref refid="a00030_1a18a344cbdf9b3218a438bca78547ab9e" kindref="member">concAnalysis</ref>(params)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">%<sp/>clear<sp/>all<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">%<sp/>params.path<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN4&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">%<sp/>params.showFig<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">%<sp/><ref refid="a00030_1a18a344cbdf9b3218a438bca78547ab9e" kindref="member">concAnalysis</ref>(params)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">%<sp/><ref refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN2&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">%<sp/>[out]<sp/>=<sp/>timesAnalysis(<ref refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">%<sp/><ref refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN3&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">%<sp/>[out]<sp/>=<sp/>timesAnalysis(<ref refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">%<sp/><ref refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN4&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">%<sp/>[out]<sp/>=<sp/>timesAnalysis(<ref refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">%<sp/>params.tmpPath<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN2&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57" refid="a00030_1a63b4c2789d7e1513024181d12e4f1b6b" refkind="member"><highlight class="normal">%<sp/>params.figureVisible<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">%<sp/>params.deltaT<sp/>=10;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">%<sp/>%[outa]<sp/>=<sp/>allTimesAnalysis(params)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">%<sp/>params.tmpPath<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN3&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">%<sp/>params.figureVisible<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">%<sp/>params.deltaT<sp/>=10;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">%<sp/>[outb]<sp/>=<sp/>allTimesAnalysis(params)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">%<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">%<sp/>params.tmpPath<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN4&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">%<sp/>params.figureVisible<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">%<sp/>params.deltaT<sp/>=10;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">%<sp/>[outc]<sp/>=<sp/>allTimesAnalysis(params)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">close<sp/>all</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">clear<sp/>all</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">params.<ref refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/>&apos;~/Documents/simPanini/oldSimsReactor/panini/reactionIN4/&apos;;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">params.<ref refid="a00030_1a4b295f592934e78a05958a54046ceb68" kindref="member">showFig</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="83" refid="a00030_1aa022cbb28f80299d572def08e7a5ccfd" refkind="member"><highlight class="normal">params.<ref refid="a00022_1aa022cbb28f80299d572def08e7a5ccfd" kindref="member">threshold</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="a00030_1afb6aa83fb78c663f3b39be2380842a8b" refkind="member"><highlight class="normal">params.<ref refid="a00022_1abd7ce2c4bf5f563b1e70731f58e8c57d" kindref="member">decayTime</ref><sp/>=<sp/>10;<sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="a00030_1a4e4b89515d35d0cba5873e282e55dc8c" refkind="member"><highlight class="normal">params.<ref refid="a00030_1a4e4b89515d35d0cba5873e282e55dc8c" kindref="member">tmpResFold</ref><sp/>=<sp/>&apos;res&apos;;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="a00030_1ab3d8fca9a15f5a064b07181a35ebdbb7" refkind="member"><highlight class="normal">params.<ref refid="a00030_1ab3d8fca9a15f5a064b07181a35ebdbb7" kindref="member">distinctiveSubStr</ref><sp/>=<sp/>&apos;sim&apos;;<sp/></highlight></codeline>
+<codeline lineno="87" refid="a00030_1a71a9d71e2c994a7a8552d39b41b6e256" refkind="member"><highlight class="normal">params.<ref refid="a00030_1a71a9d71e2c994a7a8552d39b41b6e256" kindref="member">tmpIDsim</ref><sp/>=<sp/>&apos;5&apos;;</highlight></codeline>
+<codeline lineno="88" refid="a00030_1a3b01c97f207a2997c3bd0c2718441509" refkind="member"><highlight class="normal">params.<ref refid="a00022_1a3b01c97f207a2997c3bd0c2718441509" kindref="member">tmpRctFileToLoad</ref><sp/>=<sp/>&apos;&apos;;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="a00030_1ae5d21adddbfe36d5b10d43a2e8b39123" refkind="member"><highlight class="normal">params.<ref refid="a00022_1ae5d21adddbfe36d5b10d43a2e8b39123" kindref="member">tmpRctSUBFileToLoad</ref><sp/>=<sp/>&apos;&apos;;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><ref refid="a00022_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref><sp/>=<sp/><ref refid="a00026_1a56bd5c817530f9b305b5375d6509978a" kindref="member">generalConcentrationOverThreshold</ref>(params)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KSSearch.m"/>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/old/stats.m"/>
   </compounddef>
 </doxygen>

@@ -1,19 +1,167 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
-  <compounddef id="a00011" kind="page">
-    <compoundname>index</compoundname>
-    <title>Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.8 (20131212.64)</title>
-    <innerpage refid="a00002">Essential informations</innerpage>
-    <innerpage refid="a00004">Initial Data Structures</innerpage>
-    <innerpage refid="a00006">Outcomes</innerpage>
-    <innerpage refid="a00008">Gillespie Class</innerpage>
-    <innerpage refid="a00010">The initializator (a very brief description)</innerpage>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="a00011" kind="class" prot="public">
+    <compoundname>MTRand53</compoundname>
+    <basecompoundref refid="a00013" prot="public" virt="non-virtual">MTRand_int32</basecompoundref>
+    <includes refid="a00085" local="no">mtrand.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="a00011_1a24711c9e6e5ee72715f34515d1f1939a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MTRand53::MTRand53</definition>
+        <argsstring>()</argsstring>
+        <name>MTRand53</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/mtrand.h" line="141" column="1" bodyfile="/home/ale/Documents/GIT/carness/mtrand.h" bodystart="141" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="a00011_1ad800887e15d4095f22facdb67f270c5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MTRand53::MTRand53</definition>
+        <argsstring>(unsigned long seed)</argsstring>
+        <name>MTRand53</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/mtrand.h" line="142" column="1" bodyfile="/home/ale/Documents/GIT/carness/mtrand.h" bodystart="142" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="a00011_1ac77b190d3ac27adea2d2c6c2ce2347c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MTRand53::MTRand53</definition>
+        <argsstring>(const unsigned long *seed, int size)</argsstring>
+        <name>MTRand53</name>
+        <param>
+          <type>const unsigned long *</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/mtrand.h" line="143" column="1" bodyfile="/home/ale/Documents/GIT/carness/mtrand.h" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="a00011_1a947a6a7afd0c8a17612cda3faa705a75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MTRand53::~MTRand53</definition>
+        <argsstring>()</argsstring>
+        <name>~MTRand53</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/mtrand.h" line="144" column="1" bodyfile="/home/ale/Documents/GIT/carness/mtrand.h" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="a00011_1ab6657cb5349f39bc4553d3a970458b45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MTRand53::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/mtrand.h" line="145" column="1" bodyfile="/home/ale/Documents/GIT/carness/mtrand.h" bodystart="145" bodyend="147"/>
+        <references refid="a00013_1abacdfa346255baeac69d29bb57f29b22" compoundref="a00085" startline="85" endline="94">MTRand_int32::rand_int32</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="a00011_1a1c5ef2c68542730bb5d90d3b80aabf96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MTRand53::MTRand53</definition>
+        <argsstring>(const MTRand53 &amp;)</argsstring>
+        <name>MTRand53</name>
+        <param>
+          <type>const <ref refid="a00011" kindref="compound">MTRand53</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/mtrand.h" line="149" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00011_1a751b892577cc9a7703dc22a7e6b8a65f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MTRand53::operator=</definition>
+        <argsstring>(const MTRand53 &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="a00011" kindref="compound">MTRand53</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/mtrand.h" line="150" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>Alessandro Filisetti </para></simplesect>
-<simplesect kind="version"><para>4.8 (20131212.64) </para></simplesect>
-<simplesect kind="date"><para>2013-12-12 sourceforge repository <ndash/> <ulink url="https://carness.svn.sourceforge.net/svnroot/carness/">https://carness.svn.sourceforge.net/svnroot/carness/</ulink> git repository <ndash/> <ulink url="https://github.com/paxelito/carness">https://github.com/paxelito/carness</ulink></para></simplesect>
-This manual is divided in the following sections:<itemizedlist>
-<listitem><para><ref refid="a00002" kindref="compound">Essential informations</ref></para></listitem><listitem><para><ref refid="a00004" kindref="compound">Initial Data Structures</ref></para></listitem><listitem><para><ref refid="a00006" kindref="compound">Outcomes</ref></para></listitem><listitem><para><ref refid="a00008" kindref="compound">Gillespie Class</ref></para></listitem><listitem><para><ref refid="a00010" kindref="compound">The initializator (a very brief description)</ref> </para></listitem></itemizedlist>
-</para>    </detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="47">
+        <label>MTRand_int32</label>
+        <link refid="a00013"/>
+      </node>
+      <node id="46">
+        <label>MTRand53</label>
+        <link refid="a00011"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="49">
+        <label>MTRand_int32</label>
+        <link refid="a00013"/>
+      </node>
+      <node id="48">
+        <label>MTRand53</label>
+        <link refid="a00011"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ale/Documents/GIT/carness/mtrand.h" line="139" column="1" bodyfile="/home/ale/Documents/GIT/carness/mtrand.h" bodystart="139" bodyend="151"/>
+    <listofallmembers>
+      <member refid="a00011_1a24711c9e6e5ee72715f34515d1f1939a" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand53</name></member>
+      <member refid="a00011_1ad800887e15d4095f22facdb67f270c5e" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand53</name></member>
+      <member refid="a00011_1ac77b190d3ac27adea2d2c6c2ce2347c3" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand53</name></member>
+      <member refid="a00011_1a1c5ef2c68542730bb5d90d3b80aabf96" prot="private" virt="non-virtual"><scope>MTRand53</scope><name>MTRand53</name></member>
+      <member refid="a00013_1a034f223c086f5368bd220b02f2cc12a8" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand_int32</name></member>
+      <member refid="a00013_1ad30f7c63a6f1fb3c3b76b8ce6ffa0206" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand_int32</name></member>
+      <member refid="a00013_1a19acddb3910a7282517b2ffc398b92b4" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand_int32</name></member>
+      <member refid="a00011_1ab6657cb5349f39bc4553d3a970458b45" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>operator()</name></member>
+      <member refid="a00011_1a751b892577cc9a7703dc22a7e6b8a65f" prot="private" virt="non-virtual"><scope>MTRand53</scope><name>operator=</name></member>
+      <member refid="a00013_1abacdfa346255baeac69d29bb57f29b22" prot="protected" virt="non-virtual"><scope>MTRand53</scope><name>rand_int32</name></member>
+      <member refid="a00013_1a0c57076fe30358e0700a7ce1baa0ea27" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>seed</name></member>
+      <member refid="a00013_1a3cabc1e3445716236a570ffd2f69686d" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>seed</name></member>
+      <member refid="a00011_1a947a6a7afd0c8a17612cda3faa705a75" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>~MTRand53</name></member>
+      <member refid="a00013_1a364900abea0758d070ce89922159923a" prot="public" virt="virtual"><scope>MTRand53</scope><name>~MTRand_int32</name></member>
+    </listofallmembers>
   </compounddef>
 </doxygen>

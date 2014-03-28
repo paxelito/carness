@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['h',['h',['../a00060.html#a4dcf7c7c07592efb829c1ad515425a0e',1,'crea_catalizzatori.m']]],
-  ['ham_5fmiddlepreviousfile_5ffid',['HAM_middlePreviousFILE_FID',['../a00104.html#aaf0dd6e74d88a7cf2e909301b422c17d',1,'acsStatesAnalysis']]],
-  ['ham_5foverallresmatrix',['HAM_overallResMatrix',['../a00096.html#a46dc8cdfb545b64952370e51ff02336f',1,'acsAttractorAnalysis.HAM_overallResMatrix()'],['../a00097.html#a5e8d5d65865736555e76c3f04058ddd9',1,'acsAttractorAnalysisInTime.HAM_overallResMatrix()']]],
-  ['ham_5foverallresmatrixnoinflux',['HAM_overallResMatrixNOINFLUX',['../a00096.html#a9aa1adb46370d97e4f38e7f09eb7a97c',1,'acsAttractorAnalysis.HAM_overallResMatrixNOINFLUX()'],['../a00097.html#a6ea74abf4c94200ed1b27d892ecacc97',1,'acsAttractorAnalysisInTime.HAM_overallResMatrixNOINFLUX()']]],
-  ['ham_5fpreviousfile_5ffid',['HAM_previousFILE_FID',['../a00104.html#a3aad86d2cdbfb6f36b4b563b190d76c9',1,'acsStatesAnalysis']]],
-  ['ham_5fpreviousfile_5ffid_5fgroup',['HAM_previousFILE_FID_group',['../a00104.html#aa72272e636b1eafe39ed3367145433f2',1,'acsStatesAnalysis']]],
-  ['ham_5fpreviousnoinflux_5ffile_5ffid',['HAM_previousNOINFLUX_FILE_FID',['../a00104.html#a621d86851e86f9c83bb0add9ec741d7f',1,'acsStatesAnalysis']]],
-  ['ham_5fpreviousnoinflux_5ffile_5ffid_5fgroup',['HAM_previousNOINFLUX_FILE_FID_group',['../a00104.html#a092676cc95ddff57aac2aa077ce22d52',1,'acsStatesAnalysis']]],
-  ['ham_5fstartfile_5ffid',['HAM_startFILE_FID',['../a00104.html#abb14887e587e1107fc13046ad313077e',1,'acsStatesAnalysis']]],
-  ['ham_5fstartfile_5ffid_5fgroup',['HAM_startFILE_FID_group',['../a00104.html#ab74ecb2bab6a84c44274814862f2e96c',1,'acsStatesAnalysis']]],
-  ['ham_5fstartnoinflux_5ffile_5ffid',['HAM_startNOINFLUX_FILE_FID',['../a00104.html#ab8a3b402c0b418cc290889a5f6482280',1,'acsStatesAnalysis']]],
-  ['ham_5fstartnoinflux_5ffile_5ffid_5fgroup',['HAM_startNOINFLUX_FILE_FID_group',['../a00104.html#a4652c6dad393663e40970d7f6422c1d6',1,'acsStatesAnalysis']]],
-  ['high_5fdebug',['HIGH_DEBUG',['../a00072.html#ac2a71f467524d5299cbff5df96be638a',1,'acs_headers.h']]]
+  ['h',['h',['../a00054.html#a4dcf7c7c07592efb829c1ad515425a0e',1,'crea_catalizzatori.m']]],
+  ['ham_5fmiddlepreviousfile_5ffid',['HAM_middlePreviousFILE_FID',['../a00098.html#aaf0dd6e74d88a7cf2e909301b422c17d',1,'acsStatesAnalysis']]],
+  ['ham_5foverallresmatrix',['HAM_overallResMatrix',['../a00090.html#a46dc8cdfb545b64952370e51ff02336f',1,'acsAttractorAnalysis.HAM_overallResMatrix()'],['../a00091.html#a5e8d5d65865736555e76c3f04058ddd9',1,'acsAttractorAnalysisInTime.HAM_overallResMatrix()']]],
+  ['ham_5foverallresmatrixnoinflux',['HAM_overallResMatrixNOINFLUX',['../a00090.html#a9aa1adb46370d97e4f38e7f09eb7a97c',1,'acsAttractorAnalysis.HAM_overallResMatrixNOINFLUX()'],['../a00091.html#a6ea74abf4c94200ed1b27d892ecacc97',1,'acsAttractorAnalysisInTime.HAM_overallResMatrixNOINFLUX()']]],
+  ['ham_5fpreviousfile_5ffid',['HAM_previousFILE_FID',['../a00098.html#a3aad86d2cdbfb6f36b4b563b190d76c9',1,'acsStatesAnalysis']]],
+  ['ham_5fpreviousfile_5ffid_5fgroup',['HAM_previousFILE_FID_group',['../a00098.html#aa72272e636b1eafe39ed3367145433f2',1,'acsStatesAnalysis']]],
+  ['ham_5fpreviousnoinflux_5ffile_5ffid',['HAM_previousNOINFLUX_FILE_FID',['../a00098.html#a621d86851e86f9c83bb0add9ec741d7f',1,'acsStatesAnalysis']]],
+  ['ham_5fpreviousnoinflux_5ffile_5ffid_5fgroup',['HAM_previousNOINFLUX_FILE_FID_group',['../a00098.html#a092676cc95ddff57aac2aa077ce22d52',1,'acsStatesAnalysis']]],
+  ['ham_5fstartfile_5ffid',['HAM_startFILE_FID',['../a00098.html#abb14887e587e1107fc13046ad313077e',1,'acsStatesAnalysis']]],
+  ['ham_5fstartfile_5ffid_5fgroup',['HAM_startFILE_FID_group',['../a00098.html#ab74ecb2bab6a84c44274814862f2e96c',1,'acsStatesAnalysis']]],
+  ['ham_5fstartnoinflux_5ffile_5ffid',['HAM_startNOINFLUX_FILE_FID',['../a00098.html#ab8a3b402c0b418cc290889a5f6482280',1,'acsStatesAnalysis']]],
+  ['ham_5fstartnoinflux_5ffile_5ffid_5fgroup',['HAM_startNOINFLUX_FILE_FID_group',['../a00098.html#a4652c6dad393663e40970d7f6422c1d6',1,'acsStatesAnalysis']]],
+  ['high_5fdebug',['HIGH_DEBUG',['../a00066.html#ac2a71f467524d5299cbff5df96be638a',1,'acs_headers.h']]]
 ];

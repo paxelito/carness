@@ -1,412 +1,258 @@
-\hypertarget{a00107}{\section{init Namespace Reference}
-\label{a00107}\index{init@{init}}
+\hypertarget{a00107}{\section{lib.\-graph.\-raf Namespace Reference}
+\label{a00107}\index{lib.\-graph.\-raf@{lib.\-graph.\-raf}}
 }
-\subsection*{Variables}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-tuple \hyperlink{a00107_a17491bcc04dd0e62b17c8faf6a87d3d5}{parser}
+def \hyperlink{a00107_a56510e9067d8a6c8f90847d6656ce709}{generate\-Closure}
 \item 
-tuple \hyperlink{a00107_a4e87f8861e72deb9e58cf2e108dbab20}{args} = parser.\-parse\-\_\-args()
+def \hyperlink{a00107_a9896a4198e08978afb80e86697f1bbd0}{R\-Acondition}
 \item 
-string \hyperlink{a00107_aa46e7398812b953383a240300e416857}{ndn} = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'
+def \hyperlink{a00107_a160a90fb55ff323fc86fcdc65b30b90f}{Fcondition}
 \item 
-tuple \hyperlink{a00107_a676579aed104d765823ab7523d9e0c08}{newdir\-All\-Results} = os.\-path.\-join(args.\-str\-Out, \hyperlink{a00107_aa46e7398812b953383a240300e416857}{ndn})
+def \hyperlink{a00107_aaeb3a479f24daf493cc7052aef879d2c}{find\-Catfor\-R\-A\-F}
 \item 
-tuple \hyperlink{a00107_a5c0f5649a6185f0fa88487b57669ad07}{fname\-\_\-init\-Raf\-Res} = os.\-path.\-join(\hyperlink{a00107_a676579aed104d765823ab7523d9e0c08}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis.\-csv')
+def \hyperlink{a00107_a532a434a0b2fe187a3ff5a8319e4e3b4}{rafsearch}
 \item 
-tuple \hyperlink{a00107_aa74d50381fc7a0a61c58e36e8642a299}{fname\-\_\-init\-Raf\-Res\-S\-U\-M} = os.\-path.\-join(\hyperlink{a00107_a676579aed104d765823ab7523d9e0c08}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-S\-U\-M.\-csv')
+def \hyperlink{a00107_a3c9606e9d3274506955225eacf05877e}{raf\-Computation}
 \item 
-tuple \hyperlink{a00107_a8902eba9008d5468d73d3b18affccf85}{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = os.\-path.\-join(\hyperlink{a00107_a676579aed104d765823ab7523d9e0c08}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')
+def \hyperlink{a00107_a0b49d65e78e62c4ddd5022d4405f8286}{raf\-Dynamic\-Computation}
 \item 
-tuple \hyperlink{a00107_ac777b57613db6293d8f566c04d5bc964}{fname\-\_\-init\-Raf\-Res\-A\-L\-L} = os.\-path.\-join(\hyperlink{a00107_a676579aed104d765823ab7523d9e0c08}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')
-\item 
-tuple \hyperlink{a00107_adb4c39eb7111cadc79914ab74401a5d3}{fid\-\_\-init\-Raf\-Res} = open(\hyperlink{a00107_a5c0f5649a6185f0fa88487b57669ad07}{fname\-\_\-init\-Raf\-Res}, 'w')
-\item 
-tuple \hyperlink{a00107_a9fbc5638f3698e28c15bf998bec022aa}{fid\-\_\-init\-Raf\-Res\-S\-U\-M} = open(\hyperlink{a00107_aa74d50381fc7a0a61c58e36e8642a299}{fname\-\_\-init\-Raf\-Res\-S\-U\-M}, 'w')
-\item 
-tuple \hyperlink{a00107_a818d22b51f78f1eee3821a580660c9e2}{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = open(\hyperlink{a00107_a8902eba9008d5468d73d3b18affccf85}{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'w')
-\item 
-tuple \hyperlink{a00107_a8787bc34fe0a1a9291bed1df1bba18ef}{fid\-\_\-init\-Raf\-Res\-A\-L\-L} = open(\hyperlink{a00107_ac777b57613db6293d8f566c04d5bc964}{fname\-\_\-init\-Raf\-Res\-A\-L\-L}, 'w')
-\item 
-string \hyperlink{a00107_a4d64b5e90161e566743e13b037d5bb4f}{str\-To\-Write} = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\textbackslash{}t\-Cats\textbackslash{}tu\-R\-A\-F\textbackslash{}n\char`\"{}
-\item 
-tuple \hyperlink{a00107_a71b8eba3bc2ff1a4518715f5852ddfb2}{food\-List} = range(args.\-last\-Food+1)
-\item 
-tuple \hyperlink{a00107_ad18e8e57ac563f08da644cf831ff5d06}{avg\-Con} = dn.\-range\-Float(float(args.\-avg\-Con\mbox{[}0\mbox{]}), float(args.\-avg\-Con\mbox{[}1\mbox{]}), float(args.\-avg\-Con\mbox{[}2\mbox{]}))
-\item 
-int \hyperlink{a00107_a9e9ecd6b6e0ec81f0265763a95dedfc5}{raffound} = 0
-\item 
-list \hyperlink{a00107_aca44f11e84467e8090217b689da68785}{alphabet} = \mbox{[}'\hyperlink{a00069_ab4f8a2431d9ad6efec44b47971737c52}{A}', '\hyperlink{a00069_afb39b9efa52a33745c5e622fa358a97f}{B}'\mbox{]}
-\item 
-list \hyperlink{a00107_a8d00e8af90536956aca5bb64c22c08de}{species} = \mbox{[}$\,$\mbox{]}
-\item 
-int \hyperlink{a00107_ab7609fccbc57f56e33a59e0fc6865c54}{tot\-Species} = 2
-\item 
-tuple \hyperlink{a00107_ae9c65061d913ea2106e5c0adf13a6d97}{tot\-Cleavage} = \hyperlink{a00064_a59a869fb2b28d56dacd91c09e1dffc8d}{sum}(map(lambda x\-: len(\hyperlink{a00031_a7265972fe485274cfff77a9bb07b8fce}{x})-\/1,\hyperlink{a00022}{species}))
-\item 
-int \hyperlink{a00107_ab15c14228b0f2ce185a19b6c873b8ce9}{tot\-Cond} = \hyperlink{a00107_ab7609fccbc57f56e33a59e0fc6865c54}{tot\-Species}$\ast$$\ast$2
-\item 
-\hyperlink{a00107_acd62ae3eca9e5bffbf6a7686879339d1}{tot\-Rcts} = \hyperlink{a00107_ae9c65061d913ea2106e5c0adf13a6d97}{tot\-Cleavage}+\hyperlink{a00107_ab15c14228b0f2ce185a19b6c873b8ce9}{tot\-Cond}
-\item 
-tuple \hyperlink{a00107_a2352da2bf8926260466297c0bf68808f}{rct\-To\-Cat} = int(round(\hyperlink{a00107_acd62ae3eca9e5bffbf6a7686879339d1}{tot\-Rcts} $\ast$ \hyperlink{a00107_ab7609fccbc57f56e33a59e0fc6865c54}{tot\-Species} $\ast$ prob))
-\item 
-int \hyperlink{a00107_ad8ae32e9b09eefbb6f077913da522b75}{n\-Cleavage} = 0
-\item 
-int \hyperlink{a00107_ab565465a7f336d415249ebb7d7f2e602}{n\-Condensa} = 0
-\item 
-tuple \hyperlink{a00107_a689e8a7ea04880f709356e74372ed8c0}{init\-Species\-List\-Length} = len(\hyperlink{a00022}{species})
-\item 
-tuple \hyperlink{a00107_a28a7deb6c01f690c0ada719c98672c10}{conf} = (1,1,2000,0,200000,0,0,2,args.\-last\-Food,prob)
-\item 
-int \hyperlink{a00107_a5578d5c358ce48fc9cbe268371cafa4e}{rct\-Type} = 1
-\item 
-tuple \hyperlink{a00107_a14c236e42c754c3781ae1ae075d1dd4c}{mol\-To\-Cleav} = ran.\-choice(\hyperlink{a00022}{species}\mbox{[}len(\hyperlink{a00107_aca44f11e84467e8090217b689da68785}{alphabet})\-:\hyperlink{a00107_a689e8a7ea04880f709356e74372ed8c0}{init\-Species\-List\-Length}-\/1\mbox{]})
-\item 
-tuple \hyperlink{a00107_a21af3c3590a35942a68743431e4be468}{cut\-Pt} = ran.\-randint(1,len(\hyperlink{a00107_a14c236e42c754c3781ae1ae075d1dd4c}{mol\-To\-Cleav})-\/1)
-\item 
-list \hyperlink{a00107_abdc9a73a6617a3c7649719b7175a52de}{tmp1} = \hyperlink{a00107_a14c236e42c754c3781ae1ae075d1dd4c}{mol\-To\-Cleav}\mbox{[}0\-:\hyperlink{a00107_a21af3c3590a35942a68743431e4be468}{cut\-Pt}\mbox{]}
-\item 
-tuple \hyperlink{a00107_a4268c8384b04fda5f447ab8a9174a739}{tmp1id} = \hyperlink{a00060_a0cd6a44ffb07342cbc7e5ac33bfc9495}{species.\-index}(\hyperlink{a00107_abdc9a73a6617a3c7649719b7175a52de}{tmp1})
-\item 
-\hyperlink{a00107_a85397ecdb7b33b6db75aec3fc0185565}{find1} = True
-\item 
-list \hyperlink{a00107_aac2a39d0a54d416989842e539b8a6e36}{tmp2} = \hyperlink{a00107_a14c236e42c754c3781ae1ae075d1dd4c}{mol\-To\-Cleav}\mbox{[}cut\-Pt\-:len(\hyperlink{a00107_a14c236e42c754c3781ae1ae075d1dd4c}{mol\-To\-Cleav})\mbox{]}
-\item 
-tuple \hyperlink{a00107_a585d9a7eb6660a9d9a3fd706492f446a}{tmp2id} = \hyperlink{a00060_a0cd6a44ffb07342cbc7e5ac33bfc9495}{species.\-index}(\hyperlink{a00107_aac2a39d0a54d416989842e539b8a6e36}{tmp2})
-\item 
-tuple \hyperlink{a00107_a3793e9e2306513f12efbe52913cd540b}{sub1} = ran.\-choice(\hyperlink{a00022}{species}\mbox{[}\-:\hyperlink{a00107_a689e8a7ea04880f709356e74372ed8c0}{init\-Species\-List\-Length}-\/1\mbox{]})
-\item 
-tuple \hyperlink{a00107_a94eb5c8e5577c9e15b910e0ea541fbc0}{idsub1} = \hyperlink{a00060_a0cd6a44ffb07342cbc7e5ac33bfc9495}{species.\-index}(\hyperlink{a00107_a3793e9e2306513f12efbe52913cd540b}{sub1})
-\item 
-tuple \hyperlink{a00107_af7fcc401f9d78ede2d8f4aac2d1c9f91}{sub2} = ran.\-choice(\hyperlink{a00022}{species}\mbox{[}\-:\hyperlink{a00107_a689e8a7ea04880f709356e74372ed8c0}{init\-Species\-List\-Length}-\/1\mbox{]})
-\item 
-tuple \hyperlink{a00107_a25f83893748add8fe158b4a82fa420ed}{idsub2} = \hyperlink{a00060_a0cd6a44ffb07342cbc7e5ac33bfc9495}{species.\-index}(\hyperlink{a00107_af7fcc401f9d78ede2d8f4aac2d1c9f91}{sub2})
-\item 
-\hyperlink{a00107_af7e5559c4efc3ebbeb78f8b01885fc35}{prod} = \hyperlink{a00107_a3793e9e2306513f12efbe52913cd540b}{sub1}+\hyperlink{a00107_af7fcc401f9d78ede2d8f4aac2d1c9f91}{sub2}
-\item 
-tuple \hyperlink{a00107_ad4eeda1ac53564eda60cad5853199804}{tmpprodid} = \hyperlink{a00060_a0cd6a44ffb07342cbc7e5ac33bfc9495}{species.\-index}(\hyperlink{a00107_af7e5559c4efc3ebbeb78f8b01885fc35}{prod})
-\item 
-int \hyperlink{a00107_a78390f5622d850652ba7c5a68a5bad81}{catalyst} = -\/1
-\item 
-\hyperlink{a00107_a76711a7593abff643cb28c6a049eb208}{cat\-Found} = False
-\item 
-tuple \hyperlink{a00107_a6e719338dc9e70d7784d120431685d3f}{rafsets} = raf.\-raf\-Computation(\hyperlink{a00107_adb4c39eb7111cadc79914ab74401a5d3}{fid\-\_\-init\-Raf\-Res}, \hyperlink{a00107_a8787bc34fe0a1a9291bed1df1bba18ef}{fid\-\_\-init\-Raf\-Res\-A\-L\-L}, \hyperlink{a00107_a818d22b51f78f1eee3821a580660c9e2}{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'tmp\-Dir', prob, average\-Conn, rcts, cats, \hyperlink{a00107_a71b8eba3bc2ff1a4518715f5852ddfb2}{food\-List}, maxlength)
+def \hyperlink{a00107_aa4fb376eecb97a88efdb35aa15466c3b}{find\-R\-A\-Frcts}
 \end{DoxyCompactItemize}
 
 
-\subsection{Variable Documentation}
-\hypertarget{a00107_aca44f11e84467e8090217b689da68785}{\index{init@{init}!alphabet@{alphabet}}
-\index{alphabet@{alphabet}!init@{init}}
-\subsubsection[{alphabet}]{\setlength{\rightskip}{0pt plus 5cm}list init.\-alphabet = \mbox{[}'{\bf A}', '{\bf B}'\mbox{]}}}\label{a00107_aca44f11e84467e8090217b689da68785}
+\subsection{Function Documentation}
+\hypertarget{a00107_a160a90fb55ff323fc86fcdc65b30b90f}{\index{lib\-::graph\-::raf@{lib\-::graph\-::raf}!Fcondition@{Fcondition}}
+\index{Fcondition@{Fcondition}!lib::graph::raf@{lib\-::graph\-::raf}}
+\subsubsection[{Fcondition}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-raf.\-Fcondition (
+\begin{DoxyParamCaption}
+\item[{}]{tmp\-C\-L, }
+\item[{}]{tmp\-R\-A, }
+\item[{}]{rcts, }
+\item[{}]{debug = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{a00107_a160a90fb55ff323fc86fcdc65b30b90f}
 
 
-Definition at line 79 of file init.\-py.
+Definition at line 60 of file raf.\-py.
 
-\hypertarget{a00107_a4e87f8861e72deb9e58cf2e108dbab20}{\index{init@{init}!args@{args}}
-\index{args@{args}!init@{init}}
-\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-args = parser.\-parse\-\_\-args()}}\label{a00107_a4e87f8861e72deb9e58cf2e108dbab20}
 
 
-Definition at line 39 of file init.\-py.
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00107_a160a90fb55ff323fc86fcdc65b30b90f_icgraph}
+\end{center}
+\end{figure}
 
-\hypertarget{a00107_ad18e8e57ac563f08da644cf831ff5d06}{\index{init@{init}!avg\-Con@{avg\-Con}}
-\index{avg\-Con@{avg\-Con}!init@{init}}
-\subsubsection[{avg\-Con}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-avg\-Con = dn.\-range\-Float(float(args.\-avg\-Con\mbox{[}0\mbox{]}), float(args.\-avg\-Con\mbox{[}1\mbox{]}), float(args.\-avg\-Con\mbox{[}2\mbox{]}))}}\label{a00107_ad18e8e57ac563f08da644cf831ff5d06}
 
+\hypertarget{a00107_aaeb3a479f24daf493cc7052aef879d2c}{\index{lib\-::graph\-::raf@{lib\-::graph\-::raf}!find\-Catfor\-R\-A\-F@{find\-Catfor\-R\-A\-F}}
+\index{find\-Catfor\-R\-A\-F@{find\-Catfor\-R\-A\-F}!lib::graph::raf@{lib\-::graph\-::raf}}
+\subsubsection[{find\-Catfor\-R\-A\-F}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-raf.\-find\-Catfor\-R\-A\-F (
+\begin{DoxyParamCaption}
+\item[{}]{tmp\-Cat, }
+\item[{}]{tmp\-R\-A\-F, }
+\item[{}]{tmp\-Closure, }
+\item[{}]{debug = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{a00107_aaeb3a479f24daf493cc7052aef879d2c}
 
-Definition at line 72 of file init.\-py.
 
-\hypertarget{a00107_a78390f5622d850652ba7c5a68a5bad81}{\index{init@{init}!catalyst@{catalyst}}
-\index{catalyst@{catalyst}!init@{init}}
-\subsubsection[{catalyst}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-catalyst = -\/1}}\label{a00107_a78390f5622d850652ba7c5a68a5bad81}
+Definition at line 82 of file raf.\-py.
 
 
-Definition at line 158 of file init.\-py.
 
-\hypertarget{a00107_a76711a7593abff643cb28c6a049eb208}{\index{init@{init}!cat\-Found@{cat\-Found}}
-\index{cat\-Found@{cat\-Found}!init@{init}}
-\subsubsection[{cat\-Found}]{\setlength{\rightskip}{0pt plus 5cm}init.\-cat\-Found = False}}\label{a00107_a76711a7593abff643cb28c6a049eb208}
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00107_aaeb3a479f24daf493cc7052aef879d2c_icgraph}
+\end{center}
+\end{figure}
 
 
-Definition at line 159 of file init.\-py.
+\hypertarget{a00107_aa4fb376eecb97a88efdb35aa15466c3b}{\index{lib\-::graph\-::raf@{lib\-::graph\-::raf}!find\-R\-A\-Frcts@{find\-R\-A\-Frcts}}
+\index{find\-R\-A\-Frcts@{find\-R\-A\-Frcts}!lib::graph::raf@{lib\-::graph\-::raf}}
+\subsubsection[{find\-R\-A\-Frcts}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-raf.\-find\-R\-A\-Frcts (
+\begin{DoxyParamCaption}
+\item[{}]{R\-A\-F, }
+\item[{}]{rcts, }
+\item[{}]{actrcts}
+\end{DoxyParamCaption}
+)}}\label{a00107_aa4fb376eecb97a88efdb35aa15466c3b}
 
-\hypertarget{a00107_a28a7deb6c01f690c0ada719c98672c10}{\index{init@{init}!conf@{conf}}
-\index{conf@{conf}!init@{init}}
-\subsubsection[{conf}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-conf = (1,1,2000,0,200000,0,0,2,args.\-last\-Food,prob)}}\label{a00107_a28a7deb6c01f690c0ada719c98672c10}
 
+Definition at line 160 of file raf.\-py.
 
-Definition at line 104 of file init.\-py.
 
-\hypertarget{a00107_a21af3c3590a35942a68743431e4be468}{\index{init@{init}!cut\-Pt@{cut\-Pt}}
-\index{cut\-Pt@{cut\-Pt}!init@{init}}
-\subsubsection[{cut\-Pt}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-cut\-Pt = ran.\-randint(1,len({\bf mol\-To\-Cleav})-\/1)}}\label{a00107_a21af3c3590a35942a68743431e4be468}
 
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{a00107_aa4fb376eecb97a88efdb35aa15466c3b_cgraph}
+\end{center}
+\end{figure}
 
-Definition at line 121 of file init.\-py.
 
-\hypertarget{a00107_adb4c39eb7111cadc79914ab74401a5d3}{\index{init@{init}!fid\-\_\-init\-Raf\-Res@{fid\-\_\-init\-Raf\-Res}}
-\index{fid\-\_\-init\-Raf\-Res@{fid\-\_\-init\-Raf\-Res}!init@{init}}
-\subsubsection[{fid\-\_\-init\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-fid\-\_\-init\-Raf\-Res = open({\bf fname\-\_\-init\-Raf\-Res}, 'w')}}\label{a00107_adb4c39eb7111cadc79914ab74401a5d3}
 
 
-Definition at line 59 of file init.\-py.
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00107_aa4fb376eecb97a88efdb35aa15466c3b_icgraph}
+\end{center}
+\end{figure}
 
-\hypertarget{a00107_a8787bc34fe0a1a9291bed1df1bba18ef}{\index{init@{init}!fid\-\_\-init\-Raf\-Res\-A\-L\-L@{fid\-\_\-init\-Raf\-Res\-A\-L\-L}}
-\index{fid\-\_\-init\-Raf\-Res\-A\-L\-L@{fid\-\_\-init\-Raf\-Res\-A\-L\-L}!init@{init}}
-\subsubsection[{fid\-\_\-init\-Raf\-Res\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-fid\-\_\-init\-Raf\-Res\-A\-L\-L = open({\bf fname\-\_\-init\-Raf\-Res\-A\-L\-L}, 'w')}}\label{a00107_a8787bc34fe0a1a9291bed1df1bba18ef}
 
+\hypertarget{a00107_a56510e9067d8a6c8f90847d6656ce709}{\index{lib\-::graph\-::raf@{lib\-::graph\-::raf}!generate\-Closure@{generate\-Closure}}
+\index{generate\-Closure@{generate\-Closure}!lib::graph::raf@{lib\-::graph\-::raf}}
+\subsubsection[{generate\-Closure}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-raf.\-generate\-Closure (
+\begin{DoxyParamCaption}
+\item[{}]{tmp\-F, }
+\item[{}]{rcts, }
+\item[{}]{debug = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{a00107_a56510e9067d8a6c8f90847d6656ce709}
 
-Definition at line 62 of file init.\-py.
 
-\hypertarget{a00107_a818d22b51f78f1eee3821a580660c9e2}{\index{init@{init}!fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}}
-\index{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}!init@{init}}
-\subsubsection[{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T = open({\bf fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'w')}}\label{a00107_a818d22b51f78f1eee3821a580660c9e2}
+Definition at line 20 of file raf.\-py.
 
 
-Definition at line 61 of file init.\-py.
 
-\hypertarget{a00107_a9fbc5638f3698e28c15bf998bec022aa}{\index{init@{init}!fid\-\_\-init\-Raf\-Res\-S\-U\-M@{fid\-\_\-init\-Raf\-Res\-S\-U\-M}}
-\index{fid\-\_\-init\-Raf\-Res\-S\-U\-M@{fid\-\_\-init\-Raf\-Res\-S\-U\-M}!init@{init}}
-\subsubsection[{fid\-\_\-init\-Raf\-Res\-S\-U\-M}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-fid\-\_\-init\-Raf\-Res\-S\-U\-M = open({\bf fname\-\_\-init\-Raf\-Res\-S\-U\-M}, 'w')}}\label{a00107_a9fbc5638f3698e28c15bf998bec022aa}
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00107_a56510e9067d8a6c8f90847d6656ce709_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00107_a9896a4198e08978afb80e86697f1bbd0}{\index{lib\-::graph\-::raf@{lib\-::graph\-::raf}!R\-Acondition@{R\-Acondition}}
+\index{R\-Acondition@{R\-Acondition}!lib::graph::raf@{lib\-::graph\-::raf}}
+\subsubsection[{R\-Acondition}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-raf.\-R\-Acondition (
+\begin{DoxyParamCaption}
+\item[{}]{tmp\-C\-L, }
+\item[{}]{rcts, }
+\item[{}]{cats, }
+\item[{}]{debug = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{a00107_a9896a4198e08978afb80e86697f1bbd0}
+
+
+Definition at line 46 of file raf.\-py.
 
 
-Definition at line 60 of file init.\-py.
 
-\hypertarget{a00107_a85397ecdb7b33b6db75aec3fc0185565}{\index{init@{init}!find1@{find1}}
-\index{find1@{find1}!init@{init}}
-\subsubsection[{find1}]{\setlength{\rightskip}{0pt plus 5cm}init.\-find1 = True}}\label{a00107_a85397ecdb7b33b6db75aec3fc0185565}
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00107_a9896a4198e08978afb80e86697f1bbd0_icgraph}
+\end{center}
+\end{figure}
 
 
-Definition at line 125 of file init.\-py.
+\hypertarget{a00107_a3c9606e9d3274506955225eacf05877e}{\index{lib\-::graph\-::raf@{lib\-::graph\-::raf}!raf\-Computation@{raf\-Computation}}
+\index{raf\-Computation@{raf\-Computation}!lib::graph::raf@{lib\-::graph\-::raf}}
+\subsubsection[{raf\-Computation}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-raf.\-raf\-Computation (
+\begin{DoxyParamCaption}
+\item[{}]{fid\-\_\-init\-Raf\-Res, }
+\item[{}]{fid\-\_\-init\-Raf\-Res\-A\-L\-L, }
+\item[{}]{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T, }
+\item[{}]{tmp\-Dir, }
+\item[{}]{rct\-Prob, }
+\item[{}]{avg\-Con, }
+\item[{}]{rcts, }
+\item[{}]{cats, }
+\item[{}]{food\-List, }
+\item[{}]{max\-Dim, }
+\item[{}]{debug = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{a00107_a3c9606e9d3274506955225eacf05877e}
 
-\hypertarget{a00107_a5c0f5649a6185f0fa88487b57669ad07}{\index{init@{init}!fname\-\_\-init\-Raf\-Res@{fname\-\_\-init\-Raf\-Res}}
-\index{fname\-\_\-init\-Raf\-Res@{fname\-\_\-init\-Raf\-Res}!init@{init}}
-\subsubsection[{fname\-\_\-init\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-fname\-\_\-init\-Raf\-Res = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis.\-csv')}}\label{a00107_a5c0f5649a6185f0fa88487b57669ad07}
 
+Definition at line 134 of file raf.\-py.
 
-Definition at line 55 of file init.\-py.
 
-\hypertarget{a00107_ac777b57613db6293d8f566c04d5bc964}{\index{init@{init}!fname\-\_\-init\-Raf\-Res\-A\-L\-L@{fname\-\_\-init\-Raf\-Res\-A\-L\-L}}
-\index{fname\-\_\-init\-Raf\-Res\-A\-L\-L@{fname\-\_\-init\-Raf\-Res\-A\-L\-L}!init@{init}}
-\subsubsection[{fname\-\_\-init\-Raf\-Res\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-fname\-\_\-init\-Raf\-Res\-A\-L\-L = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')}}\label{a00107_ac777b57613db6293d8f566c04d5bc964}
 
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00107_a3c9606e9d3274506955225eacf05877e_cgraph}
+\end{center}
+\end{figure}
 
-Definition at line 58 of file init.\-py.
 
-\hypertarget{a00107_a8902eba9008d5468d73d3b18affccf85}{\index{init@{init}!fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}}
-\index{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}!init@{init}}
-\subsubsection[{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')}}\label{a00107_a8902eba9008d5468d73d3b18affccf85}
+\hypertarget{a00107_a0b49d65e78e62c4ddd5022d4405f8286}{\index{lib\-::graph\-::raf@{lib\-::graph\-::raf}!raf\-Dynamic\-Computation@{raf\-Dynamic\-Computation}}
+\index{raf\-Dynamic\-Computation@{raf\-Dynamic\-Computation}!lib::graph::raf@{lib\-::graph\-::raf}}
+\subsubsection[{raf\-Dynamic\-Computation}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-raf.\-raf\-Dynamic\-Computation (
+\begin{DoxyParamCaption}
+\item[{}]{fid\-\_\-dyn\-Raf\-Res, }
+\item[{}]{tmp\-Time, }
+\item[{}]{rcts, }
+\item[{}]{cats, }
+\item[{}]{food\-List, }
+\item[{}]{growth = {\ttfamily False}, }
+\item[{}]{rcts\-A\-L\-L = {\ttfamily None}, }
+\item[{}]{cats\-A\-L\-L = {\ttfamily None}, }
+\item[{}]{complete\-R\-C\-T\-S = {\ttfamily None}, }
+\item[{}]{debug = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{a00107_a0b49d65e78e62c4ddd5022d4405f8286}
 
 
-Definition at line 57 of file init.\-py.
+Definition at line 144 of file raf.\-py.
 
-\hypertarget{a00107_aa74d50381fc7a0a61c58e36e8642a299}{\index{init@{init}!fname\-\_\-init\-Raf\-Res\-S\-U\-M@{fname\-\_\-init\-Raf\-Res\-S\-U\-M}}
-\index{fname\-\_\-init\-Raf\-Res\-S\-U\-M@{fname\-\_\-init\-Raf\-Res\-S\-U\-M}!init@{init}}
-\subsubsection[{fname\-\_\-init\-Raf\-Res\-S\-U\-M}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-fname\-\_\-init\-Raf\-Res\-S\-U\-M = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-S\-U\-M.\-csv')}}\label{a00107_aa74d50381fc7a0a61c58e36e8642a299}
 
 
-Definition at line 56 of file init.\-py.
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00107_a0b49d65e78e62c4ddd5022d4405f8286_cgraph}
+\end{center}
+\end{figure}
 
-\hypertarget{a00107_a71b8eba3bc2ff1a4518715f5852ddfb2}{\index{init@{init}!food\-List@{food\-List}}
-\index{food\-List@{food\-List}!init@{init}}
-\subsubsection[{food\-List}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-food\-List = range(args.\-last\-Food+1)}}\label{a00107_a71b8eba3bc2ff1a4518715f5852ddfb2}
 
+\hypertarget{a00107_a532a434a0b2fe187a3ff5a8319e4e3b4}{\index{lib\-::graph\-::raf@{lib\-::graph\-::raf}!rafsearch@{rafsearch}}
+\index{rafsearch@{rafsearch}!lib::graph::raf@{lib\-::graph\-::raf}}
+\subsubsection[{rafsearch}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-raf.\-rafsearch (
+\begin{DoxyParamCaption}
+\item[{}]{rcts, }
+\item[{}]{cats, }
+\item[{}]{closure, }
+\item[{}]{debug = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{a00107_a532a434a0b2fe187a3ff5a8319e4e3b4}
 
-Definition at line 69 of file init.\-py.
 
-\hypertarget{a00107_a94eb5c8e5577c9e15b910e0ea541fbc0}{\index{init@{init}!idsub1@{idsub1}}
-\index{idsub1@{idsub1}!init@{init}}
-\subsubsection[{idsub1}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-idsub1 = {\bf species.\-index}({\bf sub1})}}\label{a00107_a94eb5c8e5577c9e15b910e0ea541fbc0}
+Definition at line 91 of file raf.\-py.
 
 
-Definition at line 143 of file init.\-py.
 
-\hypertarget{a00107_a25f83893748add8fe158b4a82fa420ed}{\index{init@{init}!idsub2@{idsub2}}
-\index{idsub2@{idsub2}!init@{init}}
-\subsubsection[{idsub2}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-idsub2 = {\bf species.\-index}({\bf sub2})}}\label{a00107_a25f83893748add8fe158b4a82fa420ed}
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00107_a532a434a0b2fe187a3ff5a8319e4e3b4_cgraph}
+\end{center}
+\end{figure}
 
 
-Definition at line 146 of file init.\-py.
 
-\hypertarget{a00107_a689e8a7ea04880f709356e74372ed8c0}{\index{init@{init}!init\-Species\-List\-Length@{init\-Species\-List\-Length}}
-\index{init\-Species\-List\-Length@{init\-Species\-List\-Length}!init@{init}}
-\subsubsection[{init\-Species\-List\-Length}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-init\-Species\-List\-Length = len({\bf species})}}\label{a00107_a689e8a7ea04880f709356e74372ed8c0}
 
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00107_a532a434a0b2fe187a3ff5a8319e4e3b4_icgraph}
+\end{center}
+\end{figure}
 
-Definition at line 101 of file init.\-py.
-
-\hypertarget{a00107_a14c236e42c754c3781ae1ae075d1dd4c}{\index{init@{init}!mol\-To\-Cleav@{mol\-To\-Cleav}}
-\index{mol\-To\-Cleav@{mol\-To\-Cleav}!init@{init}}
-\subsubsection[{mol\-To\-Cleav}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-mol\-To\-Cleav = ran.\-choice({\bf species}\mbox{[}len({\bf alphabet})\-:{\bf init\-Species\-List\-Length}-\/1\mbox{]})}}\label{a00107_a14c236e42c754c3781ae1ae075d1dd4c}
-
-
-Definition at line 120 of file init.\-py.
-
-\hypertarget{a00107_ad8ae32e9b09eefbb6f077913da522b75}{\index{init@{init}!n\-Cleavage@{n\-Cleavage}}
-\index{n\-Cleavage@{n\-Cleavage}!init@{init}}
-\subsubsection[{n\-Cleavage}]{\setlength{\rightskip}{0pt plus 5cm}int init.\-n\-Cleavage = 0}}\label{a00107_ad8ae32e9b09eefbb6f077913da522b75}
-
-
-Definition at line 99 of file init.\-py.
-
-\hypertarget{a00107_ab565465a7f336d415249ebb7d7f2e602}{\index{init@{init}!n\-Condensa@{n\-Condensa}}
-\index{n\-Condensa@{n\-Condensa}!init@{init}}
-\subsubsection[{n\-Condensa}]{\setlength{\rightskip}{0pt plus 5cm}int init.\-n\-Condensa = 0}}\label{a00107_ab565465a7f336d415249ebb7d7f2e602}
-
-
-Definition at line 100 of file init.\-py.
-
-\hypertarget{a00107_aa46e7398812b953383a240300e416857}{\index{init@{init}!ndn@{ndn}}
-\index{ndn@{ndn}!init@{init}}
-\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string init.\-ndn = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'}}\label{a00107_aa46e7398812b953383a240300e416857}
-
-
-Definition at line 45 of file init.\-py.
-
-\hypertarget{a00107_a676579aed104d765823ab7523d9e0c08}{\index{init@{init}!newdir\-All\-Results@{newdir\-All\-Results}}
-\index{newdir\-All\-Results@{newdir\-All\-Results}!init@{init}}
-\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-newdir\-All\-Results = os.\-path.\-join(args.\-str\-Out, {\bf ndn})}}\label{a00107_a676579aed104d765823ab7523d9e0c08}
-
-
-Definition at line 46 of file init.\-py.
-
-\hypertarget{a00107_a17491bcc04dd0e62b17c8faf6a87d3d5}{\index{init@{init}!parser@{parser}}
-\index{parser@{parser}!init@{init}}
-\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-parser}}\label{a00107_a17491bcc04dd0e62b17c8faf6a87d3d5}
-{\bfseries Initial value\-:}
-\begin{DoxyCode}
-1 = ArgumentParser(
-2                                 description=\textcolor{stringliteral}{'This script re-arrange results in a more friendly way from the
-       angle analysis in time.'}
-3                                 , epilog=\textcolor{stringliteral}{'''File with angle trajectories are created. '''})
-\end{DoxyCode}
-
-
-Definition at line 23 of file init.\-py.
-
-\hypertarget{a00107_af7e5559c4efc3ebbeb78f8b01885fc35}{\index{init@{init}!prod@{prod}}
-\index{prod@{prod}!init@{init}}
-\subsubsection[{prod}]{\setlength{\rightskip}{0pt plus 5cm}init.\-prod = {\bf sub1}+{\bf sub2}}}\label{a00107_af7e5559c4efc3ebbeb78f8b01885fc35}
-
-
-Definition at line 147 of file init.\-py.
-
-\hypertarget{a00107_a9e9ecd6b6e0ec81f0265763a95dedfc5}{\index{init@{init}!raffound@{raffound}}
-\index{raffound@{raffound}!init@{init}}
-\subsubsection[{raffound}]{\setlength{\rightskip}{0pt plus 5cm}int init.\-raffound = 0}}\label{a00107_a9e9ecd6b6e0ec81f0265763a95dedfc5}
-
-
-Definition at line 76 of file init.\-py.
-
-\hypertarget{a00107_a6e719338dc9e70d7784d120431685d3f}{\index{init@{init}!rafsets@{rafsets}}
-\index{rafsets@{rafsets}!init@{init}}
-\subsubsection[{rafsets}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-rafsets = raf.\-raf\-Computation({\bf fid\-\_\-init\-Raf\-Res}, {\bf fid\-\_\-init\-Raf\-Res\-A\-L\-L}, {\bf fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'tmp\-Dir', prob, average\-Conn, rcts, cats, {\bf food\-List}, maxlength)}}\label{a00107_a6e719338dc9e70d7784d120431685d3f}
-
-
-Definition at line 167 of file init.\-py.
-
-\hypertarget{a00107_a2352da2bf8926260466297c0bf68808f}{\index{init@{init}!rct\-To\-Cat@{rct\-To\-Cat}}
-\index{rct\-To\-Cat@{rct\-To\-Cat}!init@{init}}
-\subsubsection[{rct\-To\-Cat}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-rct\-To\-Cat = int(round({\bf tot\-Rcts} $\ast$ {\bf tot\-Species} $\ast$ prob))}}\label{a00107_a2352da2bf8926260466297c0bf68808f}
-
-
-Definition at line 96 of file init.\-py.
-
-\hypertarget{a00107_a5578d5c358ce48fc9cbe268371cafa4e}{\index{init@{init}!rct\-Type@{rct\-Type}}
-\index{rct\-Type@{rct\-Type}!init@{init}}
-\subsubsection[{rct\-Type}]{\setlength{\rightskip}{0pt plus 5cm}int init.\-rct\-Type = 1}}\label{a00107_a5578d5c358ce48fc9cbe268371cafa4e}
-
-
-Definition at line 110 of file init.\-py.
-
-\hypertarget{a00107_a8d00e8af90536956aca5bb64c22c08de}{\index{init@{init}!species@{species}}
-\index{species@{species}!init@{init}}
-\subsubsection[{species}]{\setlength{\rightskip}{0pt plus 5cm}list init.\-species = \mbox{[}$\,$\mbox{]}}}\label{a00107_a8d00e8af90536956aca5bb64c22c08de}
-
-
-Definition at line 80 of file init.\-py.
-
-\hypertarget{a00107_a4d64b5e90161e566743e13b037d5bb4f}{\index{init@{init}!str\-To\-Write@{str\-To\-Write}}
-\index{str\-To\-Write@{str\-To\-Write}!init@{init}}
-\subsubsection[{str\-To\-Write}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-str\-To\-Write = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\textbackslash{}t\-Cats\textbackslash{}tu\-R\-A\-F\textbackslash{}n\char`\"{}}}\label{a00107_a4d64b5e90161e566743e13b037d5bb4f}
-
-
-Definition at line 63 of file init.\-py.
-
-\hypertarget{a00107_a3793e9e2306513f12efbe52913cd540b}{\index{init@{init}!sub1@{sub1}}
-\index{sub1@{sub1}!init@{init}}
-\subsubsection[{sub1}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-sub1 = ran.\-choice({\bf species}\mbox{[}\-:{\bf init\-Species\-List\-Length}-\/1\mbox{]})}}\label{a00107_a3793e9e2306513f12efbe52913cd540b}
-
-
-Definition at line 142 of file init.\-py.
-
-\hypertarget{a00107_af7fcc401f9d78ede2d8f4aac2d1c9f91}{\index{init@{init}!sub2@{sub2}}
-\index{sub2@{sub2}!init@{init}}
-\subsubsection[{sub2}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-sub2 = ran.\-choice({\bf species}\mbox{[}\-:{\bf init\-Species\-List\-Length}-\/1\mbox{]})}}\label{a00107_af7fcc401f9d78ede2d8f4aac2d1c9f91}
-
-
-Definition at line 145 of file init.\-py.
-
-\hypertarget{a00107_abdc9a73a6617a3c7649719b7175a52de}{\index{init@{init}!tmp1@{tmp1}}
-\index{tmp1@{tmp1}!init@{init}}
-\subsubsection[{tmp1}]{\setlength{\rightskip}{0pt plus 5cm}list init.\-tmp1 = {\bf mol\-To\-Cleav}\mbox{[}0\-:{\bf cut\-Pt}\mbox{]}}}\label{a00107_abdc9a73a6617a3c7649719b7175a52de}
-
-
-Definition at line 122 of file init.\-py.
-
-\hypertarget{a00107_a4268c8384b04fda5f447ab8a9174a739}{\index{init@{init}!tmp1id@{tmp1id}}
-\index{tmp1id@{tmp1id}!init@{init}}
-\subsubsection[{tmp1id}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-tmp1id = {\bf species.\-index}({\bf tmp1})}}\label{a00107_a4268c8384b04fda5f447ab8a9174a739}
-
-
-Definition at line 124 of file init.\-py.
-
-\hypertarget{a00107_aac2a39d0a54d416989842e539b8a6e36}{\index{init@{init}!tmp2@{tmp2}}
-\index{tmp2@{tmp2}!init@{init}}
-\subsubsection[{tmp2}]{\setlength{\rightskip}{0pt plus 5cm}list init.\-tmp2 = {\bf mol\-To\-Cleav}\mbox{[}cut\-Pt\-:len({\bf mol\-To\-Cleav})\mbox{]}}}\label{a00107_aac2a39d0a54d416989842e539b8a6e36}
-
-
-Definition at line 130 of file init.\-py.
-
-\hypertarget{a00107_a585d9a7eb6660a9d9a3fd706492f446a}{\index{init@{init}!tmp2id@{tmp2id}}
-\index{tmp2id@{tmp2id}!init@{init}}
-\subsubsection[{tmp2id}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-tmp2id = {\bf species.\-index}({\bf tmp2})}}\label{a00107_a585d9a7eb6660a9d9a3fd706492f446a}
-
-
-Definition at line 132 of file init.\-py.
-
-\hypertarget{a00107_ad4eeda1ac53564eda60cad5853199804}{\index{init@{init}!tmpprodid@{tmpprodid}}
-\index{tmpprodid@{tmpprodid}!init@{init}}
-\subsubsection[{tmpprodid}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-tmpprodid = {\bf species.\-index}({\bf prod})}}\label{a00107_ad4eeda1ac53564eda60cad5853199804}
-
-
-Definition at line 149 of file init.\-py.
-
-\hypertarget{a00107_ae9c65061d913ea2106e5c0adf13a6d97}{\index{init@{init}!tot\-Cleavage@{tot\-Cleavage}}
-\index{tot\-Cleavage@{tot\-Cleavage}!init@{init}}
-\subsubsection[{tot\-Cleavage}]{\setlength{\rightskip}{0pt plus 5cm}tuple init.\-tot\-Cleavage = {\bf sum}(map(lambda x\-: len({\bf x})-\/1,{\bf species}))}}\label{a00107_ae9c65061d913ea2106e5c0adf13a6d97}
-
-
-Definition at line 86 of file init.\-py.
-
-\hypertarget{a00107_ab15c14228b0f2ce185a19b6c873b8ce9}{\index{init@{init}!tot\-Cond@{tot\-Cond}}
-\index{tot\-Cond@{tot\-Cond}!init@{init}}
-\subsubsection[{tot\-Cond}]{\setlength{\rightskip}{0pt plus 5cm}int init.\-tot\-Cond = {\bf tot\-Species}$\ast$$\ast$2}}\label{a00107_ab15c14228b0f2ce185a19b6c873b8ce9}
-
-
-Definition at line 87 of file init.\-py.
-
-\hypertarget{a00107_acd62ae3eca9e5bffbf6a7686879339d1}{\index{init@{init}!tot\-Rcts@{tot\-Rcts}}
-\index{tot\-Rcts@{tot\-Rcts}!init@{init}}
-\subsubsection[{tot\-Rcts}]{\setlength{\rightskip}{0pt plus 5cm}init.\-tot\-Rcts = {\bf tot\-Cleavage}+{\bf tot\-Cond}}}\label{a00107_acd62ae3eca9e5bffbf6a7686879339d1}
-
-
-Definition at line 88 of file init.\-py.
-
-\hypertarget{a00107_ab7609fccbc57f56e33a59e0fc6865c54}{\index{init@{init}!tot\-Species@{tot\-Species}}
-\index{tot\-Species@{tot\-Species}!init@{init}}
-\subsubsection[{tot\-Species}]{\setlength{\rightskip}{0pt plus 5cm}int init.\-tot\-Species = 2}}\label{a00107_ab7609fccbc57f56e33a59e0fc6865c54}
-
-
-Definition at line 84 of file init.\-py.
 

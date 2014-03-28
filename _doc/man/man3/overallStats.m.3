@@ -1,8 +1,8 @@
-.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/overallStats.m" 3 "Thu Dec 12 2013" "Version 4.8 (20131210.63)" "CaRNeSS" \" -*- nroff -*-
+.TH "/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" 3 "Fri Mar 28 2014" "Version 4.8 (20140327.66)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/overallStats.m \- 
+/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -30,6 +30,9 @@ FILES ANALYSIS \fBif\fP \fBp\fP \fBtmpAnalysis\fP (1)"
 .br
 .ti -1c
 .RI "\fBif\fP \fBp\fP \fBtmpAnalysis\fP (6)"
+.br
+.ti -1c
+.RI "\fBgeneralConcentrationOverThreshold\fP (\fBp\fP) \fBend\fP%Need \fBp\&.tmpAnalysis\fP(6) in order \fBto\fP be performed \fBif\fP \fBp\&.tmpAnalysis\fP(7)"
 .br
 .ti -1c
 .RI "\fBif\fP \fBexist\fP ('MATLAB2R\&.Rout','\fBfile\fP') delete('MATLAB2R\&.Rout')"
@@ -84,6 +87,8 @@ FILES ANALYSIS \fBif\fP \fBp\fP \fBtmpAnalysis\fP (1)"
 
 .SS "\fBif\fP exist ('MATLAB2R\&.Rout', '\fBfile\fP')"
 
+.SS "generalConcentrationOverThreshold (\fBp\fP)"
+
 .SS "\fBfunction\fP overallStats ()"
 
 .SS "Used in KillSpan it represents the last \fBinflux\fP \fBspecies\fP LATEST FILES ANALYSIS \fBif\fP \fBp\fP tmpAnalysis (1)"
@@ -94,14 +99,8 @@ FILES ANALYSIS \fBif\fP \fBp\fP \fBtmpAnalysis\fP (1)"
 
 .SS "\fBend\fP \fBif\fP \fBp\fP tmpAnalysis (4)"
 
-.SS "\fBend\fP Need \fBp\fP tmpAnalysis (6)"
-\fBInitial value:\fP
-.PP
-.nf
-== 1
-    % Using an R-Cran script this part is a little bit different
-    crtDir = cd()
-.fi
+.SS "\fBif\fP \fBp\fP tmpAnalysis (6)"
+
 .SH "Variable Documentation"
 .PP 
 .SS "Used in KillSpan analysis"

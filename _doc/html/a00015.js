@@ -1,17 +1,15 @@
 var a00015 =
 [
-    [ "gillespie", "a00015.html#a1487279f0440557a26662ff6356b8c17", null ],
-    [ "gillespie", "a00015.html#af763c24d6107109108d32b5cc21c116a", null ],
-    [ "gillespie", "a00015.html#a0a38f4fd563208beba389f7f8e8eed4a", null ],
-    [ "~gillespie", "a00015.html#a33a97651932d8f82d82d164c94a2eae7", null ],
-    [ "getCatalysisID", "a00015.html#a0f2202c3d3662ce7cec6b127f066f715", null ],
-    [ "getID", "a00015.html#a6aba3b283efc955bd4869f663ab877d6", null ],
-    [ "getIdReactionType", "a00015.html#a25d1e86363cdd7fabbb624b85620d1db", null ],
-    [ "getMolI", "a00015.html#a8de52ad4b41daa64e69c897541b69629", null ],
-    [ "getMolII", "a00015.html#a842457bf58d6af34b992a2c3fe27e4f6", null ],
-    [ "getMolIII", "a00015.html#ab3d608ab2016a5a06408a76a1d12aabf", null ],
-    [ "getMolIV", "a00015.html#a01e1fb80634ae8fd32ce20fd7b5181ba", null ],
-    [ "getNRGside", "a00015.html#ad668afc14941b6842c703046a1a2d4c1", null ],
-    [ "getReactionID", "a00015.html#a8d4daffecd91b32fb59a94eae6de8d0e", null ],
-    [ "getScore", "a00015.html#aa0ba52c30f6172a034e3b29afd074106", null ]
+    [ "reactions", "a00015.html#a0b6ca1c86d79bb511f116d86714f74a6", null ],
+    [ "~reactions", "a00015.html#ad0c79e56e87891c502d8fcd6c4005987", null ],
+    [ "getEnergyType", "a00015.html#ae6fce196577644283fdab4a78909d891", null ],
+    [ "getEvents", "a00015.html#a4fd82a3f1a6474e53709c2a8c04b793c", null ],
+    [ "getID", "a00015.html#a5c30ce559254e67f7d4e219a8fe26fcc", null ],
+    [ "getKspont", "a00015.html#a3cac13cba00c709df26485bbeffda4f0", null ],
+    [ "getSpecies_I", "a00015.html#a90adbdb8288b8c67c7715949848583ab", null ],
+    [ "getSpecies_II", "a00015.html#ac0bdd6d9081645bf3a2c5531a71cbe40", null ],
+    [ "getSpecies_III", "a00015.html#aaf426633019113ac4ae54cd5597920be", null ],
+    [ "getType", "a00015.html#ad928f8c901ad8e318e201cedcf1209ba", null ],
+    [ "resetEventsCounter", "a00015.html#a614a367a15dda1df4160bcdc170a9b32", null ],
+    [ "updateTotEvents", "a00015.html#ae7a0bcb1c921c25ad5dc637d664f2c94", null ]
 ];

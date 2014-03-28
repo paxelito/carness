@@ -1,76 +1,209 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="a00115" kind="namespace">
-    <compoundname>lib::IO::readfiles</compoundname>
+    <compoundname>resetForNewSimulations</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00115_1a60b4005683b2bced2f3e0b22a66abd47" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int resetForNewSimulations.foldersSIMS</definition>
+        <argsstring></argsstring>
+        <name>foldersSIMS</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="21" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1a3869e711bac998c005313abd611c6158" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int resetForNewSimulations.foldersREP</definition>
+        <argsstring></argsstring>
+        <name>foldersREP</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="22" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1a067f416fc59f243e38a0b8a40627979b" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple resetForNewSimulations.zerosSIMS</definition>
+        <argsstring></argsstring>
+        <name>zerosSIMS</name>
+        <initializer>= <ref refid="a00115_1aba1c55fe18d1a0b31b346994a7a96628" kindref="member">zeroBeforeStrNum</ref>(<ref refid="a00065_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,<ref refid="a00115_1a60b4005683b2bced2f3e0b22a66abd47" kindref="member">foldersSIMS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="28" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1a9f88ef39633f68b28f6b0e96d5ebb34c" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple resetForNewSimulations.zerosREPS</definition>
+        <argsstring></argsstring>
+        <name>zerosREPS</name>
+        <initializer>= <ref refid="a00115_1aba1c55fe18d1a0b31b346994a7a96628" kindref="member">zeroBeforeStrNum</ref>(<ref refid="a00062_1ac86694252f8dfdb19aaeadc4b7c342c6" kindref="member">j</ref>,<ref refid="a00115_1a3869e711bac998c005313abd611c6158" kindref="member">foldersREP</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="29" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1af9fbda1c8e6d13404f0224a5b3ef16fe" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string resetForNewSimulations.folderName</definition>
+        <argsstring></argsstring>
+        <name>folderName</name>
+        <initializer>= &quot;s_inv_1e-2_&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="31" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1adfad2b3e8459d644a442c254865c564b" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string resetForNewSimulations.folderNew</definition>
+        <argsstring></argsstring>
+        <name>folderNew</name>
+        <initializer>= &quot;s_inv_1e-1_&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="32" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1addd72b08bf24570a2a851808a0b21949" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple resetForNewSimulations.resdir</definition>
+        <argsstring></argsstring>
+        <name>resdir</name>
+        <initializer>= os.path.join(os.curdir, &quot;res&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="42" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1ad71f20889e7a6394d3c15e5e9381394d" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple resetForNewSimulations.crtSimFolder</definition>
+        <argsstring></argsstring>
+        <name>crtSimFolder</name>
+        <initializer>= os.path.join(StrTo,<ref refid="a00115_1af9fbda1c8e6d13404f0224a5b3ef16fe" kindref="member">folderName</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="51" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1a0fd24d58ef8ebf1029176f620ce7fe65" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple resetForNewSimulations::fileDest</definition>
+        <argsstring></argsstring>
+        <name>fileDest</name>
+        <initializer>= os.path.join(StrTo,<ref refid="a00115_1adfad2b3e8459d644a442c254865c564b" kindref="member">folderNew</ref>,&quot;_acsinflux.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="57" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1a876ddf603699b40992ad784167b1121e" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple resetForNewSimulations::speciesFiles</definition>
+        <argsstring></argsstring>
+        <name>speciesFiles</name>
+        <initializer>= sorted(glob.glob(&quot;species_1_*&quot;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="66" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1a7a0ded4bf7d86d876a380d82be3c66bd" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple resetForNewSimulations::mod</definition>
+        <argsstring></argsstring>
+        <name>mod</name>
+        <initializer>= open(&quot;_acsspecies.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="82" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1a9defa7f80f548a96cc89f83a6140727d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int resetForNewSimulations::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="83" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1a8479d45d2399e5ddd429e2dc4961204a" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple resetForNewSimulations::linesplitted</definition>
+        <argsstring></argsstring>
+        <name>linesplitted</name>
+        <initializer>= <ref refid="a00070_1a4d1aa74fac80ae0275c056575fdb6626" kindref="member">line.split</ref>(&quot;\t&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="85" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00115_1a3caa9a656a250a12f7112582bde03381" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple resetForNewSimulations::file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <initializer>= open(&quot;_acsspecies.csv&quot;, &quot;w&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="99" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="a00115_1aa0985f97c9159003c7a4bd44d1a989f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a00115_1aba1c55fe18d1a0b31b346994a7a96628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def lib.IO.readfiles.readConfFile</definition>
-        <argsstring></argsstring>
-        <name>readConfFile</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" line="14" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" bodystart="14" bodyend="51"/>
-      </memberdef>
-      <memberdef kind="function" id="a00115_1af8a2deca70e9e04a4c4812d81430df19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>def</type>
-        <definition>def lib.IO.readfiles.readInitConfFile</definition>
-        <argsstring></argsstring>
-        <name>readInitConfFile</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" line="52" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" bodystart="52" bodyend="88"/>
-      </memberdef>
-      <memberdef kind="function" id="a00115_1a4a56e157e25982ad4a7dedd03929dcd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>def</type>
-        <definition>def lib.IO.readfiles.readBufferedID</definition>
-        <argsstring></argsstring>
-        <name>readBufferedID</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" line="89" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" bodystart="89" bodyend="104"/>
-      </memberdef>
-      <memberdef kind="function" id="a00115_1ab6d9ae4f9d3c52b2aad8b50d9b110dc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>def</type>
-        <definition>def lib.IO.readfiles.readCSTRflux</definition>
-        <argsstring></argsstring>
-        <name>readCSTRflux</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" line="105" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" bodystart="105" bodyend="119"/>
-      </memberdef>
-      <memberdef kind="function" id="a00115_1a5ddfb684cfa43cb2aa2d8246078c486c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>def</type>
-        <definition>def lib.IO.readfiles.loadAllData</definition>
-        <argsstring></argsstring>
-        <name>loadAllData</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" line="120" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" bodystart="120" bodyend="126"/>
-      </memberdef>
-      <memberdef kind="function" id="a00115_1a30cdb91109c2d6ea6e0abb808fe88c6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>def</type>
-        <definition>def lib.IO.readfiles.zeroBeforeStrNum</definition>
+        <definition>def resetForNewSimulations.zeroBeforeStrNum</definition>
         <argsstring></argsstring>
         <name>zeroBeforeStrNum</name>
         <briefdescription>
@@ -79,26 +212,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" line="127" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" bodystart="127" bodyend="134"/>
-      </memberdef>
-      <memberdef kind="function" id="a00115_1a3a9416927822cf24fb30e1d57bf71412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>def</type>
-        <definition>def lib.IO.readfiles.splitRctParsLine</definition>
-        <argsstring></argsstring>
-        <name>splitRctParsLine</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" line="135" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" bodystart="135" bodyend="142"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="5" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" bodystart="5" bodyend="20"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/readfiles.py" line="1" column="1"/>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/old/resetForNewSimulations.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

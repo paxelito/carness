@@ -1,52 +1,39 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="a00110" kind="namespace">
-    <compoundname>lib::dyn::dynamics</compoundname>
+    <compoundname>lib::IO::writefiles</compoundname>
       <sectiondef kind="func">
-      <memberdef kind="function" id="a00110_1a5c7482c3127ef70514cbc82ce1aa9f47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a00110_1a33a9a95566de3841055c5dbf7fdc3505" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def lib.dyn.dynamics.generateFluxList</definition>
+        <definition>def lib.IO.writefiles.write_init_raf_list</definition>
         <argsstring></argsstring>
-        <name>generateFluxList</name>
+        <name>write_init_raf_list</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/dyn/dynamics.py" line="17" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/dyn/dynamics.py" bodystart="17" bodyend="30"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/writefiles.py" line="14" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/writefiles.py" bodystart="14" bodyend="22"/>
       </memberdef>
-      <memberdef kind="function" id="a00110_1acbc0de876640b8d5355bf6a0e4fdef4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="a00110_1ad13fc2e762b8deaeb661f939e26e706f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def lib.dyn.dynamics.rangeFloat</definition>
+        <definition>def lib.IO.writefiles.write_init_raf_all</definition>
         <argsstring></argsstring>
-        <name>rangeFloat</name>
+        <name>write_init_raf_all</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/dyn/dynamics.py" line="31" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/dyn/dynamics.py" bodystart="31" bodyend="36"/>
-      </memberdef>
-      <memberdef kind="function" id="a00110_1ac3232f52dce6e169a93eba81f8fb926e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>def</type>
-        <definition>def lib.dyn.dynamics.fluxAnalysis</definition>
-        <argsstring></argsstring>
-        <name>fluxAnalysis</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/dyn/dynamics.py" line="37" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/dyn/dynamics.py" bodystart="37" bodyend="40"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/writefiles.py" line="23" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/writefiles.py" bodystart="23" bodyend="33"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/lib/dyn/dynamics.py" line="1" column="1"/>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/IO/writefiles.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

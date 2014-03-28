@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="dir_4f469d9709120469dd6135f2687435d4" kind="dir">
+    <compoundname>/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib</compoundname>
+    <innerdir refid="dir_2f4d93af49d29b2f74dda567b40ac140">/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/dyn</innerdir>
+    <innerdir refid="dir_c443a9c7f126d1791dfe071429d2391b">/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph</innerdir>
+    <innerdir refid="dir_99ca97c4054bd0ab851680b106d06494">/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/IO</innerdir>
+    <innerfile refid="a00043">__init__.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/"/>
+  </compounddef>
+</doxygen>

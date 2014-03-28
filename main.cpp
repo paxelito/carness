@@ -1,8 +1,7 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.81 (20140120.65)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.82 (20140327.66)
  * \author Alessandro Filisetti
- * \version 4.81 (20140120.65)
- * \date 2014-01-20
- * sourceforge repository -- https://carness.svn.sourceforge.net/svnroot/carness/
+ * \version 4.82 (20140427.66)
+ * \date 2014-03-27
  * git repository -- https://github.com/paxelito/carness
  *
  *
@@ -13,61 +12,80 @@
 *- \subpage pageGillespie
 *- \subpage pageInitializator
 *
- * \page intro Essential information
+ * \page intro Introduction
  * <hr>
- * The <b>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</b> is a computational model devoted to the simulation of theoretical complex catalytic networks composed of different
- * interacting molecular species. 
- * The model takes inspiration from the original model proposed by Stuart Kauffman in 1986, and describes systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One polymer is divided into two short polymers in the former case while two polymers are glued together forming a longer polymer in the latter case.
- * Each reaction must be catalyzed by another species in the system to occur, and one of the assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction.
+ * The <b>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</b> is a software devoted to the hybrid, both stochastic and deterministic, simulation of theoretical complex catalytic
+ * networks models.
+ * All the models, characterized by their environmental conditions, basically CSTR and protocell, take inspiration from the original model proposed by Stuart Kauffman in 1986, and describe
+ * systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One molecular species (basicallt a polymer) is divided into two short polymers in the former
+ * case in the former case, while two polymers are glued together forming a longer polymer in the latter case.
+ * Each reaction to occur must be catalyzed by another species present in the system, and one of the main assumptions is that any chemical has an independent probability to catalyze a
+ * randomly chosen reaction.
  * Since the version 4.8 (20131026.60) spontaneous reactions are considered too.
- * It is important to notice that there are not indications about the chemical nature of the molecules,
+ * It is worthwhile to notice that there are not indications about the chemical nature of the molecules,
  * species "A" may be both a polipeptide, an amminoacid, a particular protein domain or an RNA strenght.<br><br>
- *\section secUsage Using the simulator
- * To run the simulator open a terminal shell and type:<br><br>
- *	\c$path/executiveFile \c<configuration_File_Folder> \c<output_folder> \c<reaction_structures_folder><br>
- *		Examples:
- *      - Unix Based Systems:\c ~/Documents/project/acsm2s \c ~/Documents/.../confFileFolder/ \c ~/Documents/.../resFolder/ \c ~/Documents/.../StructuresFolder/
- *      - Win Systems: \c C:\\Documents\\project\\acsm2s.exe \c C:\\Documents\\...\\confFileFolder\\ \c C:\\Documents\\...\\resFolder\\ \c C:\\Documents\\...\\StructuresFolder\\
- *
- * <br><br>
  * \section sysreq System Requirement
  * <hr>
- * In order to have the simulator run correctly the recommended staff is reported:
+ * In order to have the simulator run correctly the recommended stuff is required:
  *		- MacOsX 10.4 or later, Linux (or in general a system UNIX based) or Windows OS (tests have been performed on Win7 and win Vista) as well
  *		- GCC (G++) compiler, or similar, installed (if you need to compile the software on your machine)
- *      - On MacOs system compile using \c g++ -Wall -ansi -lm -o CaRNeSS *.cpp
+ *      - On UNIX systems compile using \c g++ -Wall -ansi -lm -o carness *.cpp
  *<br><br>
+ *\section secUsage Using the simulator
+ * To run the simulator open a terminal shell and type:<br><br>
+ *	\c$path/carness \c<configuration_File_Folder> \c<output_folder> \c<reaction_structures_folder><br>
+ *		Examples:
+ *      - Unix Based Systems:\c ~/Documents/project/carness \c ~/Documents/.../confFileFolder/ \c ~/Documents/.../resFolder/ \c ~/Documents/.../StructuresFolder/
+ *      - Win Systems: \c C:\\Documents\\project\\carness.exe \c C:\\Documents\\...\\confFileFolder\\ \c C:\\Documents\\...\\resFolder\\ \c C:\\Documents\\...\\StructuresFolder\\
+ *
+ *      The first argument indicates the folder containing the configuration file acsm2s.conf. The second argument refers to the folder that will contain the simulation results while
+ *      the third parameter indicates the folder containing the structures of the system contained within the following files: _acsspecies.csv, _acsreactions.csv, _acscatalysis.csv, _acsinflux.csv,
+ *      _acsnrgbooleanfunctions.csv.
+ *      Currently the simulator does not generate the initial structures. You must create the structures on your own.
+ *
+ *      In order to test the DEMO structures, after the program has been compiled, go into the carness folder and run the following command:
+ *      \c <path_of_the_program>/carness \c ./_inputDataExamples/configurationFile/ \c ./_inputDataExamples/initStructures/res/ \c ./_inputDataExamples/initStructures/
+ *
+ *      PS: For windows platform change the command accordingly.
+ *
+ *
+ * <br><br>
  * \section parameters Input Parameters :: acsm2s.conf
  * <hr>
- * All the system parameters are stored in a file called <b>acsm2s.conf</b>. Anyone can create his own configuration file paying attention to put "=" char between the parameter name and the the parameter value (NO SPACE BETWEEN THEM).<br>
- * Notice that the simulator does not create the initial structures but it simply loads the structures created by an external software and process them. Nevertheless the configuration file is fundamental to supply all the parameters to the simulation (during the simulation new entities may be created).
- * The simulator is provided with a structures initializator developed in MATLAB language by the group (a description of the initializator is provided in the main file "start.m") in which all the parameters we are going to describe are used to create the initial structures.
+ * All the system parameters are stored in a file called <b>acsm2s.conf</b>. Anyone can create his own configuration file paying attention to put "=" char between the parameter name
+ *  and the parameter value (NO SPACE BETWEEN THEM).<br>
+ * Notice that the simulator does not create the initial structures but it simply loads the structures created by an external software and process them.
+ * Nevertheless the configuration file is fundamental to supply all the parameters to the simulation (during the simulation new entities may be created).
+ * The simulator is provided with a structures initializator developed in PYTHON language by the group (description will be available soon) in which all the parameters we are going
+ *  to describe are used to create the initial structures.
  * All parameters are reported below divided in three categories:
  *
  *		- System
  *		- Environment
  *		- Dynamic
  *
- *		Categories are useful only to help users in the parameter recognition within the configuration file. They are not handled from the software, if you like you can rearrange configuration file as you prefer, notice only that comments have to start with character <i>"#"</i>. Within the source code folder an example of the acsm2s.conf file is provided.<br>
+ *		Categories are useful only to help users in the parameter recognition within the configuration file. They are not handled from the software, if you like you can rearrange configuration
+ *		file as you prefer, notice only that comments have to start with character <i>"#"</i>.
+ *		Within the source code folder an example of the acsm2s.conf file is provided. (./_inputDataExamples/configurationFile/acsm2s.conf)<br>
  *      The following parameters are used both by the initializator and the simulator. Nvertheless it is ALWAYS necessary having a complete configuration file even if the structures have been already created.
  *		\subsection paramsystem System
- *		@param nGen (> 0) Number of generations. This parameter indicate how many times the simulation is stopped, concentration are set to the initial ones and the simulazion restart for other nSeconds seconds.
- *		@param nSIM (> 0) Number of simulations per generation starting with the same initial conditions (same data structures) but different random seed
- *		@param nSeconds (> 0) Number of seconds
+ *		@param nGen (> 0) Number of generations. This parameter indicate how many times the simulation restarts, concentrations are set to the initial ones and the simulation restart for other nSeconds seconds.
+ *		@param nSIM (> 0) Number of simulations per generation starting with the same initial conditions (SAME DATA STRUCTURES) but different random seed.
+ *		It is worth stressing that in such a way the system, if allowed to create new reactions, will create different final structures starting from the same initial structures.
+ *		@param nSeconds (> 0) Number of seconds of the simulation
  *		@param nReactions (> 0) Max number of reactions (the system will be stopped after nSeconds or after nReactions)
  *		@param randomSeed (>= 0) Random seed (if 0 the random seed is randomly created and the it is stored in the acsm2s.conf file saved in the results folder)
  *		@param nHours (>=0) Runtime limit (hours)
- *      @param nAttempts (>=0) Number of temptative in simulating the same network structure different random seed
- *      @param debugLevel (>= -1) Debug Level Runtime: different runTime message amounts (from -1 to 4, 0 is suggested)
+ *      @param nAttempts (>=0) Number of attempts in simulating the same network structure different random seed
+ *      @param debugLevel (int) Debug Level Runtime: different runTime message amounts (please refer to header.h file for the different values, 0 is suggested)
  *		@param timeStructuresSavingInterval (> 0) All system structures (species, catalysis and reactions) are saved every <i>timeStructuresSavingInterval</i> seconds (simulation time)
  *      @param fileTimesSaveInterval (>= 0) Times data are stored in file times.csv every <i>fileTimesSaveInterval</i> seconds (If 0 reactions are stored continually)
  *		\subsection paramenv Environment
  *		@param newSpeciesProbMinThreshold (>=0) Minimal new species creation probability to allow system expansion
  *		@param lastFiringDiskSpeciesID (> 0) The ID of the last firing disk species.
- *		@param overallConcentration (> 0) The overall initial concentration that will be divided between all the initial species according to the selected initial distribution.
  *		@param ECConcentration (> 0) Incoming concentration of charged molecules per second.
- *		@param alphabet (string) Alphabet used in the simulation (e.g. <i>AGCT</i> for DNA, <i>ADEGFLYCWPHQIMTNKSRV</i> for proteins)
- *		@param volume (> 0) Volume of the container or protocell
+ *		@param alphabet (string) Alphabet used in the simulation (e.g. <i>AB</i> for binary alphabet, <i>AGCT</i> for DNA, <i>ADEGFLYCWPHQIMTNKSRV</i> for proteins)
+ *		@param volume (> 0) Volume of the CSTR or of the protocell
  *		\subsection paramdyn Dynamic
  *		@param energy (0 or 1) 0 no energy in the system, 1 energy constraints are applied
  *      @param ratioSpeciesEnergizable (%) The probability for a species to be potentially energized by the energy carriers
@@ -76,7 +94,7 @@
  *		@param cleavageProbability (from 0 to 1) Cleavage probability (Condensation probability is 1 - cleavage probability)
  *		@param reverseReaction (0 or 1) Set to 1 to enable reverse reactions, 0 otherwise
  *      @param revRctRatio (>0) Ratio between forward and backward reactions, it is used in the creation of new reactions only (if reverseReactions = TRUE)
- *		@param spontRct (0 or 1) If 1 spontanoues reactions are considered, otherwise no
+ *		@param spontRct (0 or 1) If 1 spontanoues reactions are considered (k spontaneous is the last column of the reactions file), otherwise no
  *		@param K_ass (>= 0) Final Condensation kinetic constant (C.A + B --> AB + C) where A.C is the molecular complex composed of C (the catalyst) and A (the first substrate)
  *		@param K_diss (>= 0) Cleavage kinetic constant (AB --> A + B)
  *		@param K_cpx (>= 0) Complex formation kinetic constant (A + C(catalyst) --> C.A)
@@ -86,23 +104,31 @@
  *		@param moleculeDecay_KineticConstant (> 0) Molecule decay (efflux) kinetic Constant (Disregarded if the system is closed)
  *		@param K_spont_ass (>= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues condensations
  *		@param K_spont_diss (>= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues cleavages
- *		@param influx_rate (>= 0) Concentration per seconds (The species to insert in the system will be randomly chosen according to the _acsinflux.csv file). If equal to 0 the system is closed (maxLOut=0) or only the species that can cross the membrane come in and go out (maxLOut>0).
- *		@param maxLOut Maximum lenght of the species involved in the efflux process (\c influx_rate  > 0), equal to 0 indicates that all the species can be involved in the efflux process (no filter). If influx_rate = 0 the parameter indicates the species that can cross the semipermeable membrane of the protocell. <b>THE COUPLING BETWEEN INFLUX_RATE AND MAXLOUT INDICATES IF WE ARE SIMULATING A PROTOCELL OR A FLOW REACTOR</b>
+ *		@param influx_rate (>= 0) Concentration per seconds (The species to insert in the system will be randomly chosen according to the _acsinflux.csv file). If equal to 0 the system
+ *		 is closed (maxLOut=0) or only the species that can cross the membrane come in and go out (maxLOut>0).
+ *		@param maxLOut Maximum length of the species involved in the efflux process (\c influx_rate  > 0), equal to 0 indicates that all the species can be involved in the efflux process
+ *		 (no filter). If influx_rate = 0 the parameter indicates the species that can cross the semipermeable membrane of the protocell.
+ *		 <b>THE COUPLING BETWEEN INFLUX_RATE AND MAXLOUT INDICATES IF WE ARE SIMULATING A PROTOCELL OR A FLOW REACTOR (CSTR)</b>:
+ *
+ *		  - influx_rate > 0 & maxLOut > 0 :: <b>FILTERED SYSTEM</b>: Deterministic simulation of the flux with a filter for the species with length up to maxLOut
+ *		  - influx_rate = 0 & maxLOut > 0 :: <b>PROTOCELL</b>: Flux is not simulated, concentration of the species with length up to maxLOut are buffered
+ *		  - influx_rate > 0 & maxLOut = 0 :: <b>CSTR</b>: Deterministic simulation of the flux, _acsinflux.csv species enter and all the species, according to their concentrations, can leave the system
+ *		  - influx_rate = 0 & maxLOut = 0 :: <b>CLOSE SYSTEM</b>
+ *
  *		@param diffusion_contribute (KD) (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length, L^{-KD}
  *		@param solubility_threshold (> 0) Solubility Threshold, all the species longer than solubility_threshold precipitate
  *
  *<br><br>
  * \section Acknowledgments
  * <hr>
- *- University of Bologna, Interdepartment of industrial research (C.I.R.I)
  *- European Centre for Living Technology http://www.ecltech.org/
  *- Fondazione Venezia http://www.fondazionevenezia.it
+ *- University of Bologna, Interdepartment of industrial research (C.I.R.I)
  *- Alex Graudenzi to take care of the initilizator.
  *- Chiara Damiani to contribute to the development of the software.
- *- Roberto Serra, Marco Villani, Timoteo Carletti, Norman Packard, Ruedi Fuchslin and Stuart Kauffman for the essential hints.
+ *- Roberto Serra, Marco Villani, Timoteo Carletti, Davide De Lucrezia, Norman Packard, Ruedi Fuchslin, Andrea Roli and Stuart Kauffman for the essential hints.
  *- http://www.bedaux.net/mtrand/ for the pseudo-random Marseinne-Twister library for C++.
  *- http://perso.wanadoo.es/antlarr/otherapps.html for the poisson distribution generator numbers (acs_longInt random_poisson(acs_double tmpLambda, MTRand& tmpRandomGenerator)).
- *- Dr. Luca Ansaloni (luca.ansaloni@unimore.it) for the support but especially for the file handling functions and new Python development.
  *
  * \page pageInitStr Initial Data Structures
  * In order to proceed with the simulation the system needs from <b>4</b> to <b>6 (open system and energy on)</b> initial data structures files (an example for each file is located into the source code folder):
@@ -332,7 +358,7 @@
  * </table>
  *
  *
- * \page pageInitializator The initializator (a very brief description)
+ * \page pageInitializator The initializator (DEPRECATED) (a very brief description)
  * The initializator provided with the simulator is located in the \c initializator folder (within the source code folder) and it is developed in Matlab code. All the parameters are set in the \c start.m file (from line 22 to line 63). In addition you find the parameters related to the name of the folder that will contain the simulation (\c simFolder.name), the path where that folder will be created (\c simFolder.path) and the number of different network ensambles to create (\c simFolder.nets). It is important to notice that the initializator has not been thought to be shared, so it is not too much user friendly to be manipulated. Nevertheless it could be very useful with a little bit of practice.
  *  \section initSensitivity Screening Parameter
  * To initialize structures to perform a sensitivity analysis of a specific parameters follow the following instruction:
@@ -492,8 +518,17 @@ int main (int argc, char *argv[]) {
                                 //GILLESPIE COMPUTATION (CORE OF THE SOFTWARE)
                             	if(puddle->getDebugLevel() == SMALL_DEBUG)cout << "Step " << actSTEP << endl;
                             	try{
-                                	if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
-                                        	ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
+                            		// IF the system can expand its structures, se the old gillespie algorithm must be used
+                            		if(puddle->getSystemExpFlag())
+                            		{
+                            			if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
+                            						ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
+                            		}else{ // If structures are fixed new optimized Gillespie algorithm can be used
+                            			if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
+                            			            ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
+                            			//if(!puddle->perform_FIXED_GillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
+                            			//            ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
+                            		}
                             	}catch(exception&e){
                            	     cout << "Source Code Line: " << __LINE__ << endl;
                            	     cerr << "exceptioncaught:" << e.what() << endl;

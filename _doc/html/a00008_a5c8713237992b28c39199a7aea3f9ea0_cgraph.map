@@ -1,0 +1,11 @@
+<map id="environment::resetReactionsCounter" name="environment::resetReactionsCounter">
+<area shape="rect" id="node3" href="$a00008.html#a0b1e324c651c86cb54279e022c14dc6d" title="environment::resetCleavage\lCounter" alt="" coords="268,5,449,49"/>
+<area shape="rect" id="node5" href="$a00008.html#a3362d147de095640619d9b44f7f20bba" title="environment::resetEndoCleavage\lCounter" alt="" coords="253,71,464,115"/>
+<area shape="rect" id="node7" href="$a00008.html#ac7deab8db2f581077da735c3542d8f1b" title="environment::resetCondensation\lCounter" alt="" coords="256,138,461,182"/>
+<area shape="rect" id="node9" href="$a00008.html#a55cff0bc2f8de4d3e4db471cad580a86" title="environment::resetEndoCondensation\lCounter" alt="" coords="241,205,476,249"/>
+<area shape="rect" id="node11" href="$a00008.html#abc04de785dddab4703fdcf52ccdf85f9" title="environment::resetOverall\lLoadedMolsCounter" alt="" coords="275,271,443,315"/>
+<area shape="rect" id="node13" href="$a00008.html#a4cf4413f3028f8c5e33991ad5ba18e21" title="environment::resetCpxForm\lCounter" alt="" coords="269,338,448,382"/>
+<area shape="rect" id="node15" href="$a00008.html#a987dc7b9f211f34564343ee0eaa20dc1" title="environment::resetCpxDiss\lCounter" alt="" coords="271,405,447,449"/>
+<area shape="rect" id="node17" href="$a00008.html#a9c22cb9b69207398e35c9c155e2e35ce" title="environment::resetSpontDiss\lCounter" alt="" coords="265,471,452,515"/>
+<area shape="rect" id="node19" href="$a00008.html#a98baed580212dad8ef48a22bfe7e1295" title="environment::resetSpontAss\lCounter" alt="" coords="267,538,451,582"/>
+</map>

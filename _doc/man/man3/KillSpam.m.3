@@ -1,8 +1,8 @@
-.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m" 3 "Thu Dec 12 2013" "Version 4.8 (20131210.63)" "CaRNeSS" \" -*- nroff -*-
+.TH "/home/ale/Documents/GIT/carness/_analysis/old/KillSpam.m" 3 "Fri Mar 28 2014" "Version 4.8 (20140327.66)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/KillSpam.m \- 
+/home/ale/Documents/GIT/carness/_analysis/old/KillSpam.m \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -160,7 +160,7 @@ CONTAINING SIMULATIONS \fBif\fP \fB~isdir\fP ('0_statistics') mkdir('0_statistic
 .RI "\fBend\fP \fBtmpFolder\fP = strcat('*',\fBparam\&.simFolder\fP,'*')"
 .br
 .ti -1c
-.RI "\fBsimDirs\fP = dir(\fBtmpFolder\fP)"
+.RI "\fBsimDirs\fP = \fBdir\fP(\fBtmpFolder\fP)"
 .br
 .ti -1c
 .RI "\fBfid\fP = fopen('ALL_results_TS1\&.txt','w')"
@@ -172,7 +172,7 @@ CONTAINING SIMULATIONS \fBif\fP \fB~isdir\fP ('0_statistics') mkdir('0_statistic
 .RI "\fBblocked\fP = 0:\fBparam\&.lastSpecies\fP"
 .br
 .ti -1c
-.RI "creating \fBreactions\fP matrix \fBrFiles\fP = dir('\fBreactions\fP*')"
+.RI "creating \fBreactions\fP matrix \fBrFiles\fP = \fBdir\fP('\fBreactions\fP*')"
 .br
 .ti -1c
 .RI "\fBreactionsFile\fP = \fBrFiles\fP(length(\fBrFiles\fP)-1)\&.\fBname\fP"
@@ -207,7 +207,7 @@ CONTAINING SIMULATIONS \fBif\fP \fB~isdir\fP ('0_statistics') mkdir('0_statistic
 .RI "for \fBi\fP"
 .br
 .ti -1c
-.RI "creating \fBcatalysis\fP matrix \fBcFiles\fP = dir('\fBcatalysis\fP*')"
+.RI "creating \fBcatalysis\fP matrix \fBcFiles\fP = \fBdir\fP('\fBcatalysis\fP*')"
 .br
 .ti -1c
 .RI "\fBcatalysisFile\fP = \fBcFiles\fP(length(\fBcFiles\fP))\&.\fBname\fP"
@@ -424,7 +424,7 @@ Definition at line 65 of file KillSpam\&.m\&.
 
 .PP
 Definition at line 68 of file KillSpam\&.m\&.
-.SS "creating \fBcatalysis\fP matrix cFiles = dir('\fBcatalysis\fP*')"
+.SS "creating \fBcatalysis\fP matrix cFiles = \fBdir\fP('\fBcatalysis\fP*')"
 
 .PP
 Definition at line 64 of file KillSpam\&.m\&.
@@ -582,7 +582,7 @@ Definition at line 30 of file KillSpam\&.m\&.
 
 .PP
 Definition at line 33 of file KillSpam\&.m\&.
-.SS "creating \fBreactions\fP matrix rFiles = dir('\fBreactions\fP*')"
+.SS "creating \fBreactions\fP matrix rFiles = \fBdir\fP('\fBreactions\fP*')"
 
 .PP
 Definition at line 29 of file KillSpam\&.m\&.
@@ -594,7 +594,7 @@ Definition at line 35 of file KillSpam\&.m\&.
 
 .PP
 Definition at line 238 of file KillSpam\&.m\&.
-.SS "simDirs = dir(\fBtmpFolder\fP)"
+.SS "simDirs = \fBdir\fP(\fBtmpFolder\fP)"
 
 .PP
 Definition at line 17 of file KillSpam\&.m\&.

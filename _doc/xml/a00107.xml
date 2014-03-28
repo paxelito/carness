@@ -1,631 +1,133 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="a00107" kind="namespace">
-    <compoundname>init</compoundname>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="a00107_1a17491bcc04dd0e62b17c8faf6a87d3d5" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.parser</definition>
+    <compoundname>lib::graph::raf</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00107_1a56510e9067d8a6c8f90847d6656ce709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.generateClosure</definition>
         <argsstring></argsstring>
-        <name>parser</name>
-        <initializer>= ArgumentParser(
-				description=&apos;This script re-arrange results in <ref refid="a00035_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref> more friendly way <ref refid="a00028_1aa7b4fe13e75a69fca72862effeaf6196" kindref="member">from</ref> the angle <ref refid="a00032_1abf6e5638a23a2531114655f3f690b70c" kindref="member">analysis</ref> in time.&apos;
-				, epilog=&apos;&apos;&apos;File with angle trajectories are created. &apos;&apos;&apos;)</initializer>
+        <name>generateClosure</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="23" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="23" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="20" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="20" bodyend="45"/>
+        <referencedby refid="a00107_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00049" startline="91" endline="133">lib.graph.raf.rafsearch</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="a00107_1a4e87f8861e72deb9e58cf2e108dbab20" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.args</definition>
+      <memberdef kind="function" id="a00107_1a9896a4198e08978afb80e86697f1bbd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.RAcondition</definition>
         <argsstring></argsstring>
-        <name>args</name>
-        <initializer>= parser.parse_args()</initializer>
+        <name>RAcondition</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="39" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="39" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="46" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="46" bodyend="59"/>
+        <referencedby refid="a00107_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00049" startline="91" endline="133">lib.graph.raf.rafsearch</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="a00107_1aa46e7398812b953383a240300e416857" prot="public" static="no" mutable="no">
-        <type>string</type>
-        <definition>string init.ndn</definition>
+      <memberdef kind="function" id="a00107_1a160a90fb55ff323fc86fcdc65b30b90f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.Fcondition</definition>
         <argsstring></argsstring>
-        <name>ndn</name>
-        <initializer>= &apos;_0_new_allStatResults&apos;</initializer>
+        <name>Fcondition</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="45" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="45" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="60" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="60" bodyend="81"/>
+        <referencedby refid="a00107_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00049" startline="91" endline="133">lib.graph.raf.rafsearch</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="a00107_1a676579aed104d765823ab7523d9e0c08" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.newdirAllResults</definition>
+      <memberdef kind="function" id="a00107_1aaeb3a479f24daf493cc7052aef879d2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.findCatforRAF</definition>
         <argsstring></argsstring>
-        <name>newdirAllResults</name>
-        <initializer>= os.path.join(args.strOut, <ref refid="a00107_1aa46e7398812b953383a240300e416857" kindref="member">ndn</ref>)</initializer>
+        <name>findCatforRAF</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="46" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="46" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="82" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="82" bodyend="90"/>
+        <referencedby refid="a00107_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00049" startline="91" endline="133">lib.graph.raf.rafsearch</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="a00107_1a5c0f5649a6185f0fa88487b57669ad07" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.fname_initRafRes</definition>
+      <memberdef kind="function" id="a00107_1a532a434a0b2fe187a3ff5a8319e4e3b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.rafsearch</definition>
         <argsstring></argsstring>
-        <name>fname_initRafRes</name>
-        <initializer>= os.path.join(<ref refid="a00107_1a676579aed104d765823ab7523d9e0c08" kindref="member">newdirAllResults</ref>, &apos;0_initRafAnalysis.csv&apos;)</initializer>
+        <name>rafsearch</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="55" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="55" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="91" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="91" bodyend="133"/>
+        <references refid="a00107_1a56510e9067d8a6c8f90847d6656ce709" compoundref="a00049" startline="20" endline="45">lib.graph.raf.generateClosure</references>
+        <references refid="a00107_1a9896a4198e08978afb80e86697f1bbd0" compoundref="a00049" startline="46" endline="59">lib.graph.raf.RAcondition</references>
+        <references refid="a00107_1a160a90fb55ff323fc86fcdc65b30b90f" compoundref="a00049" startline="60" endline="81">lib.graph.raf.Fcondition</references>
+        <references refid="a00107_1aaeb3a479f24daf493cc7052aef879d2c" compoundref="a00049" startline="82" endline="90">lib.graph.raf.findCatforRAF</references>
+        <references refid="a00022_1ab178d77fe9330d344e5b21984e6dfd70">set</references>
+        <referencedby refid="a00107_1a3c9606e9d3274506955225eacf05877e" compoundref="a00049" startline="134" endline="143">lib.graph.raf.rafComputation</referencedby>
+        <referencedby refid="a00107_1a0b49d65e78e62c4ddd5022d4405f8286" compoundref="a00049" startline="144" endline="159">lib.graph.raf.rafDynamicComputation</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="a00107_1aa74d50381fc7a0a61c58e36e8642a299" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.fname_initRafResSUM</definition>
+      <memberdef kind="function" id="a00107_1a3c9606e9d3274506955225eacf05877e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.rafComputation</definition>
         <argsstring></argsstring>
-        <name>fname_initRafResSUM</name>
-        <initializer>= os.path.join(<ref refid="a00107_1a676579aed104d765823ab7523d9e0c08" kindref="member">newdirAllResults</ref>, &apos;0_initRafAnalysisSUM.csv&apos;)</initializer>
+        <name>rafComputation</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="56" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="56" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="134" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="134" bodyend="143"/>
+        <references refid="a00107_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00049" startline="91" endline="133">lib.graph.raf.rafsearch</references>
       </memberdef>
-      <memberdef kind="variable" id="a00107_1a8902eba9008d5468d73d3b18affccf85" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.fname_initRafResLIST</definition>
+      <memberdef kind="function" id="a00107_1a0b49d65e78e62c4ddd5022d4405f8286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.rafDynamicComputation</definition>
         <argsstring></argsstring>
-        <name>fname_initRafResLIST</name>
-        <initializer>= os.path.join(<ref refid="a00107_1a676579aed104d765823ab7523d9e0c08" kindref="member">newdirAllResults</ref>, &apos;0_initRafAnalysisLIST.csv&apos;)</initializer>
+        <name>rafDynamicComputation</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="57" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="57" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="144" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="144" bodyend="159"/>
+        <references refid="a00107_1a532a434a0b2fe187a3ff5a8319e4e3b4" compoundref="a00049" startline="91" endline="133">lib.graph.raf.rafsearch</references>
+        <references refid="a00107_1aa4fb376eecb97a88efdb35aa15466c3b" compoundref="a00049" startline="160" endline="169">lib.graph.raf.findRAFrcts</references>
       </memberdef>
-      <memberdef kind="variable" id="a00107_1ac777b57613db6293d8f566c04d5bc964" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.fname_initRafResALL</definition>
+      <memberdef kind="function" id="a00107_1aa4fb376eecb97a88efdb35aa15466c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def lib.graph.raf.findRAFrcts</definition>
         <argsstring></argsstring>
-        <name>fname_initRafResALL</name>
-        <initializer>= os.path.join(<ref refid="a00107_1a676579aed104d765823ab7523d9e0c08" kindref="member">newdirAllResults</ref>, &apos;0_initRafAnalysisALL.csv&apos;)</initializer>
+        <name>findRAFrcts</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="58" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="58" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1adb4c39eb7111cadc79914ab74401a5d3" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.fid_initRafRes</definition>
-        <argsstring></argsstring>
-        <name>fid_initRafRes</name>
-        <initializer>= open(<ref refid="a00107_1a5c0f5649a6185f0fa88487b57669ad07" kindref="member">fname_initRafRes</ref>, &apos;w&apos;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="59" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="59" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a9fbc5638f3698e28c15bf998bec022aa" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.fid_initRafResSUM</definition>
-        <argsstring></argsstring>
-        <name>fid_initRafResSUM</name>
-        <initializer>= open(<ref refid="a00107_1aa74d50381fc7a0a61c58e36e8642a299" kindref="member">fname_initRafResSUM</ref>, &apos;w&apos;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="60" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="60" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a818d22b51f78f1eee3821a580660c9e2" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.fid_initRafResLIST</definition>
-        <argsstring></argsstring>
-        <name>fid_initRafResLIST</name>
-        <initializer>= open(<ref refid="a00107_1a8902eba9008d5468d73d3b18affccf85" kindref="member">fname_initRafResLIST</ref>, &apos;w&apos;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="61" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="61" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a8787bc34fe0a1a9291bed1df1bba18ef" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.fid_initRafResALL</definition>
-        <argsstring></argsstring>
-        <name>fid_initRafResALL</name>
-        <initializer>= open(<ref refid="a00107_1ac777b57613db6293d8f566c04d5bc964" kindref="member">fname_initRafResALL</ref>, &apos;w&apos;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="62" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="62" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a4d64b5e90161e566743e13b037d5bb4f" prot="public" static="no" mutable="no">
-        <type>string</type>
-        <definition>tuple init::strToWrite</definition>
-        <argsstring></argsstring>
-        <name>strToWrite</name>
-        <initializer>= &quot;Folder\tP\tAC\tM\tRAFsize\tClosure\tCats\tuRAF\n&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="63" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a71b8eba3bc2ff1a4518715f5852ddfb2" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.foodList</definition>
-        <argsstring></argsstring>
-        <name>foodList</name>
-        <initializer>= range(args.lastFood+1)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="69" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="69" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1ad18e8e57ac563f08da644cf831ff5d06" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.avgCon</definition>
-        <argsstring></argsstring>
-        <name>avgCon</name>
-        <initializer>= dn.rangeFloat(float(args.avgCon[0]), float(args.avgCon[1]), float(args.avgCon[2]))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="72" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="72" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a9e9ecd6b6e0ec81f0265763a95dedfc5" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int init.raffound</definition>
-        <argsstring></argsstring>
-        <name>raffound</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="76" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="76" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1aca44f11e84467e8090217b689da68785" prot="public" static="no" mutable="no">
-        <type>list</type>
-        <definition>list init.alphabet</definition>
-        <argsstring></argsstring>
-        <name>alphabet</name>
-        <initializer>= [&apos;<ref refid="a00069_1ab4f8a2431d9ad6efec44b47971737c52" kindref="member">A</ref>&apos;, &apos;<ref refid="a00069_1afb39b9efa52a33745c5e622fa358a97f" kindref="member">B</ref>&apos;]</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="79" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="79" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a8d00e8af90536956aca5bb64c22c08de" prot="public" static="no" mutable="no">
-        <type>list</type>
-        <definition>list init.species</definition>
-        <argsstring></argsstring>
-        <name>species</name>
-        <initializer>= []</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="80" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="80" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1ab7609fccbc57f56e33a59e0fc6865c54" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int init.totSpecies</definition>
-        <argsstring></argsstring>
-        <name>totSpecies</name>
-        <initializer>= 2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="84" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="84" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1ae9c65061d913ea2106e5c0adf13a6d97" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.totCleavage</definition>
-        <argsstring></argsstring>
-        <name>totCleavage</name>
-        <initializer>= <ref refid="a00064_1a59a869fb2b28d56dacd91c09e1dffc8d" kindref="member">sum</ref>(map(lambda x: len(<ref refid="a00031_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>)-1,<ref refid="a00022" kindref="compound">species</ref>))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="86" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="86" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1ab15c14228b0f2ce185a19b6c873b8ce9" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int init.totCond</definition>
-        <argsstring></argsstring>
-        <name>totCond</name>
-        <initializer>= <ref refid="a00107_1ab7609fccbc57f56e33a59e0fc6865c54" kindref="member">totSpecies</ref>**2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="87" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="87" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1acd62ae3eca9e5bffbf6a7686879339d1" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>init.totRcts</definition>
-        <argsstring></argsstring>
-        <name>totRcts</name>
-        <initializer>= <ref refid="a00107_1ae9c65061d913ea2106e5c0adf13a6d97" kindref="member">totCleavage</ref>+<ref refid="a00107_1ab15c14228b0f2ce185a19b6c873b8ce9" kindref="member">totCond</ref></initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="88" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="88" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a2352da2bf8926260466297c0bf68808f" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.rctToCat</definition>
-        <argsstring></argsstring>
-        <name>rctToCat</name>
-        <initializer>= int(round(<ref refid="a00107_1acd62ae3eca9e5bffbf6a7686879339d1" kindref="member">totRcts</ref> * <ref refid="a00107_1ab7609fccbc57f56e33a59e0fc6865c54" kindref="member">totSpecies</ref> * prob))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="96" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="96" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1ad8ae32e9b09eefbb6f077913da522b75" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int init.nCleavage</definition>
-        <argsstring></argsstring>
-        <name>nCleavage</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="99" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="99" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1ab565465a7f336d415249ebb7d7f2e602" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int init.nCondensa</definition>
-        <argsstring></argsstring>
-        <name>nCondensa</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="100" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="100" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a689e8a7ea04880f709356e74372ed8c0" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.initSpeciesListLength</definition>
-        <argsstring></argsstring>
-        <name>initSpeciesListLength</name>
-        <initializer>= len(<ref refid="a00022" kindref="compound">species</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="101" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="101" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a28a7deb6c01f690c0ada719c98672c10" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.conf</definition>
-        <argsstring></argsstring>
-        <name>conf</name>
-        <initializer>= (1,1,2000,0,200000,0,0,2,args.lastFood,prob)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="104" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="104" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a5578d5c358ce48fc9cbe268371cafa4e" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>int init.rctType</definition>
-        <argsstring></argsstring>
-        <name>rctType</name>
-        <initializer>= 1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="110" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="110" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a14c236e42c754c3781ae1ae075d1dd4c" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.molToCleav</definition>
-        <argsstring></argsstring>
-        <name>molToCleav</name>
-        <initializer>= ran.choice(<ref refid="a00022" kindref="compound">species</ref>[len(<ref refid="a00107_1aca44f11e84467e8090217b689da68785" kindref="member">alphabet</ref>):<ref refid="a00107_1a689e8a7ea04880f709356e74372ed8c0" kindref="member">initSpeciesListLength</ref>-1])</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="120" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="120" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a21af3c3590a35942a68743431e4be468" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.cutPt</definition>
-        <argsstring></argsstring>
-        <name>cutPt</name>
-        <initializer>= ran.randint(1,len(<ref refid="a00107_1a14c236e42c754c3781ae1ae075d1dd4c" kindref="member">molToCleav</ref>)-1)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="121" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="121" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1abdc9a73a6617a3c7649719b7175a52de" prot="public" static="no" mutable="no">
-        <type>list</type>
-        <definition>list init.tmp1</definition>
-        <argsstring></argsstring>
-        <name>tmp1</name>
-        <initializer>= <ref refid="a00107_1a14c236e42c754c3781ae1ae075d1dd4c" kindref="member">molToCleav</ref>[0:<ref refid="a00107_1a21af3c3590a35942a68743431e4be468" kindref="member">cutPt</ref>]</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="122" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="122" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a4268c8384b04fda5f447ab8a9174a739" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init::tmp1id</definition>
-        <argsstring></argsstring>
-        <name>tmp1id</name>
-        <initializer>= <ref refid="a00060_1a0cd6a44ffb07342cbc7e5ac33bfc9495" kindref="member">species.index</ref>(<ref refid="a00107_1abdc9a73a6617a3c7649719b7175a52de" kindref="member">tmp1</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="124" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="124" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a85397ecdb7b33b6db75aec3fc0185565" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>init.find1</definition>
-        <argsstring></argsstring>
-        <name>find1</name>
-        <initializer>= True</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="125" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="125" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1aac2a39d0a54d416989842e539b8a6e36" prot="public" static="no" mutable="no">
-        <type>list</type>
-        <definition>list init.tmp2</definition>
-        <argsstring></argsstring>
-        <name>tmp2</name>
-        <initializer>= <ref refid="a00107_1a14c236e42c754c3781ae1ae075d1dd4c" kindref="member">molToCleav</ref>[cutPt:len(<ref refid="a00107_1a14c236e42c754c3781ae1ae075d1dd4c" kindref="member">molToCleav</ref>)]</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="130" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="130" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a585d9a7eb6660a9d9a3fd706492f446a" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.tmp2id</definition>
-        <argsstring></argsstring>
-        <name>tmp2id</name>
-        <initializer>= <ref refid="a00060_1a0cd6a44ffb07342cbc7e5ac33bfc9495" kindref="member">species.index</ref>(<ref refid="a00107_1aac2a39d0a54d416989842e539b8a6e36" kindref="member">tmp2</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="132" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="132" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a3793e9e2306513f12efbe52913cd540b" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.sub1</definition>
-        <argsstring></argsstring>
-        <name>sub1</name>
-        <initializer>= ran.choice(<ref refid="a00022" kindref="compound">species</ref>[:<ref refid="a00107_1a689e8a7ea04880f709356e74372ed8c0" kindref="member">initSpeciesListLength</ref>-1])</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="142" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="142" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a94eb5c8e5577c9e15b910e0ea541fbc0" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.idsub1</definition>
-        <argsstring></argsstring>
-        <name>idsub1</name>
-        <initializer>= <ref refid="a00060_1a0cd6a44ffb07342cbc7e5ac33bfc9495" kindref="member">species.index</ref>(<ref refid="a00107_1a3793e9e2306513f12efbe52913cd540b" kindref="member">sub1</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="143" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="143" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1af7fcc401f9d78ede2d8f4aac2d1c9f91" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.sub2</definition>
-        <argsstring></argsstring>
-        <name>sub2</name>
-        <initializer>= ran.choice(<ref refid="a00022" kindref="compound">species</ref>[:<ref refid="a00107_1a689e8a7ea04880f709356e74372ed8c0" kindref="member">initSpeciesListLength</ref>-1])</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="145" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="145" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a25f83893748add8fe158b4a82fa420ed" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.idsub2</definition>
-        <argsstring></argsstring>
-        <name>idsub2</name>
-        <initializer>= <ref refid="a00060_1a0cd6a44ffb07342cbc7e5ac33bfc9495" kindref="member">species.index</ref>(<ref refid="a00107_1af7fcc401f9d78ede2d8f4aac2d1c9f91" kindref="member">sub2</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="146" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="146" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1af7e5559c4efc3ebbeb78f8b01885fc35" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>init.prod</definition>
-        <argsstring></argsstring>
-        <name>prod</name>
-        <initializer>= <ref refid="a00107_1a3793e9e2306513f12efbe52913cd540b" kindref="member">sub1</ref>+<ref refid="a00107_1af7fcc401f9d78ede2d8f4aac2d1c9f91" kindref="member">sub2</ref></initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="147" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="147" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1ad4eeda1ac53564eda60cad5853199804" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init::tmpprodid</definition>
-        <argsstring></argsstring>
-        <name>tmpprodid</name>
-        <initializer>= <ref refid="a00060_1a0cd6a44ffb07342cbc7e5ac33bfc9495" kindref="member">species.index</ref>(<ref refid="a00107_1af7e5559c4efc3ebbeb78f8b01885fc35" kindref="member">prod</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="149" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="149" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a78390f5622d850652ba7c5a68a5bad81" prot="public" static="no" mutable="no">
-        <type>int</type>
-        <definition>tuple init::catalyst</definition>
-        <argsstring></argsstring>
-        <name>catalyst</name>
-        <initializer>= -1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="158" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="158" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a76711a7593abff643cb28c6a049eb208" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>init.catFound</definition>
-        <argsstring></argsstring>
-        <name>catFound</name>
-        <initializer>= False</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="159" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="159" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00107_1a6e719338dc9e70d7784d120431685d3f" prot="public" static="no" mutable="no">
-        <type>tuple</type>
-        <definition>tuple init.rafsets</definition>
-        <argsstring></argsstring>
-        <name>rafsets</name>
-        <initializer>= raf.rafComputation(<ref refid="a00107_1adb4c39eb7111cadc79914ab74401a5d3" kindref="member">fid_initRafRes</ref>, <ref refid="a00107_1a8787bc34fe0a1a9291bed1df1bba18ef" kindref="member">fid_initRafResALL</ref>, <ref refid="a00107_1a818d22b51f78f1eee3821a580660c9e2" kindref="member">fid_initRafResLIST</ref>, &apos;tmpDir&apos;, prob, averageConn, rcts, cats, <ref refid="a00107_1a71b8eba3bc2ff1a4518715f5852ddfb2" kindref="member">foodList</ref>, maxlength)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="167" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" bodystart="167" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="160" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" bodystart="160" bodyend="169"/>
+        <references refid="a00022_1ab178d77fe9330d344e5b21984e6dfd70">set</references>
+        <referencedby refid="a00107_1a0b49d65e78e62c4ddd5022d4405f8286" compoundref="a00049" startline="144" endline="159">lib.graph.raf.rafDynamicComputation</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/underDevelopment/init.py" line="1" column="1"/>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/lib/graph/raf.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

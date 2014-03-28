@@ -1,97 +1,93 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
-  <compounddef id="a00017" kind="class" prot="public">
-    <compoundname>MTRand53</compoundname>
-    <basecompoundref refid="a00019" prot="public" virt="non-virtual">MTRand_int32</basecompoundref>
-    <includes refid="a00091" local="no">mtrand.h</includes>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="a00017_1a24711c9e6e5ee72715f34515d1f1939a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="a00017" kind="file">
+    <compoundname>allTimesAnalysis.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00017_1a370f3dd25136a73d619eba0aa2e3bb4b" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>MTRand53::MTRand53</definition>
-        <argsstring>()</argsstring>
-        <name>MTRand53</name>
+        <definition>function[out]</definition>
+        <argsstring>[out]</argsstring>
+        <name>function</name>
+        <initializer>= allTimesAnalysis(params)
+% function [<ref refid="a00022_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>] = allTimesAnalysis(params)
+%
+
+%
+% INPUT
+%    <ref refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">params.tmpPath</ref> = simulations <ref refid="a00065_1af28466084b87af2cdc5c7b48f4661f2d" kindref="member">path</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" line="141" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" bodystart="141" bodyend="141"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" line="1" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" bodystart="1" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="function" id="a00017_1ad800887e15d4095f22facdb67f270c5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="variable" id="a00017_1a63b4c2789d7e1513024181d12e4f1b6b" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params figureVisible</definition>
+        <argsstring></argsstring>
+        <name>figureVisible</name>
+        <initializer>= prompt <ref refid="a00017_1a22372587c75be87d9f79609e8fc7a815" kindref="member">figures</ref> (1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" line="8" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00017_1a5318eae09f2b8ac76b2d6df39ba9c1cd" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params deltaT</definition>
+        <argsstring></argsstring>
+        <name>deltaT</name>
+        <initializer>= Delta T</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" line="9" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00017_1aa9758857dd92f7845934f06daa7c4120" prot="public" static="no" mutable="no">
+        <type>params</type>
+        <definition>params totT</definition>
+        <argsstring></argsstring>
+        <name>totT</name>
+        <initializer>= total time of the <ref refid="a00065_1a096e1441156fd2c744baece86d6b295c" kindref="member">simulation</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" line="10" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00017_1af32eb97339f1e9d37b5540de2cbc79c9" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>MTRand53::MTRand53</definition>
-        <argsstring>(unsigned long seed)</argsstring>
-        <name>MTRand53</name>
-        <param>
-          <type>unsigned long</type>
-          <declname>seed</declname>
-        </param>
+        <definition>currentDir</definition>
+        <argsstring></argsstring>
+        <name>currentDir</name>
+        <initializer>= <ref refid="a00065_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" line="142" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" bodystart="142" bodyend="142"/>
-      </memberdef>
-      <memberdef kind="function" id="a00017_1ac77b190d3ac27adea2d2c6c2ce2347c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>MTRand53::MTRand53</definition>
-        <argsstring>(const unsigned long *seed, int size)</argsstring>
-        <name>MTRand53</name>
-        <param>
-          <type>const unsigned long *</type>
-          <declname>seed</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>size</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" line="143" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" bodystart="143" bodyend="143"/>
-      </memberdef>
-      <memberdef kind="function" id="a00017_1a947a6a7afd0c8a17612cda3faa705a75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>MTRand53::~MTRand53</definition>
-        <argsstring>()</argsstring>
-        <name>~MTRand53</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" line="144" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" bodystart="144" bodyend="144"/>
-      </memberdef>
-      <memberdef kind="function" id="a00017_1ab6657cb5349f39bc4553d3a970458b45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>double</type>
-        <definition>double MTRand53::operator()</definition>
-        <argsstring>()</argsstring>
-        <name>operator()</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" line="145" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" bodystart="145" bodyend="147"/>
-        <references refid="a00019_1abacdfa346255baeac69d29bb57f29b22" compoundref="a00091" startline="85" endline="94">MTRand_int32::rand_int32</references>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" line="17" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" bodystart="17" bodyend="-1"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="a00017_1a1c5ef2c68542730bb5d90d3b80aabf96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>MTRand53::MTRand53</definition>
-        <argsstring>(const MTRand53 &amp;)</argsstring>
-        <name>MTRand53</name>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00017_1a22372587c75be87d9f79609e8fc7a815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>params do not prompt</type>
+        <definition>params do not prompt figures</definition>
+        <argsstring>(0)</argsstring>
+        <name>figures</name>
         <param>
-          <type>const <ref refid="a00017" kindref="compound">MTRand53</ref> &amp;</type>
+          <type>0</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -99,15 +95,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" line="149" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" line="8" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a00017_1a751b892577cc9a7703dc22a7e6b8a65f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void MTRand53::operator=</definition>
-        <argsstring>(const MTRand53 &amp;)</argsstring>
-        <name>operator=</name>
+      <memberdef kind="function" id="a00017_1a9be64ccaf83f215ee184d5aafefd7352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>OUT</type>
+        <definition>disp</definition>
+        <argsstring>(&apos;|--------------------------------|&apos;)</argsstring>
+        <name>disp</name>
         <param>
-          <type>const <ref refid="a00017" kindref="compound">MTRand53</ref> &amp;</type>
+          <type>&apos;|--------------------------------|&apos;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -115,53 +111,287 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" line="150" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00017_1a3bc93d8e435484e29a4cce2e7479360e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>disp</definition>
+        <argsstring>(&apos;|-All times analysis...|&apos;)</argsstring>
+        <name>disp</name>
+        <param>
+          <type>&apos;|-All <ref refid="a00065_1af3b4ff50e3fefed842dc431f3d32ff0e" kindref="member">times</ref> analysis...|&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m" line="14" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="47">
-        <label>MTRand_int32</label>
-        <link refid="a00019"/>
-      </node>
-      <node id="46">
-        <label>MTRand53</label>
-        <link refid="a00017"/>
-        <childnode refid="47" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="49">
-        <label>MTRand_int32</label>
-        <link refid="a00019"/>
-      </node>
-      <node id="48">
-        <label>MTRand53</label>
-        <link refid="a00017"/>
-        <childnode refid="49" relation="public-inheritance">
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" line="139" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/mtrand.h" bodystart="139" bodyend="151"/>
-    <listofallmembers>
-      <member refid="a00017_1a24711c9e6e5ee72715f34515d1f1939a" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand53</name></member>
-      <member refid="a00017_1ad800887e15d4095f22facdb67f270c5e" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand53</name></member>
-      <member refid="a00017_1ac77b190d3ac27adea2d2c6c2ce2347c3" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand53</name></member>
-      <member refid="a00017_1a1c5ef2c68542730bb5d90d3b80aabf96" prot="private" virt="non-virtual"><scope>MTRand53</scope><name>MTRand53</name></member>
-      <member refid="a00019_1a034f223c086f5368bd220b02f2cc12a8" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand_int32</name></member>
-      <member refid="a00019_1ad30f7c63a6f1fb3c3b76b8ce6ffa0206" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand_int32</name></member>
-      <member refid="a00019_1a19acddb3910a7282517b2ffc398b92b4" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>MTRand_int32</name></member>
-      <member refid="a00017_1ab6657cb5349f39bc4553d3a970458b45" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>operator()</name></member>
-      <member refid="a00017_1a751b892577cc9a7703dc22a7e6b8a65f" prot="private" virt="non-virtual"><scope>MTRand53</scope><name>operator=</name></member>
-      <member refid="a00019_1abacdfa346255baeac69d29bb57f29b22" prot="protected" virt="non-virtual"><scope>MTRand53</scope><name>rand_int32</name></member>
-      <member refid="a00019_1a0c57076fe30358e0700a7ce1baa0ea27" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>seed</name></member>
-      <member refid="a00019_1a3cabc1e3445716236a570ffd2f69686d" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>seed</name></member>
-      <member refid="a00017_1a947a6a7afd0c8a17612cda3faa705a75" prot="public" virt="non-virtual"><scope>MTRand53</scope><name>~MTRand53</name></member>
-      <member refid="a00019_1a364900abea0758d070ce89922159923a" prot="public" virt="virtual"><scope>MTRand53</scope><name>~MTRand_int32</name></member>
-    </listofallmembers>
+    <programlisting>
+<codeline lineno="1" refid="a00017_1a370f3dd25136a73d619eba0aa2e3bb4b" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[out]<sp/>=<sp/>allTimesAnalysis(params)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">%<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>[out]<sp/>=<sp/>allTimesAnalysis(params)</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">%</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">%</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">%<sp/>INPUT</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">%<sp/><sp/><sp/><sp/>params.tmpPath<sp/>=<sp/>simulations<sp/><ref refid="a00065_1af28466084b87af2cdc5c7b48f4661f2d" kindref="member">path</ref>;<sp/></highlight></codeline>
+<codeline lineno="8" refid="a00017_1a63b4c2789d7e1513024181d12e4f1b6b" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/>params.figureVisible<sp/>=<sp/>prompt<sp/><ref refid="a00017_1a22372587c75be87d9f79609e8fc7a815" kindref="member">figures</ref><sp/>(1),<sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>not<sp/>prompt<sp/><ref refid="a00017_1a22372587c75be87d9f79609e8fc7a815" kindref="member">figures</ref><sp/>(0);</highlight></codeline>
+<codeline lineno="9" refid="a00017_1a5318eae09f2b8ac76b2d6df39ba9c1cd" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/>params.deltaT<sp/>=<sp/>Delta<sp/>T;</highlight></codeline>
+<codeline lineno="10" refid="a00017_1aa9758857dd92f7845934f06daa7c4120" refkind="member"><highlight class="normal">%<sp/><sp/><sp/><sp/>params.totT<sp/>=<sp/>total<sp/>time<sp/>of<sp/>the<sp/><ref refid="a00065_1a096e1441156fd2c744baece86d6b295c" kindref="member">simulation</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">%<sp/>OUT</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="a00017_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(</highlight><highlight class="stringliteral">&apos;|--------------------------------|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="a00017_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(</highlight><highlight class="stringliteral">&apos;|-<sp/>All<sp/>times<sp/>analysis...<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="a00017_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(</highlight><highlight class="stringliteral">&apos;|--------------------------------|&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="a00017_1af32eb97339f1e9d37b5540de2cbc79c9" refkind="member"><highlight class="normal"><ref refid="a00017_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref><sp/>=<sp/><ref refid="a00019_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>nargin<sp/>&lt;<sp/>1</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/>params.tmpPath<sp/>=<sp/><ref refid="a00017_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref>();<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/>params.figureVisible<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="a00019_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(params.tmpPath);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="a00017_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(</highlight><highlight class="stringliteral">&apos;start<sp/>analysis&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">%<sp/>READ<sp/>ALL<sp/>THE<sp/>DIRECTORY<sp/>CONTAINING<sp/>SIMULATIONS</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="a00022_1ab3186e0326a3b47b2cfcb5577ab5139f" kindref="member">search</ref><sp/>=<sp/>strcat(</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">,params.simFolder,</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/><ref refid="a00065_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(<ref refid="a00022_1ab3186e0326a3b47b2cfcb5577ab5139f" kindref="member">search</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="a00019_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(strcat(<ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(1).<ref refid="a00021_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,</highlight><highlight class="stringliteral">&apos;/res&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">%<sp/>Read<sp/>configuration<sp/><ref refid="a00115_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">confParams<sp/>=<sp/>readParameters();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">%<sp/>File<sp/>Containing<sp/>all<sp/>Times</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="a00022_1a47868b053902b822eab5c738a67a633a" kindref="member">times</ref><sp/>=<sp/>0:confParams.timeStructuresSavingInterval:confParams.nSeconds;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="a00019_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(</highlight><highlight class="stringliteral">&apos;./../..&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">%<sp/>Init<sp/>aggregate<sp/>matrices<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">allSpecies<sp/>=<sp/>zeros(length(times),length(<ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">allMolecules<sp/>=<sp/>zeros(length(times),length(<ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">allCpx<sp/>=<sp/>zeros(length(times),length(<ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">allCpxMols<sp/>=<sp/>zeros(length(times),length(<ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">allBricks<sp/>=<sp/>zeros(length(times),length(<ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">%<sp/>For<sp/>each<sp/>folder<sp/>the<sp/>necessary<sp/>computations<sp/>are<sp/>performed</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="a00021_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>=1:length(<ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>isdir(strcat(<ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(i).<ref refid="a00021_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>))</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>Go<sp/>into<sp/>the<sp/>results<sp/>folder</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00019_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(strcat(<ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(i).<ref refid="a00021_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>Select<sp/>Times<sp/><ref refid="a00022_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/><ref refid="a00015" kindref="compound">reactions</ref><sp/>files</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeFiles<sp/>=<sp/><ref refid="a00065_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref>(&apos;*times*&apos;);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>For<sp/>each<sp/>time<sp/><ref refid="a00115_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/><ref refid="a00022_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>=1:length(timeFiles)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg<sp/>=<sp/>sprintf(&apos;Processing<sp/><ref refid="a00065_1a4ca269cf93df1b512b52174c1a256fe5" kindref="member">dir</ref><sp/>%s,<sp/><ref refid="a00115_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref><sp/>%s&apos;,<ref refid="a00021_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(i).name,timeFiles(<ref refid="a00022_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>).name);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00017_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(msg);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesSel<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00099_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref>=fopen(timeFiles(<ref refid="a00022_1ad34e9c7e9ae69ae0b9f1866faed5e4ad" kindref="member">j</ref>).name,&apos;<ref refid="a00021_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref>&apos;);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref><sp/>=<sp/>fgetl(<ref refid="a00099_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tlineb<sp/>=<sp/><ref refid="a00022_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>Read<sp/>first<sp/>line<sp/>of<sp/>the<sp/>times<sp/><ref refid="a00115_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>isstrprop(tline(<ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref>),<sp/>&apos;<ref refid="a00022_1aae7c98255a05b6029bdfc5e96dc2ab88" kindref="member">cntrl</ref>&apos;),<sp/>tline(end)<sp/>=<sp/>[];<sp/>end</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tline<sp/>=<sp/>strread(tline);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allSpecies(timesSel,i)<sp/>=<sp/>tline(7);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allMolecules(timesSel,i)<sp/>=<sp/>tline(8);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allCpx(timesSel,i)<sp/>=<sp/>tline(9);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allCpxMols(timesSel,i)<sp/>=<sp/>tline(10);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allBricks(timesSel,i)<sp/>=<sp/>tline(11);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesSel<sp/>=<sp/>timesSel<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>%<sp/>The<sp/>the<sp/>other<sp/>rows</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>while<sp/><ref refid="a00022_1aaa2ace52a161710427bdc25dd600089b" kindref="member">ischar</ref>(tlineb)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tline<sp/>=<sp/>fgetl(fid);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tlineb<sp/>=<sp/>tline;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00022_1aaa2ace52a161710427bdc25dd600089b" kindref="member">ischar</ref>(tlineb)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>isstrprop(tline(end),<sp/>&apos;cntrl&apos;),<sp/>tline(end)<sp/>=<sp/>[];<sp/>end</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tline<sp/>=<sp/>strread(tline);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00022_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref>(times(timesSel)<sp/>&lt;=<sp/>tline(2),tline(2)~=confParams.<ref refid="a00064_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allSpecies(timesSel,i)<sp/>=<sp/>tline(7);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allMolecules(timesSel,i)<sp/>=<sp/>tline(8);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allCpx(timesSel,i)<sp/>=<sp/>tline(9);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allCpxMols(timesSel,i)<sp/>=<sp/>tline(10);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allBricks(timesSel,i)<sp/>=<sp/>tline(11);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timesSel<sp/>=<sp/>timesSel<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00019_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00019_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>(&apos;./../..&apos;);<sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">end</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="a00022_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.allSpecies<sp/>=<sp/>allSpecies;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="a00022_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.allMolecules<sp/>=<sp/>allMolecules;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><ref refid="a00022_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.allCpx<sp/>=<sp/>allCpx;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><ref refid="a00022_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.allCpxMols<sp/>=<sp/>allCpxMols;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="a00022_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.allBricks<sp/>=<sp/>allBricks;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><ref refid="a00022_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref>.times<sp/>=<sp/>times;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>~isdir(&apos;0_statistics&apos;)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00062_1ae58a11ed5ac7873b1039a391d5c86a05" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">end</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">cd(&apos;0_statistics&apos;)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">save<sp/>&apos;ALL_0_allSpecies.csv&apos;<sp/>allSpecies<sp/>-ASCII<sp/>-TABS</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">save<sp/>&apos;ALL_0_allMolecules.csv&apos;<sp/>allMolecules<sp/>-ASCII<sp/>-TABS</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">save<sp/>&apos;ALL_0_allCpx.csv&apos;<sp/>allCpx<sp/>-ASCII<sp/>-TABS</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">save<sp/>&apos;ALL_0_allCpxMols.csv&apos;<sp/>allCpxMols<sp/>-ASCII<sp/>-TABS</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">save<sp/>&apos;ALL_0_allBricks.csv&apos;<sp/>allBricks<sp/>-ASCII<sp/>-TABS</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">%<sp/>FIGURE<sp/>1</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>params.<ref refid="a00017_1a63b4c2789d7e1513024181d12e4f1b6b" kindref="member">figureVisible</ref><sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00055_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(&apos;Visible&apos;,&apos;off&apos;)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><ref refid="a00021_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00055_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(1)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">end<sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">plot(times,allSpecies,<sp/>&apos;-&apos;)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">grid<sp/>on</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><ref refid="a00022_1ab178d77fe9330d344e5b21984e6dfd70" kindref="member">set</ref>(gca,&apos;fontsize&apos;,15,&apos;fontname&apos;,&apos;times&apos;);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><ref refid="a00022_1aa8934823385223a40006ae4f0df62618" kindref="member">xlabel</ref>(&apos;Time&apos;,<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><ref refid="a00022_1af0c349e5509d59e03a393902ab2d229f" kindref="member">ylabel</ref>(&apos;Species&apos;,<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">print<sp/>-depsc<sp/>ALL_11_species.eps</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><ref refid="a00022_1aa04641698301ef27b9562e1a03d697cf" kindref="member">figure1</ref><sp/>=<sp/>gcf;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><ref refid="a00022_1a4a59d6b572aedc6e6a74b744dbf50407" kindref="member">saveas</ref>(<ref refid="a00022_1aa04641698301ef27b9562e1a03d697cf" kindref="member">figure1</ref>,<sp/>&apos;ALL_21_species.fig&apos;);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal">%<sp/>FIGURE<sp/>2</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>params.<ref refid="a00017_1a63b4c2789d7e1513024181d12e4f1b6b" kindref="member">figureVisible</ref><sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00055_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(&apos;Visible&apos;,&apos;off&apos;)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><ref refid="a00021_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00055_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(2)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">end<sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">plot(times,allMolecules,<sp/>&apos;-&apos;)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">grid<sp/>on</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><ref refid="a00022_1ab178d77fe9330d344e5b21984e6dfd70" kindref="member">set</ref>(gca,&apos;fontsize&apos;,15,&apos;fontname&apos;,&apos;times&apos;);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><ref refid="a00022_1aa8934823385223a40006ae4f0df62618" kindref="member">xlabel</ref>(&apos;Time&apos;,<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><ref refid="a00022_1af0c349e5509d59e03a393902ab2d229f" kindref="member">ylabel</ref>(&apos;Molecules&apos;,<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">print<sp/>-depsc<sp/>ALL_12_allMolecules.eps</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">figure1<sp/>=<sp/>gcf;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><ref refid="a00022_1a4a59d6b572aedc6e6a74b744dbf50407" kindref="member">saveas</ref>(figure1,<sp/>&apos;ALL_22_allMolecules.fig&apos;);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">%<sp/>FIGURE<sp/>3</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>params.<ref refid="a00017_1a63b4c2789d7e1513024181d12e4f1b6b" kindref="member">figureVisible</ref><sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00055_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(&apos;Visible&apos;,&apos;off&apos;)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><ref refid="a00021_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00055_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(3)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">end<sp/><sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">plot(times,allCpx,<sp/>&apos;-&apos;)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">grid<sp/>on</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><ref refid="a00022_1ab178d77fe9330d344e5b21984e6dfd70" kindref="member">set</ref>(gca,&apos;fontsize&apos;,15,&apos;fontname&apos;,&apos;times&apos;);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><ref refid="a00022_1aa8934823385223a40006ae4f0df62618" kindref="member">xlabel</ref>(&apos;Time&apos;,<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><ref refid="a00022_1af0c349e5509d59e03a393902ab2d229f" kindref="member">ylabel</ref>(&apos;Complexes&apos;,<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">print<sp/>-depsc<sp/>ALL_13_allComplexes.eps</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">figure1<sp/>=<sp/>gcf;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><ref refid="a00022_1a4a59d6b572aedc6e6a74b744dbf50407" kindref="member">saveas</ref>(figure1,<sp/>&apos;ALL_23_allComplexes.fig&apos;);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">%<sp/>FIGURE<sp/>4</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>params.<ref refid="a00017_1a63b4c2789d7e1513024181d12e4f1b6b" kindref="member">figureVisible</ref><sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00055_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(&apos;Visible&apos;,&apos;off&apos;)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><ref refid="a00021_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00055_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(4)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">end<sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal">plot(times,allCpxMols,<sp/>&apos;-&apos;)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">grid<sp/>on</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><ref refid="a00022_1ab178d77fe9330d344e5b21984e6dfd70" kindref="member">set</ref>(gca,&apos;fontsize&apos;,15,&apos;fontname&apos;,&apos;times&apos;);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><ref refid="a00022_1aa8934823385223a40006ae4f0df62618" kindref="member">xlabel</ref>(&apos;Time&apos;,<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><ref refid="a00022_1af0c349e5509d59e03a393902ab2d229f" kindref="member">ylabel</ref>(&apos;Complex<sp/>Molecules&apos;,<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">print<sp/>-depsc<sp/>ALL_14_allCpxMols.eps</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">figure1<sp/>=<sp/>gcf;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><ref refid="a00022_1a4a59d6b572aedc6e6a74b744dbf50407" kindref="member">saveas</ref>(figure1,<sp/>&apos;ALL_24_allCpxMols.fig&apos;);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal">%<sp/>FIGURE<sp/>5</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>params.<ref refid="a00017_1a63b4c2789d7e1513024181d12e4f1b6b" kindref="member">figureVisible</ref><sp/>==<sp/>0</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00055_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(&apos;Visible&apos;,&apos;off&apos;)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><ref refid="a00021_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00055_1a85bcf07528c0363b01fabdece86a8848" kindref="member">figure</ref>(5)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">end<sp/><sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal">plot(times,allBricks,<sp/>&apos;-&apos;)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">grid<sp/>on</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><ref refid="a00022_1ab178d77fe9330d344e5b21984e6dfd70" kindref="member">set</ref>(gca,&apos;fontsize&apos;,15,&apos;fontname&apos;,&apos;times&apos;);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><ref refid="a00022_1aa8934823385223a40006ae4f0df62618" kindref="member">xlabel</ref>(&apos;Time&apos;,<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><ref refid="a00022_1af0c349e5509d59e03a393902ab2d229f" kindref="member">ylabel</ref>(&apos;Bricks&apos;,<sp/>&apos;Interpreter&apos;,<sp/>&apos;latex&apos;,<sp/>&apos;fontsize&apos;,15);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">print<sp/>-depsc<sp/>ALL_15_allBricks.eps</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">figure1<sp/>=<sp/>gcf;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><ref refid="a00022_1a4a59d6b572aedc6e6a74b744dbf50407" kindref="member">saveas</ref>(figure1,<sp/>&apos;ALL_25_allBricks.fig&apos;);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">cd(&apos;../&apos;);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">cd(<ref refid="a00017_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal">end</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><ref refid="a00017_1a370f3dd25136a73d619eba0aa2e3bb4b" kindref="member">function</ref><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref><sp/>=<sp/>readParameters()</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>fidConf=fopen(&apos;acsm2s.<ref refid="a00095_1a0d6fedc77ef111d5aebc888527a7b60d" kindref="member">conf</ref>&apos;,&apos;r&apos;);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>tline<sp/>=<sp/>fgets(fidConf);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/><ref refid="a00022_1aaa2ace52a161710427bdc25dd600089b" kindref="member">ischar</ref>(tline)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tline<sp/>=<sp/>fgets(fidConf);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref><sp/>=<sp/>findstr(tline,&apos;=&apos;);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:<ref refid="a00022_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1),&apos;<ref refid="a00064_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>&apos;)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00064_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00065_1a4c8fe523edbe179c5d215da13f469f72" kindref="member">nGEN</ref>&apos;)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00065_1a4c8fe523edbe179c5d215da13f469f72" kindref="member">nGEN</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00064_1a68c8b36ce2387749248f566faa108e45" kindref="member">nSIM</ref>&apos;)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00064_1a68c8b36ce2387749248f566faa108e45" kindref="member">nSIM</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00064_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref>&apos;)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00064_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00065_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref>&apos;)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00065_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00065_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref>&apos;)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00065_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00064_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>&apos;)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00064_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00065_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>&apos;)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00065_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;ECConcentration&apos;)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.ECConcentration<sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00096_1a3a8adee26325d72aca909e91b0fd3ea5" kindref="member">influx_rate</ref>&apos;)</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00096_1a3a8adee26325d72aca909e91b0fd3ea5" kindref="member">influx_rate</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00065_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref>&apos;)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00065_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;ECConcentration&apos;)</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.ECConcentration<sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00064_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>&apos;)</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00064_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00019_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fidConf);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="253"><highlight class="normal">end</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/old/allTimesAnalysis.m"/>
   </compounddef>
 </doxygen>

@@ -1,132 +1,46 @@
-\hypertarget{a00036}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/stats.m File Reference}
-\label{a00036}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/stats.\-m@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/stats.\-m}}
+\hypertarget{a00036}{\section{/home/ale/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/under\-Development/acs\-Dyn\-Stat\-In\-Time.py File Reference}
+\label{a00036}\index{/home/ale/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/under\-Development/acs\-Dyn\-Stat\-In\-Time.\-py@{/home/ale/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/under\-Development/acs\-Dyn\-Stat\-In\-Time.\-py}}
 }
-\subsection*{Functions}
+\subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{a00068_a4b4c670b101bf7a838f775e008fa6255}{function} \hyperlink{a00036_aa7ae495ee970be20d992bedf6f9f8280}{stats} ()\%clear all\%close all\%\%\hyperlink{a00071_af28466084b87af2cdc5c7b48f4661f2d}{params.\-path}
+\hyperlink{a00093}{acs\-Dyn\-Stat\-In\-Time}
+\end{DoxyCompactItemize}
+\subsection*{Constant Groups}
+\begin{DoxyCompactItemize}
 \item 
-\hyperlink{a00036_a18a344cbdf9b3218a438bca78547ab9e}{conc\-Analysis} (params)\%clear all\%close all\%\%\hyperlink{a00071_af28466084b87af2cdc5c7b48f4661f2d}{params.\-path}
+\hyperlink{a00093}{acs\-Dyn\-Stat\-In\-Time}
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-params \hyperlink{a00036_a5318eae09f2b8ac76b2d6df39ba9c1cd}{delta\-T} = 10
+tuple \hyperlink{a00093_a14b76a8235da778083f610cabe968c34}{acs\-Dyn\-Stat\-In\-Time.\-parser}
 \item 
-params \hyperlink{a00036_aa9758857dd92f7845934f06daa7c4120}{tot\-T} = 1000
+tuple \hyperlink{a00093_a0fef98b331f3de5212d309bd2d3556e7}{acs\-Dyn\-Stat\-In\-Time.\-args} = parser.\-parse\-\_\-args()
 \item 
-params \hyperlink{a00036_a4b295f592934e78a05958a54046ceb68}{show\-Fig} = 0
+tuple \hyperlink{a00093_aff72277efad2fb1d2f51e95f6fefc288}{acs\-Dyn\-Stat\-In\-Time.\-str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
 \item 
-params \hyperlink{a00036_a63b4c2789d7e1513024181d12e4f1b6b}{figure\-Visible} = 0
+string \hyperlink{a00093_a4331412d1cdff7111cdc69adc31528c4}{acs\-Dyn\-Stat\-In\-Time.\-str\-Sub\-Str\-Key} = '$\ast$'
 \item 
-params \hyperlink{a00036_aa022cbb28f80299d572def08e7a5ccfd}{threshold} = 0
+tuple \hyperlink{a00093_a353a268554f9ac8661c5e0142496f580}{acs\-Dyn\-Stat\-In\-Time.\-files\-To\-Anal} = sorted(glob.\-glob(os.\-path.\-join(str\-Path,str\-Sub\-Str\-Key)))
 \item 
-params \hyperlink{a00036_afb6aa83fb78c663f3b39be2380842a8b}{decay\-Time} = 10
+tuple \hyperlink{a00093_abf8db6a4d0dc9132f54755c72c871471}{acs\-Dyn\-Stat\-In\-Time.\-len\-Files\-To\-Anal} = len(files\-To\-Anal)
 \item 
-params \hyperlink{a00036_a4e4b89515d35d0cba5873e282e55dc8c}{tmp\-Res\-Fold} = 'res'
+int \hyperlink{a00093_a4679690d186f44a3ad8e6eb3a545fd39}{acs\-Dyn\-Stat\-In\-Time.\-num\-Of\-Traj} = 0
 \item 
-params \hyperlink{a00036_ab3d8fca9a15f5a064b07181a35ebdbb7}{distinctive\-Sub\-Str} = 'sim'
+tuple \hyperlink{a00093_a52808d1f82b263c51e9bfb9e18b053c0}{acs\-Dyn\-Stat\-In\-Time.\-x} = np.\-array(map(list, np.\-loadtxt(file\-To\-Anal, str)), float)
 \item 
-params \hyperlink{a00036_a71a9d71e2c994a7a8552d39b41b6e256}{tmp\-I\-Dsim} = '5'
+\hyperlink{a00093_ade03788f04a663a14a9abeae4e7ea0e2}{acs\-Dyn\-Stat\-In\-Time.\-xsize} = x.\-shape
 \item 
-params \hyperlink{a00036_a3b01c97f207a2997c3bd0c2718441509}{tmp\-Rct\-File\-To\-Load} = ''
+list \hyperlink{a00093_a565bd873618e4d135a9903fb70ee5981}{acs\-Dyn\-Stat\-In\-Time.\-run4\-Chem} = xsize\mbox{[}0\mbox{]}
 \item 
-params \hyperlink{a00036_ae5d21adddbfe36d5b10d43a2e8b39123}{tmp\-Rct\-S\-U\-B\-File\-To\-Load} = ''
+tuple \hyperlink{a00093_aa7979c32d5499d000edacba8fcadd039}{acs\-Dyn\-Stat\-In\-Time.\-y} = np.\-zeros((len\-Files\-To\-Anal,num\-Of\-Traj))
+\item 
+int \hyperlink{a00093_a7ce24ac1959d7d1512b663f20f3e3100}{acs\-Dyn\-Stat\-In\-Time.\-pos} = 0
+\item 
+int \hyperlink{a00093_aa0ad135db98d635147ecbd1480de89df}{acs\-Dyn\-Stat\-In\-Time.\-chem} = 1
+\item 
+string \hyperlink{a00093_acb2620669fa00dd24be0687c86647b43}{acs\-Dyn\-Stat\-In\-Time.\-tmp\-Head} = ''
+\item 
+string \hyperlink{a00093_aa77abf10e3a92416282af2030df3b4b0}{acs\-Dyn\-Stat\-In\-Time.\-filename} = \char`\"{}\-\_\-arranged\-\_\-\char`\"{}
 \end{DoxyCompactItemize}
-
-
-\subsection{Function Documentation}
-\hypertarget{a00036_a18a344cbdf9b3218a438bca78547ab9e}{\index{stats.\-m@{stats.\-m}!conc\-Analysis@{conc\-Analysis}}
-\index{conc\-Analysis@{conc\-Analysis}!stats.m@{stats.\-m}}
-\subsubsection[{conc\-Analysis}]{\setlength{\rightskip}{0pt plus 5cm}conc\-Analysis (
-\begin{DoxyParamCaption}
-\item[{params}]{}
-\end{DoxyParamCaption}
-)}}\label{a00036_a18a344cbdf9b3218a438bca78547ab9e}
-\hypertarget{a00036_aa7ae495ee970be20d992bedf6f9f8280}{\index{stats.\-m@{stats.\-m}!stats@{stats}}
-\index{stats@{stats}!stats.m@{stats.\-m}}
-\subsubsection[{stats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} stats (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{a00036_aa7ae495ee970be20d992bedf6f9f8280}
-
-
-\subsection{Variable Documentation}
-\hypertarget{a00036_afb6aa83fb78c663f3b39be2380842a8b}{\index{stats.\-m@{stats.\-m}!decay\-Time@{decay\-Time}}
-\index{decay\-Time@{decay\-Time}!stats.m@{stats.\-m}}
-\subsubsection[{decay\-Time}]{\setlength{\rightskip}{0pt plus 5cm}params decay\-Time = 10}}\label{a00036_afb6aa83fb78c663f3b39be2380842a8b}
-
-
-Definition at line 84 of file stats.\-m.
-
-\hypertarget{a00036_a5318eae09f2b8ac76b2d6df39ba9c1cd}{\index{stats.\-m@{stats.\-m}!delta\-T@{delta\-T}}
-\index{delta\-T@{delta\-T}!stats.m@{stats.\-m}}
-\subsubsection[{delta\-T}]{\setlength{\rightskip}{0pt plus 5cm}params delta\-T = 10}}\label{a00036_a5318eae09f2b8ac76b2d6df39ba9c1cd}
-
-
-Definition at line 7 of file stats.\-m.
-
-\hypertarget{a00036_ab3d8fca9a15f5a064b07181a35ebdbb7}{\index{stats.\-m@{stats.\-m}!distinctive\-Sub\-Str@{distinctive\-Sub\-Str}}
-\index{distinctive\-Sub\-Str@{distinctive\-Sub\-Str}!stats.m@{stats.\-m}}
-\subsubsection[{distinctive\-Sub\-Str}]{\setlength{\rightskip}{0pt plus 5cm}params distinctive\-Sub\-Str = 'sim'}}\label{a00036_ab3d8fca9a15f5a064b07181a35ebdbb7}
-
-
-Definition at line 86 of file stats.\-m.
-
-\hypertarget{a00036_a63b4c2789d7e1513024181d12e4f1b6b}{\index{stats.\-m@{stats.\-m}!figure\-Visible@{figure\-Visible}}
-\index{figure\-Visible@{figure\-Visible}!stats.m@{stats.\-m}}
-\subsubsection[{figure\-Visible}]{\setlength{\rightskip}{0pt plus 5cm}params figure\-Visible = 0}}\label{a00036_a63b4c2789d7e1513024181d12e4f1b6b}
-
-
-Definition at line 57 of file stats.\-m.
-
-\hypertarget{a00036_a4b295f592934e78a05958a54046ceb68}{\index{stats.\-m@{stats.\-m}!show\-Fig@{show\-Fig}}
-\index{show\-Fig@{show\-Fig}!stats.m@{stats.\-m}}
-\subsubsection[{show\-Fig}]{\setlength{\rightskip}{0pt plus 5cm}params show\-Fig = 0}}\label{a00036_a4b295f592934e78a05958a54046ceb68}
-
-
-Definition at line 9 of file stats.\-m.
-
-\hypertarget{a00036_aa022cbb28f80299d572def08e7a5ccfd}{\index{stats.\-m@{stats.\-m}!threshold@{threshold}}
-\index{threshold@{threshold}!stats.m@{stats.\-m}}
-\subsubsection[{threshold}]{\setlength{\rightskip}{0pt plus 5cm}params threshold = 0}}\label{a00036_aa022cbb28f80299d572def08e7a5ccfd}
-
-
-Definition at line 83 of file stats.\-m.
-
-\hypertarget{a00036_a71a9d71e2c994a7a8552d39b41b6e256}{\index{stats.\-m@{stats.\-m}!tmp\-I\-Dsim@{tmp\-I\-Dsim}}
-\index{tmp\-I\-Dsim@{tmp\-I\-Dsim}!stats.m@{stats.\-m}}
-\subsubsection[{tmp\-I\-Dsim}]{\setlength{\rightskip}{0pt plus 5cm}params tmp\-I\-Dsim = '5'}}\label{a00036_a71a9d71e2c994a7a8552d39b41b6e256}
-
-
-Definition at line 87 of file stats.\-m.
-
-\hypertarget{a00036_a3b01c97f207a2997c3bd0c2718441509}{\index{stats.\-m@{stats.\-m}!tmp\-Rct\-File\-To\-Load@{tmp\-Rct\-File\-To\-Load}}
-\index{tmp\-Rct\-File\-To\-Load@{tmp\-Rct\-File\-To\-Load}!stats.m@{stats.\-m}}
-\subsubsection[{tmp\-Rct\-File\-To\-Load}]{\setlength{\rightskip}{0pt plus 5cm}params tmp\-Rct\-File\-To\-Load = ''}}\label{a00036_a3b01c97f207a2997c3bd0c2718441509}
-
-
-Definition at line 88 of file stats.\-m.
-
-\hypertarget{a00036_ae5d21adddbfe36d5b10d43a2e8b39123}{\index{stats.\-m@{stats.\-m}!tmp\-Rct\-S\-U\-B\-File\-To\-Load@{tmp\-Rct\-S\-U\-B\-File\-To\-Load}}
-\index{tmp\-Rct\-S\-U\-B\-File\-To\-Load@{tmp\-Rct\-S\-U\-B\-File\-To\-Load}!stats.m@{stats.\-m}}
-\subsubsection[{tmp\-Rct\-S\-U\-B\-File\-To\-Load}]{\setlength{\rightskip}{0pt plus 5cm}params tmp\-Rct\-S\-U\-B\-File\-To\-Load = ''}}\label{a00036_ae5d21adddbfe36d5b10d43a2e8b39123}
-
-
-Definition at line 89 of file stats.\-m.
-
-\hypertarget{a00036_a4e4b89515d35d0cba5873e282e55dc8c}{\index{stats.\-m@{stats.\-m}!tmp\-Res\-Fold@{tmp\-Res\-Fold}}
-\index{tmp\-Res\-Fold@{tmp\-Res\-Fold}!stats.m@{stats.\-m}}
-\subsubsection[{tmp\-Res\-Fold}]{\setlength{\rightskip}{0pt plus 5cm}params tmp\-Res\-Fold = 'res'}}\label{a00036_a4e4b89515d35d0cba5873e282e55dc8c}
-
-
-Definition at line 85 of file stats.\-m.
-
-\hypertarget{a00036_aa9758857dd92f7845934f06daa7c4120}{\index{stats.\-m@{stats.\-m}!tot\-T@{tot\-T}}
-\index{tot\-T@{tot\-T}!stats.m@{stats.\-m}}
-\subsubsection[{tot\-T}]{\setlength{\rightskip}{0pt plus 5cm}params tot\-T = 1000}}\label{a00036_aa9758857dd92f7845934f06daa7c4120}
-
-
-Definition at line 8 of file stats.\-m.
-

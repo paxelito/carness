@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="dir_3c912a2cd1e6bdb3d34fde1044ddb770" kind="dir">
+    <compoundname>/home/ale/Documents/GIT/carness/_analysis/old</compoundname>
+    <innerfile refid="a00017">allTimesAnalysis.m</innerfile>
+    <innerfile refid="a00018">bufferedFluxAnalysis.py</innerfile>
+    <innerfile refid="a00019">concAnalysis.m</innerfile>
+    <innerfile refid="a00020">fromWithin2Between.py</innerfile>
+    <innerfile refid="a00021">garbageSearch.m</innerfile>
+    <innerfile refid="a00022">generalConcentrationOverThreshold.m</innerfile>
+    <innerfile refid="a00023">KillSpam.m</innerfile>
+    <innerfile refid="a00024">KSSearch.m</innerfile>
+    <innerfile refid="a00025">KSSearchLauncher.m</innerfile>
+    <innerfile refid="a00026">overallStats.m</innerfile>
+    <innerfile refid="a00027">readParameters.m</innerfile>
+    <innerfile refid="a00028">resetForNewSimulations.py</innerfile>
+    <innerfile refid="a00029">somma.m</innerfile>
+    <innerfile refid="a00030">stats.m</innerfile>
+    <innerfile refid="a00031">timesAnalysis.m</innerfile>
+    <innerfile refid="a00032">timesAnalysis_PANINI.m</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/old/"/>
+  </compounddef>
+</doxygen>
