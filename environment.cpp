@@ -7424,7 +7424,7 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
     fidFile << "# Cleavage probability (Condensation Probability is 1 - cleavage probability)" << endl;
     fidFile << "cleavageProbability=" << (double)cleavageProbability << endl << endl;
 
-    fidFile << "# Enable the possibility of having reactions AS MAIN REACTIONS" << endl;
+    fidFile << "# Enable the possibility of having reverse reactions AS MAIN REACTIONS" << endl;
     fidFile << "main_rev_rct_allowed=" << main_rev_rct_allowed << endl << endl;
 
     fidFile << "# Enable reverse reactions" << endl;

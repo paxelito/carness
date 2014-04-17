@@ -305,7 +305,7 @@ void species::increment(acs_double tmpVolume)
    {
        amount++;
        numToConc(tmpVolume);
-   }
+    }
 }
 
 /** Function to decrement the total number of molecules belonging to this species
