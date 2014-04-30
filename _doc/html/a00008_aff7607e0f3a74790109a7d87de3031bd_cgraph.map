@@ -1,0 +1,10 @@
+<map id="environment::performEnergyEfflux" name="environment::performEnergyEfflux">
+<area shape="rect" id="node3" href="$a00016.html#a553019883dd1344a7f15b805453e46d1" title="species::getSequence" alt="" coords="256,5,405,33"/>
+<area shape="rect" id="node5" href="$a00016.html#a53c74ca3861c4cdac2457e7057fbef21" title="species::getAmount" alt="" coords="263,55,399,83"/>
+<area shape="rect" id="node7" href="$a00016.html#a3af3e7879c333a55f189cd351f8358ef" title="species::getChargeMols" alt="" coords="251,106,411,134"/>
+<area shape="rect" id="node9" href="$a00016.html#af7293ab371ab92d6d16866ea281e901a" title="species::getNOTchargeMols" alt="" coords="237,157,424,185"/>
+<area shape="rect" id="node11" href="$a00069.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="283,207,379,235"/>
+<area shape="rect" id="node13" href="$a00016.html#ae5142c6ab199459bc1d7d5945c761f0e" title="species::decrement" alt="" coords="264,258,397,286"/>
+<area shape="rect" id="node17" href="$a00016.html#acf8588148932adb86229eec28f7cde7c" title="species::unchargeMol" alt="" coords="257,309,404,337"/>
+<area shape="rect" id="node15" href="$a00016.html#a23c19a53390142ba690d0f3db0520d05" title="species::numToConc" alt="" coords="473,258,615,286"/>
+</map>

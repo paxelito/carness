@@ -1,64 +1,501 @@
-\hypertarget{a00066}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-matlabinitializator/crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.m File Reference}
-\label{a00066}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-matlabinitializator/crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-matlabinitializator/crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}}
+\hypertarget{a00066}{\section{/home/ale/\-Documents/\-G\-I\-T/carness/acs\-\_\-headers.h File Reference}
+\label{a00066}\index{/home/ale/\-Documents/\-G\-I\-T/carness/acs\-\_\-headers.\-h@{/home/ale/\-Documents/\-G\-I\-T/carness/acs\-\_\-headers.\-h}}
 }
-\subsection*{Variables}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$deque$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$clocale$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include \char`\"{}mtrand.\-h\char`\"{}}\\*
+Include dependency graph for acs\-\_\-headers.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00118}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00119}
+\end{center}
+\end{figure}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-prova m \hyperlink{a00066_aa23fc0b22eb0c24718a8969136a459f9}{function} \mbox{[}specie\mbox{]}
+\#define \hyperlink{a00066_aab38659c2fe462437b89a1e85e619dc7}{\-\_\-\-\_\-\-S\-O\-F\-T\-V\-E\-R\-S\-I\-O\-N\-\_\-\-\_\-}~\char`\"{}4.\-81b20140327.\-66\char`\"{}
 \item 
-\hyperlink{a00066_a071e4a20ed3694e1603406261e60409a}{numero\-\_\-elementi} = length(vettore\-\_\-elementi)
+\#define \hyperlink{a00066_a972f6696f10f8159f336357f003493b6}{M\-I\-N\-I\-M\-A\-L\-\_\-\-P\-R\-O\-M\-P\-T}~-\/1
 \item 
-\hyperlink{a00066_abdf49e297e2c121f2d09f075ac3d518a}{righe} = \hyperlink{a00066_a071e4a20ed3694e1603406261e60409a}{numero\-\_\-elementi}$^\wedge$\hyperlink{a00068_ac8e6822c23445dded564fea9780d869d}{lunghezza\-\_\-stringa}
+\#define \hyperlink{a00066_a72244054b9e2e45fe85cbef84bd42904}{R\-U\-N\-N\-I\-N\-G\-\_\-\-V\-E\-R\-S\-I\-O\-N}~0
 \item 
-for \hyperlink{a00066_a6f6ccfcf58b31cb6412107d9d5281426}{i}
+\#define \hyperlink{a00066_a6f7711b8195edb3c3541c153ebcb4bfa}{S\-M\-A\-L\-L\-\_\-\-D\-E\-B\-U\-G}~1
+\item 
+\#define \hyperlink{a00066_ab0ead5a0a8c59ad5f4d9fcf0be28a5d7}{M\-E\-D\-I\-U\-M\-\_\-\-D\-E\-B\-U\-G}~2
+\item 
+\#define \hyperlink{a00066_ac2a71f467524d5299cbff5df96be638a}{H\-I\-G\-H\-\_\-\-D\-E\-B\-U\-G}~3
+\item 
+\#define \hyperlink{a00066_a0934dca9b46dc1ce8ccae606a6511f63}{F\-I\-N\-D\-E\-R\-R\-O\-R\-D\-U\-R\-I\-N\-G\-R\-U\-N\-T\-I\-M\-E}~-\/10
+\item 
+\#define \hyperlink{a00066_a186bfb39322832c790ce5403bc04330d}{C\-O\-M\-P\-L\-E\-X\-S\-T\-U\-F\-F}~-\/20
+\item 
+\#define \hyperlink{a00066_a27f5d30679c0e8877ba9246eb1a48ff4}{G\-I\-L\-L\-E\-S\-P\-I\-E\-S\-T\-U\-F\-F}~-\/30
+\item 
+\#define \hyperlink{a00066_a4cb4f6978b0d938a0523bd6946e7609d}{R\-A\-N\-D\-O\-M\-R\-A\-N\-G\-E}~random()
+\item 
+\#define \hyperlink{a00066_a79c4b6317fd327fd5a62d65036481a25}{P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}~1
+\item 
+\#define \hyperlink{a00066_a6236cb136896f6bcbc6694d394e8aca3}{U\-N\-I\-F\-O\-R\-M\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}~2
+\item 
+\#define \hyperlink{a00066_ae36555e0be87892071c6340cc0fa43ad}{I\-N\-V\-P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}~3
+\item 
+\#define \hyperlink{a00066_aeeaf3e004dff03f70f94e0cf7d623b3c}{C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}~0
+\item 
+\#define \hyperlink{a00066_af490eeb67f57decd4fc403c50ec1afa0}{C\-L\-E\-A\-V\-A\-G\-E}~1
+\item 
+\#define \hyperlink{a00066_a44658f1c8c0e272eb0404d42e537928e}{C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N}~2
+\item 
+\#define \hyperlink{a00066_ab9c64bfc35cc5e2e712759d474091c4d}{C\-O\-M\-P\-L\-E\-X\-D\-E\-G\-R\-A\-D\-A\-T\-I\-O\-N}~3
+\item 
+\#define \hyperlink{a00066_ac25e9340e22e7e130dccfb4773224d21}{S\-P\-E\-C\-I\-E\-S\-D\-E\-C\-A\-Y}~4
+\item 
+\#define \hyperlink{a00066_ac5482213f767aca98865e7ea785882d4}{P\-H\-O\-S\-P\-H\-O\-R\-I\-L\-A\-T\-I\-O\-N}~5
+\item 
+\#define \hyperlink{a00066_a96f1798e4da28ce26b866585be4e363d}{E\-N\-D\-O\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E}~6
+\item 
+\#define \hyperlink{a00066_a840f787adb443d5d9492b18d3180c233}{E\-N\-D\-O\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}~7
+\item 
+\#define \hyperlink{a00066_a1f0638306dc456453be7d6be35c3f617}{E\-N\-D\-O\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N}~8
+\item 
+\#define \hyperlink{a00066_a66f3205fa4a725d70d3ea246fed2336a}{E\-N\-E\-R\-G\-Y\-E\-F\-F\-L\-U\-X}~9
+\item 
+\#define \hyperlink{a00066_a9248f5baf3277731d21513c01ab14ba2}{S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}~10
+\item 
+\#define \hyperlink{a00066_adb07a512ddff058539c565dc597f8925}{S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E}~11
+\item 
+\#define \hyperlink{a00066_a248fc87e714b5d729453d11fbeec8310}{S\-O\-L\-U\-B\-L\-E}~1
+\item 
+\#define \hyperlink{a00066_af270dce996bbfb82cc5d337af5b980e5}{P\-R\-E\-C\-I\-P\-I\-T\-A\-T\-E\-D}~0
+\item 
+\#define \hyperlink{a00066_ac23ad60cb24df0616d58202351b11e60}{E\-S\-O\-E\-R\-G\-O\-N\-I\-C}~1
+\item 
+\#define \hyperlink{a00066_a83346194720cacc0144e87246d23081b}{E\-N\-D\-O\-E\-R\-G\-O\-N\-I\-C}~0
+\item 
+\#define \hyperlink{a00066_a9c2a0137e4b97849150ab0842da3064c}{C\-L\-E\-A\-V\-A\-G\-E\-B\-A\-S\-E\-D}~1
+\item 
+\#define \hyperlink{a00066_ad722fbaf2330838fb9522c028141de6c}{C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-B\-A\-S\-E\-D}~0
+\item 
+\#define \hyperlink{a00066_aca2c6e3c97c1e9728693b5c3c8c7f229}{E\-N\-E\-R\-G\-Y\-B\-A\-S\-E\-D}~1
+\item 
+\#define \hyperlink{a00066_a3efd65798c1856deacf187790b3f9ef5}{E\-N\-E\-R\-G\-Y\-F\-R\-E\-E}~0
+\item 
+\#define \hyperlink{a00066_a903e07285c96e6fbb9aa3577ddd1f327}{T\-R\-U\-E\-N\-R\-G}~'1'
+\item 
+\#define \hyperlink{a00066_ada187b73f4b4a504680ead4f86785021}{F\-A\-L\-S\-E\-N\-R\-G}~'0'
+\item 
+\#define \hyperlink{a00066_a2ce381beee4efd263052e93f9cbbfc77}{E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E}~1
+\item 
+\#define \hyperlink{a00066_a04e076b71093a6dc76f99298d9cfeb9e}{N\-O\-T\-E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E}~0
+\item 
+\#define \hyperlink{a00066_a5a83a3ca25e31afb2d58aa40c8b1fbbb}{S\-U\-B\-S\-T\-R\-A\-T\-E\-L\-O\-A\-D}~0
+\item 
+\#define \hyperlink{a00066_a7e521c899f69e37df3501fd0e652c517}{C\-A\-T\-A\-L\-Y\-S\-T\-L\-O\-A\-D}~1
+\item 
+\#define \hyperlink{a00066_afb6d1105a81463fbadceff0217332f68}{B\-O\-T\-H\-L\-O\-A\-D}~2
+\item 
+\#define \hyperlink{a00066_a7eb138e043eb9ec6d717c6178724bbaf}{C\-O\-M\-P\-L\-E\-X\-L\-O\-A\-D}~3
+\item 
+\#define \hyperlink{a00066_a15e77522039bb4bb52000b65773c83cf}{N\-O\-T\-H\-I\-N\-G\-L\-O\-A\-D}~4
+\item 
+\#define \hyperlink{a00066_afb2a947dfb1847f71649f82bc1bf0292}{N\-E\-W\-R\-E\-A\-C\-T\-I\-O\-N\-S}~1
+\item 
+\#define \hyperlink{a00066_a5119e853077046684673dad15af9199f}{U\-P\-G\-R\-A\-D\-E\-R\-E\-A\-C\-T\-I\-O\-N\-S}~0
+\item 
+\#define \hyperlink{a00066_a9ea25e0eb039e29accaed6cb99632deb}{N\-O\-S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S}~0
+\item 
+\#define \hyperlink{a00066_a029d801cdb598a397cb99ea968a64dc2}{N\-E\-P}~2.\-7182818284590452353602874
+\item 
+\#define \hyperlink{a00066_a174754c04acfba9e1f66ba249e68643a}{A\-V\-O}~6.\-02214179e+23
+\item 
+\#define \hyperlink{a00066_aa7d0d45ef785688de1c634290ceb02e7}{M\-I\-N\-I\-M\-A\-L\-R\-C\-T\-T\-I\-M\-E\-M\-U\-L\-T\-I}~100
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef long double \hyperlink{a00066_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double}
+\item 
+typedef unsigned long int \hyperlink{a00066_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int}
+\item 
+typedef unsigned int \hyperlink{a00066_a8d277355641a098190360234e2ebde35}{acs\-\_\-int}
 \end{DoxyCompactItemize}
 
 
-\subsection{Variable Documentation}
-\hypertarget{a00066_aa23fc0b22eb0c24718a8969136a459f9}{\index{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m@{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}!function@{function}}
-\index{function@{function}!crea_tutte_le_combinazioni_di_elementi.m@{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}}
-\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}prova m function\mbox{[}specie\mbox{]}}}\label{a00066_aa23fc0b22eb0c24718a8969136a459f9}
-{\bfseries Initial value\-:}
-\begin{DoxyCode}
-=crea\_tutte\_le\_combinazioni\_di\_elementi(vettore\_elementi,K)
-%\textcolor{keyword}{function} [specie]=crea\_tutte\_le\_combinazioni\_di\_elementi(vettore\_elementi)
-
-%dato un vettore di elementi e una \hyperlink{a00064_a984d293145d85a936f430c0990316e51}{lunghezza} massima K restituisce tutte le
-%possibili combinazioni di elementi ordinati
-
-\hyperlink{a00068_ac8e6822c23445dded564fea9780d869d}{lunghezza\_stringa} = K
-\end{DoxyCode}
+\subsection{Macro Definition Documentation}
+\hypertarget{a00066_aab38659c2fe462437b89a1e85e619dc7}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!\-\_\-\-\_\-\-S\-O\-F\-T\-V\-E\-R\-S\-I\-O\-N\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-O\-F\-T\-V\-E\-R\-S\-I\-O\-N\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-S\-O\-F\-T\-V\-E\-R\-S\-I\-O\-N\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-O\-F\-T\-V\-E\-R\-S\-I\-O\-N\-\_\-\-\_\-}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{\-\_\-\-\_\-\-S\-O\-F\-T\-V\-E\-R\-S\-I\-O\-N\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-S\-O\-F\-T\-V\-E\-R\-S\-I\-O\-N\-\_\-\-\_\-~\char`\"{}4.\-81b20140327.\-66\char`\"{}}}\label{a00066_aab38659c2fe462437b89a1e85e619dc7}
 
 
-Definition at line 4 of file crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m.
+Definition at line 42 of file acs\-\_\-headers.\-h.
 
-\hypertarget{a00066_a6f6ccfcf58b31cb6412107d9d5281426}{\index{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m@{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}!i@{i}}
-\index{i@{i}!crea_tutte_le_combinazioni_di_elementi.m@{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}}
-\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}for i}}\label{a00066_a6f6ccfcf58b31cb6412107d9d5281426}
-{\bfseries Initial value\-:}
-\begin{DoxyCode}
-=1:\hyperlink{a00068_ac8e6822c23445dded564fea9780d869d}{lunghezza\_stringa} %colonne
-   \textcolor{keywordflow}{for} \hyperlink{a00028_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j} = 1:\hyperlink{a00066_a071e4a20ed3694e1603406261e60409a}{numero\_elementi}
-       \textcolor{keywordflow}{for} \hyperlink{a00068_a4bfd41b9edb31803d68f4f6362ec4cd7}{z} = (\hyperlink{a00066_a071e4a20ed3694e1603406261e60409a}{numero\_elementi}^(\hyperlink{a00027_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}-1))*(\hyperlink{a00028_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j}-1)+1:numero\_elementi^(
-      \hyperlink{a00027_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}):righe
-           specie(\hyperlink{a00068_a4bfd41b9edb31803d68f4f6362ec4cd7}{z}:\hyperlink{a00068_a4bfd41b9edb31803d68f4f6362ec4cd7}{z}+\hyperlink{a00066_a071e4a20ed3694e1603406261e60409a}{numero\_elementi}^(\hyperlink{a00027_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i}-1)-1,i)=(vettore\_elementi(
-      \hyperlink{a00028_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j}))
-\end{DoxyCode}
+\hypertarget{a00066_a174754c04acfba9e1f66ba249e68643a}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!A\-V\-O@{A\-V\-O}}
+\index{A\-V\-O@{A\-V\-O}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{A\-V\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-V\-O~6.\-02214179e+23}}\label{a00066_a174754c04acfba9e1f66ba249e68643a}
 
 
-Definition at line 14 of file crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m.
+Definition at line 108 of file acs\-\_\-headers.\-h.
 
-\hypertarget{a00066_a071e4a20ed3694e1603406261e60409a}{\index{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m@{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}!numero\-\_\-elementi@{numero\-\_\-elementi}}
-\index{numero\-\_\-elementi@{numero\-\_\-elementi}!crea_tutte_le_combinazioni_di_elementi.m@{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}}
-\subsubsection[{numero\-\_\-elementi}]{\setlength{\rightskip}{0pt plus 5cm}numero\-\_\-elementi = length(vettore\-\_\-elementi)}}\label{a00066_a071e4a20ed3694e1603406261e60409a}
-
-
-Definition at line 11 of file crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m.
-
-\hypertarget{a00066_abdf49e297e2c121f2d09f075ac3d518a}{\index{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m@{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}!righe@{righe}}
-\index{righe@{righe}!crea_tutte_le_combinazioni_di_elementi.m@{crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m}}
-\subsubsection[{righe}]{\setlength{\rightskip}{0pt plus 5cm}righe = {\bf numero\-\_\-elementi}$^\wedge${\bf lunghezza\-\_\-stringa}}}\label{a00066_abdf49e297e2c121f2d09f075ac3d518a}
+\hypertarget{a00066_afb6d1105a81463fbadceff0217332f68}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!B\-O\-T\-H\-L\-O\-A\-D@{B\-O\-T\-H\-L\-O\-A\-D}}
+\index{B\-O\-T\-H\-L\-O\-A\-D@{B\-O\-T\-H\-L\-O\-A\-D}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{B\-O\-T\-H\-L\-O\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-O\-T\-H\-L\-O\-A\-D~2}}\label{a00066_afb6d1105a81463fbadceff0217332f68}
 
 
-Definition at line 12 of file crea\-\_\-tutte\-\_\-le\-\_\-combinazioni\-\_\-di\-\_\-elementi.\-m.
+Definition at line 95 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a7e521c899f69e37df3501fd0e652c517}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!C\-A\-T\-A\-L\-Y\-S\-T\-L\-O\-A\-D@{C\-A\-T\-A\-L\-Y\-S\-T\-L\-O\-A\-D}}
+\index{C\-A\-T\-A\-L\-Y\-S\-T\-L\-O\-A\-D@{C\-A\-T\-A\-L\-Y\-S\-T\-L\-O\-A\-D}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{C\-A\-T\-A\-L\-Y\-S\-T\-L\-O\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-T\-A\-L\-Y\-S\-T\-L\-O\-A\-D~1}}\label{a00066_a7e521c899f69e37df3501fd0e652c517}
+
+
+Definition at line 94 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_af490eeb67f57decd4fc403c50ec1afa0}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!C\-L\-E\-A\-V\-A\-G\-E@{C\-L\-E\-A\-V\-A\-G\-E}}
+\index{C\-L\-E\-A\-V\-A\-G\-E@{C\-L\-E\-A\-V\-A\-G\-E}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{C\-L\-E\-A\-V\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-L\-E\-A\-V\-A\-G\-E~1}}\label{a00066_af490eeb67f57decd4fc403c50ec1afa0}
+
+
+Definition at line 65 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a9c2a0137e4b97849150ab0842da3064c}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!C\-L\-E\-A\-V\-A\-G\-E\-B\-A\-S\-E\-D@{C\-L\-E\-A\-V\-A\-G\-E\-B\-A\-S\-E\-D}}
+\index{C\-L\-E\-A\-V\-A\-G\-E\-B\-A\-S\-E\-D@{C\-L\-E\-A\-V\-A\-G\-E\-B\-A\-S\-E\-D}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{C\-L\-E\-A\-V\-A\-G\-E\-B\-A\-S\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-L\-E\-A\-V\-A\-G\-E\-B\-A\-S\-E\-D~1}}\label{a00066_a9c2a0137e4b97849150ab0842da3064c}
+
+
+Definition at line 84 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_ab9c64bfc35cc5e2e712759d474091c4d}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!C\-O\-M\-P\-L\-E\-X\-D\-E\-G\-R\-A\-D\-A\-T\-I\-O\-N@{C\-O\-M\-P\-L\-E\-X\-D\-E\-G\-R\-A\-D\-A\-T\-I\-O\-N}}
+\index{C\-O\-M\-P\-L\-E\-X\-D\-E\-G\-R\-A\-D\-A\-T\-I\-O\-N@{C\-O\-M\-P\-L\-E\-X\-D\-E\-G\-R\-A\-D\-A\-T\-I\-O\-N}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{C\-O\-M\-P\-L\-E\-X\-D\-E\-G\-R\-A\-D\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-M\-P\-L\-E\-X\-D\-E\-G\-R\-A\-D\-A\-T\-I\-O\-N~3}}\label{a00066_ab9c64bfc35cc5e2e712759d474091c4d}
+
+
+Definition at line 67 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a44658f1c8c0e272eb0404d42e537928e}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N@{C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N}}
+\index{C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N@{C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N~2}}\label{a00066_a44658f1c8c0e272eb0404d42e537928e}
+
+
+Definition at line 66 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a7eb138e043eb9ec6d717c6178724bbaf}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!C\-O\-M\-P\-L\-E\-X\-L\-O\-A\-D@{C\-O\-M\-P\-L\-E\-X\-L\-O\-A\-D}}
+\index{C\-O\-M\-P\-L\-E\-X\-L\-O\-A\-D@{C\-O\-M\-P\-L\-E\-X\-L\-O\-A\-D}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{C\-O\-M\-P\-L\-E\-X\-L\-O\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-M\-P\-L\-E\-X\-L\-O\-A\-D~3}}\label{a00066_a7eb138e043eb9ec6d717c6178724bbaf}
+
+
+Definition at line 96 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a186bfb39322832c790ce5403bc04330d}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!C\-O\-M\-P\-L\-E\-X\-S\-T\-U\-F\-F@{C\-O\-M\-P\-L\-E\-X\-S\-T\-U\-F\-F}}
+\index{C\-O\-M\-P\-L\-E\-X\-S\-T\-U\-F\-F@{C\-O\-M\-P\-L\-E\-X\-S\-T\-U\-F\-F}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{C\-O\-M\-P\-L\-E\-X\-S\-T\-U\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-M\-P\-L\-E\-X\-S\-T\-U\-F\-F~-\/20}}\label{a00066_a186bfb39322832c790ce5403bc04330d}
+
+
+Definition at line 52 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_aeeaf3e004dff03f70f94e0cf7d623b3c}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N@{C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}}
+\index{C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N@{C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N~0}}\label{a00066_aeeaf3e004dff03f70f94e0cf7d623b3c}
+
+
+Definition at line 64 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_ad722fbaf2330838fb9522c028141de6c}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-B\-A\-S\-E\-D@{C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-B\-A\-S\-E\-D}}
+\index{C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-B\-A\-S\-E\-D@{C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-B\-A\-S\-E\-D}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-B\-A\-S\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-B\-A\-S\-E\-D~0}}\label{a00066_ad722fbaf2330838fb9522c028141de6c}
+
+
+Definition at line 85 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a96f1798e4da28ce26b866585be4e363d}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!E\-N\-D\-O\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E@{E\-N\-D\-O\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E}}
+\index{E\-N\-D\-O\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E@{E\-N\-D\-O\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{E\-N\-D\-O\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-D\-O\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E~6}}\label{a00066_a96f1798e4da28ce26b866585be4e363d}
+
+
+Definition at line 70 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a1f0638306dc456453be7d6be35c3f617}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!E\-N\-D\-O\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N@{E\-N\-D\-O\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N}}
+\index{E\-N\-D\-O\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N@{E\-N\-D\-O\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{E\-N\-D\-O\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-D\-O\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-A\-T\-I\-O\-N~8}}\label{a00066_a1f0638306dc456453be7d6be35c3f617}
+
+
+Definition at line 72 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a840f787adb443d5d9492b18d3180c233}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!E\-N\-D\-O\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N@{E\-N\-D\-O\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}}
+\index{E\-N\-D\-O\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N@{E\-N\-D\-O\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{E\-N\-D\-O\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-D\-O\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N~7}}\label{a00066_a840f787adb443d5d9492b18d3180c233}
+
+
+Definition at line 71 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a83346194720cacc0144e87246d23081b}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!E\-N\-D\-O\-E\-R\-G\-O\-N\-I\-C@{E\-N\-D\-O\-E\-R\-G\-O\-N\-I\-C}}
+\index{E\-N\-D\-O\-E\-R\-G\-O\-N\-I\-C@{E\-N\-D\-O\-E\-R\-G\-O\-N\-I\-C}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{E\-N\-D\-O\-E\-R\-G\-O\-N\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-D\-O\-E\-R\-G\-O\-N\-I\-C~0}}\label{a00066_a83346194720cacc0144e87246d23081b}
+
+
+Definition at line 83 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a2ce381beee4efd263052e93f9cbbfc77}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E@{E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E}}
+\index{E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E@{E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E~1}}\label{a00066_a2ce381beee4efd263052e93f9cbbfc77}
+
+
+Definition at line 90 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_aca2c6e3c97c1e9728693b5c3c8c7f229}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!E\-N\-E\-R\-G\-Y\-B\-A\-S\-E\-D@{E\-N\-E\-R\-G\-Y\-B\-A\-S\-E\-D}}
+\index{E\-N\-E\-R\-G\-Y\-B\-A\-S\-E\-D@{E\-N\-E\-R\-G\-Y\-B\-A\-S\-E\-D}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{E\-N\-E\-R\-G\-Y\-B\-A\-S\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-E\-R\-G\-Y\-B\-A\-S\-E\-D~1}}\label{a00066_aca2c6e3c97c1e9728693b5c3c8c7f229}
+
+
+Definition at line 86 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a66f3205fa4a725d70d3ea246fed2336a}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!E\-N\-E\-R\-G\-Y\-E\-F\-F\-L\-U\-X@{E\-N\-E\-R\-G\-Y\-E\-F\-F\-L\-U\-X}}
+\index{E\-N\-E\-R\-G\-Y\-E\-F\-F\-L\-U\-X@{E\-N\-E\-R\-G\-Y\-E\-F\-F\-L\-U\-X}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{E\-N\-E\-R\-G\-Y\-E\-F\-F\-L\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-E\-R\-G\-Y\-E\-F\-F\-L\-U\-X~9}}\label{a00066_a66f3205fa4a725d70d3ea246fed2336a}
+
+
+Definition at line 73 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a3efd65798c1856deacf187790b3f9ef5}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!E\-N\-E\-R\-G\-Y\-F\-R\-E\-E@{E\-N\-E\-R\-G\-Y\-F\-R\-E\-E}}
+\index{E\-N\-E\-R\-G\-Y\-F\-R\-E\-E@{E\-N\-E\-R\-G\-Y\-F\-R\-E\-E}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{E\-N\-E\-R\-G\-Y\-F\-R\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-E\-R\-G\-Y\-F\-R\-E\-E~0}}\label{a00066_a3efd65798c1856deacf187790b3f9ef5}
+
+
+Definition at line 87 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_ac23ad60cb24df0616d58202351b11e60}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!E\-S\-O\-E\-R\-G\-O\-N\-I\-C@{E\-S\-O\-E\-R\-G\-O\-N\-I\-C}}
+\index{E\-S\-O\-E\-R\-G\-O\-N\-I\-C@{E\-S\-O\-E\-R\-G\-O\-N\-I\-C}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{E\-S\-O\-E\-R\-G\-O\-N\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-S\-O\-E\-R\-G\-O\-N\-I\-C~1}}\label{a00066_ac23ad60cb24df0616d58202351b11e60}
+
+
+Definition at line 82 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_ada187b73f4b4a504680ead4f86785021}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!F\-A\-L\-S\-E\-N\-R\-G@{F\-A\-L\-S\-E\-N\-R\-G}}
+\index{F\-A\-L\-S\-E\-N\-R\-G@{F\-A\-L\-S\-E\-N\-R\-G}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{F\-A\-L\-S\-E\-N\-R\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-L\-S\-E\-N\-R\-G~'0'}}\label{a00066_ada187b73f4b4a504680ead4f86785021}
+
+
+Definition at line 89 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a0934dca9b46dc1ce8ccae606a6511f63}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!F\-I\-N\-D\-E\-R\-R\-O\-R\-D\-U\-R\-I\-N\-G\-R\-U\-N\-T\-I\-M\-E@{F\-I\-N\-D\-E\-R\-R\-O\-R\-D\-U\-R\-I\-N\-G\-R\-U\-N\-T\-I\-M\-E}}
+\index{F\-I\-N\-D\-E\-R\-R\-O\-R\-D\-U\-R\-I\-N\-G\-R\-U\-N\-T\-I\-M\-E@{F\-I\-N\-D\-E\-R\-R\-O\-R\-D\-U\-R\-I\-N\-G\-R\-U\-N\-T\-I\-M\-E}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{F\-I\-N\-D\-E\-R\-R\-O\-R\-D\-U\-R\-I\-N\-G\-R\-U\-N\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-I\-N\-D\-E\-R\-R\-O\-R\-D\-U\-R\-I\-N\-G\-R\-U\-N\-T\-I\-M\-E~-\/10}}\label{a00066_a0934dca9b46dc1ce8ccae606a6511f63}
+
+
+Definition at line 51 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a27f5d30679c0e8877ba9246eb1a48ff4}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!G\-I\-L\-L\-E\-S\-P\-I\-E\-S\-T\-U\-F\-F@{G\-I\-L\-L\-E\-S\-P\-I\-E\-S\-T\-U\-F\-F}}
+\index{G\-I\-L\-L\-E\-S\-P\-I\-E\-S\-T\-U\-F\-F@{G\-I\-L\-L\-E\-S\-P\-I\-E\-S\-T\-U\-F\-F}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{G\-I\-L\-L\-E\-S\-P\-I\-E\-S\-T\-U\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-I\-L\-L\-E\-S\-P\-I\-E\-S\-T\-U\-F\-F~-\/30}}\label{a00066_a27f5d30679c0e8877ba9246eb1a48ff4}
+
+
+Definition at line 53 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_ac2a71f467524d5299cbff5df96be638a}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!H\-I\-G\-H\-\_\-\-D\-E\-B\-U\-G@{H\-I\-G\-H\-\_\-\-D\-E\-B\-U\-G}}
+\index{H\-I\-G\-H\-\_\-\-D\-E\-B\-U\-G@{H\-I\-G\-H\-\_\-\-D\-E\-B\-U\-G}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{H\-I\-G\-H\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-I\-G\-H\-\_\-\-D\-E\-B\-U\-G~3}}\label{a00066_ac2a71f467524d5299cbff5df96be638a}
+
+
+Definition at line 50 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_ae36555e0be87892071c6340cc0fa43ad}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!I\-N\-V\-P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T@{I\-N\-V\-P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}}
+\index{I\-N\-V\-P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T@{I\-N\-V\-P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{I\-N\-V\-P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-V\-P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T~3}}\label{a00066_ae36555e0be87892071c6340cc0fa43ad}
+
+
+Definition at line 61 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_ab0ead5a0a8c59ad5f4d9fcf0be28a5d7}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!M\-E\-D\-I\-U\-M\-\_\-\-D\-E\-B\-U\-G@{M\-E\-D\-I\-U\-M\-\_\-\-D\-E\-B\-U\-G}}
+\index{M\-E\-D\-I\-U\-M\-\_\-\-D\-E\-B\-U\-G@{M\-E\-D\-I\-U\-M\-\_\-\-D\-E\-B\-U\-G}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{M\-E\-D\-I\-U\-M\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-E\-D\-I\-U\-M\-\_\-\-D\-E\-B\-U\-G~2}}\label{a00066_ab0ead5a0a8c59ad5f4d9fcf0be28a5d7}
+
+
+Definition at line 49 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a972f6696f10f8159f336357f003493b6}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!M\-I\-N\-I\-M\-A\-L\-\_\-\-P\-R\-O\-M\-P\-T@{M\-I\-N\-I\-M\-A\-L\-\_\-\-P\-R\-O\-M\-P\-T}}
+\index{M\-I\-N\-I\-M\-A\-L\-\_\-\-P\-R\-O\-M\-P\-T@{M\-I\-N\-I\-M\-A\-L\-\_\-\-P\-R\-O\-M\-P\-T}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{M\-I\-N\-I\-M\-A\-L\-\_\-\-P\-R\-O\-M\-P\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-N\-I\-M\-A\-L\-\_\-\-P\-R\-O\-M\-P\-T~-\/1}}\label{a00066_a972f6696f10f8159f336357f003493b6}
+
+
+Definition at line 46 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_aa7d0d45ef785688de1c634290ceb02e7}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!M\-I\-N\-I\-M\-A\-L\-R\-C\-T\-T\-I\-M\-E\-M\-U\-L\-T\-I@{M\-I\-N\-I\-M\-A\-L\-R\-C\-T\-T\-I\-M\-E\-M\-U\-L\-T\-I}}
+\index{M\-I\-N\-I\-M\-A\-L\-R\-C\-T\-T\-I\-M\-E\-M\-U\-L\-T\-I@{M\-I\-N\-I\-M\-A\-L\-R\-C\-T\-T\-I\-M\-E\-M\-U\-L\-T\-I}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{M\-I\-N\-I\-M\-A\-L\-R\-C\-T\-T\-I\-M\-E\-M\-U\-L\-T\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-N\-I\-M\-A\-L\-R\-C\-T\-T\-I\-M\-E\-M\-U\-L\-T\-I~100}}\label{a00066_aa7d0d45ef785688de1c634290ceb02e7}
+
+
+Definition at line 111 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a029d801cdb598a397cb99ea968a64dc2}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!N\-E\-P@{N\-E\-P}}
+\index{N\-E\-P@{N\-E\-P}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{N\-E\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-E\-P~2.\-7182818284590452353602874}}\label{a00066_a029d801cdb598a397cb99ea968a64dc2}
+
+
+Definition at line 107 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_afb2a947dfb1847f71649f82bc1bf0292}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!N\-E\-W\-R\-E\-A\-C\-T\-I\-O\-N\-S@{N\-E\-W\-R\-E\-A\-C\-T\-I\-O\-N\-S}}
+\index{N\-E\-W\-R\-E\-A\-C\-T\-I\-O\-N\-S@{N\-E\-W\-R\-E\-A\-C\-T\-I\-O\-N\-S}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{N\-E\-W\-R\-E\-A\-C\-T\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-E\-W\-R\-E\-A\-C\-T\-I\-O\-N\-S~1}}\label{a00066_afb2a947dfb1847f71649f82bc1bf0292}
+
+
+Definition at line 100 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a9ea25e0eb039e29accaed6cb99632deb}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!N\-O\-S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S@{N\-O\-S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S}}
+\index{N\-O\-S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S@{N\-O\-S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{N\-O\-S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S~0}}\label{a00066_a9ea25e0eb039e29accaed6cb99632deb}
+
+
+Definition at line 104 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a04e076b71093a6dc76f99298d9cfeb9e}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!N\-O\-T\-E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E@{N\-O\-T\-E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E}}
+\index{N\-O\-T\-E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E@{N\-O\-T\-E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{N\-O\-T\-E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-T\-E\-N\-E\-R\-G\-I\-Z\-A\-B\-L\-E~0}}\label{a00066_a04e076b71093a6dc76f99298d9cfeb9e}
+
+
+Definition at line 91 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a15e77522039bb4bb52000b65773c83cf}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!N\-O\-T\-H\-I\-N\-G\-L\-O\-A\-D@{N\-O\-T\-H\-I\-N\-G\-L\-O\-A\-D}}
+\index{N\-O\-T\-H\-I\-N\-G\-L\-O\-A\-D@{N\-O\-T\-H\-I\-N\-G\-L\-O\-A\-D}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{N\-O\-T\-H\-I\-N\-G\-L\-O\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-T\-H\-I\-N\-G\-L\-O\-A\-D~4}}\label{a00066_a15e77522039bb4bb52000b65773c83cf}
+
+
+Definition at line 97 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_ac5482213f767aca98865e7ea785882d4}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!P\-H\-O\-S\-P\-H\-O\-R\-I\-L\-A\-T\-I\-O\-N@{P\-H\-O\-S\-P\-H\-O\-R\-I\-L\-A\-T\-I\-O\-N}}
+\index{P\-H\-O\-S\-P\-H\-O\-R\-I\-L\-A\-T\-I\-O\-N@{P\-H\-O\-S\-P\-H\-O\-R\-I\-L\-A\-T\-I\-O\-N}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{P\-H\-O\-S\-P\-H\-O\-R\-I\-L\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-H\-O\-S\-P\-H\-O\-R\-I\-L\-A\-T\-I\-O\-N~5}}\label{a00066_ac5482213f767aca98865e7ea785882d4}
+
+
+Definition at line 69 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_af270dce996bbfb82cc5d337af5b980e5}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!P\-R\-E\-C\-I\-P\-I\-T\-A\-T\-E\-D@{P\-R\-E\-C\-I\-P\-I\-T\-A\-T\-E\-D}}
+\index{P\-R\-E\-C\-I\-P\-I\-T\-A\-T\-E\-D@{P\-R\-E\-C\-I\-P\-I\-T\-A\-T\-E\-D}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{P\-R\-E\-C\-I\-P\-I\-T\-A\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-E\-C\-I\-P\-I\-T\-A\-T\-E\-D~0}}\label{a00066_af270dce996bbfb82cc5d337af5b980e5}
+
+
+Definition at line 79 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a79c4b6317fd327fd5a62d65036481a25}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T@{P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}}
+\index{P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T@{P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-O\-P\-O\-R\-T\-I\-O\-N\-A\-L\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T~1}}\label{a00066_a79c4b6317fd327fd5a62d65036481a25}
+
+
+Definition at line 59 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a4cb4f6978b0d938a0523bd6946e7609d}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!R\-A\-N\-D\-O\-M\-R\-A\-N\-G\-E@{R\-A\-N\-D\-O\-M\-R\-A\-N\-G\-E}}
+\index{R\-A\-N\-D\-O\-M\-R\-A\-N\-G\-E@{R\-A\-N\-D\-O\-M\-R\-A\-N\-G\-E}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{R\-A\-N\-D\-O\-M\-R\-A\-N\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-A\-N\-D\-O\-M\-R\-A\-N\-G\-E~random()}}\label{a00066_a4cb4f6978b0d938a0523bd6946e7609d}
+
+
+Definition at line 56 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a72244054b9e2e45fe85cbef84bd42904}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!R\-U\-N\-N\-I\-N\-G\-\_\-\-V\-E\-R\-S\-I\-O\-N@{R\-U\-N\-N\-I\-N\-G\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\index{R\-U\-N\-N\-I\-N\-G\-\_\-\-V\-E\-R\-S\-I\-O\-N@{R\-U\-N\-N\-I\-N\-G\-\_\-\-V\-E\-R\-S\-I\-O\-N}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{R\-U\-N\-N\-I\-N\-G\-\_\-\-V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-U\-N\-N\-I\-N\-G\-\_\-\-V\-E\-R\-S\-I\-O\-N~0}}\label{a00066_a72244054b9e2e45fe85cbef84bd42904}
+
+
+Definition at line 47 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a6f7711b8195edb3c3541c153ebcb4bfa}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!S\-M\-A\-L\-L\-\_\-\-D\-E\-B\-U\-G@{S\-M\-A\-L\-L\-\_\-\-D\-E\-B\-U\-G}}
+\index{S\-M\-A\-L\-L\-\_\-\-D\-E\-B\-U\-G@{S\-M\-A\-L\-L\-\_\-\-D\-E\-B\-U\-G}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{S\-M\-A\-L\-L\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-M\-A\-L\-L\-\_\-\-D\-E\-B\-U\-G~1}}\label{a00066_a6f7711b8195edb3c3541c153ebcb4bfa}
+
+
+Definition at line 48 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a248fc87e714b5d729453d11fbeec8310}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!S\-O\-L\-U\-B\-L\-E@{S\-O\-L\-U\-B\-L\-E}}
+\index{S\-O\-L\-U\-B\-L\-E@{S\-O\-L\-U\-B\-L\-E}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{S\-O\-L\-U\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-O\-L\-U\-B\-L\-E~1}}\label{a00066_a248fc87e714b5d729453d11fbeec8310}
+
+
+Definition at line 78 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_ac25e9340e22e7e130dccfb4773224d21}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!S\-P\-E\-C\-I\-E\-S\-D\-E\-C\-A\-Y@{S\-P\-E\-C\-I\-E\-S\-D\-E\-C\-A\-Y}}
+\index{S\-P\-E\-C\-I\-E\-S\-D\-E\-C\-A\-Y@{S\-P\-E\-C\-I\-E\-S\-D\-E\-C\-A\-Y}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{S\-P\-E\-C\-I\-E\-S\-D\-E\-C\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-E\-C\-I\-E\-S\-D\-E\-C\-A\-Y~4}}\label{a00066_ac25e9340e22e7e130dccfb4773224d21}
+
+
+Definition at line 68 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_adb07a512ddff058539c565dc597f8925}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E@{S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E}}
+\index{S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E@{S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E~11}}\label{a00066_adb07a512ddff058539c565dc597f8925}
+
+
+Definition at line 75 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a9248f5baf3277731d21513c01ab14ba2}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N@{S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}}
+\index{S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N@{S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-O\-N\-T\-A\-N\-E\-O\-U\-S\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N~10}}\label{a00066_a9248f5baf3277731d21513c01ab14ba2}
+
+
+Definition at line 74 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a5a83a3ca25e31afb2d58aa40c8b1fbbb}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!S\-U\-B\-S\-T\-R\-A\-T\-E\-L\-O\-A\-D@{S\-U\-B\-S\-T\-R\-A\-T\-E\-L\-O\-A\-D}}
+\index{S\-U\-B\-S\-T\-R\-A\-T\-E\-L\-O\-A\-D@{S\-U\-B\-S\-T\-R\-A\-T\-E\-L\-O\-A\-D}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{S\-U\-B\-S\-T\-R\-A\-T\-E\-L\-O\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-U\-B\-S\-T\-R\-A\-T\-E\-L\-O\-A\-D~0}}\label{a00066_a5a83a3ca25e31afb2d58aa40c8b1fbbb}
+
+
+Definition at line 93 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a903e07285c96e6fbb9aa3577ddd1f327}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!T\-R\-U\-E\-N\-R\-G@{T\-R\-U\-E\-N\-R\-G}}
+\index{T\-R\-U\-E\-N\-R\-G@{T\-R\-U\-E\-N\-R\-G}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{T\-R\-U\-E\-N\-R\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-U\-E\-N\-R\-G~'1'}}\label{a00066_a903e07285c96e6fbb9aa3577ddd1f327}
+
+
+Definition at line 88 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a6236cb136896f6bcbc6694d394e8aca3}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!U\-N\-I\-F\-O\-R\-M\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T@{U\-N\-I\-F\-O\-R\-M\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}}
+\index{U\-N\-I\-F\-O\-R\-M\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T@{U\-N\-I\-F\-O\-R\-M\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{U\-N\-I\-F\-O\-R\-M\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-N\-I\-F\-O\-R\-M\-M\-O\-L\-E\-C\-U\-L\-E\-A\-M\-O\-U\-N\-T~2}}\label{a00066_a6236cb136896f6bcbc6694d394e8aca3}
+
+
+Definition at line 60 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a5119e853077046684673dad15af9199f}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!U\-P\-G\-R\-A\-D\-E\-R\-E\-A\-C\-T\-I\-O\-N\-S@{U\-P\-G\-R\-A\-D\-E\-R\-E\-A\-C\-T\-I\-O\-N\-S}}
+\index{U\-P\-G\-R\-A\-D\-E\-R\-E\-A\-C\-T\-I\-O\-N\-S@{U\-P\-G\-R\-A\-D\-E\-R\-E\-A\-C\-T\-I\-O\-N\-S}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{U\-P\-G\-R\-A\-D\-E\-R\-E\-A\-C\-T\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-P\-G\-R\-A\-D\-E\-R\-E\-A\-C\-T\-I\-O\-N\-S~0}}\label{a00066_a5119e853077046684673dad15af9199f}
+
+
+Definition at line 101 of file acs\-\_\-headers.\-h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{a00066_ab776853a005fcbf56af0424a2a4dd607}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!acs\-\_\-double@{acs\-\_\-double}}
+\index{acs\-\_\-double@{acs\-\_\-double}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{acs\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}typedef long double {\bf acs\-\_\-double}}}\label{a00066_ab776853a005fcbf56af0424a2a4dd607}
+
+
+Definition at line 34 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a8d277355641a098190360234e2ebde35}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!acs\-\_\-int@{acs\-\_\-int}}
+\index{acs\-\_\-int@{acs\-\_\-int}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{acs\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf acs\-\_\-int}}}\label{a00066_a8d277355641a098190360234e2ebde35}
+
+
+Definition at line 36 of file acs\-\_\-headers.\-h.
+
+\hypertarget{a00066_a19319d75f02db4308bc5c0026d98cd85}{\index{acs\-\_\-headers.\-h@{acs\-\_\-headers.\-h}!acs\-\_\-long\-Int@{acs\-\_\-long\-Int}}
+\index{acs\-\_\-long\-Int@{acs\-\_\-long\-Int}!acs_headers.h@{acs\-\_\-headers.\-h}}
+\subsubsection[{acs\-\_\-long\-Int}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long int {\bf acs\-\_\-long\-Int}}}\label{a00066_a19319d75f02db4308bc5c0026d98cd85}
+
+
+Definition at line 35 of file acs\-\_\-headers.\-h.
 

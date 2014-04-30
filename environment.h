@@ -32,7 +32,6 @@ private:
     acs_double fileTimesSaveInterval; // Time between two successive times.csv storing procedure
     acs_double newSpeciesProbMinThreshold; // Minimal new species creation probability to allow system expansion
     acs_int lastFiringDiskSpeciesID; // ID of the last species of the firing disk
-    acs_double overallConcentration; // initial overall concentration
     acs_double ECConcentration; // Energie Carriers concentration
     acs_int nonCatalyticMaxLength; // Max length of the NON catalytic species
     acs_longInt nonCatalyticLastID; // ID of the non catalytic last species.
@@ -160,7 +159,6 @@ private:
 	acs_double getTimeStructuresSavingInterval()const{return timeStructuresSavingInterval;}
     acs_double getFileTimesSavingInterval()const{return fileTimesSaveInterval;}
 	acs_int getLastFiringDiskSpeciesID()const{return lastFiringDiskSpeciesID;}
-	acs_double getOverallConcentration()const{return overallConcentration;}
 	acs_int getMaxNonCatalyticLength()const{return nonCatalyticMaxLength;}
 	acs_double getRctProb()const{return reactionProbability;}
 	acs_double getCleavProb()const{return cleavageProbability;}
@@ -181,7 +179,7 @@ private:
 	acs_double getgillespieEntropy()const{return gillespieEntropy;}
     acs_double getRatioBetweenNewGillTotGill()const{return ratioBetweenNewGillTotGill;}
     acs_double getRatioBetweenBackandForw()const{return ratioBetweenReverseAndTotalScore;}
-    bool getSystemExpFlag()const{return newSpeciesProbMinThreshold < ratioBetweenReverseAndTotalScore;}
+    bool getSystemExpFlag()const{return newSpeciesProbMinThreshold < 1;}
 	
 	// Kinetic Constants -----------------------------
 	acs_double getKdiss()const{return K_diss;}

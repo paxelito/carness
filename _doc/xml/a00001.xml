@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="a00001" kind="page">
+    <compoundname>intro</compoundname>
+    <title>Introduction</title>
+    <detaileddescription>
+<para><hruler/>
+ The <bold>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</bold> is a software devoted to the hybrid, both stochastic and deterministic, simulation of theoretical complex catalytic networks models. All the models, characterized by their environmental conditions, basically CSTR and protocell, take inspiration from the original model proposed by Stuart Kauffman in 1986, and describe systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One molecular species (basicallt a polymer) is divided into two short polymers in the former case in the former case, while two polymers are glued together forming a longer polymer in the latter case. Each reaction to occur must be catalyzed by another species present in the system, and one of the main assumptions is that any chemical has an independent probability to catalyze a randomly chosen reaction. Since the version 4.8 (20131026.60) spontaneous reactions are considered too. It is worthwhile to notice that there are not indications about the chemical nature of the molecules, species &quot;A&quot; may be both a polipeptide, an amminoacid, a particular protein domain or an RNA strenght.<linebreak/>
+<linebreak/>
+ </para><sect1 id="a00001_1sysreq">
+<title>System Requirement</title>
+<para><hruler/>
+ In order to have the simulator run correctly the recommended stuff is required:<itemizedlist>
+<listitem><para>MacOsX 10.4 or later, Linux (or in general a system UNIX based) or Windows OS (tests have been performed on Win7 and win Vista) as well</para></listitem><listitem><para>GCC (G++) compiler, or similar, installed (if you need to compile the software on your machine)</para></listitem></itemizedlist>
+</para><para>On UNIX systems compile using <computeroutput>g++</computeroutput> -Wall -ansi -lm -o carness *.cpp <linebreak/>
+<linebreak/>
+ </para></sect1>
+<sect1 id="a00001_1secUsage">
+<title>Using the simulator</title>
+<para>To run the simulator open a terminal shell and type:<linebreak/>
+<linebreak/>
+ <computeroutput></computeroutput> $path/carness <computeroutput></computeroutput> &lt;configuration_File_Folder&gt; <computeroutput></computeroutput> &lt;output_folder&gt; <computeroutput></computeroutput> &lt;reaction_structures_folder&gt;<linebreak/>
+ Examples:<itemizedlist>
+<listitem><para>Unix Based Systems:<computeroutput>~/Documents/project/carness</computeroutput> <computeroutput>~/Documents/</computeroutput>.../confFileFolder/ <computeroutput>~/Documents/</computeroutput>.../resFolder/ <computeroutput>~/Documents/</computeroutput>.../StructuresFolder/</para></listitem><listitem><para>Win Systems: <computeroutput>C:\Documents\project\carness.exe</computeroutput> <computeroutput>C:\Documents</computeroutput> ..\confFileFolder\ <computeroutput>C:\Documents</computeroutput> ..\resFolder\ <computeroutput>C:\Documents</computeroutput> ..\StructuresFolder\</para></listitem></itemizedlist>
+</para><para>The first argument indicates the folder containing the configuration file acsm2s.conf. The second argument refers to the folder that will contain the simulation results while the third parameter indicates the folder containing the structures of the system contained within the following files: _acsspecies.csv, _acsreactions.csv, _acscatalysis.csv, _acsinflux.csv, _acsnrgbooleanfunctions.csv. Currently the simulator does not generate the initial structures. You must create the structures on your own.</para><para>In order to test the DEMO structures, after the program has been compiled, go into the carness folder and run the following command: <computeroutput></computeroutput> &lt;path_of_the_program&gt;/carness <computeroutput></computeroutput>./_inputDataExamples/configurationFile/ <computeroutput></computeroutput>./_inputDataExamples/initStructures/res/ <computeroutput></computeroutput>./_inputDataExamples/initStructures/</para><para>PS: For windows platform change the command accordingly.</para><para><linebreak/>
+<linebreak/>
+ </para></sect1>
+<sect1 id="a00001_1parameters">
+<title>Input Parameters :: acsm2s.conf</title>
+<para><hruler/>
+ All the system parameters are stored in a file called <bold>acsm2s.conf</bold>. Anyone can create his own configuration file paying attention to put &quot;=&quot; char between the parameter name and the parameter value (NO SPACE BETWEEN THEM).<linebreak/>
+ Notice that the simulator does not create the initial structures but it simply loads the structures created by an external software and process them. Nevertheless the configuration file is fundamental to supply all the parameters to the simulation (during the simulation new entities may be created). The simulator is provided with a structures initializator developed in PYTHON language by the group (description will be available soon) in which all the parameters we are going to describe are used to create the initial structures. All parameters are reported below divided in three categories: <verbatim>          - System
+          - Environment
+          - Dynamic
+
+          Categories are useful only to help users in the parameter recognition within the configuration file. They are not handled from the software, if you like you can rearrange configuration
+          file as you prefer, notice only that comments have to start with character &lt;i&gt;&quot;#&quot;&lt;/i&gt;.
+          Within the source code folder an example of the acsm2s.conf file is provided. (./_inputDataExamples/configurationFile/acsm2s.conf)&lt;br&gt;
+ The following parameters are used both by the initializator and the simulator. Nvertheless it is ALWAYS necessary having a complete configuration file even if the structures have been already created.
+</verbatim> </para><sect2 id="a00001_1paramsystem">
+<title>System</title>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nGen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt; 0) Number of generations. This parameter indicate how many times the simulation restarts, concentrations are set to the initial ones and the simulation restart for other nSeconds seconds. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nSIM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt; 0) Number of simulations per generation starting with the same initial conditions (SAME DATA STRUCTURES) but different random seed. It is worth stressing that in such a way the system, if allowed to create new reactions, will create different final structures starting from the same initial structures. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nSeconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt; 0) Number of seconds of the simulation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nReactions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt; 0) Max number of reactions (the system will be stopped after nSeconds or after nReactions) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>randomSeed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) Random seed (if 0 the random seed is randomly created and the it is stored in the acsm2s.conf file saved in the results folder) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nHours</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;=0) Runtime limit (hours) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nAttempts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;=0) Number of attempts in simulating the same network structure different random seed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>debugLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(int) Debug Level Runtime: different runTime message amounts (please refer to header.h file for the different values, 0 is suggested) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeStructuresSavingInterval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt; 0) All system structures (species, catalysis and reactions) are saved every <emphasis>timeStructuresSavingInterval</emphasis> seconds (simulation time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileTimesSaveInterval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) Times data are stored in file times.csv every <emphasis>fileTimesSaveInterval</emphasis> seconds (If 0 reactions are stored continually) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></sect2>
+<sect2 id="a00001_1paramenv">
+<title>Environment</title>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newSpeciesProbMinThreshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;=0) Minimal new species creation probability to allow system expansion </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lastFiringDiskSpeciesID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt; 0) The ID of the last firing disk species. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ECConcentration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt; 0) Incoming concentration of charged molecules per second. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alphabet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(string) Alphabet used in the simulation (e.g. <emphasis>AB</emphasis> for binary alphabet, <emphasis>AGCT</emphasis> for DNA, <emphasis>ADEGFLYCWPHQIMTNKSRV</emphasis> for proteins) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>volume</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt; 0) Volume of the CSTR or of the protocell </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></sect2>
+<sect2 id="a00001_1paramdyn">
+<title>Dynamic</title>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(0 or 1) 0 no energy in the system, 1 energy constraints are applied </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ratioSpeciesEnergizable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(%) The probability for a species to be potentially energized by the energy carriers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nonCatalyticMaxLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) Max length of non catalytic species </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reactionProbability</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(from 0 to 1) Probability for a species to catalyze a reaction </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cleavageProbability</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(from 0 to 1) Cleavage probability (Condensation probability is 1 - cleavage probability) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reverseReaction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(0 or 1) Set to 1 to enable reverse reactions, 0 otherwise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>revRctRatio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;0) Ratio between forward and backward reactions, it is used in the creation of new reactions only (if reverseReactions = TRUE) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spontRct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(0 or 1) If 1 spontanoues reactions are considered (k spontaneous is the last column of the reactions file), otherwise no </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K_ass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) Final Condensation kinetic constant (C.A + B <ndash/>&gt; AB + C) where A.C is the molecular complex composed of C (the catalyst) and A (the first substrate) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K_diss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) Cleavage kinetic constant (AB <ndash/>&gt; A + B) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K_cpx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) Complex formation kinetic constant (A + C(catalyst) <ndash/>&gt; C.A) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K_cpxDiss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) Complex Dissociation kinetic constant (C.A <ndash/>&gt; A + C) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K_nrg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) species phosphorilation kinetic constant </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K_nrg_decay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) de-energization kinetic constant </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>moleculeDecay_KineticConstant</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt; 0) Molecule decay (efflux) kinetic Constant (Disregarded if the system is closed) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K_spont_ass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues condensations </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>K_spont_diss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) If spontaneous reactions are turned on this is the default kinetic rate for spontanoues cleavages </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>influx_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt;= 0) Concentration per seconds (The species to insert in the system will be randomly chosen according to the _acsinflux.csv file). If equal to 0 the system is closed (maxLOut=0) or only the species that can cross the membrane come in and go out (maxLOut&gt;0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxLOut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum length of the species involved in the efflux process (<computeroutput>influx_rate</computeroutput> &gt; 0), equal to 0 indicates that all the species can be involved in the efflux process (no filter). If influx_rate = 0 the parameter indicates the species that can cross the semipermeable membrane of the protocell. <bold>THE COUPLING BETWEEN INFLUX_RATE AND MAXLOUT INDICATES IF WE ARE SIMULATING A PROTOCELL OR A FLOW REACTOR (CSTR)</bold>:<itemizedlist>
+<listitem><para>influx_rate &gt; 0 &amp; maxLOut &gt; 0 :: <bold>FILTERED SYSTEM</bold>: Deterministic simulation of the flux with a filter for the species with length up to maxLOut</para></listitem><listitem><para>influx_rate = 0 &amp; maxLOut &gt; 0 :: <bold>PROTOCELL</bold>: Flux is not simulated, concentration of the species with length up to maxLOut are buffered</para></listitem><listitem><para>influx_rate &gt; 0 &amp; maxLOut = 0 :: <bold>CSTR</bold>: Deterministic simulation of the flux, _acsinflux.csv species enter and all the species, according to their concentrations, can leave the system</para></listitem><listitem><para>influx_rate = 0 &amp; maxLOut = 0 :: <bold>CLOSE SYSTEM</bold></para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>diffusion_contribute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(KD) (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length, L^{-KD} </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>solubility_threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(&gt; 0) Solubility Threshold, all the species longer than solubility_threshold precipitate</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<linebreak/>
+<linebreak/>
+ </para></sect2>
+</sect1>
+<sect1 id="a00001_1Acknowledgments">
+<title>Acknowledgments</title>
+<para><hruler/>
+<itemizedlist>
+<listitem><para>European Centre for Living Technology <ulink url="http://www.ecltech.org/">http://www.ecltech.org/</ulink></para></listitem><listitem><para>Fondazione Venezia <ulink url="http://www.fondazionevenezia.it">http://www.fondazionevenezia.it</ulink></para></listitem><listitem><para>University of Bologna, Interdepartment of industrial research (C.I.R.I)</para></listitem><listitem><para>Alex Graudenzi to take care of the initilizator.</para></listitem><listitem><para>Chiara Damiani to contribute to the development of the software.</para></listitem><listitem><para>Roberto Serra, Marco Villani, Timoteo Carletti, Davide De Lucrezia, Norman Packard, Ruedi Fuchslin, Andrea Roli and Stuart Kauffman for the essential hints.</para></listitem><listitem><para><ulink url="http://www.bedaux.net/mtrand/">http://www.bedaux.net/mtrand/</ulink> for the pseudo-random Marseinne-Twister library for C++.</para></listitem><listitem><para><ulink url="http://perso.wanadoo.es/antlarr/otherapps.html">http://perso.wanadoo.es/antlarr/otherapps.html</ulink> for the poisson distribution generator numbers (acs_longInt <ref refid="a00070_1a22cddb6ffcf2250e0c90bc913728350f" kindref="member">random_poisson(acs_double tmpLambda, MTRand&amp; tmpRandomGenerator)</ref>). </para></listitem></itemizedlist>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,546 +1,61 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="a00027" kind="file">
-    <compoundname>garbageSearch.m</compoundname>
+    <compoundname>readParameters.m</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="a00027_1ad509473eed851f9f5ff4157c02ec8618" prot="public" static="no" mutable="no">
-        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
-        <definition>end tmpFolder</definition>
+      <memberdef kind="variable" id="a00027_1a53a794fb4119b36e89d14a405e075596" prot="public" static="no" mutable="no">
+        <type><ref refid="a00062_1a4b4c670b101bf7a838f775e008fa6255" kindref="member">function</ref></type>
+        <definition>function confparams</definition>
         <argsstring></argsstring>
-        <name>tmpFolder</name>
-        <initializer>= strcat(&apos;*&apos;,<ref refid="a00032_1aa671e3345005bd599e662bcaa115b18a" kindref="member">param.simFolder</ref>,&apos;*&apos;)</initializer>
+        <name>confparams</name>
+        <initializer>= readParameters()
+
+    fidConf=fopen(&apos;acsm2s.conf&apos;,&apos;<ref refid="a00025_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref>&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="16" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="16" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="1" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" bodystart="1" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00027_1aae5035eb84b89176ed5b06e136325eff" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="a00027_1a6791897869706b835f1a5d305739a415" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>simDirs</definition>
+        <definition>tline</definition>
         <argsstring></argsstring>
-        <name>simDirs</name>
-        <initializer>= dir(<ref refid="a00029_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref>)</initializer>
+        <name>tline</name>
+        <initializer>= fgets(fidConf)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="17" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="17" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="5" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" bodystart="5" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="a00027_1ae9011d40c6f13e68e6f07156e0da7c5d" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>fid</definition>
+        <definition>param</definition>
         <argsstring></argsstring>
-        <name>fid</name>
-        <initializer>= fopen(&apos;ALL_garbage.txt&apos;,&apos;w&apos;)</initializer>
+        <name>param</name>
+        <initializer>= findstr(<ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>,&apos;=&apos;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="20" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="20" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a7265972fe485274cfff77a9bb07b8fce" prot="public" static="no" mutable="no">
-        <type>for</type>
-        <definition>for x</definition>
-        <argsstring></argsstring>
-        <name>x</name>
-        <initializer>= 1:length(<ref refid="a00031_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>)
-    <ref refid="a00068_1a767271ad82d244871370a0f0e6a7f8a4" kindref="member">cd</ref>(strcat(<ref refid="a00031_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(x).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="24" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="24" bodyend="-1"/>
-        <referencedby refid="a00019_1abacdfa346255baeac69d29bb57f29b22" compoundref="a00091" startline="85" endline="94">MTRand_int32::rand_int32</referencedby>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a0cf551ea63e8b67362ae2ab776072d1f" prot="public" static="no" mutable="no">
-        <type>creating <ref refid="a00022" kindref="compound">species</ref> matrix</type>
-        <definition>creating species matrix sFiles</definition>
-        <argsstring></argsstring>
-        <name>sFiles</name>
-        <initializer>= dir(&apos;<ref refid="a00022" kindref="compound">species</ref>*&apos;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="29" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="29" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a7da0c82834970c5f3c3d9224ab832577" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>speciesFile</definition>
-        <argsstring></argsstring>
-        <name>speciesFile</name>
-        <initializer>= <ref refid="a00027_1a0cf551ea63e8b67362ae2ab776072d1f" kindref="member">sFiles</ref>(length(<ref refid="a00027_1a0cf551ea63e8b67362ae2ab776072d1f" kindref="member">sFiles</ref>)).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref></initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="30" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>continua</definition>
-        <argsstring></argsstring>
-        <name>continua</name>
-        <initializer>= 1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="32" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="32" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1aaeeccb9f4fc7b14ac6b4810a4bf9f71e" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>speciesMatrix</definition>
-        <argsstring></argsstring>
-        <name>speciesMatrix</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="33" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a0cd6a44ffb07342cbc7e5ac33bfc9495" prot="public" static="no" mutable="no">
-        <type>while <ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
-        <definition>else index</definition>
-        <argsstring></argsstring>
-        <name>index</name>
-        <initializer>= <ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref>,&apos;%d&apos;,1)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="35" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="35" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>if stop</definition>
-        <argsstring></argsstring>
-        <name>stop</name>
-        <initializer>= <ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00060_1a0cd6a44ffb07342cbc7e5ac33bfc9495" kindref="member">index</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="36" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="36" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1abbf559a76fab59203496b0847ab9502a" prot="public" static="no" mutable="no">
-        <type><ref refid="a00029_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref> <ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
-        <definition>break end name</definition>
-        <argsstring></argsstring>
-        <name>name</name>
-        <initializer>= <ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref>,&apos;%s&apos;,1)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="41" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="41" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a941dee33725f074478fdcbf15e1c35ae" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>conc</definition>
-        <argsstring></argsstring>
-        <name>conc</name>
-        <initializer>= <ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref>,&apos;%<ref refid="a00025_1a9c5a71c46b1abb8b7df5ebeac6c81535" kindref="member">f</ref>&apos;,1)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="42" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="42" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a02a2184ac978f50472408ca644862302" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>sValues</definition>
-        <argsstring></argsstring>
-        <name>sValues</name>
-        <initializer>= <ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref>,&apos;%<ref refid="a00025_1a9c5a71c46b1abb8b7df5ebeac6c81535" kindref="member">f</ref>&apos;,12)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="43" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="43" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1ad75735665492cabd747370126464fddf" prot="public" static="no" mutable="no">
-        <type>creating <ref refid="a00021" kindref="compound">reactions</ref> matrix</type>
-        <definition>creating reactions matrix rFiles</definition>
-        <argsstring></argsstring>
-        <name>rFiles</name>
-        <initializer>= dir(&apos;<ref refid="a00021" kindref="compound">reactions</ref>*&apos;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="53" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="53" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a4c72dba1fe2ee2fbcc699262a8d0c624" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>reactionsFile</definition>
-        <argsstring></argsstring>
-        <name>reactionsFile</name>
-        <initializer>= <ref refid="a00030_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>(length(<ref refid="a00030_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>)-1).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref></initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="54" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="54" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1ac52097a2745fcef31eb175d2e9485845" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>reactionsMatrix</definition>
-        <argsstring></argsstring>
-        <name>reactionsMatrix</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="57" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a436a6968124e560649654a4abbd9dac6" prot="public" static="no" mutable="no">
-        <type>while <ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
-        <definition>while continua rValues</definition>
-        <argsstring></argsstring>
-        <name>rValues</name>
-        <initializer>= <ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref>,&apos;%d&apos;,7)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="59" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="59" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1ad3aa27d88a7e9d77d8334155860269bb" prot="public" static="no" mutable="no">
-        <type>dividing into condensations <ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref> <ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref></type>
-        <definition>else condensations</definition>
-        <argsstring></argsstring>
-        <name>condensations</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="71" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="71" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a89060c6979e5a4ff7b0985b35f295695" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>cleavages</definition>
-        <argsstring></argsstring>
-        <name>cleavages</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="72" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="72" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a1a691fb4f955887edfa538e91479fafe" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>cleavagesMatrix</definition>
-        <argsstring></argsstring>
-        <name>cleavagesMatrix</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="74" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="74" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1afaba8eef2f8f4e4dda2e893a19e55a94" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>condensationsMatrix</definition>
-        <argsstring></argsstring>
-        <name>condensationsMatrix</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="75" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="75" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" prot="public" static="no" mutable="no">
-        <type>for</type>
-        <definition>end ****************************************************************************************************S T A R T **************************for i</definition>
-        <argsstring></argsstring>
-        <name>i</name>
-        <initializer>= 1:rrm
-        <ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00030_1af998036b749d9fa6dd2365f9937279b6" kindref="member">reactionsMatrix</ref>(i,2) == 1
-            <ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref> = <ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref>+1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="76" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="76" bodyend="-1"/>
-        <referencedby refid="a00076_1a78d5b4a67b6e66b8ceaa85874a2a12b7" compoundref="a00075" startline="203" endline="224">random_binomial</referencedby>
-        <referencedby refid="a00014_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00085" startline="526" endline="931">environment::createReactionsForThisSpecies</referencedby>
-        <referencedby refid="a00014_1a4e26cc574e20a5afcfbbe5887109c5af" compoundref="a00085" startline="1875" endline="1895">environment::returnPosSpeciesAlreadyPresent</referencedby>
-        <referencedby refid="a00014_1a6feec5685b519ba0cdae0e5c59dffff0" compoundref="a00085" startline="1905" endline="1930">environment::returnPosReactionAlreadyPresent</referencedby>
-        <referencedby refid="a00014_1ac4c90b07b8e75ea03e2ced0ea644a69f" compoundref="a00085" startline="1938" endline="1959">environment::checkIfTheReactionIsAlreadyCatalyzedByThisSpecies</referencedby>
-        <referencedby refid="a00014_1abdafaeba15b5d32fd35569869c6244d5" compoundref="a00085" startline="1966" endline="1996">environment::checkIfOnlyMutualCatalysis</referencedby>
-        <referencedby refid="a00014_1a6606b08f25751a8796c13810962b385e" compoundref="a00085" startline="2005" endline="2455">environment::structureCoherenceCheckUp</referencedby>
-        <referencedby refid="a00014_1a5cb194f927ddc7a804a942ca71f062af" compoundref="a00085" startline="2524" endline="2552">environment::showSubListInSpecies</referencedby>
-        <referencedby refid="a00014_1a6ae793f9d2dca0632239be955dd83cee" compoundref="a00085" startline="4535" endline="4654">environment::performDETComplexDissociation</referencedby>
-        <referencedby refid="a00014_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00085" startline="5095" endline="5247">environment::performMoleculesEfflux</referencedby>
-        <referencedby refid="a00014_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00085" startline="6733" endline="6828">environment::complexEvaluation</referencedby>
-        <referencedby refid="a00014_1a429c2529badaeda72e553f500b990e11" compoundref="a00085" startline="6976" endline="7028">environment::printInitialCondition</referencedby>
-        <referencedby refid="a00014_1a48d8fd9d8d5c9c31f0b4af87c8cbd28f" compoundref="a00085" startline="7034" endline="7056">environment::printAllSpeciesIdAndSequence</referencedby>
-        <referencedby refid="a00014_1aa3a18c59f6127c642603a98c1b3a2224" compoundref="a00085" startline="7062" endline="7082">environment::printGillespieStructure</referencedby>
-        <referencedby refid="a00014_1a8699a0f85f5e8dc23eb8f78fa22c6b17" compoundref="a00085" startline="7281" endline="7297">environment::zeroBeforeStringNumberSTD</referencedby>
-        <referencedby refid="a00014_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00085" startline="7872" endline="7925">environment::saveLivingSpeciesIDSTD</referencedby>
-        <referencedby refid="a00014_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00085" startline="7933" endline="7991">environment::saveLivingSpeciesAmountSTD</referencedby>
-        <referencedby refid="a00014_1aedf8d90e1fe734948bf2213489840582" compoundref="a00085" startline="7999" endline="8055">environment::saveLivingSpeciesConcentrationSTD</referencedby>
-        <referencedby refid="a00019_1a0c57076fe30358e0700a7ce1baa0ea27" compoundref="a00090" startline="23" endline="33">MTRand_int32::seed</referencedby>
-        <referencedby refid="a00022_1a211914e1702d47eb3203730fec2c7b4c" compoundref="a00094" startline="411" endline="419">species::showGillEngagement</referencedby>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" prot="public" static="no" mutable="no">
-        <type>creating <ref refid="a00012" kindref="compound">catalysis</ref> matrix</type>
-        <definition>creating catalysis matrix cFiles</definition>
-        <argsstring></argsstring>
-        <name>cFiles</name>
-        <initializer>= dir(&apos;<ref refid="a00012" kindref="compound">catalysis</ref>*&apos;)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="88" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="88" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a33e70cf5b45cb59005b82d30202f0b69" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>catalysisFile</definition>
-        <argsstring></argsstring>
-        <name>catalysisFile</name>
-        <initializer>= <ref refid="a00030_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>(length(<ref refid="a00030_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>)).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref></initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="89" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="89" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a0810027f58d6be965e44b7b84c44ace8" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>catalysisMatrix</definition>
-        <argsstring></argsstring>
-        <name>catalysisMatrix</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="92" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="92" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1ad4ba7701967c1da20171228afccb7081" prot="public" static="no" mutable="no">
-        <type>while <ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
-        <definition>while continua cValues</definition>
-        <argsstring></argsstring>
-        <name>cValues</name>
-        <initializer>= <ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(<ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref>,&apos;%<ref refid="a00025_1a9c5a71c46b1abb8b7df5ebeac6c81535" kindref="member">f</ref>&apos;,7)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="94" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="94" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a91cf6fbebedd86150a36e5ac3d5d3bfc" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>break</definition>
-        <argsstring></argsstring>
-        <name>break</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="98" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="98" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1abe2562f47a009cdc636cec6fe7b1036b" prot="public" static="no" mutable="no">
-        <type>identifying</type>
-        <definition>identifying garbage[rsm csm]</definition>
-        <argsstring>[rsm csm]</argsstring>
-        <name>garbage</name>
-        <initializer>= <ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00027_1ab9e70ab48bc489696c53ad7946d9dfd2" kindref="member">speciesMatrix</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="105" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="106" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1af33e0ef530936979d29418a30cb262d0" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>gRows</definition>
-        <argsstring></argsstring>
-        <name>gRows</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="107" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="107" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a81fbeed23d0dfd3b031fce1839f131fe" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>if garbageMatrix</definition>
-        <argsstring></argsstring>
-        <name>garbageMatrix</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="108" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="108" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a98a8838a85ed24032563a44271b1525a" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>check2</definition>
-        <argsstring></argsstring>
-        <name>check2</name>
-        <initializer>= ismember(<ref refid="a00027_1ab9e70ab48bc489696c53ad7946d9dfd2" kindref="member">speciesMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,1),<ref refid="a00030_1a84a949cdae2c03193c84caf27f855b30" kindref="member">condensationsMatrix</ref>(:,4:5))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="111" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="111" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1adfd17509248a56986475a25ee50fe488" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>check3</definition>
-        <argsstring></argsstring>
-        <name>check3</name>
-        <initializer>= ismember(<ref refid="a00027_1ab9e70ab48bc489696c53ad7946d9dfd2" kindref="member">speciesMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>,1),<ref refid="a00030_1a244eec8903103b5bbddef461276286ce" kindref="member">catalysisMatrix</ref>(:,2))</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="112" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="112" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a62c10db322670bdabb633eb294c4fcec" prot="public" static="no" mutable="no">
-        <type><ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
-        <definition>if check1</definition>
-        <argsstring></argsstring>
-        <name>check1</name>
-        <initializer>== 0 &amp;&amp; <ref refid="a00030_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref> == 0 &amp;&amp; <ref refid="a00030_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref> == 0
-            <ref refid="a00027_1af33e0ef530936979d29418a30cb262d0" kindref="member">gRows</ref> = <ref refid="a00027_1af33e0ef530936979d29418a30cb262d0" kindref="member">gRows</ref>+1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="113" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="113" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1af5946383720aa572eb93e1e63afc23c2" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>else[r c]</definition>
-        <argsstring>[r c]</argsstring>
-        <name>else</name>
-        <initializer>= <ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00027_1acdc35755c8d07d7b7df426e77ae26506" kindref="member">garbageMatrix</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="127" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="128" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1ac862e7284527eb913b1351c8bfb8e079" prot="public" static="no" mutable="no">
-        <type>clear</type>
-        <definition>clear r</definition>
-        <argsstring></argsstring>
-        <name>r</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="137" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="137" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00027_1a8e54ca14679a1ce9245a3b7d55d95570" prot="public" static="no" mutable="no">
-        <type>clear</type>
-        <definition>clear c</definition>
-        <argsstring></argsstring>
-        <name>c</name>
-        <initializer>= 1 : length(<ref refid="a00028_1a0d0db21d4520f7561ff56e2c80e4fb69" kindref="member">numScc</ref>) % for each <ref refid="a00028_1ad72e1068795c577213481e5db7f3e925" kindref="member">ACS</ref> (<ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> present)
-                                    <ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00028_1a0d0db21d4520f7561ff56e2c80e4fb69" kindref="member">numScc</ref>(c) &gt; 1 % IF the <ref refid="a00028_1ad72e1068795c577213481e5db7f3e925" kindref="member">ACS</ref> contains more than one <ref refid="a00022" kindref="compound">species</ref>
-                                        <ref refid="a00028_1af1605fa33751cda7e0c840d6df8f8a59" kindref="member">inSCCFlag</ref> = 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="138" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" bodystart="138" bodyend="-1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="9" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" bodystart="9" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="a00027_1a8d69772ffb168fa3e492dce8d97511e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00068_1a4b4c670b101bf7a838f775e008fa6255" kindref="member">function</ref></type>
-        <definition>function garbageSearch</definition>
-        <argsstring>(param) currentDir</argsstring>
-        <name>garbageSearch</name>
+      <memberdef kind="function" id="a00027_1a1cefc2ab6209d3abc585818a38c20195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>while</type>
+        <definition>while ischar</definition>
+        <argsstring>(tline) tline</argsstring>
+        <name>ischar</name>
         <param>
-          <type><ref refid="a00033_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref></type>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -548,16 +63,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="1" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="7" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a00027_1a452d57b5eb20c3e594ee8ee53155fdd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>end cd</definition>
-        <argsstring>(param.tmpPath)</argsstring>
-        <name>cd</name>
+      <memberdef kind="function" id="a00027_1a9609808cef745ad8ee18e35e55a1fbf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00024_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>if isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;nSeconds&apos;) confparams.nSeconds</argsstring>
+        <name>isequal</name>
         <param>
-          <type>param.</type>
-          <declname>tmpPath</declname>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00064_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>&apos;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -565,15 +82,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="4" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="10" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a00027_1a42239b4891be578ad871fbcf3c713a59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>disp</definition>
-        <argsstring>(&apos;|------------------------------|&apos;)</argsstring>
-        <name>disp</name>
+      <memberdef kind="function" id="a00027_1a302e40bc97d43406841d0fa4246f1d6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;nGEN&apos;) confparams.nGEN</argsstring>
+        <name>isequal</name>
         <param>
-          <type>&apos;|------------------------------|&apos;</type>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00065_1a4c8fe523edbe179c5d215da13f469f72" kindref="member">nGEN</ref>&apos;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -581,15 +101,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="6" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="12" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a00027_1a9024ba22a46088871be1d4ea6750fa54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>disp</definition>
-        <argsstring>(&apos;|-Garbage analysis is started|&apos;)</argsstring>
-        <name>disp</name>
+      <memberdef kind="function" id="a00027_1a00a640dfb4748b56c2891827afa0f8c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;nSIM&apos;) confparams.nSIM</argsstring>
+        <name>isequal</name>
         <param>
-          <type>&apos;|-Garbage <ref refid="a00032_1abf6e5638a23a2531114655f3f690b70c" kindref="member">analysis</ref> is started|&apos;</type>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00065_1adb2acbd590bcb59c7b4e633c250f3f28" kindref="member">nSIM</ref>&apos;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -597,15 +120,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="7" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="14" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a00027_1aef429e9a25e0d4d70aa2037a59816956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>READ ALL THE DIRECTORY CONTAINING SIMULATIONS <ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
-        <definition>READ ALL THE DIRECTORY CONTAINING SIMULATIONS if ~isdir</definition>
-        <argsstring>(&apos;0_statistics&apos;) mkdir(&apos;0_statistics&apos;)</argsstring>
-        <name>~isdir</name>
+      <memberdef kind="function" id="a00027_1a57f0bc660f71fe01077b105f43cb46ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;nReactions&apos;) confparams.nReactions</argsstring>
+        <name>isequal</name>
         <param>
-          <type>&apos;0_statistics&apos;</type>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00065_1a8d704532b4b419f1428cb078bb5c7ffe" kindref="member">nReactions</ref>&apos;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -613,15 +139,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="12" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="16" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a00027_1a365d011aeb5adcedc5cc75e7df629a6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>cd</definition>
-        <argsstring>(&apos;0_statistics&apos;)</argsstring>
-        <name>cd</name>
+      <memberdef kind="function" id="a00027_1a1d0c721b254cf713e8c88fae67768c18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;timeStructuresSavingInterval&apos;) confparams.timeStructuresSavingInterval</argsstring>
+        <name>isequal</name>
         <param>
-          <type>&apos;0_statistics&apos;</type>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00065_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref>&apos;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -629,15 +158,148 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="19" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="18" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="a00027_1a5e769bbbabcaddc548203741c7100228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>fclose</definition>
-        <argsstring>(fid)</argsstring>
+      <memberdef kind="function" id="a00027_1afa1c887177bb6b12d573d146e87fd0c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;fileTimesSaveInterval&apos;) confparams.fileTimesSaveInterval</argsstring>
+        <name>isequal</name>
+        <param>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00065_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref>&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00027_1adf545424e285d74d2a63ba2e24bbc541" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;reactionProbability&apos;) confparams.reactionProbability</argsstring>
+        <name>isequal</name>
+        <param>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00065_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00027_1a11a9d049a3f71bb9dda298e8d3ca977f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;energy&apos;) confparams.energy</argsstring>
+        <name>isequal</name>
+        <param>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00065_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00027_1a020bdc51aec69d386d296cef12a4103f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;ECConcentration&apos;) confparams.ECConcentration</argsstring>
+        <name>isequal</name>
+        <param>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;ECConcentration&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00027_1a70d26090f1be04e2d5574b92311c5e60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;influx_rate&apos;) confparams.influx_rate</argsstring>
+        <name>isequal</name>
+        <param>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00065_1ad795c71664f3161dc8f7a769341daadf" kindref="member">influx_rate</ref>&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00027_1af9bdb7d08f0bf513092ed132ab8fd463" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;maxLOut&apos;) confparams.maxLOut</argsstring>
+        <name>isequal</name>
+        <param>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00065_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref>&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00027_1ab95e741dbc04dc8030ed60d7b15454a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>elseif</type>
+        <definition>elseif isequal</definition>
+        <argsstring>(tline(1:param-1),&apos;volume&apos;) confparams.volume</argsstring>
+        <name>isequal</name>
+        <param>
+          <type><ref refid="a00027_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>(1:<ref refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1)</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00065_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00027_1a66a54a4db5a27a03991b5f3034bbc6a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end end fclose</definition>
+        <argsstring>(fidConf)</argsstring>
         <name>fclose</name>
         <param>
-          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
+          <type>fidConf</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -645,229 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="21" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1a7eb00a69197e8905221801683c7ec02a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>cd</definition>
-        <argsstring>(&apos;../&apos;)</argsstring>
-        <name>cd</name>
-        <param>
-          <type>&apos;../&apos;</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="22" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1a609f02c862f2843febf3408f688be8e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>disp</definition>
-        <argsstring>(strcat(&apos;|-Folder: &apos;, simDirs(x).name,&apos;/res...&apos;))</argsstring>
-        <name>disp</name>
-        <param>
-          <type>strcat(&apos;|-Folder: &apos;, <ref refid="a00031_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="a00031_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res...&apos;)</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="26" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1ace5ed38e308fa1b7cc6487bce960dfee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00030_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00027_1a941dee33725f074478fdcbf15e1c35ae" kindref="member">conc</ref> &amp;&amp;</type>
-        <definition>if conc&amp;&amp; sValues</definition>
-        <argsstring>(5)</argsstring>
-        <name>sValues</name>
-        <param>
-          <type>5</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="44" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1ab9e70ab48bc489696c53ad7946d9dfd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>speciesMatrix</definition>
-        <argsstring>(continua, 2)</argsstring>
-        <name>speciesMatrix</name>
-        <param>
-          <type><ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
-        </param>
-        <param>
-          <type>2</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="46" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1af998036b749d9fa6dd2365f9937279b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00029_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref> <ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
-        <definition>break end reactionsMatrix</definition>
-        <argsstring>(continua, 1:6)</argsstring>
-        <name>reactionsMatrix</name>
-        <param>
-          <type><ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
-        </param>
-        <param>
-          <type>1:6</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="65" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1a01fa14c111dc166a634dbb35b9cf9845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>cleavagesMatrix</definition>
-        <argsstring>(cleavages, 1:6)</argsstring>
-        <name>cleavagesMatrix</name>
-        <param>
-          <type><ref refid="a00030_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref></type>
-        </param>
-        <param>
-          <type>1:6</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="79" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1aa0f4762ac55d55c1b1ff073f9a5c3603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>condensationsMatrix</definition>
-        <argsstring>(condensations, 1:6)</argsstring>
-        <name>condensationsMatrix</name>
-        <param>
-          <type><ref refid="a00030_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref></type>
-        </param>
-        <param>
-          <type>1:6</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="82" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1acd65be0940a1307851b57c0d864fd32a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
-        <definition>end catalysisMatrix</definition>
-        <argsstring>(continua, 1:4)</argsstring>
-        <name>catalysisMatrix</name>
-        <param>
-          <type><ref refid="a00030_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref></type>
-        </param>
-        <param>
-          <type>1:4</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="100" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1acdc35755c8d07d7b7df426e77ae26506" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>garbageMatrix</definition>
-        <argsstring>(gRows, 1:2)</argsstring>
-        <name>garbageMatrix</name>
-        <param>
-          <type><ref refid="a00027_1af33e0ef530936979d29418a30cb262d0" kindref="member">gRows</ref></type>
-        </param>
-        <param>
-          <type>1:2</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="115" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1a21172d88d238291f06b91067ea53f814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>fprintf</definition>
-        <argsstring>(fid,&apos;NET%d\n\n&apos;, x)</argsstring>
-        <name>fprintf</name>
-        <param>
-          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
-        </param>
-        <param>
-          <type>&apos;NET%d\n\n&apos;</type>
-        </param>
-        <param>
-          <type><ref refid="a00031_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref></type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="124" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1ad91ce2467e4598db623dbf65f8786197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>fprintf</definition>
-        <argsstring>(fid,&apos;%f\n\n&apos;, garbageMatrix(i, 2))</argsstring>
-        <name>fprintf</name>
-        <param>
-          <type><ref refid="a00031_1ae9011d40c6f13e68e6f07156e0da7c5d" kindref="member">fid</ref></type>
-        </param>
-        <param>
-          <type>&apos;%f\n\n&apos;</type>
-        </param>
-        <param>
-          <type><ref refid="a00027_1acdc35755c8d07d7b7df426e77ae26506" kindref="member">garbageMatrix</ref>(<ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref>, 2)</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="131" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00027_1ad0eeb1e0227e246587ed6adcb8d829dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
-        <definition>end cd</definition>
-        <argsstring>(currentDir)</argsstring>
-        <name>cd</name>
-        <param>
-          <type><ref refid="a00031_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref></type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m" line="141" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m" line="39" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -875,150 +315,48 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="a00027_1a8d69772ffb168fa3e492dce8d97511e7" kindref="member">garbageSearch</ref>(<ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>)</highlight></codeline>
+<codeline lineno="1" refid="a00027_1a53a794fb4119b36e89d14a405e075596" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref><sp/>=<sp/>readParameters()</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"><ref refid="a00023_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref><sp/>=<sp/><ref refid="a00025_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>();</highlight></codeline>
-<codeline lineno="4"><highlight class="normal">cd(<ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>);</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><ref refid="a00023_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(&apos;|------------------------------|&apos;);</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><ref refid="a00023_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(&apos;|-<sp/>Garbage<sp/><ref refid="a00032_1abf6e5638a23a2531114655f3f690b70c" kindref="member">analysis</ref><sp/>is<sp/>started<sp/>|&apos;);</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><ref refid="a00023_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(&apos;|------------------------------|&apos;);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal">%<sp/>READ<sp/>ALL<sp/>THE<sp/>DIRECTORY<sp/>CONTAINING<sp/>SIMULATIONS</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>~isdir(&apos;0_statistics&apos;)</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00068_1abcaf3fe79479456b56924747f1bca0d9" kindref="member">mkdir</ref>(&apos;0_statistics&apos;);</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="a00027_1ad509473eed851f9f5ff4157c02ec8618" refkind="member"><highlight class="normal"><ref refid="a00027_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref><sp/>=<sp/>strcat(&apos;*&apos;,<ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.<ref refid="a00028_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>,&apos;*&apos;);</highlight></codeline>
-<codeline lineno="17" refid="a00027_1aae5035eb84b89176ed5b06e136325eff" refkind="member"><highlight class="normal"><ref refid="a00027_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref><sp/>=<sp/>dir(<ref refid="a00027_1ad509473eed851f9f5ff4157c02ec8618" kindref="member">tmpFolder</ref>);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal">cd(&apos;0_statistics&apos;);</highlight></codeline>
-<codeline lineno="20" refid="a00027_1ae9011d40c6f13e68e6f07156e0da7c5d" refkind="member"><highlight class="normal"><ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref><sp/>=<sp/>fopen(&apos;ALL_garbage.txt&apos;,&apos;w&apos;);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(<ref refid="a00105_1a490a31896b3a0812a6e9ed57cd4be1c9" kindref="member">fid</ref>);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal">cd(&apos;../&apos;);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="a00027_1a7265972fe485274cfff77a9bb07b8fce" refkind="member"><highlight class="normal">for<sp/><ref refid="a00027_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref><sp/>=<sp/>1:length(<ref refid="a00027_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>)</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(strcat(<ref refid="a00027_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="a00027_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>).<ref refid="a00027_1abbf559a76fab59203496b0847ab9502a" kindref="member">name</ref>,&apos;/res&apos;));</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00023_1a9be64ccaf83f215ee184d5aafefd7352" kindref="member">disp</ref>(strcat(&apos;<sp/><sp/>|-<sp/>Folder:<sp/>&apos;,<ref refid="a00027_1aae5035eb84b89176ed5b06e136325eff" kindref="member">simDirs</ref>(<ref refid="a00027_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>).name,&apos;/res...&apos;));</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>%creating<sp/><ref refid="a00022" kindref="compound">species</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="29" refid="a00027_1a0cf551ea63e8b67362ae2ab776072d1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a0cf551ea63e8b67362ae2ab776072d1f" kindref="member">sFiles</ref><sp/>=<sp/>dir(&apos;<ref refid="a00022" kindref="compound">species</ref>*&apos;);</highlight></codeline>
-<codeline lineno="30" refid="a00027_1a7da0c82834970c5f3c3d9224ab832577" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a7da0c82834970c5f3c3d9224ab832577" kindref="member">speciesFile</ref><sp/>=<sp/><ref refid="a00027_1a0cf551ea63e8b67362ae2ab776072d1f" kindref="member">sFiles</ref>(length(<ref refid="a00027_1a0cf551ea63e8b67362ae2ab776072d1f" kindref="member">sFiles</ref>)).name;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(<ref refid="a00027_1a7da0c82834970c5f3c3d9224ab832577" kindref="member">speciesFile</ref>);</highlight></codeline>
-<codeline lineno="32" refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="33" refid="a00027_1aaeeccb9f4fc7b14ac6b4810a4bf9f71e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1aaeeccb9f4fc7b14ac6b4810a4bf9f71e" kindref="member">speciesMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>&gt;<sp/>0</highlight></codeline>
-<codeline lineno="35" refid="a00027_1a0cd6a44ffb07342cbc7e5ac33bfc9495" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00105_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref><sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%d&apos;,1);</highlight></codeline>
-<codeline lineno="36" refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00105_1af7658ba15697dfeb9cd4bff8a57c7360" kindref="member">index</ref>);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a9c951ebd5bc3f1adce943bee1255f4d6" kindref="member">continua</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="41" refid="a00027_1abbf559a76fab59203496b0847ab9502a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name<sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%s&apos;,1);</highlight></codeline>
-<codeline lineno="42" refid="a00027_1a941dee33725f074478fdcbf15e1c35ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a941dee33725f074478fdcbf15e1c35ae" kindref="member">conc</ref><sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%<ref refid="a00025_1a9c5a71c46b1abb8b7df5ebeac6c81535" kindref="member">f</ref>&apos;,1);</highlight></codeline>
-<codeline lineno="43" refid="a00027_1a02a2184ac978f50472408ca644862302" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a02a2184ac978f50472408ca644862302" kindref="member">sValues</ref><sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%f&apos;,12);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00027_1a941dee33725f074478fdcbf15e1c35ae" kindref="member">conc</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="a00027_1a02a2184ac978f50472408ca644862302" kindref="member">sValues</ref>(5)<sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1aaeeccb9f4fc7b14ac6b4810a4bf9f71e" kindref="member">speciesMatrix</ref>(continua,1)<sp/>=<sp/>index;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1aaeeccb9f4fc7b14ac6b4810a4bf9f71e" kindref="member">speciesMatrix</ref>(continua,2)<sp/>=<sp/><ref refid="a00027_1a941dee33725f074478fdcbf15e1c35ae" kindref="member">conc</ref>;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>continua+1;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>%creating<sp/><ref refid="a00021" kindref="compound">reactions</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="53" refid="a00027_1ad75735665492cabd747370126464fddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref><sp/>=<sp/>dir(&apos;<ref refid="a00021" kindref="compound">reactions</ref>*&apos;);</highlight></codeline>
-<codeline lineno="54" refid="a00027_1a4c72dba1fe2ee2fbcc699262a8d0c624" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref><sp/>=<sp/><ref refid="a00027_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>(length(<ref refid="a00027_1ad75735665492cabd747370126464fddf" kindref="member">rFiles</ref>)-1).name;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(<ref refid="a00027_1a4c72dba1fe2ee2fbcc699262a8d0c624" kindref="member">reactionsFile</ref>);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="57" refid="a00027_1ac52097a2745fcef31eb175d2e9485845" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/>continua<sp/>&gt;<sp/>0</highlight></codeline>
-<codeline lineno="59" refid="a00027_1a436a6968124e560649654a4abbd9dac6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a436a6968124e560649654a4abbd9dac6" kindref="member">rValues</ref><sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%d&apos;,7);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00027_1a436a6968124e560649654a4abbd9dac6" kindref="member">rValues</ref>);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref>(continua,1:6)<sp/>=<sp/>rValues(1:6);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>continua+1;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>%dividing<sp/>into<sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref><sp/><ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref></highlight></codeline>
-<codeline lineno="71" refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="72" refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>[rrm<sp/>crm]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00027_1ac52097a2745fcef31eb175d2e9485845" kindref="member">reactionsMatrix</ref>);</highlight></codeline>
-<codeline lineno="74" refid="a00027_1a1a691fb4f955887edfa538e91479fafe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a1a691fb4f955887edfa538e91479fafe" kindref="member">cleavagesMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="75" refid="a00027_1afaba8eef2f8f4e4dda2e893a19e55a94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1afaba8eef2f8f4e4dda2e893a19e55a94" kindref="member">condensationsMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="76" refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/><ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>1:rrm</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>reactionsMatrix(<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>,2)<sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref><sp/>=<sp/><ref refid="a00027_1a89060c6979e5a4ff7b0985b35f295695" kindref="member">cleavages</ref>+1;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a1a691fb4f955887edfa538e91479fafe" kindref="member">cleavagesMatrix</ref>(cleavages,1:6)<sp/>=<sp/>reactionsMatrix(i,1:6);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref><sp/>=<sp/><ref refid="a00027_1ad3aa27d88a7e9d77d8334155860269bb" kindref="member">condensations</ref>+1;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1afaba8eef2f8f4e4dda2e893a19e55a94" kindref="member">condensationsMatrix</ref>(condensations,1:6)<sp/>=<sp/>reactionsMatrix(i,1:6);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>%creating<sp/><ref refid="a00012" kindref="compound">catalysis</ref><sp/>matrix</highlight></codeline>
-<codeline lineno="88" refid="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref><sp/>=<sp/>dir(&apos;<ref refid="a00012" kindref="compound">catalysis</ref>*&apos;);</highlight></codeline>
-<codeline lineno="89" refid="a00027_1a33e70cf5b45cb59005b82d30202f0b69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref><sp/>=<sp/><ref refid="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>(length(<ref refid="a00027_1a9eab57ccb42a39c704f47dc30e4f4515" kindref="member">cFiles</ref>)).name;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(<ref refid="a00027_1a33e70cf5b45cb59005b82d30202f0b69" kindref="member">catalysisFile</ref>);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="92" refid="a00027_1a0810027f58d6be965e44b7b84c44ace8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a0810027f58d6be965e44b7b84c44ace8" kindref="member">catalysisMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/>continua<sp/>&gt;<sp/>0</highlight></codeline>
-<codeline lineno="94" refid="a00027_1ad4ba7701967c1da20171228afccb7081" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1ad4ba7701967c1da20171228afccb7081" kindref="member">cValues</ref><sp/>=<sp/><ref refid="a00025_1a028ac102a731e62fb0a7439381f566c1" kindref="member">fscanf</ref>(fid,&apos;%f&apos;,7);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>=<sp/><ref refid="a00025_1ac10445404f4b83302522defb59e25ef7" kindref="member">isempty</ref>(<ref refid="a00027_1ad4ba7701967c1da20171228afccb7081" kindref="member">cValues</ref>);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00027_1a6bd08e37edf4151f5f6d1fc27a6f227a" kindref="member">stop</ref><sp/>==<sp/>1</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="98" refid="a00027_1a91cf6fbebedd86150a36e5ac3d5d3bfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a91cf6fbebedd86150a36e5ac3d5d3bfc" kindref="member">break</ref>;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a0810027f58d6be965e44b7b84c44ace8" kindref="member">catalysisMatrix</ref>(continua,1:4)<sp/>=<sp/>cValues(1:4);</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>continua<sp/>=<sp/>continua+1;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>%identifying<sp/><ref refid="a00027_1abe2562f47a009cdc636cec6fe7b1036b" kindref="member">garbage</ref></highlight></codeline>
-<codeline lineno="106" refid="a00027_1abe2562f47a009cdc636cec6fe7b1036b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[rsm<sp/>csm]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00027_1aaeeccb9f4fc7b14ac6b4810a4bf9f71e" kindref="member">speciesMatrix</ref>);</highlight></codeline>
-<codeline lineno="107" refid="a00027_1af33e0ef530936979d29418a30cb262d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1af33e0ef530936979d29418a30cb262d0" kindref="member">gRows</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="108" refid="a00027_1a81fbeed23d0dfd3b031fce1839f131fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a81fbeed23d0dfd3b031fce1839f131fe" kindref="member">garbageMatrix</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:rsm</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a62c10db322670bdabb633eb294c4fcec" kindref="member">check1</ref><sp/>=<sp/>ismember(speciesMatrix(i,1),<ref refid="a00027_1a1a691fb4f955887edfa538e91479fafe" kindref="member">cleavagesMatrix</ref>(:,3));</highlight></codeline>
-<codeline lineno="111" refid="a00027_1a98a8838a85ed24032563a44271b1525a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref><sp/>=<sp/>ismember(speciesMatrix(i,1),<ref refid="a00027_1afaba8eef2f8f4e4dda2e893a19e55a94" kindref="member">condensationsMatrix</ref>(:,4:5));</highlight></codeline>
-<codeline lineno="112" refid="a00027_1adfd17509248a56986475a25ee50fe488" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref><sp/>=<sp/>ismember(speciesMatrix(i,1),<ref refid="a00027_1a0810027f58d6be965e44b7b84c44ace8" kindref="member">catalysisMatrix</ref>(:,2));</highlight></codeline>
-<codeline lineno="113" refid="a00027_1a62c10db322670bdabb633eb294c4fcec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00027_1a62c10db322670bdabb633eb294c4fcec" kindref="member">check1</ref><sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="a00027_1a98a8838a85ed24032563a44271b1525a" kindref="member">check2</ref><sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="a00027_1adfd17509248a56986475a25ee50fe488" kindref="member">check3</ref><sp/>==<sp/>0</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1af33e0ef530936979d29418a30cb262d0" kindref="member">gRows</ref><sp/>=<sp/><ref refid="a00027_1af33e0ef530936979d29418a30cb262d0" kindref="member">gRows</ref>+1;</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a81fbeed23d0dfd3b031fce1839f131fe" kindref="member">garbageMatrix</ref>(gRows,1:2)<sp/>=<sp/>speciesMatrix(i,1:2);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>%printing<sp/>results</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(<ref refid="a00028_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>.tmpPath);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(&apos;0_statistics&apos;);</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>fid<sp/>=<sp/>fopen(&apos;ALL_garbage.txt&apos;,&apos;<ref refid="a00025_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref>&apos;);</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;NET<sp/>%d\n\n&apos;,<ref refid="a00027_1a7265972fe485274cfff77a9bb07b8fce" kindref="member">x</ref>);</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00027_1a81fbeed23d0dfd3b031fce1839f131fe" kindref="member">garbageMatrix</ref><sp/>==<sp/>0</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;This<sp/>net<sp/>is<sp/><ref refid="a00027_1abe2562f47a009cdc636cec6fe7b1036b" kindref="member">garbage</ref>-free!\n\n&apos;);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00027_1af5946383720aa572eb93e1e63afc23c2" kindref="member">else</ref></highlight></codeline>
-<codeline lineno="128" refid="a00027_1af5946383720aa572eb93e1e63afc23c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<ref refid="a00027_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref><sp/><ref refid="a00027_1a8e54ca14679a1ce9245a3b7d55d95570" kindref="member">c</ref>]<sp/>=<sp/><ref refid="a00062_1ae113ea7f9e515a12ac4b5595c6faf61e" kindref="member">size</ref>(<ref refid="a00027_1a81fbeed23d0dfd3b031fce1839f131fe" kindref="member">garbageMatrix</ref>);</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>i<sp/>=<sp/>1:<ref refid="a00027_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%d\t&apos;,garbageMatrix(i,1));</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00027_1a21172d88d238291f06b91067ea53f814" kindref="member">fprintf</ref>(fid,&apos;%f\n\n&apos;,garbageMatrix(i,2));</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00025_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fid);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(&apos;../&apos;);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/>i;</highlight></codeline>
-<codeline lineno="137" refid="a00027_1ac862e7284527eb913b1351c8bfb8e079" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/><ref refid="a00027_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref>;</highlight></codeline>
-<codeline lineno="138" refid="a00027_1a8e54ca14679a1ce9245a3b7d55d95570" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>clear<sp/><ref refid="a00027_1a8e54ca14679a1ce9245a3b7d55d95570" kindref="member">c</ref>;</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal">cd(<ref refid="a00023_1af32eb97339f1e9d37b5540de2cbc79c9" kindref="member">currentDir</ref>);</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/>fidConf=fopen(&apos;acsm2s.<ref refid="a00095_1a0d6fedc77ef111d5aebc888527a7b60d" kindref="member">conf</ref>&apos;,&apos;<ref refid="a00021_1ac862e7284527eb913b1351c8bfb8e079" kindref="member">r</ref>&apos;);</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="a00027_1a6791897869706b835f1a5d305739a415" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00022_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref><sp/>=<sp/>fgets(fidConf);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/><ref refid="a00022_1aaa2ace52a161710427bdc25dd600089b" kindref="member">ischar</ref>(<ref refid="a00022_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref><sp/>=<sp/>fgets(fidConf);</highlight></codeline>
+<codeline lineno="9" refid="a00027_1a51f20d6b1b54a2eee3be0e8adc96a0ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref><sp/>=<sp/>findstr(<ref refid="a00022_1a6791897869706b835f1a5d305739a415" kindref="member">tline</ref>,&apos;=&apos;);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:<ref refid="a00022_1a51f20d6b1b54a2eee3be0e8adc96a0ae" kindref="member">param</ref>-1),&apos;<ref refid="a00064_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>&apos;)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00064_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00065_1a4c8fe523edbe179c5d215da13f469f72" kindref="member">nGEN</ref>&apos;)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00065_1a4c8fe523edbe179c5d215da13f469f72" kindref="member">nGEN</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00064_1a68c8b36ce2387749248f566faa108e45" kindref="member">nSIM</ref>&apos;)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00064_1a68c8b36ce2387749248f566faa108e45" kindref="member">nSIM</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00064_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref>&apos;)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00064_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00065_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref>&apos;)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00065_1ae912a42ee691e9c69e17d5d791e0c71b" kindref="member">timeStructuresSavingInterval</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00065_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref>&apos;)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00065_1a825ee95e200498001c9f82b9637c1ff5" kindref="member">fileTimesSaveInterval</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00064_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>&apos;)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00064_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00065_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>&apos;)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00065_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;ECConcentration&apos;)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.ECConcentration<sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00096_1a3a8adee26325d72aca909e91b0fd3ea5" kindref="member">influx_rate</ref>&apos;)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00096_1a3a8adee26325d72aca909e91b0fd3ea5" kindref="member">influx_rate</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00065_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref>&apos;)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00065_1abb126c97fed10420e64f85923bf5e04b" kindref="member">maxLOut</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;ECConcentration&apos;)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.ECConcentration<sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/><ref refid="a00022_1a9609808cef745ad8ee18e35e55a1fbf1" kindref="member">isequal</ref>(tline(1:param-1),&apos;<ref refid="a00064_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>&apos;)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00022_1a000cb2f4b2f69aebbfb0e8e0809567f6" kindref="member">confparams</ref>.<ref refid="a00064_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref><sp/>=<sp/>str2num(tline(param+1:length(tline)));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00019_1a210fb0ae3c985ed0d3c1d439a131b48c" kindref="member">fclose</ref>(fidConf);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/garbageSearch.m"/>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/old/readParameters.m"/>
   </compounddef>
 </doxygen>

@@ -1,6 +1,15 @@
 Software documentation is available in the doc folder. 
 
-VERSION HISTORY 
+|---------------|
+|VERSION HISTORY|
+|---------------| 
+
+Build4.8b20140327.67
+Documentation updated 
+
+Build4.8b20140120.66
+Trush code has been removed from the Gillespie function.
+Documentation has been updated.  
 
 Build4.8b20140120.65
 A possible bug in complex dissociation procedure has been fixed. 

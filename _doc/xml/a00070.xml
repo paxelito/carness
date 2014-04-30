@@ -1,600 +1,349 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="a00070" kind="file">
-    <compoundname>lancia_inizializzatore_acs.m</compoundname>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="a00070_1a68c8b36ce2387749248f566faa108e45" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>nSIM</definition>
-        <argsstring></argsstring>
-        <name>nSIM</name>
-        <initializer>=1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="18" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="18" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1aaded2f2d61413dc4bddf805e9be03ded" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>nSeconds</definition>
-        <argsstring></argsstring>
-        <name>nSeconds</name>
-        <initializer>=400</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="19" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="19" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a7ab8b9fa18f22ee71429cf8ae50d754b" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>nReactions</definition>
-        <argsstring></argsstring>
-        <name>nReactions</name>
-        <initializer>=200000000</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="20" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="20" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1ae44c52e8cc45368288e687e5c374764f" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>initialPopulationNumber</definition>
-        <argsstring></argsstring>
-        <name>initialPopulationNumber</name>
-        <initializer>=0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="21" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="21" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a4c7433c24b6426a15069cc5a93a5cbec" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>initialMaxLength</definition>
-        <argsstring></argsstring>
-        <name>initialMaxLength</name>
-        <initializer>=3</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="23" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="23" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a04ee275ab8ce56c2c9c8b2b82995a9f7" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>massima_lunghezza_su_cui_calcolare_le_reazioni</definition>
-        <argsstring></argsstring>
-        <name>massima_lunghezza_su_cui_calcolare_le_reazioni</name>
-        <initializer>= 3</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="24" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="24" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a6ea019326f9d9d9c5e10160c5c4b6679" prot="public" static="no" mutable="no">
-        <type>experiment</type>
-        <definition>experiment __pad1__</definition>
-        <argsstring></argsstring>
-        <name>__pad1__</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="24" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1abcbc32fc68e4323620d6171a17310212" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>alphabet</definition>
-        <argsstring></argsstring>
-        <name>alphabet</name>
-        <initializer>= [&apos;<ref refid="a00069_1abfef5bcdab19147dbfbb68112da17044" kindref="member">AB</ref>&apos;]</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="29" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="29" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1ac9358e0c7555a21532187de31cdbd469" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>end lastFiringDiskSpeciesID</definition>
-        <argsstring></argsstring>
-        <name>lastFiringDiskSpeciesID</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="32" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="32" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a6f6ccfcf58b31cb6412107d9d5281426" prot="public" static="no" mutable="no">
-        <type>for</type>
-        <definition>for i</definition>
-        <argsstring></argsstring>
-        <name>i</name>
-        <initializer>= 1:<ref refid="a00071_1a4e714d8e6551275aafab501b8c9f18ad" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>
-    <ref refid="a00071_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref> = <ref refid="a00071_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref> + length(<ref refid="a00071_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>)^i</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="33" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a59597688ed79473c0234f45eb9167574" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>overallConcentration</definition>
-        <argsstring></argsstring>
-        <name>overallConcentration</name>
-        <initializer>=1e-4</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="38" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="38" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a9bc498ccac8db41438f855f5dd3f4c05" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>volume</definition>
-        <argsstring></argsstring>
-        <name>volume</name>
-        <initializer>=1e-15</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="40" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="40" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a43895072f7337df80dc4273211c55c9b" prot="public" static="no" mutable="no">
-        <type>experiment</type>
-        <definition>experiment __pad2__</definition>
-        <argsstring></argsstring>
-        <name>__pad2__</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="40" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="45" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1aa25e2dab413d379872aab3c4023d62f7" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>energyTarget</definition>
-        <argsstring></argsstring>
-        <name>energyTarget</name>
-        <initializer>=0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="49" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="49" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1ad4d86c1b55f9f76727181b05251ab7b1" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>complexFormationSymmetry</definition>
-        <argsstring></argsstring>
-        <name>complexFormationSymmetry</name>
-        <initializer>=0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="51" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="51" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1af142377b5a19c7c6cdeba9a34c579682" prot="public" static="no" mutable="no">
-        <type>**NEW **</type>
-        <definition>** NEW** fino_a_che_lunghezza_i_polimeri_non_catalizzano</definition>
-        <argsstring></argsstring>
-        <name>fino_a_che_lunghezza_i_polimeri_non_catalizzano</name>
-        <initializer>= 2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="54" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="54" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a9101beaeb03fddb5c6a9e68442177543" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>reactionProbability</definition>
-        <argsstring></argsstring>
-        <name>reactionProbability</name>
-        <initializer>=0.004</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="56" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="56" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a862fec76799e839c1eadb088da468a5e" prot="public" static="no" mutable="no">
-        <type>experiment</type>
-        <definition>experiment __pad3__</definition>
-        <argsstring></argsstring>
-        <name>__pad3__</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="56" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a650532b3a3c04865cc35cff6d567c5c0" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>reverseReactions</definition>
-        <argsstring></argsstring>
-        <name>reverseReactions</name>
-        <initializer>=0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="58" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="58" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1af915279099be3650c90bf0a3cf396e04" prot="public" static="no" mutable="no">
-        <type>costanti CINETICHE</type>
-        <definition>costanti CINETICHE K_eq</definition>
-        <argsstring></argsstring>
-        <name>K_eq</name>
-        <initializer>=1000</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="61" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="61" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1ace89973f1923711590b42efcf28a1f77" prot="public" static="no" mutable="no">
-        <type>parte da rivedere e correggere</type>
-        <definition>parte da rivedere e correggere Kass_o_Kdiss</definition>
-        <argsstring></argsstring>
-        <name>Kass_o_Kdiss</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="63" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1acb874616f80abe1a595c7c9e12040cd5" prot="public" static="no" mutable="no">
-        <type><ref refid="a00071_1a99032f27eaf45da350b544c68aa6467c" kindref="member">se</ref> è un cleavage</type>
-        <definition>se è un cleavage kdiss</definition>
-        <argsstring></argsstring>
-        <name>kdiss</name>
-        <initializer>= 100</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="63" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a8d22b96a5ece64359002562ebc1fbfc5" prot="public" static="no" mutable="no">
-        <type><ref refid="a00071_1a99032f27eaf45da350b544c68aa6467c" kindref="member">se</ref> è un cleavage <ref refid="a00071_1a99032f27eaf45da350b544c68aa6467c" kindref="member">se</ref> è una <ref refid="a00071_1a8c8df28fc47986989fead7fb4ee1a3ea" kindref="member">condensazione</ref></type>
-        <definition>se è un cleavage se è una condensazione kass</definition>
-        <argsstring></argsstring>
-        <name>kass</name>
-        <initializer>=100</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="63" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1acbcca8a3eb951a59ea95e6aa2be280fd" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>rapporto_Kfor_Kback</definition>
-        <argsstring></argsstring>
-        <name>rapporto_Kfor_Kback</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="64" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="64" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a74947b8f8ce132902a228628db296032" prot="public" static="no" mutable="no">
-        <type>e g</type>
-        <definition>e g Kass</definition>
-        <argsstring></argsstring>
-        <name>Kass</name>
-        <initializer>= 100 --&gt; <ref refid="a00071_1a51a314f9df0eaa4488a1b264d1de0173" kindref="member">Kdiss</ref> = 100/100 = 1
-rapporto_Kcpx_K_ass = 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="64" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="64" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1ab2422609d179c881c72aced926f83e6f" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>K_cpxDiss</definition>
-        <argsstring></argsstring>
-        <name>K_cpxDiss</name>
-        <initializer>=0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="66" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="66" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a778a1aec6ffefe5cf8721850b92e487b" prot="public" static="no" mutable="no">
-        <type>coefficiente di</type>
-        <definition>coefficiente di fosforilazione</definition>
-        <argsstring></argsstring>
-        <name>fosforilazione</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="68" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="68" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1ac8f2b2a8d859ca2b7cf056575c7b0538" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>K_nrg</definition>
-        <argsstring></argsstring>
-        <name>K_nrg</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="69" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="69" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1abca6e303f83cae224170f5fd2f1fedfe" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>K_irrad</definition>
-        <argsstring></argsstring>
-        <name>K_irrad</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="71" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="71" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1aef2ea28de56b86a577b3c6fa0220926c" prot="public" static="no" mutable="no">
-        <type>altri parametri</type>
-        <definition>altri parametri moleculeDecay_KineticConstant</definition>
-        <argsstring></argsstring>
-        <name>moleculeDecay_KineticConstant</name>
-        <initializer>=0.02</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="74" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="74" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a9341167cb56ed18499df723220990b9c" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>diffusion_contribute</definition>
-        <argsstring></argsstring>
-        <name>diffusion_contribute</name>
-        <initializer>=0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="75" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="75" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1acbefa7c9bfd826fec9b32fa3bd29c288" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>solubility_threshold</definition>
-        <argsstring></argsstring>
-        <name>solubility_threshold</name>
-        <initializer>=0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="76" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="76" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a637d2af7e7b03600bcaf1931b999e3fc" prot="public" static="no" mutable="no">
-        <type>experimentveri</type>
-        <definition>controllo che non ci siano cicli nell influx</definition>
-        <argsstring></argsstring>
-        <name>influx</name>
-        <initializer>=2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="77" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="77" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1ad795c71664f3161dc8f7a769341daadf" prot="public" static="no" mutable="no">
-        <type></type>
-        <definition>influx_rate</definition>
-        <argsstring></argsstring>
-        <name>influx_rate</name>
-        <initializer>=1e-6</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="78" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="78" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a7c974cc56015b6503e0619d32ebd4180" prot="public" static="no" mutable="no">
-        <type>percentuale di specie da cancellare rispetto <ref refid="a00035_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref> tutte quelle che restano dopo aver conservato <ref refid="a00071_1ad3efca1ea6e3333daf30719ee0501862" kindref="member">i</ref> polimeri fino <ref refid="a00035_1a2ffdbad9ea59541e59cbd2b938e0770c" kindref="member">a</ref> lunghezzamaxfd</type>
-        <definition>percentuale di specie da cancellare rispetto a tutte quelle che restano dopo aver conservato i polimeri fino a lunghezzamaxfd lunghezza_max_fd</definition>
-        <argsstring></argsstring>
-        <name>lunghezza_max_fd</name>
-        <initializer>= 1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="83" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="83" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1ac60b74a4c1b8bc23e64008ba1e0c41a8" prot="public" static="no" mutable="no">
-        <type><ref refid="a00064_1a984d293145d85a936f430c0990316e51" kindref="member">lunghezza</ref> dei monomeri polimeri da conservare</type>
-        <definition>lunghezza dei monomeri polimeri da conservare scelta_concentrazioni</definition>
-        <argsstring></argsstring>
-        <name>scelta_concentrazioni</name>
-        <initializer>=1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="84" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="84" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1adc12f688ec66254762f4bdd2ce8c73df" prot="public" static="no" mutable="no">
-        <type>parametro</type>
-        <definition>parametro switch</definition>
-        <argsstring></argsstring>
-        <name>switch</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="84" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="84" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1ad1bbbd24e4be6c7d8af30304c155c742" prot="public" static="no" mutable="no">
-        <type>parametro uniforme sulle</type>
-        <definition>parametro uniforme sulle lunghezze</definition>
-        <argsstring></argsstring>
-        <name>lunghezze</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="84" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="84" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a7cd0915d7542523abc226a8eecf67ecf" prot="public" static="no" mutable="no">
-        <type>parametro uniforme sulle powerlaw con esponente gamma</type>
-        <definition>parametro uniforme sulle powerlaw con esponente gamma gamma_powerlaw_concentrazioni</definition>
-        <argsstring></argsstring>
-        <name>gamma_powerlaw_concentrazioni</name>
-        <initializer>= 2.1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="85" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="85" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1a089ff88e71c60b850d67fa1c891af4ab" prot="public" static="no" mutable="no">
-        <type>esponente della powerlaw in caso parametri per la distribuzione dei</type>
-        <definition>esponente della powerlaw in caso parametri per la distribuzione dei catalizzatori</definition>
-        <argsstring></argsstring>
-        <name>catalizzatori</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="87" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="89" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00070_1ada2b06fc2d132c7a047984505d3bad7c" prot="public" static="no" mutable="no">
-        <type>richiamo la funzione</type>
-        <definition>richiamo la funzione inizializzatore_ACS[fd concentrazioni specie_def influx catalizzatore reazione specie_non_esistenti matrice_adiacenza_sub_prod matrice_adiacenza_cat_prod]</definition>
-        <argsstring>[fd concentrazioni specie_def influx catalizzatore reazione specie_non_esistenti matrice_adiacenza_sub_prod matrice_adiacenza_cat_prod]</argsstring>
-        <name>inizializzatore_ACS</name>
-        <initializer>= inizializzatore_ACS(<ref refid="a00070_1a82556659f7ba7219e55a18e9b9e63873" kindref="member">nGEN</ref>, <ref refid="a00071_1adb2acbd590bcb59c7b4e633c250f3f28" kindref="member">nSIM</ref>, <ref refid="a00070_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>, <ref refid="a00071_1a8d704532b4b419f1428cb078bb5c7ffe" kindref="member">nReactions</ref>, <ref refid="a00070_1ae44c52e8cc45368288e687e5c374764f" kindref="member">initialPopulationNumber</ref>, <ref refid="a00070_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref>, <ref refid="a00071_1a4e714d8e6551275aafab501b8c9f18ad" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>, <ref refid="a00071_1a59597688ed79473c0234f45eb9167574" kindref="member">overallConcentration</ref>, <ref refid="a00071_1abcbc32fc68e4323620d6171a17310212" kindref="member">alphabet</ref>, <ref refid="a00071_1ac5d9cfec5453da5efc3e8d574b455833" kindref="member">complexFormationSymmetry</ref>, <ref refid="a00071_1ab6966d9ee620bc7376dc41a38352b948" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>, <ref refid="a00071_1a9101beaeb03fddb5c6a9e68442177543" kindref="member">reactionProbability</ref>, <ref refid="a00071_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>, <ref refid="a00071_1a9341167cb56ed18499df723220990b9c" kindref="member">diffusion_contribute</ref>, <ref refid="a00071_1acbefa7c9bfd826fec9b32fa3bd29c288" kindref="member">solubility_threshold</ref>, <ref refid="a00065_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref>, <ref refid="a00071_1ad795c71664f3161dc8f7a769341daadf" kindref="member">influx_rate</ref>, <ref refid="a00071_1a650532b3a3c04865cc35cff6d567c5c0" kindref="member">reverseReactions</ref>,  <ref refid="a00070_1ace89973f1923711590b42efcf28a1f77" kindref="member">Kass_o_Kdiss</ref>,<ref refid="a00070_1acbcca8a3eb951a59ea95e6aa2be280fd" kindref="member">rapporto_Kfor_Kback</ref>,rapporto_Kcpx_K_ass,<ref refid="a00070_1ab2422609d179c881c72aced926f83e6f" kindref="member">K_cpxDiss</ref>, <ref refid="a00071_1ac8f2b2a8d859ca2b7cf056575c7b0538" kindref="member">K_nrg</ref>, <ref refid="a00071_1a85569bbcfd8fbc0081b5a144eaf516f5" kindref="member">moleculeDecay_KineticConstant</ref>, <ref refid="a00070_1acd685f63a27f53fc049aff633634ddd6" kindref="member">ratio_firing_disk</ref>, <ref refid="a00071_1a7c974cc56015b6503e0619d32ebd4180" kindref="member">lunghezza_max_fd</ref>, <ref refid="a00071_1ac60b74a4c1b8bc23e64008ba1e0c41a8" kindref="member">scelta_concentrazioni</ref>, <ref refid="a00071_1a7cd0915d7542523abc226a8eecf67ecf" kindref="member">gamma_powerlaw_concentrazioni</ref>,<ref refid="a00071_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>, <ref refid="a00071_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref>, ECConcentration, <ref refid="a00071_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>, <ref refid="a00071_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref>, <ref refid="a00070_1aa25e2dab413d379872aab3c4023d62f7" kindref="member">energyTarget</ref>, controllo_ACS_nel_ciclo, <ref refid="a00070_1abca6e303f83cae224170f5fd2f1fedfe" kindref="member">K_irrad</ref>)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="99" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" bodystart="100" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
+    <compoundname>commonFunctions.h</compoundname>
+    <includes refid="a00066" local="yes">acs_headers.h</includes>
+    <includedby refid="a00068" local="yes">/home/ale/Documents/GIT/carness/catalysis.h</includedby>
+    <includedby refid="a00069" local="yes">/home/ale/Documents/GIT/carness/commonFunctions.cpp</includedby>
+    <includedby refid="a00089" local="yes">/home/ale/Documents/GIT/carness/species.h</includedby>
+    <includedby refid="a00087" local="yes">/home/ale/Documents/GIT/carness/reactions.h</includedby>
+    <includedby refid="a00080" local="yes">/home/ale/Documents/GIT/carness/environment.h</includedby>
+    <incdepgraph>
+      <node id="622">
+        <label>mtrand.h</label>
+        <link refid="a00085"/>
+      </node>
+      <node id="618">
+        <label>cmath</label>
+      </node>
+      <node id="613">
+        <label>string</label>
+      </node>
+      <node id="612">
+        <label>fstream</label>
+      </node>
+      <node id="608">
+        <label>/home/ale/Documents/GIT/carness/commonFunctions.h</label>
+        <link refid="commonFunctions.h"/>
+        <childnode refid="609" relation="include">
+        </childnode>
+      </node>
+      <node id="621">
+        <label>ctime</label>
+      </node>
+      <node id="616">
+        <label>vector</label>
+      </node>
+      <node id="615">
+        <label>sstream</label>
+      </node>
+      <node id="619">
+        <label>cstdlib</label>
+      </node>
+      <node id="620">
+        <label>clocale</label>
+      </node>
+      <node id="611">
+        <label>iostream</label>
+      </node>
+      <node id="617">
+        <label>deque</label>
+      </node>
+      <node id="609">
+        <label>acs_headers.h</label>
+        <link refid="a00066"/>
+        <childnode refid="610" relation="include">
+        </childnode>
+        <childnode refid="611" relation="include">
+        </childnode>
+        <childnode refid="612" relation="include">
+        </childnode>
+        <childnode refid="613" relation="include">
+        </childnode>
+        <childnode refid="614" relation="include">
+        </childnode>
+        <childnode refid="615" relation="include">
+        </childnode>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="619" relation="include">
+        </childnode>
+        <childnode refid="620" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="622" relation="include">
+        </childnode>
+      </node>
+      <node id="610">
+        <label>stdio.h</label>
+      </node>
+      <node id="614">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="627">
+        <label>/home/ale/Documents/GIT/carness/environment.cpp</label>
+        <link refid="a00079"/>
+      </node>
+      <node id="626">
+        <label>/home/ale/Documents/GIT/carness/environment.h</label>
+        <link refid="a00080"/>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+      </node>
+      <node id="628">
+        <label>/home/ale/Documents/GIT/carness/main.cpp</label>
+        <link refid="a00083"/>
+      </node>
+      <node id="623">
+        <label>/home/ale/Documents/GIT/carness/commonFunctions.h</label>
+        <link refid="commonFunctions.h"/>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="631">
+        <label>/home/ale/Documents/GIT/carness/species.cpp</label>
+        <link refid="a00088"/>
+      </node>
+      <node id="633">
+        <label>/home/ale/Documents/GIT/carness/reactions.cpp</label>
+        <link refid="a00086"/>
+      </node>
+      <node id="630">
+        <label>/home/ale/Documents/GIT/carness/species.h</label>
+        <link refid="a00089"/>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+      </node>
+      <node id="624">
+        <label>/home/ale/Documents/GIT/carness/catalysis.h</label>
+        <link refid="a00068"/>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="625">
+        <label>/home/ale/Documents/GIT/carness/catalysis.cpp</label>
+        <link refid="a00067"/>
+      </node>
+      <node id="629">
+        <label>/home/ale/Documents/GIT/carness/commonFunctions.cpp</label>
+        <link refid="a00069"/>
+      </node>
+      <node id="632">
+        <label>/home/ale/Documents/GIT/carness/reactions.h</label>
+        <link refid="a00087"/>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="a00070_1a82556659f7ba7219e55a18e9b9e63873" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>id</type>
-        <definition>id nGEN</definition>
-        <argsstring>()</argsstring>
-        <name>nGEN</name>
+      <memberdef kind="function" id="a00070_1ab1b8087986873e2bb998bac0e7918b50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt returnSelectionIdFromAWeightProbVector</definition>
+        <argsstring>(acs_double *tmpArray, MTRand &amp;tmpRandomGenerator, acs_int tmpRow=0)</argsstring>
+        <name>returnSelectionIdFromAWeightProbVector</name>
+        <param>
+          <type><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> *</type>
+          <declname>tmpArray</declname>
+        </param>
+        <param>
+          <type><ref refid="a00010" kindref="compound">MTRand</ref> &amp;</type>
+          <declname>tmpRandomGenerator</declname>
+        </param>
+        <param>
+          <type><ref refid="a00066_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpRow</declname>
+          <defval>0</defval>
+        </param>
         <briefdescription>
-        </briefdescription>
+<para>This funtion returns a random position in a probability weight array of N elements. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="11" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="16" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="15" bodyend="31"/>
+        <references refid="a00096_1ac09e85f8df5b7c8c7d2caf87e9193421" compoundref="a00039" startline="482">acsSCCanalysis.position</references>
+        <referencedby refid="a00008_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00079" startline="2668" endline="3341">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00008_1a6ae793f9d2dca0632239be955dd83cee" compoundref="a00079" startline="3857" endline="3976">environment::performDETComplexDissociation</referencedby>
+        <referencedby refid="a00008_1adbaf165a12edd62c614a455544807ea3" compoundref="a00079" startline="3985" endline="4216">environment::performDETMoleculesCharging</referencedby>
+        <referencedby refid="a00008_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00079" startline="4417" endline="4569">environment::performMoleculesEfflux</referencedby>
+        <referencedby refid="a00008_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00079" startline="5884" endline="6042">environment::newSpeciesEvaluationIII</referencedby>
       </memberdef>
-      <memberdef kind="function" id="a00070_1a5b5a345da13951297f4d3ad31f76a87a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>experiment all condensation are</type>
-        <definition>experiment all condensation are eso</definition>
-        <argsstring>(and cleavage endo)) energy</argsstring>
-        <name>eso</name>
+      <memberdef kind="function" id="a00070_1ae4d6f026d5445b877a52e326fd95a081" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt returnSelectionIdFromAWeightProbVector</definition>
+        <argsstring>(vector&lt; acs_double &gt; &amp;tmpVector, acs_double tmpMaxValue, MTRand &amp;tmpRandomGenerator, acs_int tmpRow=0)</argsstring>
+        <name>returnSelectionIdFromAWeightProbVector</name>
         <param>
-          <type><ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref> cleavage</type>
-          <declname>endo</declname>
+          <type>vector&lt; <ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt; &amp;</type>
+          <declname>tmpVector</declname>
+        </param>
+        <param>
+          <type><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+          <declname>tmpMaxValue</declname>
+        </param>
+        <param>
+          <type><ref refid="a00010" kindref="compound">MTRand</ref> &amp;</type>
+          <declname>tmpRandomGenerator</declname>
+        </param>
+        <param>
+          <type><ref refid="a00066_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpRow</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return position of a randomly selected element from a vector containing cumulative values for each element <simplesect kind="version"><para>1.0 </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector&lt;acs_double&gt;&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tmpVector </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>acs_double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MAX VALUE contained within the QList (being a cumulative list this is the last value) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MTRand&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tmpRandomGenerator </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="17" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="40" bodyend="64"/>
+        <references refid="a00096_1ac09e85f8df5b7c8c7d2caf87e9193421" compoundref="a00039" startline="482">acsSCCanalysis.position</references>
+        <references refid="a00069_1aa678d0a98232158c48108227b98de4b6" compoundref="a00069" startline="269" endline="274">ExitWithError</references>
+      </memberdef>
+      <memberdef kind="function" id="a00070_1a4135ff15fd24eb8fbfee3d00e1cfbf20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt returnSelectionIdFromAWeightProbVectorAlreadyNormalized</definition>
+        <argsstring>(vector&lt; acs_double &gt; &amp;tmpVector, MTRand &amp;tmpRandomGenerator)</argsstring>
+        <name>returnSelectionIdFromAWeightProbVectorAlreadyNormalized</name>
+        <param>
+          <type>vector&lt; <ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref> &gt; &amp;</type>
+          <declname>tmpVector</declname>
+        </param>
+        <param>
+          <type><ref refid="a00010" kindref="compound">MTRand</ref> &amp;</type>
+          <declname>tmpRandomGenerator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return position of a randomly selected element from a normalized vector containing cumulative values for each element <simplesect kind="version"><para>1.0 </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector&lt;acs_double&gt;&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tmpQList </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MTRand&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tmpRandomGenerator </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="18" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="72" bodyend="116"/>
+        <references refid="a00096_1ac09e85f8df5b7c8c7d2caf87e9193421" compoundref="a00039" startline="482">acsSCCanalysis.position</references>
+        <references refid="a00069_1aa678d0a98232158c48108227b98de4b6" compoundref="a00069" startline="269" endline="274">ExitWithError</references>
+        <referencedby refid="a00008_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00079" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00008_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00079" startline="941" endline="1219">environment::updateReactions</referencedby>
+        <referencedby refid="a00008_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00079" startline="3767" endline="3848">environment::performRefill</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00070_1a1cb9cc6ac8ec2ef62b8eb1970e73a11b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt returnUniformSelection_LONG_IdFromVector</definition>
+        <argsstring>(vector&lt; acs_longInt &gt; &amp;tmpVector, MTRand &amp;tmpRandomGenerator)</argsstring>
+        <name>returnUniformSelection_LONG_IdFromVector</name>
+        <param>
+          <type>vector&lt; <ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref> &gt; &amp;</type>
+          <declname>tmpVector</declname>
+        </param>
+        <param>
+          <type><ref refid="a00010" kindref="compound">MTRand</ref> &amp;</type>
+          <declname>tmpRandomGenerator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return position of a LONG INT randomly selected element from a normalized vector containing cumulative values for each element <simplesect kind="version"><para>1.0 </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector&lt;acs_double&gt;&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tmpVector </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MTRand&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tmpRandomGenerator </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="19" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="124" bodyend="129"/>
+        <references refid="a00069_1a6d28311eff309499e66efb5d39a035f4" compoundref="a00069" startline="131" endline="149">getIntRandom</references>
+        <referencedby refid="a00008_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00079" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00008_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00079" startline="941" endline="1219">environment::updateReactions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00070_1a6d28311eff309499e66efb5d39a035f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt getIntRandom</definition>
+        <argsstring>(acs_longInt tmpFromNum, acs_longInt tmpToNum, MTRand &amp;tmpRandomGenerator)</argsstring>
+        <name>getIntRandom</name>
+        <param>
+          <type><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpFromNum</declname>
+        </param>
+        <param>
+          <type><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>tmpToNum</declname>
+        </param>
+        <param>
+          <type><ref refid="a00010" kindref="compound">MTRand</ref> &amp;</type>
+          <declname>tmpRandomGenerator</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -602,20 +351,240 @@ rapporto_Kcpx_K_ass = 0</initializer>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="45" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="21" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="131" bodyend="149"/>
+        <referencedby refid="a00070_1a1cb9cc6ac8ec2ef62b8eb1970e73a11b" compoundref="a00069" startline="124" endline="129">returnUniformSelection_LONG_IdFromVector</referencedby>
+        <referencedby refid="a00008_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00079" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00008_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00079" startline="941" endline="1219">environment::updateReactions</referencedby>
+        <referencedby refid="a00008_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00079" startline="5884" endline="6042">environment::newSpeciesEvaluationIII</referencedby>
+        <referencedby refid="a00016_1a59cb623199b038029a7d63a720408cf5" compoundref="a00088" startline="228" endline="260">species::species</referencedby>
       </memberdef>
-      <memberdef kind="function" id="a00070_1acd685f63a27f53fc049aff633634ddd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>id</type>
-        <definition>id ratio_firing_disk</definition>
-        <argsstring>()</argsstring>
-        <name>ratio_firing_disk</name>
+      <memberdef kind="function" id="a00070_1aed308af1d3ee40e106e4e23e78644d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+        <definition>acs_double getDoubleRandom</definition>
+        <argsstring>(acs_double tmpFromNum, acs_double tmpToNum, MTRand &amp;tmpRandomGenerator)</argsstring>
+        <name>getDoubleRandom</name>
+        <param>
+          <type><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+          <declname>tmpFromNum</declname>
+        </param>
+        <param>
+          <type><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+          <declname>tmpToNum</declname>
+        </param>
+        <param>
+          <type><ref refid="a00010" kindref="compound">MTRand</ref> &amp;</type>
+          <declname>tmpRandomGenerator</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m" line="80" column="1"/>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="22" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="151" bodyend="178"/>
+        <referencedby refid="a00016_1a59cb623199b038029a7d63a720408cf5" compoundref="a00088" startline="228" endline="260">species::species</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00070_1a22cddb6ffcf2250e0c90bc913728350f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt random_poisson</definition>
+        <argsstring>(acs_double tmpLambda, MTRand &amp;tmpRandomGenerator)</argsstring>
+        <name>random_poisson</name>
+        <param>
+          <type><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+          <declname>tmpLambda</declname>
+        </param>
+        <param>
+          <type><ref refid="a00010" kindref="compound">MTRand</ref> &amp;</type>
+          <declname>tmpRandomGenerator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to return a number from a poisson random distribution </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="23" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="183" bodyend="198"/>
+        <references refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" compoundref="a00022" startline="675">p</references>
+        <references refid="a00019_1ab7005e24e9bb6ea9b6e14c4ac2614a31" compoundref="a00019" startline="186">k</references>
+      </memberdef>
+      <memberdef kind="function" id="a00070_1a78d5b4a67b6e66b8ceaa85874a2a12b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+        <definition>acs_longInt random_binomial</definition>
+        <argsstring>(acs_longInt n, acs_double tmpP, MTRand &amp;tmpRandomGenerator)</argsstring>
+        <name>random_binomial</name>
+        <param>
+          <type><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref></type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+          <declname>tmpP</declname>
+        </param>
+        <param>
+          <type><ref refid="a00010" kindref="compound">MTRand</ref> &amp;</type>
+          <declname>tmpRandomGenerator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to return a number from a binomial distribution </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="24" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="203" bodyend="224"/>
+        <references refid="a00019_1ab7005e24e9bb6ea9b6e14c4ac2614a31" compoundref="a00019" startline="186">k</references>
+        <references refid="a00021_1a1de1a45bc56b002aa1ad94bb5f54a1ca" compoundref="a00021" startline="76">i</references>
+        <referencedby refid="a00008_1a0fd3cb062d35d2f6dd8961e95dd477b7" compoundref="a00079" startline="481" endline="512">environment::computeSngSpeciesRctsNumber</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00070_1a277c801cb0f8a290d7c28b6a67feff18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+        <definition>acs_double acsround</definition>
+        <argsstring>(acs_double tmpX)</argsstring>
+        <name>acsround</name>
+        <param>
+          <type><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref></type>
+          <declname>tmpX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to round double numbers in integers </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="25" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="229" bodyend="235"/>
+        <referencedby refid="a00008_1a8a53821ad1675b0da50591616aac3b74" compoundref="a00079" startline="3767" endline="3848">environment::performRefill</referencedby>
+        <referencedby refid="a00016_1a9842732a5dbe0eb67e24148b5d7ae4a2" compoundref="a00089" startline="136" endline="136">species::concToNum</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00070_1a1a13653eb649b6fc74090deecddf1028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string dec2bin</definition>
+        <argsstring>(acs_int tmpInt)</argsstring>
+        <name>dec2bin</name>
+        <param>
+          <type><ref refid="a00066_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref></type>
+          <declname>tmpInt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to convert a decimal number in a binary string composed of 12 bit such Example -&gt; input: 10, binary 1010 <ndash/>&gt; 000000001010 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="26" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="241" bodyend="263"/>
+        <references refid="a00056_1ae113ea7f9e515a12ac4b5595c6faf61e">size</references>
+        <references refid="a00019_1a230414213a9710ed03b6cf8d2695ee94" compoundref="a00019" startline="149">a</references>
+        <referencedby refid="a00008_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00079" startline="2668" endline="3341">environment::performOPTGillespieComputation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00070_1a4d1aa74fac80ae0275c056575fdb6626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt;string&gt; split</definition>
+        <argsstring>(string str, const char *delim)</argsstring>
+        <name>split</name>
+        <param>
+          <type>string</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>delim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to split a string and save tokens in a vector </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="27" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="279" bodyend="297"/>
+        <referencedby refid="a00008_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00079" startline="80" endline="197">environment::environment</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00070_1aa678d0a98232158c48108227b98de4b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ExitWithError</definition>
+        <argsstring>(string strFunctionName, string strError)</argsstring>
+        <name>ExitWithError</name>
+        <param>
+          <type>string</type>
+          <declname>strFunctionName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>strError</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to close the program after having en error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="28" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="269" bodyend="274"/>
+        <referencedby refid="a00006_1ab6af429c051e2bc9756bac72b99cc4ce" compoundref="a00067" startline="19" endline="43">catalysis::catalysis</referencedby>
+        <referencedby refid="a00070_1ae4d6f026d5445b877a52e326fd95a081" compoundref="a00069" startline="40" endline="64">returnSelectionIdFromAWeightProbVector</referencedby>
+        <referencedby refid="a00070_1a4135ff15fd24eb8fbfee3d00e1cfbf20" compoundref="a00069" startline="72" endline="116">returnSelectionIdFromAWeightProbVectorAlreadyNormalized</referencedby>
+        <referencedby refid="a00008_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00079" startline="80" endline="197">environment::environment</referencedby>
+        <referencedby refid="a00008_1a76794f37d6d94b7504c58f0f4a4709ca" compoundref="a00079" startline="525" endline="930">environment::createReactionsForThisSpecies</referencedby>
+        <referencedby refid="a00008_1ace92235425bfbe692e3873ba5bb07639" compoundref="a00079" startline="941" endline="1219">environment::updateReactions</referencedby>
+        <referencedby refid="a00008_1aee77384e63261db28ef5677844bdbaf6" compoundref="a00079" startline="1249" endline="1331">environment::createInitialMoleculesPopulationFromFileSTD</referencedby>
+        <referencedby refid="a00008_1aa70e1394bf2240f6e5f14d4cbf369a3b" compoundref="a00079" startline="1478" endline="1564">environment::createInitialMoleculesPopulationFromSpecificFileSTD</referencedby>
+        <referencedby refid="a00008_1a6606b08f25751a8796c13810962b385e" compoundref="a00079" startline="2004" endline="2454">environment::structureCoherenceCheckUp</referencedby>
+        <referencedby refid="a00008_1a5160dec152ed0369fe8af9aff3253a9e" compoundref="a00079" startline="2578" endline="2623">environment::notInverseReactionAlreadyCatalyzed</referencedby>
+        <referencedby refid="a00008_1ad3ebcd7ab1c9ba1a0f65b264b97adf33" compoundref="a00079" startline="2635" endline="2655">environment::checkAvailability</referencedby>
+        <referencedby refid="a00008_1a90fba3b2cc589f32c97a74540620bd84" compoundref="a00079" startline="2668" endline="3341">environment::performOPTGillespieComputation</referencedby>
+        <referencedby refid="a00008_1a30a0827eed2860d03d5fa5318fcf86b0" compoundref="a00079" startline="3387" endline="3551">environment::performSingleGilleSpieIntroduction</referencedby>
+        <referencedby refid="a00008_1a6ae793f9d2dca0632239be955dd83cee" compoundref="a00079" startline="3857" endline="3976">environment::performDETComplexDissociation</referencedby>
+        <referencedby refid="a00008_1adbaf165a12edd62c614a455544807ea3" compoundref="a00079" startline="3985" endline="4216">environment::performDETMoleculesCharging</referencedby>
+        <referencedby refid="a00008_1aa4830018af0b99eddefcdefad877b305" compoundref="a00079" startline="4313" endline="4352">environment::removeChargeMolFromList</referencedby>
+        <referencedby refid="a00008_1a7981c34d16c0b1e9e6ca3ea69aa3a8a3" compoundref="a00079" startline="4361" endline="4408">environment::addChargeMolToList</referencedby>
+        <referencedby refid="a00008_1acbbcdb4c77231e9ffa4c169e0caa0d0c" compoundref="a00079" startline="4417" endline="4569">environment::performMoleculesEfflux</referencedby>
+        <referencedby refid="a00008_1ad072a40a7d9521379c7ff50ed8110fbe" compoundref="a00079" startline="4579" endline="4650">environment::performMoleculeEfflux</referencedby>
+        <referencedby refid="a00008_1aff7607e0f3a74790109a7d87de3031bd" compoundref="a00079" startline="4659" endline="4703">environment::performEnergyEfflux</referencedby>
+        <referencedby refid="a00008_1a1db4e67ba458a54f4fab3e10a203765c" compoundref="a00079" startline="4716" endline="4935">environment::performReaction</referencedby>
+        <referencedby refid="a00008_1a1baf5512b7e0a8fb6f8f890ba9f99cd1" compoundref="a00079" startline="4946" endline="5044">environment::performCondensation</referencedby>
+        <referencedby refid="a00008_1aa7a2cc95d8ba242c805a8fda063b23a7" compoundref="a00079" startline="5058" endline="5179">environment::perform_endo_Condensation</referencedby>
+        <referencedby refid="a00008_1aa4ed307a123c402166cfc7f6ed99043a" compoundref="a00079" startline="5192" endline="5285">environment::performCleavage</referencedby>
+        <referencedby refid="a00008_1ade26b82a3b48a5bda7e5751cbfd31b04" compoundref="a00079" startline="5299" endline="5409">environment::perform_endo_Cleavage</referencedby>
+        <referencedby refid="a00008_1aaf4f4f6be28edb182d2a2516c9394f9b" compoundref="a00079" startline="5420" endline="5498">environment::performComplexFormation</referencedby>
+        <referencedby refid="a00008_1ae942db2453c56b60250a5d43452b91a5" compoundref="a00079" startline="5508" endline="5594">environment::perform_endo_ComplexFormation</referencedby>
+        <referencedby refid="a00008_1a5c5e57b0558067cbf55c894f33d0a121" compoundref="a00079" startline="5606" endline="5681">environment::performComplexDissociation</referencedby>
+        <referencedby refid="a00008_1a4949138a3771b7f6ec2bfe82cbad947e" compoundref="a00079" startline="5690" endline="5751">environment::performSpontaneousCleavage</referencedby>
+        <referencedby refid="a00008_1acc764a05297ae00db52360f3df5ed1d5" compoundref="a00079" startline="5760" endline="5822">environment::performSpontaneousCondensation</referencedby>
+        <referencedby refid="a00008_1a4fe7891fb38f3f25bb82769af0ddfe19" compoundref="a00079" startline="5884" endline="6042">environment::newSpeciesEvaluationIII</referencedby>
+        <referencedby refid="a00008_1a5ee6b203f077de1467aa72042814db7d" compoundref="a00079" startline="6055" endline="6150">environment::complexEvaluation</referencedby>
+        <referencedby refid="a00008_1adab0607255ca5927b69cb6882917e031" compoundref="a00079" startline="6156" endline="6180">environment::updateSpeciesAges</referencedby>
+        <referencedby refid="a00008_1a429c2529badaeda72e553f500b990e11" compoundref="a00079" startline="6297" endline="6349">environment::printInitialCondition</referencedby>
+        <referencedby refid="a00008_1af579052ed051a2e3516218220d238303" compoundref="a00079" startline="6411" endline="6430">environment::printAllChargeMols</referencedby>
+        <referencedby refid="a00008_1a97305e36924f19e72bfc1c3d89e45931" compoundref="a00079" startline="6492" endline="6568">environment::resetConcentrationToInitialConditions</referencedby>
+        <referencedby refid="a00008_1a71f4c5ff1c11a9d61cbc818682a4a91e" compoundref="a00079" startline="6620" endline="6779">environment::saveConfigurationFileSTD</referencedby>
+        <referencedby refid="a00008_1a8f831e2db11fa5d840484345dac64fc7" compoundref="a00079" startline="6787" endline="6817">environment::saveInfluxStructureSTD</referencedby>
+        <referencedby refid="a00008_1a1412b9b1c3bd3e42bcb481f5e18ea931" compoundref="a00079" startline="6825" endline="6855">environment::saveNrgBoolFncStructureSTD</referencedby>
+        <referencedby refid="a00008_1a9daeb4f255100b8ad59de9ea80b19b5b" compoundref="a00079" startline="6863" endline="6921">environment::saveSpeciesStructureSTD</referencedby>
+        <referencedby refid="a00008_1ad381c4ce24045d504539bb7c74800739" compoundref="a00079" startline="6928" endline="6975">environment::saveReactionsStructureSTD</referencedby>
+        <referencedby refid="a00008_1a0a799b3a42bd90845a915298e184708c" compoundref="a00079" startline="6982" endline="7031">environment::saveCatalysisStructureSTD</referencedby>
+        <referencedby refid="a00008_1a73e83c4fcfe612514714a6692270351e" compoundref="a00079" startline="7039" endline="7118">environment::saveTimesSTD</referencedby>
+        <referencedby refid="a00008_1ad78fcf39a80e447a9aa2f84ab74335e5" compoundref="a00079" startline="7126" endline="7177">environment::saveReactionsParametersSTD</referencedby>
+        <referencedby refid="a00008_1a623c3cda23a18cb7b039c5a666408d72" compoundref="a00079" startline="7185" endline="7238">environment::saveLivingSpeciesIDSTD</referencedby>
+        <referencedby refid="a00008_1a26c70b0a84c37c87952628d4a328c238" compoundref="a00079" startline="7246" endline="7304">environment::saveLivingSpeciesAmountSTD</referencedby>
+        <referencedby refid="a00008_1aedf8d90e1fe734948bf2213489840582" compoundref="a00079" startline="7312" endline="7368">environment::saveLivingSpeciesConcentrationSTD</referencedby>
+        <referencedby refid="a00083_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="a00083" startline="380" endline="652">main</referencedby>
+        <referencedby refid="a00083_1acac21f7e718db9d00451e3caaaacc25f" compoundref="a00083" startline="668" endline="677">saveToFile</referencedby>
+        <referencedby refid="a00083_1a2bf310904bc4e1fb5669e548525c4ba7" compoundref="a00083" startline="688" endline="693">saveTimesToFile</referencedby>
+        <referencedby refid="a00083_1a4665c5f33b43dfc8fae4757552028cc0" compoundref="a00083" startline="704" endline="725">saveInitialConditionsToFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="a00070_1aed580149796de6350e6fcfae9b2adb30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fromStrToBool</definition>
+        <argsstring>(string const &amp;string)</argsstring>
+        <name>fromStrToBool</name>
+        <param>
+          <type>string const &amp;</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to convert from string to boolean </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/commonFunctions.h" line="29" column="1" bodyfile="/home/ale/Documents/GIT/carness/commonFunctions.cpp" bodystart="302" bodyend="305"/>
+        <referencedby refid="a00008_1aa44bbabec52bf2d61a19685a30e68de1" compoundref="a00079" startline="80" endline="197">environment::environment</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -623,323 +592,30 @@ rapporto_Kcpx_K_ass = 0</initializer>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="normal">%lancia_inizializzatore_acs.m</highlight></codeline>
-<codeline lineno="2"><highlight class="normal">%script<sp/>che<sp/>lancia<sp/><ref refid="a00100_1a0437cd4d2a377ca0e34ab59f4bfd833f" kindref="member">l</ref></highlight><highlight class="stringliteral">&apos;inizializzatore<sp/>per<sp/>il<sp/>simulatore<sp/>ACSM2M<sp/>e<sp/>in<sp/>cui<sp/>sono</highlight></codeline>
-<codeline lineno="3"><highlight class="stringliteral">%contenuti<sp/>tutti<sp/>i<sp/>parametri<sp/>dell&apos;</highlight><highlight class="normal">inizializzazione</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal">%comandi<sp/>di<sp/>sistema</highlight></codeline>
-<codeline lineno="6"><highlight class="normal">clear<sp/>all</highlight></codeline>
-<codeline lineno="7"><highlight class="normal">close<sp/>all</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal">%seme<sp/>random</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">rand(</highlight><highlight class="stringliteral">&apos;state&apos;</highlight><highlight class="normal">,<ref refid="a00028_1a576bebae86b11914280920c448def53d" kindref="member">sum</ref>(100*clock))</highlight></codeline>
-<codeline lineno="11"><highlight class="normal">rand</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
-<codeline lineno="14"><highlight class="normal">%PARAMETRI</highlight></codeline>
-<codeline lineno="15"><highlight class="normal">%--------------------------------------------------------------------------</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><ref refid="a00071_1a4c8fe523edbe179c5d215da13f469f72" kindref="member">nGEN</ref>=1;<sp/><sp/></highlight></codeline>
-<codeline lineno="18" refid="a00070_1a68c8b36ce2387749248f566faa108e45" refkind="member"><highlight class="normal"><ref refid="a00070_1a68c8b36ce2387749248f566faa108e45" kindref="member">nSIM</ref>=1;<sp/></highlight></codeline>
-<codeline lineno="19" refid="a00070_1aaded2f2d61413dc4bddf805e9be03ded" refkind="member"><highlight class="normal"><ref refid="a00070_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>=400;</highlight></codeline>
-<codeline lineno="20" refid="a00070_1a7ab8b9fa18f22ee71429cf8ae50d754b" refkind="member"><highlight class="normal"><ref refid="a00070_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref>=200000000;</highlight></codeline>
-<codeline lineno="21" refid="a00070_1ae44c52e8cc45368288e687e5c374764f" refkind="member"><highlight class="normal"><ref refid="a00070_1ae44c52e8cc45368288e687e5c374764f" kindref="member">initialPopulationNumber</ref>=0;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="a00070_1a4c7433c24b6426a15069cc5a93a5cbec" refkind="member"><highlight class="normal"><ref refid="a00070_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref>=3;</highlight></codeline>
-<codeline lineno="24" refid="a00070_1a04ee275ab8ce56c2c9c8b2b82995a9f7" refkind="member"><highlight class="normal"><ref refid="a00070_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref><sp/>=<sp/>3;<sp/>%<sp/>experiment:<sp/>da<sp/>2<sp/><ref refid="a00025_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref><sp/>8</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="a00070_1a6ea019326f9d9d9c5e10160c5c4b6679" refkind="member"><highlight class="normal">ECConcentration<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="a00070_1abcbc32fc68e4323620d6171a17310212" refkind="member"><highlight class="normal"><ref refid="a00107_1aca44f11e84467e8090217b689da68785" kindref="member">alphabet</ref><sp/>=<sp/>[&apos;<ref refid="a00069_1abfef5bcdab19147dbfbb68112da17044" kindref="member">AB</ref>&apos;];</highlight></codeline>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>COMMONFUNCTIONS</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COMMONFUNCTIONS</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="a00066" kindref="compound">acs_headers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//FUNCTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00069_1aa6403f90846f5fb19fcfb8b81aeee73c" kindref="member" tooltip="This funtion returns a random position in a probability weight array of N elements. ">returnSelectionIdFromAWeightProbVector</ref>(<ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>*tmpArray,<sp/><ref refid="a00010" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator,<sp/><ref refid="a00066_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpRow<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00069_1aa6403f90846f5fb19fcfb8b81aeee73c" kindref="member" tooltip="This funtion returns a random position in a probability weight array of N elements. ">returnSelectionIdFromAWeightProbVector</ref>(vector&lt;acs_double&gt;&amp;<sp/>tmpVector,<sp/><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpMaxValue,<sp/><ref refid="a00010" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator,<sp/><ref refid="a00066_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpRow<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00069_1a4135ff15fd24eb8fbfee3d00e1cfbf20" kindref="member">returnSelectionIdFromAWeightProbVectorAlreadyNormalized</ref>(vector&lt;acs_double&gt;&amp;<sp/>tmpVector,<sp/><ref refid="a00010" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00069_1a1cb9cc6ac8ec2ef62b8eb1970e73a11b" kindref="member">returnUniformSelection_LONG_IdFromVector</ref>(vector&lt;acs_longInt&gt;&amp;<sp/>tmpVector,<sp/><ref refid="a00010" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00069_1a6d28311eff309499e66efb5d39a035f4" kindref="member">getIntRandom</ref>(<ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpFromNum,<sp/><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>tmpToNum,<sp/><ref refid="a00010" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/><ref refid="a00069_1aed308af1d3ee40e106e4e23e78644d07" kindref="member">getDoubleRandom</ref>(<ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpFromNum,<sp/><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpToNum,<sp/><ref refid="a00010" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00069_1a22cddb6ffcf2250e0c90bc913728350f" kindref="member">random_poisson</ref>(<ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpLambda,<sp/><ref refid="a00010" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/><ref refid="a00069_1a78d5b4a67b6e66b8ceaa85874a2a12b7" kindref="member">random_binomial</ref>(<ref refid="a00066_1a19319d75f02db4308bc5c0026d98cd85" kindref="member">acs_longInt</ref><sp/>n,<sp/><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpP,<sp/><ref refid="a00010" kindref="compound">MTRand</ref>&amp;<sp/>tmpRandomGenerator);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/><ref refid="a00069_1a277c801cb0f8a290d7c28b6a67feff18" kindref="member">acsround</ref>(<ref refid="a00066_1ab776853a005fcbf56af0424a2a4dd607" kindref="member">acs_double</ref><sp/>tmpX);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="a00069_1a1a13653eb649b6fc74090deecddf1028" kindref="member">dec2bin</ref>(<ref refid="a00066_1a8d277355641a098190360234e2ebde35" kindref="member">acs_int</ref><sp/>tmpInt);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">vector&lt;string&gt;<sp/><ref refid="a00069_1a4d1aa74fac80ae0275c056575fdb6626" kindref="member">split</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>str,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>delim);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00069_1aa678d0a98232158c48108227b98de4b6" kindref="member">ExitWithError</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>strFunctionName,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>strError);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="a00069_1aed580149796de6350e6fcfae9b2adb30" kindref="member">fromStrToBool</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="a00070_1ac9358e0c7555a21532187de31cdbd469" refkind="member"><highlight class="normal"><ref refid="a00070_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="33" refid="a00070_1a6f6ccfcf58b31cb6412107d9d5281426" refkind="member"><highlight class="normal">for<sp/><ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref><sp/>=<sp/>1:<ref refid="a00070_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00070_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref><sp/>=<sp/><ref refid="a00070_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref><sp/>+<sp/>length(<ref refid="a00107_1aca44f11e84467e8090217b689da68785" kindref="member">alphabet</ref>)^<ref refid="a00027_1a1de1a45bc56b002aa1ad94bb5f54a1ca" kindref="member">i</ref>;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><ref refid="a00070_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref><sp/>=<sp/><ref refid="a00070_1ac9358e0c7555a21532187de31cdbd469" kindref="member">lastFiringDiskSpeciesID</ref><sp/>-1;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="a00070_1a59597688ed79473c0234f45eb9167574" refkind="member"><highlight class="normal"><ref refid="a00070_1a59597688ed79473c0234f45eb9167574" kindref="member">overallConcentration</ref>=1e-4;<sp/></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="a00070_1a9bc498ccac8db41438f855f5dd3f4c05" refkind="member"><highlight class="normal"><ref refid="a00070_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>=1e-15;<sp/>%experiment:<sp/>così basso<sp/>è irrealistico
-
-%<sp/>#<sp/>Energy<sp/>introduction
-%<sp/>#<sp/><sp/><sp/>2:<sp/>energy<sp/>is<sp/>not<sp/>considered
-%<sp/>#<sp/>0-1:<sp/>ratio<sp/>between<sp/>cleavage<sp/>and<sp/>condensation<sp/>esoergonic<sp/>and<sp/>ergononic<sp/>reactions
-%<sp/>#<sp/><sp/><sp/><sp/><sp/>(0<sp/>all<sp/>cleavage<sp/>are<sp/>eso<sp/>(and<sp/>condensation<sp/>end),<sp/>1<sp/>all<sp/>condensation<sp/>are<sp/>eso<sp/>(and<sp/>cleavage<sp/>endo))
-energy=2;
-
-%<sp/>#<sp/>Energy<sp/>target<sp/>(0=substrate,<sp/>1=catalsyt,<sp/>2=both)
-energyTarget=0;
-
-complexFormationSymmetry=0;
-
-%**NEW**
-fino_a_che_lunghezza_i_polimeri_non_catalizzano<sp/>=<sp/>2;
-
-reactionProbability=0.004;<sp/>%<sp/>experiment:<sp/>1
-cleavageProbability=0.5;
-reverseReactions=0;
-
-%costanti<sp/>CINETICHE
-%K_eq=1000;
-%parte<sp/>da<sp/>rivedere<sp/>e<sp/>correggere
-Kass_o_Kdiss<sp/>=<sp/>0;<sp/>%<sp/>se<sp/>è un<sp/>cleavage<sp/>kdiss<sp/>=<sp/>100,<sp/>se<sp/>è una<sp/>condensazione<sp/>kass<sp/>=100;
-rapporto_Kfor_Kback<sp/>=<sp/>0;<sp/>%e.g.<sp/>Kass<sp/>=<sp/>100<sp/>--&gt;<sp/>Kdiss<sp/>=<sp/>100/100<sp/>=<sp/>1
-rapporto_Kcpx_K_ass<sp/>=<sp/>0;<sp/><sp/><sp/><sp/>%e.g.<sp/>Kass<sp/>=<sp/>100<sp/>--&gt;<sp/>Kcpx<sp/>=<sp/>100*2<sp/>=<sp/>200;
-K_cpxDiss=0;
-
-%coefficiente<sp/>di<sp/>fosforilazione;<sp/>
-K_nrg<sp/>=<sp/>0;
-
-K_irrad<sp/>=<sp/>0;
-
-%altri<sp/>parametri
-moleculeDecay_KineticConstant=0.02;
-diffusion_contribute=0;
-solubility_threshold=0;<sp/>%experimentveri
-influx=2;
-influx_rate=1e-6;
-
-%parametri<sp/>per<sp/>l&apos;inizializzazione<sp/>del<sp/>firing<sp/>disk
-%------------------------------------------------
-ratio_firing_disk=0;<sp/><sp/><sp/><sp/>%percentuale<sp/>di<sp/>specie<sp/>da<sp/>cancellare<sp/>rispetto<sp/>a<sp/>tutte<sp/>quelle<sp/>che<sp/>restano<sp/>dopo<sp/>aver<sp/>conservato<sp/>i<sp/>polimeri<sp/>fino<sp/>a<sp/>lunghezzamaxfd
-lunghezza_max_fd<sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/>%lunghezza<sp/>dei<sp/>monomeri/polimeri<sp/>da<sp/>conservare
-scelta_concentrazioni<sp/>=1<sp/>;<sp/>%<sp/>parametro<sp/>switch:<sp/>1<sp/>uniforme<sp/>su<sp/>tutte<sp/>le<sp/>specie<sp/>esistenti<sp/>del<sp/>firing<sp/>disk,<sp/>2<sp/>uniforme<sp/>sulle<sp/>lunghezze,<sp/>3<sp/>powerlaw<sp/>con<sp/>esponente<sp/>gamma
-gamma_powerlaw_concentrazioni<sp/>=<sp/>2.1;<sp/>%esponente<sp/>della<sp/>powerlaw<sp/>in<sp/>caso<sp/>3
-
-%parametri<sp/>per<sp/>la<sp/>distribuzione<sp/>dei<sp/>catalizzatori:<sp/>distribuzione<sp/>dei
-%catalizzatori<sp/>1<sp/>random<sp/>2<sp/>con<sp/>distribuzione
-decisione_catalizzatori=1;
-
-%controllo<sp/>che<sp/>non<sp/>ci<sp/>siano<sp/>cicli<sp/>nell&apos;influx
-%1:<sp/>nessun<sp/>controllo
-%2:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>substrato-prodotto
-%3:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>catalizzatore-prodotto
-%4:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>catalizzatore-prodotto<sp/>nè nel<sp/>grafo<sp/>substrato-prodotto
-controllo_ACS_nel_ciclo<sp/>=<sp/>4;
-
-
-%richiamo<sp/>la<sp/>funzione<sp/>inizializzatore_ACS
-[fd<sp/>concentrazioni<sp/>specie_def<sp/>influx<sp/>catalizzatore<sp/>reazione<sp/>specie_non_esistenti<sp/>matrice_adiacenza_sub_prod<sp/>matrice_adiacenza_cat_prod]<sp/>=<sp/>inizializzatore_ACS(nGEN,<sp/>nSIM,<sp/>nSeconds,<sp/>nReactions,<sp/>initialPopulationNumber,<sp/>initialMaxLength,<sp/>massima_lunghezza_su_cui_calcolare_le_reazioni,<sp/>overallConcentration,<sp/>alphabet,<sp/>complexFormationSymmetry,<sp/>fino_a_che_lunghezza_i_polimeri_non_catalizzano,<sp/>reactionProbability,<sp/>cleavageProbability,<sp/>diffusion_contribute,<sp/>solubility_threshold,<sp/>influx,<sp/>influx_rate,<sp/>reverseReactions,<sp/><sp/>Kass_o_Kdiss,rapporto_Kfor_Kback,rapporto_Kcpx_K_ass,K_cpxDiss,<sp/>K_nrg,<sp/>moleculeDecay_KineticConstant,<sp/>ratio_firing_disk,<sp/>lunghezza_max_fd,<sp/>scelta_concentrazioni,<sp/>gamma_powerlaw_concentrazioni,decisione_catalizzatori,<sp/>lastFiringDiskSpeciesID,<sp/>ECConcentration,<sp/>volume,<sp/>energy,<sp/>energyTarget,<sp/>controllo_ACS_nel_ciclo,<sp/>K_irrad);
-
-
-<sp/>basso<sp/>è irrealistico
-
-%<sp/>#<sp/>Energy<sp/>introduction
-%<sp/>#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2:<sp/>energy<sp/>is<sp/>not<sp/>considered
-%<sp/>#<sp/>0-1:<sp/>ratio<sp/>between<sp/>cleavage<sp/>and<sp/>condensation<sp/>esoergonic<sp/>and<sp/>ergononic<sp/>reactions
-%<sp/>#<sp/><sp/><sp/><sp/><sp/>(0<sp/>all<sp/>cleavage<sp/>are<sp/>eso<sp/>(and<sp/>condensation<sp/>end),<sp/>1<sp/>all<sp/>condensation<sp/>are<sp/>eso<sp/>(and<sp/>cleavage<sp/>endo))
-energy=2;
-
-%<sp/>#<sp/>Energy<sp/>target<sp/>(0=substrate,<sp/>1=catalsyt,<sp/>2=both)
-energyTarget=0;
-
-complexFormationSymmetry=0;
-
-%**NEW**
-fino_a_che_lunghezza_i_polimeri_non_catalizzano<sp/>=<sp/>2;
-
-reactionProbability=0.004;<sp/>%<sp/>experiment:<sp/>1
-cleavageProbability=0.5;
-reverseReactions=0;
-
-%costanti<sp/>CINETICHE
-%K_eq=1000;
-%parte<sp/>da<sp/>rivedere<sp/>e<sp/>correggere
-Kass_o_Kdiss<sp/>=<sp/>0;<sp/>%<sp/>se<sp/>è un<sp/>cleavage<sp/>kdiss<sp/>=<sp/>100,<sp/>se<sp/>è una<sp/>condensazione<sp/>kass<sp/>=100;
-rapporto_Kfor_Kback<sp/>=<sp/>0;<sp/>%e.g.<sp/>Kass<sp/>=<sp/>100<sp/>--&gt;<sp/>Kdiss<sp/>=<sp/>100/100<sp/>=<sp/>1
-rapporto_Kcpx_K_ass<sp/>=<sp/>0;<sp/><sp/><sp/><sp/>%e.g.<sp/>Kass<sp/>=<sp/>100<sp/>--&gt;<sp/>Kcpx<sp/>=<sp/>100*2<sp/>=<sp/>200;
-K_cpxDiss=0;
-
-%coefficiente<sp/>di<sp/>fosforilazione;<sp/>
-K_nrg<sp/>=<sp/>0;
-
-K_irrad<sp/>=<sp/>0;
-
-%altri<sp/>parametri
-moleculeDecay_KineticConstant=0.02;
-diffusion_contribute=0;
-solubility_threshold=0;<sp/>%experimentveri
-influx=2;
-influx_rate=1e-6;
-
-%parametri<sp/>per<sp/>l&apos;inizializzazione<sp/>del<sp/>firing<sp/>disk
-%------------------------------------------------
-ratio_firing_disk=0;<sp/><sp/><sp/><sp/>%percentuale<sp/>di<sp/>specie<sp/>da<sp/>cancellare<sp/>rispetto<sp/>a<sp/>tutte<sp/>quelle<sp/>che<sp/>restano<sp/>dopo<sp/>aver<sp/>conservato<sp/>i<sp/>polimeri<sp/>fino<sp/>a<sp/>lunghezzamaxfd
-lunghezza_max_fd<sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/>%lunghezza<sp/>dei<sp/>monomeri/polimeri<sp/>da<sp/>conservare
-scelta_concentrazioni<sp/>=1<sp/>;<sp/>%<sp/>parametro<sp/>switch:<sp/>1<sp/>uniforme<sp/>su<sp/>tutte<sp/>le<sp/>specie<sp/>esistenti<sp/>del<sp/>firing<sp/>disk,<sp/>2<sp/>uniforme<sp/>sulle<sp/>lunghezze,<sp/>3<sp/>powerlaw<sp/>con<sp/>esponente<sp/>gamma
-gamma_powerlaw_concentrazioni<sp/>=<sp/>2.1;<sp/>%esponente<sp/>della<sp/>powerlaw<sp/>in<sp/>caso<sp/>3
-
-%parametri<sp/>per<sp/>la<sp/>distribuzione<sp/>dei<sp/>catalizzatori:<sp/>distribuzione<sp/>dei
-%catalizzatori<sp/>1<sp/>random<sp/>2<sp/>con<sp/>distribuzione
-decisione_catalizzatori=1;
-
-%controllo<sp/>che<sp/>non<sp/>ci<sp/>siano<sp/>cicli<sp/>nell&apos;influx
-%1:<sp/>nessun<sp/>controllo
-%2:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>substrato-prodotto
-%3:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>catalizzatore-prodotto
-%4:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>catalizzatore-prodotto<sp/>nè nel<sp/>grafo<sp/>substrato-prodotto
-controllo_ACS_nel_ciclo<sp/>=<sp/>4;
-
-
-%richiamo<sp/>la<sp/>funzione<sp/>inizializzatore_ACS
-[fd<sp/>concentrazioni<sp/>specie_def<sp/>influx<sp/>catalizzatore<sp/>reazione<sp/>specie_non_esistenti<sp/>matrice_adiacenza_sub_prod<sp/>matrice_adiacenza_cat_prod]<sp/>=<sp/>inizializzatore_ACS(nGEN,<sp/>nSIM,<sp/>nSeconds,<sp/>nReactions,<sp/>initialPopulationNumber,<sp/>initialMaxLength,<sp/>massima_lunghezza_su_cui_calcolare_le_reazioni,<sp/>overallConcentration,<sp/>alphabet,<sp/>complexFormationSymmetry,<sp/>fino_a_che_lunghezza_i_polimeri_non_catalizzano,<sp/>reactionProbability,<sp/>cleavageProbability,<sp/>diffusion_contribute,<sp/>solubility_threshold,<sp/>influx,<sp/>influx_rate,<sp/>reverseReactions,<sp/><sp/>Kass_o_Kdiss,rapporto_Kfor_Kback,rapporto_Kcpx_K_ass,K_cpxDiss,<sp/>K_nrg,<sp/>moleculeDecay_KineticConstant,<sp/>ratio_firing_disk,<sp/>lunghezza_max_fd,<sp/>scelta_concentrazioni,<sp/>gamma_powerlaw_concentrazioni,decisione_catalizzatori,<sp/>lastFiringDiskSpeciesID,<sp/>ECConcentration,<sp/>volume,<sp/>energy,<sp/>energyTarget,<sp/>controllo_ACS_nel_ciclo,<sp/>K_irrad);
-
-
-<sp/>irrealistico</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">%<sp/></highlight><highlight class="preprocessor">#<sp/>Energy<sp/>introduction</highlight></codeline>
-<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal">%<sp/>#<sp/><sp/><sp/><sp/><sp/>2:<sp/><ref refid="a00071_1ac002779c383d2cc783e881f94449de66" kindref="member">energy</ref><sp/>is<sp/>not<sp/>considered</highlight></codeline>
-<codeline lineno="44"><highlight class="normal">%<sp/>#<sp/><sp/><sp/><sp/><sp/>0-1:<sp/>ratio<sp/>between<sp/>cleavage<sp/>and<sp/>condensation<sp/>esoergonic<sp/>and<sp/>ergononic<sp/>reactions</highlight></codeline>
-<codeline lineno="45" refid="a00070_1a43895072f7337df80dc4273211c55c9b" refkind="member"><highlight class="normal">%<sp/>#<sp/><sp/><sp/><sp/><sp/>(0<sp/>all<sp/>cleavage<sp/>are<sp/><ref refid="a00070_1a5b5a345da13951297f4d3ad31f76a87a" kindref="member">eso</ref><sp/>(<ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/>condensation<sp/><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref>),<sp/>1<sp/>all<sp/>condensation<sp/>are<sp/>eso<sp/>(<ref refid="a00028_1a170f8acb213f91bf71c77b1d20bceb33" kindref="member">and</ref><sp/>cleavage<sp/>endo))</highlight></codeline>
-<codeline lineno="46"><highlight class="normal">energy=2;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal">%<sp/>#<sp/>Energy<sp/>target<sp/>(0=substrate,<sp/>1=catalsyt,<sp/>2=both)</highlight></codeline>
-<codeline lineno="49" refid="a00070_1aa25e2dab413d379872aab3c4023d62f7" refkind="member"><highlight class="normal"><ref refid="a00070_1aa25e2dab413d379872aab3c4023d62f7" kindref="member">energyTarget</ref>=0;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="a00070_1ad4d86c1b55f9f76727181b05251ab7b1" refkind="member"><highlight class="normal"><ref refid="a00070_1ad4d86c1b55f9f76727181b05251ab7b1" kindref="member">complexFormationSymmetry</ref>=0;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal">%**NEW**</highlight></codeline>
-<codeline lineno="54" refid="a00070_1af142377b5a19c7c6cdeba9a34c579682" refkind="member"><highlight class="normal"><ref refid="a00060_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref><sp/>=<sp/>2;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="a00070_1a9101beaeb03fddb5c6a9e68442177543" refkind="member"><highlight class="normal"><ref refid="a00060_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>=0.004;<sp/>%<sp/>experiment:<sp/>1</highlight></codeline>
-<codeline lineno="57" refid="a00070_1a862fec76799e839c1eadb088da468a5e" refkind="member"><highlight class="normal"><ref refid="a00060_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>=0.5;</highlight></codeline>
-<codeline lineno="58" refid="a00070_1a650532b3a3c04865cc35cff6d567c5c0" refkind="member"><highlight class="normal"><ref refid="a00070_1a650532b3a3c04865cc35cff6d567c5c0" kindref="member">reverseReactions</ref>=0;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">%costanti<sp/>CINETICHE</highlight></codeline>
-<codeline lineno="61" refid="a00070_1af915279099be3650c90bf0a3cf396e04" refkind="member"><highlight class="normal">%<ref refid="a00070_1af915279099be3650c90bf0a3cf396e04" kindref="member">K_eq</ref>=1000;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">%parte<sp/>da<sp/>rivedere<sp/>e<sp/>correggere</highlight></codeline>
-<codeline lineno="63" refid="a00070_1acb874616f80abe1a595c7c9e12040cd5" refkind="member"><highlight class="normal"><ref refid="a00070_1ace89973f1923711590b42efcf28a1f77" kindref="member">Kass_o_Kdiss</ref><sp/>=<sp/>0;<sp/>%<sp/><ref refid="a00071_1a99032f27eaf45da350b544c68aa6467c" kindref="member">se</ref><sp/>è un<sp/>cleavage<sp/>kdiss<sp/>=<sp/>100,<sp/>se<sp/>è una<sp/>condensazione<sp/>kass<sp/>=100;
-rapporto_Kfor_Kback<sp/>=<sp/>0;<sp/>%e.g.<sp/>Kass<sp/>=<sp/>100<sp/>--&gt;<sp/>Kdiss<sp/>=<sp/>100/100<sp/>=<sp/>1
-rapporto_Kcpx_K_ass<sp/>=<sp/>0;<sp/><sp/><sp/><sp/>%e.g.<sp/>Kass<sp/>=<sp/>100<sp/>--&gt;<sp/>Kcpx<sp/>=<sp/>100*2<sp/>=<sp/>200;
-K_cpxDiss=0;
-
-%coefficiente<sp/>di<sp/>fosforilazione;<sp/>
-K_nrg<sp/>=<sp/>0;
-
-K_irrad<sp/>=<sp/>0;
-
-%altri<sp/>parametri
-moleculeDecay_KineticConstant=0.02;
-diffusion_contribute=0;
-solubility_threshold=0;<sp/>%experimentveri
-influx=2;
-influx_rate=1e-6;
-
-%parametri<sp/>per<sp/>l&apos;inizializzazione<sp/>del<sp/>firing<sp/>disk
-%------------------------------------------------
-ratio_firing_disk=0;<sp/><sp/><sp/><sp/>%percentuale<sp/>di<sp/>specie<sp/>da<sp/>cancellare<sp/>rispetto<sp/>a<sp/>tutte<sp/>quelle<sp/>che<sp/>restano<sp/>dopo<sp/>aver<sp/>conservato<sp/>i<sp/>polimeri<sp/>fino<sp/>a<sp/>lunghezzamaxfd
-lunghezza_max_fd<sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/>%lunghezza<sp/>dei<sp/>monomeri/polimeri<sp/>da<sp/>conservare
-scelta_concentrazioni<sp/>=1<sp/>;<sp/>%<sp/>parametro<sp/>switch:<sp/>1<sp/>uniforme<sp/>su<sp/>tutte<sp/>le<sp/>specie<sp/>esistenti<sp/>del<sp/>firing<sp/>disk,<sp/>2<sp/>uniforme<sp/>sulle<sp/>lunghezze,<sp/>3<sp/>powerlaw<sp/>con<sp/>esponente<sp/>gamma
-gamma_powerlaw_concentrazioni<sp/>=<sp/>2.1;<sp/>%esponente<sp/>della<sp/>powerlaw<sp/>in<sp/>caso<sp/>3
-
-%parametri<sp/>per<sp/>la<sp/>distribuzione<sp/>dei<sp/>catalizzatori:<sp/>distribuzione<sp/>dei
-%catalizzatori<sp/>1<sp/>random<sp/>2<sp/>con<sp/>distribuzione
-decisione_catalizzatori=1;
-
-%controllo<sp/>che<sp/>non<sp/>ci<sp/>siano<sp/>cicli<sp/>nell&apos;influx
-%1:<sp/>nessun<sp/>controllo
-%2:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>substrato-prodotto
-%3:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>catalizzatore-prodotto
-%4:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>catalizzatore-prodotto<sp/>nè nel<sp/>grafo<sp/>substrato-prodotto
-controllo_ACS_nel_ciclo<sp/>=<sp/>4;
-
-
-%richiamo<sp/>la<sp/>funzione<sp/>inizializzatore_ACS
-[fd<sp/>concentrazioni<sp/>specie_def<sp/>influx<sp/>catalizzatore<sp/>reazione<sp/>specie_non_esistenti<sp/>matrice_adiacenza_sub_prod<sp/>matrice_adiacenza_cat_prod]<sp/>=<sp/>inizializzatore_ACS(nGEN,<sp/>nSIM,<sp/>nSeconds,<sp/>nReactions,<sp/>initialPopulationNumber,<sp/>initialMaxLength,<sp/>massima_lunghezza_su_cui_calcolare_le_reazioni,<sp/>overallConcentration,<sp/>alphabet,<sp/>complexFormationSymmetry,<sp/>fino_a_che_lunghezza_i_polimeri_non_catalizzano,<sp/>reactionProbability,<sp/>cleavageProbability,<sp/>diffusion_contribute,<sp/>solubility_threshold,<sp/>influx,<sp/>influx_rate,<sp/>reverseReactions,<sp/><sp/>Kass_o_Kdiss,rapporto_Kfor_Kback,rapporto_Kcpx_K_ass,K_cpxDiss,<sp/>K_nrg,<sp/>moleculeDecay_KineticConstant,<sp/>ratio_firing_disk,<sp/>lunghezza_max_fd,<sp/>scelta_concentrazioni,<sp/>gamma_powerlaw_concentrazioni,decisione_catalizzatori,<sp/>lastFiringDiskSpeciesID,<sp/>ECConcentration,<sp/>volume,<sp/>energy,<sp/>energyTarget,<sp/>controllo_ACS_nel_ciclo,<sp/>K_irrad);
-
-
-<sp/>un<sp/>cleavage<sp/><ref refid="a00069_1aa3a014475bd24120996191acceaa4f3d" kindref="member">kdiss</ref><sp/>=<sp/>100,<sp/><ref refid="a00071_1a99032f27eaf45da350b544c68aa6467c" kindref="member">se</ref><sp/>è una<sp/>condensazione<sp/>kass<sp/>=100;
-rapporto_Kfor_Kback<sp/>=<sp/>0;<sp/>%e.g.<sp/>Kass<sp/>=<sp/>100<sp/>--&gt;<sp/>Kdiss<sp/>=<sp/>100/100<sp/>=<sp/>1
-rapporto_Kcpx_K_ass<sp/>=<sp/>0;<sp/><sp/><sp/><sp/>%e.g.<sp/>Kass<sp/>=<sp/>100<sp/>--&gt;<sp/>Kcpx<sp/>=<sp/>100*2<sp/>=<sp/>200;
-K_cpxDiss=0;
-
-%coefficiente<sp/>di<sp/>fosforilazione;<sp/>
-K_nrg<sp/>=<sp/>0;
-
-K_irrad<sp/>=<sp/>0;
-
-%altri<sp/>parametri
-moleculeDecay_KineticConstant=0.02;
-diffusion_contribute=0;
-solubility_threshold=0;<sp/>%experimentveri
-influx=2;
-influx_rate=1e-6;
-
-%parametri<sp/>per<sp/>l&apos;inizializzazione<sp/>del<sp/>firing<sp/>disk
-%------------------------------------------------
-ratio_firing_disk=0;<sp/><sp/><sp/><sp/>%percentuale<sp/>di<sp/>specie<sp/>da<sp/>cancellare<sp/>rispetto<sp/>a<sp/>tutte<sp/>quelle<sp/>che<sp/>restano<sp/>dopo<sp/>aver<sp/>conservato<sp/>i<sp/>polimeri<sp/>fino<sp/>a<sp/>lunghezzamaxfd
-lunghezza_max_fd<sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/>%lunghezza<sp/>dei<sp/>monomeri/polimeri<sp/>da<sp/>conservare
-scelta_concentrazioni<sp/>=1<sp/>;<sp/>%<sp/>parametro<sp/>switch:<sp/>1<sp/>uniforme<sp/>su<sp/>tutte<sp/>le<sp/>specie<sp/>esistenti<sp/>del<sp/>firing<sp/>disk,<sp/>2<sp/>uniforme<sp/>sulle<sp/>lunghezze,<sp/>3<sp/>powerlaw<sp/>con<sp/>esponente<sp/>gamma
-gamma_powerlaw_concentrazioni<sp/>=<sp/>2.1;<sp/>%esponente<sp/>della<sp/>powerlaw<sp/>in<sp/>caso<sp/>3
-
-%parametri<sp/>per<sp/>la<sp/>distribuzione<sp/>dei<sp/>catalizzatori:<sp/>distribuzione<sp/>dei
-%catalizzatori<sp/>1<sp/>random<sp/>2<sp/>con<sp/>distribuzione
-decisione_catalizzatori=1;
-
-%controllo<sp/>che<sp/>non<sp/>ci<sp/>siano<sp/>cicli<sp/>nell&apos;influx
-%1:<sp/>nessun<sp/>controllo
-%2:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>substrato-prodotto
-%3:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>catalizzatore-prodotto
-%4:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>catalizzatore-prodotto<sp/>nè nel<sp/>grafo<sp/>substrato-prodotto
-controllo_ACS_nel_ciclo<sp/>=<sp/>4;
-
-
-%richiamo<sp/>la<sp/>funzione<sp/>inizializzatore_ACS
-[fd<sp/>concentrazioni<sp/>specie_def<sp/>influx<sp/>catalizzatore<sp/>reazione<sp/>specie_non_esistenti<sp/>matrice_adiacenza_sub_prod<sp/>matrice_adiacenza_cat_prod]<sp/>=<sp/>inizializzatore_ACS(nGEN,<sp/>nSIM,<sp/>nSeconds,<sp/>nReactions,<sp/>initialPopulationNumber,<sp/>initialMaxLength,<sp/>massima_lunghezza_su_cui_calcolare_le_reazioni,<sp/>overallConcentration,<sp/>alphabet,<sp/>complexFormationSymmetry,<sp/>fino_a_che_lunghezza_i_polimeri_non_catalizzano,<sp/>reactionProbability,<sp/>cleavageProbability,<sp/>diffusion_contribute,<sp/>solubility_threshold,<sp/>influx,<sp/>influx_rate,<sp/>reverseReactions,<sp/><sp/>Kass_o_Kdiss,rapporto_Kfor_Kback,rapporto_Kcpx_K_ass,K_cpxDiss,<sp/>K_nrg,<sp/>moleculeDecay_KineticConstant,<sp/>ratio_firing_disk,<sp/>lunghezza_max_fd,<sp/>scelta_concentrazioni,<sp/>gamma_powerlaw_concentrazioni,decisione_catalizzatori,<sp/>lastFiringDiskSpeciesID,<sp/>ECConcentration,<sp/>volume,<sp/>energy,<sp/>energyTarget,<sp/>controllo_ACS_nel_ciclo,<sp/>K_irrad);
-
-
-<sp/>una<sp/><ref refid="a00071_1a8c8df28fc47986989fead7fb4ee1a3ea" kindref="member">condensazione</ref><sp/><ref refid="a00070_1a8d22b96a5ece64359002562ebc1fbfc5" kindref="member">kass</ref><sp/>=100;</highlight></codeline>
-<codeline lineno="64" refid="a00070_1acbcca8a3eb951a59ea95e6aa2be280fd" refkind="member"><highlight class="normal"><ref refid="a00070_1acbcca8a3eb951a59ea95e6aa2be280fd" kindref="member">rapporto_Kfor_Kback</ref><sp/>=<sp/>0;<sp/>%e.g.<sp/><ref refid="a00070_1a74947b8f8ce132902a228628db296032" kindref="member">Kass</ref><sp/>=<sp/>100<sp/>--&gt;<sp/><ref refid="a00071_1a51a314f9df0eaa4488a1b264d1de0173" kindref="member">Kdiss</ref><sp/>=<sp/>100/100<sp/>=<sp/>1</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">rapporto_Kcpx_K_ass<sp/>=<sp/>0;<sp/><sp/><sp/><sp/>%e.g.<sp/><ref refid="a00070_1a74947b8f8ce132902a228628db296032" kindref="member">Kass</ref><sp/>=<sp/>100<sp/>--&gt;<sp/><ref refid="a00071_1aaea32371e0f1645dcea44ce4d4a3d147" kindref="member">Kcpx</ref><sp/>=<sp/>100*2<sp/>=<sp/>200;</highlight></codeline>
-<codeline lineno="66" refid="a00070_1ab2422609d179c881c72aced926f83e6f" refkind="member"><highlight class="normal"><ref refid="a00070_1ab2422609d179c881c72aced926f83e6f" kindref="member">K_cpxDiss</ref>=0;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="a00070_1a778a1aec6ffefe5cf8721850b92e487b" refkind="member"><highlight class="normal">%coefficiente<sp/>di<sp/><ref refid="a00070_1a778a1aec6ffefe5cf8721850b92e487b" kindref="member">fosforilazione</ref>;<sp/></highlight></codeline>
-<codeline lineno="69" refid="a00070_1ac8f2b2a8d859ca2b7cf056575c7b0538" refkind="member"><highlight class="normal"><ref refid="a00070_1ac8f2b2a8d859ca2b7cf056575c7b0538" kindref="member">K_nrg</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71" refid="a00070_1abca6e303f83cae224170f5fd2f1fedfe" refkind="member"><highlight class="normal"><ref refid="a00070_1abca6e303f83cae224170f5fd2f1fedfe" kindref="member">K_irrad</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal">%altri<sp/>parametri</highlight></codeline>
-<codeline lineno="74" refid="a00070_1aef2ea28de56b86a577b3c6fa0220926c" refkind="member"><highlight class="normal"><ref refid="a00070_1aef2ea28de56b86a577b3c6fa0220926c" kindref="member">moleculeDecay_KineticConstant</ref>=0.02;</highlight></codeline>
-<codeline lineno="75" refid="a00070_1a9341167cb56ed18499df723220990b9c" refkind="member"><highlight class="normal"><ref refid="a00070_1a9341167cb56ed18499df723220990b9c" kindref="member">diffusion_contribute</ref>=0;</highlight></codeline>
-<codeline lineno="76" refid="a00070_1acbefa7c9bfd826fec9b32fa3bd29c288" refkind="member"><highlight class="normal"><ref refid="a00070_1acbefa7c9bfd826fec9b32fa3bd29c288" kindref="member">solubility_threshold</ref>=0;<sp/>%experimentveri</highlight></codeline>
-<codeline lineno="77" refid="a00070_1a637d2af7e7b03600bcaf1931b999e3fc" refkind="member"><highlight class="normal"><ref refid="a00028_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>=2;</highlight></codeline>
-<codeline lineno="78" refid="a00070_1ad795c71664f3161dc8f7a769341daadf" refkind="member"><highlight class="normal"><ref refid="a00102_1a3a8adee26325d72aca909e91b0fd3ea5" kindref="member">influx_rate</ref>=1e-6;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal">%parametri<sp/>per<sp/><ref refid="a00100_1a0437cd4d2a377ca0e34ab59f4bfd833f" kindref="member">l</ref>&apos;inizializzazione<sp/>del<sp/>firing<sp/><ref refid="a00061_1a74f35d11ff0800cc575f55351e084a1f" kindref="member">disk</ref></highlight></codeline>
-<codeline lineno="81"><highlight class="normal">%------------------------------------------------</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><ref refid="a00071_1a83c1660d71068ae836121af0890bb3dd" kindref="member">ratio_firing_disk</ref>=0;<sp/><sp/><sp/><sp/>%percentuale<sp/>di<sp/>specie<sp/>da<sp/>cancellare<sp/>rispetto<sp/><ref refid="a00025_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref><sp/>tutte<sp/>quelle<sp/>che<sp/>restano<sp/>dopo<sp/>aver<sp/>conservato<sp/>i<sp/>polimeri<sp/>fino<sp/><ref refid="a00025_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref><sp/>lunghezzamaxfd</highlight></codeline>
-<codeline lineno="83" refid="a00070_1a7c974cc56015b6503e0619d32ebd4180" refkind="member"><highlight class="normal"><ref refid="a00070_1a7c974cc56015b6503e0619d32ebd4180" kindref="member">lunghezza_max_fd</ref><sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/>%<ref refid="a00064_1a984d293145d85a936f430c0990316e51" kindref="member">lunghezza</ref><sp/>dei<sp/>monomeri/polimeri<sp/>da<sp/>conservare</highlight></codeline>
-<codeline lineno="84" refid="a00070_1adc12f688ec66254762f4bdd2ce8c73df" refkind="member"><highlight class="normal"><ref refid="a00070_1ac60b74a4c1b8bc23e64008ba1e0c41a8" kindref="member">scelta_concentrazioni</ref><sp/>=1<sp/>;<sp/>%<sp/>parametro<sp/><ref refid="a00070_1adc12f688ec66254762f4bdd2ce8c73df" kindref="member">switch</ref>:<sp/>1<sp/>uniforme<sp/>su<sp/>tutte<sp/>le<sp/>specie<sp/>esistenti<sp/>del<sp/>firing<sp/><ref refid="a00061_1a74f35d11ff0800cc575f55351e084a1f" kindref="member">disk</ref>,<sp/>2<sp/>uniforme<sp/>sulle<sp/><ref refid="a00070_1ad1bbbd24e4be6c7d8af30304c155c742" kindref="member">lunghezze</ref>,<sp/>3<sp/>powerlaw<sp/>con<sp/>esponente<sp/>gamma</highlight></codeline>
-<codeline lineno="85" refid="a00070_1a7cd0915d7542523abc226a8eecf67ecf" refkind="member"><highlight class="normal"><ref refid="a00070_1a7cd0915d7542523abc226a8eecf67ecf" kindref="member">gamma_powerlaw_concentrazioni</ref><sp/>=<sp/>2.1;<sp/>%esponente<sp/>della<sp/>powerlaw<sp/>in<sp/>caso<sp/>3</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal">%parametri<sp/>per<sp/>la<sp/>distribuzione<sp/>dei<sp/><ref refid="a00070_1a089ff88e71c60b850d67fa1c891af4ab" kindref="member">catalizzatori</ref>:<sp/>distribuzione<sp/>dei</highlight></codeline>
-<codeline lineno="88"><highlight class="normal">%<ref refid="a00070_1a089ff88e71c60b850d67fa1c891af4ab" kindref="member">catalizzatori</ref><sp/>1<sp/>random<sp/>2<sp/>con<sp/>distribuzione</highlight></codeline>
-<codeline lineno="89" refid="a00070_1a089ff88e71c60b850d67fa1c891af4ab" refkind="member"><highlight class="normal"><ref refid="a00071_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>=1;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal">%<ref refid="a00068_1adef1a44b5da0d8f5767284d2c6146569" kindref="member">controllo</ref><sp/>che<sp/>non<sp/>ci<sp/>siano<sp/>cicli<sp/>nell&apos;<ref refid="a00028_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref></highlight></codeline>
-<codeline lineno="92"><highlight class="normal">%1:<sp/>nessun<sp/><ref refid="a00068_1adef1a44b5da0d8f5767284d2c6146569" kindref="member">controllo</ref></highlight></codeline>
-<codeline lineno="93"><highlight class="normal">%2:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/>substrato-prodotto</highlight></codeline>
-<codeline lineno="94"><highlight class="normal">%3:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/><ref refid="a00060_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref>-prodotto</highlight></codeline>
-<codeline lineno="95"><highlight class="normal">%4:<sp/>no<sp/>cicli<sp/>nel<sp/>grafo<sp/><ref refid="a00060_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref>-prodotto<sp/>nè nel<sp/>grafo<sp/>substrato-prodotto
-controllo_ACS_nel_ciclo<sp/>=<sp/>4;
-
-
-%richiamo<sp/>la<sp/>funzione<sp/>inizializzatore_ACS
-[fd<sp/>concentrazioni<sp/>specie_def<sp/>influx<sp/>catalizzatore<sp/>reazione<sp/>specie_non_esistenti<sp/>matrice_adiacenza_sub_prod<sp/>matrice_adiacenza_cat_prod]<sp/>=<sp/>inizializzatore_ACS(nGEN,<sp/>nSIM,<sp/>nSeconds,<sp/>nReactions,<sp/>initialPopulationNumber,<sp/>initialMaxLength,<sp/>massima_lunghezza_su_cui_calcolare_le_reazioni,<sp/>overallConcentration,<sp/>alphabet,<sp/>complexFormationSymmetry,<sp/>fino_a_che_lunghezza_i_polimeri_non_catalizzano,<sp/>reactionProbability,<sp/>cleavageProbability,<sp/>diffusion_contribute,<sp/>solubility_threshold,<sp/>influx,<sp/>influx_rate,<sp/>reverseReactions,<sp/><sp/>Kass_o_Kdiss,rapporto_Kfor_Kback,rapporto_Kcpx_K_ass,K_cpxDiss,<sp/>K_nrg,<sp/>moleculeDecay_KineticConstant,<sp/>ratio_firing_disk,<sp/>lunghezza_max_fd,<sp/>scelta_concentrazioni,<sp/>gamma_powerlaw_concentrazioni,decisione_catalizzatori,<sp/>lastFiringDiskSpeciesID,<sp/>ECConcentration,<sp/>volume,<sp/>energy,<sp/>energyTarget,<sp/>controllo_ACS_nel_ciclo,<sp/>K_irrad);
-
-
-<sp/>nel<sp/>grafo<sp/>substrato-prodotto</highlight></codeline>
-<codeline lineno="96"><highlight class="normal">controllo_ACS_nel_ciclo<sp/>=<sp/>4;</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal">%richiamo<sp/>la<sp/>funzione<sp/><ref refid="a00070_1ada2b06fc2d132c7a047984505d3bad7c" kindref="member">inizializzatore_ACS</ref></highlight></codeline>
-<codeline lineno="100" refid="a00070_1ada2b06fc2d132c7a047984505d3bad7c" refkind="member"><highlight class="normal">[fd<sp/>concentrazioni<sp/><ref refid="a00068_1a85d979dc881d9a49537b0f43daa2b360" kindref="member">specie_def</ref><sp/><ref refid="a00028_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref><sp/><ref refid="a00060_1a41bcbf4606f8025b8341a3f393f5726f" kindref="member">catalizzatore</ref><sp/><ref refid="a00060_1a84d78e886b9f683403579e3911e7f046" kindref="member">reazione</ref><sp/><ref refid="a00060_1a7d0cebfb5c7f7b090c85e1373242e49b" kindref="member">specie_non_esistenti</ref><sp/><ref refid="a00062_1a75ff61c394ad5be40e5084b8b794e2b2" kindref="member">matrice_adiacenza_sub_prod</ref><sp/><ref refid="a00062_1ad1daeea59ae47471f5f47c01a2cfde03" kindref="member">matrice_adiacenza_cat_prod</ref>]<sp/>=<sp/><ref refid="a00070_1ada2b06fc2d132c7a047984505d3bad7c" kindref="member">inizializzatore_ACS</ref>(nGEN,<sp/><ref refid="a00070_1a68c8b36ce2387749248f566faa108e45" kindref="member">nSIM</ref>,<sp/><ref refid="a00070_1aaded2f2d61413dc4bddf805e9be03ded" kindref="member">nSeconds</ref>,<sp/><ref refid="a00070_1a7ab8b9fa18f22ee71429cf8ae50d754b" kindref="member">nReactions</ref>,<sp/><ref refid="a00070_1ae44c52e8cc45368288e687e5c374764f" kindref="member">initialPopulationNumber</ref>,<sp/><ref refid="a00070_1a4c7433c24b6426a15069cc5a93a5cbec" kindref="member">initialMaxLength</ref>,<sp/><ref refid="a00070_1a04ee275ab8ce56c2c9c8b2b82995a9f7" kindref="member">massima_lunghezza_su_cui_calcolare_le_reazioni</ref>,<sp/><ref refid="a00070_1a59597688ed79473c0234f45eb9167574" kindref="member">overallConcentration</ref>,<sp/><ref refid="a00107_1aca44f11e84467e8090217b689da68785" kindref="member">alphabet</ref>,<sp/><ref refid="a00070_1ad4d86c1b55f9f76727181b05251ab7b1" kindref="member">complexFormationSymmetry</ref>,<sp/><ref refid="a00060_1a2e17c940b115a5db53ac8c404feac6ae" kindref="member">fino_a_che_lunghezza_i_polimeri_non_catalizzano</ref>,<sp/><ref refid="a00060_1aa1e3cee6a6b640a872d1e454e8fb0c98" kindref="member">reactionProbability</ref>,<sp/><ref refid="a00060_1a9d512df05ee559766d2b8f08e4704b04" kindref="member">cleavageProbability</ref>,<sp/><ref refid="a00070_1a9341167cb56ed18499df723220990b9c" kindref="member">diffusion_contribute</ref>,<sp/><ref refid="a00070_1acbefa7c9bfd826fec9b32fa3bd29c288" kindref="member">solubility_threshold</ref>,<sp/><ref refid="a00028_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref>,<sp/><ref refid="a00102_1a3a8adee26325d72aca909e91b0fd3ea5" kindref="member">influx_rate</ref>,<sp/><ref refid="a00070_1a650532b3a3c04865cc35cff6d567c5c0" kindref="member">reverseReactions</ref>,<sp/><sp/><ref refid="a00070_1ace89973f1923711590b42efcf28a1f77" kindref="member">Kass_o_Kdiss</ref>,<ref refid="a00070_1acbcca8a3eb951a59ea95e6aa2be280fd" kindref="member">rapporto_Kfor_Kback</ref>,rapporto_Kcpx_K_ass,<ref refid="a00070_1ab2422609d179c881c72aced926f83e6f" kindref="member">K_cpxDiss</ref>,<sp/><ref refid="a00070_1ac8f2b2a8d859ca2b7cf056575c7b0538" kindref="member">K_nrg</ref>,<sp/><ref refid="a00070_1aef2ea28de56b86a577b3c6fa0220926c" kindref="member">moleculeDecay_KineticConstant</ref>,<sp/>ratio_firing_disk,<sp/><ref refid="a00070_1a7c974cc56015b6503e0619d32ebd4180" kindref="member">lunghezza_max_fd</ref>,<sp/><ref refid="a00070_1ac60b74a4c1b8bc23e64008ba1e0c41a8" kindref="member">scelta_concentrazioni</ref>,<sp/><ref refid="a00070_1a7cd0915d7542523abc226a8eecf67ecf" kindref="member">gamma_powerlaw_concentrazioni</ref>,<ref refid="a00071_1a78948f867453293fcff0835b1bb05b8c" kindref="member">decisione_catalizzatori</ref>,<sp/>lastFiringDiskSpeciesID,<sp/>ECConcentration,<sp/><ref refid="a00070_1a9bc498ccac8db41438f855f5dd3f4c05" kindref="member">volume</ref>,<sp/>energy,<sp/><ref refid="a00070_1aa25e2dab413d379872aab3c4023d62f7" kindref="member">energyTarget</ref>,<sp/>controllo_ACS_nel_ciclo,<sp/><ref refid="a00070_1abca6e303f83cae224170f5fd2f1fedfe" kindref="member">K_irrad</ref>);</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_matlabinitializator/lancia_inizializzatore_acs.m"/>
+    <location file="/home/ale/Documents/GIT/carness/commonFunctions.h"/>
   </compounddef>
 </doxygen>

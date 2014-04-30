@@ -1,292 +1,83 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="a00036" kind="file">
-    <compoundname>stats.m</compoundname>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="a00036_1a5318eae09f2b8ac76b2d6df39ba9c1cd" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params deltaT</definition>
-        <argsstring></argsstring>
-        <name>deltaT</name>
-        <initializer>= 10</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="7" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="7" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00036_1aa9758857dd92f7845934f06daa7c4120" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params totT</definition>
-        <argsstring></argsstring>
-        <name>totT</name>
-        <initializer>= 1000</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="8" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="8" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00036_1a4b295f592934e78a05958a54046ceb68" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params showFig</definition>
-        <argsstring></argsstring>
-        <name>showFig</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="9" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="9" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00036_1a63b4c2789d7e1513024181d12e4f1b6b" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params figureVisible</definition>
-        <argsstring></argsstring>
-        <name>figureVisible</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="57" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00036_1aa022cbb28f80299d572def08e7a5ccfd" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params threshold</definition>
-        <argsstring></argsstring>
-        <name>threshold</name>
-        <initializer>= 0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="83" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="83" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00036_1afb6aa83fb78c663f3b39be2380842a8b" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params decayTime</definition>
-        <argsstring></argsstring>
-        <name>decayTime</name>
-        <initializer>= 10</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="84" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="84" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00036_1a4e4b89515d35d0cba5873e282e55dc8c" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params tmpResFold</definition>
-        <argsstring></argsstring>
-        <name>tmpResFold</name>
-        <initializer>= &apos;res&apos;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="85" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="85" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00036_1ab3d8fca9a15f5a064b07181a35ebdbb7" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params distinctiveSubStr</definition>
-        <argsstring></argsstring>
-        <name>distinctiveSubStr</name>
-        <initializer>= &apos;sim&apos;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="86" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="86" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00036_1a71a9d71e2c994a7a8552d39b41b6e256" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params tmpIDsim</definition>
-        <argsstring></argsstring>
-        <name>tmpIDsim</name>
-        <initializer>= &apos;5&apos;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="87" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="87" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00036_1a3b01c97f207a2997c3bd0c2718441509" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params tmpRctFileToLoad</definition>
-        <argsstring></argsstring>
-        <name>tmpRctFileToLoad</name>
-        <initializer>= &apos;&apos;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="88" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="88" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="a00036_1ae5d21adddbfe36d5b10d43a2e8b39123" prot="public" static="no" mutable="no">
-        <type>params</type>
-        <definition>params tmpRctSUBFileToLoad</definition>
-        <argsstring></argsstring>
-        <name>tmpRctSUBFileToLoad</name>
-        <initializer>= &apos;&apos;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="89" column="1" bodyfile="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" bodystart="89" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="a00036_1aa7ae495ee970be20d992bedf6f9f8280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="a00068_1a4b4c670b101bf7a838f775e008fa6255" kindref="member">function</ref></type>
-        <definition>function stats</definition>
-        <argsstring>()%clear all%close all%%params.path</argsstring>
-        <name>stats</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="1" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="a00036_1a18a344cbdf9b3218a438bca78547ab9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>concAnalysis</definition>
-        <argsstring>(params)%clear all%close all%%params.path</argsstring>
-        <name>concAnalysis</name>
-        <param>
-          <type>params</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m" line="13" column="1"/>
-      </memberdef>
-      </sectiondef>
+    <compoundname>acsDynStatInTime.py</compoundname>
+    <innernamespace refid="a00093">acsDynStatInTime</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="a00036_1aa7ae495ee970be20d992bedf6f9f8280" kindref="member">stats</ref>()</highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal">%<sp/>clear<sp/>all<sp/></highlight></codeline>
-<codeline lineno="4"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
-<codeline lineno="5"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="6"><highlight class="normal">%<sp/>params.path<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN2&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="7" refid="a00036_1a5318eae09f2b8ac76b2d6df39ba9c1cd" refkind="member"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;</highlight></codeline>
-<codeline lineno="8" refid="a00036_1aa9758857dd92f7845934f06daa7c4120" refkind="member"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
-<codeline lineno="9" refid="a00036_1a4b295f592934e78a05958a54046ceb68" refkind="member"><highlight class="normal">%<sp/>params.showFig<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
-<codeline lineno="11"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="12"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="13"><highlight class="normal">%<sp/><ref refid="a00036_1a18a344cbdf9b3218a438bca78547ab9e" kindref="member">concAnalysis</ref>(params)</highlight></codeline>
-<codeline lineno="14"><highlight class="normal">%<sp/>clear<sp/>all<sp/></highlight></codeline>
-<codeline lineno="15"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
-<codeline lineno="16"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="17"><highlight class="normal">%<sp/>params.path<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN3&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal">%<sp/>params.showFig<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="23"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="24"><highlight class="normal">%<sp/><ref refid="a00036_1a18a344cbdf9b3218a438bca78547ab9e" kindref="member">concAnalysis</ref>(params)</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">%<sp/>clear<sp/>all<sp/></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">%<sp/>params.path<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN4&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">%<sp/>params.showFig<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">%<sp/>params.deltaT<sp/>=<sp/>10;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="36"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="37"><highlight class="normal">%<sp/><ref refid="a00036_1a18a344cbdf9b3218a438bca78547ab9e" kindref="member">concAnalysis</ref>(params)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">%<sp/><ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN2&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">%<sp/>[out]<sp/>=<sp/>timesAnalysis(<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>)</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
-<codeline lineno="46"><highlight class="normal">%<sp/><ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN3&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">%<sp/>[out]<sp/>=<sp/>timesAnalysis(<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>)</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
-<codeline lineno="50"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
-<codeline lineno="51"><highlight class="normal">%<sp/><ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN4&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal">%<sp/>[out]<sp/>=<sp/>timesAnalysis(<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>)</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
-<codeline lineno="55"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
-<codeline lineno="56"><highlight class="normal">%<sp/>params.tmpPath<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN2&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="57" refid="a00036_1a63b4c2789d7e1513024181d12e4f1b6b" refkind="member"><highlight class="normal">%<sp/>params.figureVisible<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal">%<sp/>params.deltaT<sp/>=10;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">%<sp/>%[outa]<sp/>=<sp/>allTimesAnalysis(params)</highlight></codeline>
-<codeline lineno="61"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="62"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
-<codeline lineno="63"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
-<codeline lineno="64"><highlight class="normal">%<sp/>params.tmpPath<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN3&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">%<sp/>params.figureVisible<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal">%<sp/>params.deltaT<sp/>=10;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal">%<sp/>[outb]<sp/>=<sp/>allTimesAnalysis(params)</highlight></codeline>
-<codeline lineno="69"><highlight class="normal">%<sp/></highlight></codeline>
-<codeline lineno="70"><highlight class="normal">%<sp/>clear<sp/>all</highlight></codeline>
-<codeline lineno="71"><highlight class="normal">%<sp/>close<sp/>all</highlight></codeline>
-<codeline lineno="72"><highlight class="normal">%<sp/>params.tmpPath<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;~/Documents/lavoro/panini/reactionIN4&apos;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal">%<sp/>params.figureVisible<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal">%<sp/>params.deltaT<sp/>=10;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal">%<sp/>params.totT<sp/>=<sp/>1000;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal">%<sp/>[outc]<sp/>=<sp/>allTimesAnalysis(params)</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal">close<sp/>all</highlight></codeline>
-<codeline lineno="79"><highlight class="normal">clear<sp/>all</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal">params.<ref refid="a00032_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/>&apos;~/Documents/simPanini/oldSimsReactor/panini/reactionIN4/&apos;;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal">params.<ref refid="a00036_1a4b295f592934e78a05958a54046ceb68" kindref="member">showFig</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="83" refid="a00036_1aa022cbb28f80299d572def08e7a5ccfd" refkind="member"><highlight class="normal">params.<ref refid="a00028_1aa022cbb28f80299d572def08e7a5ccfd" kindref="member">threshold</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="84" refid="a00036_1afb6aa83fb78c663f3b39be2380842a8b" refkind="member"><highlight class="normal">params.<ref refid="a00028_1abd7ce2c4bf5f563b1e70731f58e8c57d" kindref="member">decayTime</ref><sp/>=<sp/>10;<sp/><sp/></highlight></codeline>
-<codeline lineno="85" refid="a00036_1a4e4b89515d35d0cba5873e282e55dc8c" refkind="member"><highlight class="normal">params.<ref refid="a00036_1a4e4b89515d35d0cba5873e282e55dc8c" kindref="member">tmpResFold</ref><sp/>=<sp/>&apos;res&apos;;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="86" refid="a00036_1ab3d8fca9a15f5a064b07181a35ebdbb7" refkind="member"><highlight class="normal">params.<ref refid="a00036_1ab3d8fca9a15f5a064b07181a35ebdbb7" kindref="member">distinctiveSubStr</ref><sp/>=<sp/>&apos;sim&apos;;<sp/></highlight></codeline>
-<codeline lineno="87" refid="a00036_1a71a9d71e2c994a7a8552d39b41b6e256" refkind="member"><highlight class="normal">params.<ref refid="a00036_1a71a9d71e2c994a7a8552d39b41b6e256" kindref="member">tmpIDsim</ref><sp/>=<sp/>&apos;5&apos;;</highlight></codeline>
-<codeline lineno="88" refid="a00036_1a3b01c97f207a2997c3bd0c2718441509" refkind="member"><highlight class="normal">params.<ref refid="a00028_1a3b01c97f207a2997c3bd0c2718441509" kindref="member">tmpRctFileToLoad</ref><sp/>=<sp/>&apos;&apos;;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="89" refid="a00036_1ae5d21adddbfe36d5b10d43a2e8b39123" refkind="member"><highlight class="normal">params.<ref refid="a00028_1ae5d21adddbfe36d5b10d43a2e8b39123" kindref="member">tmpRctSUBFileToLoad</ref><sp/>=<sp/>&apos;&apos;;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><ref refid="a00028_1a34c820385e9209f49c18739329ad9206" kindref="member">out</ref><sp/>=<sp/>generalConcentrationOverThreshold(params)</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><ref refid="a00025_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="1" refid="a00093" refkind="compound"><highlight class="comment">#!/usr/bin/env<sp/>python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#<sp/>-*-<sp/>coding:<sp/>latin-1<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;&apos;&apos;Script<sp/>to<sp/>order<sp/>the<sp/>analysis<sp/>of<sp/>the<sp/>divergences<sp/>in<sp/>time.<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral">&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys,<sp/>os<sp/></highlight><highlight class="comment">#<sp/>Standard<sp/>librar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>glob</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np<sp/></highlight><highlight class="comment">#<sp/>Scientific<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>argparse<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>ArgumentParser</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pylab<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordflow">except</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment"># Input<sp/>parameters<sp/>definition<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17" refid="a00093_1a14b76a8235da778083f610cabe968c34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser<sp/>=<sp/>ArgumentParser(</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&apos;This<sp/>script<sp/>re-arrange<sp/>results<sp/>in<sp/>a<sp/>more<sp/>friendly<sp/>way<sp/>from<sp/>the<sp/>angle<sp/>analysis<sp/>in<sp/>time.&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>epilog=</highlight><highlight class="stringliteral">&apos;&apos;&apos;File<sp/>with<sp/>angle<sp/>trajectories<sp/>are<sp/>created.<sp/>&apos;&apos;&apos;</highlight><highlight class="normal">)<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser.add_argument(</highlight><highlight class="stringliteral">&apos;-p&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;--strPath&apos;</highlight><highlight class="normal">,<sp/>help=</highlight><highlight class="stringliteral">&apos;Path<sp/>where<sp/>files<sp/>are<sp/>stored&apos;</highlight><highlight class="normal">,<sp/>default=</highlight><highlight class="stringliteral">&apos;./&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser.add_argument(</highlight><highlight class="stringliteral">&apos;-c&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;--StrChems&apos;</highlight><highlight class="normal">,<sp/>help=</highlight><highlight class="stringliteral">&apos;Number<sp/>of<sp/>chemistries&apos;</highlight><highlight class="normal">,<sp/>default=</highlight><highlight class="stringliteral">&apos;4&apos;</highlight><highlight class="normal">,<sp/>type=int)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser.add_argument(</highlight><highlight class="stringliteral">&apos;-s&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;--SubStr&apos;</highlight><highlight class="normal">,<sp/>help=</highlight><highlight class="stringliteral">&apos;Substring<sp/>of<sp/>the<sp/>filenames<sp/>to<sp/>analyze&apos;</highlight><highlight class="normal">,<sp/>default=</highlight><highlight class="stringliteral">&apos;acsAttractorsAnalysisNOINFLUX_COSENO&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parser.add_argument(</highlight><highlight class="stringliteral">&apos;-x&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;--computeAngle&apos;</highlight><highlight class="normal">,<sp/>help=</highlight><highlight class="stringliteral">&apos;Select<sp/>if<sp/>the<sp/>cos<sp/>must<sp/>be<sp/>converted<sp/>in<sp/>angle&apos;</highlight><highlight class="normal">,<sp/>default=0,<sp/>type=int)</highlight></codeline>
+<codeline lineno="24" refid="a00093_1a0fef98b331f3de5212d309bd2d3556e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args<sp/>=<sp/>parser.parse_args()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Create<sp/>absolute<sp/>paths</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="a00093_1aff72277efad2fb1d2f51e95f6fefc288" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strPath<sp/>=<sp/>os.path.abspath(args.strPath)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Go<sp/>into<sp/>the<sp/>path<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.chdir(strPath)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Retrieve<sp/>the<sp/>list<sp/>of<sp/>file<sp/>to<sp/>analyze</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="a00093_1a4331412d1cdff7111cdc69adc31528c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strSubStrKey<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;*&apos;</highlight><highlight class="normal"><sp/>+<sp/>args.SubStr<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;*&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="a00093_1a353a268554f9ac8661c5e0142496f580" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>filesToAnal<sp/>=<sp/>sorted(glob.glob(os.path.join(strPath,strSubStrKey)))</highlight></codeline>
+<codeline lineno="35" refid="a00093_1abf8db6a4d0dc9132f54755c72c871471" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lenFilesToAnal<sp/>=<sp/>len(filesToAnal)</highlight></codeline>
+<codeline lineno="36" refid="a00093_1a4679690d186f44a3ad8e6eb3a545fd39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numOfTraj<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>n,<sp/>fileToAnal<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(filesToAnal):</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment"># Load<sp/>each<sp/>element<sp/>of<sp/>the<sp/>file<sp/>in<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="a00093_1a52808d1f82b263c51e9bfb9e18b053c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>np.array(map(list,<sp/>np.loadtxt(fileToAnal,<sp/>str)),<sp/>float)</highlight></codeline>
+<codeline lineno="40" refid="a00093_1ade03788f04a663a14a9abeae4e7ea0e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xsize<sp/>=<sp/>x.shape</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>n<sp/>==<sp/>0:</highlight></codeline>
+<codeline lineno="42" refid="a00093_1a565bd873618e4d135a9903fb70ee5981" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>run4Chem<sp/>=<sp/>xsize[0]/args.StrChems</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numOfTraj<sp/>=<sp/>((run4Chem<sp/>*<sp/>(run4Chem-1)<sp/>/<sp/>2.00)<sp/>+<sp/>run4Chem)<sp/>*<sp/>args.StrChems</highlight></codeline>
+<codeline lineno="44" refid="a00093_1aa7979c32d5499d000edacba8fcadd039" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>np.zeros((lenFilesToAnal,numOfTraj))</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Store<sp/>values<sp/>in<sp/>the<sp/>overall<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="a00093_1a7ce24ac1959d7d1512b663f20f3e3100" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="47" refid="a00093_1aa0ad135db98d635147ecbd1480de89df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chem<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="48" refid="a00093_1acb2620669fa00dd24be0687c86647b43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpHead<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>row<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(0,xsize[0]):</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>col<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(row,run4Chem*chem):</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>args.computeAngle<sp/>==<sp/>1:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y[n,pos]<sp/>=<sp/>np.arccos(x[row,col])<sp/>*<sp/>360.00<sp/>/<sp/>6.28</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#if<sp/>y[n,pos]<sp/>&gt;<sp/>0:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print<sp/>fileToAnal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print<sp/>row,<sp/>&quot;<sp/>&quot;,<sp/>col,<sp/>&quot;<sp/>&quot;,<sp/>x[row,col],<sp/>&quot;<sp/>&quot;,<sp/>np.arccos(float(x[row,col])),<sp/>&quot;<sp/>&quot;,<sp/>np.arccos(x[row,col])<sp/>*<sp/>360.00<sp/>/<sp/>6.28</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#raw_input(&quot;test&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y[n,pos]<sp/>=<sp/>x[row,col]</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>==<sp/>0):</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpHead<sp/>+=<sp/>str(chem)<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;.&apos;</highlight><highlight class="normal"><sp/>+<sp/>str(row)<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;-&apos;</highlight><highlight class="normal"><sp/>+<sp/>str(chem)<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;.&apos;</highlight><highlight class="normal"><sp/>+<sp/>str(col)<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;\t&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>+=<sp/>1</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(row<sp/>==<sp/>run4Chem*chem-1):</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chem<sp/>+=<sp/>1</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="a00093_1aa77abf10e3a92416282af2030df3b4b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;_arranged_&quot;</highlight><highlight class="normal"><sp/>+<sp/>args.SubStr<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.csv&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#np.savetxt(filename,<sp/>y,<sp/>delimiter=&apos;\t&apos;,<sp/>fmt=&apos;%.5f&apos;,<sp/>header=tmpHead)<sp/>(To<sp/>use<sp/>with<sp/>numpy<sp/>&gt;<sp/>1.7.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>np.savetxt(filename,<sp/>y,<sp/>delimiter=</highlight><highlight class="stringliteral">&apos;\t&apos;</highlight><highlight class="normal">,<sp/>fmt=</highlight><highlight class="stringliteral">&apos;%.5f&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;File<sp/>saved,<sp/>see<sp/>you<sp/>next<sp/>time...&quot;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/stats.m"/>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/underDevelopment/acsDynStatInTime.py"/>
   </compounddef>
 </doxygen>

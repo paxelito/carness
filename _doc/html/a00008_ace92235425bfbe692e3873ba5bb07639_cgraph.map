@@ -1,0 +1,13 @@
+<map id="environment::updateReactions" name="environment::updateReactions">
+<area shape="rect" id="node3" href="$a00069.html#a6d28311eff309499e66efb5d39a035f4" title="getIntRandom" alt="" coords="556,29,657,57"/>
+<area shape="rect" id="node5" href="$a00069.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="559,243,655,271"/>
+<area shape="rect" id="node7" href="$a00008.html#a4e26cc574e20a5afcfbbe5887109c5af" title="environment::returnPosSpecies\lAlreadyPresent" alt="" coords="259,117,461,161"/>
+<area shape="rect" id="node11" href="$a00008.html#a5160dec152ed0369fe8af9aff3253a9e" title="environment::notInverseReaction\lAlreadyCatalyzed" alt="" coords="255,235,465,279"/>
+<area shape="rect" id="node14" href="$a00069.html#a1cb9cc6ac8ec2ef62b8eb1970e73a11b" title="returnUniformSelection\l_LONG_IdFromVector" alt="" coords="283,51,437,95"/>
+<area shape="rect" id="node17" href="$a00008.html#abf45b6406f8c0e95c4c5edf6b374e112" title="environment::getNumberOf\lReactions" alt="" coords="519,403,695,447"/>
+<area shape="rect" id="node19" href="$a00008.html#a6feec5685b519ba0cdae0e5c59dffff0" title="environment::returnPosReaction\lAlreadyPresent" alt="" coords="257,419,463,463"/>
+<area shape="rect" id="node22" href="$a00069.html#a4135ff15fd24eb8fbfee3d00e1cfbf20" title="returnSelectionIdFromAWeight\lProbVectorAlreadyNormalized" alt="" coords="261,301,459,345"/>
+<area shape="rect" id="node25" href="$a00008.html#a21609adb1a83a4cb7eaec78a90acd624" title="environment::getNumberOf\lCatalysis" alt="" coords="519,495,695,539"/>
+<area shape="rect" id="node27" href="$a00008.html#ac4c90b07b8e75ea03e2ced0ea644a69f" title="environment::checkIfTheReaction\lIsAlreadyCatalyzedByThisSpecies" alt="" coords="251,536,469,580"/>
+<area shape="rect" id="node9" href="$a00008.html#ab98d4ad28b101f08279aa3458d5dfda3" title="environment::getNumberOf\lTheoreticalSpecies" alt="" coords="519,117,695,161"/>
+</map>

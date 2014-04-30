@@ -1,97 +1,950 @@
-\hypertarget{a00023}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/all\-Times\-Analysis.m File Reference}
-\label{a00023}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/all\-Times\-Analysis.\-m@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/all\-Times\-Analysis.\-m}}
+\hypertarget{a00023}{\section{/home/ale/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/\-Kill\-Spam.m File Reference}
+\label{a00023}\index{/home/ale/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/\-Kill\-Spam.\-m@{/home/ale/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/\-Kill\-Spam.\-m}}
 }
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-params do not prompt \hyperlink{a00023_a22372587c75be87d9f79609e8fc7a815}{figures} (0)
+\hyperlink{a00062_a4b4c670b101bf7a838f775e008fa6255}{function} \hyperlink{a00023_acfbe15da69f5cf2e58667e2b19b500e7}{Kill\-Spam} (\hyperlink{a00027_a51f20d6b1b54a2eee3be0e8adc96a0ae}{param}) \hyperlink{a00025_af32eb97339f1e9d37b5540de2cbc79c9}{current\-Dir}
 \item 
-O\-U\-T \hyperlink{a00023_a9be64ccaf83f215ee184d5aafefd7352}{disp} ('$|$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/$|$')
+\hyperlink{a00023_a60547755325ad4e7a25c614f83776ee7}{cd} (\hyperlink{a00026_a1e5a4863ab2b87f923e1d19e2da1f5ac}{param.\-tmp\-Path})
 \item 
-\hyperlink{a00023_a3bc93d8e435484e29a4cce2e7479360e}{disp} ('$|$-\/All \hyperlink{a00071_af3b4ff50e3fefed842dc431f3d32ff0e}{times} analysis...$|$')
+\hyperlink{a00023_a3015506d09b4ef94312c10ce85f4c3ad}{disp} ('$|$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/$|$')
+\item 
+\hyperlink{a00023_a16c8f16b559b22e1f31c9e00f75fe520}{disp} ('$|$-\/Killer \hyperlink{a00022_a170f8acb213f91bf71c77b1d20bceb33}{and} Spammer \hyperlink{a00026_abf6e5638a23a2531114655f3f690b70c}{analysis} is started$|$')
+\item 
+R\-E\-A\-D A\-L\-L T\-H\-E D\-I\-R\-E\-C\-T\-O\-R\-Y \\*
+C\-O\-N\-T\-A\-I\-N\-I\-N\-G S\-I\-M\-U\-L\-A\-T\-I\-O\-N\-S \hyperlink{a00024_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{a00023_aef429e9a25e0d4d70aa2037a59816956}{$\sim$isdir} ('0\-\_\-statistics') mkdir('0\-\_\-statistics')
+\item 
+\hyperlink{a00023_a365d011aeb5adcedc5cc75e7df629a6f}{cd} ('0\-\_\-statistics')
+\item 
+\hyperlink{a00023_a5e769bbbabcaddc548203741c7100228}{fclose} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid})
+\item 
+\hyperlink{a00023_a7eb00a69197e8905221801683c7ec02a}{cd} ('../')
+\item 
+\hyperlink{a00023_a609f02c862f2843febf3408f688be8e8}{disp} (strcat('$|$-\/Folder\-: ', \hyperlink{a00025_aae5035eb84b89176ed5b06e136325eff}{sim\-Dirs}(\hyperlink{a00025_a7265972fe485274cfff77a9bb07b8fce}{x}).\hyperlink{a00021_abbf559a76fab59203496b0847ab9502a}{name},'/res...'))
+\item 
+\hyperlink{a00023_a91cf6fbebedd86150a36e5ac3d5d3bfc}{break} \hyperlink{a00019_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00023_af998036b749d9fa6dd2365f9937279b6}{reactions\-Matrix} (\hyperlink{a00024_a9c951ebd5bc3f1adce943bee1255f4d6}{continua}, 1\-:6)
+\item 
+\hyperlink{a00023_a01fa14c111dc166a634dbb35b9cf9845}{cleavages\-Matrix} (\hyperlink{a00024_a89060c6979e5a4ff7b0985b35f295695}{cleavages}, 1\-:6)
+\item 
+\hyperlink{a00023_aa0f4762ac55d55c1b1ff073f9a5c3603}{condensations\-Matrix} (\hyperlink{a00024_ad3aa27d88a7e9d77d8334155860269bb}{condensations}, 1\-:6)
+\item 
+\hyperlink{a00019_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00023_acd65be0940a1307851b57c0d864fd32a}{catalysis\-Matrix} (\hyperlink{a00024_a9c951ebd5bc3f1adce943bee1255f4d6}{continua}, 1\-:4)
+\item 
+\hyperlink{a00023_aa5604b86cead7c2e2115f5e809f94465}{outliers\-Matrix} (\hyperlink{a00024_a60cfb1ca20cbbc81b85a8f56658b7c99}{out\-Rows}, 1\-:6)
+\item 
+\hyperlink{a00023_a70d494ea7ebc6a0b4ed59c685a43b83a}{if} ((\hyperlink{a00024_a9733b61dd859b1133aa3aa849cf70cbc}{outliers\-Matrix}(\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i}, 2)==1)\&\&(\hyperlink{a00024_a98a8838a85ed24032563a44271b1525a}{check2}==1 \&\&\hyperlink{a00024_adfd17509248a56986475a25ee50fe488}{check3}==1))$|$$|$(\hyperlink{a00024_a9733b61dd859b1133aa3aa849cf70cbc}{outliers\-Matrix}(\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i}
+\item 
+\hyperlink{a00023_ab372fd9c8bb38cf3c78e995c0698b0ca}{killers\-Matrix} (\hyperlink{a00024_a0e22d9868b850c50dfc13f5d28db8c30}{kill\-Rows}, 1\-:6)
+\item 
+\hyperlink{a00023_a62080a60371e18b8bd9ea0262d930070}{killer\-Catalysts} (\hyperlink{a00023_a62227634d3ceda9bf932c630583da2b9}{K\-C\-Rows}, 1)
+\item 
+\hyperlink{a00023_a62e3e9df13337b149661778a56e2f312}{killer\-Catalysts} (\hyperlink{a00023_a62227634d3ceda9bf932c630583da2b9}{K\-C\-Rows}, 2)
+\item 
+\hyperlink{a00023_af035121149449dd8d2faa4421fb6c880}{killer\-Catalysts} (\hyperlink{a00023_a62227634d3ceda9bf932c630583da2b9}{K\-C\-Rows}, 3)
+\item 
+id \hyperlink{a00023_af25e9bc98875e5cf5352941b503dfb13}{K\-S\-Rows} ()
+\item 
+\hyperlink{a00024_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{a00023_a9733b61dd859b1133aa3aa849cf70cbc}{outliers\-Matrix} (\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i}, 2)
+\item 
+\hyperlink{a00023_a1ca01da7acca382062218cc1d882bc94}{K\-S\-Matrix} (\hyperlink{a00024_af25e9bc98875e5cf5352941b503dfb13}{K\-S\-Rows}, 1\-:6)
+\item 
+\hyperlink{a00023_ab18f9eabd5f873bd17d226d786bc22df}{K\-S\-Matrix} (\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i},\-:)
+\item 
+\hyperlink{a00023_a3be68e5139c43e01dd6e45facd01913e}{K\-S\-Catalysts} (\hyperlink{a00023_a56aa0b3ac00410dc36f9043c641ae205}{K\-S\-C\-Rows}, 1)
+\item 
+\hyperlink{a00023_a2a6234a34a90f619ed2f13c9563cdc32}{K\-S\-Catalysts} (\hyperlink{a00023_a56aa0b3ac00410dc36f9043c641ae205}{K\-S\-C\-Rows}, 2)
+\item 
+\hyperlink{a00023_a07c9da4b6bdc26219ccd9ed9e328987c}{K\-S\-Catalysts} (\hyperlink{a00023_a56aa0b3ac00410dc36f9043c641ae205}{K\-S\-C\-Rows}, 3)
+\item 
+\hyperlink{a00023_a76c07bbe1f939c5ee01da02f76f8bdff}{if} ((\hyperlink{a00024_a9733b61dd859b1133aa3aa849cf70cbc}{outliers\-Matrix}(\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i}, 2)==1)\&\&(\hyperlink{a00024_a98a8838a85ed24032563a44271b1525a}{check2}==0 \&\&\hyperlink{a00024_adfd17509248a56986475a25ee50fe488}{check3}==0))$|$$|$(\hyperlink{a00024_a9733b61dd859b1133aa3aa849cf70cbc}{outliers\-Matrix}(\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i}
+\item 
+\hyperlink{a00023_aeea853e888e4614a63ee71bd8368439c}{Spammers\-Matrix} (\hyperlink{a00024_aa9cffa4c2d9962c67a719b05a414e478}{Spam\-Rows}, 1\-:6)
+\item 
+\hyperlink{a00024_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{a00024_aa9cffa4c2d9962c67a719b05a414e478}{Spam\-Rows} \hyperlink{a00023_a85b94912a98c3feaa48ffdd525d4ff9c}{Spammers\-Matrix} (\-:, 7)
+\item 
+\hyperlink{a00023_a7688a802090342c369d2d6040e3e8a00}{Spammers\-Matrix} (\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i},\-:)
+\item 
+\hyperlink{a00025_af5946383720aa572eb93e1e63afc23c2}{else} \hyperlink{a00023_a5bca8ffaecd726e70d088f2e00c9b4e0}{Spammers\-Matrix} (\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i}, 7)
+\item 
+\hyperlink{a00023_ae05cc2cc4068134bc594222869ef5918}{spammer\-Catalysts} (\hyperlink{a00023_a56aa0b3ac00410dc36f9043c641ae205}{K\-S\-C\-Rows}, 1)
+\item 
+\hyperlink{a00023_ade7eeff57f966a13f6088dbe9bfc7963}{spammer\-Catalysts} (\hyperlink{a00023_a56aa0b3ac00410dc36f9043c641ae205}{K\-S\-C\-Rows}, 2)
+\item 
+\hyperlink{a00023_a8af050077bbbc9c6de5a7325eb5d6dac}{spammer\-Catalysts} (\hyperlink{a00023_a56aa0b3ac00410dc36f9043c641ae205}{K\-S\-C\-Rows}, 3)
+\item 
+\hyperlink{a00023_a21172d88d238291f06b91067ea53f814}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'N\-E\-T\%d\textbackslash{}n\textbackslash{}n', \hyperlink{a00025_a7265972fe485274cfff77a9bb07b8fce}{x})
+\item 
+\hyperlink{a00023_a2bff3632fad7bca512140377cbce79ef}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'K\-I\-L\-L\-E\-R\-S\textbackslash{}n\textbackslash{}n')
+\item 
+\hyperlink{a00019_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00023_a0921b3966bd3417e73b391d1e3d61c72}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\textbackslash{}n\textbackslash{}n')
+\item 
+\hyperlink{a00023_abe270c443eed92d533e6e91da4fe0806}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'Catalysts\textbackslash{}n\textbackslash{}n')
+\item 
+\hyperlink{a00023_ac0d2993e075081dbeec25bf007d724ca}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\%d\textbackslash{}t', \hyperlink{a00023_af035121149449dd8d2faa4421fb6c880}{killer\-Catalysts}(\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i}, 2))
+\item 
+\hyperlink{a00023_ad3c1eceb2ed9ceccee531f6cecb6f22c}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\%d\textbackslash{}n\textbackslash{}n', \hyperlink{a00023_af035121149449dd8d2faa4421fb6c880}{killer\-Catalysts}(\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i}, 3))
+\item 
+\hyperlink{a00019_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00023_a71d0eb815b3a7bd6b61df109c8d61f7a}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'K\-I\-L\-L\-E\-R\-S-\/S\-P\-A\-M\-M\-E\-R\-S\textbackslash{}n\textbackslash{}n')
+\item 
+\hyperlink{a00023_a6fe14ff39a52618ca1e4d2863e9ff1e6}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\%d\textbackslash{}t', \hyperlink{a00023_a07c9da4b6bdc26219ccd9ed9e328987c}{K\-S\-Catalysts}(\hyperlink{a00023_a56aa0b3ac00410dc36f9043c641ae205}{K\-S\-C\-Rows}, 2))
+\item 
+\hyperlink{a00023_af3409629d2505f7b20626e054a557f69}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\%d\textbackslash{}n\textbackslash{}n', \hyperlink{a00023_a07c9da4b6bdc26219ccd9ed9e328987c}{K\-S\-Catalysts}(\hyperlink{a00023_a56aa0b3ac00410dc36f9043c641ae205}{K\-S\-C\-Rows}, 3))
+\item 
+\hyperlink{a00019_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00023_a15b6f7d121637092f493c8651442be69}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'S\-P\-A\-M\-M\-E\-R\-S\textbackslash{}n\textbackslash{}n')
+\item 
+\hyperlink{a00023_a0033ee10cc7a02cb987a451b832a44b1}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\%d\textbackslash{}t', \hyperlink{a00023_a8af050077bbbc9c6de5a7325eb5d6dac}{spammer\-Catalysts}(\hyperlink{a00023_a4c9731061d3ea74c9ad35793b15491ab}{S\-C\-Rows}, 2))
+\item 
+\hyperlink{a00023_a0d1eade83ed9a6fcb17620c5a3c8d15f}{fprintf} (\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\%d\textbackslash{}n\textbackslash{}n', \hyperlink{a00023_a8af050077bbbc9c6de5a7325eb5d6dac}{spammer\-Catalysts}(\hyperlink{a00023_a4c9731061d3ea74c9ad35793b15491ab}{S\-C\-Rows}, 3))
+\item 
+\hyperlink{a00019_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00023_ad0eeb1e0227e246587ed6adcb8d829dc}{cd} (\hyperlink{a00025_af32eb97339f1e9d37b5540de2cbc79c9}{current\-Dir})
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{a00023_a370f3dd25136a73d619eba0aa2e3bb4b}{function} \mbox{[}\hyperlink{a00028_a34c820385e9209f49c18739329ad9206}{out}\mbox{]}
+\hyperlink{a00019_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00023_ad509473eed851f9f5ff4157c02ec8618}{tmp\-Folder} = strcat('$\ast$',\hyperlink{a00026_aa671e3345005bd599e662bcaa115b18a}{param.\-sim\-Folder},'$\ast$')
 \item 
-params \hyperlink{a00023_a63b4c2789d7e1513024181d12e4f1b6b}{figure\-Visible} = prompt \hyperlink{a00023_a22372587c75be87d9f79609e8fc7a815}{figures} (1)
+\hyperlink{a00023_aae5035eb84b89176ed5b06e136325eff}{sim\-Dirs} = \hyperlink{a00065_a4ca269cf93df1b512b52174c1a256fe5}{dir}(\hyperlink{a00023_ad509473eed851f9f5ff4157c02ec8618}{tmp\-Folder})
 \item 
-params \hyperlink{a00023_a5318eae09f2b8ac76b2d6df39ba9c1cd}{delta\-T} = Delta T
+\hyperlink{a00023_ae9011d40c6f13e68e6f07156e0da7c5d}{fid} = fopen('A\-L\-L\-\_\-results\-\_\-\-T\-S1.\-txt','w')
 \item 
-params \hyperlink{a00023_aa9758857dd92f7845934f06daa7c4120}{tot\-T} = total time of the \hyperlink{a00071_a096e1441156fd2c744baece86d6b295c}{simulation}
+for \hyperlink{a00023_a7265972fe485274cfff77a9bb07b8fce}{x}
 \item 
-\hyperlink{a00023_af32eb97339f1e9d37b5540de2cbc79c9}{current\-Dir} = \hyperlink{a00068_a767271ad82d244871370a0f0e6a7f8a4}{cd}()
+\hyperlink{a00023_a1faaaae288fc8ca4ed1751049aa2f84f}{blocked} = 0\-:\hyperlink{a00026_aad7be196243f3c9ca83dfee7c9111014}{param.\-last\-Species}
+\item 
+creating \hyperlink{a00015}{reactions} matrix \hyperlink{a00023_ad75735665492cabd747370126464fddf}{r\-Files} = \hyperlink{a00065_a4ca269cf93df1b512b52174c1a256fe5}{dir}('\hyperlink{a00015}{reactions}$\ast$')
+\item 
+\hyperlink{a00023_a4c72dba1fe2ee2fbcc699262a8d0c624}{reactions\-File} = \hyperlink{a00024_ad75735665492cabd747370126464fddf}{r\-Files}(length(\hyperlink{a00024_ad75735665492cabd747370126464fddf}{r\-Files})-\/1).\hyperlink{a00021_abbf559a76fab59203496b0847ab9502a}{name}
+\item 
+\hyperlink{a00023_a9c951ebd5bc3f1adce943bee1255f4d6}{continua} = 1
+\item 
+\hyperlink{a00023_ac52097a2745fcef31eb175d2e9485845}{reactions\-Matrix} = 0
+\item 
+while \hyperlink{a00024_a9c951ebd5bc3f1adce943bee1255f4d6}{continua} \hyperlink{a00023_a436a6968124e560649654a4abbd9dac6}{r\-Values} = \hyperlink{a00019_a028ac102a731e62fb0a7439381f566c1}{fscanf}(\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\%d',7)
+\item 
+\hyperlink{a00023_a6bd08e37edf4151f5f6d1fc27a6f227a}{stop} = \hyperlink{a00019_ac10445404f4b83302522defb59e25ef7}{isempty}(\hyperlink{a00024_a436a6968124e560649654a4abbd9dac6}{r\-Values})
+\item 
+dividing into condensations \\*
+\hyperlink{a00022_a170f8acb213f91bf71c77b1d20bceb33}{and} \hyperlink{a00024_a89060c6979e5a4ff7b0985b35f295695}{cleavages} \hyperlink{a00023_ad3aa27d88a7e9d77d8334155860269bb}{condensations} = 0
+\item 
+\hyperlink{a00023_a89060c6979e5a4ff7b0985b35f295695}{cleavages} = 0
+\item 
+\hyperlink{a00023_a1a691fb4f955887edfa538e91479fafe}{cleavages\-Matrix} = 0
+\item 
+\hyperlink{a00023_afaba8eef2f8f4e4dda2e893a19e55a94}{condensations\-Matrix} = 0
+\item 
+for \hyperlink{a00023_ac870e1cd47f6d78f16a98a24c8392fcf}{i}
+\item 
+creating \hyperlink{a00006}{catalysis} matrix \hyperlink{a00023_a9eab57ccb42a39c704f47dc30e4f4515}{c\-Files} = \hyperlink{a00065_a4ca269cf93df1b512b52174c1a256fe5}{dir}('\hyperlink{a00006}{catalysis}$\ast$')
+\item 
+\hyperlink{a00023_a33e70cf5b45cb59005b82d30202f0b69}{catalysis\-File} = \hyperlink{a00024_a9eab57ccb42a39c704f47dc30e4f4515}{c\-Files}(length(\hyperlink{a00024_a9eab57ccb42a39c704f47dc30e4f4515}{c\-Files})).\hyperlink{a00021_abbf559a76fab59203496b0847ab9502a}{name}
+\item 
+\hyperlink{a00023_a0810027f58d6be965e44b7b84c44ace8}{catalysis\-Matrix} = 0
+\item 
+while \hyperlink{a00024_a9c951ebd5bc3f1adce943bee1255f4d6}{continua} \hyperlink{a00023_ad4ba7701967c1da20171228afccb7081}{c\-Values} = \hyperlink{a00019_a028ac102a731e62fb0a7439381f566c1}{fscanf}(\hyperlink{a00025_ae9011d40c6f13e68e6f07156e0da7c5d}{fid},'\%\hyperlink{a00019_a9c5a71c46b1abb8b7df5ebeac6c81535}{f}',7)
+\item 
+\hyperlink{a00023_a91cf6fbebedd86150a36e5ac3d5d3bfc}{break}
+\item 
+identifying outliers \hyperlink{a00023_aeea253cb98a56047ef20ceed86e2f0ea}{reactions\-Counters} = \hyperlink{a00024_af998036b749d9fa6dd2365f9937279b6}{reactions\-Matrix}(\-:,6)
+\item 
+\hyperlink{a00023_a60cfb1ca20cbbc81b85a8f56658b7c99}{out\-Rows} = 0
+\item 
+\hyperlink{a00023_ad8a18b407726bf44299c9bcf5d1389ff}{outliers\-Matrix} = 0
+\item 
+\hyperlink{a00024_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{a00023_a07c9e68cdbafe572c04d3112d64deb88}{possible}
+\item 
+identifying killers \hyperlink{a00023_a747bc1d10158c78e88e314825ed41a13}{kill\-Rows} = 0
+\item 
+\hyperlink{a00023_a929016802e1ede2217a41240a6974fa6}{killers\-Matrix} = 0
+\item 
+\hyperlink{a00023_a98a8838a85ed24032563a44271b1525a}{check2} = ismember(\hyperlink{a00024_a9733b61dd859b1133aa3aa849cf70cbc}{outliers\-Matrix}(\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i},4),\hyperlink{a00024_a1faaaae288fc8ca4ed1751049aa2f84f}{blocked})
+\item 
+\hyperlink{a00023_adfd17509248a56986475a25ee50fe488}{check3} = ismember(\hyperlink{a00024_a9733b61dd859b1133aa3aa849cf70cbc}{outliers\-Matrix}(\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i},5),\hyperlink{a00024_a1faaaae288fc8ca4ed1751049aa2f84f}{blocked})
+\item 
+\hyperlink{a00023_a1a42aaee01b2cc37a3835e0fe30cf9d3}{killer\-Catalysts} = 0
+\item 
+\hyperlink{a00023_a62227634d3ceda9bf932c630583da2b9}{K\-C\-Rows} = 0
+\item 
+for \hyperlink{a00023_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j}
+\item 
+\hyperlink{a00023_aea43faf8d3d68de03c645edc96b0c1c0}{K\-S\-Matrix} = 0
+\item 
+\hyperlink{a00023_ab21c5bac10f7ac73374c002e908df5ac}{check4} = xor(\hyperlink{a00024_a98a8838a85ed24032563a44271b1525a}{check2},\hyperlink{a00024_adfd17509248a56986475a25ee50fe488}{check3})
+\item 
+\hyperlink{a00023_a0c9b097ea561ab0f23a69197786a243a}{check6} = ismember(\hyperlink{a00024_ab18f9eabd5f873bd17d226d786bc22df}{K\-S\-Matrix}(\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i},5),\hyperlink{a00024_a90d1d83fdcae4fb1cba5129d5820d33c}{cleavages\-Matrix}(\-:,3))
+\item 
+\hyperlink{a00023_a0bbe7d2ceb7b248f0826d069d5a1b735}{check7} = ismember(\hyperlink{a00024_ab18f9eabd5f873bd17d226d786bc22df}{K\-S\-Matrix}(\hyperlink{a00065_ad3efca1ea6e3333daf30719ee0501862}{i},5),\hyperlink{a00024_a244eec8903103b5bbddef461276286ce}{catalysis\-Matrix}(\-:,2))
+\item 
+\hyperlink{a00024_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{a00023_abee07c73829351d18ba356c86e3e096d}{check5}
+\item 
+\hyperlink{a00023_a67eb148eecfd241148ce3711f058ac2b}{check\-K\-S\-M} = \hyperlink{a00019_ac10445404f4b83302522defb59e25ef7}{isempty}(\hyperlink{a00024_ab18f9eabd5f873bd17d226d786bc22df}{K\-S\-Matrix})
+\item 
+\hyperlink{a00023_a25c085d4378366ed81f0f97547802c8f}{K\-S\-Catalysts} = 0
+\item 
+\hyperlink{a00023_a56aa0b3ac00410dc36f9043c641ae205}{K\-S\-C\-Rows} = 0
+\item 
+\hyperlink{a00019_afb358f48b1646c750fb9da6c6585be2b}{end} identifying spammers \hyperlink{a00023_a834631ce660b52d721b1dd57b60d5251}{Spam\-Rows} = 0
+\item 
+\hyperlink{a00023_af1801174c9397e7fad0394203f120c31}{Spammers\-Matrix} = 0
+\item 
+\hyperlink{a00019_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00023_ae80cf4c5bf659247b45bbad5d22dec52}{check\-S\-M} = \hyperlink{a00019_ac10445404f4b83302522defb59e25ef7}{isempty}(\hyperlink{a00024_a5bca8ffaecd726e70d088f2e00c9b4e0}{Spammers\-Matrix})
+\item 
+\hyperlink{a00023_aac2cfcb79655911b15197407f3e8c51c}{spammers\-Catalysts} = 0
+\item 
+\hyperlink{a00023_a4c9731061d3ea74c9ad35793b15491ab}{S\-C\-Rows} = 0
+\item 
+\hyperlink{a00023_ac9c871eaf7455dc0d274ec20c5c69ac2}{check\-K\-M} = \hyperlink{a00019_ac10445404f4b83302522defb59e25ef7}{isempty}(\hyperlink{a00024_ab372fd9c8bb38cf3c78e995c0698b0ca}{killers\-Matrix})
+\item 
+\hyperlink{a00023_af5946383720aa572eb93e1e63afc23c2}{else} \mbox{[}\hyperlink{a00025_ac862e7284527eb913b1351c8bfb8e079}{r} \hyperlink{a00029_a6be92348ba85ef257b11d06209e1d7b6}{c}\mbox{]} = \hyperlink{a00056_ae113ea7f9e515a12ac4b5595c6faf61e}{size}(\hyperlink{a00024_ab372fd9c8bb38cf3c78e995c0698b0ca}{killers\-Matrix})
+\item 
+clear \hyperlink{a00023_ac862e7284527eb913b1351c8bfb8e079}{r}
+\item 
+clear \hyperlink{a00023_a8e54ca14679a1ce9245a3b7d55d95570}{c}
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{a00023_a9be64ccaf83f215ee184d5aafefd7352}{\index{all\-Times\-Analysis.\-m@{all\-Times\-Analysis.\-m}!disp@{disp}}
-\index{disp@{disp}!allTimesAnalysis.m@{all\-Times\-Analysis.\-m}}
+\hypertarget{a00023_acd65be0940a1307851b57c0d864fd32a}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!catalysis\-Matrix@{catalysis\-Matrix}}
+\index{catalysis\-Matrix@{catalysis\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{catalysis\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} catalysis\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf continua}}]{, }
+\item[{1\-:4}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_acd65be0940a1307851b57c0d864fd32a}
+\hypertarget{a00023_a60547755325ad4e7a25c614f83776ee7}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!cd@{cd}}
+\index{cd@{cd}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{cd}]{\setlength{\rightskip}{0pt plus 5cm}cd (
+\begin{DoxyParamCaption}
+\item[{param.}]{tmp\-Path}
+\end{DoxyParamCaption}
+)}}\label{a00023_a60547755325ad4e7a25c614f83776ee7}
+\hypertarget{a00023_a365d011aeb5adcedc5cc75e7df629a6f}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!cd@{cd}}
+\index{cd@{cd}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{cd}]{\setlength{\rightskip}{0pt plus 5cm}cd (
+\begin{DoxyParamCaption}
+\item[{'0\-\_\-statistics'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a365d011aeb5adcedc5cc75e7df629a6f}
+\hypertarget{a00023_a7eb00a69197e8905221801683c7ec02a}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!cd@{cd}}
+\index{cd@{cd}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{cd}]{\setlength{\rightskip}{0pt plus 5cm}cd (
+\begin{DoxyParamCaption}
+\item[{'../'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a7eb00a69197e8905221801683c7ec02a}
+\hypertarget{a00023_ad0eeb1e0227e246587ed6adcb8d829dc}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!cd@{cd}}
+\index{cd@{cd}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{cd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} cd (
+\begin{DoxyParamCaption}
+\item[{{\bf current\-Dir}}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_ad0eeb1e0227e246587ed6adcb8d829dc}
+\hypertarget{a00023_a01fa14c111dc166a634dbb35b9cf9845}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!cleavages\-Matrix@{cleavages\-Matrix}}
+\index{cleavages\-Matrix@{cleavages\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{cleavages\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}cleavages\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf cleavages}}]{, }
+\item[{1\-:6}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a01fa14c111dc166a634dbb35b9cf9845}
+\hypertarget{a00023_aa0f4762ac55d55c1b1ff073f9a5c3603}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!condensations\-Matrix@{condensations\-Matrix}}
+\index{condensations\-Matrix@{condensations\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{condensations\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}condensations\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf condensations}}]{, }
+\item[{1\-:6}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_aa0f4762ac55d55c1b1ff073f9a5c3603}
+\hypertarget{a00023_a3015506d09b4ef94312c10ce85f4c3ad}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!disp@{disp}}
+\index{disp@{disp}!KillSpam.m@{Kill\-Spam.\-m}}
 \subsubsection[{disp}]{\setlength{\rightskip}{0pt plus 5cm}disp (
 \begin{DoxyParamCaption}
-\item[{'$|$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/$|$'}]{}
+\item[{'$|$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/$|$'}]{}
 \end{DoxyParamCaption}
-)}}\label{a00023_a9be64ccaf83f215ee184d5aafefd7352}
-\hypertarget{a00023_a3bc93d8e435484e29a4cce2e7479360e}{\index{all\-Times\-Analysis.\-m@{all\-Times\-Analysis.\-m}!disp@{disp}}
-\index{disp@{disp}!allTimesAnalysis.m@{all\-Times\-Analysis.\-m}}
+)}}\label{a00023_a3015506d09b4ef94312c10ce85f4c3ad}
+\hypertarget{a00023_a16c8f16b559b22e1f31c9e00f75fe520}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!disp@{disp}}
+\index{disp@{disp}!KillSpam.m@{Kill\-Spam.\-m}}
 \subsubsection[{disp}]{\setlength{\rightskip}{0pt plus 5cm}disp (
 \begin{DoxyParamCaption}
-\item[{'$|$-\/All {\bf times} analysis...$|$'}]{}
+\item[{'$|$-\/Killer {\bf and} Spammer {\bf analysis} is started$|$'}]{}
 \end{DoxyParamCaption}
-)}}\label{a00023_a3bc93d8e435484e29a4cce2e7479360e}
-\hypertarget{a00023_a22372587c75be87d9f79609e8fc7a815}{\index{all\-Times\-Analysis.\-m@{all\-Times\-Analysis.\-m}!figures@{figures}}
-\index{figures@{figures}!allTimesAnalysis.m@{all\-Times\-Analysis.\-m}}
-\subsubsection[{figures}]{\setlength{\rightskip}{0pt plus 5cm}params do not prompt figures (
+)}}\label{a00023_a16c8f16b559b22e1f31c9e00f75fe520}
+\hypertarget{a00023_a609f02c862f2843febf3408f688be8e8}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!disp@{disp}}
+\index{disp@{disp}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{disp}]{\setlength{\rightskip}{0pt plus 5cm}disp (
 \begin{DoxyParamCaption}
-\item[{0}]{}
+\item[{strcat('$|$-\/Folder\-: ', {\bf sim\-Dirs}({\bf x}).{\bf name},'/res...')}]{}
 \end{DoxyParamCaption}
-)}}\label{a00023_a22372587c75be87d9f79609e8fc7a815}
+)}}\label{a00023_a609f02c862f2843febf3408f688be8e8}
+\hypertarget{a00023_a5e769bbbabcaddc548203741c7100228}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fclose@{fclose}}
+\index{fclose@{fclose}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fclose}]{\setlength{\rightskip}{0pt plus 5cm}fclose (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a5e769bbbabcaddc548203741c7100228}
+\hypertarget{a00023_a21172d88d238291f06b91067ea53f814}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'N\-E\-T\%d\textbackslash{}n\textbackslash{}n'}]{, }
+\item[{{\bf x}}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a21172d88d238291f06b91067ea53f814}
+\hypertarget{a00023_a2bff3632fad7bca512140377cbce79ef}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'K\-I\-L\-L\-E\-R\-S\textbackslash{}n\textbackslash{}n'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a2bff3632fad7bca512140377cbce79ef}
+\hypertarget{a00023_a0921b3966bd3417e73b391d1e3d61c72}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'\textbackslash{}n\textbackslash{}n'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a0921b3966bd3417e73b391d1e3d61c72}
+\hypertarget{a00023_abe270c443eed92d533e6e91da4fe0806}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'Catalysts\textbackslash{}n\textbackslash{}n'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_abe270c443eed92d533e6e91da4fe0806}
+\hypertarget{a00023_ac0d2993e075081dbeec25bf007d724ca}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'\%d\textbackslash{}t'}]{, }
+\item[{{\bf killer\-Catalysts}({\bf i}, 2)}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_ac0d2993e075081dbeec25bf007d724ca}
+\hypertarget{a00023_ad3c1eceb2ed9ceccee531f6cecb6f22c}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'\%d\textbackslash{}n\textbackslash{}n'}]{, }
+\item[{{\bf killer\-Catalysts}({\bf i}, 3)}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_ad3c1eceb2ed9ceccee531f6cecb6f22c}
+\hypertarget{a00023_a71d0eb815b3a7bd6b61df109c8d61f7a}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'K\-I\-L\-L\-E\-R\-S-\/S\-P\-A\-M\-M\-E\-R\-S\textbackslash{}n\textbackslash{}n'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a71d0eb815b3a7bd6b61df109c8d61f7a}
+\hypertarget{a00023_a6fe14ff39a52618ca1e4d2863e9ff1e6}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'\%d\textbackslash{}t'}]{, }
+\item[{{\bf K\-S\-Catalysts}({\bf K\-S\-C\-Rows}, 2)}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a6fe14ff39a52618ca1e4d2863e9ff1e6}
+\hypertarget{a00023_af3409629d2505f7b20626e054a557f69}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'\%d\textbackslash{}n\textbackslash{}n'}]{, }
+\item[{{\bf K\-S\-Catalysts}({\bf K\-S\-C\-Rows}, 3)}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_af3409629d2505f7b20626e054a557f69}
+\hypertarget{a00023_a15b6f7d121637092f493c8651442be69}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'S\-P\-A\-M\-M\-E\-R\-S\textbackslash{}n\textbackslash{}n'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a15b6f7d121637092f493c8651442be69}
+\hypertarget{a00023_a0033ee10cc7a02cb987a451b832a44b1}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'\%d\textbackslash{}t'}]{, }
+\item[{{\bf spammer\-Catalysts}({\bf S\-C\-Rows}, 2)}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a0033ee10cc7a02cb987a451b832a44b1}
+\hypertarget{a00023_a0d1eade83ed9a6fcb17620c5a3c8d15f}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf fid}}]{, }
+\item[{'\%d\textbackslash{}n\textbackslash{}n'}]{, }
+\item[{{\bf spammer\-Catalysts}({\bf S\-C\-Rows}, 3)}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a0d1eade83ed9a6fcb17620c5a3c8d15f}
+\hypertarget{a00023_a70d494ea7ebc6a0b4ed59c685a43b83a}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!if@{if}}
+\index{if@{if}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{({\bf outliers\-Matrix}({\bf i}, 2)==1)\&\&({\bf check2}==1 \&\&{\bf check3}==1)}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a70d494ea7ebc6a0b4ed59c685a43b83a}
+\hypertarget{a00023_a76c07bbe1f939c5ee01da02f76f8bdff}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!if@{if}}
+\index{if@{if}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{({\bf outliers\-Matrix}({\bf i}, 2)==1)\&\&({\bf check2}==0 \&\&{\bf check3}==0)}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a76c07bbe1f939c5ee01da02f76f8bdff}
+\hypertarget{a00023_a62080a60371e18b8bd9ea0262d930070}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!killer\-Catalysts@{killer\-Catalysts}}
+\index{killer\-Catalysts@{killer\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{killer\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}killer\-Catalysts (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-C\-Rows}}]{, }
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a62080a60371e18b8bd9ea0262d930070}
+\hypertarget{a00023_a62e3e9df13337b149661778a56e2f312}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!killer\-Catalysts@{killer\-Catalysts}}
+\index{killer\-Catalysts@{killer\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{killer\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}killer\-Catalysts (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-C\-Rows}}]{, }
+\item[{2}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a62e3e9df13337b149661778a56e2f312}
+\hypertarget{a00023_af035121149449dd8d2faa4421fb6c880}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!killer\-Catalysts@{killer\-Catalysts}}
+\index{killer\-Catalysts@{killer\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{killer\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}killer\-Catalysts (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-C\-Rows}}]{, }
+\item[{3}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_af035121149449dd8d2faa4421fb6c880}
+\hypertarget{a00023_ab372fd9c8bb38cf3c78e995c0698b0ca}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!killers\-Matrix@{killers\-Matrix}}
+\index{killers\-Matrix@{killers\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{killers\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}killers\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf kill\-Rows}}]{, }
+\item[{1\-:6}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_ab372fd9c8bb38cf3c78e995c0698b0ca}
+\hypertarget{a00023_acfbe15da69f5cf2e58667e2b19b500e7}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!Kill\-Spam@{Kill\-Spam}}
+\index{Kill\-Spam@{Kill\-Spam}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{Kill\-Spam}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} Kill\-Spam (
+\begin{DoxyParamCaption}
+\item[{{\bf param}}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_acfbe15da69f5cf2e58667e2b19b500e7}
+\hypertarget{a00023_a3be68e5139c43e01dd6e45facd01913e}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!K\-S\-Catalysts@{K\-S\-Catalysts}}
+\index{K\-S\-Catalysts@{K\-S\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{K\-S\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}K\-S\-Catalysts (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-S\-C\-Rows}}]{, }
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a3be68e5139c43e01dd6e45facd01913e}
+\hypertarget{a00023_a2a6234a34a90f619ed2f13c9563cdc32}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!K\-S\-Catalysts@{K\-S\-Catalysts}}
+\index{K\-S\-Catalysts@{K\-S\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{K\-S\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}K\-S\-Catalysts (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-S\-C\-Rows}}]{, }
+\item[{2}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a2a6234a34a90f619ed2f13c9563cdc32}
+\hypertarget{a00023_a07c9da4b6bdc26219ccd9ed9e328987c}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!K\-S\-Catalysts@{K\-S\-Catalysts}}
+\index{K\-S\-Catalysts@{K\-S\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{K\-S\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}K\-S\-Catalysts (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-S\-C\-Rows}}]{, }
+\item[{3}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a07c9da4b6bdc26219ccd9ed9e328987c}
+\hypertarget{a00023_a1ca01da7acca382062218cc1d882bc94}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!K\-S\-Matrix@{K\-S\-Matrix}}
+\index{K\-S\-Matrix@{K\-S\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{K\-S\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}K\-S\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-S\-Rows}}]{, }
+\item[{1\-:6}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a1ca01da7acca382062218cc1d882bc94}
+\hypertarget{a00023_ab18f9eabd5f873bd17d226d786bc22df}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!K\-S\-Matrix@{K\-S\-Matrix}}
+\index{K\-S\-Matrix@{K\-S\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{K\-S\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}K\-S\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf i}}]{, }
+\item[{\-:}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_ab18f9eabd5f873bd17d226d786bc22df}
+\hypertarget{a00023_af25e9bc98875e5cf5352941b503dfb13}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!K\-S\-Rows@{K\-S\-Rows}}
+\index{K\-S\-Rows@{K\-S\-Rows}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{K\-S\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}id K\-S\-Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{a00023_af25e9bc98875e5cf5352941b503dfb13}
+\hypertarget{a00023_aa5604b86cead7c2e2115f5e809f94465}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!outliers\-Matrix@{outliers\-Matrix}}
+\index{outliers\-Matrix@{outliers\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{outliers\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}outliers\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf out\-Rows}}]{, }
+\item[{1\-:6}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_aa5604b86cead7c2e2115f5e809f94465}
+\hypertarget{a00023_a9733b61dd859b1133aa3aa849cf70cbc}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!outliers\-Matrix@{outliers\-Matrix}}
+\index{outliers\-Matrix@{outliers\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{outliers\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} outliers\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf i}}]{, }
+\item[{2}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a9733b61dd859b1133aa3aa849cf70cbc}
+\hypertarget{a00023_af998036b749d9fa6dd2365f9937279b6}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!reactions\-Matrix@{reactions\-Matrix}}
+\index{reactions\-Matrix@{reactions\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{reactions\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf break} {\bf end} reactions\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf continua}}]{, }
+\item[{1\-:6}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_af998036b749d9fa6dd2365f9937279b6}
+\hypertarget{a00023_ae05cc2cc4068134bc594222869ef5918}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!spammer\-Catalysts@{spammer\-Catalysts}}
+\index{spammer\-Catalysts@{spammer\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{spammer\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}spammer\-Catalysts (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-S\-C\-Rows}}]{, }
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_ae05cc2cc4068134bc594222869ef5918}
+\hypertarget{a00023_ade7eeff57f966a13f6088dbe9bfc7963}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!spammer\-Catalysts@{spammer\-Catalysts}}
+\index{spammer\-Catalysts@{spammer\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{spammer\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}spammer\-Catalysts (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-S\-C\-Rows}}]{, }
+\item[{2}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_ade7eeff57f966a13f6088dbe9bfc7963}
+\hypertarget{a00023_a8af050077bbbc9c6de5a7325eb5d6dac}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!spammer\-Catalysts@{spammer\-Catalysts}}
+\index{spammer\-Catalysts@{spammer\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{spammer\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}spammer\-Catalysts (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-S\-C\-Rows}}]{, }
+\item[{3}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a8af050077bbbc9c6de5a7325eb5d6dac}
+\hypertarget{a00023_aeea853e888e4614a63ee71bd8368439c}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!Spammers\-Matrix@{Spammers\-Matrix}}
+\index{Spammers\-Matrix@{Spammers\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{Spammers\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}Spammers\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Spam\-Rows}}]{, }
+\item[{1\-:6}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_aeea853e888e4614a63ee71bd8368439c}
+\hypertarget{a00023_a85b94912a98c3feaa48ffdd525d4ff9c}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!Spammers\-Matrix@{Spammers\-Matrix}}
+\index{Spammers\-Matrix@{Spammers\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{Spammers\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} {\bf Spam\-Rows} Spammers\-Matrix (
+\begin{DoxyParamCaption}
+\item[{\-:}]{, }
+\item[{7}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a85b94912a98c3feaa48ffdd525d4ff9c}
+\hypertarget{a00023_a7688a802090342c369d2d6040e3e8a00}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!Spammers\-Matrix@{Spammers\-Matrix}}
+\index{Spammers\-Matrix@{Spammers\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{Spammers\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}Spammers\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf i}}]{, }
+\item[{\-:}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a7688a802090342c369d2d6040e3e8a00}
+\hypertarget{a00023_a5bca8ffaecd726e70d088f2e00c9b4e0}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!Spammers\-Matrix@{Spammers\-Matrix}}
+\index{Spammers\-Matrix@{Spammers\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{Spammers\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf else} Spammers\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf i}}]{, }
+\item[{7}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_a5bca8ffaecd726e70d088f2e00c9b4e0}
+\hypertarget{a00023_aef429e9a25e0d4d70aa2037a59816956}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!$\sim$isdir@{$\sim$isdir}}
+\index{$\sim$isdir@{$\sim$isdir}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{$\sim$isdir}]{\setlength{\rightskip}{0pt plus 5cm}R\-E\-A\-D A\-L\-L T\-H\-E D\-I\-R\-E\-C\-T\-O\-R\-Y C\-O\-N\-T\-A\-I\-N\-I\-N\-G S\-I\-M\-U\-L\-A\-T\-I\-O\-N\-S {\bf if} $\sim$isdir (
+\begin{DoxyParamCaption}
+\item[{'0\-\_\-statistics'}]{}
+\end{DoxyParamCaption}
+)}}\label{a00023_aef429e9a25e0d4d70aa2037a59816956}
 
 
 \subsection{Variable Documentation}
-\hypertarget{a00023_af32eb97339f1e9d37b5540de2cbc79c9}{\index{all\-Times\-Analysis.\-m@{all\-Times\-Analysis.\-m}!current\-Dir@{current\-Dir}}
-\index{current\-Dir@{current\-Dir}!allTimesAnalysis.m@{all\-Times\-Analysis.\-m}}
-\subsubsection[{current\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}current\-Dir = {\bf cd}()}}\label{a00023_af32eb97339f1e9d37b5540de2cbc79c9}
+\hypertarget{a00023_a1faaaae288fc8ca4ed1751049aa2f84f}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!blocked@{blocked}}
+\index{blocked@{blocked}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{blocked}]{\setlength{\rightskip}{0pt plus 5cm}blocked = 0\-:{\bf param.\-last\-Species}}}\label{a00023_a1faaaae288fc8ca4ed1751049aa2f84f}
 
 
-Definition at line 17 of file all\-Times\-Analysis.\-m.
+Definition at line 27 of file Kill\-Spam.\-m.
 
-\hypertarget{a00023_a5318eae09f2b8ac76b2d6df39ba9c1cd}{\index{all\-Times\-Analysis.\-m@{all\-Times\-Analysis.\-m}!delta\-T@{delta\-T}}
-\index{delta\-T@{delta\-T}!allTimesAnalysis.m@{all\-Times\-Analysis.\-m}}
-\subsubsection[{delta\-T}]{\setlength{\rightskip}{0pt plus 5cm}params delta\-T = Delta T}}\label{a00023_a5318eae09f2b8ac76b2d6df39ba9c1cd}
-
-
-Definition at line 9 of file all\-Times\-Analysis.\-m.
-
-\hypertarget{a00023_a63b4c2789d7e1513024181d12e4f1b6b}{\index{all\-Times\-Analysis.\-m@{all\-Times\-Analysis.\-m}!figure\-Visible@{figure\-Visible}}
-\index{figure\-Visible@{figure\-Visible}!allTimesAnalysis.m@{all\-Times\-Analysis.\-m}}
-\subsubsection[{figure\-Visible}]{\setlength{\rightskip}{0pt plus 5cm}params figure\-Visible = prompt {\bf figures} (1)}}\label{a00023_a63b4c2789d7e1513024181d12e4f1b6b}
+\hypertarget{a00023_a91cf6fbebedd86150a36e5ac3d5d3bfc}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!break@{break}}
+\index{break@{break}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{break}]{\setlength{\rightskip}{0pt plus 5cm}break}}\label{a00023_a91cf6fbebedd86150a36e5ac3d5d3bfc}
 
 
-Definition at line 8 of file all\-Times\-Analysis.\-m.
+Definition at line 74 of file Kill\-Spam.\-m.
 
-\hypertarget{a00023_a370f3dd25136a73d619eba0aa2e3bb4b}{\index{all\-Times\-Analysis.\-m@{all\-Times\-Analysis.\-m}!function@{function}}
-\index{function@{function}!allTimesAnalysis.m@{all\-Times\-Analysis.\-m}}
-\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}function\mbox{[}{\bf out}\mbox{]}}}\label{a00023_a370f3dd25136a73d619eba0aa2e3bb4b}
+\hypertarget{a00023_a8e54ca14679a1ce9245a3b7d55d95570}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!c@{c}}
+\index{c@{c}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{c}]{\setlength{\rightskip}{0pt plus 5cm}clear c}}\label{a00023_a8e54ca14679a1ce9245a3b7d55d95570}
+
+
+Definition at line 273 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a33e70cf5b45cb59005b82d30202f0b69}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!catalysis\-File@{catalysis\-File}}
+\index{catalysis\-File@{catalysis\-File}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{catalysis\-File}]{\setlength{\rightskip}{0pt plus 5cm}catalysis\-File = {\bf c\-Files}(length({\bf c\-Files})).{\bf name}}}\label{a00023_a33e70cf5b45cb59005b82d30202f0b69}
+
+
+Definition at line 65 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a0810027f58d6be965e44b7b84c44ace8}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!catalysis\-Matrix@{catalysis\-Matrix}}
+\index{catalysis\-Matrix@{catalysis\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{catalysis\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}catalysis\-Matrix = 0}}\label{a00023_a0810027f58d6be965e44b7b84c44ace8}
+
+
+Definition at line 68 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a9eab57ccb42a39c704f47dc30e4f4515}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!c\-Files@{c\-Files}}
+\index{c\-Files@{c\-Files}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{c\-Files}]{\setlength{\rightskip}{0pt plus 5cm}creating {\bf catalysis} matrix c\-Files = {\bf dir}('{\bf catalysis}$\ast$')}}\label{a00023_a9eab57ccb42a39c704f47dc30e4f4515}
+
+
+Definition at line 64 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a98a8838a85ed24032563a44271b1525a}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!check2@{check2}}
+\index{check2@{check2}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{check2}]{\setlength{\rightskip}{0pt plus 5cm}check2 = ismember({\bf outliers\-Matrix}({\bf i},4),{\bf blocked})}}\label{a00023_a98a8838a85ed24032563a44271b1525a}
+
+
+Definition at line 106 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_adfd17509248a56986475a25ee50fe488}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!check3@{check3}}
+\index{check3@{check3}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{check3}]{\setlength{\rightskip}{0pt plus 5cm}check3 = ismember({\bf outliers\-Matrix}({\bf i},5),{\bf blocked})}}\label{a00023_adfd17509248a56986475a25ee50fe488}
+
+
+Definition at line 107 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ab21c5bac10f7ac73374c002e908df5ac}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!check4@{check4}}
+\index{check4@{check4}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{check4}]{\setlength{\rightskip}{0pt plus 5cm}check4 = xor({\bf check2},{\bf check3})}}\label{a00023_ab21c5bac10f7ac73374c002e908df5ac}
+
+
+Definition at line 139 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_abee07c73829351d18ba356c86e3e096d}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!check5@{check5}}
+\index{check5@{check5}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{check5}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} check5}}\label{a00023_abee07c73829351d18ba356c86e3e096d}
 {\bfseries Initial value\-:}
 \begin{DoxyCode}
-= allTimesAnalysis(params)
-% \textcolor{keyword}{function} [out] = allTimesAnalysis(params)
-%
-
-%
-% INPUT
-%    params.tmpPath = simulations \hyperlink{a00071_af28466084b87af2cdc5c7b48f4661f2d}{path}
+== 1 || \hyperlink{a00023_a0c9b097ea561ab0f23a69197786a243a}{check6} == 1 || \hyperlink{a00023_a0bbe7d2ceb7b248f0826d069d5a1b735}{check7} == 1
+                    \hyperlink{a00023_af25e9bc98875e5cf5352941b503dfb13}{KSRows} = \hyperlink{a00023_af25e9bc98875e5cf5352941b503dfb13}{KSRows}-1
 \end{DoxyCode}
 
 
-Definition at line 1 of file all\-Times\-Analysis.\-m.
+Definition at line 152 of file Kill\-Spam.\-m.
 
-\hypertarget{a00023_aa9758857dd92f7845934f06daa7c4120}{\index{all\-Times\-Analysis.\-m@{all\-Times\-Analysis.\-m}!tot\-T@{tot\-T}}
-\index{tot\-T@{tot\-T}!allTimesAnalysis.m@{all\-Times\-Analysis.\-m}}
-\subsubsection[{tot\-T}]{\setlength{\rightskip}{0pt plus 5cm}params tot\-T = total time of the {\bf simulation}}}\label{a00023_aa9758857dd92f7845934f06daa7c4120}
+\hypertarget{a00023_a0c9b097ea561ab0f23a69197786a243a}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!check6@{check6}}
+\index{check6@{check6}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{check6}]{\setlength{\rightskip}{0pt plus 5cm}check6 = ismember({\bf K\-S\-Matrix}({\bf i},5),{\bf cleavages\-Matrix}(\-:,3))}}\label{a00023_a0c9b097ea561ab0f23a69197786a243a}
 
 
-Definition at line 10 of file all\-Times\-Analysis.\-m.
+Definition at line 150 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a0bbe7d2ceb7b248f0826d069d5a1b735}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!check7@{check7}}
+\index{check7@{check7}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{check7}]{\setlength{\rightskip}{0pt plus 5cm}check7 = ismember({\bf K\-S\-Matrix}({\bf i},5),{\bf catalysis\-Matrix}(\-:,2))}}\label{a00023_a0bbe7d2ceb7b248f0826d069d5a1b735}
+
+
+Definition at line 151 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ac9c871eaf7455dc0d274ec20c5c69ac2}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!check\-K\-M@{check\-K\-M}}
+\index{check\-K\-M@{check\-K\-M}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{check\-K\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} check\-K\-M = {\bf isempty}({\bf killers\-Matrix})}}\label{a00023_ac9c871eaf7455dc0d274ec20c5c69ac2}
+
+
+Definition at line 259 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a67eb148eecfd241148ce3711f058ac2b}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!check\-K\-S\-M@{check\-K\-S\-M}}
+\index{check\-K\-S\-M@{check\-K\-S\-M}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{check\-K\-S\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} check\-K\-S\-M = {\bf isempty}({\bf K\-S\-Matrix})}}\label{a00023_a67eb148eecfd241148ce3711f058ac2b}
+
+
+Definition at line 168 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ae80cf4c5bf659247b45bbad5d22dec52}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!check\-S\-M@{check\-S\-M}}
+\index{check\-S\-M@{check\-S\-M}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{check\-S\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} check\-S\-M = {\bf isempty}({\bf Spammers\-Matrix})}}\label{a00023_ae80cf4c5bf659247b45bbad5d22dec52}
+
+
+Definition at line 234 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a89060c6979e5a4ff7b0985b35f295695}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!cleavages@{cleavages}}
+\index{cleavages@{cleavages}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{cleavages}]{\setlength{\rightskip}{0pt plus 5cm}cleavages = 0}}\label{a00023_a89060c6979e5a4ff7b0985b35f295695}
+
+
+Definition at line 48 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a1a691fb4f955887edfa538e91479fafe}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!cleavages\-Matrix@{cleavages\-Matrix}}
+\index{cleavages\-Matrix@{cleavages\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{cleavages\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}cleavages\-Matrix = 0}}\label{a00023_a1a691fb4f955887edfa538e91479fafe}
+
+
+Definition at line 50 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ad3aa27d88a7e9d77d8334155860269bb}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!condensations@{condensations}}
+\index{condensations@{condensations}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{condensations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf else} condensations = 0}}\label{a00023_ad3aa27d88a7e9d77d8334155860269bb}
+
+
+Definition at line 47 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_afaba8eef2f8f4e4dda2e893a19e55a94}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!condensations\-Matrix@{condensations\-Matrix}}
+\index{condensations\-Matrix@{condensations\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{condensations\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}condensations\-Matrix = 0}}\label{a00023_afaba8eef2f8f4e4dda2e893a19e55a94}
+
+
+Definition at line 51 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a9c951ebd5bc3f1adce943bee1255f4d6}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!continua@{continua}}
+\index{continua@{continua}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{continua}]{\setlength{\rightskip}{0pt plus 5cm}continua = 1}}\label{a00023_a9c951ebd5bc3f1adce943bee1255f4d6}
+
+
+Definition at line 32 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ad4ba7701967c1da20171228afccb7081}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!c\-Values@{c\-Values}}
+\index{c\-Values@{c\-Values}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{c\-Values}]{\setlength{\rightskip}{0pt plus 5cm}while {\bf continua} c\-Values = {\bf fscanf}({\bf fid},'\%{\bf f}',7)}}\label{a00023_ad4ba7701967c1da20171228afccb7081}
+
+
+Definition at line 70 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_af5946383720aa572eb93e1e63afc23c2}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!else@{else}}
+\index{else@{else}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{else}]{\setlength{\rightskip}{0pt plus 5cm}else\mbox{[}{\bf r} {\bf c}\mbox{]} = {\bf size}({\bf killers\-Matrix})}}\label{a00023_af5946383720aa572eb93e1e63afc23c2}
+
+
+Definition at line 263 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ae9011d40c6f13e68e6f07156e0da7c5d}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!fid@{fid}}
+\index{fid@{fid}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{fid}]{\setlength{\rightskip}{0pt plus 5cm}fid = fopen('A\-L\-L\-\_\-results\-\_\-\-T\-S1.\-txt','w')}}\label{a00023_ae9011d40c6f13e68e6f07156e0da7c5d}
+
+
+Definition at line 20 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ac870e1cd47f6d78f16a98a24c8392fcf}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!i@{i}}
+\index{i@{i}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} clear i}}\label{a00023_ac870e1cd47f6d78f16a98a24c8392fcf}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 1:rrm
+        \textcolor{keywordflow}{if} \hyperlink{a00021_ac52097a2745fcef31eb175d2e9485845}{reactionsMatrix}(\hyperlink{a00021_a1de1a45bc56b002aa1ad94bb5f54a1ca}{i},2) == 1
+            \hyperlink{a00021_a89060c6979e5a4ff7b0985b35f295695}{cleavages} = \hyperlink{a00021_a89060c6979e5a4ff7b0985b35f295695}{cleavages}+1
+\end{DoxyCode}
+
+
+Definition at line 52 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!j@{j}}
+\index{j@{j}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{j}]{\setlength{\rightskip}{0pt plus 5cm}clear j}}\label{a00023_ad34e9c7e9ae69ae0b9f1866faed5e4ad}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 1:rcm
+                \textcolor{keywordflow}{if} killerReaction == \hyperlink{a00021_a0810027f58d6be965e44b7b84c44ace8}{catalysisMatrix}(\hyperlink{a00022_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j},3) && 
+      \hyperlink{a00021_a0810027f58d6be965e44b7b84c44ace8}{catalysisMatrix}(\hyperlink{a00022_ad34e9c7e9ae69ae0b9f1866faed5e4ad}{j},4) > 0
+                    \hyperlink{a00023_a62227634d3ceda9bf932c630583da2b9}{KCRows} = \hyperlink{a00023_a62227634d3ceda9bf932c630583da2b9}{KCRows}+1
+\end{DoxyCode}
+
+
+Definition at line 120 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a62227634d3ceda9bf932c630583da2b9}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!K\-C\-Rows@{K\-C\-Rows}}
+\index{K\-C\-Rows@{K\-C\-Rows}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{K\-C\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}K\-C\-Rows = 0}}\label{a00023_a62227634d3ceda9bf932c630583da2b9}
+
+
+Definition at line 117 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a1a42aaee01b2cc37a3835e0fe30cf9d3}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!killer\-Catalysts@{killer\-Catalysts}}
+\index{killer\-Catalysts@{killer\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{killer\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}killer\-Catalysts = 0}}\label{a00023_a1a42aaee01b2cc37a3835e0fe30cf9d3}
+
+
+Definition at line 116 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a929016802e1ede2217a41240a6974fa6}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!killers\-Matrix@{killers\-Matrix}}
+\index{killers\-Matrix@{killers\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{killers\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}killers\-Matrix = 0}}\label{a00023_a929016802e1ede2217a41240a6974fa6}
+
+
+Definition at line 103 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a747bc1d10158c78e88e314825ed41a13}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!kill\-Rows@{kill\-Rows}}
+\index{kill\-Rows@{kill\-Rows}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{kill\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} kill\-Rows = 0}}\label{a00023_a747bc1d10158c78e88e314825ed41a13}
+
+
+Definition at line 102 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a25c085d4378366ed81f0f97547802c8f}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!K\-S\-Catalysts@{K\-S\-Catalysts}}
+\index{K\-S\-Catalysts@{K\-S\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{K\-S\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}K\-S\-Catalysts = 0}}\label{a00023_a25c085d4378366ed81f0f97547802c8f}
+
+
+Definition at line 171 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a56aa0b3ac00410dc36f9043c641ae205}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!K\-S\-C\-Rows@{K\-S\-C\-Rows}}
+\index{K\-S\-C\-Rows@{K\-S\-C\-Rows}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{K\-S\-C\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}K\-S\-C\-Rows = 0}}\label{a00023_a56aa0b3ac00410dc36f9043c641ae205}
+
+
+Definition at line 172 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_aea43faf8d3d68de03c645edc96b0c1c0}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!K\-S\-Matrix@{K\-S\-Matrix}}
+\index{K\-S\-Matrix@{K\-S\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{K\-S\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}K\-S\-Matrix = 0}}\label{a00023_aea43faf8d3d68de03c645edc96b0c1c0}
+
+
+Definition at line 135 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ad8a18b407726bf44299c9bcf5d1389ff}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!outliers\-Matrix@{outliers\-Matrix}}
+\index{outliers\-Matrix@{outliers\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{outliers\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}outliers\-Matrix = 0}}\label{a00023_ad8a18b407726bf44299c9bcf5d1389ff}
+
+
+Definition at line 91 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a60cfb1ca20cbbc81b85a8f56658b7c99}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!out\-Rows@{out\-Rows}}
+\index{out\-Rows@{out\-Rows}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{out\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}out\-Rows = 0}}\label{a00023_a60cfb1ca20cbbc81b85a8f56658b7c99}
+
+
+Definition at line 90 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a07c9e68cdbafe572c04d3112d64deb88}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!possible@{possible}}
+\index{possible@{possible}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{possible}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} possible}}\label{a00023_a07c9e68cdbafe572c04d3112d64deb88}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+== 1
+            \hyperlink{a00023_a60cfb1ca20cbbc81b85a8f56658b7c99}{outRows} = \hyperlink{a00023_a60cfb1ca20cbbc81b85a8f56658b7c99}{outRows}+1
+\end{DoxyCode}
+
+
+Definition at line 94 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ac862e7284527eb913b1351c8bfb8e079}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!r@{r}}
+\index{r@{r}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}clear r}}\label{a00023_ac862e7284527eb913b1351c8bfb8e079}
+
+
+Definition at line 272 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_aeea253cb98a56047ef20ceed86e2f0ea}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!reactions\-Counters@{reactions\-Counters}}
+\index{reactions\-Counters@{reactions\-Counters}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{reactions\-Counters}]{\setlength{\rightskip}{0pt plus 5cm}identifying outliers reactions\-Counters = {\bf reactions\-Matrix}(\-:,6)}}\label{a00023_aeea253cb98a56047ef20ceed86e2f0ea}
+
+
+Definition at line 83 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a4c72dba1fe2ee2fbcc699262a8d0c624}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!reactions\-File@{reactions\-File}}
+\index{reactions\-File@{reactions\-File}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{reactions\-File}]{\setlength{\rightskip}{0pt plus 5cm}reactions\-File = {\bf r\-Files}(length({\bf r\-Files})-\/1).{\bf name}}}\label{a00023_a4c72dba1fe2ee2fbcc699262a8d0c624}
+
+
+Definition at line 30 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ac52097a2745fcef31eb175d2e9485845}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!reactions\-Matrix@{reactions\-Matrix}}
+\index{reactions\-Matrix@{reactions\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{reactions\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}reactions\-Matrix = 0}}\label{a00023_ac52097a2745fcef31eb175d2e9485845}
+
+
+Definition at line 33 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ad75735665492cabd747370126464fddf}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!r\-Files@{r\-Files}}
+\index{r\-Files@{r\-Files}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{r\-Files}]{\setlength{\rightskip}{0pt plus 5cm}creating {\bf reactions} matrix r\-Files = {\bf dir}('{\bf reactions}$\ast$')}}\label{a00023_ad75735665492cabd747370126464fddf}
+
+
+Definition at line 29 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a436a6968124e560649654a4abbd9dac6}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!r\-Values@{r\-Values}}
+\index{r\-Values@{r\-Values}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{r\-Values}]{\setlength{\rightskip}{0pt plus 5cm}while {\bf continua} r\-Values = {\bf fscanf}({\bf fid},'\%d',7)}}\label{a00023_a436a6968124e560649654a4abbd9dac6}
+
+
+Definition at line 35 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a4c9731061d3ea74c9ad35793b15491ab}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!S\-C\-Rows@{S\-C\-Rows}}
+\index{S\-C\-Rows@{S\-C\-Rows}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{S\-C\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}S\-C\-Rows = 0}}\label{a00023_a4c9731061d3ea74c9ad35793b15491ab}
+
+
+Definition at line 238 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_aae5035eb84b89176ed5b06e136325eff}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!sim\-Dirs@{sim\-Dirs}}
+\index{sim\-Dirs@{sim\-Dirs}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{sim\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}sim\-Dirs = {\bf dir}({\bf tmp\-Folder})}}\label{a00023_aae5035eb84b89176ed5b06e136325eff}
+
+
+Definition at line 17 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_aac2cfcb79655911b15197407f3e8c51c}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!spammers\-Catalysts@{spammers\-Catalysts}}
+\index{spammers\-Catalysts@{spammers\-Catalysts}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{spammers\-Catalysts}]{\setlength{\rightskip}{0pt plus 5cm}spammers\-Catalysts = 0}}\label{a00023_aac2cfcb79655911b15197407f3e8c51c}
+
+
+Definition at line 237 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_af1801174c9397e7fad0394203f120c31}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!Spammers\-Matrix@{Spammers\-Matrix}}
+\index{Spammers\-Matrix@{Spammers\-Matrix}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{Spammers\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}Spammers\-Matrix = 0}}\label{a00023_af1801174c9397e7fad0394203f120c31}
+
+
+Definition at line 190 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a834631ce660b52d721b1dd57b60d5251}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!Spam\-Rows@{Spam\-Rows}}
+\index{Spam\-Rows@{Spam\-Rows}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{Spam\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} identifying spammers Spam\-Rows = 0}}\label{a00023_a834631ce660b52d721b1dd57b60d5251}
+
+
+Definition at line 189 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a6bd08e37edf4151f5f6d1fc27a6f227a}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!stop@{stop}}
+\index{stop@{stop}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} stop = {\bf isempty}({\bf r\-Values})}}\label{a00023_a6bd08e37edf4151f5f6d1fc27a6f227a}
+
+
+Definition at line 36 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_ad509473eed851f9f5ff4157c02ec8618}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!tmp\-Folder@{tmp\-Folder}}
+\index{tmp\-Folder@{tmp\-Folder}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{tmp\-Folder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} tmp\-Folder = strcat('$\ast$',{\bf param.\-sim\-Folder},'$\ast$')}}\label{a00023_ad509473eed851f9f5ff4157c02ec8618}
+
+
+Definition at line 16 of file Kill\-Spam.\-m.
+
+\hypertarget{a00023_a7265972fe485274cfff77a9bb07b8fce}{\index{Kill\-Spam.\-m@{Kill\-Spam.\-m}!x@{x}}
+\index{x@{x}!KillSpam.m@{Kill\-Spam.\-m}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}for x}}\label{a00023_a7265972fe485274cfff77a9bb07b8fce}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= 1:length(\hyperlink{a00021_aae5035eb84b89176ed5b06e136325eff}{simDirs})
+    \hyperlink{a00019_a4745c86f44382225b251e3640cb2fe63}{cd}(strcat(\hyperlink{a00021_aae5035eb84b89176ed5b06e136325eff}{simDirs}(\hyperlink{a00021_a7265972fe485274cfff77a9bb07b8fce}{x}).\hyperlink{a00021_abbf559a76fab59203496b0847ab9502a}{name},'/res'))
+\end{DoxyCode}
+
+
+Definition at line 24 of file Kill\-Spam.\-m.
 

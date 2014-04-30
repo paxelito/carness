@@ -1,8 +1,8 @@
-.TH "/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/generalConcentrationOverThreshold.m" 3 "Thu Dec 12 2013" "Version 4.8 (20131210.63)" "CaRNeSS" \" -*- nroff -*-
+.TH "/home/ale/Documents/GIT/carness/_analysis/old/generalConcentrationOverThreshold.m" 3 "Fri Mar 28 2014" "Version 4.8 (20140327.66)" "CaRNeSS" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/generalConcentrationOverThreshold.m \- 
+/home/ale/Documents/GIT/carness/_analysis/old/generalConcentrationOverThreshold.m \- 
 .SH SYNOPSIS
 .br
 .PP
@@ -13,10 +13,13 @@
 .RI "\fBcd\fP (\fBparams\&.tmpPath\fP)"
 .br
 .ti -1c
-.RI "\fBif\fP \fB~isdir\fP ('0_statistics') mkdir('0_statistics')"
+.RI "\fBdisp\fP ('start analysis\&.\&.\&.') if~isdir('0_statistics') mkdir('0_statistics')"
 .br
 .ti -1c
-.RI "\fBif\fP \fBexist\fP (\fBoutFilenName\fP,'\fBfile\fP') delete(\fBoutFilenName\fP)"
+.RI "\fBend\fP \fBcd\fP ('0_statistics')%CREATE HEADER ROW IN THE FINAL OUTCOMES FILES outFilenName"
+.br
+.ti -1c
+.RI "\fBif\fP \fBexist\fP (outFilenName,'\fBfile\fP') delete(outFilenName)"
 .br
 .ti -1c
 .RI "\fBfprintf\fP (\fBfidFINAL\fP,'\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\t%s\\n',\&.\&.\&. 'Reaction Probability','Energy Concentration','Tot over Threshold','Real ACSs','in ACSs',\&.\&.\&. 'Leaves','by Chain','Overlap','Autocatalysis','in ACSs(W)','Leaves(W)','by Chain(W)','Overlap(W)','Autocatalysis(W)',\&.\&.\&. '[\fBACS\fP]','[Leaves]','[Chains]','[Self]','Endo Cond','Cond','Endo Cleavage','Cleavage','Wasted \fBspecies\fP')"
@@ -59,14 +62,6 @@ performed \fBdisp\fP ('|-Graph Creation')"
 .br
 .ti -1c
 .RI "\fBend\fP \fBgillTimeSeries\fP (\fBrlineID\fP,:)"
-.br
-.ti -1c
-.RI "If the time is \fBrighe\fP save 
-.br
-iGraph structures \fBto\fP \fBfile\fP \fBdisp\fP (sprintf('|-%s|Reaction%d-time:%6\&.4f-Save structures', simDirs(IDF)\&.name, reaction, rtime))"
-.br
-.ti -1c
-.RI "\fBsaveGraphToFile\fP (\fBfolderCat\fP, \fBreaction\fP, \fBrtime\fP, \fBconfparams\&.nReactions\fP, \fBgraph\fP, \fBfilextPre\fP)"
 .br
 .ti -1c
 .RI "\fBsaveGraphSUBToFile\fP (\fBfolderSub\fP, \fBreaction\fP, \fBrtime\fP, \fBconfparams\&.nReactions\fP, \fBgraphSUB\fP, \fBfilextPre\fP)"
@@ -383,12 +378,7 @@ current directory \fBcurrentDate\fP = date()"
 .RI "\fBcurrentDir\fP = \fBcd\fP()"
 .br
 .ti -1c
-.RI "\fBend\fP CREATE HEADER ROW IN THE 
-.br
-FINAL OUTCOMES FILES \fBoutFilenName\fP = strcat(\fBcurrentDate\fP, '_' , int2str(\fBparams\&.threshold\fP), '_convOverThreshold_', int2str(\fBparams\&.decayTime\fP), '\&.csv')"
-.br
-.ti -1c
-.RI "\fBend\fP \fBfidFINAL\fP = fopen(\fBoutFilenName\fP,'w')"
+.RI "\fBend\fP \fBfidFINAL\fP = fopen(outFilenName,'w')"
 .br
 .ti -1c
 .RI "Come back \fBto\fP the original 
@@ -398,7 +388,7 @@ folder READ ALL THE DIRECTORY
 CONTAINING SIMULATIONS \fBsearch\fP = strcat('*',\fBparams\&.simFolder\fP,'*')"
 .br
 .ti -1c
-.RI "\fBsimDirs\fP = dir(\fBsearch\fP)"
+.RI "\fBsimDirs\fP = \fBdir\fP(\fBsearch\fP)"
 .br
 .ti -1c
 .RI "File Containing all Times \fBtimes\fP = 0:\fBparams\&.deltaT:params\&.totT\fP"
@@ -413,7 +403,7 @@ CONTAINING SIMULATIONS \fBsearch\fP = strcat('*',\fBparams\&.simFolder\fP,'*')"
 .RI "Read \fBfile\fP conf \fBconfparams\fP = readParameters()"
 .br
 .ti -1c
-.RI "Select Times \fBand\fP \fBreactions\fP files \fBspeciesFiles\fP = dir('species_1*')"
+.RI "Select Times \fBand\fP \fBreactions\fP files \fBspeciesFiles\fP = \fBdir\fP('species_1*')"
 .br
 .ti -1c
 .RI "\fBif\fP \fBconfparams\fP \fBenergy\fP< 2 \fBnrg\fP=1;\fBelse\fP 
@@ -444,7 +434,7 @@ incoming flux \fBif\fP
 .RI "\fBconcVec\fP = tmpConc"
 .br
 .ti -1c
-.RI "\fBreaction\fP parameters files \fBrcsFiles\fP = dir('*reactions_parameters*')"
+.RI "\fBreaction\fP parameters files \fBrcsFiles\fP = \fBdir\fP('*reactions_parameters*')"
 .br
 .ti -1c
 .RI "\fBfilextPre\fP = strcat('_',zeroBeforeStrNum(\fBIDsimFOLDER\fP, length(\fBsimDirs\fP)),int2str(\fBIDsimFOLDER\fP))"
@@ -549,6 +539,15 @@ useful \fBvariables\fP \fBpreviousTime\fP = 0"
 .br
 .ti -1c
 .RI "\fBprintTemporalMessage\fP = 1"
+.br
+.ti -1c
+.RI "If the time is \fBrighe\fP save 
+.br
+iGraph structures \fBto\fP \fBfile\fP \fBif\fP(\fBrtime\fP >
+.br
+ \fBrctIDshow\fP 
+.br
+*analysisTimeInterval) \fBdisp\fP(sprintf('|-%s|Reaction%d-time \fBsaveGraphToFile\fP (\fBfolderCat\fP, \fBreaction\fP, \fBrtime\fP, \fBconfparams\&.nReactions\fP, \fBgraph\fP, \fBfilextPre\fP)"
 .br
 .ti -1c
 .RI "\fBend\fP update time intervals \fBtimeInterval\fP = \fBrtime\fP - \fBpreviousTime\fP"
@@ -764,6 +763,8 @@ is not produced by other \fBspecies\fP"
 
 .SS "cd (params\&.tmpPath)"
 
+.SS "\fBend\fP cd ('0_statistics')"
+
 .SS "Go into the results folder cd (strcat(\fBsimDirs\fP(\fBIDF\fP)\&.\fBname\fP,'/res'))"
 
 .SS "cd ('\&.\&./\&.\&./0_statistics')"
@@ -774,6 +775,8 @@ is not produced by other \fBspecies\fP"
 
 .SS "cd (strcat('\&.\&./\&.\&./', tmpDir))"
 
+.SS "disp ('start analysis\&.\&.\&.')"
+
 .SS "For each folder the necessary computations are performed disp ('*********************************************************************************')"
 
 .SS "disp ('*NEW SIMULATION ANALYSIS PROCESS')"
@@ -781,8 +784,6 @@ is not produced by other \fBspecies\fP"
 .SS "\fBend\fP If there are \fBspecies\fP over theshold network \fBanalysis\fP is performed disp ('|-Graph Creation')"
 
 .SS "disp (strcat('|-File ', \fBrcsFiles\fP(\fBrfileID\fP)\&.\fBname\fP, 'processing\&.\&.\&.'))"
-
-.SS "If the time is \fBrighe\fP save iGraph structures \fBto\fP \fBfile\fP disp (sprintf('|-%s|Reaction%d-time:%6\&.4f-Save structures', simDirs(IDF)\&.name, reaction, rtime))"
 
 .SS "disp (msg)"
 
@@ -844,7 +845,7 @@ is not produced by other \fBspecies\fP"
 
 .SS "eval ()"
 
-.SS "\fBif\fP exist (\fBoutFilenName\fP, '\fBfile\fP')"
+.SS "\fBif\fP exist (outFilenName, '\fBfile\fP')"
 
 .SS "\fBif\fP exist (\fBoutFname\fP, '\fBfile\fP')"
 
@@ -926,8 +927,6 @@ is not produced by other \fBspecies\fP"
 
 .SS "\fBend\fP \fBfunction\fP saveGraphSUBToFile (tmpDir, tmpRct, tmprTime, tmpRcts, tmpGraph, tmpFilextPre)"
 
-.SS "saveGraphToFile (\fBfolderCat\fP, \fBreaction\fP, \fBrtime\fP, confparams\&.nReactions, \fBgraph\fP, \fBfilextPre\fP)"
-
 .SS "\fBend\fP \fBfunction\fP saveGraphToFile (tmpDir, tmpRct, tmprTime, tmpRcts, tmpGraph, tmpFilextPre)"
 
 .SS "grid on set (gca, 'fontsize', 15, 'fontname', '\fBtimes\fP')"
@@ -964,8 +963,6 @@ is not produced by other \fBspecies\fP"
 .SS "ylabel ('Ratio of backward \fBreactions\fP', 'Interpreter', 'latex', 'fontsize', 15)"
 
 .SS "ylabel ('Flux Molecules', 'Interpreter', 'latex', 'fontsize', 15)"
-
-.SS "\fBif\fP ~isdir ('0_statistics')"
 
 .SS "\fBif\fP ~isdir (strcat('\&.\&./\&.\&./', \fBfolderCat\fP))"
 
@@ -1096,7 +1093,7 @@ Definition at line 135 of file generalConcentrationOverThreshold\&.m\&.
 
 .PP
 Definition at line 696 of file generalConcentrationOverThreshold\&.m\&.
-.SS "\fBend\fP fidFINAL = fopen(\fBoutFilenName\fP,'w')"
+.SS "\fBend\fP fidFINAL = fopen(outFilenName,'w')"
 
 .PP
 Definition at line 38 of file generalConcentrationOverThreshold\&.m\&.
@@ -1342,10 +1339,6 @@ if nargin < 1
 .fi
 .PP
 Definition at line 1 of file generalConcentrationOverThreshold\&.m\&.
-.SS "\fBend\fP CREATE HEADER ROW IN THE FINAL OUTCOMES FILES outFilenName = strcat(\fBcurrentDate\fP, '_' , int2str(\fBparams\&.threshold\fP), '_convOverThreshold_', int2str(\fBparams\&.decayTime\fP), '\&.csv')"
-
-.PP
-Definition at line 34 of file generalConcentrationOverThreshold\&.m\&.
 .SS "outFname = strcat('_iGraph_CAT',tmpFilextPre,'_',\fBtmpStrZeros\fP,num2str(tmpRct),'_',num2str(tmprTime),'\&.csv')"
 
 .PP
@@ -1407,7 +1400,7 @@ Definition at line 505 of file generalConcentrationOverThreshold\&.m\&.
 
 .PP
 Definition at line 172 of file generalConcentrationOverThreshold\&.m\&.
-.SS "\fBreaction\fP parameters files rcsFiles = dir('*reactions_parameters*')"
+.SS "\fBreaction\fP parameters files rcsFiles = \fBdir\fP('*reactions_parameters*')"
 
 .PP
 Definition at line 120 of file generalConcentrationOverThreshold\&.m\&.
@@ -1463,6 +1456,10 @@ Definition at line 145 of file generalConcentrationOverThreshold\&.m\&.
 
 .PP
 Definition at line 160 of file generalConcentrationOverThreshold\&.m\&.
+.SS "If the time is \fBrighe\fP save iGraph structures \fBto\fP \fBfile\fP \fBif\fP (\fBrtime\fP > \fBrctIDshow\fP * analysisTimeInterval) \fBdisp\fP(sprintf(' |- %s | Reaction %d - time saveGraphToFile(\fBfolderCat\fP, \fBreaction\fP, \fBrtime\fP, \fBconfparams\&.nReactions\fP, \fBgraph\fP, \fBfilextPre\fP)"
+
+.PP
+Definition at line 186 of file generalConcentrationOverThreshold\&.m\&.
 .SS "sccID = 0"
 
 .PP
@@ -1475,7 +1472,7 @@ Definition at line 48 of file generalConcentrationOverThreshold\&.m\&.
 
 .PP
 Definition at line 506 of file generalConcentrationOverThreshold\&.m\&.
-.SS "simDirs = dir(\fBsearch\fP)"
+.SS "simDirs = \fBdir\fP(\fBsearch\fP)"
 
 .PP
 Definition at line 49 of file generalConcentrationOverThreshold\&.m\&.
@@ -1487,7 +1484,7 @@ Definition at line 13 of file generalConcentrationOverThreshold\&.m\&.
 
 .PP
 Definition at line 602 of file generalConcentrationOverThreshold\&.m\&.
-.SS "LOAD FIRST SPECIES FILE speciesFiles = dir('species_1*')"
+.SS "LOAD FIRST SPECIES FILE speciesFiles = \fBdir\fP('species_1*')"
 
 .PP
 Definition at line 74 of file generalConcentrationOverThreshold\&.m\&.

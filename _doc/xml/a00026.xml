@@ -1,95 +1,374 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
   <compounddef id="a00026" kind="file">
-    <compoundname>fromWithin2Between.py</compoundname>
-    <innernamespace refid="a00106">fromWithin2Between</innernamespace>
+    <compoundname>overallStats.m</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" prot="public" static="no" mutable="no">
+        <type><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>concAnalysis(params) clear all close all tmpPath</definition>
+        <argsstring></argsstring>
+        <name>tmpPath</name>
+        <initializer>= &apos;/Users/alessandrofilisetti/Documents/results/VILLANI/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="7" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00026_1a31bcde9ac70ba64728f4de0de470f126" prot="public" static="no" mutable="no">
+        <type><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>p figureVisible</definition>
+        <argsstring></argsstring>
+        <name>figureVisible</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="8" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00026_1aa671e3345005bd599e662bcaa115b18a" prot="public" static="no" mutable="no">
+        <type><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>p simFolder</definition>
+        <argsstring></argsstring>
+        <name>simFolder</name>
+        <initializer>= &apos;ACS2&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="9" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00026_1aad7be196243f3c9ca83dfee7c9111014" prot="public" static="no" mutable="no">
+        <type><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>p lastSpecies</definition>
+        <argsstring></argsstring>
+        <name>lastSpecies</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="10" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00026_1abf6e5638a23a2531114655f3f690b70c" prot="public" static="no" mutable="no">
+        <type>Used in KillSpan</type>
+        <definition>Used in KillSpan analysis</definition>
+        <argsstring></argsstring>
+        <name>analysis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="10" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00026_1a9ec673b91cb4ce5ba9842d584db1eea2" prot="public" static="no" mutable="no">
+        <type><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>p threshold</definition>
+        <argsstring></argsstring>
+        <name>threshold</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="36" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00026_1a729812cd35dceb80bddf2bea4d57c3d5" prot="public" static="no" mutable="no">
+        <type><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>p tmpRctFileToLoad</definition>
+        <argsstring></argsstring>
+        <name>tmpRctFileToLoad</name>
+        <initializer>= &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="37" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00026_1aa7c848ee61f4363047d50b027f539e68" prot="public" static="no" mutable="no">
+        <type><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>p tmpRctSUBFileToLoad</definition>
+        <argsstring></argsstring>
+        <name>tmpRctSUBFileToLoad</name>
+        <initializer>= &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="38" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00026_1a2a07fff00b80967a40ae67d91fd31cb4" prot="public" static="no" mutable="no">
+        <type><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></type>
+        <definition>end scriptAnalDir</definition>
+        <argsstring></argsstring>
+        <name>scriptAnalDir</name>
+        <initializer>= <ref refid="a00065_1abe327856a9ee2f30f3ccafe4dc9edf5e" kindref="member">cd</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="49" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="a00026_1a5714ee99d309183e59b051e92e5a44d1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gfs</definition>
+        <argsstring></argsstring>
+        <name>gfs</name>
+        <initializer>= strcat(&apos;_&apos;,num2str(<ref refid="a00030_1afb6aa83fb78c663f3b39be2380842a8b" kindref="member">p.decayTime</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="50" column="1" bodyfile="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="a00026_1af72d21f936b4c0577485d0bae4509087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00062_1a4b4c670b101bf7a838f775e008fa6255" kindref="member">function</ref></type>
+        <definition>function overallStats</definition>
+        <argsstring>() close all clear all p.tmpAnalysis</argsstring>
+        <name>overallStats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="1" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00026_1a0bafb8140cf49e5e5478c170ffa8880d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Used in KillSpan it represents the last <ref refid="a00059_1a902e747aeec6b345d3a057099152f41f" kindref="member">influx</ref> <ref refid="a00016" kindref="compound">species</ref> LATEST FILES ANALYSIS <ref refid="a00024_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>Used in KillSpan it represents the last influx species LATEST FILES ANALYSIS if p tmpAnalysis</definition>
+        <argsstring>(1)</argsstring>
+        <name>tmpAnalysis</name>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00026_1ab41953ee2db3da78ed71808b12490209" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="a00024_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>end if p tmpAnalysis</definition>
+        <argsstring>(2)</argsstring>
+        <name>tmpAnalysis</name>
+        <param>
+          <type>2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00026_1a2e3fcc5ce8c864c086058fa1fcd8adb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="a00024_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>end if p tmpAnalysis</definition>
+        <argsstring>(3)</argsstring>
+        <name>tmpAnalysis</name>
+        <param>
+          <type>3</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00026_1a08f902f5af41bb11acdd6ce5130e5934" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref> <ref refid="a00024_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>end if p tmpAnalysis</definition>
+        <argsstring>(4)</argsstring>
+        <name>tmpAnalysis</name>
+        <param>
+          <type>4</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00026_1a98ae4bf3f5f573af6ea4fc18d2a1125e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00024_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref> <ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        <definition>if p tmpAnalysis</definition>
+        <argsstring>(6)</argsstring>
+        <name>tmpAnalysis</name>
+        <param>
+          <type>6</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00026_1a56bd5c817530f9b305b5375d6509978a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>generalConcentrationOverThreshold</definition>
+        <argsstring>(p) end%Need p.tmpAnalysis(6) in order to be performed if p.tmpAnalysis(7)</argsstring>
+        <name>generalConcentrationOverThreshold</name>
+        <param>
+          <type><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00026_1ab41b8dc78dee42a1a5e5a33d8bf6eeb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="a00024_1a01d55766b8058903dd360b4bda71f9f5" kindref="member">if</ref></type>
+        <definition>if exist</definition>
+        <argsstring>(&apos;MATLAB2R.Rout&apos;,&apos;file&apos;) delete(&apos;MATLAB2R.Rout&apos;)</argsstring>
+        <name>exist</name>
+        <param>
+          <type>&apos;MATLAB2R.Rout&apos;</type>
+        </param>
+        <param>
+          <type>&apos;<ref refid="a00062_1a4e8353d6c62cf54bf4a1a8f63e56b8c3" kindref="member">file</ref>&apos;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00026_1ab4c95c2d6a84263412f5679a78b55e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>eval</definition>
+        <argsstring>([&apos;!R CMD BATCH--no-save--no-restore--slave&quot;--args sf=&apos;&apos;&apos;,scriptAnalDir,&apos;&apos;&apos; ls=&apos;,num2str(p.lastSpecies),...
+        &apos; sss=&apos;&apos;&apos;,p.simFolder,&apos;&apos;&apos; gfs=&apos;&apos;&apos;,gfs,&apos;&apos;&apos; sd=&apos;&apos;&apos;,p.tmpPath,&apos;&apos;&apos;&quot;MATLAB2R.R&apos;])</argsstring>
+        <name>eval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="a00026_1a2160a514930abbfa9436b787b4cfc8ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cd</definition>
+        <argsstring>(crtDir)</argsstring>
+        <name>cd</name>
+        <param>
+          <type>crtDir</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m" line="53" column="1"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="a00106" refkind="compound"><highlight class="comment">#!/usr/bin/env<sp/>python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="a00026_1af72d21f936b4c0577485d0bae4509087" kindref="member">overallStats</ref>()</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">#<sp/>from<sp/>2.4.5</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">#<sp/>the<sp/>analysis<sp/>is<sp/>able<sp/>to<sp/>go<sp/>though<sp/>different<sp/>folder<sp/>organized<sp/>in<sp/>the<sp/>same<sp/>way<sp/>with<sp/>the<sp/>same<sp/>result<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">close<sp/>all</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">clear<sp/>all</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#import<sp/>sys,<sp/>os,<sp/>shutil</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys,<sp/>os<sp/></highlight><highlight class="comment">#<sp/>Standard<sp/>library</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>glob<sp/></highlight><highlight class="comment">#<sp/>To<sp/>manage<sp/>files<sp/>in<sp/>directory</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10" refid="a00106_1a6f865e0e97da35920db45f5491a1300f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="a00106_1a6f865e0e97da35920db45f5491a1300f" kindref="member">zeroBeforeStrNum</ref>(tmpl,<sp/>tmpL):</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strZero<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nZeros<sp/>=<sp/>len(str(tmpL))<sp/>-<sp/>len(str(tmpl))</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>nZeros<sp/>&gt;<sp/>0:</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(0,nZeros):<sp/>strZero<sp/>=<sp/>strZero<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;0&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>strZero</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">#eof</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">#<sp/>get<sp/>path<sp/>for<sp/>placing<sp/>simulation</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>StrPath<sp/>=<sp/>sys.argv[1]<sp/></highlight><highlight class="comment">#<sp/>Here<sp/>the<sp/>path<sp/>of<sp/>the<sp/>simulation<sp/>output<sp/>file</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numSim<sp/>=<sp/>int(sys.argv[2])</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numGen<sp/>=<sp/>int(sys.argv[3])</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordflow">except</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Usage:&quot;</highlight><highlight class="normal">,sys.argv[0],<sp/></highlight><highlight class="stringliteral">&quot;infile<sp/>outfile&quot;</highlight><highlight class="normal">;<sp/>sys.exit(1)</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Moving<sp/>in<sp/>the<sp/>simulation<sp/>directory</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal">os.chdir(StrPath)</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">#<sp/>FOLDERS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Create<sp/>folders...&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.<ref refid="a00026_1a0bafb8140cf49e5e5478c170ffa8880d" kindref="member">tmpAnalysis</ref><sp/>=<sp/>[0<sp/>0<sp/>0<sp/>1<sp/>0<sp/>1<sp/>0];</highlight></codeline>
+<codeline lineno="7" refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" refkind="member"><highlight class="normal"><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.<ref refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref><sp/>=<sp/>&apos;/Users/alessandrofilisetti/Documents/results/VILLANI/&apos;;</highlight></codeline>
+<codeline lineno="8" refid="a00026_1a31bcde9ac70ba64728f4de0de470f126" refkind="member"><highlight class="normal"><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.<ref refid="a00017_1a63b4c2789d7e1513024181d12e4f1b6b" kindref="member">figureVisible</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="9" refid="a00026_1aa671e3345005bd599e662bcaa115b18a" refkind="member"><highlight class="normal"><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.<ref refid="a00022_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref><sp/>=<sp/>&apos;ACS2&apos;;</highlight></codeline>
+<codeline lineno="10" refid="a00026_1aad7be196243f3c9ca83dfee7c9111014" refkind="member"><highlight class="normal"><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.<ref refid="a00026_1aad7be196243f3c9ca83dfee7c9111014" kindref="member">lastSpecies</ref><sp/>=<sp/>2;<sp/>%<sp/>Used<sp/>in<sp/>KillSpan<sp/><ref refid="a00026_1abf6e5638a23a2531114655f3f690b70c" kindref="member">analysis</ref>,<sp/>it<sp/>represents<sp/>the<sp/>last<sp/><ref refid="a00022_1a637d2af7e7b03600bcaf1931b999e3fc" kindref="member">influx</ref><sp/><ref refid="a00016" kindref="compound" tooltip="This class contains declarations of the species class. ">species</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">%<sp/>LATEST<sp/>FILES<sp/>ANALYSIS</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>.tmpAnalysis(1)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>timesAnalysis(<ref refid="a00022_1aa2b4c35904308d35fc5d606a429e608d" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>p.tmpAnalysis(2)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00021_1a8d69772ffb168fa3e492dce8d97511e7" kindref="member">garbageSearch</ref>(p);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>p.tmpAnalysis(3)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00023_1acfbe15da69f5cf2e58667e2b19b500e7" kindref="member">KillSpam</ref>(p);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>p.tmpAnalysis(4)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00030_1a18a344cbdf9b3218a438bca78547ab9e" kindref="member">concAnalysis</ref>(p)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>p.tmpAnalysis(5)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>allTimesAnalysis(p)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(1,numSim+1):</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="a00106_1a0f4d3ac33db22359da335b2db8cece7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zeroSIM<sp/>=<sp/><ref refid="a00106_1a6f865e0e97da35920db45f5491a1300f" kindref="member">zeroBeforeStrNum</ref>(i,numSim)</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>j<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(1,<sp/>numGen+1):</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="39" refid="a00106_1a1cd31aebf09d421ec4c6ef89fa122662" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zeroGEN<sp/>=<sp/><ref refid="a00106_1a6f865e0e97da35920db45f5491a1300f" kindref="member">zeroBeforeStrNum</ref>(j,numGen)</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="41" refid="a00106_1abe0ecb557a225c5832c6567139bf91b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>folderNew<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;s_&quot;</highlight><highlight class="normal"><sp/>+<sp/>zeroSIM<sp/>+<sp/>str(i)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;_&quot;</highlight><highlight class="normal"><sp/>+<sp/>zeroGEN<sp/>+<sp/>str(j)</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>os.path.isdir(folderNew):</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.mkdir(folderNew)</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Impossible<sp/>to<sp/>create<sp/>sim<sp/>directory&quot;</highlight><highlight class="normal">;<sp/>sys.exit(1)</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Res<sp/>folder<sp/>creation</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.chdir(folderNew)</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Create<sp/>iGraph<sp/>directory<sp/>where<sp/>iGraph_CAT<sp/>file<sp/>will<sp/>be<sp/>stored</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="a00106_1a47de7eeb1d8dcbb763d1f9db53fe958f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resdir<sp/>=<sp/>os.path.join(os.curdir,<sp/></highlight><highlight class="stringliteral">&quot;res&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>os.path.isdir(resdir):</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.mkdir(resdir)</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Impossible<sp/>to<sp/>create<sp/>result<sp/>directory&quot;</highlight><highlight class="normal">;<sp/>sys.exit(1)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Come<sp/>back<sp/>to<sp/>the<sp/>previous<sp/>folder<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.chdir(</highlight><highlight class="stringliteral">&quot;../&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Move<sp/>results<sp/>from<sp/>source<sp/>to<sp/>results<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.chdir(StrPath)</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Move<sp/>results...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Move<sp/>Results...&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Move<sp/>overall<sp/>results...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Move<sp/>Overall<sp/>Results...&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Move<sp/>Final<sp/>Files...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Move<sp/>Final<sp/>Files...&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Copy<sp/>initial<sp/>files<sp/>within<sp/>the<sp/>folders</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Copy<sp/>initial<sp/>files<sp/>within<sp/>the<sp/>folders...&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">p.<ref refid="a00022_1abd7ce2c4bf5f563b1e70731f58e8c57d" kindref="member">decayTime</ref><sp/>=<sp/>10;<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>p.tmpAnalysis(6)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="a00022_1a4d8f56ee83b9b4dbe17b218746a1768c" kindref="member">interval</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="36" refid="a00026_1a9ec673b91cb4ce5ba9842d584db1eea2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="a00022_1aa022cbb28f80299d572def08e7a5ccfd" kindref="member">threshold</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="a00026_1a729812cd35dceb80bddf2bea4d57c3d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="a00022_1a3b01c97f207a2997c3bd0c2718441509" kindref="member">tmpRctFileToLoad</ref><sp/>=<sp/>&apos;&apos;;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="a00026_1aa7c848ee61f4363047d50b027f539e68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="a00022_1ae5d21adddbfe36d5b10d43a2e8b39123" kindref="member">tmpRctSUBFileToLoad</ref><sp/>=<sp/>&apos;&apos;;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00026_1a56bd5c817530f9b305b5375d6509978a" kindref="member">generalConcentrationOverThreshold</ref>(p)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">%<sp/>Need<sp/>p.tmpAnalysis(6)<sp/>in<sp/>order<sp/><ref refid="a00022_1af71dbe52628a3f83a77ab494817525c6" kindref="member">to</ref><sp/>be<sp/>performed</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/>p.tmpAnalysis(7)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>%<sp/>Using<sp/>an<sp/><ref refid="a00111_1aa51f04a64cdea4fbde3c2d484d06d443" kindref="member">R</ref>-Cran<sp/>script<sp/>this<sp/>part<sp/>is<sp/><ref refid="a00019_1a230414213a9710ed03b6cf8d2695ee94" kindref="member">a</ref><sp/>little<sp/>bit<sp/>different</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>crtDir<sp/>=<sp/><ref refid="a00019_1a4745c86f44382225b251e3640cb2fe63" kindref="member">cd</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00019_1adf3394dfd4755fd0ef2854fe558ff8aa" kindref="member">if</ref><sp/><ref refid="a00019_1ab05bb9470ea34cab3ab1c2c9e748840b" kindref="member">exist</ref>(&apos;MATLAB2R.Rout&apos;,&apos;<ref refid="a00115_1a3caa9a656a250a12f7112582bde03381" kindref="member">file</ref>&apos;)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delete(&apos;MATLAB2R.Rout&apos;);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref><sp/></highlight></codeline>
+<codeline lineno="49" refid="a00026_1a2a07fff00b80967a40ae67d91fd31cb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00026_1a2a07fff00b80967a40ae67d91fd31cb4" kindref="member">scriptAnalDir</ref><sp/>=<sp/>cd();</highlight></codeline>
+<codeline lineno="50" refid="a00026_1a5714ee99d309183e59b051e92e5a44d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00026_1a5714ee99d309183e59b051e92e5a44d1" kindref="member">gfs</ref><sp/>=<sp/>strcat(&apos;_&apos;,num2str(p.decayTime));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="a00022_1a0123952c26dc025261f5f36a9f1a1da5" kindref="member">eval</ref>([&apos;!<sp/><ref refid="a00111_1aa51f04a64cdea4fbde3c2d484d06d443" kindref="member">R</ref><sp/>CMD<sp/>BATCH<sp/>--no-save<sp/>--no-restore<sp/>--slave<sp/>&quot;--<ref refid="a00092_1afa2d0b9fb021746e05cd06277997da04" kindref="member">args</ref><sp/>sf=&apos;&apos;&apos;,<ref refid="a00026_1a2a07fff00b80967a40ae67d91fd31cb4" kindref="member">scriptAnalDir</ref>,&apos;&apos;&apos;<sp/>ls=&apos;,num2str(p.lastSpecies),...</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;<sp/>sss=&apos;&apos;&apos;,p.<ref refid="a00022_1a0ffb8131632b48d9111c3a27d91262e2" kindref="member">simFolder</ref>,&apos;&apos;&apos;<sp/><ref refid="a00026_1a5714ee99d309183e59b051e92e5a44d1" kindref="member">gfs</ref>=&apos;&apos;&apos;,gfs,&apos;&apos;&apos;<sp/>sd=&apos;&apos;&apos;,p.<ref refid="a00026_1a1e5a4863ab2b87f923e1d19e2da1f5ac" kindref="member">tmpPath</ref>,&apos;&apos;&apos;&quot;<sp/>MATLAB2R.<ref refid="a00111_1aa51f04a64cdea4fbde3c2d484d06d443" kindref="member">R</ref>&apos;]);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>cd(crtDir);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">close<sp/>all</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">clear<sp/>all</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="a00019_1afb358f48b1646c750fb9da6c6585be2b" kindref="member">end</ref></highlight></codeline>
     </programlisting>
-    <location file="/Users/alessandrofilisetti/Documents/GIT/carness/_analysis/old/fromWithin2Between.py"/>
+    <location file="/home/ale/Documents/GIT/carness/_analysis/old/overallStats.m"/>
   </compounddef>
 </doxygen>
