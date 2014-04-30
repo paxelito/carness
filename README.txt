@@ -4,7 +4,7 @@ Software documentation is available in the doc folder.
 |VERSION HISTORY|
 |---------------| 
 
-Build4.8b20140327.67
+Build4.82b20140327.67
 Documentation updated 
 
 Build4.8b20140120.66
