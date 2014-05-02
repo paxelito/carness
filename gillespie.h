@@ -44,7 +44,8 @@ public:
 	acs_longInt getCatalysisID()const{return idCatalysis;}
 	acs_int getNRGside()const{return nrgSide;}
 	
-
+	//update score
+	void setNewScore(acs_double newscore){score = newscore;};	//set new event score
 
 };
 

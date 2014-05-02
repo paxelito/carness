@@ -14,6 +14,7 @@
 
 #include "acs_headers.h"
 #include "commonFunctions.h"
+#include "gillespie.h"
 
 class species
 {
@@ -41,6 +42,8 @@ private:
     vector<acs_longInt> catalysisIfCpx; /**< Catalysis ID list if complex*/
     vector<acs_double> kCond;			/**< List parallel to secondSubstrates, contain a copy of the k condensation*/
     vector<acs_longInt> gillespieEngagement; /**< List containing the Gillespie's ID in which the species is involved */
+	vector<acs_longInt> eventsInc;		// List of events where the species is involved with an increment
+	vector<acs_longInt> eventsDec;		// List of events where the species is involved with a decrement
 	
 public:
 	//!< New species constructor (IN AMOUNT)
@@ -79,7 +82,7 @@ public:
 	species(acs_longInt tmpID, string tmpSequence, acs_double tmpDiffusionEnh, 
 			acs_int tmpSoluble, acs_double tmpMaxComplexDegKinetic, 
 			acs_int tmpCuttingPoint, MTRand& tmp_RandomGenerator, acs_longInt tmpCatalyst_ID, 
-			acs_longInt tmpSubstrate_ID, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable);
+			acs_longInt tmpSubstrate_ID, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable, acs_int tmpAmount);
 	~species(){}
 	
 	// GETTING FUNCTIONS
@@ -112,6 +115,8 @@ public:
     acs_longInt getSecSubListID(acs_int tmpID)const{return secondSubstrates.at(tmpID);}
     acs_double getSec_k_SubListID(acs_int tmpID)const{return kCond.at(tmpID);}
     acs_longInt getCatalysisIfCpxID(acs_int tmpID)const{return catalysisIfCpx.at(tmpID);}
+	vector<acs_longInt> getEventsInc()const{return eventsInc;}
+	vector<acs_longInt> getEventsDec()const{return eventsDec;}
 	
 	// FUNCTIONAL FUNCTIONS
 	// Total quantity update functions (concentration is recomputed)
@@ -132,6 +137,13 @@ public:
 	void setKphospho(acs_double tmpKphospho){K_phospho = tmpKphospho;}
 	void setNewAge(acs_double tmpLastTimeInterval){age += tmpLastTimeInterval;}
 	void rebornsIncrement(){reborns++;}
+	
+	//update events list
+	void insertEvent(acs_longInt x, bool IncOrDec);
+	//print events list
+	void printEventsList();
+
+
 	// Concentration and amount update
 	void concToNum(acs_double tmpVolume){amount = acsround(AVO * concentration * tmpVolume);}
 	void numToConc(acs_double tmpVolume){concentration = amount / (AVO * tmpVolume);}

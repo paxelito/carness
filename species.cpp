@@ -33,8 +33,8 @@ species::species()
 	energizable = 0;
 	concentrationFixed = false;
 	lastSpeciesEvaluated = 0;
-	firstConcentration = 0;
- 
+	firstConcentration = 0; 
+
 }
 
 /** \brief This constructor is used each time a new species is created (AMOUNT BASED)
@@ -274,11 +274,11 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpDiffusionEnh, 
 				 acs_int tmpSoluble, acs_double tmpMaxComplexDegKinetic, 
 				 acs_int tmpCuttingPoint, MTRand& tmp_RandomGenerator, acs_longInt tmpCatalyst_ID, 
-				 acs_longInt tmpSubstrate_ID, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable)
+				 acs_longInt tmpSubstrate_ID, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable, acs_int tmpAmount)
 {
 	id = tmpID;
 	sequence = tmpSequence;
-	amount = 1;
+	amount = tmpAmount;
 	chargedMols = 0;
 	numToConc(tmpVolume);
 	age = 0;
@@ -305,7 +305,7 @@ void species::increment(acs_double tmpVolume)
    {
        amount++;
        numToConc(tmpVolume);
-    }
+   }
 }
 
 /** Function to decrement the total number of molecules belonging to this species
@@ -434,3 +434,43 @@ bool species::checkIFtheSecondSubstrateIsAlreadyPresent(acs_longInt tmpSecSubID)
 	}
 	return alreadyPresent;
 }
+
+
+/**
+	Function to insert event in list
+*/
+void species::insertEvent(acs_longInt IDEvent, bool IncOrDec) {
+
+	vector<acs_longInt> *events;
+	if (IncOrDec == INC) events = &eventsInc;
+	else if (IncOrDec == DEC) events = &eventsDec;
+	(*events).push_back(IDEvent);
+}
+
+
+/**
+	Function to print events in both lists
+*/
+void species::printEventsList() {
+
+	cout<<"Inc. Events:  ";
+	if (eventsInc.size() == 0)
+		cout<<"Empty";
+	else
+		for (acs_longInt i = 0; i < eventsInc.size(); i++)
+			cout<<eventsInc[i]<<"  ";
+
+	cout<<endl;
+
+	cout<<"Dec. Events:  ";
+	if (eventsDec.size() == 0)
+		cout<<"Empty";
+	else
+		for (acs_longInt i = 0; i < eventsDec.size(); i++)
+			cout<<eventsDec[i]<<"  ";
+
+	cout<<endl;
+
+}
+
+

@@ -1,6 +1,6 @@
 /** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.82 (20140327.67)
  * \author Alessandro Filisetti
- * \version 4.82 (20140327.67)
+ * \version 4.82 (20140427.67)
  * \date 2014-03-27
  * git repository -- https://github.com/paxelito/carness
  *
@@ -524,10 +524,8 @@ int main (int argc, char *argv[]) {
                             			if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
                             						ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
                             		}else{ // If structures are fixed new optimized Gillespie algorithm can be used
-                            			if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
+                            			if(!puddle->perform_FIXED_GillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
                             			            ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
-                            			//if(!puddle->perform_FIXED_GillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
-                            			//            ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
                             		}
                             	}catch(exception&e){
                            	     cout << "Source Code Line: " << __LINE__ << endl;

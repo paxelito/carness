@@ -39,7 +39,7 @@ typedef unsigned int acs_int;
 // CONSTANTS
 //----------
 
-#define __SOFTVERSION__ "4.82b20140327.67"
+#define __SOFTVERSION__ "4.81b20140327.67"
 
 // DEBUG LEVELS
 
@@ -109,6 +109,11 @@ typedef unsigned int acs_int;
 
 // MINIMAL MULTIPLICATOR FOR MINIMAL REACTION TIME
 #define MINIMALRCTTIMEMULTI 100
+
+//BOOLEAN FOR EVENTS
+#define INC 0
+#define DEC 1
+#define NOCOMPLEX -1
 
 using namespace std;
 
