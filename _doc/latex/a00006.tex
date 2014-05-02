@@ -1,238 +1,81 @@
-\hypertarget{a00006}{\section{catalysis Class Reference}
-\label{a00006}\index{catalysis@{catalysis}}
-}
+During the simulation {\bfseries 8} different files concerning species, reactions and catalysis tables, times, reactions parameters, living species, living species amounts and concentration are produced. In the following you find a brief description of all files and some indications about the different time storage. \hypertarget{a00006_outspecies}{}\section{Species}\label{a00006_outspecies}
+Every environment\-::time\-Structures\-Saving\-Interval seconds species structures will be saved in files called species\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$\-\_\-$<$reaction\-Number$>$.\-csv (e.\-g. {\bfseries species\-\_\-1\-\_\-06\-\_\-0016933.\-csv} means species structure, generation number 1, simulation number 6, reaction number 16933).\par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{}) is the same described above, section \hyperlink{a00004_subSpecies}{\-\_\-acsspecies.\-csv} .\hypertarget{a00006_outreactions}{}\section{Reactions}\label{a00006_outreactions}
+Every environment\-::time\-Structures\-Saving\-Interval seconds reactions structures will be saved in files called reactions\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$\-\_\-$<$reaction\-Number$>$.\-csv (e.\-g. {\bfseries reactions\-\_\-1\-\_\-06\-\_\-0016933.\-csv} means reactions structure, generation number 1, simulation number 6, reaction number 16933). \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{}) is the same described above, section \hyperlink{a00004_subReactions}{\-\_\-acsreactions.\-csv} .\hypertarget{a00006_outcatalysis}{}\section{Catalysis}\label{a00006_outcatalysis}
+Every environment\-::time\-Structures\-Saving\-Interval seconds catalysis structures will be saved in files called catalysis\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$\-\_\-$<$reaction\-Number$>$.\-csv (e.\-g. {\bfseries catalysis\-\_\-1\-\_\-06\-\_\-0016933.\-csv} means catalysis structure, generation number 1, simulation number 6, reaction number 16933). \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})is the same described above, section \hyperlink{a00004_subCatalysis}{\-\_\-acscatalysis.\-csv} \-:\hypertarget{a00006_outTimes}{}\section{Times}\label{a00006_outTimes}
+Every simulation generates a times file called times\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$.\-csv (e.\-g. {\bfseries times\-\_\-1\-\_\-03.\-csv} means times file, generation 1, simulation 3) containing values concerning {\bfseries each events} occurred during the simulation. This file is {\bfseries created at the beginning of the simulation} and it is {\bfseries updated after each event}, hence this file will contain a number of rows equal to the number of reaction (of any type) occurred during the simulation. \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{15}
+\hline
+Identificator (reaction)&Reaction Time&Gillespie I\-D selected&Reaction Type&Number of possible reactions&Computational Time (sec) &Number of Species&Number of Molecules&Number of complex species&Number of complexes &Number of bricks&Gillespie Computational Time&Reaction Process Computational Time&Various Processes Computational Time&New species creation probability  \\\cline{1-15}
+\end{TabularC}
 
+\begin{DoxyItemize}
+\item {\itshape Identificator (reaction)}\-: Number of the reaction (S\-T\-E\-P)
+\item {\itshape Reaction Time}\-: Time of the reaction
+\item {\itshape Gillespie I\-D selected}\-: Gillespie structure reaction I\-D
+\item {\itshape Reaction Type}\-: 0 condensation, 1 cleavage, 2 complex formation, 3 complex degradation, 4 species efflux, 6 endergonic cleavage, 7 endoergonic condensation, 8 endoergonic complex creation
+\item {\itshape Number of possible reactions}\-: Total number of possible reactions according to the Gillespie algorithm computation
+\item {\itshape Computational Time (ms)}\-: Computational time between two successive reactions
+\item {\itshape Number of Species}\-: Number of species with at least one molecule
+\item {\itshape Number of Molecules}\-: Number of molecules
+\item {\itshape Number of complex species}\-: Number of complex species with at least one molecule
+\item {\itshape Number of complexes}\-: Number of complex molecules
+\item {\itshape Number of bricks}\-: Number of single bricks (monomers) present in the system
+\item {\itshape Gillespie Computational Time}\-: Number of milliseconds necessary to complete the Gillespie task
+\item {\itshape Reaction Process Computational Time}\-: Number of milliseconds necessary to perform a reaction (and evaluate products) once that the Gillespie algorithm has selected the reaction
+\item {\itshape Various Processes Computational Time}\-: Number of milliseconds necessary to perform several tasks not correlated with the simulation of the phenomena
+\item {\itshape New species creation probability}\-: Given the state of the system, probability to create a new species
+\item {\itshape Reverse Reaction Probability}\-: Given the state of the system, probability for a reverse reaction to occur
+\end{DoxyItemize}\hypertarget{a00006_outReactions}{}\section{Reactions\-\_\-parameters}\label{a00006_outReactions}
+Every simulation generates a reactions parameters file called reactions\-\_\-parameters\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$.\-csv (e.\-g. {\bfseries reactions\-\_\-parameters\-\_\-1\-\_\-07.\-csv} means reactions parameters file, generation 1 simulation number 7) containing informations on {\bfseries cleavage and condensation} reactions. This file is {\bfseries generated at the beginning of each simulation} and it is {\bfseries updated each time that a cleavage or a condensation occur}. \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{13}
+\hline
+Reaction I\-D&Reaction Time&Reaction Type&Catalyst I\-D&Species 1 I\-D&Species 2 I\-D&Species 3 I\-D &Charged Molecules&Charged Concentration&Gillespie Score Average&Gillespie Score Standard Deviation&Entropy&New species creation probability  \\\cline{1-13}
+\end{TabularC}
 
-C\-A\-T\-A\-L\-Y\-S\-I\-S class.  
+\begin{DoxyItemize}
+\item {\itshape Reaction I\-D}\-: This I\-D referes to the reaction number (step)
+\item {\itshape Reaction Time}\-: Time of the reaction
+\item {\itshape Reaction Type I\-D}\-: 0 condensation, 1 cleavage, 6 endoergonic cleavage, 7 endoergonic condensation
+\item {\itshape Catalyst I\-D}\-: Catalyst I\-D into the species table
+\item {\itshape Species 1 I\-D}\-: product I\-D in case of condensation, substrate in case of cleavage
+\item {\itshape Species 2 I\-D}\-: substrate I\-D in case of condensation, product in case of cleavage
+\item {\itshape Species 3 I\-D}\-: substrate I\-D in case of condensation, product in case of cleavage
+\item {\itshape Charged Molecules}\-: Number of charged molecules
+\item {\itshape Charged Concentration}\-: Concentration of the charged molecules
+\item {\itshape Gillespie Score Average}\-: Average of the all gillespie algorithm scores
+\item {\itshape Gillespie Score Standard Deviation}\-: Standard Deviation of the all gillespie algorithm scores
+\item {\itshape Entropy}\-: Entropy Misure (test) based on the probabilities that reactions occur
+\item {\itshape New species creation probability}\-: Given the state of the system, probability to create a new species
+\end{DoxyItemize}\hypertarget{a00006_outLivSpecies}{}\section{Living\-\_\-species}\label{a00006_outLivSpecies}
+Each simulation generates a living species file called living\-Species\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$.\-csv (e.\-g. {\bfseries living\-Species\-\_\-1\-\_\-07.\-csv} means living species file, generation 1 simulation number 7) containing all the living species I\-Ds (living species are those species with concentration greater than 0) for each reaction in each raw. This file is {\bfseries generated at the beginning of each simulation} and it is {\bfseries updated each time that a cleavage or a condensation occur}. This file has a variable number of columns equal to the number of living species plus 2 (Reaction I\-D and time of the reaction) \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{3}
+\hline
+Reaction I\-D&Reaction Time&living species I\-Ds..., one for column  \\\cline{1-3}
+\end{TabularC}
 
+\begin{DoxyItemize}
+\item {\itshape Reaction I\-D}\-: This I\-D referes to the reaction number (step)
+\item {\itshape Reaction Time}\-: Time of the reaction
+\item {\itshape Living Species I\-Ds..., one for column}\-: Each column from the thirth to the last one contains living species I\-D
+\end{DoxyItemize}\hypertarget{a00006_outLivAmounts}{}\section{Living\-\_\-species\-\_\-amounts}\label{a00006_outLivAmounts}
+Each simulation generates a living species amount file called living\-Amount\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$.\-csv (e.\-g. {\bfseries living\-Amount\-\_\-1\-\_\-07.\-csv} means living species amount file, generation 1, simulation number 7) containing all the living species amount (living species are those species with concentration greater than 0) for each reaction in each raw. {\bfseries This file is tightly correlated with the {\itshape Living\-\_\-species} file}. Each row contains the total amount of molecules belonging to the species indicated by its I\-D in the living\-Species file. This file is {\bfseries created at the beginning of each simulation} and it is {\bfseries updated each time that a cleavage or a condensation occur}. This file has a variable number of columns equals to the number of living species at time t \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{1}
+\hline
+living species amounts..., one for column  \\\cline{1-1}
+\end{TabularC}
 
+\begin{DoxyItemize}
+\item {\itshape Living Species amounts..., one for column}\-: Each values is related to the species indicated in the living\-Species file. Reaction I\-D and time is that of the living\-Species file
+\end{DoxyItemize}\hypertarget{a00006_outLivConcentrations}{}\section{Living\-\_\-species\-\_\-concentration}\label{a00006_outLivConcentrations}
+Each simulation generates a living species amount file called living\-Concentration\-\_\-$<$generation\-Number$>$\-\_\-$<$simulation\-Number$>$.\-csv (e.\-g. {\bfseries living\-Concentration\-\_\-1\-\_\-07.\-csv} means living species amount file, generation 1, simulation number 7) containing all the living species amount (living species are those species with concentration greater than 0) for each reaction in each raw. {\bfseries This file is tightly correlated with the {\itshape Living\-\_\-species} file}. Each row contains the total amount of molecules belonging to the species indicated by its I\-D in the living\-Species file. This file is {\bfseries created at the beginning of each simulation} and it is {\bfseries updated each time that a cleavage or a condensation occur}. This file has a variable number of columns equals to the number of living species at time t \par
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{1}
+\hline
+living species amounts..., one for column  \\\cline{1-1}
+\end{TabularC}
 
-
-{\ttfamily \#include $<$catalysis.\-h$>$}
-
-\subsection*{Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{a00006_a7c4d1a67d2745293a17a6bee0df7c5cd}{catalysis} ()
-\item 
-\hyperlink{a00006_ab6af429c051e2bc9756bac72b99cc4ce}{catalysis} (\hyperlink{a00066_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} tmp\-Cat\-Id, \hyperlink{a00066_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} tmp\-Cat, \hyperlink{a00066_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} tmp\-Rct\-Id, \hyperlink{a00066_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} tmp\-Amount, \hyperlink{a00066_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} tmp\-Kass, \hyperlink{a00066_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} tmp\-Kdiss, \hyperlink{a00066_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} tmp\-K\-\_\-cpx, \hyperlink{a00066_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} tmp\-Cpx\-Target)
-\item 
-\hyperlink{a00006_a982805165c59e95ac055dc24e684fa05}{$\sim$catalysis} ()
-\item 
-\hyperlink{a00066_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} \hyperlink{a00006_a85ba5bd9c758392f245f1277141a1706}{get\-Cat\-Id} () const 
-\item 
-\hyperlink{a00066_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} \hyperlink{a00006_a205e222dff1e80ff8f3195ab22e78726}{get\-Cat} () const 
-\item 
-\hyperlink{a00066_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} \hyperlink{a00006_a6e0eea2f12109b36bb522ac971d1db29}{get\-Reaction\-I\-D} () const 
-\item 
-\hyperlink{a00066_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} \hyperlink{a00006_a70a29d164efd7c22f56ba05da04f8c9b}{get\-Tot\-Amount} () const 
-\item 
-\hyperlink{a00066_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{a00006_a471d98737d6708b3ac03efba41082d0c}{get\-Kass} () const 
-\item 
-\hyperlink{a00066_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{a00006_ad8b0d5f6410e2256cfefe0db9a10b0af}{get\-Kdiss} () const 
-\item 
-\hyperlink{a00066_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{a00006_a182bfb05b12ddd3613693f6d1f362665}{get\-K\-\_\-cpx} () const 
-\item 
-\hyperlink{a00066_a8d277355641a098190360234e2ebde35}{acs\-\_\-int} \hyperlink{a00006_a95cce06ac3f63b66d984bd723ab7e561}{get\-Cpx\-Target} () const 
-\item 
-void \hyperlink{a00006_a9c90e6f2cd9aafd2029ef20a09b95eb2}{update\-Tot\-Amount} ()
-\item 
-void \hyperlink{a00006_ab8964f8ec17d677de03747520d0a9995}{reset\-Events\-Counter} ()
-\end{DoxyCompactItemize}
-
-
-\subsection{Detailed Description}
-C\-A\-T\-A\-L\-Y\-S\-I\-S class. 
-
-This class contains catalysis proprieties and methods \begin{DoxyAuthor}{Author}
-Alessandro Filisetti 
-\end{DoxyAuthor}
-\begin{DoxyVersion}{Version}
-0.\-1 
-\end{DoxyVersion}
-\begin{DoxyDate}{Date}
-2009-\/04-\/16 
-\end{DoxyDate}
-
-
-Definition at line 16 of file catalysis.\-h.
-
-
-
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{a00006_a7c4d1a67d2745293a17a6bee0df7c5cd}{\index{catalysis@{catalysis}!catalysis@{catalysis}}
-\index{catalysis@{catalysis}!catalysis@{catalysis}}
-\subsubsection[{catalysis}]{\setlength{\rightskip}{0pt plus 5cm}catalysis\-::catalysis (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{a00006_a7c4d1a67d2745293a17a6bee0df7c5cd}
-\hypertarget{a00006_ab6af429c051e2bc9756bac72b99cc4ce}{\index{catalysis@{catalysis}!catalysis@{catalysis}}
-\index{catalysis@{catalysis}!catalysis@{catalysis}}
-\subsubsection[{catalysis}]{\setlength{\rightskip}{0pt plus 5cm}catalysis\-::catalysis (
-\begin{DoxyParamCaption}
-\item[{{\bf acs\-\_\-long\-Int}}]{tmp\-Cat\-Id, }
-\item[{{\bf acs\-\_\-long\-Int}}]{tmp\-Cat, }
-\item[{{\bf acs\-\_\-long\-Int}}]{tmp\-Rct\-Id, }
-\item[{{\bf acs\-\_\-long\-Int}}]{tmp\-Amount, }
-\item[{{\bf acs\-\_\-double}}]{tmp\-Kass, }
-\item[{{\bf acs\-\_\-double}}]{tmp\-Kdiss, }
-\item[{{\bf acs\-\_\-double}}]{tmp\-K\-\_\-cpx, }
-\item[{{\bf acs\-\_\-int}}]{tmp\-Cpx\-Target}
-\end{DoxyParamCaption}
-)}}\label{a00006_ab6af429c051e2bc9756bac72b99cc4ce}
-\begin{DoxyVerb}    catalysis class constructor (FROM FILE)
-\end{DoxyVerb}
-
-
-\begin{DoxyVersion}{Version}
-0.\-1 
-\end{DoxyVersion}
-\begin{DoxyDate}{Date}
-2010-\/03-\/16 
-\end{DoxyDate}
-
-
-Definition at line 19 of file catalysis.\-cpp.
-
-
-
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=286pt]{a00006_ab6af429c051e2bc9756bac72b99cc4ce_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00006_a982805165c59e95ac055dc24e684fa05}{\index{catalysis@{catalysis}!$\sim$catalysis@{$\sim$catalysis}}
-\index{$\sim$catalysis@{$\sim$catalysis}!catalysis@{catalysis}}
-\subsubsection[{$\sim$catalysis}]{\setlength{\rightskip}{0pt plus 5cm}catalysis\-::$\sim$catalysis (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_a982805165c59e95ac055dc24e684fa05}
-
-
-Definition at line 35 of file catalysis.\-h.
-
-
-
-\subsection{Member Function Documentation}
-\hypertarget{a00006_a205e222dff1e80ff8f3195ab22e78726}{\index{catalysis@{catalysis}!get\-Cat@{get\-Cat}}
-\index{get\-Cat@{get\-Cat}!catalysis@{catalysis}}
-\subsubsection[{get\-Cat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-long\-Int} catalysis\-::get\-Cat (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_a205e222dff1e80ff8f3195ab22e78726}
-
-
-Definition at line 39 of file catalysis.\-h.
-
-\hypertarget{a00006_a85ba5bd9c758392f245f1277141a1706}{\index{catalysis@{catalysis}!get\-Cat\-Id@{get\-Cat\-Id}}
-\index{get\-Cat\-Id@{get\-Cat\-Id}!catalysis@{catalysis}}
-\subsubsection[{get\-Cat\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-long\-Int} catalysis\-::get\-Cat\-Id (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_a85ba5bd9c758392f245f1277141a1706}
-
-
-Definition at line 38 of file catalysis.\-h.
-
-\hypertarget{a00006_a95cce06ac3f63b66d984bd723ab7e561}{\index{catalysis@{catalysis}!get\-Cpx\-Target@{get\-Cpx\-Target}}
-\index{get\-Cpx\-Target@{get\-Cpx\-Target}!catalysis@{catalysis}}
-\subsubsection[{get\-Cpx\-Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-int} catalysis\-::get\-Cpx\-Target (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_a95cce06ac3f63b66d984bd723ab7e561}
-
-
-Definition at line 46 of file catalysis.\-h.
-
-\hypertarget{a00006_a182bfb05b12ddd3613693f6d1f362665}{\index{catalysis@{catalysis}!get\-K\-\_\-cpx@{get\-K\-\_\-cpx}}
-\index{get\-K\-\_\-cpx@{get\-K\-\_\-cpx}!catalysis@{catalysis}}
-\subsubsection[{get\-K\-\_\-cpx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-double} catalysis\-::get\-K\-\_\-cpx (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_a182bfb05b12ddd3613693f6d1f362665}
-
-
-Definition at line 44 of file catalysis.\-h.
-
-\hypertarget{a00006_a471d98737d6708b3ac03efba41082d0c}{\index{catalysis@{catalysis}!get\-Kass@{get\-Kass}}
-\index{get\-Kass@{get\-Kass}!catalysis@{catalysis}}
-\subsubsection[{get\-Kass}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-double} catalysis\-::get\-Kass (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_a471d98737d6708b3ac03efba41082d0c}
-
-
-Definition at line 42 of file catalysis.\-h.
-
-\hypertarget{a00006_ad8b0d5f6410e2256cfefe0db9a10b0af}{\index{catalysis@{catalysis}!get\-Kdiss@{get\-Kdiss}}
-\index{get\-Kdiss@{get\-Kdiss}!catalysis@{catalysis}}
-\subsubsection[{get\-Kdiss}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-double} catalysis\-::get\-Kdiss (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_ad8b0d5f6410e2256cfefe0db9a10b0af}
-
-
-Definition at line 43 of file catalysis.\-h.
-
-\hypertarget{a00006_a6e0eea2f12109b36bb522ac971d1db29}{\index{catalysis@{catalysis}!get\-Reaction\-I\-D@{get\-Reaction\-I\-D}}
-\index{get\-Reaction\-I\-D@{get\-Reaction\-I\-D}!catalysis@{catalysis}}
-\subsubsection[{get\-Reaction\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-long\-Int} catalysis\-::get\-Reaction\-I\-D (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_a6e0eea2f12109b36bb522ac971d1db29}
-
-
-Definition at line 40 of file catalysis.\-h.
-
-\hypertarget{a00006_a70a29d164efd7c22f56ba05da04f8c9b}{\index{catalysis@{catalysis}!get\-Tot\-Amount@{get\-Tot\-Amount}}
-\index{get\-Tot\-Amount@{get\-Tot\-Amount}!catalysis@{catalysis}}
-\subsubsection[{get\-Tot\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-long\-Int} catalysis\-::get\-Tot\-Amount (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_a70a29d164efd7c22f56ba05da04f8c9b}
-
-
-Definition at line 41 of file catalysis.\-h.
-
-\hypertarget{a00006_ab8964f8ec17d677de03747520d0a9995}{\index{catalysis@{catalysis}!reset\-Events\-Counter@{reset\-Events\-Counter}}
-\index{reset\-Events\-Counter@{reset\-Events\-Counter}!catalysis@{catalysis}}
-\subsubsection[{reset\-Events\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}void catalysis\-::reset\-Events\-Counter (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_ab8964f8ec17d677de03747520d0a9995}
-
-
-Definition at line 50 of file catalysis.\-h.
-
-\hypertarget{a00006_a9c90e6f2cd9aafd2029ef20a09b95eb2}{\index{catalysis@{catalysis}!update\-Tot\-Amount@{update\-Tot\-Amount}}
-\index{update\-Tot\-Amount@{update\-Tot\-Amount}!catalysis@{catalysis}}
-\subsubsection[{update\-Tot\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}void catalysis\-::update\-Tot\-Amount (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00006_a9c90e6f2cd9aafd2029ef20a09b95eb2}
-
-
-Definition at line 49 of file catalysis.\-h.
-
-
-
-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
-\item 
-/home/ale/\-Documents/\-G\-I\-T/carness/\hyperlink{a00068}{catalysis.\-h}\item 
-/home/ale/\-Documents/\-G\-I\-T/carness/\hyperlink{a00067}{catalysis.\-cpp}\end{DoxyCompactItemize}
+\begin{DoxyItemize}
+\item {\itshape Living Species amounts..., one for column}\-: Each values is related to the species indicated in the living\-Species file. Reaction I\-D and time is that of the living\-Species file 
+\end{DoxyItemize}

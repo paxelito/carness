@@ -1,6 +1,6 @@
 <map id="environment::resetConcentrationToInitialConditions" name="environment::resetConcentrationToInitialConditions">
 <area shape="rect" id="node2" href="$a00014.html#a6606b08f25751a8796c13810962b385e" title="environment::structureCoherence\lCheckUp" alt="" coords="270,155,490,197"/>
-<area shape="rect" id="node4" href="$a00075.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="833,260,933,287"/>
+<area shape="rect" id="node4" href="$a00056.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="833,260,933,287"/>
 <area shape="rect" id="node8" href="$a00014.html#a7fc3937fb586db93c33f7f091dc99626" title="environment::storeInitial\lStructures" alt="" coords="298,370,462,411"/>
 <area shape="rect" id="node9" href="$a00014.html#a7a321296874fa1320da225cdbbf56a64" title="environment::getTotalNumber\lOfSpecies" alt="" coords="281,435,479,477"/>
 <area shape="rect" id="node10" href="$a00014.html#a57e7ac49955f4717096cb6696ee03a61" title="environment::getTotalNumber\lOfMolecules" alt="" coords="281,501,479,542"/>

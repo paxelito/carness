@@ -1,5 +1,5 @@
 <map id="environment::performMoleculeEfflux" name="environment::performMoleculeEfflux">
-<area shape="rect" id="node2" href="$a00075.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="311,104,411,131"/>
+<area shape="rect" id="node2" href="$a00056.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="311,104,411,131"/>
 <area shape="rect" id="node3" href="$a00014.html#a10fad450cf5ef3a1c7cf75d616105069" title="environment::decMolSpecies\lProcedure" alt="" coords="265,155,458,197"/>
 <area shape="rect" id="node8" href="$a00014.html#a16d09f818d3012f88e8e4c9a7759b6bd" title="environment::decCpxProcedure" alt="" coords="257,253,466,280"/>
 <area shape="rect" id="node11" href="$a00014.html#af21c066ce18c8a39740f66a995782fb9" title="environment::unchargeMol\lProcess" alt="" coords="271,337,451,378"/>

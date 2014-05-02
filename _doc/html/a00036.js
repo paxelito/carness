@@ -1,18 +1,16 @@
 var a00036 =
 [
-    [ "args", "a00036.html#a0fef98b331f3de5212d309bd2d3556e7", null ],
-    [ "chem", "a00036.html#aa0ad135db98d635147ecbd1480de89df", null ],
-    [ "filename", "a00036.html#aa77abf10e3a92416282af2030df3b4b0", null ],
-    [ "filesToAnal", "a00036.html#a353a268554f9ac8661c5e0142496f580", null ],
-    [ "lenFilesToAnal", "a00036.html#abf8db6a4d0dc9132f54755c72c871471", null ],
-    [ "numOfTraj", "a00036.html#a4679690d186f44a3ad8e6eb3a545fd39", null ],
-    [ "parser", "a00036.html#a14b76a8235da778083f610cabe968c34", null ],
-    [ "pos", "a00036.html#a7ce24ac1959d7d1512b663f20f3e3100", null ],
-    [ "run4Chem", "a00036.html#a565bd873618e4d135a9903fb70ee5981", null ],
-    [ "strPath", "a00036.html#aff72277efad2fb1d2f51e95f6fefc288", null ],
-    [ "strSubStrKey", "a00036.html#a4331412d1cdff7111cdc69adc31528c4", null ],
-    [ "tmpHead", "a00036.html#acb2620669fa00dd24be0687c86647b43", null ],
-    [ "x", "a00036.html#a52808d1f82b263c51e9bfb9e18b053c0", null ],
-    [ "xsize", "a00036.html#ade03788f04a663a14a9abeae4e7ea0e2", null ],
-    [ "y", "a00036.html#aa7979c32d5499d000edacba8fcadd039", null ]
+    [ "concAnalysis", "a00036.html#a18a344cbdf9b3218a438bca78547ab9e", null ],
+    [ "stats", "a00036.html#aa7ae495ee970be20d992bedf6f9f8280", null ],
+    [ "decayTime", "a00036.html#afb6aa83fb78c663f3b39be2380842a8b", null ],
+    [ "deltaT", "a00036.html#a5318eae09f2b8ac76b2d6df39ba9c1cd", null ],
+    [ "distinctiveSubStr", "a00036.html#ab3d8fca9a15f5a064b07181a35ebdbb7", null ],
+    [ "figureVisible", "a00036.html#a63b4c2789d7e1513024181d12e4f1b6b", null ],
+    [ "showFig", "a00036.html#a4b295f592934e78a05958a54046ceb68", null ],
+    [ "threshold", "a00036.html#aa022cbb28f80299d572def08e7a5ccfd", null ],
+    [ "tmpIDsim", "a00036.html#a71a9d71e2c994a7a8552d39b41b6e256", null ],
+    [ "tmpRctFileToLoad", "a00036.html#a3b01c97f207a2997c3bd0c2718441509", null ],
+    [ "tmpRctSUBFileToLoad", "a00036.html#ae5d21adddbfe36d5b10d43a2e8b39123", null ],
+    [ "tmpResFold", "a00036.html#a4e4b89515d35d0cba5873e282e55dc8c", null ],
+    [ "totT", "a00036.html#aa9758857dd92f7845934f06daa7c4120", null ]
 ];

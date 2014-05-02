@@ -1,5 +1,4 @@
 <map id="species::concToNum" name="species::concToNum">
-<area shape="rect" id="node2" href="$a00022.html#a0c91a8b735cb484bff240ba5049f6af3" title="New species constructor in case of species structure file upload (IN AMOUNT) " alt="" coords="228,5,348,32"/>
-<area shape="rect" id="node3" href="$a00022.html#a018a8f55746849f4814b4d281d4aca5a" title="species::setConcentration" alt="" coords="200,56,376,83"/>
-<area shape="rect" id="node4" href="$a00022.html#acc180a103e6681da2add266aafda3eb9" title="species::resetToInitConc" alt="" coords="203,107,373,133"/>
+<area shape="rect" id="node2" href="$a00022.html#a018a8f55746849f4814b4d281d4aca5a" title="species::setConcentration" alt="" coords="200,5,376,32"/>
+<area shape="rect" id="node3" href="$a00022.html#acc180a103e6681da2add266aafda3eb9" title="species::resetToInitConc" alt="" coords="203,56,373,83"/>
 </map>

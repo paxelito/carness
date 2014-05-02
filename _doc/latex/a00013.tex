@@ -1,224 +1,31 @@
-\hypertarget{a00013}{\section{M\-T\-Rand\-\_\-int32 Class Reference}
-\label{a00013}\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}}
+\hypertarget{a00013}{\section{common\-Functions Class Reference}
+\label{a00013}\index{common\-Functions@{common\-Functions}}
 }
 
 
-{\ttfamily \#include $<$mtrand.\-h$>$}
+This class contains all the common function of the system.  
 
 
 
-Inheritance diagram for M\-T\-Rand\-\_\-int32\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{a00154}
-\end{center}
-\end{figure}
-\subsection*{Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{a00013_a034f223c086f5368bd220b02f2cc12a8}{M\-T\-Rand\-\_\-int32} ()
-\item 
-\hyperlink{a00013_ad30f7c63a6f1fb3c3b76b8ce6ffa0206}{M\-T\-Rand\-\_\-int32} (unsigned long s)
-\item 
-\hyperlink{a00013_a19acddb3910a7282517b2ffc398b92b4}{M\-T\-Rand\-\_\-int32} (const unsigned long $\ast$array, int \hyperlink{a00056_ae113ea7f9e515a12ac4b5595c6faf61e}{size})
-\item 
-void \hyperlink{a00013_a0c57076fe30358e0700a7ce1baa0ea27}{seed} (unsigned long)
-\item 
-void \hyperlink{a00013_a3cabc1e3445716236a570ffd2f69686d}{seed} (const unsigned long $\ast$, int \hyperlink{a00056_ae113ea7f9e515a12ac4b5595c6faf61e}{size})
-\item 
-unsigned long \hyperlink{a00013_ad7fe22190d0411c6dac8e6f471633aa4}{operator()} ()
-\item 
-virtual \hyperlink{a00013_a364900abea0758d070ce89922159923a}{$\sim$\-M\-T\-Rand\-\_\-int32} ()
-\end{DoxyCompactItemize}
-\subsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-unsigned long \hyperlink{a00013_abacdfa346255baeac69d29bb57f29b22}{rand\-\_\-int32} ()
-\end{DoxyCompactItemize}
+
+{\ttfamily \#include $<$common\-Functions.\-h$>$}
+
 
 
 \subsection{Detailed Description}
+This class contains all the common function of the system. 
+
+This class contains all the functions useful in general \begin{DoxyAuthor}{Authors}
+alessandro filisetti 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2011/12/10 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
 
 
-Definition at line 48 of file mtrand.\-h.
-
-
-
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{a00013_a034f223c086f5368bd220b02f2cc12a8}{\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}}
-\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!MTRand_int32@{M\-T\-Rand\-\_\-int32}}
-\subsubsection[{M\-T\-Rand\-\_\-int32}]{\setlength{\rightskip}{0pt plus 5cm}M\-T\-Rand\-\_\-int32\-::\-M\-T\-Rand\-\_\-int32 (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00013_a034f223c086f5368bd220b02f2cc12a8}
-
-
-Definition at line 51 of file mtrand.\-h.
-
-
-
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=344pt]{a00013_a034f223c086f5368bd220b02f2cc12a8_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00013_ad30f7c63a6f1fb3c3b76b8ce6ffa0206}{\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}}
-\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!MTRand_int32@{M\-T\-Rand\-\_\-int32}}
-\subsubsection[{M\-T\-Rand\-\_\-int32}]{\setlength{\rightskip}{0pt plus 5cm}M\-T\-Rand\-\_\-int32\-::\-M\-T\-Rand\-\_\-int32 (
-\begin{DoxyParamCaption}
-\item[{unsigned long}]{s}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00013_ad30f7c63a6f1fb3c3b76b8ce6ffa0206}
-
-
-Definition at line 53 of file mtrand.\-h.
-
-
-
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=344pt]{a00013_ad30f7c63a6f1fb3c3b76b8ce6ffa0206_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00013_a19acddb3910a7282517b2ffc398b92b4}{\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}}
-\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!MTRand_int32@{M\-T\-Rand\-\_\-int32}}
-\subsubsection[{M\-T\-Rand\-\_\-int32}]{\setlength{\rightskip}{0pt plus 5cm}M\-T\-Rand\-\_\-int32\-::\-M\-T\-Rand\-\_\-int32 (
-\begin{DoxyParamCaption}
-\item[{const unsigned long $\ast$}]{array, }
-\item[{int}]{size}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00013_a19acddb3910a7282517b2ffc398b92b4}
-
-
-Definition at line 55 of file mtrand.\-h.
-
-
-
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=344pt]{a00013_a19acddb3910a7282517b2ffc398b92b4_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00013_a364900abea0758d070ce89922159923a}{\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!$\sim$\-M\-T\-Rand\-\_\-int32@{$\sim$\-M\-T\-Rand\-\_\-int32}}
-\index{$\sim$\-M\-T\-Rand\-\_\-int32@{$\sim$\-M\-T\-Rand\-\_\-int32}!MTRand_int32@{M\-T\-Rand\-\_\-int32}}
-\subsubsection[{$\sim$\-M\-T\-Rand\-\_\-int32}]{\setlength{\rightskip}{0pt plus 5cm}virtual M\-T\-Rand\-\_\-int32\-::$\sim$\-M\-T\-Rand\-\_\-int32 (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{a00013_a364900abea0758d070ce89922159923a}
-
-
-Definition at line 62 of file mtrand.\-h.
-
-
-
-\subsection{Member Function Documentation}
-\hypertarget{a00013_ad7fe22190d0411c6dac8e6f471633aa4}{\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!operator()@{operator()}}
-\index{operator()@{operator()}!MTRand_int32@{M\-T\-Rand\-\_\-int32}}
-\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long M\-T\-Rand\-\_\-int32\-::operator() (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00013_ad7fe22190d0411c6dac8e6f471633aa4}
-
-
-Definition at line 60 of file mtrand.\-h.
-
-
-
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=346pt]{a00013_ad7fe22190d0411c6dac8e6f471633aa4_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00013_abacdfa346255baeac69d29bb57f29b22}{\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!rand\-\_\-int32@{rand\-\_\-int32}}
-\index{rand\-\_\-int32@{rand\-\_\-int32}!MTRand_int32@{M\-T\-Rand\-\_\-int32}}
-\subsubsection[{rand\-\_\-int32}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long M\-T\-Rand\-\_\-int32\-::rand\-\_\-int32 (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{a00013_abacdfa346255baeac69d29bb57f29b22}
-
-
-Definition at line 85 of file mtrand.\-h.
-
-
-
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{a00013_abacdfa346255baeac69d29bb57f29b22_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00013_a0c57076fe30358e0700a7ce1baa0ea27}{\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!seed@{seed}}
-\index{seed@{seed}!MTRand_int32@{M\-T\-Rand\-\_\-int32}}
-\subsubsection[{seed}]{\setlength{\rightskip}{0pt plus 5cm}void M\-T\-Rand\-\_\-int32\-::seed (
-\begin{DoxyParamCaption}
-\item[{unsigned long}]{s}
-\end{DoxyParamCaption}
-)}}\label{a00013_a0c57076fe30358e0700a7ce1baa0ea27}
-
-
-Definition at line 23 of file mtrand.\-cpp.
-
-
-
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=344pt]{a00013_a0c57076fe30358e0700a7ce1baa0ea27_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00013_a3cabc1e3445716236a570ffd2f69686d}{\index{M\-T\-Rand\-\_\-int32@{M\-T\-Rand\-\_\-int32}!seed@{seed}}
-\index{seed@{seed}!MTRand_int32@{M\-T\-Rand\-\_\-int32}}
-\subsubsection[{seed}]{\setlength{\rightskip}{0pt plus 5cm}void M\-T\-Rand\-\_\-int32\-::seed (
-\begin{DoxyParamCaption}
-\item[{const unsigned long $\ast$}]{array, }
-\item[{int}]{size}
-\end{DoxyParamCaption}
-)}}\label{a00013_a3cabc1e3445716236a570ffd2f69686d}
-
-
-Definition at line 35 of file mtrand.\-cpp.
-
-
-
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=328pt]{a00013_a3cabc1e3445716236a570ffd2f69686d_cgraph}
-\end{center}
-\end{figure}
-
-
-
-
-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-/home/ale/\-Documents/\-G\-I\-T/carness/\hyperlink{a00085}{mtrand.\-h}\item 
-/home/ale/\-Documents/\-G\-I\-T/carness/\hyperlink{a00084}{mtrand.\-cpp}\end{DoxyCompactItemize}
+/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/python\-Tools/init/exps/source\-Code/\hyperlink{a00058}{common\-Functions.\-h}\end{DoxyCompactItemize}

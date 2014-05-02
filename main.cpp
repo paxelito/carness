@@ -1,7 +1,7 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 4.82 (20140327.67)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 5.0 (20140402.68)
  * \author Alessandro Filisetti
- * \version 4.82 (20140427.67)
- * \date 2014-03-27
+ * \version 5.0 (20140402.68)
+ * \date 2014-04-02
  * git repository -- https://github.com/paxelito/carness
  *
  *
@@ -126,6 +126,7 @@
  *- University of Bologna, Interdepartment of industrial research (C.I.R.I)
  *- Alex Graudenzi to take care of the initilizator.
  *- Chiara Damiani to contribute to the development of the software.
+ *- Giovanni Lamberti to contribute to the development of the software.
  *- Roberto Serra, Marco Villani, Timoteo Carletti, Davide De Lucrezia, Norman Packard, Ruedi Fuchslin, Andrea Roli and Stuart Kauffman for the essential hints.
  *- http://www.bedaux.net/mtrand/ for the pseudo-random Marseinne-Twister library for C++.
  *- http://perso.wanadoo.es/antlarr/otherapps.html for the poisson distribution generator numbers (acs_longInt random_poisson(acs_double tmpLambda, MTRand& tmpRandomGenerator)).
@@ -524,7 +525,8 @@ int main (int argc, char *argv[]) {
                             			if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
                             						ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
                             		}else{ // If structures are fixed new optimized Gillespie algorithm can be used
-                            			if(!puddle->perform_FIXED_GillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
+                            			//if(!puddle->perform_FIXED_GillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
+                            			if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
                             			            ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
                             		}
                             	}catch(exception&e){

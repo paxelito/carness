@@ -3,7 +3,7 @@
  *  acsSIM
  *
  *  Created by Alessandro Filisetti on 09/03/09.
- *  Copyright 2009 __European Centre for Living Technology__. All rights reserved.
+ *  Copyright 2014 __European Centre for Living Technology__. All rights reserved.
  *
  */
 
@@ -39,7 +39,7 @@ typedef unsigned int acs_int;
 // CONSTANTS
 //----------
 
-#define __SOFTVERSION__ "4.81b20140327.67"
+#define __SOFTVERSION__ "5.0b20140402.68"
 
 // DEBUG LEVELS
 

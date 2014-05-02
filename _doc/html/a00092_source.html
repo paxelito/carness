@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>CaRNeSS: /Users/alessandrofilisetti/Documents/GIT/carness/reactions.cpp Source File</title>
+<title>CaRNeSS: /Users/alessandrofilisetti/Documents/GIT/carness/_analysis/pythonTools/lib/graph/scc.py Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CaRNeSS
-   &#160;<span id="projectnumber">4.8 (20131210.63)</span>
+   &#160;<span id="projectnumber">5.0 (20140402.68)</span>
    </div>
    <div id="projectbrief">Catalytic Reaction Networks Stochastic Simulator</div>
   </td>
@@ -106,45 +106,131 @@ $(document).ready(function(){initNavTree('a00092_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">reactions.cpp</div>  </div>
+<div class="title">scc.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00092.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  reactions.cpp</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *  acsm2s</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Created by Alessandro Filisetti on 31/03/09.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  Copyright 2009 __MyCompanyName__. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00093.html">reactions.h</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="a00021.html#a0b6ca1c86d79bb511f116d86714f74a6">   20</a></span>&#160;<a class="code" href="a00021.html#a0b6ca1c86d79bb511f116d86714f74a6">reactions::reactions</a>(<a class="code" href="a00072.html#a19319d75f02db4308bc5c0026d98cd85">acs_longInt</a> tmpID, <a class="code" href="a00072.html#a8d277355641a098190360234e2ebde35">acs_int</a> tmpType, <a class="code" href="a00072.html#a19319d75f02db4308bc5c0026d98cd85">acs_longInt</a> tmpM_I, <a class="code" href="a00072.html#a19319d75f02db4308bc5c0026d98cd85">acs_longInt</a> tmpM_II, </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                     <a class="code" href="a00072.html#a19319d75f02db4308bc5c0026d98cd85">acs_longInt</a> tmpM_III, <a class="code" href="a00072.html#a8d277355641a098190360234e2ebde35">acs_int</a> tmpEvents, <a class="code" href="a00072.html#a8d277355641a098190360234e2ebde35">acs_int</a> tmpEnergyType, <a class="code" href="a00072.html#ab776853a005fcbf56af0424a2a4dd607">acs_double</a> tmpKspont)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        id_reaction = tmpID;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        type = tmpType;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        species_I = tmpM_I;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        species_II = tmpM_II;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        species_III = tmpM_III;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        events = tmpEvents;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        energyType = tmpEnergyType;     </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        k_spont = tmpKspont;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="ttc" id="a00072_html_a8d277355641a098190360234e2ebde35"><div class="ttname"><a href="a00072.html#a8d277355641a098190360234e2ebde35">acs_int</a></div><div class="ttdeci">unsigned int acs_int</div><div class="ttdef"><b>Definition:</b> <a href="a00072_source.html#l00036">acs_headers.h:36</a></div></div>
-<div class="ttc" id="a00093_html"><div class="ttname"><a href="a00093.html">reactions.h</a></div></div>
-<div class="ttc" id="a00072_html_a19319d75f02db4308bc5c0026d98cd85"><div class="ttname"><a href="a00072.html#a19319d75f02db4308bc5c0026d98cd85">acs_longInt</a></div><div class="ttdeci">unsigned long int acs_longInt</div><div class="ttdef"><b>Definition:</b> <a href="a00072_source.html#l00035">acs_headers.h:35</a></div></div>
-<div class="ttc" id="a00072_html_ab776853a005fcbf56af0424a2a4dd607"><div class="ttname"><a href="a00072.html#ab776853a005fcbf56af0424a2a4dd607">acs_double</a></div><div class="ttdeci">long double acs_double</div><div class="ttdef"><b>Definition:</b> <a href="a00072_source.html#l00034">acs_headers.h:34</a></div></div>
-<div class="ttc" id="a00021_html_a0b6ca1c86d79bb511f116d86714f74a6"><div class="ttname"><a href="a00021.html#a0b6ca1c86d79bb511f116d86714f74a6">reactions::reactions</a></div><div class="ttdeci">reactions(acs_longInt tmpID, acs_int tmpType, acs_longInt tmpM_I, acs_longInt tmpM_II, acs_longInt tmpM_III, acs_int tmpEvents, acs_int tmpEnergyType, acs_double tmpKspont)</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.html#l00020">reactions.cpp:20</a></div></div>
+<a href="a00092.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="a00142.html">    1</a></span>&#160;<span class="comment">#!/usr/bin/python</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># -*- coding: latin-1 -*-</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> sys, os <span class="comment"># Standard library</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> glob</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">from</span> copy <span class="keyword">import</span> deepcopy</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> numpy <span class="keyword">as</span> np <span class="comment"># Scientific library</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> networkx <span class="keyword">as</span> nx</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">from</span> numpy <span class="keyword">import</span> * </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">from</span> argparse <span class="keyword">import</span> ArgumentParser</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordflow">try</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">from</span> pylab <span class="keyword">import</span> *</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordflow">except</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">pass</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;   </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="a00142.html#a7d0d5fec525d92ca329b1b58da0712be">   16</a></span>&#160;<span class="keyword">def </span><a class="code" href="a00142.html#a7d0d5fec525d92ca329b1b58da0712be">createSimpleGraph</a>(tmpCstr, tmpCats):</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="stringliteral">&quot;\t\t|- Cat -&gt; Prod graph creation...&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        g = []</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> id, cat <span class="keywordflow">in</span> enumerate(tmpCats):</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="keywordflow">if</span> id == 0:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                        g = np.array([[int(cat[0]), int(tmpCstr[tmpCstr[:,0] == cat[1],0])]])</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                        g = np.vstack([g,(int(cat[0]), int(tmpCstr[tmpCstr[:,0] == cat[1],0]))])</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">#print g</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">#raw_input(&quot;prompt&quot;)</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> g</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="a00142.html#abc47bb4f5ff50cf5d1dd81c007c1e332">   28</a></span>&#160;<span class="keyword">def </span><a class="code" href="a00142.html#abc47bb4f5ff50cf5d1dd81c007c1e332">createNetXGraph</a>(tmpCstr, tmpCats):</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="stringliteral">&quot;\t\t|- Cat -&gt; Prod graph creation...&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        Gcatpro = nx.DiGraph()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">#print tmpCstr</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">#print tmpCats</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">for</span> id, cat <span class="keywordflow">in</span> enumerate(tmpCats):</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">try</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        <span class="keywordflow">if</span> int(tmpCstr[tmpCstr[:,0] == cat[2],1]) == 1:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                Gcatpro.add_weighted_edges_from([(int(cat[1]),int(tmpCstr[tmpCstr[:,0] == cat[2],3]),1)])</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                <span class="keywordflow">if</span> int(tmpCstr[tmpCstr[:,0] == cat[2],3]) <span class="keywordflow">is</span> <span class="keywordflow">not</span> int(tmpCstr[tmpCstr[:,0] == cat[2],4]):</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                        Gcatpro.add_weighted_edges_from([(int(cat[1]),int(tmpCstr[tmpCstr[:,0] == cat[2],4]),1)])</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                Gcatpro.add_weighted_edges_from([(int(cat[1]),int(tmpCstr[tmpCstr[:,0] == cat[2],2]),1)])</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        <span class="comment">#print Gcatpro.edges()</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">except</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                        <span class="keywordflow">print</span> tmpCats</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        <span class="keywordflow">print</span> tmpCstr</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                        <span class="keywordflow">print</span> cat</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        <span class="keywordflow">print</span> tmpCstr[tmpCstr[:,0] == cat[2],1]</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                        sys.exit(1)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> Gcatpro</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="a00142.html#aff58b86401d5f04b13100aae79560fe7">   50</a></span>&#160;<span class="keyword">def </span><a class="code" href="a00142.html#aff58b86401d5f04b13100aae79560fe7">createNetXGraphForRAF</a>(tmpCstr, tmpClosure, tmpCats):</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="stringliteral">&quot;\t\t|- Cat -&gt; Prod graph creation...&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        Gcatpro = nx.DiGraph()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment"># Extract catalysts catalysing reactions of the RAF set. </span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">for</span> id, cat <span class="keywordflow">in</span> enumerate(tmpCats): <span class="comment"># For each catalysis</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">if</span> cat[1] <span class="keywordflow">in</span> tmpClosure: <span class="comment"># IF the catalyst is in the closure</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        <span class="keywordflow">if</span> <a class="code" href="a00028.html#a576bebae86b11914280920c448def53d">sum</a>(tmpCstr[:,0] == cat[2]) &gt; 0:<span class="comment"># if the are reactions catalyzed by the catalyst</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                <span class="keywordflow">if</span> int(tmpCstr[tmpCstr[:,0] == cat[2],1]) == 1: </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                        Gcatpro.add_weighted_edges_from([(int(cat[1]),int(tmpCstr[tmpCstr[:,0] == cat[2],3]),1)])</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                        <span class="keywordflow">if</span> int(tmpCstr[tmpCstr[:,0] == cat[2],3]) <span class="keywordflow">is</span> <span class="keywordflow">not</span> int(tmpCstr[tmpCstr[:,0] == cat[2],4]):</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                                Gcatpro.add_weighted_edges_from([(int(cat[1]),int(tmpCstr[tmpCstr[:,0] == cat[2],4]),1)])</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                        Gcatpro.add_weighted_edges_from([(int(cat[1]),int(tmpCstr[tmpCstr[:,0] == cat[2],2]),1)])</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> Gcatpro</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="a00142.html#a98b4189c8603e40d7879d606ed4b215a">   65</a></span>&#160;<span class="keyword">def </span><a class="code" href="a00142.html#a98b4189c8603e40d7879d606ed4b215a">diGraph_netX_stats</a>(tmpDig):</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        realSccs = 0</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        scc = nx.strongly_connected_components(tmpDig)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        sccsg = nx.strongly_connected_component_subgraphs(tmpDig)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        actualScc = []</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span> i <span class="keywordflow">in</span> scc: </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">if</span> len(i) &gt; 1: actualScc.append(i)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        sccN= len(actualScc)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        selfLoops = tmpDig.number_of_selfloops()</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        selfLoopsEgdes = tmpDig.selfloop_edges()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        realSccs = selfLoops + sccN </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> actualScc, sccN, selfLoops, selfLoopsEgdes, realSccs, sccsg</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="a00142.html#a54bdd154f11152272776a28a4abfcf06">   78</a></span>&#160;<span class="keyword">def </span><a class="code" href="a00142.html#a54bdd154f11152272776a28a4abfcf06">checkMinimalSCCdimension</a>(tmpDig,tmpMinDim):</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        findflag = <span class="keyword">False</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        sccSize = 0</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        scc = nx.strongly_connected_components(tmpDig)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        sccL = nx.strongly_connected_components_recursive(tmpDig)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> len(scc) &gt; 0:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">for</span> i <span class="keywordflow">in</span> scc: </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                        <span class="keywordflow">if</span> len(i) &gt; tmpMinDim:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                findflag = <span class="keyword">True</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                sccSize = len(i)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                <span class="keywordflow">break</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> [findflag, sccSize, sccL]</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="a00142.html#a3dbfb9a21bab7b43f8c634a220af08fc">   92</a></span>&#160;<span class="keyword">def </span><a class="code" href="a00142.html#a3dbfb9a21bab7b43f8c634a220af08fc">printSCConFile</a>(tmpSCCL, tmpfolderName, filePrefix):</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        filename = <span class="stringliteral">&#39;0_&#39;</span> + str(filePrefix) + <span class="stringliteral">&#39;_SCCs.txt&#39;</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        fname_scc = os.path.join(tmpfolderName, filename)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        fid_fname_scc = open(fname_scc, <span class="stringliteral">&#39;w&#39;</span>)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">for</span> sccid, SCC <span class="keywordflow">in</span> enumerate(tmpSCCL):</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">if</span> len(SCC) &gt; 1:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        str2w = <span class="stringliteral">&#39;\n*** Chemistry &#39;</span> + str(filePrefix) + <span class="stringliteral">&#39; - SCC number &#39;</span> + str(sccid+1) + <span class="stringliteral">&#39;\n\n&#39;</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        fid_fname_scc.write(str2w)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                        <span class="keywordflow">for</span> scc <span class="keywordflow">in</span> SCC: </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                strToWrite = str(scc) + <span class="stringliteral">&quot;\t&quot;</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                fid_fname_scc.write(strToWrite)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        fid_fname_scc.write(<span class="stringliteral">&quot;\n&quot;</span>)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="ttc" id="a00142_html_a7d0d5fec525d92ca329b1b58da0712be"><div class="ttname"><a href="a00142.html#a7d0d5fec525d92ca329b1b58da0712be">lib.graph.scc.createSimpleGraph</a></div><div class="ttdeci">def createSimpleGraph</div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.html#l00016">scc.py:16</a></div></div>
+<div class="ttc" id="a00028_html_a576bebae86b11914280920c448def53d"><div class="ttname"><a href="a00028.html#a576bebae86b11914280920c448def53d">sum</a></div><div class="ttdeci">end INFLUX ECONOMY ANALYSIS if sum(influx==mol_I) &gt;</div></div>
+<div class="ttc" id="a00142_html_a54bdd154f11152272776a28a4abfcf06"><div class="ttname"><a href="a00142.html#a54bdd154f11152272776a28a4abfcf06">lib.graph.scc.checkMinimalSCCdimension</a></div><div class="ttdeci">def checkMinimalSCCdimension</div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.html#l00078">scc.py:78</a></div></div>
+<div class="ttc" id="a00142_html_a98b4189c8603e40d7879d606ed4b215a"><div class="ttname"><a href="a00142.html#a98b4189c8603e40d7879d606ed4b215a">lib.graph.scc.diGraph_netX_stats</a></div><div class="ttdeci">def diGraph_netX_stats</div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.html#l00065">scc.py:65</a></div></div>
+<div class="ttc" id="a00142_html_a3dbfb9a21bab7b43f8c634a220af08fc"><div class="ttname"><a href="a00142.html#a3dbfb9a21bab7b43f8c634a220af08fc">lib.graph.scc.printSCConFile</a></div><div class="ttdeci">def printSCConFile</div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.html#l00092">scc.py:92</a></div></div>
+<div class="ttc" id="a00142_html_aff58b86401d5f04b13100aae79560fe7"><div class="ttname"><a href="a00142.html#aff58b86401d5f04b13100aae79560fe7">lib.graph.scc.createNetXGraphForRAF</a></div><div class="ttdeci">def createNetXGraphForRAF</div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.html#l00050">scc.py:50</a></div></div>
+<div class="ttc" id="a00142_html_abc47bb4f5ff50cf5d1dd81c007c1e332"><div class="ttname"><a href="a00142.html#abc47bb4f5ff50cf5d1dd81c007c1e332">lib.graph.scc.createNetXGraph</a></div><div class="ttdeci">def createNetXGraph</div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.html#l00028">scc.py:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b332d76264961ef132272329242bfdf0.html">alessandrofilisetti</a></li><li class="navelem"><a class="el" href="dir_aa442a8060e2d188d99c82c234c5a5b0.html">Documents</a></li><li class="navelem"><a class="el" href="dir_21ed3a790d3d47dec9b1b0286693acfe.html">GIT</a></li><li class="navelem"><a class="el" href="dir_db4b0999f315afd5b53562c9396ed6f4.html">carness</a></li><li class="navelem"><a class="el" href="a00092.html">reactions.cpp</a></li>
-    <li class="footer">Generated on Thu Dec 12 2013 11:27:27 for CaRNeSS by
+    <li class="navelem"><a class="el" href="dir_b332d76264961ef132272329242bfdf0.html">alessandrofilisetti</a></li><li class="navelem"><a class="el" href="dir_aa442a8060e2d188d99c82c234c5a5b0.html">Documents</a></li><li class="navelem"><a class="el" href="dir_21ed3a790d3d47dec9b1b0286693acfe.html">GIT</a></li><li class="navelem"><a class="el" href="dir_db4b0999f315afd5b53562c9396ed6f4.html">carness</a></li><li class="navelem"><a class="el" href="dir_66d19001354beca3375bfcfe54fec246.html">_analysis</a></li><li class="navelem"><a class="el" href="dir_508dad14600c884a03133d6c8d8081f5.html">pythonTools</a></li><li class="navelem"><a class="el" href="dir_2bb7d566e229ea8d1c278bf3055a2908.html">lib</a></li><li class="navelem"><a class="el" href="dir_250224789e0808f4a26649d726bd76cf.html">graph</a></li><li class="navelem"><a class="el" href="a00092.html">scc.py</a></li>
+    <li class="footer">Generated on Sat May 3 2014 00:35:42 for CaRNeSS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

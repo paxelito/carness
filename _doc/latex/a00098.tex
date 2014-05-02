@@ -1,732 +1,143 @@
-\hypertarget{a00098}{\section{acs\-States\-Analysis Namespace Reference}
-\label{a00098}\index{acs\-States\-Analysis@{acs\-States\-Analysis}}
+\hypertarget{a00098}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/python\-Tools/main.py File Reference}
+\label{a00098}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/python\-Tools/main.\-py@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/python\-Tools/main.\-py}}
 }
-\subsection*{Functions}
+\subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{a00098_aeeb6d629132a9755b45a3008d445419c}{zero\-Before\-Str\-Num}
-\item 
-def \hyperlink{a00098_ad7c75c1e146fa51da42274cf7d5747d0}{return\-Zero\-Species\-List}
-\item 
-def \hyperlink{a00098_a76768d52780b1415a920dc94b3c991c0}{distance\-Misures}
+\hyperlink{a00151}{main}
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-tuple \hyperlink{a00098_ac99ee9d8196d8a2305b9f4c795b23b97}{today} = dt.\-date.\-today()
+tuple \hyperlink{a00151_a6596d20927a9196bbb33aef704e88297}{main.\-parser}
 \item 
-tuple \hyperlink{a00098_ac34f3f43f888eb6620266d78ce928ceb}{Str\-Path} = os.\-path.\-abspath(Str\-Path)
+tuple \hyperlink{a00151_a80760a53c8941c6f6f30e633649ffd8d}{main.\-args} = parser.\-parse\-\_\-args()
 \item 
-tuple \hyperlink{a00098_ab71c19ee20acae0f07934a8d0e9fe50b}{tmp\-Dirs} = sort(os.\-listdir(\hyperlink{a00098_ac34f3f43f888eb6620266d78ce928ceb}{Str\-Path}))
+tuple \hyperlink{a00151_ac0b5b603b5f89c10838ce6a42be8c6f7}{main.\-str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
 \item 
-string \hyperlink{a00098_ae98225d5c8c20399f5c3b888fa37746f}{current\-Dir} = ''
+tuple \hyperlink{a00151_a9606754176252315321d1faa6191479e}{main.\-tmp\-Dirs} = sort(os.\-listdir(str\-Path))
 \item 
-string \hyperlink{a00098_a5e117df6e0cdffdae13947622c6c4890}{ndn} = \hyperlink{a00098_ae98225d5c8c20399f5c3b888fa37746f}{current\-Dir}+'\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'
+string \hyperlink{a00151_acaa3f6fffb18a543c7c04d985e77fa6f}{main.\-ndn} = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'
 \item 
-tuple \hyperlink{a00098_a62d6cfd52b4428ab7ea4d75d43b2d49b}{newdir\-All\-Results} = os.\-path.\-join(os.\-curdir, \hyperlink{a00098_a5e117df6e0cdffdae13947622c6c4890}{ndn})
+tuple \hyperlink{a00151_af73b43f5468097ae9443adeb6010a75c}{main.\-newdir\-All\-Results} = os.\-path.\-join(str\-Path, ndn)
 \item 
-tuple \hyperlink{a00098_aba65725a1bd6d1b891b02dc7f3db2335}{previous\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-t\-\_\-tminus\-\_\-1.\-csv', 'w')
+int \hyperlink{a00151_a05832bb8aa5b5b63ca022653c9b32af5}{main.\-\_\-\-C\-L\-O\-S\-E\-\_\-} = 0
 \item 
-tuple \hyperlink{a00098_a9f9485bf6f7a3734bbd110b756005b71}{previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')
+int \hyperlink{a00151_afe92b072adc360963093d3660e7684ce}{main.\-\_\-\-P\-R\-O\-T\-O\-\_\-} = 1
 \item 
-tuple \hyperlink{a00098_a0239a9dcc4900463a0c19557bec23521}{start\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-t\-\_\-start.\-csv', 'w')
+int \hyperlink{a00151_a4994448f45a50087ae8864153ab89e10}{main.\-\_\-\-C\-S\-T\-R\-\_\-} = 2
 \item 
-tuple \hyperlink{a00098_a44f4f158af9771fbabbbacc4f4484d32}{start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')
+tuple \hyperlink{a00151_a72ed3f9434cc4dcc2240c6ca408960ff}{main.\-fname\-\_\-init\-Raf\-Res} = os.\-path.\-join(newdir\-All\-Results, '0\-\_\-init\-Raf\-Analysis.\-csv')
 \item 
-tuple \hyperlink{a00098_a3aad86d2cdbfb6f36b4b563b190d76c9}{H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-tminus\-\_\-1.\-csv', 'w')
+tuple \hyperlink{a00151_adf05ced8171427a0ea7daf7e595f72b6}{main.\-fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = os.\-path.\-join(newdir\-All\-Results, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')
 \item 
-tuple \hyperlink{a00098_a621d86851e86f9c83bb0add9ec741d7f}{H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')
+tuple \hyperlink{a00151_a1b43b3b737d94a412b2334b78252cdef}{main.\-fname\-\_\-init\-Raf\-Res\-A\-L\-L} = os.\-path.\-join(newdir\-All\-Results, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')
 \item 
-tuple \hyperlink{a00098_abb14887e587e1107fc13046ad313077e}{H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-start.\-csv', 'w')
+tuple \hyperlink{a00151_a98d514a663f6bedde329d0bbbd2b78fa}{main.\-fid\-\_\-init\-Raf\-Res} = open(fname\-\_\-init\-Raf\-Res, 'w')
 \item 
-tuple \hyperlink{a00098_ab8a3b402c0b418cc290889a5f6482280}{H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')
+tuple \hyperlink{a00151_ae24c607a37f0f3f23d7e87f6bb4fe45b}{main.\-fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = open(fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T, 'w')
 \item 
-tuple \hyperlink{a00098_a3548edac9afffda077dcbd2876616b39}{E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-tminus\-\_\-1.\-csv', 'w')
+tuple \hyperlink{a00151_a45aeb03f0d9cc30cb0a490354fd76d6c}{main.\-fid\-\_\-init\-Raf\-Res\-A\-L\-L} = open(fname\-\_\-init\-Raf\-Res\-A\-L\-L, 'w')
 \item 
-tuple \hyperlink{a00098_aa2efc59329473a7bbeaf3ce32ec4dc3d}{E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')
+string \hyperlink{a00151_ab9980383a541b03ce91d6b812a4bf79a}{main.\-str\-To\-Write} = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\-Size\textbackslash{}t\-Cats\-Size\textbackslash{}tu\-R\-A\-F\textbackslash{}t\-S\-C\-C\textbackslash{}t\-Auto\-Cat\textbackslash{}n\char`\"{}
 \item 
-tuple \hyperlink{a00098_a3d812ff298612e6aae54e7a9abfddbf2}{E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-start.\-csv', 'w')
+tuple \hyperlink{a00151_a82f73a786e4c93e909fd689ee0d0812e}{main.\-tot\-Dir\-Name} = os.\-path.\-join(str\-Path,tmp\-Dir)
 \item 
-tuple \hyperlink{a00098_a8ae5873fd9b162495a512e314047e930}{E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')
+tuple \hyperlink{a00151_a93d7d68ada532b3cedaab103283ab91a}{main.\-res\-Dir\-Path} = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, args.\-res\-Folder))
 \item 
-tuple \hyperlink{a00098_aa5eb16eef2c90e2ccc991eb176280f21}{A\-N\-G\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-A\-N\-G\-\_\-t\-\_\-middle\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')
+tuple \hyperlink{a00151_adc567db25548116293968a9102beab98}{main.\-conf} = readfiles.\-read\-Conf\-File(tot\-Dir\-Name)
 \item 
-tuple \hyperlink{a00098_aaf0dd6e74d88a7cf2e909301b422c17d}{H\-A\-M\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-middle\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')
+tuple \hyperlink{a00151_a07ce1f0750b6dc5baff89792fc194152}{main.\-food\-List} = dm.\-generate\-Flux\-List(tot\-Dir\-Name, sys\-Type)
 \item 
-tuple \hyperlink{a00098_afcb9ec3ed11cfcacae8f796af7605425}{E\-U\-C\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-middle\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')
+tuple \hyperlink{a00151_ac2fe1ed3228b8e616f25ccfbe4cc7dc4}{main.\-rcts} = readfiles.\-load\-All\-Data(tot\-Dir\-Name,'\-\_\-acsreactions.\-csv')
 \item 
-tuple \hyperlink{a00098_a9e72c152be1f5aac24af10b353b16390}{previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-t\-\_\-tminus\-\_\-1\-\_\-group.\-csv', 'w')
+tuple \hyperlink{a00151_adc0282a6415a88834556e66807bcc800}{main.\-cats} = readfiles.\-load\-All\-Data(tot\-Dir\-Name,'\-\_\-acscatalysis.\-csv')
 \item 
-tuple \hyperlink{a00098_a648b56a19ba8992cdb56d307ed22eb41}{previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')
+tuple \hyperlink{a00151_aabf82b9e9c2293000a67162becdd440d}{main.\-number\-Of\-Gen} = len(glob.\-glob(os.\-path.\-join(res\-Dir\-Path,'times\-\_\-$\ast$')))
 \item 
-tuple \hyperlink{a00098_addede16e21598cc53c446efa66bd20d9}{start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-t\-\_\-start\-\_\-group.\-csv', 'w')
+tuple \hyperlink{a00151_a02d59015bebcf0ad1bc1162efca757c3}{main.\-str\-Zeros} = readfiles.\-zero\-Before\-Str\-Num(ngen, number\-Of\-Gen)
 \item 
-tuple \hyperlink{a00098_a14eebfeaac72a017ee76d69b55033042}{start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')
+string \hyperlink{a00151_a9fff4b23f9489649601960dabc4a6cdd}{main.\-f\-Name} = 'R\-A\-F\-\_\-structures\-In\-Time\-\_\-analysis\-\_\-gen\-\_\-'
 \item 
-tuple \hyperlink{a00098_aa72272e636b1eafe39ed3367145433f2}{H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-tminus\-\_\-1\-\_\-group.\-csv', 'w')
+tuple \hyperlink{a00151_a64d742d069748ddd43a9378ef918d0b1}{main.\-fname\-\_\-in\-Time\-Raf\-Res} = os.\-path.\-join(newdir\-All\-Results, f\-Name)
 \item 
-tuple \hyperlink{a00098_a092676cc95ddff57aac2aa077ce22d52}{H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')
+tuple \hyperlink{a00151_ab82095abcedb97b7abf8e003f4724d0c}{main.\-fid\-\_\-in\-Time\-Raf\-Res} = open(fname\-\_\-in\-Time\-Raf\-Res, 'w')
 \item 
-tuple \hyperlink{a00098_ab74ecb2bab6a84c44274814862f2e96c}{H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-start\-\_\-group.\-csv', 'w')
+\hyperlink{a00151_abe4c267a63409b1b7cd9c6aaf0779b4a}{main.\-potential} = False
 \item 
-tuple \hyperlink{a00098_a4652c6dad393663e40970d7f6422c1d6}{H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')
+string \hyperlink{a00151_adbfa32333003aa707723362b43bc11ff}{main.\-str\-Rct\-Zero} = 'reactions\-\_\-'
 \item 
-tuple \hyperlink{a00098_adf079c2d443f89f00a330a58f99c2095}{E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-tminus\-\_\-1\-\_\-group.\-csv', 'w')
+string \hyperlink{a00151_a6bb1e2c0e0d0a9e63313c082ee4eec76}{main.\-str\-Cat\-Zero} = 'catalysis\-\_\-'
 \item 
-tuple \hyperlink{a00098_ace5cf628b305f9110e058d7dafd27fb4}{E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')
+tuple \hyperlink{a00151_aa37eddd86a00bf98dff8cc9260d6d13b}{main.\-rct\-Files\-Zero} = sorted(glob.\-glob(os.\-path.\-join(res\-Dir\-Path,str\-Rct\-Zero)))
 \item 
-tuple \hyperlink{a00098_abe1a2acadc97e46d55c6f4164c0890dc}{E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-start\-\_\-group.\-csv', 'w')
+tuple \hyperlink{a00151_a7ab6089d577bd60acf22b92e84930523}{main.\-cat\-Files\-Zero} = sorted(glob.\-glob(os.\-path.\-join(res\-Dir\-Path,str\-Cat\-Zero)))
 \item 
-tuple \hyperlink{a00098_aef08a333d5fed02e90483cc87e389ed0}{E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group} = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')
+string \hyperlink{a00151_a28a37e653a4c0984df32f8d83c3596ff}{main.\-str\-Rct} = 'reactions\-\_\-'
 \item 
-tuple \hyperlink{a00098_abdb6e583333cc08cac8c63631db80b5b}{new\-Species\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-new\-Species.\-csv', 'w')
+string \hyperlink{a00151_ab12df661b7defb4d7077777ad7d6352d}{main.\-str\-Cat} = 'catalysis\-\_\-'
 \item 
-tuple \hyperlink{a00098_ab7bbe9440116d34c9a373c40fc59bb3d}{living\-Species\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-living\-Species.\-csv', 'w')
+tuple \hyperlink{a00151_a9016a8f5eafe76e4e8dbb1bc3ce94af5}{main.\-rct\-Files} = sorted(glob.\-glob(os.\-path.\-join(res\-Dir\-Path,str\-Rct)))
 \item 
-tuple \hyperlink{a00098_a603a41889d8732146d44da83ffaf0489}{mols\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-mols.\-csv', 'w')
+tuple \hyperlink{a00151_a189dc9cf606d870dacab059d5e7dca24}{main.\-cat\-Files} = sorted(glob.\-glob(os.\-path.\-join(res\-Dir\-Path,str\-Cat)))
 \item 
-tuple \hyperlink{a00098_a1b7f5672822b59c7284cd2b703aacbc2}{tot\-Mass\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-overall\-Mass.\-csv', 'w')
+list \hyperlink{a00151_ab4296f1ae2e4c4bb597ca27e84849510}{main.\-sng\-Time} = conf\mbox{[}2\mbox{]}
 \item 
-tuple \hyperlink{a00098_a20a06acdb6e82bcaab87d2781d3555a9}{tot\-Overall\-Mass\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-overall\-Tot\-Mass.\-csv', 'w')
+int \hyperlink{a00151_a9c2013c88f8354ccf6504c51843f1d5e}{main.\-act\-Time} = 0
 \item 
-tuple \hyperlink{a00098_ace41560d233dff88c3073be734bae944}{complex\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-complex.\-csv', 'w')
+list \hyperlink{a00151_a2120e8355b3501aed0114a74091d56c1}{main.\-procrcts} = rcts\mbox{[}rcts\mbox{[}\-:,5\mbox{]} $>$ 0,\-:\mbox{]}
 \item 
-tuple \hyperlink{a00098_a2ef28958c50aabe7867b32f8dd6f4ace}{complex\-Mols\-\_\-\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-complex\-Mols.\-csv', 'w')
+list \hyperlink{a00151_a4e3c4b627d098aef6c7905cb20683e07}{main.\-proccats} = cats\mbox{[}cats\mbox{[}\-:,3\mbox{]} $>$ 0,\-:\mbox{]}
 \item 
-tuple \hyperlink{a00098_a2cc9b964c81489c25978be53ab38eb16}{evaluated\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-evaluated.\-csv', 'w')
+tuple \hyperlink{a00151_a8a594014e054956af345eaa5e16bea0d}{main.\-R}
 \item 
-tuple \hyperlink{a00098_a3dc90aca8a97c5995b013887c98d8ce9}{zero\-One\-Species\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-zero\-One\-Species.\-csv', 'w')
+tuple \hyperlink{a00151_ad9cee9fada504bb0dab86df3a416232b}{main.\-last\-Rct} = readfiles.\-load\-All\-Data(tot\-Dir\-Name,rct\-Files\mbox{[}-\/1\mbox{]})
 \item 
-tuple \hyperlink{a00098_a68c23cb79e89d9e14acf9ed09f46f0e4}{biodeversity\-F\-I\-D} = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-bio\-Diversity.\-csv', 'w')
+tuple \hyperlink{a00151_a1d69cc4251d83bb227555044baf27b86}{main.\-last\-Cat} = readfiles.\-load\-All\-Data(tot\-Dir\-Name,cat\-Files\mbox{[}-\/1\mbox{]})
 \item 
-int \hyperlink{a00098_aebb18ab2b73e7e2705ee42c728c0a72b}{valid\-Dir} = 1
+tuple \hyperlink{a00151_a6a031fb0c5a0a5519fc4c3f6d7ef35d1}{main.\-fname\-\_\-dyn\-Raf\-Res} = os.\-path.\-join(newdir\-All\-Results, f\-Name)
 \item 
-tuple \hyperlink{a00098_af4bd99f6cdaec32f48ed0074208b4f0c}{tot\-Dir\-Name} = os.\-path.\-join(\hyperlink{a00098_ac34f3f43f888eb6620266d78ce928ceb}{Str\-Path},tmp\-Dir)
+tuple \hyperlink{a00151_aaff6b4fb4c2e2089c2a207a12f1757e3}{main.\-fid\-\_\-dyn\-Raf\-Res} = open(fname\-\_\-dyn\-Raf\-Res, 'w')
 \item 
-tuple \hyperlink{a00098_ab3da7da39258338965b6eef645a913ee}{res\-Dir\-Path} = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))
+string \hyperlink{a00151_af48af84bff2351a55727aba6a63c1b52}{main.\-str\-Rct\-Par} = 'reactions\-\_\-parameters\-\_\-'
 \item 
-tuple \hyperlink{a00098_a54acb4eba0735e72c2a820383febd37f}{number\-Of\-Gen} = len(glob.\-glob(os.\-path.\-join(\hyperlink{a00098_ab3da7da39258338965b6eef645a913ee}{res\-Dir\-Path},'times\-\_\-$\ast$')))
+tuple \hyperlink{a00151_ac4e9cba2fd0b813ba19029541ad609e5}{main.\-rct\-Param\-File} = sorted(glob.\-glob(os.\-path.\-join(res\-Dir\-Path,str\-Rct\-Par)))
 \item 
-list \hyperlink{a00098_a1dd2f2c85f697e454c99be1a157d6c17}{group\-\_\-\-A\-\_\-prev} = \mbox{[}$\,$\mbox{]}
+tuple \hyperlink{a00151_a68ab0ffa4b5ff1cceff01f4abe686ad0}{main.\-fid} = open(rct\-Param\-File\mbox{[}0\mbox{]}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
 \item 
-list \hyperlink{a00098_a3898175300d001a17a60c23656d2812f}{group\-\_\-\-A\-\_\-start} = \mbox{[}$\,$\mbox{]}
+int \hyperlink{a00151_a6a6de947e3b6ada5ea6e761d208228bd}{main.\-previous\-Time} = 0
 \item 
-list \hyperlink{a00098_a4d77133a6a303d9486944707f3310cf8}{group\-\_\-\-A\-\_\-prev\-\_\-\-N\-I} = \mbox{[}$\,$\mbox{]}
+\hyperlink{a00151_a5517c07ae046c271d6291e9b3f7d139d}{main.\-decay\-Time} = args.\-decay
 \item 
-list \hyperlink{a00098_aedb746884c5ae6e301c8ad2d8307fe4d}{group\-\_\-\-A\-\_\-start\-\_\-\-N\-I} = \mbox{[}$\,$\mbox{]}
+int \hyperlink{a00151_a358b60986e7e25df0dfb61562b7aa3e2}{main.\-condensation\-\_\-counter} = 0
 \item 
-tuple \hyperlink{a00098_a292c23aa303304f24632662a5dfbfa23}{str\-Zeros} = \hyperlink{a00098_aeeb6d629132a9755b45a3008d445419c}{zero\-Before\-Str\-Num}(ngen, \hyperlink{a00098_a54acb4eba0735e72c2a820383febd37f}{number\-Of\-Gen})
+int \hyperlink{a00151_a0521d81d319c4d79433b5fb65a6da1c2}{main.\-endo\-\_\-condensation\-\_\-counter} = 0
 \item 
-string \hyperlink{a00098_a52f7239b2be2cb978182547960b6c46e}{str\-Species\-Zero} = 'species\-\_\-'
+int \hyperlink{a00151_aba28788973ae3e9140b53078efe5d204}{main.\-cleavage\-\_\-counter} = 0
 \item 
-tuple \hyperlink{a00098_a5584994da277e7798c904342dff18427}{species\-Files\-Zero} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00098_ab3da7da39258338965b6eef645a913ee}{res\-Dir\-Path},\hyperlink{a00098_a52f7239b2be2cb978182547960b6c46e}{str\-Species\-Zero})))
+int \hyperlink{a00151_a17b22b48a2afe0223186b4275fe5ba70}{main.\-endo\-\_\-cleavage\-\_\-counter} = 0
 \item 
-string \hyperlink{a00098_ab14d209fe558e83aeede3b657a7241bb}{str\-Species} = 'species\-\_\-'
+int \hyperlink{a00151_ae7ca1c378927da05feb71e5a9f775afb}{main.\-n\-Anal} = 1
 \item 
-tuple \hyperlink{a00098_af3291bd263282353dd4a12ee38c08cae}{species\-Files} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00098_ab3da7da39258338965b6eef645a913ee}{res\-Dir\-Path},\hyperlink{a00098_ab14d209fe558e83aeede3b657a7241bb}{str\-Species})))
+int \hyperlink{a00151_a53e397dea15f17442a198395e65b377b}{main.\-rct\-Curr\-I\-D} = 0
 \item 
-tuple \hyperlink{a00098_ac2f9e6ead14745bd749a1ab8060cd4e7}{zero\-List} = \hyperlink{a00098_ad7c75c1e146fa51da42274cf7d5747d0}{return\-Zero\-Species\-List}(\hyperlink{a00098_af3291bd263282353dd4a12ee38c08cae}{species\-Files}\mbox{[}-\/1\mbox{]})
+int \hyperlink{a00151_aa56c55225fa65fa569bd8d5f1063550e}{main.\-cat\-Curr\-I\-D} = 0
 \item 
-tuple \hyperlink{a00098_a2377568425051a7511b51f7c50662ba1}{species\-Concs} = np.\-zeros((len(\hyperlink{a00098_af3291bd263282353dd4a12ee38c08cae}{species\-Files})+1,len(\hyperlink{a00098_ac2f9e6ead14745bd749a1ab8060cd4e7}{zero\-List})))
+int \hyperlink{a00151_a2dcb93d1b24fce96491e031528ed43c0}{main.\-real\-Rctl} = 0
 \item 
-list \hyperlink{a00098_a55e3b17fd716a4b1e28e7b9d93f1943c}{seq\-O\-L\-D} = \mbox{[}$\,$\mbox{]}
+\hyperlink{a00151_a5ba0cd0b7538ed8047b2fea322ecb4b7}{main.\-time\-Interval} = \hyperlink{a00028_afc6b38657a313b9f1de2ee356910b6ee}{rtime}-\/\hyperlink{a00028_a17b8652a085b5add031a40fb1c9a680e}{previous\-Time}
 \item 
-list \hyperlink{a00098_a648282264cfc8a40cf84141f9f59781f}{seq\-S\-T\-A\-R\-T} = \mbox{[}$\,$\mbox{]}
+tuple \hyperlink{a00151_a4cfdc01ecc5ad260a4f30c9353e3d856}{main.\-graph} = network.\-remove\-Rare\-Rcts(graph,2,3,4,\hyperlink{a00028_a430673c9821c17e4bf93cd42f59e00bb}{time\-Interval})
 \item 
-list \hyperlink{a00098_ac2ecae6789d89cc56b0a731065837774}{tot\-Mass} = \mbox{[}$\,$\mbox{]}
+tuple \hyperlink{a00151_ab96de87bc8cbe59221256af996bdc43e}{main.\-graph\-S\-U\-B} = network.\-remove\-Rare\-Rcts(graph\-S\-U\-B,2,3,4,\hyperlink{a00028_a430673c9821c17e4bf93cd42f59e00bb}{time\-Interval})
 \item 
-list \hyperlink{a00098_a8fd1a0445b2e641363a96da5a7e7159b}{seq\-M\-I\-D\-D\-L\-E\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X} = \mbox{[}$\,$\mbox{]}
+tuple \hyperlink{a00151_ab26ffc3eda5d201a779d705813b06348}{main.\-onrcts} = network.\-remove\-Rare\-Rcts(onrcts,5,6,7,\hyperlink{a00028_a430673c9821c17e4bf93cd42f59e00bb}{time\-Interval})
 \item 
-int \hyperlink{a00098_abe1ce9bb85ee916d2046efc5c3fe6b30}{old\-Number\-Of\-Species} = 0
+tuple \hyperlink{a00151_ab4d380bc4bfcb970acc39ddf18a73972}{main.\-oncats} = network.\-remove\-Rare\-Rcts(oncats,3,4,5,\hyperlink{a00028_a430673c9821c17e4bf93cd42f59e00bb}{time\-Interval})
 \item 
-tuple \hyperlink{a00098_afd34aa2ef2c410c2d71007bac0a121fd}{fid\-Species} = open(sng\-Species\-File, '\hyperlink{a00025_ac862e7284527eb913b1351c8bfb8e079}{r}')
+tuple \hyperlink{a00151_adbbdc0f6ad0f08400b3e492f7a807a6b}{main.\-position\-R} = ((onrcts\mbox{[}\-:,1\mbox{]} == \hyperlink{a00028_afb5980388a6e55ca55437b53cdaf528a}{cc}) \& (onrcts\mbox{[}\-:,2\mbox{]} == \hyperlink{a00028_ab346189eef5359a07ba32144ddcd4465}{mol\-\_\-\-I}) \& (onrcts\mbox{[}\-:,3\mbox{]} == \hyperlink{a00028_a4d2c086887289f8900b38ffa56854da3}{mol\-\_\-\-I\-I}))
 \item 
-list \hyperlink{a00098_a22eec19fcd0da474a136cfe97438ae3b}{seq} = \mbox{[}$\,$\mbox{]}
+tuple \hyperlink{a00151_ac67c60df3cc9afae7e4888d2b48b846d}{main.\-position} = ((oncats\mbox{[}\-:,1\mbox{]} == \hyperlink{a00028_a7073f71a43389f3032e69b1fffc2551a}{cat}) \& (oncats\mbox{[}\-:,2\mbox{]} == onrcts\mbox{[}position\-R,0\mbox{]}))
 \item 
-int \hyperlink{a00098_aa24f8efad70335a8460f68902001ce64}{tmp\-Mols} = 0
-\item 
-int \hyperlink{a00098_a247328d05f06695b0c2de9a001ca4548}{bio\-Div\-Ind} = 0
-\item 
-\hyperlink{a00098_a555117703c3245ec7d3d73f5d991c8c5}{delta\-Nspecies} = number\-Of\-Species-\/\hyperlink{a00098_abe1ce9bb85ee916d2046efc5c3fe6b30}{old\-Number\-Of\-Species}
-\item 
-tuple \hyperlink{a00098_abe05028c33fab522e3b940195eaaa586}{strto\-W} = str(\hyperlink{a00098_a555117703c3245ec7d3d73f5d991c8c5}{delta\-Nspecies})
-\item 
-tuple \hyperlink{a00098_a45529ce20ca353ca8ac251b4e88c91ff}{tmp\-Misure} = \hyperlink{a00098_a76768d52780b1415a920dc94b3c991c0}{distance\-Misures}(\hyperlink{a00098_a22eec19fcd0da474a136cfe97438ae3b}{seq}, \hyperlink{a00021_a941dee33725f074478fdcbf15e1c35ae}{conc}, \hyperlink{a00098_a55e3b17fd716a4b1e28e7b9d93f1943c}{seq\-O\-L\-D}, \hyperlink{a00098_a15f99c617a2dc95e52f741ee99e71b7a}{conc\-O\-L\-D}, id\-S)
-\item 
-list \hyperlink{a00098_ac796dfff897c2b81d04e71e4f3306d16}{seq\-O\-L\-D\-N\-O\-I\-N\-F\-L\-U\-X} = seq\-N\-O\-I\-N\-F\-L\-U\-X\mbox{[}\-:\mbox{]}
-\item 
-list \hyperlink{a00098_a15f99c617a2dc95e52f741ee99e71b7a}{conc\-O\-L\-D} = \hyperlink{a00021_a941dee33725f074478fdcbf15e1c35ae}{conc}\mbox{[}\-:\mbox{]}
-\item 
-string \hyperlink{a00098_a69b59a10e5dc62a6e0d5325e9a27e5c6}{filename} = \char`\"{}S\-T\-A\-T\-\_\-species\-\_\-\-Concentrations\-\_\-\char`\"{}
+tuple \hyperlink{a00151_a02c2194d4e56d3d8c6d2c204a8017e3a}{main.\-netouts}
 \end{DoxyCompactItemize}
-
-
-\subsection{Function Documentation}
-\hypertarget{a00098_a76768d52780b1415a920dc94b3c991c0}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!distance\-Misures@{distance\-Misures}}
-\index{distance\-Misures@{distance\-Misures}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{distance\-Misures}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-States\-Analysis.\-distance\-Misures (
-\begin{DoxyParamCaption}
-\item[{}]{tmp\-Seq\-X, }
-\item[{}]{tmp\-Conc\-X, }
-\item[{}]{tmp\-Seq\-Y, }
-\item[{}]{tmp\-Conc\-Y, }
-\item[{}]{tmp\-I\-Ds}
-\end{DoxyParamCaption}
-)}}\label{a00098_a76768d52780b1415a920dc94b3c991c0}
-\begin{DoxyVerb}Function to compute the angle between two multidimensional vectors\end{DoxyVerb}
- 
-
-Definition at line 45 of file acs\-States\-Analysis.\-py.
-
-
-
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=284pt]{a00098_a76768d52780b1415a920dc94b3c991c0_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00098_ad7c75c1e146fa51da42274cf7d5747d0}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!return\-Zero\-Species\-List@{return\-Zero\-Species\-List}}
-\index{return\-Zero\-Species\-List@{return\-Zero\-Species\-List}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{return\-Zero\-Species\-List}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-States\-Analysis.\-return\-Zero\-Species\-List (
-\begin{DoxyParamCaption}
-\item[{}]{tmp\-Last\-Species\-File}
-\end{DoxyParamCaption}
-)}}\label{a00098_ad7c75c1e146fa51da42274cf7d5747d0}
-\begin{DoxyVerb}Function to create a zero vector for each species (NO COMPLEXES)\end{DoxyVerb}
- 
-
-Definition at line 31 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_aeeb6d629132a9755b45a3008d445419c}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}}
-\index{zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{zero\-Before\-Str\-Num}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-States\-Analysis.\-zero\-Before\-Str\-Num (
-\begin{DoxyParamCaption}
-\item[{}]{tmpl, }
-\item[{}]{tmp\-L}
-\end{DoxyParamCaption}
-)}}\label{a00098_aeeb6d629132a9755b45a3008d445419c}
-\begin{DoxyVerb}Function to create string zero string vector before graph filename.
-According to the total number of reactions N zeros will be add before the instant reaction number 
-(e.g. reaction 130 of 10000 the string became '00130')\end{DoxyVerb}
- 
-
-Definition at line 21 of file acs\-States\-Analysis.\-py.
-
-
-
-\subsection{Variable Documentation}
-\hypertarget{a00098_aa5eb16eef2c90e2ccc991eb176280f21}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!A\-N\-G\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{A\-N\-G\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{A\-N\-G\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{A\-N\-G\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{A\-N\-G\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-A\-N\-G\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-A\-N\-G\-\_\-t\-\_\-middle\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')}}\label{a00098_aa5eb16eef2c90e2ccc991eb176280f21}
-
-
-Definition at line 140 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a68c23cb79e89d9e14acf9ed09f46f0e4}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!biodeversity\-F\-I\-D@{biodeversity\-F\-I\-D}}
-\index{biodeversity\-F\-I\-D@{biodeversity\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{biodeversity\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-biodeversity\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-bio\-Diversity.\-csv', 'w')}}\label{a00098_a68c23cb79e89d9e14acf9ed09f46f0e4}
-
-
-Definition at line 168 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a247328d05f06695b0c2de9a001ca4548}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!bio\-Div\-Ind@{bio\-Div\-Ind}}
-\index{bio\-Div\-Ind@{bio\-Div\-Ind}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{bio\-Div\-Ind}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-bio\-Div\-Ind = 0}}\label{a00098_a247328d05f06695b0c2de9a001ca4548}
-
-
-Definition at line 273 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ace41560d233dff88c3073be734bae944}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!complex\-\_\-\-F\-I\-D@{complex\-\_\-\-F\-I\-D}}
-\index{complex\-\_\-\-F\-I\-D@{complex\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{complex\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-complex\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-complex.\-csv', 'w')}}\label{a00098_ace41560d233dff88c3073be734bae944}
-
-
-Definition at line 164 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a2ef28958c50aabe7867b32f8dd6f4ace}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!complex\-Mols\-\_\-\-F\-I\-D@{complex\-Mols\-\_\-\-F\-I\-D}}
-\index{complex\-Mols\-\_\-\-F\-I\-D@{complex\-Mols\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{complex\-Mols\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-complex\-Mols\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-complex\-Mols.\-csv', 'w')}}\label{a00098_a2ef28958c50aabe7867b32f8dd6f4ace}
-
-
-Definition at line 165 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a15f99c617a2dc95e52f741ee99e71b7a}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!conc\-O\-L\-D@{conc\-O\-L\-D}}
-\index{conc\-O\-L\-D@{conc\-O\-L\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{conc\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-conc\-O\-L\-D = {\bf conc}\mbox{[}\-:\mbox{]}}}\label{a00098_a15f99c617a2dc95e52f741ee99e71b7a}
-
-
-Definition at line 351 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ae98225d5c8c20399f5c3b888fa37746f}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!current\-Dir@{current\-Dir}}
-\index{current\-Dir@{current\-Dir}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{current\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-States\-Analysis.\-current\-Dir = ''}}\label{a00098_ae98225d5c8c20399f5c3b888fa37746f}
-
-
-Definition at line 113 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a555117703c3245ec7d3d73f5d991c8c5}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!delta\-Nspecies@{delta\-Nspecies}}
-\index{delta\-Nspecies@{delta\-Nspecies}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{delta\-Nspecies}]{\setlength{\rightskip}{0pt plus 5cm}acs\-States\-Analysis.\-delta\-Nspecies = number\-Of\-Species-\/{\bf old\-Number\-Of\-Species}}}\label{a00098_a555117703c3245ec7d3d73f5d991c8c5}
-
-
-Definition at line 279 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_afcb9ec3ed11cfcacae8f796af7605425}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!E\-U\-C\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{E\-U\-C\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{E\-U\-C\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{E\-U\-C\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{E\-U\-C\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-E\-U\-C\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-middle\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')}}\label{a00098_afcb9ec3ed11cfcacae8f796af7605425}
-
-
-Definition at line 142 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a3548edac9afffda077dcbd2876616b39}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-tminus\-\_\-1.\-csv', 'w')}}\label{a00098_a3548edac9afffda077dcbd2876616b39}
-
-
-Definition at line 135 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_adf079c2d443f89f00a330a58f99c2095}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-E\-U\-C\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-tminus\-\_\-1\-\_\-group.\-csv', 'w')}}\label{a00098_adf079c2d443f89f00a330a58f99c2095}
-
-
-Definition at line 154 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_aa2efc59329473a7bbeaf3ce32ec4dc3d}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')}}\label{a00098_aa2efc59329473a7bbeaf3ce32ec4dc3d}
-
-
-Definition at line 136 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ace5cf628b305f9110e058d7dafd27fb4}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-E\-U\-C\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')}}\label{a00098_ace5cf628b305f9110e058d7dafd27fb4}
-
-
-Definition at line 155 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a3d812ff298612e6aae54e7a9abfddbf2}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D@{E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D@{E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-start.\-csv', 'w')}}\label{a00098_a3d812ff298612e6aae54e7a9abfddbf2}
-
-
-Definition at line 137 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_abe1a2acadc97e46d55c6f4164c0890dc}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-E\-U\-C\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-start\-\_\-group.\-csv', 'w')}}\label{a00098_abe1a2acadc97e46d55c6f4164c0890dc}
-
-
-Definition at line 156 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a8ae5873fd9b162495a512e314047e930}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')}}\label{a00098_a8ae5873fd9b162495a512e314047e930}
-
-
-Definition at line 138 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_aef08a333d5fed02e90483cc87e389ed0}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-E\-U\-C\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-\-E\-U\-C\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')}}\label{a00098_aef08a333d5fed02e90483cc87e389ed0}
-
-
-Definition at line 157 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a2cc9b964c81489c25978be53ab38eb16}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!evaluated\-F\-I\-D@{evaluated\-F\-I\-D}}
-\index{evaluated\-F\-I\-D@{evaluated\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{evaluated\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-evaluated\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-evaluated.\-csv', 'w')}}\label{a00098_a2cc9b964c81489c25978be53ab38eb16}
-
-
-Definition at line 166 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_afd34aa2ef2c410c2d71007bac0a121fd}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!fid\-Species@{fid\-Species}}
-\index{fid\-Species@{fid\-Species}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{fid\-Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-fid\-Species = open(sng\-Species\-File, '{\bf r}')}}\label{a00098_afd34aa2ef2c410c2d71007bac0a121fd}
-
-
-Definition at line 230 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a69b59a10e5dc62a6e0d5325e9a27e5c6}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!filename@{filename}}
-\index{filename@{filename}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{filename}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-States\-Analysis.\-filename = \char`\"{}S\-T\-A\-T\-\_\-species\-\_\-\-Concentrations\-\_\-\char`\"{}}}\label{a00098_a69b59a10e5dc62a6e0d5325e9a27e5c6}
-
-
-Definition at line 410 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a1dd2f2c85f697e454c99be1a157d6c17}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!group\-\_\-\-A\-\_\-prev@{group\-\_\-\-A\-\_\-prev}}
-\index{group\-\_\-\-A\-\_\-prev@{group\-\_\-\-A\-\_\-prev}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{group\-\_\-\-A\-\_\-prev}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-group\-\_\-\-A\-\_\-prev = \mbox{[}$\,$\mbox{]}}}\label{a00098_a1dd2f2c85f697e454c99be1a157d6c17}
-
-
-Definition at line 186 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a4d77133a6a303d9486944707f3310cf8}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!group\-\_\-\-A\-\_\-prev\-\_\-\-N\-I@{group\-\_\-\-A\-\_\-prev\-\_\-\-N\-I}}
-\index{group\-\_\-\-A\-\_\-prev\-\_\-\-N\-I@{group\-\_\-\-A\-\_\-prev\-\_\-\-N\-I}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{group\-\_\-\-A\-\_\-prev\-\_\-\-N\-I}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-group\-\_\-\-A\-\_\-prev\-\_\-\-N\-I = \mbox{[}$\,$\mbox{]}}}\label{a00098_a4d77133a6a303d9486944707f3310cf8}
-
-
-Definition at line 188 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a3898175300d001a17a60c23656d2812f}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!group\-\_\-\-A\-\_\-start@{group\-\_\-\-A\-\_\-start}}
-\index{group\-\_\-\-A\-\_\-start@{group\-\_\-\-A\-\_\-start}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{group\-\_\-\-A\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-group\-\_\-\-A\-\_\-start = \mbox{[}$\,$\mbox{]}}}\label{a00098_a3898175300d001a17a60c23656d2812f}
-
-
-Definition at line 187 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_aedb746884c5ae6e301c8ad2d8307fe4d}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!group\-\_\-\-A\-\_\-start\-\_\-\-N\-I@{group\-\_\-\-A\-\_\-start\-\_\-\-N\-I}}
-\index{group\-\_\-\-A\-\_\-start\-\_\-\-N\-I@{group\-\_\-\-A\-\_\-start\-\_\-\-N\-I}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{group\-\_\-\-A\-\_\-start\-\_\-\-N\-I}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-group\-\_\-\-A\-\_\-start\-\_\-\-N\-I = \mbox{[}$\,$\mbox{]}}}\label{a00098_aedb746884c5ae6e301c8ad2d8307fe4d}
-
-
-Definition at line 189 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_aaf0dd6e74d88a7cf2e909301b422c17d}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!H\-A\-M\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{H\-A\-M\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{H\-A\-M\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{H\-A\-M\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{H\-A\-M\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-H\-A\-M\-\_\-middle\-Previous\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-middle\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')}}\label{a00098_aaf0dd6e74d88a7cf2e909301b422c17d}
-
-
-Definition at line 141 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a3aad86d2cdbfb6f36b4b563b190d76c9}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-tminus\-\_\-1.\-csv', 'w')}}\label{a00098_a3aad86d2cdbfb6f36b4b563b190d76c9}
-
-
-Definition at line 130 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_aa72272e636b1eafe39ed3367145433f2}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-H\-A\-M\-\_\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-tminus\-\_\-1\-\_\-group.\-csv', 'w')}}\label{a00098_aa72272e636b1eafe39ed3367145433f2}
-
-
-Definition at line 149 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a621d86851e86f9c83bb0add9ec741d7f}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')}}\label{a00098_a621d86851e86f9c83bb0add9ec741d7f}
-
-
-Definition at line 131 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a092676cc95ddff57aac2aa077ce22d52}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-H\-A\-M\-\_\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')}}\label{a00098_a092676cc95ddff57aac2aa077ce22d52}
-
-
-Definition at line 150 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_abb14887e587e1107fc13046ad313077e}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D@{H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D@{H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-start.\-csv', 'w')}}\label{a00098_abb14887e587e1107fc13046ad313077e}
-
-
-Definition at line 132 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ab74ecb2bab6a84c44274814862f2e96c}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-H\-A\-M\-\_\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-start\-\_\-group.\-csv', 'w')}}\label{a00098_ab74ecb2bab6a84c44274814862f2e96c}
-
-
-Definition at line 151 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ab8a3b402c0b418cc290889a5f6482280}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')}}\label{a00098_ab8a3b402c0b418cc290889a5f6482280}
-
-
-Definition at line 133 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a4652c6dad393663e40970d7f6422c1d6}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-H\-A\-M\-\_\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-\-H\-A\-M\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')}}\label{a00098_a4652c6dad393663e40970d7f6422c1d6}
-
-
-Definition at line 152 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ab7bbe9440116d34c9a373c40fc59bb3d}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!living\-Species\-\_\-\-F\-I\-D@{living\-Species\-\_\-\-F\-I\-D}}
-\index{living\-Species\-\_\-\-F\-I\-D@{living\-Species\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{living\-Species\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-living\-Species\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-living\-Species.\-csv', 'w')}}\label{a00098_ab7bbe9440116d34c9a373c40fc59bb3d}
-
-
-Definition at line 160 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a603a41889d8732146d44da83ffaf0489}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!mols\-\_\-\-F\-I\-D@{mols\-\_\-\-F\-I\-D}}
-\index{mols\-\_\-\-F\-I\-D@{mols\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{mols\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-mols\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-mols.\-csv', 'w')}}\label{a00098_a603a41889d8732146d44da83ffaf0489}
-
-
-Definition at line 161 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a5e117df6e0cdffdae13947622c6c4890}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!ndn@{ndn}}
-\index{ndn@{ndn}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-States\-Analysis.\-ndn = {\bf current\-Dir}+'\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'}}\label{a00098_a5e117df6e0cdffdae13947622c6c4890}
-
-
-Definition at line 114 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a62d6cfd52b4428ab7ea4d75d43b2d49b}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!newdir\-All\-Results@{newdir\-All\-Results}}
-\index{newdir\-All\-Results@{newdir\-All\-Results}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-newdir\-All\-Results = os.\-path.\-join(os.\-curdir, {\bf ndn})}}\label{a00098_a62d6cfd52b4428ab7ea4d75d43b2d49b}
-
-
-Definition at line 115 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_abdb6e583333cc08cac8c63631db80b5b}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!new\-Species\-\_\-\-F\-I\-D@{new\-Species\-\_\-\-F\-I\-D}}
-\index{new\-Species\-\_\-\-F\-I\-D@{new\-Species\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{new\-Species\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-new\-Species\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-new\-Species.\-csv', 'w')}}\label{a00098_abdb6e583333cc08cac8c63631db80b5b}
-
-
-Definition at line 159 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a54acb4eba0735e72c2a820383febd37f}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!number\-Of\-Gen@{number\-Of\-Gen}}
-\index{number\-Of\-Gen@{number\-Of\-Gen}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{number\-Of\-Gen}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-number\-Of\-Gen = len(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},'times\-\_\-$\ast$')))}}\label{a00098_a54acb4eba0735e72c2a820383febd37f}
-
-
-Definition at line 184 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_abe1ce9bb85ee916d2046efc5c3fe6b30}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!old\-Number\-Of\-Species@{old\-Number\-Of\-Species}}
-\index{old\-Number\-Of\-Species@{old\-Number\-Of\-Species}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{old\-Number\-Of\-Species}]{\setlength{\rightskip}{0pt plus 5cm}acs\-States\-Analysis.\-old\-Number\-Of\-Species = 0}}\label{a00098_abe1ce9bb85ee916d2046efc5c3fe6b30}
-
-
-Definition at line 222 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_aba65725a1bd6d1b891b02dc7f3db2335}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{previous\-F\-I\-L\-E\-\_\-\-F\-I\-D@{previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{previous\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-t\-\_\-tminus\-\_\-1.\-csv', 'w')}}\label{a00098_aba65725a1bd6d1b891b02dc7f3db2335}
-
-
-Definition at line 125 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a9e72c152be1f5aac24af10b353b16390}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-previous\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-t\-\_\-tminus\-\_\-1\-\_\-group.\-csv', 'w')}}\label{a00098_a9e72c152be1f5aac24af10b353b16390}
-
-
-Definition at line 144 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a9f9485bf6f7a3734bbd110b756005b71}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')}}\label{a00098_a9f9485bf6f7a3734bbd110b756005b71}
-
-
-Definition at line 126 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a648b56a19ba8992cdb56d307ed22eb41}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-previous\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-t\-\_\-tminus\-\_\-1\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')}}\label{a00098_a648b56a19ba8992cdb56d307ed22eb41}
-
-
-Definition at line 145 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ab3da7da39258338965b6eef645a913ee}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!res\-Dir\-Path@{res\-Dir\-Path}}
-\index{res\-Dir\-Path@{res\-Dir\-Path}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{res\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-res\-Dir\-Path = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))}}\label{a00098_ab3da7da39258338965b6eef645a913ee}
-
-
-Definition at line 178 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a22eec19fcd0da474a136cfe97438ae3b}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!seq@{seq}}
-\index{seq@{seq}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{seq}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-seq = \mbox{[}$\,$\mbox{]}}}\label{a00098_a22eec19fcd0da474a136cfe97438ae3b}
-
-
-Definition at line 234 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a8fd1a0445b2e641363a96da5a7e7159b}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!seq\-M\-I\-D\-D\-L\-E\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X@{seq\-M\-I\-D\-D\-L\-E\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X}}
-\index{seq\-M\-I\-D\-D\-L\-E\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X@{seq\-M\-I\-D\-D\-L\-E\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{seq\-M\-I\-D\-D\-L\-E\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-seq\-M\-I\-D\-D\-L\-E\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X = \mbox{[}$\,$\mbox{]}}}\label{a00098_a8fd1a0445b2e641363a96da5a7e7159b}
-
-
-Definition at line 220 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a55e3b17fd716a4b1e28e7b9d93f1943c}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!seq\-O\-L\-D@{seq\-O\-L\-D}}
-\index{seq\-O\-L\-D@{seq\-O\-L\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{seq\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-seq\-O\-L\-D = \mbox{[}$\,$\mbox{]}}}\label{a00098_a55e3b17fd716a4b1e28e7b9d93f1943c}
-
-
-Definition at line 217 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ac796dfff897c2b81d04e71e4f3306d16}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!seq\-O\-L\-D\-N\-O\-I\-N\-F\-L\-U\-X@{seq\-O\-L\-D\-N\-O\-I\-N\-F\-L\-U\-X}}
-\index{seq\-O\-L\-D\-N\-O\-I\-N\-F\-L\-U\-X@{seq\-O\-L\-D\-N\-O\-I\-N\-F\-L\-U\-X}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{seq\-O\-L\-D\-N\-O\-I\-N\-F\-L\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-seq\-O\-L\-D\-N\-O\-I\-N\-F\-L\-U\-X = seq\-N\-O\-I\-N\-F\-L\-U\-X\mbox{[}\-:\mbox{]}}}\label{a00098_ac796dfff897c2b81d04e71e4f3306d16}
-
-
-Definition at line 350 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a648282264cfc8a40cf84141f9f59781f}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!seq\-S\-T\-A\-R\-T@{seq\-S\-T\-A\-R\-T}}
-\index{seq\-S\-T\-A\-R\-T@{seq\-S\-T\-A\-R\-T}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{seq\-S\-T\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-seq\-S\-T\-A\-R\-T = \mbox{[}$\,$\mbox{]}}}\label{a00098_a648282264cfc8a40cf84141f9f59781f}
-
-
-Definition at line 218 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a2377568425051a7511b51f7c50662ba1}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!species\-Concs@{species\-Concs}}
-\index{species\-Concs@{species\-Concs}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{species\-Concs}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-species\-Concs = np.\-zeros((len({\bf species\-Files})+1,len({\bf zero\-List})))}}\label{a00098_a2377568425051a7511b51f7c50662ba1}
-
-
-Definition at line 214 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_af3291bd263282353dd4a12ee38c08cae}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!species\-Files@{species\-Files}}
-\index{species\-Files@{species\-Files}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{species\-Files}]{\setlength{\rightskip}{0pt plus 5cm}acs\-States\-Analysis.\-species\-Files = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Species})))}}\label{a00098_af3291bd263282353dd4a12ee38c08cae}
-
-
-Definition at line 204 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a5584994da277e7798c904342dff18427}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!species\-Files\-Zero@{species\-Files\-Zero}}
-\index{species\-Files\-Zero@{species\-Files\-Zero}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{species\-Files\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-species\-Files\-Zero = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Species\-Zero})))}}\label{a00098_a5584994da277e7798c904342dff18427}
-
-
-Definition at line 199 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a0239a9dcc4900463a0c19557bec23521}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!start\-F\-I\-L\-E\-\_\-\-F\-I\-D@{start\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{start\-F\-I\-L\-E\-\_\-\-F\-I\-D@{start\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{start\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-t\-\_\-start.\-csv', 'w')}}\label{a00098_a0239a9dcc4900463a0c19557bec23521}
-
-
-Definition at line 127 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_addede16e21598cc53c446efa66bd20d9}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-start\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-t\-\_\-start\-\_\-group.\-csv', 'w')}}\label{a00098_addede16e21598cc53c446efa66bd20d9}
-
-
-Definition at line 146 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a44f4f158af9771fbabbbacc4f4484d32}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}}
-\index{start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D@{start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X.\-csv', 'w')}}\label{a00098_a44f4f158af9771fbabbbacc4f4484d32}
-
-
-Definition at line 128 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a14eebfeaac72a017ee76d69b55033042}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}}
-\index{start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group@{start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-start\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-\-F\-I\-L\-E\-\_\-\-F\-I\-D\-\_\-group = open('S\-T\-A\-T\-\_\-t\-\_\-start\-\_\-\-N\-O\-I\-N\-F\-L\-U\-X\-\_\-group.\-csv', 'w')}}\label{a00098_a14eebfeaac72a017ee76d69b55033042}
-
-
-Definition at line 147 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ac34f3f43f888eb6620266d78ce928ceb}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!Str\-Path@{Str\-Path}}
-\index{Str\-Path@{Str\-Path}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{Str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-Str\-Path = os.\-path.\-abspath(Str\-Path)}}\label{a00098_ac34f3f43f888eb6620266d78ce928ceb}
-
-
-Definition at line 101 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ab14d209fe558e83aeede3b657a7241bb}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!str\-Species@{str\-Species}}
-\index{str\-Species@{str\-Species}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{str\-Species}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-States\-Analysis.\-str\-Species = 'species\-\_\-'}}\label{a00098_ab14d209fe558e83aeede3b657a7241bb}
-
-
-Definition at line 201 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a52f7239b2be2cb978182547960b6c46e}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!str\-Species\-Zero@{str\-Species\-Zero}}
-\index{str\-Species\-Zero@{str\-Species\-Zero}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{str\-Species\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-States\-Analysis.\-str\-Species\-Zero = 'species\-\_\-'}}\label{a00098_a52f7239b2be2cb978182547960b6c46e}
-
-
-Definition at line 198 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_abe05028c33fab522e3b940195eaaa586}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!strto\-W@{strto\-W}}
-\index{strto\-W@{strto\-W}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{strto\-W}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-strto\-W = str({\bf delta\-Nspecies})}}\label{a00098_abe05028c33fab522e3b940195eaaa586}
-
-
-Definition at line 281 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a292c23aa303304f24632662a5dfbfa23}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!str\-Zeros@{str\-Zeros}}
-\index{str\-Zeros@{str\-Zeros}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{str\-Zeros}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-str\-Zeros = {\bf zero\-Before\-Str\-Num}(ngen, {\bf number\-Of\-Gen})}}\label{a00098_a292c23aa303304f24632662a5dfbfa23}
-
-
-Definition at line 195 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ab71c19ee20acae0f07934a8d0e9fe50b}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!tmp\-Dirs@{tmp\-Dirs}}
-\index{tmp\-Dirs@{tmp\-Dirs}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{tmp\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-tmp\-Dirs = sort(os.\-listdir({\bf Str\-Path}))}}\label{a00098_ab71c19ee20acae0f07934a8d0e9fe50b}
-
-
-Definition at line 103 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a45529ce20ca353ca8ac251b4e88c91ff}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!tmp\-Misure@{tmp\-Misure}}
-\index{tmp\-Misure@{tmp\-Misure}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{tmp\-Misure}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-tmp\-Misure = {\bf distance\-Misures}({\bf seq}, {\bf conc}, {\bf seq\-O\-L\-D}, {\bf conc\-O\-L\-D}, id\-S)}}\label{a00098_a45529ce20ca353ca8ac251b4e88c91ff}
-
-
-Definition at line 302 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_aa24f8efad70335a8460f68902001ce64}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!tmp\-Mols@{tmp\-Mols}}
-\index{tmp\-Mols@{tmp\-Mols}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{tmp\-Mols}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-States\-Analysis.\-tmp\-Mols = 0}}\label{a00098_aa24f8efad70335a8460f68902001ce64}
-
-
-Definition at line 235 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ac99ee9d8196d8a2305b9f4c795b23b97}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!today@{today}}
-\index{today@{today}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{today}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-today = dt.\-date.\-today()}}\label{a00098_ac99ee9d8196d8a2305b9f4c795b23b97}
-
-
-Definition at line 99 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_af4bd99f6cdaec32f48ed0074208b4f0c}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!tot\-Dir\-Name@{tot\-Dir\-Name}}
-\index{tot\-Dir\-Name@{tot\-Dir\-Name}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{tot\-Dir\-Name}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-tot\-Dir\-Name = os.\-path.\-join({\bf Str\-Path},tmp\-Dir)}}\label{a00098_af4bd99f6cdaec32f48ed0074208b4f0c}
-
-
-Definition at line 174 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ac2ecae6789d89cc56b0a731065837774}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!tot\-Mass@{tot\-Mass}}
-\index{tot\-Mass@{tot\-Mass}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{tot\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-States\-Analysis.\-tot\-Mass = \mbox{[}$\,$\mbox{]}}}\label{a00098_ac2ecae6789d89cc56b0a731065837774}
-
-
-Definition at line 219 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a1b7f5672822b59c7284cd2b703aacbc2}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!tot\-Mass\-\_\-\-F\-I\-D@{tot\-Mass\-\_\-\-F\-I\-D}}
-\index{tot\-Mass\-\_\-\-F\-I\-D@{tot\-Mass\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{tot\-Mass\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-tot\-Mass\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-overall\-Mass.\-csv', 'w')}}\label{a00098_a1b7f5672822b59c7284cd2b703aacbc2}
-
-
-Definition at line 162 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a20a06acdb6e82bcaab87d2781d3555a9}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!tot\-Overall\-Mass\-\_\-\-F\-I\-D@{tot\-Overall\-Mass\-\_\-\-F\-I\-D}}
-\index{tot\-Overall\-Mass\-\_\-\-F\-I\-D@{tot\-Overall\-Mass\-\_\-\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{tot\-Overall\-Mass\-\_\-\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-tot\-Overall\-Mass\-\_\-\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-overall\-Tot\-Mass.\-csv', 'w')}}\label{a00098_a20a06acdb6e82bcaab87d2781d3555a9}
-
-
-Definition at line 163 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_aebb18ab2b73e7e2705ee42c728c0a72b}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!valid\-Dir@{valid\-Dir}}
-\index{valid\-Dir@{valid\-Dir}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{valid\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-States\-Analysis.\-valid\-Dir = 1}}\label{a00098_aebb18ab2b73e7e2705ee42c728c0a72b}
-
-
-Definition at line 171 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_ac2f9e6ead14745bd749a1ab8060cd4e7}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!zero\-List@{zero\-List}}
-\index{zero\-List@{zero\-List}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{zero\-List}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-zero\-List = {\bf return\-Zero\-Species\-List}({\bf species\-Files}\mbox{[}-\/1\mbox{]})}}\label{a00098_ac2f9e6ead14745bd749a1ab8060cd4e7}
-
-
-Definition at line 207 of file acs\-States\-Analysis.\-py.
-
-\hypertarget{a00098_a3dc90aca8a97c5995b013887c98d8ce9}{\index{acs\-States\-Analysis@{acs\-States\-Analysis}!zero\-One\-Species\-F\-I\-D@{zero\-One\-Species\-F\-I\-D}}
-\index{zero\-One\-Species\-F\-I\-D@{zero\-One\-Species\-F\-I\-D}!acsStatesAnalysis@{acs\-States\-Analysis}}
-\subsubsection[{zero\-One\-Species\-F\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-States\-Analysis.\-zero\-One\-Species\-F\-I\-D = open('S\-T\-A\-T\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-zero\-One\-Species.\-csv', 'w')}}\label{a00098_a3dc90aca8a97c5995b013887c98d8ce9}
-
-
-Definition at line 167 of file acs\-States\-Analysis.\-py.
-

@@ -4,6 +4,10 @@ Software documentation is available in the doc folder.
 |VERSION HISTORY|
 |---------------| 
 
+Build5.0b20140402.68
+- New optimized Gillespie SSA algorithm has been implemented. 
+- Minor bugs fixed 
+
 Build4.82b20140327.67
 Documentation updated 
 

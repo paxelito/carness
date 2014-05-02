@@ -1,9 +1,0 @@
-<map id="environment::saveTimesSTD" name="environment::saveTimesSTD">
-<area shape="rect" id="node3" href="$a00008.html#a8699a0f85f5e8dc23eb8f78fa22c6b17" title="environment::zeroBeforeString\lNumberSTD" alt="" coords="243,5,437,49"/>
-<area shape="rect" id="node5" href="$a00069.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="292,71,388,99"/>
-<area shape="rect" id="node7" href="$a00008.html#a7a321296874fa1320da225cdbbf56a64" title="environment::getTotalNumber\lOfSpecies" alt="" coords="244,122,436,166"/>
-<area shape="rect" id="node9" href="$a00008.html#a57e7ac49955f4717096cb6696ee03a61" title="environment::getTotalNumber\lOfMolecules" alt="" coords="244,189,436,233"/>
-<area shape="rect" id="node11" href="$a00008.html#a453d88017912e8b5973310ea2b044266" title="environment::getTotalNumber\lOfComplexSpecies" alt="" coords="244,255,436,299"/>
-<area shape="rect" id="node13" href="$a00008.html#ab564c7ddffd3dba896d5b049e1257793" title="environment::getTotalNumber\lOfComplexes" alt="" coords="244,322,436,366"/>
-<area shape="rect" id="node15" href="$a00008.html#aa8c94019533639038f99587fc2b029dc" title="environment::getTotalNumber\lOfMonomers" alt="" coords="244,389,436,433"/>
-</map>

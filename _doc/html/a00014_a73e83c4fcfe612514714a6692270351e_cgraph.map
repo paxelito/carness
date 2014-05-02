@@ -1,6 +1,6 @@
 <map id="environment::saveTimesSTD" name="environment::saveTimesSTD">
 <area shape="rect" id="node2" href="$a00014.html#a8699a0f85f5e8dc23eb8f78fa22c6b17" title="environment::zeroBeforeString\lNumberSTD" alt="" coords="248,5,451,46"/>
-<area shape="rect" id="node3" href="$a00075.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="299,71,399,97"/>
+<area shape="rect" id="node3" href="$a00056.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="299,71,399,97"/>
 <area shape="rect" id="node4" href="$a00014.html#a7a321296874fa1320da225cdbbf56a64" title="environment::getTotalNumber\lOfSpecies" alt="" coords="250,122,449,163"/>
 <area shape="rect" id="node5" href="$a00014.html#a57e7ac49955f4717096cb6696ee03a61" title="environment::getTotalNumber\lOfMolecules" alt="" coords="250,187,449,229"/>
 <area shape="rect" id="node6" href="$a00014.html#a453d88017912e8b5973310ea2b044266" title="environment::getTotalNumber\lOfComplexSpecies" alt="" coords="250,253,449,294"/>

@@ -1,6 +1,0 @@
-<map id="environment::printInitialCondition" name="environment::printInitialCondition">
-<area shape="rect" id="node3" href="$a00008.html#ab98d4ad28b101f08279aa3458d5dfda3" title="environment::getNumberOf\lTheoreticalSpecies" alt="" coords="209,5,385,49"/>
-<area shape="rect" id="node5" href="$a00008.html#abf45b6406f8c0e95c4c5edf6b374e112" title="environment::getNumberOf\lReactions" alt="" coords="209,71,385,115"/>
-<area shape="rect" id="node7" href="$a00069.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="249,138,345,166"/>
-<area shape="rect" id="node9" href="$a00008.html#a21609adb1a83a4cb7eaec78a90acd624" title="environment::getNumberOf\lCatalysis" alt="" coords="209,189,385,233"/>
-</map>

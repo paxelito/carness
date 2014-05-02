@@ -1,5 +1,0 @@
-<map id="environment::setLivingSpeciesIDsAndAmounts" name="environment::setLivingSpeciesIDsAndAmounts">
-<area shape="rect" id="node3" href="$a00008.html#acbbcdb4c77231e9ffa4c169e0caa0d0c" title="environment::performMolecules\lEfflux" alt="" coords="253,5,456,49"/>
-<area shape="rect" id="node5" href="$a00008.html#a90fba3b2cc589f32c97a74540620bd84" title="environment::performOPTGillespie\lComputation" alt="" coords="505,5,724,49"/>
-<area shape="rect" id="node7" href="$a00083.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="773,13,824,41"/>
-</map>

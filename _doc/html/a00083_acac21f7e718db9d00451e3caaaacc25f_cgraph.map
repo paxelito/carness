@@ -1,7 +1,0 @@
-<map id="saveToFile" name="saveToFile">
-<area shape="rect" id="node3" href="$a00008.html#a9daeb4f255100b8ad59de9ea80b19b5b" title="environment::saveSpecies\lStructureSTD" alt="" coords="148,5,321,49"/>
-<area shape="rect" id="node7" href="$a00069.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="425,142,521,170"/>
-<area shape="rect" id="node10" href="$a00008.html#ad381c4ce24045d504539bb7c74800739" title="environment::saveReactions\lStructureSTD" alt="" coords="143,71,327,115"/>
-<area shape="rect" id="node14" href="$a00008.html#a0a799b3a42bd90845a915298e184708c" title="environment::saveCatalysis\lStructureSTD" alt="" coords="145,138,324,182"/>
-<area shape="rect" id="node5" href="$a00008.html#a8699a0f85f5e8dc23eb8f78fa22c6b17" title="environment::zeroBeforeString\lNumberSTD" alt="" coords="376,71,571,115"/>
-</map>

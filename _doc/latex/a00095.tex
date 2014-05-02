@@ -1,168 +1,21 @@
-\hypertarget{a00095}{\section{acs\-R\-A\-Fanalysis Namespace Reference}
-\label{a00095}\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}}
+\hypertarget{a00095}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/python\-Tools/lib/model/reactions.py File Reference}
+\label{a00095}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/python\-Tools/lib/model/reactions.\-py@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/python\-Tools/lib/model/reactions.\-py}}
 }
-\subsection*{Variables}
+\subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-tuple \hyperlink{a00095_ac31a9eb101f9abd2dfb68dddf3cdea49}{parser}
-\item 
-tuple \hyperlink{a00095_a921f7b120160ad6199dc72fa76cc61d7}{args} = parser.\-parse\-\_\-args()
-\item 
-tuple \hyperlink{a00095_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
-\item 
-int \hyperlink{a00095_ae3bd0bf5edba7fcc3fddc439ceebd7e5}{\-\_\-\-C\-L\-O\-S\-E\-\_\-} = 0
-\item 
-int \hyperlink{a00095_a3420c7f044424df4c735884411cf064e}{\-\_\-\-P\-R\-O\-T\-O\-\_\-} = 1
-\item 
-int \hyperlink{a00095_a83f5d2a644a6e3960655ca4ae1c55038}{\-\_\-\-C\-S\-T\-R\-\_\-} = 2
-\item 
-tuple \hyperlink{a00095_a0d6fedc77ef111d5aebc888527a7b60d}{conf} = rf.\-read\-Conf\-File(\hyperlink{a00095_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path})
-\item 
-tuple \hyperlink{a00095_a1be7f568f3bae43bcf5cf721d0ab506d}{closure} = dm.\-generate\-Flux\-List(\hyperlink{a00095_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path}, sys\-Type)
-\item 
-tuple \hyperlink{a00095_a9686a166e08ff3540d419f831433da74}{food\-Set} = deepcopy(\hyperlink{a00095_a1be7f568f3bae43bcf5cf721d0ab506d}{closure})
-\item 
-tuple \hyperlink{a00095_a45383e21457afcc9643eec4200984680}{rcts} = rf.\-load\-All\-Data(\hyperlink{a00095_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path},'\-\_\-acsreactions.\-csv')
-\item 
-tuple \hyperlink{a00095_a5b83a251211f875fde99d3ed17fa5f18}{cats} = rf.\-load\-All\-Data(\hyperlink{a00095_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path},'\-\_\-acscatalysis.\-csv')
-\item 
-tuple \hyperlink{a00095_a13356ba12c204e0406b75995282613d3}{R\-A} = raf.\-R\-Acondition(\hyperlink{a00095_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path},\hyperlink{a00095_a1be7f568f3bae43bcf5cf721d0ab506d}{closure},\hyperlink{a00095_a45383e21457afcc9643eec4200984680}{rcts},\hyperlink{a00095_a5b83a251211f875fde99d3ed17fa5f18}{cats})
-\item 
-tuple \hyperlink{a00095_ad44f37d5b138abfe77d1c212fd3d41a2}{R\-A\-F} = raf.\-Fcondition(\hyperlink{a00095_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path},\hyperlink{a00095_a1be7f568f3bae43bcf5cf721d0ab506d}{closure},\hyperlink{a00095_a13356ba12c204e0406b75995282613d3}{R\-A},\hyperlink{a00095_a45383e21457afcc9643eec4200984680}{rcts})
-\item 
-tuple \hyperlink{a00095_a6e44ceb30d60cc17a4bf428a882aa51a}{R\-A\-Flpre} = len(\hyperlink{a00095_ad44f37d5b138abfe77d1c212fd3d41a2}{R\-A\-F})
-\item 
-list \hyperlink{a00095_ae9584596a4202245353198abb6042fa0}{red\-Rcts} = \hyperlink{a00095_a45383e21457afcc9643eec4200984680}{rcts}\mbox{[}\hyperlink{a00095_ad44f37d5b138abfe77d1c212fd3d41a2}{R\-A\-F},\-:\mbox{]}
-\item 
-int \hyperlink{a00095_aece7a419c5b139173191eb9035bb4260}{R\-A\-Flpost} = 0
-\item 
-tuple \hyperlink{a00095_a2b3738754ae59f4529738a09188fbbe5}{catalists} = raf.\-find\-Catfor\-R\-A\-F(\hyperlink{a00095_a5b83a251211f875fde99d3ed17fa5f18}{cats}, \hyperlink{a00095_ad44f37d5b138abfe77d1c212fd3d41a2}{R\-A\-F}, \hyperlink{a00095_a1be7f568f3bae43bcf5cf721d0ab506d}{closure})
+\hyperlink{a00147}{lib.\-model.\-reactions}
 \end{DoxyCompactItemize}
-
-
-\subsection{Variable Documentation}
-\hypertarget{a00095_ae3bd0bf5edba7fcc3fddc439ceebd7e5}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!\-\_\-\-C\-L\-O\-S\-E\-\_\-@{\-\_\-\-C\-L\-O\-S\-E\-\_\-}}
-\index{\-\_\-\-C\-L\-O\-S\-E\-\_\-@{\-\_\-\-C\-L\-O\-S\-E\-\_\-}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{\-\_\-\-C\-L\-O\-S\-E\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-R\-A\-Fanalysis.\-\_\-\-C\-L\-O\-S\-E\-\_\- = 0}}\label{a00095_ae3bd0bf5edba7fcc3fddc439ceebd7e5}
-
-
-Definition at line 31 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a83f5d2a644a6e3960655ca4ae1c55038}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!\-\_\-\-C\-S\-T\-R\-\_\-@{\-\_\-\-C\-S\-T\-R\-\_\-}}
-\index{\-\_\-\-C\-S\-T\-R\-\_\-@{\-\_\-\-C\-S\-T\-R\-\_\-}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{\-\_\-\-C\-S\-T\-R\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-R\-A\-Fanalysis.\-\_\-\-C\-S\-T\-R\-\_\- = 2}}\label{a00095_a83f5d2a644a6e3960655ca4ae1c55038}
-
-
-Definition at line 33 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a3420c7f044424df4c735884411cf064e}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!\-\_\-\-P\-R\-O\-T\-O\-\_\-@{\-\_\-\-P\-R\-O\-T\-O\-\_\-}}
-\index{\-\_\-\-P\-R\-O\-T\-O\-\_\-@{\-\_\-\-P\-R\-O\-T\-O\-\_\-}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{\-\_\-\-P\-R\-O\-T\-O\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-R\-A\-Fanalysis.\-\_\-\-P\-R\-O\-T\-O\-\_\- = 1}}\label{a00095_a3420c7f044424df4c735884411cf064e}
-
-
-Definition at line 32 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a921f7b120160ad6199dc72fa76cc61d7}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!args@{args}}
-\index{args@{args}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-args = parser.\-parse\-\_\-args()}}\label{a00095_a921f7b120160ad6199dc72fa76cc61d7}
-
-
-Definition at line 26 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a2b3738754ae59f4529738a09188fbbe5}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!catalists@{catalists}}
-\index{catalists@{catalists}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{catalists}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-catalists = raf.\-find\-Catfor\-R\-A\-F({\bf cats}, {\bf R\-A\-F}, {\bf closure})}}\label{a00095_a2b3738754ae59f4529738a09188fbbe5}
-
-
-Definition at line 76 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a5b83a251211f875fde99d3ed17fa5f18}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!cats@{cats}}
-\index{cats@{cats}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{cats}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-cats = rf.\-load\-All\-Data({\bf str\-Path},'\-\_\-acscatalysis.\-csv')}}\label{a00095_a5b83a251211f875fde99d3ed17fa5f18}
-
-
-Definition at line 45 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a1be7f568f3bae43bcf5cf721d0ab506d}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!closure@{closure}}
-\index{closure@{closure}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{closure}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-closure = dm.\-generate\-Flux\-List({\bf str\-Path}, sys\-Type)}}\label{a00095_a1be7f568f3bae43bcf5cf721d0ab506d}
-
-
-Definition at line 41 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a0d6fedc77ef111d5aebc888527a7b60d}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!conf@{conf}}
-\index{conf@{conf}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{conf}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-conf = rf.\-read\-Conf\-File({\bf str\-Path})}}\label{a00095_a0d6fedc77ef111d5aebc888527a7b60d}
-
-
-Definition at line 34 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a9686a166e08ff3540d419f831433da74}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!food\-Set@{food\-Set}}
-\index{food\-Set@{food\-Set}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{food\-Set}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-food\-Set = deepcopy({\bf closure})}}\label{a00095_a9686a166e08ff3540d419f831433da74}
-
-
-Definition at line 42 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_ac31a9eb101f9abd2dfb68dddf3cdea49}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!parser@{parser}}
-\index{parser@{parser}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-parser}}\label{a00095_ac31a9eb101f9abd2dfb68dddf3cdea49}
-{\bfseries Initial value\-:}
-\begin{DoxyCode}
-1 = ArgumentParser(
-2                                 description=\textcolor{stringliteral}{'Script to perform a RAF analysis.'}
-3                                 , epilog=\textcolor{stringliteral}{'''File with angle trajectories are created. '''})
-\end{DoxyCode}
-
-
-Definition at line 22 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a13356ba12c204e0406b75995282613d3}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!R\-A@{R\-A}}
-\index{R\-A@{R\-A}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{R\-A}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-R\-A = raf.\-R\-Acondition({\bf str\-Path},{\bf closure},{\bf rcts},{\bf cats})}}\label{a00095_a13356ba12c204e0406b75995282613d3}
-
-
-Definition at line 50 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_ad44f37d5b138abfe77d1c212fd3d41a2}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!R\-A\-F@{R\-A\-F}}
-\index{R\-A\-F@{R\-A\-F}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{R\-A\-F}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-R\-A\-F = raf.\-Fcondition({\bf str\-Path},{\bf closure},{\bf R\-A},{\bf rcts})}}\label{a00095_ad44f37d5b138abfe77d1c212fd3d41a2}
-
-
-Definition at line 52 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_aece7a419c5b139173191eb9035bb4260}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!R\-A\-Flpost@{R\-A\-Flpost}}
-\index{R\-A\-Flpost@{R\-A\-Flpost}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{R\-A\-Flpost}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-R\-A\-Flpost = 0}}\label{a00095_aece7a419c5b139173191eb9035bb4260}
-
-
-Definition at line 60 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a6e44ceb30d60cc17a4bf428a882aa51a}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!R\-A\-Flpre@{R\-A\-Flpre}}
-\index{R\-A\-Flpre@{R\-A\-Flpre}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{R\-A\-Flpre}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-R\-A\-Flpre = len({\bf R\-A\-F})}}\label{a00095_a6e44ceb30d60cc17a4bf428a882aa51a}
-
-
-Definition at line 53 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_a45383e21457afcc9643eec4200984680}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!rcts@{rcts}}
-\index{rcts@{rcts}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{rcts}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-rcts = rf.\-load\-All\-Data({\bf str\-Path},'\-\_\-acsreactions.\-csv')}}\label{a00095_a45383e21457afcc9643eec4200984680}
-
-
-Definition at line 44 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_ae9584596a4202245353198abb6042fa0}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!red\-Rcts@{red\-Rcts}}
-\index{red\-Rcts@{red\-Rcts}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{red\-Rcts}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-R\-A\-Fanalysis.\-red\-Rcts = {\bf rcts}\mbox{[}{\bf R\-A\-F},\-:\mbox{]}}}\label{a00095_ae9584596a4202245353198abb6042fa0}
-
-
-Definition at line 55 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00095_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!str\-Path@{str\-Path}}
-\index{str\-Path@{str\-Path}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-str\-Path = os.\-path.\-abspath(args.\-str\-Path)}}\label{a00095_ab5ddf85dcaa5dff4cd3f2906b8f37e78}
-
-
-Definition at line 29 of file acs\-R\-A\-Fanalysis.\-py.
-
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{a00147_a39866224c062e8fdc5905a4202d9e579}{lib.\-model.\-reactions.\-get\-Num\-Of\-Cleavages}
+\item 
+def \hyperlink{a00147_a8385f261f5039a8cfeefa089298872f3}{lib.\-model.\-reactions.\-get\-Num\-Of\-Condensations}
+\item 
+def \hyperlink{a00147_a2e361527fbcbb7ae4b02783df35d33ff}{lib.\-model.\-reactions.\-create\-Random\-Cleavage}
+\item 
+def \hyperlink{a00147_a5eb802389e0de8e036b9a38dfeb41c70}{lib.\-model.\-reactions.\-create\-Random\-Cleavage\-For\-Complete\-Firing\-Disk}
+\item 
+def \hyperlink{a00147_abc3efdd6ab0936972017dc010317bd3d}{lib.\-model.\-reactions.\-create\-Random\-Condensation}
+\end{DoxyCompactItemize}

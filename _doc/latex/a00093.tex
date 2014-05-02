@@ -1,151 +1,29 @@
-\hypertarget{a00093}{\section{acs\-Dyn\-Stat\-In\-Time Namespace Reference}
-\label{a00093}\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}}
+\hypertarget{a00093}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/python\-Tools/lib/\-I\-O/readfiles.py File Reference}
+\label{a00093}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/python\-Tools/lib/\-I\-O/readfiles.\-py@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/python\-Tools/lib/\-I\-O/readfiles.\-py}}
 }
-\subsection*{Variables}
+\subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-tuple \hyperlink{a00093_a14b76a8235da778083f610cabe968c34}{parser}
-\item 
-tuple \hyperlink{a00093_a0fef98b331f3de5212d309bd2d3556e7}{args} = parser.\-parse\-\_\-args()
-\item 
-tuple \hyperlink{a00093_aff72277efad2fb1d2f51e95f6fefc288}{str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
-\item 
-string \hyperlink{a00093_a4331412d1cdff7111cdc69adc31528c4}{str\-Sub\-Str\-Key} = '$\ast$'
-\item 
-tuple \hyperlink{a00093_a353a268554f9ac8661c5e0142496f580}{files\-To\-Anal} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00093_aff72277efad2fb1d2f51e95f6fefc288}{str\-Path},\hyperlink{a00093_a4331412d1cdff7111cdc69adc31528c4}{str\-Sub\-Str\-Key})))
-\item 
-tuple \hyperlink{a00093_abf8db6a4d0dc9132f54755c72c871471}{len\-Files\-To\-Anal} = len(\hyperlink{a00093_a353a268554f9ac8661c5e0142496f580}{files\-To\-Anal})
-\item 
-int \hyperlink{a00093_a4679690d186f44a3ad8e6eb3a545fd39}{num\-Of\-Traj} = 0
-\item 
-tuple \hyperlink{a00093_a52808d1f82b263c51e9bfb9e18b053c0}{x} = np.\-array(map(list, np.\-loadtxt(file\-To\-Anal, str)), float)
-\item 
-\hyperlink{a00093_ade03788f04a663a14a9abeae4e7ea0e2}{xsize} = x.\-shape
-\item 
-list \hyperlink{a00093_a565bd873618e4d135a9903fb70ee5981}{run4\-Chem} = \hyperlink{a00093_ade03788f04a663a14a9abeae4e7ea0e2}{xsize}\mbox{[}0\mbox{]}
-\item 
-tuple \hyperlink{a00093_aa7979c32d5499d000edacba8fcadd039}{y} = np.\-zeros((\hyperlink{a00093_abf8db6a4d0dc9132f54755c72c871471}{len\-Files\-To\-Anal},\hyperlink{a00093_a4679690d186f44a3ad8e6eb3a545fd39}{num\-Of\-Traj}))
-\item 
-int \hyperlink{a00093_a7ce24ac1959d7d1512b663f20f3e3100}{pos} = 0
-\item 
-int \hyperlink{a00093_aa0ad135db98d635147ecbd1480de89df}{chem} = 1
-\item 
-string \hyperlink{a00093_acb2620669fa00dd24be0687c86647b43}{tmp\-Head} = ''
-\item 
-string \hyperlink{a00093_aa77abf10e3a92416282af2030df3b4b0}{filename} = \char`\"{}\-\_\-arranged\-\_\-\char`\"{}
+\hyperlink{a00144}{lib.\-I\-O.\-readfiles}
 \end{DoxyCompactItemize}
-
-
-\subsection{Variable Documentation}
-\hypertarget{a00093_a0fef98b331f3de5212d309bd2d3556e7}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!args@{args}}
-\index{args@{args}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-args = parser.\-parse\-\_\-args()}}\label{a00093_a0fef98b331f3de5212d309bd2d3556e7}
-
-
-Definition at line 24 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_aa0ad135db98d635147ecbd1480de89df}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!chem@{chem}}
-\index{chem@{chem}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{chem}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Dyn\-Stat\-In\-Time.\-chem = 1}}\label{a00093_aa0ad135db98d635147ecbd1480de89df}
-
-
-Definition at line 47 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_aa77abf10e3a92416282af2030df3b4b0}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!filename@{filename}}
-\index{filename@{filename}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{filename}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Dyn\-Stat\-In\-Time.\-filename = \char`\"{}\-\_\-arranged\-\_\-\char`\"{}}}\label{a00093_aa77abf10e3a92416282af2030df3b4b0}
-
-
-Definition at line 66 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_a353a268554f9ac8661c5e0142496f580}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!files\-To\-Anal@{files\-To\-Anal}}
-\index{files\-To\-Anal@{files\-To\-Anal}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{files\-To\-Anal}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-files\-To\-Anal = sorted(glob.\-glob(os.\-path.\-join({\bf str\-Path},{\bf str\-Sub\-Str\-Key})))}}\label{a00093_a353a268554f9ac8661c5e0142496f580}
-
-
-Definition at line 34 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_abf8db6a4d0dc9132f54755c72c871471}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!len\-Files\-To\-Anal@{len\-Files\-To\-Anal}}
-\index{len\-Files\-To\-Anal@{len\-Files\-To\-Anal}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{len\-Files\-To\-Anal}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-len\-Files\-To\-Anal = len({\bf files\-To\-Anal})}}\label{a00093_abf8db6a4d0dc9132f54755c72c871471}
-
-
-Definition at line 35 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_a4679690d186f44a3ad8e6eb3a545fd39}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!num\-Of\-Traj@{num\-Of\-Traj}}
-\index{num\-Of\-Traj@{num\-Of\-Traj}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{num\-Of\-Traj}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-num\-Of\-Traj = 0}}\label{a00093_a4679690d186f44a3ad8e6eb3a545fd39}
-
-
-Definition at line 36 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_a14b76a8235da778083f610cabe968c34}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!parser@{parser}}
-\index{parser@{parser}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-parser}}\label{a00093_a14b76a8235da778083f610cabe968c34}
-{\bfseries Initial value\-:}
-\begin{DoxyCode}
-1 = ArgumentParser(
-2                                 description=\textcolor{stringliteral}{'This script re-arrange results in a more friendly way from the
-       angle analysis in time.'}
-3                                 , epilog=\textcolor{stringliteral}{'''File with angle trajectories are created. '''})
-\end{DoxyCode}
-
-
-Definition at line 17 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_a7ce24ac1959d7d1512b663f20f3e3100}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!pos@{pos}}
-\index{pos@{pos}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Dyn\-Stat\-In\-Time.\-pos = 0}}\label{a00093_a7ce24ac1959d7d1512b663f20f3e3100}
-
-
-Definition at line 46 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_a565bd873618e4d135a9903fb70ee5981}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!run4\-Chem@{run4\-Chem}}
-\index{run4\-Chem@{run4\-Chem}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{run4\-Chem}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Dyn\-Stat\-In\-Time.\-run4\-Chem = {\bf xsize}\mbox{[}0\mbox{]}}}\label{a00093_a565bd873618e4d135a9903fb70ee5981}
-
-
-Definition at line 42 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_aff72277efad2fb1d2f51e95f6fefc288}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!str\-Path@{str\-Path}}
-\index{str\-Path@{str\-Path}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-str\-Path = os.\-path.\-abspath(args.\-str\-Path)}}\label{a00093_aff72277efad2fb1d2f51e95f6fefc288}
-
-
-Definition at line 27 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_a4331412d1cdff7111cdc69adc31528c4}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!str\-Sub\-Str\-Key@{str\-Sub\-Str\-Key}}
-\index{str\-Sub\-Str\-Key@{str\-Sub\-Str\-Key}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{str\-Sub\-Str\-Key}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Dyn\-Stat\-In\-Time.\-str\-Sub\-Str\-Key = '$\ast$'}}\label{a00093_a4331412d1cdff7111cdc69adc31528c4}
-
-
-Definition at line 33 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_acb2620669fa00dd24be0687c86647b43}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!tmp\-Head@{tmp\-Head}}
-\index{tmp\-Head@{tmp\-Head}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{tmp\-Head}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Dyn\-Stat\-In\-Time.\-tmp\-Head = ''}}\label{a00093_acb2620669fa00dd24be0687c86647b43}
-
-
-Definition at line 48 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_a52808d1f82b263c51e9bfb9e18b053c0}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!x@{x}}
-\index{x@{x}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-x = np.\-array(map(list, np.\-loadtxt(file\-To\-Anal, str)), float)}}\label{a00093_a52808d1f82b263c51e9bfb9e18b053c0}
-
-
-Definition at line 39 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_ade03788f04a663a14a9abeae4e7ea0e2}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!xsize@{xsize}}
-\index{xsize@{xsize}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{xsize}]{\setlength{\rightskip}{0pt plus 5cm}acs\-Dyn\-Stat\-In\-Time.\-xsize = x.\-shape}}\label{a00093_ade03788f04a663a14a9abeae4e7ea0e2}
-
-
-Definition at line 40 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00093_aa7979c32d5499d000edacba8fcadd039}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!y@{y}}
-\index{y@{y}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-y = np.\-zeros(({\bf len\-Files\-To\-Anal},{\bf num\-Of\-Traj}))}}\label{a00093_aa7979c32d5499d000edacba8fcadd039}
-
-
-Definition at line 44 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{a00144_a35bd9157c0887704488cc0e2c50bf127}{lib.\-I\-O.\-readfiles.\-load\-Random\-Seed}
+\item 
+def \hyperlink{a00144_aa0985f97c9159003c7a4bd44d1a989f3}{lib.\-I\-O.\-readfiles.\-read\-Conf\-File}
+\item 
+def \hyperlink{a00144_a05887f4cca56e48fcb1be55b6b8f5a9b}{lib.\-I\-O.\-readfiles.\-read\-\_\-sims\-\_\-conf\-\_\-file}
+\item 
+def \hyperlink{a00144_af8a2deca70e9e04a4c4812d81430df19}{lib.\-I\-O.\-readfiles.\-read\-Init\-Conf\-File}
+\item 
+def \hyperlink{a00144_a4a56e157e25982ad4a7dedd03929dcd6}{lib.\-I\-O.\-readfiles.\-read\-Buffered\-I\-D}
+\item 
+def \hyperlink{a00144_ab6d9ae4f9d3c52b2aad8b50d9b110dc1}{lib.\-I\-O.\-readfiles.\-read\-C\-S\-T\-Rflux}
+\item 
+def \hyperlink{a00144_a5ddfb684cfa43cb2aa2d8246078c486c}{lib.\-I\-O.\-readfiles.\-load\-All\-Data}
+\item 
+def \hyperlink{a00144_a30cdb91109c2d6ea6e0abb808fe88c6f}{lib.\-I\-O.\-readfiles.\-zero\-Before\-Str\-Num}
+\item 
+def \hyperlink{a00144_a3a9416927822cf24fb30e1d57bf71412}{lib.\-I\-O.\-readfiles.\-split\-Rct\-Pars\-Line}
+\end{DoxyCompactItemize}
