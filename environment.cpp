@@ -3410,8 +3410,6 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, cl
 
 	if(tmpActSTEP == 1) {	// we create the set of all possible events only in the first step
 
-		gillespieTotalScore = 0; // Initialize (or reset) the overall Gillespie score
-
 	    	if(debugLevel == SMALL_DEBUG) cout << "\t\t|- GILLESPIE STRUCTURE CREATION..." << endl;
 
 		// IF THERE ARE CATALYSIS ************************************************************************************
@@ -7643,6 +7641,22 @@ void environment::clearAllStructures()
 	resetReactionsCounter();
 	lastEvaluatedSpeceisForNewReactions = 0;
 	
+}
+
+/**
+ Clear gillespie structure and species' events lists after each generation
+ @version 1.0
+ */
+void environment::clearGilScores(){
+
+	allGillespieScores.clear();
+	gillespieCumulativeStepScoreList.clear();
+	gillespieTotalScore = 0;
+	//clear the species' lists of the events 
+	for (acs_longInt i = 0; i < allSpecies.size(); i++){
+		allSpecies[i].clearEventsList();
+	}
+
 }
 
 /**

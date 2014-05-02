@@ -340,6 +340,7 @@ private:
     //void resetConcentrationToInitialConditions(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
     void resetConcentrationToInitialConditions();
     void storeInitialStructures();
+	void clearGilScores();
 
     //  DETERMINISTIC FUNCTIONS
 	bool performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double tmpMinimalTimeForOneMols, MTRand& tmp__RndDoubleGen);

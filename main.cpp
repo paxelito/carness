@@ -639,6 +639,7 @@ int main (int argc, char *argv[]) {
                   break;
 
                 }
+		puddle->clearGilScores();
             } // end for(acs_int actGEN = 1; actGEN <= puddle->getNgen(); actGEN++)
             // RESET STRUCTURES and TIME TO THE INITIAL VALUES FOR THE NEXT SIMULATION
             puddle->clearAllStructures();

@@ -142,7 +142,8 @@ public:
 	void insertEvent(acs_longInt x, bool IncOrDec);
 	//print events list
 	void printEventsList();
-
+	//clear events list
+	void clearEventsList(){eventsInc.clear(); eventsDec.clear();}
 
 	// Concentration and amount update
 	void concToNum(acs_double tmpVolume){amount = acsround(AVO * concentration * tmpVolume);}
