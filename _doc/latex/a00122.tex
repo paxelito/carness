@@ -1,0 +1,407 @@
+\hypertarget{a00122}{\section{acs\-Attractor\-Analysis Namespace Reference}
+\label{a00122}\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{a00122_a97aba03091fd66dde4375e3dbffdbede}{zero\-Before\-Str\-Num}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{a00122_ab2b01a2d0224ace0cd720a6d807afd0b}{parser}
+\item 
+tuple \hyperlink{a00122_a750e66218ca39f0949f2f92e89136e37}{args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{a00122_a8941499f40259763765b64e3185be82c}{Str\-Path} = os.\-path.\-abspath(args.\-Str\-Path)
+\item 
+tuple \hyperlink{a00122_a71bc5e3d205016fb7893b438e75be78e}{today} = dt.\-date.\-today()
+\item 
+tuple \hyperlink{a00122_ac88c3245a42ebefee3fcf90626f6eaf4}{tmp\-Dirs} = sort(os.\-listdir(\hyperlink{a00122_a8941499f40259763765b64e3185be82c}{Str\-Path}))
+\item 
+list \hyperlink{a00122_aafc595063b7c4b74f94c0931ff2370a5}{all\-Sorted\-Species} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{a00122_ae708f0b0e671f432735f039e1ff6b6ca}{all\-Concentrations} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{a00122_a02a8db664a67956bc698b79f7c31a7bd}{all\-Sorted\-Species\-N\-O\-I\-N\-F\-L\-U\-X} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{a00122_acda16f4751633455ab19e92bdc5baf2a}{all\-Concentrations\-N\-O\-I\-N\-F\-L\-U\-X} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{a00122_ad3caf9c42727aaab24f4ea4dae362fc9}{tot\-Dir\-Name} = os.\-path.\-join(\hyperlink{a00122_a8941499f40259763765b64e3185be82c}{Str\-Path},tmp\-Dir)
+\item 
+tuple \hyperlink{a00122_a35eb3b681c7408f1476b92798d4f2c16}{res\-Dir\-Path} = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))
+\item 
+tuple \hyperlink{a00122_ac014a9b46a060e4fed96eaee9614345b}{number\-Of\-Gen} = len(glob.\-glob(os.\-path.\-join(\hyperlink{a00122_a35eb3b681c7408f1476b92798d4f2c16}{res\-Dir\-Path},'times\-\_\-$\ast$')))
+\item 
+tuple \hyperlink{a00122_a5708d1d44920d75a918ec1c988c02c57}{str\-Zeros} = \hyperlink{a00122_a97aba03091fd66dde4375e3dbffdbede}{zero\-Before\-Str\-Num}(ngen, \hyperlink{a00122_ac014a9b46a060e4fed96eaee9614345b}{number\-Of\-Gen})
+\item 
+string \hyperlink{a00122_aa76707ba3058ba96fc8e5aeafa461193}{str\-Species} = 'species\-\_\-'
+\item 
+tuple \hyperlink{a00122_a670249d163388a9d93c8f3b9fb63afac}{species\-Files} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00122_a35eb3b681c7408f1476b92798d4f2c16}{res\-Dir\-Path},\hyperlink{a00122_aa76707ba3058ba96fc8e5aeafa461193}{str\-Species})))
+\item 
+list \hyperlink{a00122_a0e036b776f4f724254115c2e284657eb}{species\-File} = \hyperlink{a00122_a670249d163388a9d93c8f3b9fb63afac}{species\-Files}\mbox{[}-\/1\mbox{]}
+\item 
+tuple \hyperlink{a00122_a604c9f75892d8d8aeac8306c94630a23}{fid\-Species} = open(\hyperlink{a00122_a0e036b776f4f724254115c2e284657eb}{species\-File}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+list \hyperlink{a00122_a33bc0e3fc99bab3df33d3f1626a19528}{seq} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{a00122_aca1d14f4dbff06c02b0e3e362c7ffe14}{overall\-Conc\-List} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{a00122_a62444c9b0d66deb07c2e1091695e7561}{overall\-Conc\-List\-N\-O\-I\-N\-F\-L\-U\-X} = \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders} = 0
+\item 
+tuple \hyperlink{a00122_abae060beb170fe923fc10b75f9e82079}{pos} = \hyperlink{a00102_a0cd6a44ffb07342cbc7e5ac33bfc9495}{seq.\-index}(key)
+\item 
+tuple \hyperlink{a00122_a6ab79d8205f5d0ae2da47fb0af93149a}{pos2} = \hyperlink{a00102_a0cd6a44ffb07342cbc7e5ac33bfc9495}{seq.\-index}(key2)
+\item 
+tuple \hyperlink{a00122_a43a783e7bdb1094aa477c438bd67259f}{A\-N\-G\-\_\-overall\-Res\-Matrix} = np.\-zeros((\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders},\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders}))
+\item 
+tuple \hyperlink{a00122_a0d0e0ed8583e4aa041fa6c122324311e}{A\-N\-G\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X} = np.\-zeros((\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders},\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders}))
+\item 
+tuple \hyperlink{a00122_a46dc8cdfb545b64952370e51ff02336f}{H\-A\-M\-\_\-overall\-Res\-Matrix} = np.\-zeros((\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders},\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders}))
+\item 
+tuple \hyperlink{a00122_a9aa1adb46370d97e4f38e7f09eb7a97c}{H\-A\-M\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X} = np.\-zeros((\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders},\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders}))
+\item 
+tuple \hyperlink{a00122_a920167afed4efad8feefc27bdbadba89}{E\-U\-C\-\_\-overall\-Res\-Matrix} = np.\-zeros((\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders},\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders}))
+\item 
+tuple \hyperlink{a00122_a4214c876be4247f0643fc749beb35787}{E\-U\-C\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X} = np.\-zeros((\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders},\hyperlink{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\-Of\-Folders}))
+\item 
+tuple \hyperlink{a00122_af20e9c92b7d977049b881882c0d1382c}{vec\-X} = np.\-array(lx)
+\item 
+tuple \hyperlink{a00122_a691fb5bd87af2162b5acaf48ea4c06e7}{vec\-Y} = np.\-array(ly)
+\item 
+tuple \hyperlink{a00122_a305669433b259c5ffcb797769e7c30df}{tmp\-Cos} = float(np.\-dot(\hyperlink{a00122_af20e9c92b7d977049b881882c0d1382c}{vec\-X},\hyperlink{a00122_a691fb5bd87af2162b5acaf48ea4c06e7}{vec\-Y}) / (np.\-linalg.\-norm(\hyperlink{a00122_af20e9c92b7d977049b881882c0d1382c}{vec\-X}) $\ast$ np.\-linalg.\-norm(\hyperlink{a00122_a691fb5bd87af2162b5acaf48ea4c06e7}{vec\-Y})))
+\item 
+int \hyperlink{a00122_a1fe1582f1d1dc5f55558d25c8eb30ad7}{tmp\-H\-D} = 0
+\item 
+int \hyperlink{a00122_a0c4860774229747cda9dabe70614abc6}{tmp\-E\-U} = 0
+\item 
+string \hyperlink{a00122_a109ce3a379d650b3f9b08debc0433a19}{ndn} = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'
+\item 
+tuple \hyperlink{a00122_ae620f985669aed90dc070824420d4b5e}{newdir\-All\-Results} = os.\-path.\-join(os.\-curdir, \hyperlink{a00122_a109ce3a379d650b3f9b08debc0433a19}{ndn})
+\item 
+string \hyperlink{a00122_aeecfcdefbc44b2b2ceff4c9b6f737f27}{out\-Fname\-Stat} = 'species\-Vector.\-csv'
+\item 
+tuple \hyperlink{a00122_acc1016f353d0e1b36c837cb0b480edef}{save\-File\-Stat} = open(\hyperlink{a00122_aeecfcdefbc44b2b2ceff4c9b6f737f27}{out\-Fname\-Stat}, 'w')
+\item 
+string \hyperlink{a00122_ae5f324ca114055fca79473eecd17bb80}{str\-Types} = ''
+\item 
+int \hyperlink{a00122_a8ec106a228fafb4c290946a7b7f8b6da}{cnt} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00122_a97aba03091fd66dde4375e3dbffdbede}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}}
+\index{zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{zero\-Before\-Str\-Num}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-Attractor\-Analysis.\-zero\-Before\-Str\-Num (
+\begin{DoxyParamCaption}
+\item[{}]{tmpl, }
+\item[{}]{tmp\-L}
+\end{DoxyParamCaption}
+)}}\label{a00122_a97aba03091fd66dde4375e3dbffdbede}
+\begin{DoxyVerb}Function to create string zero string vector before graph filename. 
+According to the total number of reactions N zeros will be add before the instant reaction number 
+(e.g. reaction 130 of 10000 the string became '00130')
+:param tmpl: length (e.g. 1 = 1, 10 = 2, 100 = 3, ... ) of the current folder
+:param tmpL: total length last folder 
+:returns: A zero string numbers to complete the length of tmpL  
+\end{DoxyVerb}
+ 
+
+Definition at line 26 of file acs\-Attractor\-Analysis.\-py.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00122_ae708f0b0e671f432735f039e1ff6b6ca}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!all\-Concentrations@{all\-Concentrations}}
+\index{all\-Concentrations@{all\-Concentrations}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{all\-Concentrations}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Attractor\-Analysis.\-all\-Concentrations = \mbox{[}$\,$\mbox{]}}}\label{a00122_ae708f0b0e671f432735f039e1ff6b6ca}
+
+
+Definition at line 63 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_acda16f4751633455ab19e92bdc5baf2a}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!all\-Concentrations\-N\-O\-I\-N\-F\-L\-U\-X@{all\-Concentrations\-N\-O\-I\-N\-F\-L\-U\-X}}
+\index{all\-Concentrations\-N\-O\-I\-N\-F\-L\-U\-X@{all\-Concentrations\-N\-O\-I\-N\-F\-L\-U\-X}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{all\-Concentrations\-N\-O\-I\-N\-F\-L\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Attractor\-Analysis.\-all\-Concentrations\-N\-O\-I\-N\-F\-L\-U\-X = \mbox{[}$\,$\mbox{]}}}\label{a00122_acda16f4751633455ab19e92bdc5baf2a}
+
+
+Definition at line 65 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_aafc595063b7c4b74f94c0931ff2370a5}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!all\-Sorted\-Species@{all\-Sorted\-Species}}
+\index{all\-Sorted\-Species@{all\-Sorted\-Species}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{all\-Sorted\-Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-all\-Sorted\-Species = \mbox{[}$\,$\mbox{]}}}\label{a00122_aafc595063b7c4b74f94c0931ff2370a5}
+
+
+Definition at line 62 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a02a8db664a67956bc698b79f7c31a7bd}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!all\-Sorted\-Species\-N\-O\-I\-N\-F\-L\-U\-X@{all\-Sorted\-Species\-N\-O\-I\-N\-F\-L\-U\-X}}
+\index{all\-Sorted\-Species\-N\-O\-I\-N\-F\-L\-U\-X@{all\-Sorted\-Species\-N\-O\-I\-N\-F\-L\-U\-X}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{all\-Sorted\-Species\-N\-O\-I\-N\-F\-L\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-all\-Sorted\-Species\-N\-O\-I\-N\-F\-L\-U\-X = \mbox{[}$\,$\mbox{]}}}\label{a00122_a02a8db664a67956bc698b79f7c31a7bd}
+
+
+Definition at line 64 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a43a783e7bdb1094aa477c438bd67259f}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!A\-N\-G\-\_\-overall\-Res\-Matrix@{A\-N\-G\-\_\-overall\-Res\-Matrix}}
+\index{A\-N\-G\-\_\-overall\-Res\-Matrix@{A\-N\-G\-\_\-overall\-Res\-Matrix}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{A\-N\-G\-\_\-overall\-Res\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-A\-N\-G\-\_\-overall\-Res\-Matrix = np.\-zeros(({\bf number\-Of\-Folders},{\bf number\-Of\-Folders}))}}\label{a00122_a43a783e7bdb1094aa477c438bd67259f}
+
+
+Definition at line 184 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a0d0e0ed8583e4aa041fa6c122324311e}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!A\-N\-G\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X@{A\-N\-G\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X}}
+\index{A\-N\-G\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X@{A\-N\-G\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{A\-N\-G\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-A\-N\-G\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X = np.\-zeros(({\bf number\-Of\-Folders},{\bf number\-Of\-Folders}))}}\label{a00122_a0d0e0ed8583e4aa041fa6c122324311e}
+
+
+Definition at line 185 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a750e66218ca39f0949f2f92e89136e37}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!args@{args}}
+\index{args@{args}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-args = parser.\-parse\-\_\-args()}}\label{a00122_a750e66218ca39f0949f2f92e89136e37}
+
+
+Definition at line 50 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a8ec106a228fafb4c290946a7b7f8b6da}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!cnt@{cnt}}
+\index{cnt@{cnt}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{cnt}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Attractor\-Analysis.\-cnt = 0}}\label{a00122_a8ec106a228fafb4c290946a7b7f8b6da}
+
+
+Definition at line 275 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a920167afed4efad8feefc27bdbadba89}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!E\-U\-C\-\_\-overall\-Res\-Matrix@{E\-U\-C\-\_\-overall\-Res\-Matrix}}
+\index{E\-U\-C\-\_\-overall\-Res\-Matrix@{E\-U\-C\-\_\-overall\-Res\-Matrix}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{E\-U\-C\-\_\-overall\-Res\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-E\-U\-C\-\_\-overall\-Res\-Matrix = np.\-zeros(({\bf number\-Of\-Folders},{\bf number\-Of\-Folders}))}}\label{a00122_a920167afed4efad8feefc27bdbadba89}
+
+
+Definition at line 188 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a4214c876be4247f0643fc749beb35787}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!E\-U\-C\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X@{E\-U\-C\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X}}
+\index{E\-U\-C\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X@{E\-U\-C\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{E\-U\-C\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-E\-U\-C\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X = np.\-zeros(({\bf number\-Of\-Folders},{\bf number\-Of\-Folders}))}}\label{a00122_a4214c876be4247f0643fc749beb35787}
+
+
+Definition at line 189 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a604c9f75892d8d8aeac8306c94630a23}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!fid\-Species@{fid\-Species}}
+\index{fid\-Species@{fid\-Species}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{fid\-Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-fid\-Species = open({\bf species\-File}, '{\bf r}')}}\label{a00122_a604c9f75892d8d8aeac8306c94630a23}
+
+
+Definition at line 95 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a46dc8cdfb545b64952370e51ff02336f}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!H\-A\-M\-\_\-overall\-Res\-Matrix@{H\-A\-M\-\_\-overall\-Res\-Matrix}}
+\index{H\-A\-M\-\_\-overall\-Res\-Matrix@{H\-A\-M\-\_\-overall\-Res\-Matrix}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{H\-A\-M\-\_\-overall\-Res\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-H\-A\-M\-\_\-overall\-Res\-Matrix = np.\-zeros(({\bf number\-Of\-Folders},{\bf number\-Of\-Folders}))}}\label{a00122_a46dc8cdfb545b64952370e51ff02336f}
+
+
+Definition at line 186 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a9aa1adb46370d97e4f38e7f09eb7a97c}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!H\-A\-M\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X@{H\-A\-M\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X}}
+\index{H\-A\-M\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X@{H\-A\-M\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{H\-A\-M\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-H\-A\-M\-\_\-overall\-Res\-Matrix\-N\-O\-I\-N\-F\-L\-U\-X = np.\-zeros(({\bf number\-Of\-Folders},{\bf number\-Of\-Folders}))}}\label{a00122_a9aa1adb46370d97e4f38e7f09eb7a97c}
+
+
+Definition at line 187 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a109ce3a379d650b3f9b08debc0433a19}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!ndn@{ndn}}
+\index{ndn@{ndn}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Attractor\-Analysis.\-ndn = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'}}\label{a00122_a109ce3a379d650b3f9b08debc0433a19}
+
+
+Definition at line 232 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_ae620f985669aed90dc070824420d4b5e}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!newdir\-All\-Results@{newdir\-All\-Results}}
+\index{newdir\-All\-Results@{newdir\-All\-Results}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-newdir\-All\-Results = os.\-path.\-join(os.\-curdir, {\bf ndn})}}\label{a00122_ae620f985669aed90dc070824420d4b5e}
+
+
+Definition at line 233 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!number\-Of\-Folders@{number\-Of\-Folders}}
+\index{number\-Of\-Folders@{number\-Of\-Folders}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{number\-Of\-Folders}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Attractor\-Analysis.\-number\-Of\-Folders = 0}}\label{a00122_aa5d2495d08b8ad5ebf34f85d5417e93c}
+
+
+Definition at line 122 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_ac014a9b46a060e4fed96eaee9614345b}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!number\-Of\-Gen@{number\-Of\-Gen}}
+\index{number\-Of\-Gen@{number\-Of\-Gen}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{number\-Of\-Gen}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-number\-Of\-Gen = len(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},'times\-\_\-$\ast$')))}}\label{a00122_ac014a9b46a060e4fed96eaee9614345b}
+
+
+Definition at line 82 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_aeecfcdefbc44b2b2ceff4c9b6f737f27}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!out\-Fname\-Stat@{out\-Fname\-Stat}}
+\index{out\-Fname\-Stat@{out\-Fname\-Stat}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{out\-Fname\-Stat}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Attractor\-Analysis.\-out\-Fname\-Stat = 'species\-Vector.\-csv'}}\label{a00122_aeecfcdefbc44b2b2ceff4c9b6f737f27}
+
+
+Definition at line 243 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_aca1d14f4dbff06c02b0e3e362c7ffe14}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!overall\-Conc\-List@{overall\-Conc\-List}}
+\index{overall\-Conc\-List@{overall\-Conc\-List}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{overall\-Conc\-List}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Attractor\-Analysis.\-overall\-Conc\-List = \mbox{[}$\,$\mbox{]}}}\label{a00122_aca1d14f4dbff06c02b0e3e362c7ffe14}
+
+
+Definition at line 120 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a62444c9b0d66deb07c2e1091695e7561}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!overall\-Conc\-List\-N\-O\-I\-N\-F\-L\-U\-X@{overall\-Conc\-List\-N\-O\-I\-N\-F\-L\-U\-X}}
+\index{overall\-Conc\-List\-N\-O\-I\-N\-F\-L\-U\-X@{overall\-Conc\-List\-N\-O\-I\-N\-F\-L\-U\-X}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{overall\-Conc\-List\-N\-O\-I\-N\-F\-L\-U\-X}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Attractor\-Analysis.\-overall\-Conc\-List\-N\-O\-I\-N\-F\-L\-U\-X = \mbox{[}$\,$\mbox{]}}}\label{a00122_a62444c9b0d66deb07c2e1091695e7561}
+
+
+Definition at line 121 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_ab2b01a2d0224ace0cd720a6d807afd0b}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!parser@{parser}}
+\index{parser@{parser}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-parser}}\label{a00122_ab2b01a2d0224ace0cd720a6d807afd0b}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = ArgumentParser(
+2                                 description=\textcolor{stringliteral}{'Function to analyze the different final dynamical states from
+       different simulations (final states).\(\backslash\)}
+3 \textcolor{stringliteral}{                                                        The algorithm compares all the final states (in
+       terms of concentrations) of the simulations contained in StrPath. \(\backslash\)}
+4 \textcolor{stringliteral}{                                                        If there are both several generations and
+       simulations the script will process everything.'}
+5                                 , epilog=\textcolor{stringliteral}{'''acsattrsactoranalysis '''})
+\end{DoxyCode}
+
+
+Definition at line 43 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_abae060beb170fe923fc10b75f9e82079}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!pos@{pos}}
+\index{pos@{pos}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-pos = {\bf seq.\-index}(key)}}\label{a00122_abae060beb170fe923fc10b75f9e82079}
+
+
+Definition at line 166 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a6ab79d8205f5d0ae2da47fb0af93149a}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!pos2@{pos2}}
+\index{pos2@{pos2}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{pos2}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-pos2 = {\bf seq.\-index}(key2)}}\label{a00122_a6ab79d8205f5d0ae2da47fb0af93149a}
+
+
+Definition at line 172 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a35eb3b681c7408f1476b92798d4f2c16}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!res\-Dir\-Path@{res\-Dir\-Path}}
+\index{res\-Dir\-Path@{res\-Dir\-Path}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{res\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-res\-Dir\-Path = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))}}\label{a00122_a35eb3b681c7408f1476b92798d4f2c16}
+
+
+Definition at line 76 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_acc1016f353d0e1b36c837cb0b480edef}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!save\-File\-Stat@{save\-File\-Stat}}
+\index{save\-File\-Stat@{save\-File\-Stat}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{save\-File\-Stat}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-save\-File\-Stat = open({\bf out\-Fname\-Stat}, 'w')}}\label{a00122_acc1016f353d0e1b36c837cb0b480edef}
+
+
+Definition at line 244 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a33bc0e3fc99bab3df33d3f1626a19528}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!seq@{seq}}
+\index{seq@{seq}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{seq}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Attractor\-Analysis.\-seq = \mbox{[}$\,$\mbox{]}}}\label{a00122_a33bc0e3fc99bab3df33d3f1626a19528}
+
+
+Definition at line 100 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a0e036b776f4f724254115c2e284657eb}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!species\-File@{species\-File}}
+\index{species\-File@{species\-File}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{species\-File}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Attractor\-Analysis.\-species\-File = {\bf species\-Files}\mbox{[}-\/1\mbox{]}}}\label{a00122_a0e036b776f4f724254115c2e284657eb}
+
+
+Definition at line 91 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a670249d163388a9d93c8f3b9fb63afac}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!species\-Files@{species\-Files}}
+\index{species\-Files@{species\-Files}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{species\-Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-species\-Files = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Species})))}}\label{a00122_a670249d163388a9d93c8f3b9fb63afac}
+
+
+Definition at line 90 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a8941499f40259763765b64e3185be82c}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!Str\-Path@{Str\-Path}}
+\index{Str\-Path@{Str\-Path}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{Str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-Str\-Path = os.\-path.\-abspath(args.\-Str\-Path)}}\label{a00122_a8941499f40259763765b64e3185be82c}
+
+
+Definition at line 55 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_aa76707ba3058ba96fc8e5aeafa461193}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!str\-Species@{str\-Species}}
+\index{str\-Species@{str\-Species}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{str\-Species}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Attractor\-Analysis.\-str\-Species = 'species\-\_\-'}}\label{a00122_aa76707ba3058ba96fc8e5aeafa461193}
+
+
+Definition at line 87 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_ae5f324ca114055fca79473eecd17bb80}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!str\-Types@{str\-Types}}
+\index{str\-Types@{str\-Types}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{str\-Types}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Attractor\-Analysis.\-str\-Types = ''}}\label{a00122_ae5f324ca114055fca79473eecd17bb80}
+
+
+Definition at line 246 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a5708d1d44920d75a918ec1c988c02c57}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!str\-Zeros@{str\-Zeros}}
+\index{str\-Zeros@{str\-Zeros}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{str\-Zeros}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-str\-Zeros = {\bf zero\-Before\-Str\-Num}(ngen, {\bf number\-Of\-Gen})}}\label{a00122_a5708d1d44920d75a918ec1c988c02c57}
+
+
+Definition at line 86 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a305669433b259c5ffcb797769e7c30df}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!tmp\-Cos@{tmp\-Cos}}
+\index{tmp\-Cos@{tmp\-Cos}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{tmp\-Cos}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-tmp\-Cos = float(np.\-dot({\bf vec\-X},{\bf vec\-Y}) / (np.\-linalg.\-norm({\bf vec\-X}) $\ast$ np.\-linalg.\-norm({\bf vec\-Y})))}}\label{a00122_a305669433b259c5ffcb797769e7c30df}
+
+
+Definition at line 197 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_ac88c3245a42ebefee3fcf90626f6eaf4}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!tmp\-Dirs@{tmp\-Dirs}}
+\index{tmp\-Dirs@{tmp\-Dirs}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{tmp\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-tmp\-Dirs = sort(os.\-listdir({\bf Str\-Path}))}}\label{a00122_ac88c3245a42ebefee3fcf90626f6eaf4}
+
+
+Definition at line 57 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a0c4860774229747cda9dabe70614abc6}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!tmp\-E\-U@{tmp\-E\-U}}
+\index{tmp\-E\-U@{tmp\-E\-U}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{tmp\-E\-U}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Attractor\-Analysis.\-tmp\-E\-U = 0}}\label{a00122_a0c4860774229747cda9dabe70614abc6}
+
+
+Definition at line 202 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a1fe1582f1d1dc5f55558d25c8eb30ad7}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!tmp\-H\-D@{tmp\-H\-D}}
+\index{tmp\-H\-D@{tmp\-H\-D}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{tmp\-H\-D}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Attractor\-Analysis.\-tmp\-H\-D = 0}}\label{a00122_a1fe1582f1d1dc5f55558d25c8eb30ad7}
+
+
+Definition at line 201 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a71bc5e3d205016fb7893b438e75be78e}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!today@{today}}
+\index{today@{today}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{today}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-today = dt.\-date.\-today()}}\label{a00122_a71bc5e3d205016fb7893b438e75be78e}
+
+
+Definition at line 56 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_ad3caf9c42727aaab24f4ea4dae362fc9}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!tot\-Dir\-Name@{tot\-Dir\-Name}}
+\index{tot\-Dir\-Name@{tot\-Dir\-Name}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{tot\-Dir\-Name}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-tot\-Dir\-Name = os.\-path.\-join({\bf Str\-Path},tmp\-Dir)}}\label{a00122_ad3caf9c42727aaab24f4ea4dae362fc9}
+
+
+Definition at line 72 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_af20e9c92b7d977049b881882c0d1382c}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!vec\-X@{vec\-X}}
+\index{vec\-X@{vec\-X}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{vec\-X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-vec\-X = np.\-array(lx)}}\label{a00122_af20e9c92b7d977049b881882c0d1382c}
+
+
+Definition at line 194 of file acs\-Attractor\-Analysis.\-py.
+
+\hypertarget{a00122_a691fb5bd87af2162b5acaf48ea4c06e7}{\index{acs\-Attractor\-Analysis@{acs\-Attractor\-Analysis}!vec\-Y@{vec\-Y}}
+\index{vec\-Y@{vec\-Y}!acsAttractorAnalysis@{acs\-Attractor\-Analysis}}
+\subsubsection[{vec\-Y}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Attractor\-Analysis.\-vec\-Y = np.\-array(ly)}}\label{a00122_a691fb5bd87af2162b5acaf48ea4c06e7}
+
+
+Definition at line 195 of file acs\-Attractor\-Analysis.\-py.
+

@@ -1,0 +1,298 @@
+\hypertarget{a00153}{\section{prepare\-New\-Sim Namespace Reference}
+\label{a00153}\index{prepare\-New\-Sim@{prepare\-New\-Sim}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{a00153_a6b14bf9916da5f148ec52646dd61250d}{zero\-Before\-Str\-Num}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{a00153_ae3379e72b54af36bd2b64de9caa15e66}{parser}
+\item 
+tuple \hyperlink{a00153_a1f28490256bd74c86694f2beddc4b660}{args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{a00153_ae12458713616b62ee7ddce4ae786571a}{Str\-From} = os.\-path.\-abspath(args.\-Str\-From)
+\item 
+tuple \hyperlink{a00153_af18c9cd549542219404546c94093778a}{Str\-To} = os.\-path.\-abspath(args.\-Str\-To)
+\item 
+tuple \hyperlink{a00153_ae905db8068ef7ae9faada5e94549f94d}{Str\-File\-Species\-To\-Get\-Conc} = os.\-path.\-abspath(args.\-File\-Species\-To\-Get\-Conc)
+\item 
+tuple \hyperlink{a00153_a6c3b875fb4de84c4f6cbed877325e031}{origin} = os.\-getcwd()
+\item 
+int \hyperlink{a00153_a60a98f6c266989ab51ba0fdabce91421}{\-\_\-\-L\-A\-S\-T\-S\-P\-E\-C\-I\-E\-S\-\_\-} = 29
+\item 
+tuple \hyperlink{a00153_a596bb566db292b030b880d3c38dbfcde}{\-\_\-\-R\-E\-V\-R\-C\-T\-S\-\_\-} = int(args.\-rev\-Rct)
+\item 
+tuple \hyperlink{a00153_a269d67d0d7da63ec949ab164a5cb9438}{\-\_\-\-R\-A\-T\-I\-O\-R\-E\-V\-\_\-} = int(args.\-k\-\_\-rev\-Rct)
+\item 
+float \hyperlink{a00153_afdcdc77f10c51ffc75d7348dbda7bba7}{\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-} = 25.\-0
+\item 
+float \hyperlink{a00153_ab9032f63ff533cc9fe3f185fe7c067f0}{\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-} = 50.\-0
+\item 
+float \hyperlink{a00153_a4457603ccfba0463ad74c2668fca9eda}{\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-\_\-} = 50.\-0
+\item 
+tuple \hyperlink{a00153_aa73ec045d5b1bbb22cff6c47645f0251}{\-\_\-\-C\-O\-M\-P\-L\-E\-X\-D\-I\-S\-S\-\_\-} = float(args.\-k\-Diss)
+\item 
+tuple \hyperlink{a00153_a57ae591946e37d1cf656b63e5c78a16e}{\-\_\-\-I\-N\-I\-T\-S\-P\-E\-C\-I\-E\-S\-C\-O\-N\-C\-\_\-} = float(args.\-single\-Init\-Conc)
+\item 
+tuple \hyperlink{a00153_af2af4e96475ebc323016aafc8a506716}{file\-Dest} = os.\-path.\-join(\hyperlink{a00153_af18c9cd549542219404546c94093778a}{Str\-To},\char`\"{}\-\_\-acsinflux.\-csv\char`\"{})
+\item 
+tuple \hyperlink{a00153_aeb2d5bbecc6913caad91424235c53ad1}{source\-Res\-Folder} = os.\-path.\-join(\hyperlink{a00153_ae12458713616b62ee7ddce4ae786571a}{Str\-From},\char`\"{}res\char`\"{})
+\item 
+tuple \hyperlink{a00153_a7fb1841cbd962ec36570a43fa1502842}{last\-Species\-File} = sorted(glob.\-glob('species\-\_\-$\ast$'))
+\item 
+tuple \hyperlink{a00153_afdbea1fd01b98fa3a49d2eb5e3059552}{last\-Reactions\-File} = sorted(glob.\-glob('reactions\-\_\-1$\ast$'))
+\item 
+tuple \hyperlink{a00153_a97d738cf63fc92f9a301aaad39088b72}{last\-Catalysis\-File} = sorted(glob.\-glob('catalysis\-\_\-$\ast$'))
+\item 
+tuple \hyperlink{a00153_a101b8fe44b0048c0abf8297ade1cf414}{mod} = open(\char`\"{}acsm2s.\-conf\char`\"{})
+\item 
+int \hyperlink{a00153_a9927d3b1a11c4bca6f2910f46fa8ef52}{id} = 0
+\item 
+tuple \hyperlink{a00153_ad70a0f8f11ef4f0b3f7b5cdbf6d1ae6c}{linesplitted} = \hyperlink{a00059_a4d1aa74fac80ae0275c056575fdb6626}{line.\-split}(\char`\"{}=\char`\"{})
+\item 
+tuple \hyperlink{a00153_af295f6a35aa5bcf41d241c154030a921}{file} = open(\char`\"{}acsm2s.\-conf\char`\"{}, \char`\"{}w\char`\"{})
+\item 
+list \hyperlink{a00153_ac572deb8f5399f4b837ac3c3913d6c9d}{concs} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{a00153_a741446a74248e993b6f879d7b979f581}{spec\-File\-Lines} = open(\hyperlink{a00153_ae905db8068ef7ae9faada5e94549f94d}{Str\-File\-Species\-To\-Get\-Conc})
+\item 
+tuple \hyperlink{a00153_a0dc2f94dc33e066b40fe1bb29d121bf0}{mod\-\_\-rct} = open(\char`\"{}\-\_\-acsreactions.\-csv\char`\"{})
+\item 
+int \hyperlink{a00153_a287eb1632debc6baf467f8e7fe8d5f14}{flag} = 0
+\item 
+tuple \hyperlink{a00153_a59da4fa9b3f4891ba418007b07929eb7}{cat\-Rct} = linecache.\-getline('\-\_\-acsreactions.\-csv', int(\hyperlink{a00153_ad70a0f8f11ef4f0b3f7b5cdbf6d1ae6c}{linesplitted}\mbox{[}2\mbox{]})+1)
+\item 
+tuple \hyperlink{a00153_a4420c2f6701463dbccac43a169681d82}{car\-Rct\-Split} = \hyperlink{a00059_a4d1aa74fac80ae0275c056575fdb6626}{cat\-Rct.\-split}(\char`\"{}\textbackslash{}t\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00153_a6b14bf9916da5f148ec52646dd61250d}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}}
+\index{zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{zero\-Before\-Str\-Num}]{\setlength{\rightskip}{0pt plus 5cm}def prepare\-New\-Sim.\-zero\-Before\-Str\-Num (
+\begin{DoxyParamCaption}
+\item[{}]{tmpl, }
+\item[{}]{tmp\-L}
+\end{DoxyParamCaption}
+)}}\label{a00153_a6b14bf9916da5f148ec52646dd61250d}
+
+
+Definition at line 12 of file prepare\-New\-Sim.\-py.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00153_afdcdc77f10c51ffc75d7348dbda7bba7}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-@{\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}}
+\index{\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-@{\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}float prepare\-New\-Sim.\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\- = 25.\-0}}\label{a00153_afdcdc77f10c51ffc75d7348dbda7bba7}
+
+
+Definition at line 51 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_aa73ec045d5b1bbb22cff6c47645f0251}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!\-\_\-\-C\-O\-M\-P\-L\-E\-X\-D\-I\-S\-S\-\_\-@{\-\_\-\-C\-O\-M\-P\-L\-E\-X\-D\-I\-S\-S\-\_\-}}
+\index{\-\_\-\-C\-O\-M\-P\-L\-E\-X\-D\-I\-S\-S\-\_\-@{\-\_\-\-C\-O\-M\-P\-L\-E\-X\-D\-I\-S\-S\-\_\-}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{\-\_\-\-C\-O\-M\-P\-L\-E\-X\-D\-I\-S\-S\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-\_\-\-C\-O\-M\-P\-L\-E\-X\-D\-I\-S\-S\-\_\- = float(args.\-k\-Diss)}}\label{a00153_aa73ec045d5b1bbb22cff6c47645f0251}
+
+
+Definition at line 54 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a4457603ccfba0463ad74c2668fca9eda}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-\_\-@{\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-\_\-}}
+\index{\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-\_\-@{\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-\_\-}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}float prepare\-New\-Sim.\-\_\-\-C\-O\-M\-P\-L\-E\-X\-F\-O\-R\-M\-\_\- = 50.\-0}}\label{a00153_a4457603ccfba0463ad74c2668fca9eda}
+
+
+Definition at line 53 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_ab9032f63ff533cc9fe3f185fe7c067f0}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-@{\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}}
+\index{\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-@{\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}float prepare\-New\-Sim.\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\- = 50.\-0}}\label{a00153_ab9032f63ff533cc9fe3f185fe7c067f0}
+
+
+Definition at line 52 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a57ae591946e37d1cf656b63e5c78a16e}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!\-\_\-\-I\-N\-I\-T\-S\-P\-E\-C\-I\-E\-S\-C\-O\-N\-C\-\_\-@{\-\_\-\-I\-N\-I\-T\-S\-P\-E\-C\-I\-E\-S\-C\-O\-N\-C\-\_\-}}
+\index{\-\_\-\-I\-N\-I\-T\-S\-P\-E\-C\-I\-E\-S\-C\-O\-N\-C\-\_\-@{\-\_\-\-I\-N\-I\-T\-S\-P\-E\-C\-I\-E\-S\-C\-O\-N\-C\-\_\-}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{\-\_\-\-I\-N\-I\-T\-S\-P\-E\-C\-I\-E\-S\-C\-O\-N\-C\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-\_\-\-I\-N\-I\-T\-S\-P\-E\-C\-I\-E\-S\-C\-O\-N\-C\-\_\- = float(args.\-single\-Init\-Conc)}}\label{a00153_a57ae591946e37d1cf656b63e5c78a16e}
+
+
+Definition at line 55 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a60a98f6c266989ab51ba0fdabce91421}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!\-\_\-\-L\-A\-S\-T\-S\-P\-E\-C\-I\-E\-S\-\_\-@{\-\_\-\-L\-A\-S\-T\-S\-P\-E\-C\-I\-E\-S\-\_\-}}
+\index{\-\_\-\-L\-A\-S\-T\-S\-P\-E\-C\-I\-E\-S\-\_\-@{\-\_\-\-L\-A\-S\-T\-S\-P\-E\-C\-I\-E\-S\-\_\-}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{\-\_\-\-L\-A\-S\-T\-S\-P\-E\-C\-I\-E\-S\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int prepare\-New\-Sim.\-\_\-\-L\-A\-S\-T\-S\-P\-E\-C\-I\-E\-S\-\_\- = 29}}\label{a00153_a60a98f6c266989ab51ba0fdabce91421}
+
+
+Definition at line 48 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a269d67d0d7da63ec949ab164a5cb9438}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!\-\_\-\-R\-A\-T\-I\-O\-R\-E\-V\-\_\-@{\-\_\-\-R\-A\-T\-I\-O\-R\-E\-V\-\_\-}}
+\index{\-\_\-\-R\-A\-T\-I\-O\-R\-E\-V\-\_\-@{\-\_\-\-R\-A\-T\-I\-O\-R\-E\-V\-\_\-}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{\-\_\-\-R\-A\-T\-I\-O\-R\-E\-V\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-\_\-\-R\-A\-T\-I\-O\-R\-E\-V\-\_\- = int(args.\-k\-\_\-rev\-Rct)}}\label{a00153_a269d67d0d7da63ec949ab164a5cb9438}
+
+
+Definition at line 50 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a596bb566db292b030b880d3c38dbfcde}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!\-\_\-\-R\-E\-V\-R\-C\-T\-S\-\_\-@{\-\_\-\-R\-E\-V\-R\-C\-T\-S\-\_\-}}
+\index{\-\_\-\-R\-E\-V\-R\-C\-T\-S\-\_\-@{\-\_\-\-R\-E\-V\-R\-C\-T\-S\-\_\-}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{\-\_\-\-R\-E\-V\-R\-C\-T\-S\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-\_\-\-R\-E\-V\-R\-C\-T\-S\-\_\- = int(args.\-rev\-Rct)}}\label{a00153_a596bb566db292b030b880d3c38dbfcde}
+
+
+Definition at line 49 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a1f28490256bd74c86694f2beddc4b660}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!args@{args}}
+\index{args@{args}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-args = parser.\-parse\-\_\-args()}}\label{a00153_a1f28490256bd74c86694f2beddc4b660}
+
+
+Definition at line 36 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a4420c2f6701463dbccac43a169681d82}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!car\-Rct\-Split@{car\-Rct\-Split}}
+\index{car\-Rct\-Split@{car\-Rct\-Split}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{car\-Rct\-Split}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-car\-Rct\-Split = {\bf cat\-Rct.\-split}(\char`\"{}\textbackslash{}t\char`\"{})}}\label{a00153_a4420c2f6701463dbccac43a169681d82}
+
+
+Definition at line 217 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a59da4fa9b3f4891ba418007b07929eb7}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!cat\-Rct@{cat\-Rct}}
+\index{cat\-Rct@{cat\-Rct}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{cat\-Rct}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-cat\-Rct = linecache.\-getline('\-\_\-acsreactions.\-csv', int({\bf linesplitted}\mbox{[}2\mbox{]})+1)}}\label{a00153_a59da4fa9b3f4891ba418007b07929eb7}
+
+
+Definition at line 216 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_ac572deb8f5399f4b837ac3c3913d6c9d}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!concs@{concs}}
+\index{concs@{concs}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{concs}]{\setlength{\rightskip}{0pt plus 5cm}list prepare\-New\-Sim.\-concs = \mbox{[}$\,$\mbox{]}}}\label{a00153_ac572deb8f5399f4b837ac3c3913d6c9d}
+
+
+Definition at line 142 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_af295f6a35aa5bcf41d241c154030a921}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!file@{file}}
+\index{file@{file}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-file = open(\char`\"{}acsm2s.\-conf\char`\"{}, \char`\"{}w\char`\"{})}}\label{a00153_af295f6a35aa5bcf41d241c154030a921}
+
+
+Definition at line 131 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_af2af4e96475ebc323016aafc8a506716}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!file\-Dest@{file\-Dest}}
+\index{file\-Dest@{file\-Dest}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{file\-Dest}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-file\-Dest = os.\-path.\-join({\bf Str\-To},\char`\"{}\-\_\-acsinflux.\-csv\char`\"{})}}\label{a00153_af2af4e96475ebc323016aafc8a506716}
+
+
+Definition at line 61 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a287eb1632debc6baf467f8e7fe8d5f14}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!flag@{flag}}
+\index{flag@{flag}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{flag}]{\setlength{\rightskip}{0pt plus 5cm}int prepare\-New\-Sim.\-flag = 0}}\label{a00153_a287eb1632debc6baf467f8e7fe8d5f14}
+
+
+Definition at line 211 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a9927d3b1a11c4bca6f2910f46fa8ef52}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!id@{id}}
+\index{id@{id}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int prepare\-New\-Sim.\-id = 0}}\label{a00153_a9927d3b1a11c4bca6f2910f46fa8ef52}
+
+
+Definition at line 100 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a97d738cf63fc92f9a301aaad39088b72}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!last\-Catalysis\-File@{last\-Catalysis\-File}}
+\index{last\-Catalysis\-File@{last\-Catalysis\-File}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{last\-Catalysis\-File}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-last\-Catalysis\-File = sorted(glob.\-glob('catalysis\-\_\-$\ast$'))}}\label{a00153_a97d738cf63fc92f9a301aaad39088b72}
+
+
+Definition at line 74 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_afdbea1fd01b98fa3a49d2eb5e3059552}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!last\-Reactions\-File@{last\-Reactions\-File}}
+\index{last\-Reactions\-File@{last\-Reactions\-File}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{last\-Reactions\-File}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-last\-Reactions\-File = sorted(glob.\-glob('reactions\-\_\-1$\ast$'))}}\label{a00153_afdbea1fd01b98fa3a49d2eb5e3059552}
+
+
+Definition at line 73 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a7fb1841cbd962ec36570a43fa1502842}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!last\-Species\-File@{last\-Species\-File}}
+\index{last\-Species\-File@{last\-Species\-File}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{last\-Species\-File}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-last\-Species\-File = sorted(glob.\-glob('species\-\_\-$\ast$'))}}\label{a00153_a7fb1841cbd962ec36570a43fa1502842}
+
+
+Definition at line 71 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_ad70a0f8f11ef4f0b3f7b5cdbf6d1ae6c}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!linesplitted@{linesplitted}}
+\index{linesplitted@{linesplitted}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{linesplitted}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-linesplitted = {\bf line.\-split}(\char`\"{}=\char`\"{})}}\label{a00153_ad70a0f8f11ef4f0b3f7b5cdbf6d1ae6c}
+
+
+Definition at line 103 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a101b8fe44b0048c0abf8297ade1cf414}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!mod@{mod}}
+\index{mod@{mod}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{mod}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-mod = open(\char`\"{}acsm2s.\-conf\char`\"{})}}\label{a00153_a101b8fe44b0048c0abf8297ade1cf414}
+
+
+Definition at line 99 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a0dc2f94dc33e066b40fe1bb29d121bf0}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!mod\-\_\-rct@{mod\-\_\-rct}}
+\index{mod\-\_\-rct@{mod\-\_\-rct}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{mod\-\_\-rct}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-mod\-\_\-rct = open(\char`\"{}\-\_\-acsreactions.\-csv\char`\"{})}}\label{a00153_a0dc2f94dc33e066b40fe1bb29d121bf0}
+
+
+Definition at line 208 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a6c3b875fb4de84c4f6cbed877325e031}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!origin@{origin}}
+\index{origin@{origin}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{origin}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-origin = os.\-getcwd()}}\label{a00153_a6c3b875fb4de84c4f6cbed877325e031}
+
+
+Definition at line 47 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_ae3379e72b54af36bd2b64de9caa15e66}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!parser@{parser}}
+\index{parser@{parser}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-parser}}\label{a00153_ae3379e72b54af36bd2b64de9caa15e66}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = ArgumentParser(
+2                                 description=\textcolor{stringliteral}{'Script to create new init simulation files starting from the
+       end of a previous simulation.'}
+3                                 , epilog=\textcolor{stringliteral}{'''Species concentration are initilized according to the sequence
+       uploaded, pay attention to the file selected. '''})
+\end{DoxyCode}
+
+
+Definition at line 22 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_aeb2d5bbecc6913caad91424235c53ad1}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!source\-Res\-Folder@{source\-Res\-Folder}}
+\index{source\-Res\-Folder@{source\-Res\-Folder}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{source\-Res\-Folder}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-source\-Res\-Folder = os.\-path.\-join({\bf Str\-From},\char`\"{}res\char`\"{})}}\label{a00153_aeb2d5bbecc6913caad91424235c53ad1}
+
+
+Definition at line 67 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_a741446a74248e993b6f879d7b979f581}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!spec\-File\-Lines@{spec\-File\-Lines}}
+\index{spec\-File\-Lines@{spec\-File\-Lines}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{spec\-File\-Lines}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-spec\-File\-Lines = open({\bf Str\-File\-Species\-To\-Get\-Conc})}}\label{a00153_a741446a74248e993b6f879d7b979f581}
+
+
+Definition at line 143 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_ae905db8068ef7ae9faada5e94549f94d}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!Str\-File\-Species\-To\-Get\-Conc@{Str\-File\-Species\-To\-Get\-Conc}}
+\index{Str\-File\-Species\-To\-Get\-Conc@{Str\-File\-Species\-To\-Get\-Conc}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{Str\-File\-Species\-To\-Get\-Conc}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-Str\-File\-Species\-To\-Get\-Conc = os.\-path.\-abspath(args.\-File\-Species\-To\-Get\-Conc)}}\label{a00153_ae905db8068ef7ae9faada5e94549f94d}
+
+
+Definition at line 41 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_ae12458713616b62ee7ddce4ae786571a}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!Str\-From@{Str\-From}}
+\index{Str\-From@{Str\-From}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{Str\-From}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-Str\-From = os.\-path.\-abspath(args.\-Str\-From)}}\label{a00153_ae12458713616b62ee7ddce4ae786571a}
+
+
+Definition at line 39 of file prepare\-New\-Sim.\-py.
+
+\hypertarget{a00153_af18c9cd549542219404546c94093778a}{\index{prepare\-New\-Sim@{prepare\-New\-Sim}!Str\-To@{Str\-To}}
+\index{Str\-To@{Str\-To}!prepareNewSim@{prepare\-New\-Sim}}
+\subsubsection[{Str\-To}]{\setlength{\rightskip}{0pt plus 5cm}tuple prepare\-New\-Sim.\-Str\-To = os.\-path.\-abspath(args.\-Str\-To)}}\label{a00153_af18c9cd549542219404546c94093778a}
+
+
+Definition at line 40 of file prepare\-New\-Sim.\-py.
+
