@@ -443,7 +443,7 @@ void species::insertEvent(acs_longInt IDEvent, bool IncOrDec) {
 
 	vector<acs_longInt> *events;
 	if (IncOrDec == INC) events = &eventsInc;
-	else if (IncOrDec == DEC) events = &eventsDec;
+	else events = &eventsDec;
 	(*events).push_back(IDEvent);
 }
 
