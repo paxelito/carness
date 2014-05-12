@@ -1,7 +1,7 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 5.0 (20140402.68)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 5.0 (20140512.69)
  * \author Alessandro Filisetti
- * \version 5.0 (20140402.68)
- * \date 2014-04-02
+ * \version 5.0 (20140512.69)
+ * \date 2014-05-12
  * git repository -- https://github.com/paxelito/carness
  *
  *

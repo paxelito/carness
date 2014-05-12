@@ -65,6 +65,7 @@
 	gillespieTotalScore = 0;
 	maxLOut = 0;
     internalTimesStoredCounter = 0;
+    internalAmountsStoredCounter = 0;
     nHours = 5;
     nAttempts = 5;
     Currentattempts = 0;
@@ -103,6 +104,7 @@ environment::environment(string tmpInitialPath)
                 if(linered[0] == "debugLevel") debugLevel = atoi(linered[1].c_str());
                 if(linered[0] == "timeStructuresSavingInterval") timeStructuresSavingInterval = atof(linered[1].c_str());
                 if(linered[0] == "fileTimesSaveInterval") fileTimesSaveInterval = atof(linered[1].c_str());
+                if(linered[0] == "fileAmountSaveInterval") fileAmountSaveInterval = atof(linered[1].c_str());
                 if(linered[0] == "newSpeciesProbMinThreshold") newSpeciesProbMinThreshold = atof(linered[1].c_str());
                 if(linered[0] == "nHours") nHours = atof(linered[1].c_str());
                 if(linered[0] == "nAttempts") nAttempts = atoi(linered[1].c_str());
@@ -149,6 +151,9 @@ environment::environment(string tmpInitialPath)
     if(nSeconds < fileTimesSaveInterval)
         ExitWithError("environment::environment","No times file will be saved during the simulation");
 
+    if(nSeconds < fileAmountSaveInterval)
+        ExitWithError("environment::environment","No amount file will be saved during the simulation");
+
     if(debugLevel >= RUNNING_VERSION)
         showGlobalParameter();
     //IF RANDOM SEED IS 0 IT HAS TO BE CREATED RANDOMLY
@@ -186,6 +191,7 @@ environment::environment(string tmpInitialPath)
     gillespieNewSpeciesScore = 0;
     ratioBetweenNewGillTotGill = 0;
     internalTimesStoredCounter = 0;
+    internalAmountsStoredCounter = 0;
     lastEvaluatedSpeceisForNewReactions = 0;
     nonCatalyticLastID = 0;
     // TO BE PARAMETRIZED
@@ -5670,15 +5676,22 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 				saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
 										allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),
 										allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());
-
-				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
-				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
 				if(getActualTime() > 0)
 				{
 					internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
 				}
 			}
+
+			// STORE SPECIES AMOUNTS
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) ||
+			   (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			{
+				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				if(getActualTime() > 0) internalAmountsStoredCounter = internalAmountsStoredCounter + fileAmountSaveInterval;
+			}
+
 			//species involved in reaction: molI is complex, molII is secondSubstrate, molIII is product, molIV is catalyst 
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolI());
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolII());
@@ -5699,30 +5712,34 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 				if(debugLevel >= RUNNING_VERSION)
 					cout << "\t\t\t|- !*!*!* There's no molecule availability to perform ENDO CONDENSATION reaction..." << endl;
             }
-			if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) ||
-			   (getActualTime() == 0))
+			if((getActualTime() > (getFileTimesSavingInterval() + internalTimesStoredCounter)) || (getActualTime() == 0))
 			{
 				try{
-				saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
+					saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
 										allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),
 										allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());
 				}
 				catch(exception&e)
 				{
-				cout<<" saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());" << endl;
-				cout << __LINE__ << endl;
-				cerr << "exceptioncaught:" << e.what() << endl;
-				ExitWithError("","exceptionerrorthrown");
+					cout<<" saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());" << endl;
+					cout << __LINE__ << endl;
+					cerr << "exceptioncaught:" << e.what() << endl;
+					ExitWithError("","exceptionerrorthrown");
 				}
+				if(getActualTime() > 0)
+					internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
+			}
 
+			// STORE SPECIES AMOUNTS
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) ||
+			   (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			{
 				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
 				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-				if(getActualTime() > 0)
-				{
-					internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();
-				}
+				if(getActualTime() > 0) internalAmountsStoredCounter = internalAmountsStoredCounter + fileAmountSaveInterval;
 			}
+
 			//species involved in reaction: molI is complex, molII is secondSubstrate, molIII is product, molIV is catalyst 
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolI());
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolII());
@@ -5744,12 +5761,19 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 				saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
 										   allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
 										   allGillespieScores.at(reaction_u).getMolIII());
+				if(getActualTime() > 0){ internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval(); }
+			}
 
+			// STORE SPECIES AMOUNTS
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) ||
+			   (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			{
 				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
 				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-				if(getActualTime() > 0){ internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval(); }
+				if(getActualTime() > 0) internalAmountsStoredCounter = internalAmountsStoredCounter + fileAmountSaveInterval;
 			}
+
 			//species involved in reaction: molI is product, molII is firstSubstrate, molIII is secondSubstrate
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolI());
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolII());
@@ -5771,12 +5795,19 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 				saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
 										   allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
 										   allGillespieScores.at(reaction_u).getMolIII());
+				if(getActualTime() > 0) { internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval(); }
+			}
 
+			// STORE SPECIES AMOUNTS
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) ||
+			   (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			{
 				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
 				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-				if(getActualTime() > 0) { internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval(); }
+				if(getActualTime() > 0) internalAmountsStoredCounter = internalAmountsStoredCounter + fileAmountSaveInterval;
 			}
+
 			//species involved in reaction: molI is product, molII is firstSubstrate, molIII is secondSubstrate
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolI());
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolII());
@@ -5849,12 +5880,19 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 				saveReactionsParametersSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath, allGillespieScores.at(reaction_u).getIdReactionType(),
 										   allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(),
 										   allGillespieScores.at(reaction_u).getMolIII());
+				if(getActualTime() > 0) {internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();}
+			}
 
+			// STORE SPECIES AMOUNTS
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) ||
+			   (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			{
 				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
 				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-				if(getActualTime() > 0) {internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval();}
+				if(getActualTime() > 0) internalAmountsStoredCounter = internalAmountsStoredCounter + fileAmountSaveInterval;
 			}
+
 			//species involved in reaction: molI is substrate, molII and molIII are products
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolI());
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolII());
@@ -5870,11 +5908,19 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 										allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolIII(),
 										allSpecies.at(allGillespieScores.at(reaction_u).getMolIV()).getSubstrate_ID(), allGillespieScores.at(reaction_u).getMolII());
 
+				if(getActualTime() > 0){ internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval(); }
+			}
+
+			// STORE SPECIES AMOUNTS
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) ||
+			   (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			{
 				saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
 				saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-				if(getActualTime() > 0){ internalTimesStoredCounter = internalTimesStoredCounter + getFileTimesSavingInterval(); }
+				if(getActualTime() > 0) internalAmountsStoredCounter = internalAmountsStoredCounter + fileAmountSaveInterval;
 			}
+
 			//species involved in reaction: molI is product, molII and molIII are substrates
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolI());
 			speciesInvolved.push_back(allGillespieScores.at(reaction_u).getMolII());
@@ -7361,6 +7407,7 @@ void environment::showGlobalParameter()
         cout << "\t|- Max number of hours of the simulation (computational time): " << (double)nHours << endl;
         cout << "\t|- Last Firing disk species ID (in structure files upload configuration): " << lastFiringDiskSpeciesID << endl;
         cout << "\t|- time Structures Saving Interval: " << (double)timeStructuresSavingInterval << endl;
+        cout << "\t|- Time Amounts Saving Interval: " << (double)fileAmountSaveInterval << endl;
         cout << "\t|- Minimal new species prob to allow system expansion: " << (double)newSpeciesProbMinThreshold << endl;
         cout << "\t|- file times Saving Interval: " << (double)fileTimesSaveInterval << endl;
         cout << "\t|- Max lenght of non catalytic species: " << nonCatalyticMaxLength << endl;
@@ -7637,6 +7684,7 @@ void environment::clearAllStructures()
 	decimalMoleculesToUNLOAD = 0;
 	decimalComplexesToDissociate = 0;
     internalTimesStoredCounter = 0;
+    internalAmountsStoredCounter = 0;
 	setActualTime(0);
 	resetReactionsCounter();
 	lastEvaluatedSpeceisForNewReactions = 0;
@@ -7848,8 +7896,11 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
     fidFile << "# Save structures to file every..." << endl;
     fidFile << "timeStructuresSavingInterval=" << (double)timeStructuresSavingInterval << endl << endl;
 
-    fidFile << "# Save file times avery..." << endl;
+    fidFile << "# Save file times every ... (if 0 amounts are stores ad each step)" << endl;
     fidFile << "fileTimesSaveInterval=" << (double)fileTimesSaveInterval << endl << endl;
+
+    fidFile << "# Save species amount every ... (if 0 amounts are stores ad each step)" << endl;
+    fidFile << "fileAmountSaveInterval=" << (double)fileAmountSaveInterval << endl << endl;
 
     fidFile << "# Minimal new species creation probability to allow system expansion" << endl;
     fidFile << "# (If you want to avoid the creation of both new species and reactions set >= 1)" << endl;

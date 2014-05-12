@@ -4,6 +4,11 @@ Software documentation is available in the doc folder.
 |VERSION HISTORY|
 |---------------| 
 
+
+Build5.0b20140512.69
+- Parameter fileAmountSaveInterval has been added 
+- Minor bugs fixed 
+
 Build5.0b20140402.68
 - New optimized Gillespie SSA algorithm has been implemented. 
 - Minor bugs fixed 

@@ -30,6 +30,7 @@ private:
     acs_int Currentattempts; // Current number of temptatives
     acs_double timeStructuresSavingInterval; // Time between two successive files storing procedure
     acs_double fileTimesSaveInterval; // Time between two successive times.csv storing procedure
+    acs_double fileAmountSaveInterval; // Time between two successive species amount storing procedure
     acs_double newSpeciesProbMinThreshold; // Minimal new species creation probability to allow system expansion
     acs_int lastFiringDiskSpeciesID; // ID of the last species of the firing disk
     acs_double ECConcentration; // Energie Carriers concentration
@@ -58,6 +59,7 @@ private:
     acs_longInt spontAssCounter; // Spontaneous Associations counter
     int overallLoadedMolsCounter;  // Total number of loaded molecules
     acs_double internalTimesStoredCounter; // Time interval to save certain structures
+    acs_double internalAmountsStoredCounter; // Time interval to save amounts structures
     acs_int lastEvaluatedSpeceisForNewReactions; // Last species evaluated for new reactions, in such a way once that a species has been evaluated to be involved in new reactions
 
     // Kinetic Constants --------------------------
