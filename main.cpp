@@ -1,7 +1,7 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 5.0 (20140512.69)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 5.0 (20140402.68)
  * \author Alessandro Filisetti
- * \version 5.0 (20140512.69)
- * \date 2014-05-12
+ * \version 5.0 (20140402.70)
+ * \date 2014-05-14
  * git repository -- https://github.com/paxelito/carness
  *
  *
@@ -375,8 +375,9 @@
 #include "environment.h"
 
 void saveToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
-void saveTimesToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
+void saveTimesToFile(environment *tmpEnvironment, acs_int tmpStep);
 void saveInitialConditionsToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
+void saveBuffersToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim);
 
 int main (int argc, char *argv[]) {
 	
@@ -451,7 +452,8 @@ int main (int argc, char *argv[]) {
 		//STORE INITIAL STRUCTURES DATA IN ORDER TO REINITIALIZE THE STRUCTURE AFTER EACH SIMULATION
 		puddle->storeInitialStructures();
 		
-        clock_t tStart = clock();
+	Timer timer;
+	acs_double timeElapsed;
 		
 		if(puddle->getDebugLevel() >= RUNNING_VERSION)
 		{
@@ -491,6 +493,7 @@ int main (int argc, char *argv[]) {
                     {
                         // Reset structures stats and set concentrations to initial values
                         puddle->resetConcentrationToInitialConditions();
+			puddle->clearGilScores();
                         saveToFile(argv[2], puddle, actGEN, actSIM, 0);
 
                     }
@@ -502,7 +505,8 @@ int main (int argc, char *argv[]) {
                              << " - SIM NUMBER " << actSIM << " OF " << totalNumberOfSimulations << endl;
                         }
 
-                        tStart = clock();
+			// start timer
+			timer.start();
                         actSTEP = 1;
                         previousStepLastStructuresSaving = 1;
                         previousStepLastTimesSaving = 1;
@@ -513,8 +517,10 @@ int main (int argc, char *argv[]) {
 
                         while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions())	)
                         {
+				timer.stop();
+				timeElapsed = timer.getElapsedTimeInMilliSec();
                             // IF NUMBER OF MILLISECONDS IS LESS THAN THE MAX NUMBER
-                            if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
+                            if(( timeElapsed < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
                             {
                                 //GILLESPIE COMPUTATION (CORE OF THE SOFTWARE)
                             	if(puddle->getDebugLevel() == SMALL_DEBUG)cout << "Step " << actSTEP << endl;
@@ -522,11 +528,10 @@ int main (int argc, char *argv[]) {
                             		// IF the system can expand its structures, se the old gillespie algorithm must be used
                             		if(puddle->getSystemExpFlag())
                             		{
-                            			if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
+                            			if(!puddle->performOPTGillespieComputation(rndDoubleGen, timer, actGEN, actSIM, actSTEP, argv[2]))
                             						ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
                             		}else{ // If structures are fixed new optimized Gillespie algorithm can be used
-                            			//if(!puddle->perform_FIXED_GillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
-                            			if(!puddle->performOPTGillespieComputation(rndDoubleGen, tStart, actGEN, actSIM, actSTEP, argv[2]))
+                            			if(!puddle->perform_FIXED_GillespieComputation(rndDoubleGen, timer, actGEN, actSIM, actSTEP, argv[2]))
                             			            ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
                             		}
                             	}catch(exception&e){
@@ -544,12 +549,13 @@ int main (int argc, char *argv[]) {
                                            (puddle->getNseconds() - puddle->getActualTime() < 0.0001) ||
                                            (puddle->getMols() == puddle->getOverallLoadedMolsCounter()))
                                         {
+						timer.stop();
                                                 cout<< "--------------------------------------------------------------------" << endl
                                                     << "G: "<< actGEN << "/" << totalNumberOfGenerations
                                                     << " - S: " << actSIM << "/" << totalNumberOfSimulations
                                                     << " - T: " << puddle->getActualTime() << "/" << puddle->getNseconds()
                                                     << " - R: " << actSTEP // << "/" << puddle->getNreactions()
-                                                    << " - CT (seconds): " << (float)(clock() - tStart) / float(CLOCKS_PER_SEC)
+                                                    << " - CT (seconds): " << timer.getElapsedTimeInSec()
                                                     << " - Gill: " << puddle->getNumberOfGillespieCOPYpossibleRcts() << endl
                                                     << "\t- ENVIRONMENT" << endl
                                                     << "\t\t|- S: " << puddle->getNspecies()
@@ -581,7 +587,15 @@ int main (int argc, char *argv[]) {
                                                     << " - Spont Cond: "<< puddle->getSpontAssCounter() << endl
                                                 	<< "\t\t|- Cpx: " << puddle->getCpxFormCounter()
                                                 	<< " - Cpx Diss: " << puddle->getCpxDissCounter() << endl;
-                                        }
+
+						//save data buffers to file
+						saveBuffersToFile(argv[2], puddle, actGEN, actSIM);
+						/*if(puddle->getActualTime() > 0) {
+							TimesStoredCounter = TimesStoredCounter + puddle->getFileTimesSavingInterval();
+							previousStepLastTimesSaving = actSTEP;
+						}*/
+                                        
+					}
                                 }
 
 
@@ -598,7 +612,7 @@ int main (int argc, char *argv[]) {
                                         (puddle->getActualTime() == 0) || (puddle->getFileTimesSavingInterval() == 0))
                                 {
                                     //cout << puddle->getActualTime() << " " << puddle->getFileTimesSavingInterval() << " " << TimesStoredCounter << endl;
-                                    saveTimesToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
+                                    saveTimesToFile(puddle, actSTEP);
                                     if(puddle->getActualTime() > 0)
                                     {
                                         TimesStoredCounter = TimesStoredCounter + puddle->getFileTimesSavingInterval();
@@ -612,6 +626,7 @@ int main (int argc, char *argv[]) {
                                 // Increase number of attempts
                                 puddle->increaseAttempts();
                                 puddle->resetConcentrationToInitialConditions();
+				puddle->clearGilScores();
                                 // STOP WHILE
                                 actGEN = actGEN - 1;
                                 break;
@@ -627,7 +642,7 @@ int main (int argc, char *argv[]) {
                             saveToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
 
                         if(previousStepLastTimesSaving < actSTEP-1)
-                            saveTimesToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
+                            saveTimesToFile(puddle, actSTEP);
 
                         //CHECK STRUCTURES, THE COHERENCE OF THE INTERNAL STRUCTURES ARE CONTROLLED
                         if(!puddle->structureCoherenceCheckUp())
@@ -641,7 +656,7 @@ int main (int argc, char *argv[]) {
                   break;
 
                 }
-		puddle->clearGilScores();
+
             } // end for(acs_int actGEN = 1; actGEN <= puddle->getNgen(); actGEN++)
             // RESET STRUCTURES and TIME TO THE INITIAL VALUES FOR THE NEXT SIMULATION
             puddle->clearAllStructures();
@@ -680,18 +695,34 @@ void saveToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGe
 /**
  Save TIMES to file
  @version 2.0
+ @param environment *tmpEnvironment environment instance reference
+ @param acs_int Current step
+ @date 2013/07/03
+ */
+void saveTimesToFile(environment *tmpEnvironment, acs_int tmpStep)
+{
+    // SAVE TO FILE INITIAL CONDITIONS
+    if(!tmpEnvironment->saveTimesSTD(tmpStep))
+        ExitWithError("saveTimes", "PROBLEM WITH SAVING TIMES");
+}
+
+/**
+ Save buffers to file
+ @version 1.0
  @param string tmpSavingPath Saving files path
  @param environment *tmpEnvironment environment instance reference
  @param tmpSim Current simulation
  @param acs_int Current step
- @date 2013/07/03
+ @date 2014/05/14
  */
-void saveTimesToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
+void saveBuffersToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim)
 {
     // SAVE TO FILE INITIAL CONDITIONS
-    if(!tmpEnvironment->saveTimesSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
-        ExitWithError("saveTimes", "PROBLEM WITH SAVING TIMES");
+    if(!tmpEnvironment->saveBuffersToFile(tmpGen, tmpSim, tmpSavingPath))
+        ExitWithError("saveBuffersToFile", "PROBLEM WITH SAVING BUFFERS TO FILES");
+
 }
+
 
 /**
  Save to file all the INITIAL structures

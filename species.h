@@ -42,8 +42,7 @@ private:
     vector<acs_longInt> catalysisIfCpx; /**< Catalysis ID list if complex*/
     vector<acs_double> kCond;			/**< List parallel to secondSubstrates, contain a copy of the k condensation*/
     vector<acs_longInt> gillespieEngagement; /**< List containing the Gillespie's ID in which the species is involved */
-	vector<acs_longInt> eventsInc;		// List of events where the species is involved with an increment
-	vector<acs_longInt> eventsDec;		// List of events where the species is involved with a decrement
+	vector<acs_longInt> events;		// List of events where the species is involved
 	
 public:
 	//!< New species constructor (IN AMOUNT)
@@ -115,8 +114,7 @@ public:
     acs_longInt getSecSubListID(acs_int tmpID)const{return secondSubstrates.at(tmpID);}
     acs_double getSec_k_SubListID(acs_int tmpID)const{return kCond.at(tmpID);}
     acs_longInt getCatalysisIfCpxID(acs_int tmpID)const{return catalysisIfCpx.at(tmpID);}
-	vector<acs_longInt> getEventsInc()const{return eventsInc;}
-	vector<acs_longInt> getEventsDec()const{return eventsDec;}
+	vector<acs_longInt> getEvents()const{return events;}
 	
 	// FUNCTIONAL FUNCTIONS
 	// Total quantity update functions (concentration is recomputed)
@@ -139,11 +137,11 @@ public:
 	void rebornsIncrement(){reborns++;}
 	
 	//update events list
-	void insertEvent(acs_longInt x, bool IncOrDec);
+	void insertEvent(acs_longInt x);
 	//print events list
 	void printEventsList();
 	//clear events list
-	void clearEventsList(){eventsInc.clear(); eventsDec.clear();}
+	void clearEventsList(){events.clear();}
 
 	// Concentration and amount update
 	void concToNum(acs_double tmpVolume){amount = acsround(AVO * concentration * tmpVolume);}

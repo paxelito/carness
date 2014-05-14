@@ -439,12 +439,9 @@ bool species::checkIFtheSecondSubstrateIsAlreadyPresent(acs_longInt tmpSecSubID)
 /**
 	Function to insert event in list
 */
-void species::insertEvent(acs_longInt IDEvent, bool IncOrDec) {
+void species::insertEvent(acs_longInt IDEvent) {
 
-	vector<acs_longInt> *events;
-	if (IncOrDec == INC) events = &eventsInc;
-	else events = &eventsDec;
-	(*events).push_back(IDEvent);
+	events.push_back(IDEvent);
 }
 
 
@@ -453,21 +450,12 @@ void species::insertEvent(acs_longInt IDEvent, bool IncOrDec) {
 */
 void species::printEventsList() {
 
-	cout<<"Inc. Events:  ";
-	if (eventsInc.size() == 0)
+	cout<<"Events List: ";
+	if (events.size() == 0)
 		cout<<"Empty";
 	else
-		for (acs_longInt i = 0; i < eventsInc.size(); i++)
-			cout<<eventsInc[i]<<"  ";
-
-	cout<<endl;
-
-	cout<<"Dec. Events:  ";
-	if (eventsDec.size() == 0)
-		cout<<"Empty";
-	else
-		for (acs_longInt i = 0; i < eventsDec.size(); i++)
-			cout<<eventsDec[i]<<"  ";
+		for (acs_longInt i = 0; i < events.size(); i++)
+			cout<<events[i]<<"  ";
 
 	cout<<endl;
 

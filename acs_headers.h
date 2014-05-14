@@ -26,6 +26,7 @@
 #include <cstdlib>
 #include <clocale> // Probably this library can be removed after QT removing process will be finished
 #include <ctime>
+#include "Timer.h"	//library for computing time
 #include "mtrand.h"
 
 
@@ -39,7 +40,7 @@ typedef unsigned int acs_int;
 // CONSTANTS
 //----------
 
-#define __SOFTVERSION__ "5.0b20140512.69"
+#define __SOFTVERSION__ "5.0b20140402.70"
 
 // DEBUG LEVELS
 
@@ -110,9 +111,7 @@ typedef unsigned int acs_int;
 // MINIMAL MULTIPLICATOR FOR MINIMAL REACTION TIME
 #define MINIMALRCTTIMEMULTI 100
 
-//BOOLEAN FOR EVENTS
-#define INC 0
-#define DEC 1
+//IF THERE IS NO IDCOMPLEX
 #define NOCOMPLEX -1
 
 using namespace std;

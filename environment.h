@@ -30,7 +30,7 @@ private:
     acs_int Currentattempts; // Current number of temptatives
     acs_double timeStructuresSavingInterval; // Time between two successive files storing procedure
     acs_double fileTimesSaveInterval; // Time between two successive times.csv storing procedure
-    acs_double fileAmountSaveInterval; // Time between two successive species amount storing procedure
+   acs_double fileAmountSaveInterval; // Time between two successive species amount storing procedure
     acs_double newSpeciesProbMinThreshold; // Minimal new species creation probability to allow system expansion
     acs_int lastFiringDiskSpeciesID; // ID of the last species of the firing disk
     acs_double ECConcentration; // Energie Carriers concentration
@@ -116,6 +116,13 @@ private:
     vector<acs_double> cumChargedAmountList; // This List contains all the charged speciesID
     vector<acs_int> nrgBooleanFunctions; // This list contains all the possible energetic Boolean Functions
     vector<acs_double> nrgBoolFncsProb2BeSelected; // create a Boolean functions parallel list containing the probability for a Bool fnc to be selected
+	vector<acs_int> newSpecies;
+	vector<acs_int> speciesInitialConcentrationZero;
+
+	//string buffers
+	ostringstream bufferSaveTimes;
+	ostringstream bufferSaveReactionsParameters;
+	ostringstream bufferSaveTimeSpeciesAmount;
 	
     // SUPPORT VARIABLES ----------------------------
 	//TR acs_double decimalCarrierToLoad; // Decimal part of carrier to load in the next reaction
@@ -138,9 +145,9 @@ private:
     acs_double gillespieTime;
     acs_double performReactionTime;
     acs_double remainingProcessesTime;
-    clock_t gillespiePartialTimer; // Gillespie algorithm computational time
-    clock_t performReactionPartialTimer; // The time necessary for the evaluation of a new species
-    clock_t remainingProcessesPartialTimer; // THe time needed for all the other procedure
+    Timer gillespiePartialTimer; // Gillespie algorithm computational time
+    Timer performReactionPartialTimer; // The time necessary for the evaluation of a new species
+    Timer remainingProcessesPartialTimer; // THe time needed for all the other procedure
 
 	// METHODS ---------------------------|
 	
@@ -170,9 +177,9 @@ private:
 	acs_int getADP()const{return nrgCarrier.getNOTchargeMols();}
 	acs_int getATP()const{return nrgCarrier.getChargeMols();}
 	acs_longInt getMols()const{return numberOfMolecules;}
-	acs_longInt getNewMols()const{return numberOfNewMolecules;}
+	acs_longInt getNewMols();
 	acs_longInt getNspecies()const{return numberOfSpecies;}
-	acs_longInt getNnewSpecies()const{return numberOfNewSpecies;}
+	acs_longInt getNnewSpecies();
 	acs_longInt getNcpx()const{return numberOfCpx;}
 	acs_longInt getNcpxMols()const{return numberOfCpxMols;}
 	
@@ -182,6 +189,8 @@ private:
     acs_double getRatioBetweenNewGillTotGill()const{return ratioBetweenNewGillTotGill;}
     acs_double getRatioBetweenBackandForw()const{return ratioBetweenReverseAndTotalScore;}
     bool getSystemExpFlag()const{return newSpeciesProbMinThreshold < 1;}
+
+
 	
 	// Kinetic Constants -----------------------------
 	acs_double getKdiss()const{return K_diss;}
@@ -235,6 +244,11 @@ private:
 	acs_longInt getSpontAssCounter()const{return spontAssCounter;}
 	acs_int getTotNumberOfChargedMols();
 
+	//add newSpecies
+	void newSpeciesAdd(acs_int idSpecies);
+	//copy species with initial concentration equal to 0
+	void copySpeciesInitialConcentrationZero();
+
 	// PROMPT FUNCTIONS
 	void showGlobalParameter();
 	void printInitialCondition();
@@ -270,8 +284,8 @@ private:
     acs_longInt returnPosSpeciesAlreadyPresent(string tmpNewSequence); //return vector species size if it doesn't
     acs_longInt returnPosReactionAlreadyPresent(acs_int tmpReactionType, acs_longInt tmpIds_I, acs_longInt tmpIds_II, acs_longInt tmpIds_III); //return vector allReactions size if it doesn't
 	bool checkIfTheReactionIsAlreadyCatalyzedByThisSpecies(acs_longInt tmpSPeciesID, acs_longInt tmpIdReaction);
-    bool performOPTGillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath);
-    bool perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, clock_t& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath);
+    bool performOPTGillespieComputation(MTRand& tmpRndDoubleGen, Timer& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath);
+    bool perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Timer& tmpTimeElapsed, acs_int tmpActGEN, acs_int tmpActSIM, acs_int tmpActSTEP, string tmpStoringPath);
     bool performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleGen, acs_int tmp_ActGEN, acs_int tmp_ActSIM, acs_int tmp_ActSTEP, string tmp_StoringPath);
 	bool newSpeciesEvaluationIII(acs_longInt tmpNewSpecies, MTRand& tmp___RndDoubleGen);
     bool complexEvaluation(string tmpComplex, MTRand& tmp___RndDoubleGen, acs_int tmpCuttingPnt, acs_longInt tmpCatalyst_ID, acs_longInt tmpCatID, acs_longInt tmpSubstrate_ID, acs_longInt tmpSecSub_ID, bool tmpCpxType);
@@ -344,6 +358,9 @@ private:
     void storeInitialStructures();
 	void clearGilScores();
 
+	//function for retrieving complex
+	acs_longInt getComplexID(string sequence, acs_int cuttingPoint);
+
     //  DETERMINISTIC FUNCTIONS
 	bool performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double tmpMinimalTimeForOneMols, MTRand& tmp__RndDoubleGen);
 	bool performMoleculesEfflux(acs_double tmpTimeInterval, MTRand& tmp_RndDoubleGen);
@@ -390,14 +407,15 @@ private:
     bool saveSpeciesStructureSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, string tmpStoringPath);
     bool saveReactionsStructureSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, string tmpStoringPath);
     bool saveCatalysisStructureSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, string tmpStoringPath);
-    bool saveTimesSTD(acs_int tmpCurrentGen, acs_int tmpCurrentSim, acs_int tmpCurrentStep, string tmpStoringPath);
-    bool saveReactionsParametersSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, string tmp__StoringPath, acs_int tmpRctType,
-                                 acs_longInt tmpCat, acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III);
-    bool saveLivingSpeciesIDSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, string tmp__StoringPath);
-    bool saveLivingSpeciesAmountSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
-    bool saveLivingSpeciesConcentrationSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
+    bool saveTimesSTD(acs_int tmpCurrentStep);
+    bool saveReactionsParametersSTD(acs_int tmp__CurrentStep, acs_int tmpRctType, acs_longInt tmpCat, acs_longInt tmpMol_I, acs_longInt tmpMol_II, acs_longInt tmpMol_III);
+    //bool saveLivingSpeciesIDSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, acs_int tmp__CurrentStep, string tmp__StoringPath);
+    //bool saveLivingSpeciesAmountSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
+    //bool saveLivingSpeciesConcentrationSTD(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
 	//bool saveGillespieStructure(acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
 	//bool saveAdjacentStructures(acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
+	bool saveTimeSpeciesAmountSTD(acs_int tmp__CurrentStep);
+	bool saveBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
 
     // STATISTIC FUNCTIONS
     bool devStd();
