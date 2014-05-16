@@ -8764,7 +8764,6 @@ bool environment::saveBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__Curren
 	return true;
 }
 
-
 /**
  Save living species in a file named living_species_[currentSim].csv. Standard C++
  The file is saved in the directory indicated as a second parameter in the run command
