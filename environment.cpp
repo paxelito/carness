@@ -5703,7 +5703,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 			}
 
 			// STORE SPECIES AMOUNTS
-			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) || (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) || (getActualTime() == 0) || (fileAmountSaveInterval == 0))
 			{
 				//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
@@ -5753,7 +5753,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 
 			// STORE SPECIES AMOUNTS
 			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) ||
-			   (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			   (getActualTime() == 0) || (fileAmountSaveInterval == 0))
 			{
 				//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
@@ -5785,7 +5785,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 			}
 
 			// STORE SPECIES AMOUNTS
-			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) || (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) || (getActualTime() == 0) || (fileAmountSaveInterval == 0))
 			{
 				//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
@@ -5818,7 +5818,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 			}
 
 			// STORE SPECIES AMOUNTS
-			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) || (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) || (getActualTime() == 0) || (fileAmountSaveInterval == 0))
 			{
 				//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
@@ -5901,7 +5901,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 			}
 
 			// STORE SPECIES AMOUNTS
-			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) || (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) || (getActualTime() == 0) || (fileAmountSaveInterval == 0))
 			{
 				//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
@@ -5927,7 +5927,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 			}
 
 			// STORE SPECIES AMOUNTS
-			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) || (getActualTime() == 0) || (getFileTimesSavingInterval() == 0))
+			if((getActualTime() > (fileAmountSaveInterval + internalAmountsStoredCounter)) || (getActualTime() == 0) || (fileAmountSaveInterval == 0))
 			{
 				//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 				//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
@@ -5951,7 +5951,9 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 	
 	//--------------------COMPUTING SCORE-----------------
 	//--------------------AND UPDATING EVENTS-----------------
-	performEventUpdate(speciesInvolved);
+	//FIXED Version
+	if (!getSystemExpFlag())
+		performEventUpdate(speciesInvolved);
 
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performReaction end" << endl;
 	
@@ -8500,6 +8502,7 @@ bool environment::saveCatalysisStructureSTD(acs_int tmpCurrentGen, acs_int tmpCu
  @date 2014-05-14
  */
 bool environment::saveTimesSTD(acs_int tmpCurrentStep) {
+
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveTimesSTD start" << endl;
     if(debugLevel >= SMALL_DEBUG)
         cout << "\t|- Saving Times to file...";
@@ -8612,9 +8615,6 @@ bool environment::saveReactionsParametersSTD(acs_int tmp__CurrentStep, acs_int t
 	if(debugLevel >= HIGH_DEBUG)
 	cout << "OK" << endl;
 
-	if (getSystemExpFlag())
-		COPYOFallGillespieScores.clear();
-
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveReactionsParametersSTD end" << endl;
 
 	return true;
@@ -8627,7 +8627,6 @@ bool environment::saveReactionsParametersSTD(acs_int tmp__CurrentStep, acs_int t
  @date 2014-05-14
  */
 bool environment::saveTimeSpeciesAmountSTD(acs_int tmp__CurrentStep) {
-
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveTimeSpeciesAmountSTD start" << endl;
 	if(debugLevel >= SMALL_DEBUG)
 		cout << "\t|- Saving saveTimeSpeciesAmountSTD to file...";
@@ -8646,8 +8645,6 @@ bool environment::saveTimeSpeciesAmountSTD(acs_int tmp__CurrentStep) {
 		if(debugLevel >= SMALL_DEBUG)
 			cout << "OK" << endl;
 
-		if (getSystemExpFlag())
-			COPYOFallGillespieScores.clear();
 
 	}
 	catch(exception&e)
@@ -8693,15 +8690,15 @@ bool environment::saveBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__Curren
 		fidFile<< bufferSaveTimeSpeciesAmount.str();
 		//close file
 		fidFile.close();
-		//clear buffer
-		bufferSaveTimeSpeciesAmount.clear();
 	} catch(exception&e) {
 		cerr << "exceptioncaught:" << e.what() << endl;
 		ExitWithError("error in method saveBuffersToFile", "exceptionerrorthrown");
 	}
 
 	//cleaning buffers
+	strCurrentGen.str(std::string());
 	strCurrentGen.clear();
+	strCurrentSim.str(std::string());
 	strCurrentSim.clear();
 	fidFile.clear();
 
@@ -8721,15 +8718,15 @@ bool environment::saveBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__Curren
 		fidFile<< bufferSaveTimes.str();
 		//close file
 		fidFile.close();
-		//clear buffer
-		bufferSaveTimes.clear();
 	} catch(exception&e) {
 		cerr << "exceptioncaught:" << e.what() << endl;
 		ExitWithError("error in method saveBuffersToFile", "exceptionerrorthrown");
 	}
 
 	//cleaning buffers
+	strCurrentGen.str(std::string());
 	strCurrentGen.clear();
+	strCurrentSim.str(std::string());
 	strCurrentSim.clear();
 	fidFile.clear();
 
@@ -8749,16 +8746,17 @@ bool environment::saveBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__Curren
 		fidFile<< bufferSaveReactionsParameters.str();
 		//close file
 		fidFile.close();
-		//clear buffer
-		bufferSaveReactionsParameters.clear();
 	} catch(exception&e) {
 		cerr << "exceptioncaught:" << e.what() << endl;
-		ExitWithError("error in method saveReactionsParametersSTD","exceptionerrorthrown");
+		ExitWithError("error in method saveBuffersToFile","exceptionerrorthrown");
 	}	
 
 	//CLEANING ENVIRONMENT'S BUFFERS
+	bufferSaveTimes.str(std::string());
 	bufferSaveTimes.clear();
+	bufferSaveReactionsParameters.str(std::string());
 	bufferSaveReactionsParameters.clear();
+	bufferSaveTimeSpeciesAmount.str(std::string());	
 	bufferSaveTimeSpeciesAmount.clear();
 
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveTimeSpeciesAmountSTD end" << endl;
