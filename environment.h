@@ -167,6 +167,7 @@ private:
     acs_int getCurrentAttempts()const{return Currentattempts;}
 	acs_double getTimeStructuresSavingInterval()const{return timeStructuresSavingInterval;}
     acs_double getFileTimesSavingInterval()const{return fileTimesSaveInterval;}
+    acs_double getFileAmountSavingInterval()const{return fileAmountSaveInterval;}
 	acs_int getLastFiringDiskSpeciesID()const{return lastFiringDiskSpeciesID;}
 	acs_int getMaxNonCatalyticLength()const{return nonCatalyticMaxLength;}
 	acs_double getRctProb()const{return reactionProbability;}
@@ -415,7 +416,8 @@ private:
 	//bool saveGillespieStructure(acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
 	//bool saveAdjacentStructures(acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
 	bool saveTimeSpeciesAmountSTD(acs_int tmp__CurrentStep);
-	bool saveBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
+	bool saveTimeReactionBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
+	bool saveAmountBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
 
     // STATISTIC FUNCTIONS
     bool devStd();
