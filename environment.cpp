@@ -476,7 +476,7 @@ environment::environment(string tmpInitialPath)
 //
 //	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createReactionsLayer end" << endl;
 //
-//}//eof
+//} //eof
 
 /**
  Compute number of reaction catalysd by a catalyst according to the total number of reactions and reactions probabilities
