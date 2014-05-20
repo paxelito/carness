@@ -8063,6 +8063,9 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
 	buffer << "# Save file times every...\n";
 	buffer << "fileTimesSaveInterval=" << (double)fileTimesSaveInterval << "\n \n";
 
+	buffer << "# Save species amount every (if 0 amounts are stores ad each step)\n";
+	buffer << "fileTimesSaveInterval=" << (double)fileAmountSaveInterval << "\n \n";
+
 	buffer << "# Minimal new species creation probability to allow system expansion\n";
 	buffer << "# (If you want to avoid the creation of both new species and reactions set >= 1)\n";
 	buffer << "newSpeciesProbMinThreshold=" << (double)newSpeciesProbMinThreshold << "\n \n";
