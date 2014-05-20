@@ -628,14 +628,14 @@ int main (int argc, char *argv[]) {
 				}
 
 				//write times and reactions parameter to files
-				if(((acs_int)puddle->getFileTimesSavingInterval() == 0) || (actSTEP % (10*(acs_int)puddle->getFileTimesSavingInterval()) == 0) || (actSTEP == 1) || (puddle->getNseconds() - puddle->getActualTime() < 0.0001) || (puddle->getMols() == puddle->getOverallLoadedMolsCounter())) {
+				if(((acs_int)puddle->getFileTimesSavingInterval() == 0) || (actSTEP % (N_BUFFER*(acs_int)puddle->getFileTimesSavingInterval()) == 0) || (actSTEP == 1) || (puddle->getNseconds() - puddle->getActualTime() < 0.0001) || (puddle->getMols() == puddle->getOverallLoadedMolsCounter())) {
 					//save data buffers to file
 					saveTimeReactionBuffersToFile(argv[2], puddle, actGEN, actSIM);
 					previousStepLastBufferTimesSaving = actSTEP;
 				}
 
 				//write timeSpeciesAmount to files
-				if(((acs_int)puddle->getFileAmountSavingInterval() == 0) || (actSTEP % (10*(acs_int)puddle->getFileAmountSavingInterval()) == 0) || (actSTEP == 1) || (puddle->getNseconds() - puddle->getActualTime() < 0.0001) || (puddle->getMols() == puddle->getOverallLoadedMolsCounter())) {
+				if(((acs_int)puddle->getFileAmountSavingInterval() == 0) || (actSTEP % (N_BUFFER*(acs_int)puddle->getFileAmountSavingInterval()) == 0) || (actSTEP == 1) || (puddle->getNseconds() - puddle->getActualTime() < 0.0001) || (puddle->getMols() == puddle->getOverallLoadedMolsCounter())) {
 					//save data buffers to file
 					saveAmountBuffersToFile(argv[2], puddle, actGEN, actSIM);
 					previousStepLastBufferAmountSaving = actSTEP;

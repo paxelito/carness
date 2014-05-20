@@ -114,6 +114,9 @@ typedef unsigned int acs_int;
 //IF THERE IS NO IDCOMPLEX
 #define NOCOMPLEX -1
 
+//WRITE TO FILE EVERY...
+#define N_BUFFER 1000
+
 using namespace std;
 
 #endif
