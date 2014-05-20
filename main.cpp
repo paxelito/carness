@@ -377,7 +377,8 @@
 void saveToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
 void saveTimesToFile(environment *tmpEnvironment, acs_int tmpStep);
 void saveInitialConditionsToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
-void saveBuffersToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim);
+void saveTimeReactionBuffersToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim);
+void saveAmountBuffersToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim);
 
 int main (int argc, char *argv[]) {
 	
@@ -471,6 +472,8 @@ int main (int argc, char *argv[]) {
         acs_int actSTEP; // declare simulation step
         acs_int previousStepLastStructuresSaving; // declare previousStep
         acs_int previousStepLastTimesSaving; // declare previousStep
+        acs_int previousStepLastBufferTimesSaving; // declare previousStep
+        acs_int previousStepLastBufferAmountSaving; // declare previousStep
 
         for(acs_int actSIM = 1; actSIM <= puddle->getNsim(); actSIM++)
         {
@@ -499,6 +502,7 @@ int main (int argc, char *argv[]) {
                     }
                         acs_double dataStoredCounter = 0;
                         acs_double TimesStoredCounter = 0;
+			acs_double AmountsStoredCounter = 0;
                         if(puddle->getDebugLevel() >= MINIMAL_PROMPT)
                         {
                              cout << "|- GEN NUMBER " << actGEN << " OF " << puddle->getNgen()
@@ -510,6 +514,8 @@ int main (int argc, char *argv[]) {
                         actSTEP = 1;
                         previousStepLastStructuresSaving = 1;
                         previousStepLastTimesSaving = 1;
+			previousStepLastBufferTimesSaving = 1;
+		        previousStepLastBufferAmountSaving = 1;
 
                         // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
                         // SECONDS / REACTIONS PER SIMULATION
@@ -587,17 +593,9 @@ int main (int argc, char *argv[]) {
                                                     << " - Spont Cond: "<< puddle->getSpontAssCounter() << endl
                                                 	<< "\t\t|- Cpx: " << puddle->getCpxFormCounter()
                                                 	<< " - Cpx Diss: " << puddle->getCpxDissCounter() << endl;
-
-						//save data buffers to file
-						saveBuffersToFile(argv[2], puddle, actGEN, actSIM);
-						/*if(puddle->getActualTime() > 0) {
-							TimesStoredCounter = TimesStoredCounter + puddle->getFileTimesSavingInterval();
-							previousStepLastTimesSaving = actSTEP;
-						}*/
                                         
 					}
                                 }
-
 
                                 // SAVE STRUCTURES TO FILE EVERY puddle->getTimeStructuresSavingInterval() SECONDS
                                 if(puddle->getActualTime() >= (puddle->getTimeStructuresSavingInterval() + dataStoredCounter))
@@ -619,6 +617,29 @@ int main (int argc, char *argv[]) {
                                         previousStepLastTimesSaving = actSTEP;
                                     }
                                 }
+
+				// STORE SPECIES AMOUNTS
+				if((puddle->getActualTime() > (puddle->getFileAmountSavingInterval() + AmountsStoredCounter)) || (puddle->getActualTime() == 0) ||  (puddle->getFileAmountSavingInterval() == 0)) {
+					//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+					//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+					//saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+					puddle->saveTimeSpeciesAmountSTD(actSTEP);
+					if(puddle->getActualTime() > 0) AmountsStoredCounter += puddle->getFileAmountSavingInterval();
+				}
+
+				//write times and reactions parameter to files
+				if(((acs_int)puddle->getFileTimesSavingInterval() == 0) || (actSTEP % (10*(acs_int)puddle->getFileTimesSavingInterval()) == 0) || (actSTEP == 1) || (puddle->getNseconds() - puddle->getActualTime() < 0.0001) || (puddle->getMols() == puddle->getOverallLoadedMolsCounter())) {
+					//save data buffers to file
+					saveTimeReactionBuffersToFile(argv[2], puddle, actGEN, actSIM);
+					previousStepLastBufferTimesSaving = actSTEP;
+				}
+
+				//write timeSpeciesAmount to files
+				if(((acs_int)puddle->getFileAmountSavingInterval() == 0) || (actSTEP % (10*(acs_int)puddle->getFileAmountSavingInterval()) == 0) || (actSTEP == 1) || (puddle->getNseconds() - puddle->getActualTime() < 0.0001) || (puddle->getMols() == puddle->getOverallLoadedMolsCounter())) {
+					//save data buffers to file
+					saveAmountBuffersToFile(argv[2], puddle, actGEN, actSIM);
+					previousStepLastBufferAmountSaving = actSTEP;
+				}
 
                                 actSTEP++; // step update
 
@@ -644,6 +665,12 @@ int main (int argc, char *argv[]) {
                         if(previousStepLastTimesSaving < actSTEP-1)
                             saveTimesToFile(puddle, actSTEP);
 
+			if(previousStepLastBufferTimesSaving < actSTEP-1)
+				saveTimeReactionBuffersToFile(argv[2], puddle, actGEN, actSIM);
+
+			if(previousStepLastBufferAmountSaving < actSTEP-1)
+				saveAmountBuffersToFile(argv[2], puddle, actGEN, actSIM);
+
                         //CHECK STRUCTURES, THE COHERENCE OF THE INTERNAL STRUCTURES ARE CONTROLLED
                         if(!puddle->structureCoherenceCheckUp())
                         {
@@ -656,10 +683,10 @@ int main (int argc, char *argv[]) {
                   break;
 
                 }
-
             } // end for(acs_int actGEN = 1; actGEN <= puddle->getNgen(); actGEN++)
             // RESET STRUCTURES and TIME TO THE INITIAL VALUES FOR THE NEXT SIMULATION
-            puddle->clearAllStructures();
+		puddle->clearAllStructures();
+		puddle->clearGilScores();
         } // end for(acs_int actSIM = 1; actSIM <= puddle->getNsim(); actSIM++)
 					
 	//DELETE ALL MAIN HEAP OBJECTS
@@ -707,22 +734,38 @@ void saveTimesToFile(environment *tmpEnvironment, acs_int tmpStep)
 }
 
 /**
- Save buffers to file
+ Save times and reactions parameter buffers to file
  @version 1.0
  @param string tmpSavingPath Saving files path
  @param environment *tmpEnvironment environment instance reference
  @param tmpSim Current simulation
  @param acs_int Current step
- @date 2014/05/14
+ @date 2014/05/20
  */
-void saveBuffersToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim)
+void saveTimeReactionBuffersToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim)
 {
-    // SAVE TO FILE INITIAL CONDITIONS
-    if(!tmpEnvironment->saveBuffersToFile(tmpGen, tmpSim, tmpSavingPath))
-        ExitWithError("saveBuffersToFile", "PROBLEM WITH SAVING BUFFERS TO FILES");
+
+    if(!tmpEnvironment->saveTimeReactionBuffersToFile(tmpGen, tmpSim, tmpSavingPath))
+        ExitWithError("saveTimeReactionBuffersToFile", "PROBLEM WITH SAVING BUFFERS TO FILES");
 
 }
 
+/**
+ Save TimeSpeciesAmount buffers to file
+ @version 1.0
+ @param string tmpSavingPath Saving files path
+ @param environment *tmpEnvironment environment instance reference
+ @param tmpSim Current simulation
+ @param acs_int Current step
+ @date 2014/05/20
+ */
+void saveAmountBuffersToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim)
+{
+
+    if(!tmpEnvironment->saveAmountBuffersToFile(tmpGen, tmpSim, tmpSavingPath))
+        ExitWithError("saveAmountBuffersToFile", "PROBLEM WITH SAVING BUFFERS TO FILES");
+
+}
 
 /**
  Save to file all the INITIAL structures
