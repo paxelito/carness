@@ -3172,7 +3172,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, Timer&
 					//allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
 					//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 					tmpTimeElapsed.stop();
-					allTime = tmpTimeElapsed.getElapsedTimeInMilliSec();
+					allTime = tmpTimeElapsed.getElapsedTimeInSec();
 
 				}catch(exception&e){
 					 cout << "Source Code Line: " << __LINE__ << endl;
@@ -3232,7 +3232,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, Timer&
 					//allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
 					//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 					tmpTimeElapsed.stop();
-					allTime = tmpTimeElapsed.getElapsedTimeInMilliSec();
+					allTime = tmpTimeElapsed.getElapsedTimeInSec();
 
 					if(debugLevel >= RUNNING_VERSION)
 									cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
@@ -3264,7 +3264,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, Timer&
 				//allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
 				//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 				tmpTimeElapsed.stop();
-				allTime = tmpTimeElapsed.getElapsedTimeInMilliSec();
+				allTime = tmpTimeElapsed.getElapsedTimeInSec();
 
 				if(debugLevel >= RUNNING_VERSION)
 						cout << "\t\t\t|- NO REACTIONS AT THIS STEP" << endl;
@@ -3897,7 +3897,7 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 					//allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
 					//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 					tmpTimeElapsed.stop();
-					allTime = tmpTimeElapsed.getElapsedTimeInMilliSec();
+					allTime = tmpTimeElapsed.getElapsedTimeInSec();
 
 				}catch(exception&e){
 					 cout << "Source Code Line: " << __LINE__ << endl;
@@ -3957,7 +3957,7 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 					//allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
 					//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 					tmpTimeElapsed.stop();
-					allTime = tmpTimeElapsed.getElapsedTimeInMilliSec();
+					allTime = tmpTimeElapsed.getElapsedTimeInSec();
 
 					if(debugLevel >= RUNNING_VERSION)
 									cout << "\t\t\t|- NO REACTIONS AT THIS STEP T:" << tempTime << " G: " << allGillespieScores.size() << endl;
@@ -3988,7 +3988,7 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 				//allTime = ((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC;
 				//allTimes.push_back(((float)clock() - tmpTimeElapsed) / CLOCKS_PER_SEC);
 				tmpTimeElapsed.stop();
-				allTime = tmpTimeElapsed.getElapsedTimeInMilliSec();
+				allTime = tmpTimeElapsed.getElapsedTimeInSec();
 
 				if(debugLevel >= RUNNING_VERSION)
 						cout << "\t\t\t|- NO REACTIONS AT THIS STEP" << endl;
@@ -8588,46 +8588,49 @@ bool environment::saveTimeReactionBuffersToFile(acs_int tmp__CurrentGen, acs_int
 	strCurrentSim << tmp__CurrentSim;
 
 	//-------WRITING TIMES-------
-	string strFileTimesStructure = tmp__StoringPath + "/times_" + strZeroGenBefore + strCurrentGen.str() + "_" + strZeroSimBefore + strCurrentSim.str() + ".csv";
+	if (bufferSaveTimes.str() != "") {
+		string strFileTimesStructure = tmp__StoringPath + "/times_" + strZeroGenBefore + strCurrentGen.str() + "_" + strZeroSimBefore + strCurrentSim.str() + ".csv";
 
-	ofstream fidFile;
+		ofstream fidFile;
 
-	try{
-		//open file
-		fidFile.open(strFileTimesStructure.c_str(), ios::out | ios::app);
-		//write file
-		fidFile<< bufferSaveTimes.str();
-		//close file
-		fidFile.close();
-	} catch(exception&e) {
-		cerr << "exceptioncaught:" << e.what() << endl;
-		ExitWithError("error in method saveTimeReactionBuffersToFile", "exceptionerrorthrown");
+		try{
+			//open file
+			fidFile.open(strFileTimesStructure.c_str(), ios::out | ios::app);
+			//write file
+			fidFile<< bufferSaveTimes.str();
+			//close file
+			fidFile.close();
+		} catch(exception&e) {
+			cerr << "exceptioncaught:" << e.what() << endl;
+			ExitWithError("error in method saveTimeReactionBuffersToFile", "exceptionerrorthrown");
+		}
+
+		fidFile.clear();
+		//CLEANING ENVIRONMENT'S BUFFERS
+		bufferSaveTimes.str(std::string());
+		bufferSaveTimes.clear();
 	}
 
-	fidFile.clear();
-
-
 	//-------REACTION PARAMETERS-------
+	if (bufferSaveReactionsParameters.str() != "") {
+		string strFileReactionsParameters = tmp__StoringPath + "/reactions_parameters_" + strZeroGenBefore + strCurrentGen.str() + "_" + strZeroSimBefore + strCurrentSim.str() + ".csv";
 
-	string strFileReactionsParameters = tmp__StoringPath + "/reactions_parameters_" + strZeroGenBefore + strCurrentGen.str() + "_" + strZeroSimBefore + strCurrentSim.str() + ".csv";
-
-	try{
-		//open file
-		fidFile.open(strFileReactionsParameters.c_str(), ios::out | ios::app);
-		//write file
-		fidFile<< bufferSaveReactionsParameters.str();
-		//close file
-		fidFile.close();
-	} catch(exception&e) {
-		cerr << "exceptioncaught:" << e.what() << endl;
-		ExitWithError("error in method saveTimeReactionBuffersToFile","exceptionerrorthrown");
-	}	
-
+		ofstream fidFile;
+		try{
+			//open file
+			fidFile.open(strFileReactionsParameters.c_str(), ios::out | ios::app);
+			//write file
+			fidFile<< bufferSaveReactionsParameters.str();
+			//close file
+			fidFile.close();
+		} catch(exception&e) {
+			cerr << "exceptioncaught:" << e.what() << endl;
+			ExitWithError("error in method saveTimeReactionBuffersToFile","exceptionerrorthrown");
+		}	
 	//CLEANING ENVIRONMENT'S BUFFERS
-	bufferSaveTimes.str(std::string());
-	bufferSaveTimes.clear();
 	bufferSaveReactionsParameters.str(std::string());
 	bufferSaveReactionsParameters.clear();
+	}
 
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveTimeReactionBuffersToFile end" << endl;
 
