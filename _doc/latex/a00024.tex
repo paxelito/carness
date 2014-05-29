@@ -1,115 +1,115 @@
-\hypertarget{a00024}{\section{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/buffered\-Flux\-Analysis.py File Reference}
-\label{a00024}\index{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/buffered\-Flux\-Analysis.\-py@{/\-Users/alessandrofilisetti/\-Documents/\-G\-I\-T/carness/\-\_\-analysis/old/buffered\-Flux\-Analysis.\-py}}
+\hypertarget{a00024}{\section{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+analysis/old/buffered\+Flux\+Analysis.py File Reference}
+\label{a00024}\index{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+analysis/old/buffered\+Flux\+Analysis.\+py@{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+analysis/old/buffered\+Flux\+Analysis.\+py}}
 }
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{a00131}{buffered\-Flux\-Analysis}
+ \hyperlink{a00133}{buffered\+Flux\+Analysis}
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-list \hyperlink{a00131_a86b649a1e51f1e3384ad432c0de3340b}{buffered\-Flux\-Analysis.\-Str\-Path} = sys.\-argv\mbox{[}1\mbox{]}
+list \hyperlink{a00133_a86b649a1e51f1e3384ad432c0de3340b}{buffered\+Flux\+Analysis.\+Str\+Path} = sys.\+argv\mbox{[}1\mbox{]}
 \item 
-list \hyperlink{a00131_a3293821a23ed904d4f68dffd94c609e1}{buffered\-Flux\-Analysis.\-tmp\-Res\-Fold} = sys.\-argv\mbox{[}2\mbox{]}
+list \hyperlink{a00133_a3293821a23ed904d4f68dffd94c609e1}{buffered\+Flux\+Analysis.\+tmp\+Res\+Fold} = sys.\+argv\mbox{[}2\mbox{]}
 \item 
-tuple \hyperlink{a00131_a37cf8287ac5d9f5b83732efe352cf154}{buffered\-Flux\-Analysis.\-today} = dt.\-date.\-today()
+tuple \hyperlink{a00133_a37cf8287ac5d9f5b83732efe352cf154}{buffered\+Flux\+Analysis.\+today} = dt.\+date.\+today()
 \item 
-string \hyperlink{a00131_a94f9529239340003572ace8de46bee35}{buffered\-Flux\-Analysis.\-sim\-F} = Str\-Path+'/'
+string \hyperlink{a00133_a94f9529239340003572ace8de46bee35}{buffered\+Flux\+Analysis.\+sim\+F} = Str\+Path+'/'
 \item 
-tuple \hyperlink{a00131_afaa1b171179d99fee6ead2ae14dc8fc6}{buffered\-Flux\-Analysis.\-tmp\-Dirs} = sort(glob.\-glob(sim\-F))
+tuple \hyperlink{a00133_afaa1b171179d99fee6ead2ae14dc8fc6}{buffered\+Flux\+Analysis.\+tmp\+Dirs} = sort(glob.\+glob(sim\+F))
 \item 
-tuple \hyperlink{a00131_a90d7a1a691a7ba3f095a06b940e152c9}{buffered\-Flux\-Analysis.\-newdir} = os.\-path.\-join(os.\-curdir, '0\-\_\-statistics')
+tuple \hyperlink{a00133_a90d7a1a691a7ba3f095a06b940e152c9}{buffered\+Flux\+Analysis.\+newdir} = os.\+path.\+join(os.\+curdir, '0\+\_\+statistics')
 \item 
-tuple \hyperlink{a00131_a620ce4d1c541ead7668e3872c011a35c}{buffered\-Flux\-Analysis.\-matrix\-Time\-L\-I\-T\-E} = np.\-zeros((101,len(tmp\-Dirs)))
+tuple \hyperlink{a00133_a620ce4d1c541ead7668e3872c011a35c}{buffered\+Flux\+Analysis.\+matrix\+Time\+L\+I\+T\+E} = np.\+zeros((101,len(tmp\+Dirs)))
 \item 
-tuple \hyperlink{a00131_a160e0d0c0c7cff8f8a141429c1235eb8}{buffered\-Flux\-Analysis.\-matrix\-Flux\-L\-I\-T\-E} = np.\-zeros((101,len(tmp\-Dirs)))
+tuple \hyperlink{a00133_a160e0d0c0c7cff8f8a141429c1235eb8}{buffered\+Flux\+Analysis.\+matrix\+Flux\+L\+I\+T\+E} = np.\+zeros((101,len(tmp\+Dirs)))
 \item 
-tuple \hyperlink{a00131_a1f521f6f720583fe2e06f9a3127841fb}{buffered\-Flux\-Analysis.\-matrix\-Abs\-L\-I\-T\-E} = np.\-zeros((101,len(tmp\-Dirs)))
+tuple \hyperlink{a00133_a1f521f6f720583fe2e06f9a3127841fb}{buffered\+Flux\+Analysis.\+matrix\+Abs\+L\+I\+T\+E} = np.\+zeros((101,len(tmp\+Dirs)))
 \item 
-tuple \hyperlink{a00131_a75957649a19f5d8fc03e06de4e0e30b4}{buffered\-Flux\-Analysis.\-matrix\-Exp\-L\-I\-T\-E} = np.\-zeros((101,len(tmp\-Dirs)))
+tuple \hyperlink{a00133_a75957649a19f5d8fc03e06de4e0e30b4}{buffered\+Flux\+Analysis.\+matrix\+Exp\+L\+I\+T\+E} = np.\+zeros((101,len(tmp\+Dirs)))
 \item 
-int \hyperlink{a00131_ab845ee953d29af3dfb8e8e1c0739b760}{buffered\-Flux\-Analysis.\-tmp\-Dirs\-Cnt} = 0
+int \hyperlink{a00133_ab845ee953d29af3dfb8e8e1c0739b760}{buffered\+Flux\+Analysis.\+tmp\+Dirs\+Cnt} = 0
 \item 
-tuple \hyperlink{a00131_a898dbb3abbe3e409d2ee83d4a5362d6b}{buffered\-Flux\-Analysis.\-species\-Files} = sort(glob.\-glob('species\-\_\-$\ast$'))
+tuple \hyperlink{a00133_a898dbb3abbe3e409d2ee83d4a5362d6b}{buffered\+Flux\+Analysis.\+species\+Files} = sort(glob.\+glob('species\+\_\+$\ast$'))
 \item 
-tuple \hyperlink{a00131_a56ea4478f0de4eca040d22421819e250}{buffered\-Flux\-Analysis.\-fid\-Species} = open(\hyperlink{a00028_af5703745c2c2a6af7f62da460994d9c2}{species\-Files}\mbox{[}0\mbox{]}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
+tuple \hyperlink{a00133_a56ea4478f0de4eca040d22421819e250}{buffered\+Flux\+Analysis.\+fid\+Species} = open(\hyperlink{a00028_af5703745c2c2a6af7f62da460994d9c2}{species\+Files}\mbox{[}0\mbox{]}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
 \item 
-int \hyperlink{a00131_a2ca9e7b06751f98dec759e29fb4e0ff1}{buffered\-Flux\-Analysis.\-ok} = 0
+int \hyperlink{a00133_a2ca9e7b06751f98dec759e29fb4e0ff1}{buffered\+Flux\+Analysis.\+ok} = 0
 \item 
-list \hyperlink{a00131_ae24a834136795f8237a6833f27b1d101}{buffered\-Flux\-Analysis.\-flux\-Indexes} = \mbox{[}$\,$\mbox{]}
+list \hyperlink{a00133_ae24a834136795f8237a6833f27b1d101}{buffered\+Flux\+Analysis.\+flux\+Indexes} = \mbox{[}$\,$\mbox{]}
 \item 
-list \hyperlink{a00131_ad325fa6a88238fd68ab3877253a8bfbb}{buffered\-Flux\-Analysis.\-flux\-Lengths} = \mbox{[}$\,$\mbox{]}
+list \hyperlink{a00133_ad325fa6a88238fd68ab3877253a8bfbb}{buffered\+Flux\+Analysis.\+flux\+Lengths} = \mbox{[}$\,$\mbox{]}
 \item 
-tuple \hyperlink{a00131_af7658ba15697dfeb9cd4bff8a57c7360}{buffered\-Flux\-Analysis.\-index} = int(tmp\-I\-D)
+tuple \hyperlink{a00133_af7658ba15697dfeb9cd4bff8a57c7360}{buffered\+Flux\+Analysis.\+index} = int(tmp\+I\+D)
 \item 
-tuple \hyperlink{a00131_a19a0d4fb7445508e6204894b5f4eca23}{buffered\-Flux\-Analysis.\-species\-Seq} = len(tmp\-Seq)
+tuple \hyperlink{a00133_a19a0d4fb7445508e6204894b5f4eca23}{buffered\+Flux\+Analysis.\+species\+Seq} = len(tmp\+Seq)
 \item 
-tuple \hyperlink{a00131_a532dc433988bcc35543c129c92aa9e53}{buffered\-Flux\-Analysis.\-conc\-Fixed} = int(tmp\-Conc\-Fixed)
+tuple \hyperlink{a00133_a532dc433988bcc35543c129c92aa9e53}{buffered\+Flux\+Analysis.\+conc\+Fixed} = int(tmp\+Conc\+Fixed)
 \item 
-tuple \hyperlink{a00131_a0d1da0381917a4cdca814e4d430ff367}{buffered\-Flux\-Analysis.\-fileslist} = sort(glob.\-glob('reactions\-\_\-parameters\-\_\-$\ast$'))
+tuple \hyperlink{a00133_a0d1da0381917a4cdca814e4d430ff367}{buffered\+Flux\+Analysis.\+fileslist} = sort(glob.\+glob('reactions\+\_\+parameters\+\_\+$\ast$'))
 \item 
-int \hyperlink{a00131_aa203d8968b82cc631fffe3da7c46ddfd}{buffered\-Flux\-Analysis.\-rct\-Par\-File\-Num} = 1
+int \hyperlink{a00133_aa203d8968b82cc631fffe3da7c46ddfd}{buffered\+Flux\+Analysis.\+rct\+Par\+File\+Num} = 1
 \item 
-int \hyperlink{a00131_ac7b9057f347140dc5ffb27b86665b372}{buffered\-Flux\-Analysis.\-rct\-I\-D} = 1
+int \hyperlink{a00133_ac7b9057f347140dc5ffb27b86665b372}{buffered\+Flux\+Analysis.\+rct\+I\+D} = 1
 \item 
-list \hyperlink{a00131_a8f99b100d2f8191100ee93d633cb7a62}{buffered\-Flux\-Analysis.\-tot\-Flux\-Dyn} = \mbox{[}$\,$\mbox{]}
+list \hyperlink{a00133_a8f99b100d2f8191100ee93d633cb7a62}{buffered\+Flux\+Analysis.\+tot\+Flux\+Dyn} = \mbox{[}$\,$\mbox{]}
 \item 
-list \hyperlink{a00131_acd39b5831b0a3150487f722fa3941723}{buffered\-Flux\-Analysis.\-absorbed\-Bricks} = \mbox{[}$\,$\mbox{]}
+list \hyperlink{a00133_acd39b5831b0a3150487f722fa3941723}{buffered\+Flux\+Analysis.\+absorbed\+Bricks} = \mbox{[}$\,$\mbox{]}
 \item 
-int \hyperlink{a00131_a83acfbebbbafd68ab6574c76d2be6c60}{buffered\-Flux\-Analysis.\-temp\-Absorbed\-Bricks} = 0
+int \hyperlink{a00133_a83acfbebbbafd68ab6574c76d2be6c60}{buffered\+Flux\+Analysis.\+temp\+Absorbed\+Bricks} = 0
 \item 
-list \hyperlink{a00131_abb64e6cc33529d672b220bca854fcc5c}{buffered\-Flux\-Analysis.\-expelled\-Bricks} = \mbox{[}$\,$\mbox{]}
+list \hyperlink{a00133_abb64e6cc33529d672b220bca854fcc5c}{buffered\+Flux\+Analysis.\+expelled\+Bricks} = \mbox{[}$\,$\mbox{]}
 \item 
-int \hyperlink{a00131_a496cf2986cc324a0421c288991e1be93}{buffered\-Flux\-Analysis.\-temp\-Expelled\-Bricks} = 0
+int \hyperlink{a00133_a496cf2986cc324a0421c288991e1be93}{buffered\+Flux\+Analysis.\+temp\+Expelled\+Bricks} = 0
 \item 
-list \hyperlink{a00131_a11c5182cf16d185b8ebd807aff4eb839}{buffered\-Flux\-Analysis.\-tot\-Times} = \mbox{[}$\,$\mbox{]}
+list \hyperlink{a00133_a11c5182cf16d185b8ebd807aff4eb839}{buffered\+Flux\+Analysis.\+tot\+Times} = \mbox{[}$\,$\mbox{]}
 \item 
-list \hyperlink{a00131_afc46fc569c50ea77d9dd0a6a1e9eb438}{buffered\-Flux\-Analysis.\-tot\-Flux\-Dyn\-\_\-\-L\-I\-T\-E} = \mbox{[}$\,$\mbox{]}
+list \hyperlink{a00133_afc46fc569c50ea77d9dd0a6a1e9eb438}{buffered\+Flux\+Analysis.\+tot\+Flux\+Dyn\+\_\+\+L\+I\+T\+E} = \mbox{[}$\,$\mbox{]}
 \item 
-list \hyperlink{a00131_a4d8afcc76cdbe3ba251368426147cefd}{buffered\-Flux\-Analysis.\-absorbed\-Bricks\-\_\-\-L\-I\-T\-E} = \mbox{[}$\,$\mbox{]}
+list \hyperlink{a00133_a4d8afcc76cdbe3ba251368426147cefd}{buffered\+Flux\+Analysis.\+absorbed\+Bricks\+\_\+\+L\+I\+T\+E} = \mbox{[}$\,$\mbox{]}
 \item 
-list \hyperlink{a00131_a6add3eeb2b7903c31bd378684f0ae0f7}{buffered\-Flux\-Analysis.\-expelled\-Bricks\-\_\-\-L\-I\-T\-E} = \mbox{[}$\,$\mbox{]}
+list \hyperlink{a00133_a6add3eeb2b7903c31bd378684f0ae0f7}{buffered\+Flux\+Analysis.\+expelled\+Bricks\+\_\+\+L\+I\+T\+E} = \mbox{[}$\,$\mbox{]}
 \item 
-list \hyperlink{a00131_afe01d8621771212d5e3d525f70d78090}{buffered\-Flux\-Analysis.\-tot\-Times\-\_\-\-L\-I\-T\-E} = \mbox{[}$\,$\mbox{]}
+list \hyperlink{a00133_afe01d8621771212d5e3d525f70d78090}{buffered\+Flux\+Analysis.\+tot\+Times\+\_\+\+L\+I\+T\+E} = \mbox{[}$\,$\mbox{]}
 \item 
-tuple \hyperlink{a00131_a490a31896b3a0812a6e9ed57cd4be1c9}{buffered\-Flux\-Analysis.\-fid} = open(\hyperlink{a00110_a4e8353d6c62cf54bf4a1a8f63e56b8c3}{file}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
+tuple \hyperlink{a00133_a490a31896b3a0812a6e9ed57cd4be1c9}{buffered\+Flux\+Analysis.\+fid} = open(\hyperlink{a00110_a4e8353d6c62cf54bf4a1a8f63e56b8c3}{file}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
 \item 
-int \hyperlink{a00131_a25fb267e09b519680d3f5d767eaa526c}{buffered\-Flux\-Analysis.\-okmonitor} = 1
+int \hyperlink{a00133_a25fb267e09b519680d3f5d767eaa526c}{buffered\+Flux\+Analysis.\+okmonitor} = 1
 \item 
-int \hyperlink{a00131_a8df8abbeab32a9f551cce00c3f8fc1b5}{buffered\-Flux\-Analysis.\-oksave\-Lite} = 0
+int \hyperlink{a00133_a8df8abbeab32a9f551cce00c3f8fc1b5}{buffered\+Flux\+Analysis.\+oksave\+Lite} = 0
 \item 
-int \hyperlink{a00131_ad074bf5da40fa7fb7978db66744aec56}{buffered\-Flux\-Analysis.\-delta\-Rct} = 0
+int \hyperlink{a00133_ad074bf5da40fa7fb7978db66744aec56}{buffered\+Flux\+Analysis.\+delta\+Rct} = 0
 \item 
-tuple \hyperlink{a00131_ae2f3c773b4d02cc6548fa0199cd93d81}{buffered\-Flux\-Analysis.\-reaction} = int(tmp\-Reaction)
+tuple \hyperlink{a00133_ae2f3c773b4d02cc6548fa0199cd93d81}{buffered\+Flux\+Analysis.\+reaction} = int(tmp\+Reaction)
 \item 
-tuple \hyperlink{a00131_a3a242047ff630fce5bc0c36591a9b22b}{buffered\-Flux\-Analysis.\-rtime} = float(tmp\-Time)
+tuple \hyperlink{a00133_a3a242047ff630fce5bc0c36591a9b22b}{buffered\+Flux\+Analysis.\+rtime} = float(tmp\+Time)
 \item 
-tuple \hyperlink{a00131_a81b885fbd3a11be21610fd96c82952b7}{buffered\-Flux\-Analysis.\-cc} = int(tmpcc)
+tuple \hyperlink{a00133_a81b885fbd3a11be21610fd96c82952b7}{buffered\+Flux\+Analysis.\+cc} = int(tmpcc)
 \item 
-tuple \hyperlink{a00131_a651bc7229b13b20528ca1a79030c6ac7}{buffered\-Flux\-Analysis.\-cat} = int(tmp\-Cat)
+tuple \hyperlink{a00133_a651bc7229b13b20528ca1a79030c6ac7}{buffered\+Flux\+Analysis.\+cat} = int(tmp\+Cat)
 \item 
-tuple \hyperlink{a00131_a64e0bf7f508f99df9f78726bb69f39fc}{buffered\-Flux\-Analysis.\-mol\-\_\-\-I} = int(tmp\-Mol\-\_\-\-I)
+tuple \hyperlink{a00133_a64e0bf7f508f99df9f78726bb69f39fc}{buffered\+Flux\+Analysis.\+mol\+\_\+\+I} = int(tmp\+Mol\+\_\+\+I)
 \item 
-tuple \hyperlink{a00131_a608780773cb877189c0d288e25bbc3f3}{buffered\-Flux\-Analysis.\-mol\-\_\-\-I\-I} = int(tmp\-Mol\-\_\-\-I\-I)
+tuple \hyperlink{a00133_a608780773cb877189c0d288e25bbc3f3}{buffered\+Flux\+Analysis.\+mol\+\_\+\+I\+I} = int(tmp\+Mol\+\_\+\+I\+I)
 \item 
-tuple \hyperlink{a00131_adb2a3012a89917afb7db45899a9b3e77}{buffered\-Flux\-Analysis.\-mol\-\_\-\-I\-I\-I} = int(tmp\-Mol\-\_\-\-I\-I\-I)
+tuple \hyperlink{a00133_adb2a3012a89917afb7db45899a9b3e77}{buffered\+Flux\+Analysis.\+mol\+\_\+\+I\+I\+I} = int(tmp\+Mol\+\_\+\+I\+I\+I)
 \item 
-tuple \hyperlink{a00131_a7e05b85cf7e9b63ac9aa0582932185b4}{buffered\-Flux\-Analysis.\-loaded\-Mols\-Conc} = float(tmp\-Loaded\-Mols\-Conc)
+tuple \hyperlink{a00133_a7e05b85cf7e9b63ac9aa0582932185b4}{buffered\+Flux\+Analysis.\+loaded\+Mols\+Conc} = float(tmp\+Loaded\+Mols\+Conc)
 \item 
-tuple \hyperlink{a00131_ae753e3b6694200ad57523072a4a2dbf1}{buffered\-Flux\-Analysis.\-loaded\-Mols} = int(tmp\-Loaded\-Mols)
+tuple \hyperlink{a00133_ae753e3b6694200ad57523072a4a2dbf1}{buffered\+Flux\+Analysis.\+loaded\+Mols} = int(tmp\+Loaded\+Mols)
 \item 
-tuple \hyperlink{a00131_ab95141737b50ec6e5b0e3f622dfa9713}{buffered\-Flux\-Analysis.\-gill\-Mean} = float(tmp\-Gill\-Mean)
+tuple \hyperlink{a00133_ab95141737b50ec6e5b0e3f622dfa9713}{buffered\+Flux\+Analysis.\+gill\+Mean} = float(tmp\+Gill\+Mean)
 \item 
-tuple \hyperlink{a00131_a74dcc41e82d94dda58e3e18fd94b9563}{buffered\-Flux\-Analysis.\-gill\-S\-D} = float(tmp\-Gill\-S\-D)
+tuple \hyperlink{a00133_a74dcc41e82d94dda58e3e18fd94b9563}{buffered\+Flux\+Analysis.\+gill\+S\+D} = float(tmp\+Gill\+S\+D)
 \item 
-tuple \hyperlink{a00131_ac596e19c308944b3c5504e92aa074de1}{buffered\-Flux\-Analysis.\-gill\-Entropy} = float(tmp\-Gill\-Entropy)
+tuple \hyperlink{a00133_ac596e19c308944b3c5504e92aa074de1}{buffered\+Flux\+Analysis.\+gill\+Entropy} = float(tmp\+Gill\+Entropy)
 \item 
-tuple \hyperlink{a00131_a20f8e8350b77ca9121474e7177166800}{buffered\-Flux\-Analysis.\-saving\-Matrix} = np.\-zeros((len(tot\-Times),4))
+tuple \hyperlink{a00133_a20f8e8350b77ca9121474e7177166800}{buffered\+Flux\+Analysis.\+saving\+Matrix} = np.\+zeros((len(tot\+Times),4))
 \item 
-tuple \hyperlink{a00131_ab710247ed928de0924b2123e6aec97c9}{buffered\-Flux\-Analysis.\-tmp\-Dir\-Split} = \hyperlink{a00059_a4d1aa74fac80ae0275c056575fdb6626}{tmp\-Dir.\-split}(\char`\"{}/\char`\"{})
+tuple \hyperlink{a00133_ab710247ed928de0924b2123e6aec97c9}{buffered\+Flux\+Analysis.\+tmp\+Dir\+Split} = \hyperlink{a00059_a4d1aa74fac80ae0275c056575fdb6626}{tmp\+Dir.\+split}(\char`\"{}/\char`\"{})
 \item 
-string \hyperlink{a00131_af2f4a5ec3f690f7a60ea69a5cb208359}{buffered\-Flux\-Analysis.\-cmd\-File\-Name} = Str\-Path+'0\-\_\-statistics/0\-\_\-flux\-Dynamics\-\_\-'
+string \hyperlink{a00133_af2f4a5ec3f690f7a60ea69a5cb208359}{buffered\+Flux\+Analysis.\+cmd\+File\+Name} = Str\+Path+'0\+\_\+statistics/0\+\_\+flux\+Dynamics\+\_\+'
 \item 
-tuple \hyperlink{a00131_a6b17587fb0cc6eb8ae770e1dbc5b1d97}{buffered\-Flux\-Analysis.\-cmd\-File\-Fid} = open(cmd\-File\-Name, '\hyperlink{a00035_a2ffdbad9ea59541e59cbd2b938e0770c}{a}')
+tuple \hyperlink{a00133_a6b17587fb0cc6eb8ae770e1dbc5b1d97}{buffered\+Flux\+Analysis.\+cmd\+File\+Fid} = open(cmd\+File\+Name, '\hyperlink{a00035_a2ffdbad9ea59541e59cbd2b938e0770c}{a}')
 \end{DoxyCompactItemize}

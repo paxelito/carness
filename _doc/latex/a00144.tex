@@ -1,129 +1,105 @@
-\hypertarget{a00144}{\section{lib.\-I\-O.\-readfiles Namespace Reference}
-\label{a00144}\index{lib.\-I\-O.\-readfiles@{lib.\-I\-O.\-readfiles}}
+\hypertarget{a00144}{\section{lib.\+graph.\+scc Namespace Reference}
+\label{a00144}\index{lib.\+graph.\+scc@{lib.\+graph.\+scc}}
 }
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{a00144_a35bd9157c0887704488cc0e2c50bf127}{load\-Random\-Seed}
+def \hyperlink{a00144_a7d0d5fec525d92ca329b1b58da0712be}{create\+Simple\+Graph}
 \item 
-def \hyperlink{a00144_aa0985f97c9159003c7a4bd44d1a989f3}{read\-Conf\-File}
+def \hyperlink{a00144_abc47bb4f5ff50cf5d1dd81c007c1e332}{create\+Net\+X\+Graph}
 \item 
-def \hyperlink{a00144_a05887f4cca56e48fcb1be55b6b8f5a9b}{read\-\_\-sims\-\_\-conf\-\_\-file}
+def \hyperlink{a00144_aff58b86401d5f04b13100aae79560fe7}{create\+Net\+X\+Graph\+For\+R\+A\+F}
 \item 
-def \hyperlink{a00144_af8a2deca70e9e04a4c4812d81430df19}{read\-Init\-Conf\-File}
+def \hyperlink{a00144_a98b4189c8603e40d7879d606ed4b215a}{di\+Graph\+\_\+net\+X\+\_\+stats}
 \item 
-def \hyperlink{a00144_a4a56e157e25982ad4a7dedd03929dcd6}{read\-Buffered\-I\-D}
+def \hyperlink{a00144_a54bdd154f11152272776a28a4abfcf06}{check\+Minimal\+S\+C\+Cdimension}
 \item 
-def \hyperlink{a00144_ab6d9ae4f9d3c52b2aad8b50d9b110dc1}{read\-C\-S\-T\-Rflux}
-\item 
-def \hyperlink{a00144_a5ddfb684cfa43cb2aa2d8246078c486c}{load\-All\-Data}
-\item 
-def \hyperlink{a00144_a30cdb91109c2d6ea6e0abb808fe88c6f}{zero\-Before\-Str\-Num}
-\item 
-def \hyperlink{a00144_a3a9416927822cf24fb30e1d57bf71412}{split\-Rct\-Pars\-Line}
+def \hyperlink{a00144_a3dbfb9a21bab7b43f8c634a220af08fc}{print\+S\+C\+Con\+File}
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{a00144_a5ddfb684cfa43cb2aa2d8246078c486c}{\index{lib\-::\-I\-O\-::readfiles@{lib\-::\-I\-O\-::readfiles}!load\-All\-Data@{load\-All\-Data}}
-\index{load\-All\-Data@{load\-All\-Data}!lib::IO::readfiles@{lib\-::\-I\-O\-::readfiles}}
-\subsubsection[{load\-All\-Data}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-I\-O.\-readfiles.\-load\-All\-Data (
+\hypertarget{a00144_a54bdd154f11152272776a28a4abfcf06}{\index{lib\+::graph\+::scc@{lib\+::graph\+::scc}!check\+Minimal\+S\+C\+Cdimension@{check\+Minimal\+S\+C\+Cdimension}}
+\index{check\+Minimal\+S\+C\+Cdimension@{check\+Minimal\+S\+C\+Cdimension}!lib\+::graph\+::scc@{lib\+::graph\+::scc}}
+\subsubsection[{check\+Minimal\+S\+C\+Cdimension}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+graph.\+scc.\+check\+Minimal\+S\+C\+Cdimension (
 \begin{DoxyParamCaption}
-\item[{}]{tmp\-Path, }
-\item[{}]{tmp\-Fname}
+\item[{}]{tmp\+Dig, }
+\item[{}]{tmp\+Min\+Dim}
 \end{DoxyParamCaption}
-)}}\label{a00144_a5ddfb684cfa43cb2aa2d8246078c486c}
+)}}\label{a00144_a54bdd154f11152272776a28a4abfcf06}
 
 
-Definition at line 237 of file readfiles.\-py.
+Definition at line 78 of file scc.\+py.
 
-\hypertarget{a00144_a35bd9157c0887704488cc0e2c50bf127}{\index{lib\-::\-I\-O\-::readfiles@{lib\-::\-I\-O\-::readfiles}!load\-Random\-Seed@{load\-Random\-Seed}}
-\index{load\-Random\-Seed@{load\-Random\-Seed}!lib::IO::readfiles@{lib\-::\-I\-O\-::readfiles}}
-\subsubsection[{load\-Random\-Seed}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-I\-O.\-readfiles.\-load\-Random\-Seed (
+\hypertarget{a00144_abc47bb4f5ff50cf5d1dd81c007c1e332}{\index{lib\+::graph\+::scc@{lib\+::graph\+::scc}!create\+Net\+X\+Graph@{create\+Net\+X\+Graph}}
+\index{create\+Net\+X\+Graph@{create\+Net\+X\+Graph}!lib\+::graph\+::scc@{lib\+::graph\+::scc}}
+\subsubsection[{create\+Net\+X\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+graph.\+scc.\+create\+Net\+X\+Graph (
 \begin{DoxyParamCaption}
-\item[{}]{tmp\-Rnd\-Path}
+\item[{}]{tmp\+Cstr, }
+\item[{}]{tmp\+Cats}
 \end{DoxyParamCaption}
-)}}\label{a00144_a35bd9157c0887704488cc0e2c50bf127}
-\begin{DoxyVerb}Function to load a previously saved random seed\end{DoxyVerb}
- 
+)}}\label{a00144_abc47bb4f5ff50cf5d1dd81c007c1e332}
 
-Definition at line 17 of file readfiles.\-py.
 
-\hypertarget{a00144_a05887f4cca56e48fcb1be55b6b8f5a9b}{\index{lib\-::\-I\-O\-::readfiles@{lib\-::\-I\-O\-::readfiles}!read\-\_\-sims\-\_\-conf\-\_\-file@{read\-\_\-sims\-\_\-conf\-\_\-file}}
-\index{read\-\_\-sims\-\_\-conf\-\_\-file@{read\-\_\-sims\-\_\-conf\-\_\-file}!lib::IO::readfiles@{lib\-::\-I\-O\-::readfiles}}
-\subsubsection[{read\-\_\-sims\-\_\-conf\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-I\-O.\-readfiles.\-read\-\_\-sims\-\_\-conf\-\_\-file (
+Definition at line 28 of file scc.\+py.
+
+\hypertarget{a00144_aff58b86401d5f04b13100aae79560fe7}{\index{lib\+::graph\+::scc@{lib\+::graph\+::scc}!create\+Net\+X\+Graph\+For\+R\+A\+F@{create\+Net\+X\+Graph\+For\+R\+A\+F}}
+\index{create\+Net\+X\+Graph\+For\+R\+A\+F@{create\+Net\+X\+Graph\+For\+R\+A\+F}!lib\+::graph\+::scc@{lib\+::graph\+::scc}}
+\subsubsection[{create\+Net\+X\+Graph\+For\+R\+A\+F}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+graph.\+scc.\+create\+Net\+X\+Graph\+For\+R\+A\+F (
 \begin{DoxyParamCaption}
-\item[{}]{param\-File = {\ttfamily 'acsm2s.conf'}}
+\item[{}]{tmp\+Cstr, }
+\item[{}]{tmp\+Closure, }
+\item[{}]{tmp\+Cats}
 \end{DoxyParamCaption}
-)}}\label{a00144_a05887f4cca56e48fcb1be55b6b8f5a9b}
+)}}\label{a00144_aff58b86401d5f04b13100aae79560fe7}
 
 
-Definition at line 69 of file readfiles.\-py.
+Definition at line 50 of file scc.\+py.
 
-\hypertarget{a00144_a4a56e157e25982ad4a7dedd03929dcd6}{\index{lib\-::\-I\-O\-::readfiles@{lib\-::\-I\-O\-::readfiles}!read\-Buffered\-I\-D@{read\-Buffered\-I\-D}}
-\index{read\-Buffered\-I\-D@{read\-Buffered\-I\-D}!lib::IO::readfiles@{lib\-::\-I\-O\-::readfiles}}
-\subsubsection[{read\-Buffered\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-I\-O.\-readfiles.\-read\-Buffered\-I\-D (
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{a00144_aff58b86401d5f04b13100aae79560fe7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00144_a7d0d5fec525d92ca329b1b58da0712be}{\index{lib\+::graph\+::scc@{lib\+::graph\+::scc}!create\+Simple\+Graph@{create\+Simple\+Graph}}
+\index{create\+Simple\+Graph@{create\+Simple\+Graph}!lib\+::graph\+::scc@{lib\+::graph\+::scc}}
+\subsubsection[{create\+Simple\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+graph.\+scc.\+create\+Simple\+Graph (
 \begin{DoxyParamCaption}
-\item[{}]{tmp\-Path}
+\item[{}]{tmp\+Cstr, }
+\item[{}]{tmp\+Cats}
 \end{DoxyParamCaption}
-)}}\label{a00144_a4a56e157e25982ad4a7dedd03929dcd6}
+)}}\label{a00144_a7d0d5fec525d92ca329b1b58da0712be}
 
 
-Definition at line 206 of file readfiles.\-py.
+Definition at line 16 of file scc.\+py.
 
-\hypertarget{a00144_aa0985f97c9159003c7a4bd44d1a989f3}{\index{lib\-::\-I\-O\-::readfiles@{lib\-::\-I\-O\-::readfiles}!read\-Conf\-File@{read\-Conf\-File}}
-\index{read\-Conf\-File@{read\-Conf\-File}!lib::IO::readfiles@{lib\-::\-I\-O\-::readfiles}}
-\subsubsection[{read\-Conf\-File}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-I\-O.\-readfiles.\-read\-Conf\-File (
+\hypertarget{a00144_a98b4189c8603e40d7879d606ed4b215a}{\index{lib\+::graph\+::scc@{lib\+::graph\+::scc}!di\+Graph\+\_\+net\+X\+\_\+stats@{di\+Graph\+\_\+net\+X\+\_\+stats}}
+\index{di\+Graph\+\_\+net\+X\+\_\+stats@{di\+Graph\+\_\+net\+X\+\_\+stats}!lib\+::graph\+::scc@{lib\+::graph\+::scc}}
+\subsubsection[{di\+Graph\+\_\+net\+X\+\_\+stats}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+graph.\+scc.\+di\+Graph\+\_\+net\+X\+\_\+stats (
 \begin{DoxyParamCaption}
-\item[{}]{tmp\-Path}
+\item[{}]{tmp\+Dig}
 \end{DoxyParamCaption}
-)}}\label{a00144_aa0985f97c9159003c7a4bd44d1a989f3}
+)}}\label{a00144_a98b4189c8603e40d7879d606ed4b215a}
 
 
-Definition at line 33 of file readfiles.\-py.
+Definition at line 65 of file scc.\+py.
 
-\hypertarget{a00144_ab6d9ae4f9d3c52b2aad8b50d9b110dc1}{\index{lib\-::\-I\-O\-::readfiles@{lib\-::\-I\-O\-::readfiles}!read\-C\-S\-T\-Rflux@{read\-C\-S\-T\-Rflux}}
-\index{read\-C\-S\-T\-Rflux@{read\-C\-S\-T\-Rflux}!lib::IO::readfiles@{lib\-::\-I\-O\-::readfiles}}
-\subsubsection[{read\-C\-S\-T\-Rflux}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-I\-O.\-readfiles.\-read\-C\-S\-T\-Rflux (
+\hypertarget{a00144_a3dbfb9a21bab7b43f8c634a220af08fc}{\index{lib\+::graph\+::scc@{lib\+::graph\+::scc}!print\+S\+C\+Con\+File@{print\+S\+C\+Con\+File}}
+\index{print\+S\+C\+Con\+File@{print\+S\+C\+Con\+File}!lib\+::graph\+::scc@{lib\+::graph\+::scc}}
+\subsubsection[{print\+S\+C\+Con\+File}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+graph.\+scc.\+print\+S\+C\+Con\+File (
 \begin{DoxyParamCaption}
-\item[{}]{tmp\-Path}
+\item[{}]{tmp\+S\+C\+C\+L, }
+\item[{}]{tmpfolder\+Name, }
+\item[{}]{file\+Prefix}
 \end{DoxyParamCaption}
-)}}\label{a00144_ab6d9ae4f9d3c52b2aad8b50d9b110dc1}
+)}}\label{a00144_a3dbfb9a21bab7b43f8c634a220af08fc}
 
 
-Definition at line 222 of file readfiles.\-py.
-
-\hypertarget{a00144_af8a2deca70e9e04a4c4812d81430df19}{\index{lib\-::\-I\-O\-::readfiles@{lib\-::\-I\-O\-::readfiles}!read\-Init\-Conf\-File@{read\-Init\-Conf\-File}}
-\index{read\-Init\-Conf\-File@{read\-Init\-Conf\-File}!lib::IO::readfiles@{lib\-::\-I\-O\-::readfiles}}
-\subsubsection[{read\-Init\-Conf\-File}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-I\-O.\-readfiles.\-read\-Init\-Conf\-File (
-\begin{DoxyParamCaption}
-\item[{}]{tmp\-Path}
-\end{DoxyParamCaption}
-)}}\label{a00144_af8a2deca70e9e04a4c4812d81430df19}
-
-
-Definition at line 171 of file readfiles.\-py.
-
-\hypertarget{a00144_a3a9416927822cf24fb30e1d57bf71412}{\index{lib\-::\-I\-O\-::readfiles@{lib\-::\-I\-O\-::readfiles}!split\-Rct\-Pars\-Line@{split\-Rct\-Pars\-Line}}
-\index{split\-Rct\-Pars\-Line@{split\-Rct\-Pars\-Line}!lib::IO::readfiles@{lib\-::\-I\-O\-::readfiles}}
-\subsubsection[{split\-Rct\-Pars\-Line}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-I\-O.\-readfiles.\-split\-Rct\-Pars\-Line (
-\begin{DoxyParamCaption}
-\item[{}]{tmp\-Line}
-\end{DoxyParamCaption}
-)}}\label{a00144_a3a9416927822cf24fb30e1d57bf71412}
-
-
-Definition at line 252 of file readfiles.\-py.
-
-\hypertarget{a00144_a30cdb91109c2d6ea6e0abb808fe88c6f}{\index{lib\-::\-I\-O\-::readfiles@{lib\-::\-I\-O\-::readfiles}!zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}}
-\index{zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}!lib::IO::readfiles@{lib\-::\-I\-O\-::readfiles}}
-\subsubsection[{zero\-Before\-Str\-Num}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-I\-O.\-readfiles.\-zero\-Before\-Str\-Num (
-\begin{DoxyParamCaption}
-\item[{}]{tmpl, }
-\item[{}]{tmp\-L}
-\end{DoxyParamCaption}
-)}}\label{a00144_a30cdb91109c2d6ea6e0abb808fe88c6f}
-
-
-Definition at line 244 of file readfiles.\-py.
+Definition at line 92 of file scc.\+py.
 

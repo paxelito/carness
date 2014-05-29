@@ -1,413 +1,407 @@
-\hypertarget{a00124}{\section{acs\-Buffered\-Fluxes Namespace Reference}
-\label{a00124}\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}}
+\hypertarget{a00124}{\section{acs\+Attractor\+Analysis Namespace Reference}
+\label{a00124}\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
 }
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{a00124_ad40fd27cb36a2086a2b8d0acadd4dbc9}{zero\-Before\-Str\-Num}
+def \hyperlink{a00124_a97aba03091fd66dde4375e3dbffdbede}{zero\+Before\+Str\+Num}
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-tuple \hyperlink{a00124_adba84e3872cb47cad219837458e56677}{parser}
+tuple \hyperlink{a00124_ab2b01a2d0224ace0cd720a6d807afd0b}{parser}
 \item 
-tuple \hyperlink{a00124_afa2d0b9fb021746e05cd06277997da04}{args} = parser.\-parse\-\_\-args()
+tuple \hyperlink{a00124_a750e66218ca39f0949f2f92e89136e37}{args} = parser.\+parse\+\_\+args()
 \item 
-tuple \hyperlink{a00124_a82e861baaf9ae17ee61c8105afcffb8d}{Str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
+tuple \hyperlink{a00124_a8941499f40259763765b64e3185be82c}{Str\+Path} = os.\+path.\+abspath(args.\+Str\+Path)
 \item 
-tuple \hyperlink{a00124_af740eb0100dc7010628161baeaf9b474}{tmp\-Dirs} = sort(os.\-listdir(\hyperlink{a00124_a82e861baaf9ae17ee61c8105afcffb8d}{Str\-Path}))
+tuple \hyperlink{a00124_a71bc5e3d205016fb7893b438e75be78e}{today} = dt.\+date.\+today()
 \item 
-int \hyperlink{a00124_aad87b9d241bea71df95c318686aca066}{\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-} = 0
+tuple \hyperlink{a00124_ac88c3245a42ebefee3fcf90626f6eaf4}{tmp\+Dirs} = sort(os.\+listdir(\hyperlink{a00124_a8941499f40259763765b64e3185be82c}{Str\+Path}))
 \item 
-int \hyperlink{a00124_af81d6d0377f4d99177961a5604f58ed2}{\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-} = 1
+list \hyperlink{a00124_aafc595063b7c4b74f94c0931ff2370a5}{all\+Sorted\+Species} = \mbox{[}$\,$\mbox{]}
 \item 
-int \hyperlink{a00124_a0637697acae236afe5e5ae8dc1d85431}{\-\_\-\-E\-N\-D\-O\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-} = 7
+list \hyperlink{a00124_ae708f0b0e671f432735f039e1ff6b6ca}{all\+Concentrations} = \mbox{[}$\,$\mbox{]}
 \item 
-int \hyperlink{a00124_a4535f1f4043aef3195766733626b61e4}{\-\_\-\-E\-N\-D\-O\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-} = 6
+list \hyperlink{a00124_a02a8db664a67956bc698b79f7c31a7bd}{all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X} = \mbox{[}$\,$\mbox{]}
 \item 
-int \hyperlink{a00124_a33ff8ddc4a26ccd45029e2b369391aba}{\-\_\-\-S\-P\-O\-N\-T\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-} = 10
+list \hyperlink{a00124_acda16f4751633455ab19e92bdc5baf2a}{all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X} = \mbox{[}$\,$\mbox{]}
 \item 
-int \hyperlink{a00124_a485cf1077a4ece847800617ede00e458}{\-\_\-\-S\-P\-O\-N\-T\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-} = 11
+tuple \hyperlink{a00124_ad3caf9c42727aaab24f4ea4dae362fc9}{tot\+Dir\+Name} = os.\+path.\+join(\hyperlink{a00124_a8941499f40259763765b64e3185be82c}{Str\+Path},tmp\+Dir)
 \item 
-int \hyperlink{a00124_ab4fd705796fd835a4238fecdc3caf76e}{chemistry} = 1
+tuple \hyperlink{a00124_a35eb3b681c7408f1476b92798d4f2c16}{res\+Dir\+Path} = os.\+path.\+abspath(os.\+path.\+join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))
 \item 
-string \hyperlink{a00124_a5df7e71a36351afd3e59d6f50a94bdaf}{ndn} = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'
+tuple \hyperlink{a00124_ac014a9b46a060e4fed96eaee9614345b}{number\+Of\+Gen} = len(glob.\+glob(os.\+path.\+join(\hyperlink{a00124_a35eb3b681c7408f1476b92798d4f2c16}{res\+Dir\+Path},'times\+\_\+$\ast$')))
 \item 
-tuple \hyperlink{a00124_ae53bd92b0509a8f35e92e734a7f4b4e1}{newdir\-All\-Results} = os.\-path.\-join(\hyperlink{a00124_a82e861baaf9ae17ee61c8105afcffb8d}{Str\-Path}, \hyperlink{a00124_a5df7e71a36351afd3e59d6f50a94bdaf}{ndn})
+tuple \hyperlink{a00124_a5708d1d44920d75a918ec1c988c02c57}{str\+Zeros} = \hyperlink{a00124_a97aba03091fd66dde4375e3dbffdbede}{zero\+Before\+Str\+Num}(ngen, \hyperlink{a00124_ac014a9b46a060e4fed96eaee9614345b}{number\+Of\+Gen})
 \item 
-tuple \hyperlink{a00124_a7883e37b9556e49968e7a7dd08893bfb}{tot\-Dir\-Name} = os.\-path.\-join(\hyperlink{a00124_a82e861baaf9ae17ee61c8105afcffb8d}{Str\-Path},tmp\-Dir)
+string \hyperlink{a00124_aa76707ba3058ba96fc8e5aeafa461193}{str\+Species} = 'species\+\_\+'
 \item 
-tuple \hyperlink{a00124_abc625ab1aeed5741a02bbaccfbee5c06}{res\-Dir\-Path} = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))
+tuple \hyperlink{a00124_a670249d163388a9d93c8f3b9fb63afac}{species\+Files} = sorted(glob.\+glob(os.\+path.\+join(\hyperlink{a00124_a35eb3b681c7408f1476b92798d4f2c16}{res\+Dir\+Path},\hyperlink{a00124_aa76707ba3058ba96fc8e5aeafa461193}{str\+Species})))
 \item 
-tuple \hyperlink{a00124_acd3059fa3a61438f739193dc80f23b80}{number\-Of\-Gen} = len(glob.\-glob(os.\-path.\-join(\hyperlink{a00124_abc625ab1aeed5741a02bbaccfbee5c06}{res\-Dir\-Path},'times\-\_\-$\ast$')))
+list \hyperlink{a00124_a0e036b776f4f724254115c2e284657eb}{species\+File} = \hyperlink{a00124_a670249d163388a9d93c8f3b9fb63afac}{species\+Files}\mbox{[}-\/1\mbox{]}
 \item 
-string \hyperlink{a00124_a170166907641e54151f8d83d51420165}{tmp\-Flux\-File} = 'flux\-Dynamics\-\_\-'
+tuple \hyperlink{a00124_a604c9f75892d8d8aeac8306c94630a23}{fid\+Species} = open(\hyperlink{a00124_a0e036b776f4f724254115c2e284657eb}{species\+File}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
 \item 
-tuple \hyperlink{a00124_a88cbb3d14405daf2c6df49cf769fd0d2}{fid\-\_\-tmp\-Species\-Stats\-Summary\-Name} = open(os.\-path.\-join(\hyperlink{a00124_ae53bd92b0509a8f35e92e734a7f4b4e1}{newdir\-All\-Results},\hyperlink{a00124_a170166907641e54151f8d83d51420165}{tmp\-Flux\-File}), 'w')
+list \hyperlink{a00124_a33bc0e3fc99bab3df33d3f1626a19528}{seq} = \mbox{[}$\,$\mbox{]}
 \item 
-string \hyperlink{a00124_af89a0c5bd58d5bd9787225c1c9aeab8b}{str\-To\-Write} = \char`\"{}Time\textbackslash{}t\-I\-N\textbackslash{}t\-O\-U\-T\textbackslash{}t\-D\-E\-L\-T\-A\textbackslash{}tbrick\-\_\-\-I\-N\textbackslash{}tbrick\-\_\-\-O\-U\-T\textbackslash{}tbrick\-\_\-\-D\-E\-L\-T\-A\textbackslash{}n\char`\"{}
+list \hyperlink{a00124_aca1d14f4dbff06c02b0e3e362c7ffe14}{overall\+Conc\+List} = \mbox{[}$\,$\mbox{]}
 \item 
-tuple \hyperlink{a00124_abfa8fbc48a0ad5b6dff6914d6052b2b6}{str\-Zeros} = \hyperlink{a00124_ad40fd27cb36a2086a2b8d0acadd4dbc9}{zero\-Before\-Str\-Num}(ngen, \hyperlink{a00124_acd3059fa3a61438f739193dc80f23b80}{number\-Of\-Gen})
+list \hyperlink{a00124_a62444c9b0d66deb07c2e1091695e7561}{overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X} = \mbox{[}$\,$\mbox{]}
 \item 
-string \hyperlink{a00124_a658920d97b6df23e672e290d362033b4}{str\-Species\-Zero} = 'species\-\_\-'
+int \hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders} = 0
 \item 
-tuple \hyperlink{a00124_a8c18127c32adcc1a3403749a047270e5}{species\-Files\-Zero} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00124_abc625ab1aeed5741a02bbaccfbee5c06}{res\-Dir\-Path},\hyperlink{a00124_a658920d97b6df23e672e290d362033b4}{str\-Species\-Zero})))
+tuple \hyperlink{a00124_abae060beb170fe923fc10b75f9e82079}{pos} = \hyperlink{a00102_a0cd6a44ffb07342cbc7e5ac33bfc9495}{seq.\+index}(key)
 \item 
-string \hyperlink{a00124_a36518d8de93502466a6d4b2e62eb7734}{str\-Species} = 'species\-\_\-'
+tuple \hyperlink{a00124_a6ab79d8205f5d0ae2da47fb0af93149a}{pos2} = \hyperlink{a00102_a0cd6a44ffb07342cbc7e5ac33bfc9495}{seq.\+index}(key2)
 \item 
-tuple \hyperlink{a00124_ae41c9dafcdeb581e70eeb889d16c6551}{species\-Files} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00124_abc625ab1aeed5741a02bbaccfbee5c06}{res\-Dir\-Path},\hyperlink{a00124_a36518d8de93502466a6d4b2e62eb7734}{str\-Species})))
+tuple \hyperlink{a00124_a43a783e7bdb1094aa477c438bd67259f}{A\+N\+G\+\_\+overall\+Res\+Matrix} = np.\+zeros((\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders},\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders}))
 \item 
-list \hyperlink{a00124_a887b4124ed717643d4e79b6d9597109f}{lastfilespecies} = \hyperlink{a00124_ae41c9dafcdeb581e70eeb889d16c6551}{species\-Files}\mbox{[}-\/1\mbox{]}
+tuple \hyperlink{a00124_a0d0e0ed8583e4aa041fa6c122324311e}{A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X} = np.\+zeros((\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders},\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders}))
 \item 
-tuple \hyperlink{a00124_ad38778cd180f00344e8a8d68511f56fd}{fid\-Species} = open(\hyperlink{a00124_a887b4124ed717643d4e79b6d9597109f}{lastfilespecies}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
+tuple \hyperlink{a00124_a46dc8cdfb545b64952370e51ff02336f}{H\+A\+M\+\_\+overall\+Res\+Matrix} = np.\+zeros((\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders},\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders}))
 \item 
-list \hyperlink{a00124_a99cfaccf97d11133896704acd137057d}{flux\-\_\-seq} = \mbox{[}$\,$\mbox{]}
+tuple \hyperlink{a00124_a9aa1adb46370d97e4f38e7f09eb7a97c}{H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X} = np.\+zeros((\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders},\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders}))
 \item 
-string \hyperlink{a00124_ac571c8d78a216f58ebc1e37bef25a541}{str\-Rct\-Par} = 'reactions\-\_\-parameters\-\_\-'
+tuple \hyperlink{a00124_a920167afed4efad8feefc27bdbadba89}{E\+U\+C\+\_\+overall\+Res\+Matrix} = np.\+zeros((\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders},\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders}))
 \item 
-tuple \hyperlink{a00124_af949c46aab0625cd7bbed10b8a484f8b}{fid\-Rct\-Par} = open(\hyperlink{a00124_ac571c8d78a216f58ebc1e37bef25a541}{str\-Rct\-Par}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
+tuple \hyperlink{a00124_a4214c876be4247f0643fc749beb35787}{E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X} = np.\+zeros((\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders},\hyperlink{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{number\+Of\+Folders}))
 \item 
-int \hyperlink{a00124_a59bf56491943c5f1414e0cc407b48b93}{tot\-I\-N} = 0
+tuple \hyperlink{a00124_af20e9c92b7d977049b881882c0d1382c}{vec\+X} = np.\+array(lx)
 \item 
-int \hyperlink{a00124_a730efee103fd41819ea5848cec249d07}{tot\-O\-U\-T} = 0
+tuple \hyperlink{a00124_a691fb5bd87af2162b5acaf48ea4c06e7}{vec\+Y} = np.\+array(ly)
 \item 
-int \hyperlink{a00124_ae98d1ab06ff5af93de3e406b69c0f890}{delta\-I\-O} = 0
+tuple \hyperlink{a00124_a305669433b259c5ffcb797769e7c30df}{tmp\+Cos} = float(np.\+dot(\hyperlink{a00124_af20e9c92b7d977049b881882c0d1382c}{vec\+X},\hyperlink{a00124_a691fb5bd87af2162b5acaf48ea4c06e7}{vec\+Y}) / (np.\+linalg.\+norm(\hyperlink{a00124_af20e9c92b7d977049b881882c0d1382c}{vec\+X}) $\ast$ np.\+linalg.\+norm(\hyperlink{a00124_a691fb5bd87af2162b5acaf48ea4c06e7}{vec\+Y})))
 \item 
-int \hyperlink{a00124_a9212bb73d018f7f9c7112fc40900335c}{tot\-\_\-\-B\-\_\-\-I\-N} = 0
+int \hyperlink{a00124_a1fe1582f1d1dc5f55558d25c8eb30ad7}{tmp\+H\+D} = 0
 \item 
-int \hyperlink{a00124_a05f604fc532aebf8d9418c9162e2c1b7}{tot\-\_\-\-B\-\_\-\-O\-U\-T} = 0
+int \hyperlink{a00124_a0c4860774229747cda9dabe70614abc6}{tmp\+E\+U} = 0
 \item 
-int \hyperlink{a00124_a28922506bb13e58a9c49c9191dee3784}{delta\-\_\-\-B\-\_\-\-I\-O} = 0
+string \hyperlink{a00124_a109ce3a379d650b3f9b08debc0433a19}{ndn} = '\+\_\+0\+\_\+new\+\_\+all\+Stat\+Results'
 \item 
-string \hyperlink{a00124_a8a10e31ae1f56ead45ef13fe84ba868f}{str\-Rct} = 'reactions\-\_\-'
+tuple \hyperlink{a00124_ae620f985669aed90dc070824420d4b5e}{newdir\+All\+Results} = os.\+path.\+join(os.\+curdir, \hyperlink{a00124_a109ce3a379d650b3f9b08debc0433a19}{ndn})
 \item 
-string \hyperlink{a00124_acbfee694f1d4745446ad7ed83d1f7494}{str\-Cat} = 'catalysis\-\_\-'
+string \hyperlink{a00124_aeecfcdefbc44b2b2ceff4c9b6f737f27}{out\+Fname\+Stat} = 'species\+Vector.\+csv'
 \item 
-tuple \hyperlink{a00124_a60a2c6fa1b6a8c5d40a751491ffd04e7}{rct\-Files} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00124_abc625ab1aeed5741a02bbaccfbee5c06}{res\-Dir\-Path},\hyperlink{a00124_a8a10e31ae1f56ead45ef13fe84ba868f}{str\-Rct})))
+tuple \hyperlink{a00124_acc1016f353d0e1b36c837cb0b480edef}{save\+File\+Stat} = open(\hyperlink{a00124_aeecfcdefbc44b2b2ceff4c9b6f737f27}{out\+Fname\+Stat}, 'w')
 \item 
-tuple \hyperlink{a00124_a1d925f94f070fbec1b39c544176b3452}{cat\-Files} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00124_abc625ab1aeed5741a02bbaccfbee5c06}{res\-Dir\-Path},\hyperlink{a00124_acbfee694f1d4745446ad7ed83d1f7494}{str\-Cat})))
+string \hyperlink{a00124_ae5f324ca114055fca79473eecd17bb80}{str\+Types} = ''
 \item 
-tuple \hyperlink{a00124_a3f5f644008584b4ae3756ada869a8f03}{last\-Rct} = readfiles.\-load\-All\-Data(\hyperlink{a00124_a7883e37b9556e49968e7a7dd08893bfb}{tot\-Dir\-Name},\hyperlink{a00124_a60a2c6fa1b6a8c5d40a751491ffd04e7}{rct\-Files}\mbox{[}-\/1\mbox{]})
-\item 
-tuple \hyperlink{a00124_a4b8fcacfa4d1a00c44c22118ca07688a}{last\-Cat} = readfiles.\-load\-All\-Data(\hyperlink{a00124_a7883e37b9556e49968e7a7dd08893bfb}{tot\-Dir\-Name},\hyperlink{a00124_a1d925f94f070fbec1b39c544176b3452}{cat\-Files}\mbox{[}-\/1\mbox{]})
-\item 
-tuple \hyperlink{a00124_ae3cf837e258f4b4c7f2d2b1118d2ae65}{str2wrt} = str(rct\-Time)
+int \hyperlink{a00124_a8ec106a228fafb4c290946a7b7f8b6da}{cnt} = 0
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{a00124_ad40fd27cb36a2086a2b8d0acadd4dbc9}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}}
-\index{zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{zero\-Before\-Str\-Num}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-Buffered\-Fluxes.\-zero\-Before\-Str\-Num (
+\hypertarget{a00124_a97aba03091fd66dde4375e3dbffdbede}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!zero\+Before\+Str\+Num@{zero\+Before\+Str\+Num}}
+\index{zero\+Before\+Str\+Num@{zero\+Before\+Str\+Num}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{zero\+Before\+Str\+Num}]{\setlength{\rightskip}{0pt plus 5cm}def acs\+Attractor\+Analysis.\+zero\+Before\+Str\+Num (
 \begin{DoxyParamCaption}
 \item[{}]{tmpl, }
-\item[{}]{tmp\-L}
+\item[{}]{tmp\+L}
 \end{DoxyParamCaption}
-)}}\label{a00124_ad40fd27cb36a2086a2b8d0acadd4dbc9}
+)}}\label{a00124_a97aba03091fd66dde4375e3dbffdbede}
+\begin{DoxyVerb}Function to create string zero string vector before graph filename. 
+According to the total number of reactions N zeros will be add before the instant reaction number 
+(e.g. reaction 130 of 10000 the string became '00130')
+:param tmpl: length (e.g. 1 = 1, 10 = 2, 100 = 3, ... ) of the current folder
+:param tmpL: total length last folder 
+:returns: A zero string numbers to complete the length of tmpL  
+\end{DoxyVerb}
+ 
 
-
-Definition at line 18 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 27 of file acs\+Attractor\+Analysis.\+py.
 
 
 
 \subsection{Variable Documentation}
-\hypertarget{a00124_af81d6d0377f4d99177961a5604f58ed2}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-@{\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}}
-\index{\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-@{\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-\_\-\-C\-L\-E\-A\-V\-A\-G\-E\-\_\- = 1}}\label{a00124_af81d6d0377f4d99177961a5604f58ed2}
+\hypertarget{a00124_ae708f0b0e671f432735f039e1ff6b6ca}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!all\+Concentrations@{all\+Concentrations}}
+\index{all\+Concentrations@{all\+Concentrations}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{all\+Concentrations}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis.\+all\+Concentrations = \mbox{[}$\,$\mbox{]}}}\label{a00124_ae708f0b0e671f432735f039e1ff6b6ca}
 
 
-Definition at line 40 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 64 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_aad87b9d241bea71df95c318686aca066}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-@{\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}}
-\index{\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-@{\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-\_\-\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\- = 0}}\label{a00124_aad87b9d241bea71df95c318686aca066}
-
-
-Definition at line 39 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a4535f1f4043aef3195766733626b61e4}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!\-\_\-\-E\-N\-D\-O\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-@{\-\_\-\-E\-N\-D\-O\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}}
-\index{\-\_\-\-E\-N\-D\-O\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-@{\-\_\-\-E\-N\-D\-O\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{\-\_\-\-E\-N\-D\-O\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-\_\-\-E\-N\-D\-O\-C\-L\-E\-A\-V\-A\-G\-E\-\_\- = 6}}\label{a00124_a4535f1f4043aef3195766733626b61e4}
+\hypertarget{a00124_acda16f4751633455ab19e92bdc5baf2a}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X@{all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X@{all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis.\+all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X = \mbox{[}$\,$\mbox{]}}}\label{a00124_acda16f4751633455ab19e92bdc5baf2a}
 
 
-Definition at line 42 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 66 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a0637697acae236afe5e5ae8dc1d85431}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!\-\_\-\-E\-N\-D\-O\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-@{\-\_\-\-E\-N\-D\-O\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}}
-\index{\-\_\-\-E\-N\-D\-O\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-@{\-\_\-\-E\-N\-D\-O\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{\-\_\-\-E\-N\-D\-O\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-\_\-\-E\-N\-D\-O\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\- = 7}}\label{a00124_a0637697acae236afe5e5ae8dc1d85431}
-
-
-Definition at line 41 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a485cf1077a4ece847800617ede00e458}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!\-\_\-\-S\-P\-O\-N\-T\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-@{\-\_\-\-S\-P\-O\-N\-T\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}}
-\index{\-\_\-\-S\-P\-O\-N\-T\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-@{\-\_\-\-S\-P\-O\-N\-T\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{\-\_\-\-S\-P\-O\-N\-T\-C\-L\-E\-A\-V\-A\-G\-E\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-\_\-\-S\-P\-O\-N\-T\-C\-L\-E\-A\-V\-A\-G\-E\-\_\- = 11}}\label{a00124_a485cf1077a4ece847800617ede00e458}
+\hypertarget{a00124_aafc595063b7c4b74f94c0931ff2370a5}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!all\+Sorted\+Species@{all\+Sorted\+Species}}
+\index{all\+Sorted\+Species@{all\+Sorted\+Species}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{all\+Sorted\+Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+all\+Sorted\+Species = \mbox{[}$\,$\mbox{]}}}\label{a00124_aafc595063b7c4b74f94c0931ff2370a5}
 
 
-Definition at line 44 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 63 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a33ff8ddc4a26ccd45029e2b369391aba}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!\-\_\-\-S\-P\-O\-N\-T\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-@{\-\_\-\-S\-P\-O\-N\-T\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}}
-\index{\-\_\-\-S\-P\-O\-N\-T\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-@{\-\_\-\-S\-P\-O\-N\-T\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{\-\_\-\-S\-P\-O\-N\-T\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-\_\-\-S\-P\-O\-N\-T\-C\-O\-N\-D\-E\-N\-S\-A\-T\-I\-O\-N\-\_\- = 10}}\label{a00124_a33ff8ddc4a26ccd45029e2b369391aba}
-
-
-Definition at line 43 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_afa2d0b9fb021746e05cd06277997da04}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!args@{args}}
-\index{args@{args}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-args = parser.\-parse\-\_\-args()}}\label{a00124_afa2d0b9fb021746e05cd06277997da04}
+\hypertarget{a00124_a02a8db664a67956bc698b79f7c31a7bd}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X@{all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X@{all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X = \mbox{[}$\,$\mbox{]}}}\label{a00124_a02a8db664a67956bc698b79f7c31a7bd}
 
 
-Definition at line 32 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 65 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a1d925f94f070fbec1b39c544176b3452}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!cat\-Files@{cat\-Files}}
-\index{cat\-Files@{cat\-Files}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{cat\-Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-cat\-Files = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Cat})))}}\label{a00124_a1d925f94f070fbec1b39c544176b3452}
-
-
-Definition at line 132 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_ab4fd705796fd835a4238fecdc3caf76e}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!chemistry@{chemistry}}
-\index{chemistry@{chemistry}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{chemistry}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-chemistry = 1}}\label{a00124_ab4fd705796fd835a4238fecdc3caf76e}
+\hypertarget{a00124_a43a783e7bdb1094aa477c438bd67259f}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!A\+N\+G\+\_\+overall\+Res\+Matrix@{A\+N\+G\+\_\+overall\+Res\+Matrix}}
+\index{A\+N\+G\+\_\+overall\+Res\+Matrix@{A\+N\+G\+\_\+overall\+Res\+Matrix}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{A\+N\+G\+\_\+overall\+Res\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+A\+N\+G\+\_\+overall\+Res\+Matrix = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00124_a43a783e7bdb1094aa477c438bd67259f}
 
 
-Definition at line 48 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 185 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a28922506bb13e58a9c49c9191dee3784}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!delta\-\_\-\-B\-\_\-\-I\-O@{delta\-\_\-\-B\-\_\-\-I\-O}}
-\index{delta\-\_\-\-B\-\_\-\-I\-O@{delta\-\_\-\-B\-\_\-\-I\-O}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{delta\-\_\-\-B\-\_\-\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-delta\-\_\-\-B\-\_\-\-I\-O = 0}}\label{a00124_a28922506bb13e58a9c49c9191dee3784}
-
-
-Definition at line 126 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_ae98d1ab06ff5af93de3e406b69c0f890}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!delta\-I\-O@{delta\-I\-O}}
-\index{delta\-I\-O@{delta\-I\-O}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{delta\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-delta\-I\-O = 0}}\label{a00124_ae98d1ab06ff5af93de3e406b69c0f890}
+\hypertarget{a00124_a0d0e0ed8583e4aa041fa6c122324311e}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00124_a0d0e0ed8583e4aa041fa6c122324311e}
 
 
-Definition at line 123 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 186 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a88cbb3d14405daf2c6df49cf769fd0d2}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!fid\-\_\-tmp\-Species\-Stats\-Summary\-Name@{fid\-\_\-tmp\-Species\-Stats\-Summary\-Name}}
-\index{fid\-\_\-tmp\-Species\-Stats\-Summary\-Name@{fid\-\_\-tmp\-Species\-Stats\-Summary\-Name}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{fid\-\_\-tmp\-Species\-Stats\-Summary\-Name}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-fid\-\_\-tmp\-Species\-Stats\-Summary\-Name = open(os.\-path.\-join({\bf newdir\-All\-Results},{\bf tmp\-Flux\-File}), 'w')}}\label{a00124_a88cbb3d14405daf2c6df49cf769fd0d2}
-
-
-Definition at line 77 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_af949c46aab0625cd7bbed10b8a484f8b}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!fid\-Rct\-Par@{fid\-Rct\-Par}}
-\index{fid\-Rct\-Par@{fid\-Rct\-Par}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{fid\-Rct\-Par}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-fid\-Rct\-Par = open({\bf str\-Rct\-Par}, '{\bf r}')}}\label{a00124_af949c46aab0625cd7bbed10b8a484f8b}
+\hypertarget{a00124_a750e66218ca39f0949f2f92e89136e37}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!args@{args}}
+\index{args@{args}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+args = parser.\+parse\+\_\+args()}}\label{a00124_a750e66218ca39f0949f2f92e89136e37}
 
 
-Definition at line 117 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 51 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_ad38778cd180f00344e8a8d68511f56fd}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!fid\-Species@{fid\-Species}}
-\index{fid\-Species@{fid\-Species}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{fid\-Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-fid\-Species = open({\bf lastfilespecies}, '{\bf r}')}}\label{a00124_ad38778cd180f00344e8a8d68511f56fd}
-
-
-Definition at line 96 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a99cfaccf97d11133896704acd137057d}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!flux\-\_\-seq@{flux\-\_\-seq}}
-\index{flux\-\_\-seq@{flux\-\_\-seq}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{flux\-\_\-seq}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Buffered\-Fluxes.\-flux\-\_\-seq = \mbox{[}$\,$\mbox{]}}}\label{a00124_a99cfaccf97d11133896704acd137057d}
+\hypertarget{a00124_a8ec106a228fafb4c290946a7b7f8b6da}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!cnt@{cnt}}
+\index{cnt@{cnt}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{cnt}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+Attractor\+Analysis.\+cnt = 0}}\label{a00124_a8ec106a228fafb4c290946a7b7f8b6da}
 
 
-Definition at line 100 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 276 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a4b8fcacfa4d1a00c44c22118ca07688a}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!last\-Cat@{last\-Cat}}
-\index{last\-Cat@{last\-Cat}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{last\-Cat}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-last\-Cat = readfiles.\-load\-All\-Data({\bf tot\-Dir\-Name},{\bf cat\-Files}\mbox{[}-\/1\mbox{]})}}\label{a00124_a4b8fcacfa4d1a00c44c22118ca07688a}
-
-
-Definition at line 135 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a887b4124ed717643d4e79b6d9597109f}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!lastfilespecies@{lastfilespecies}}
-\index{lastfilespecies@{lastfilespecies}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{lastfilespecies}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Buffered\-Fluxes.\-lastfilespecies = {\bf species\-Files}\mbox{[}-\/1\mbox{]}}}\label{a00124_a887b4124ed717643d4e79b6d9597109f}
+\hypertarget{a00124_a920167afed4efad8feefc27bdbadba89}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!E\+U\+C\+\_\+overall\+Res\+Matrix@{E\+U\+C\+\_\+overall\+Res\+Matrix}}
+\index{E\+U\+C\+\_\+overall\+Res\+Matrix@{E\+U\+C\+\_\+overall\+Res\+Matrix}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{E\+U\+C\+\_\+overall\+Res\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+E\+U\+C\+\_\+overall\+Res\+Matrix = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00124_a920167afed4efad8feefc27bdbadba89}
 
 
-Definition at line 92 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 189 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a3f5f644008584b4ae3756ada869a8f03}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!last\-Rct@{last\-Rct}}
-\index{last\-Rct@{last\-Rct}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{last\-Rct}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-last\-Rct = readfiles.\-load\-All\-Data({\bf tot\-Dir\-Name},{\bf rct\-Files}\mbox{[}-\/1\mbox{]})}}\label{a00124_a3f5f644008584b4ae3756ada869a8f03}
-
-
-Definition at line 134 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a5df7e71a36351afd3e59d6f50a94bdaf}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!ndn@{ndn}}
-\index{ndn@{ndn}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Buffered\-Fluxes.\-ndn = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'}}\label{a00124_a5df7e71a36351afd3e59d6f50a94bdaf}
+\hypertarget{a00124_a4214c876be4247f0643fc749beb35787}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00124_a4214c876be4247f0643fc749beb35787}
 
 
-Definition at line 51 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 190 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_ae53bd92b0509a8f35e92e734a7f4b4e1}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!newdir\-All\-Results@{newdir\-All\-Results}}
-\index{newdir\-All\-Results@{newdir\-All\-Results}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-newdir\-All\-Results = os.\-path.\-join({\bf Str\-Path}, {\bf ndn})}}\label{a00124_ae53bd92b0509a8f35e92e734a7f4b4e1}
-
-
-Definition at line 52 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_acd3059fa3a61438f739193dc80f23b80}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!number\-Of\-Gen@{number\-Of\-Gen}}
-\index{number\-Of\-Gen@{number\-Of\-Gen}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{number\-Of\-Gen}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-number\-Of\-Gen = len(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},'times\-\_\-$\ast$')))}}\label{a00124_acd3059fa3a61438f739193dc80f23b80}
+\hypertarget{a00124_a604c9f75892d8d8aeac8306c94630a23}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!fid\+Species@{fid\+Species}}
+\index{fid\+Species@{fid\+Species}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{fid\+Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+fid\+Species = open({\bf species\+File}, '{\bf r}')}}\label{a00124_a604c9f75892d8d8aeac8306c94630a23}
 
 
-Definition at line 71 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 96 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_adba84e3872cb47cad219837458e56677}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!parser@{parser}}
-\index{parser@{parser}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-parser}}\label{a00124_adba84e3872cb47cad219837458e56677}
-{\bfseries Initial value\-:}
+\hypertarget{a00124_a46dc8cdfb545b64952370e51ff02336f}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!H\+A\+M\+\_\+overall\+Res\+Matrix@{H\+A\+M\+\_\+overall\+Res\+Matrix}}
+\index{H\+A\+M\+\_\+overall\+Res\+Matrix@{H\+A\+M\+\_\+overall\+Res\+Matrix}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{H\+A\+M\+\_\+overall\+Res\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+H\+A\+M\+\_\+overall\+Res\+Matrix = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00124_a46dc8cdfb545b64952370e51ff02336f}
+
+
+Definition at line 187 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_a9aa1adb46370d97e4f38e7f09eb7a97c}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00124_a9aa1adb46370d97e4f38e7f09eb7a97c}
+
+
+Definition at line 188 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_a109ce3a379d650b3f9b08debc0433a19}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!ndn@{ndn}}
+\index{ndn@{ndn}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Attractor\+Analysis.\+ndn = '\+\_\+0\+\_\+new\+\_\+all\+Stat\+Results'}}\label{a00124_a109ce3a379d650b3f9b08debc0433a19}
+
+
+Definition at line 233 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_ae620f985669aed90dc070824420d4b5e}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!newdir\+All\+Results@{newdir\+All\+Results}}
+\index{newdir\+All\+Results@{newdir\+All\+Results}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{newdir\+All\+Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+newdir\+All\+Results = os.\+path.\+join(os.\+curdir, {\bf ndn})}}\label{a00124_ae620f985669aed90dc070824420d4b5e}
+
+
+Definition at line 234 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!number\+Of\+Folders@{number\+Of\+Folders}}
+\index{number\+Of\+Folders@{number\+Of\+Folders}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{number\+Of\+Folders}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+Attractor\+Analysis.\+number\+Of\+Folders = 0}}\label{a00124_aa5d2495d08b8ad5ebf34f85d5417e93c}
+
+
+Definition at line 123 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_ac014a9b46a060e4fed96eaee9614345b}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!number\+Of\+Gen@{number\+Of\+Gen}}
+\index{number\+Of\+Gen@{number\+Of\+Gen}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{number\+Of\+Gen}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+number\+Of\+Gen = len(glob.\+glob(os.\+path.\+join({\bf res\+Dir\+Path},'times\+\_\+$\ast$')))}}\label{a00124_ac014a9b46a060e4fed96eaee9614345b}
+
+
+Definition at line 83 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_aeecfcdefbc44b2b2ceff4c9b6f737f27}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!out\+Fname\+Stat@{out\+Fname\+Stat}}
+\index{out\+Fname\+Stat@{out\+Fname\+Stat}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{out\+Fname\+Stat}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Attractor\+Analysis.\+out\+Fname\+Stat = 'species\+Vector.\+csv'}}\label{a00124_aeecfcdefbc44b2b2ceff4c9b6f737f27}
+
+
+Definition at line 244 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_aca1d14f4dbff06c02b0e3e362c7ffe14}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!overall\+Conc\+List@{overall\+Conc\+List}}
+\index{overall\+Conc\+List@{overall\+Conc\+List}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{overall\+Conc\+List}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis.\+overall\+Conc\+List = \mbox{[}$\,$\mbox{]}}}\label{a00124_aca1d14f4dbff06c02b0e3e362c7ffe14}
+
+
+Definition at line 121 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_a62444c9b0d66deb07c2e1091695e7561}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X@{overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X@{overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis.\+overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X = \mbox{[}$\,$\mbox{]}}}\label{a00124_a62444c9b0d66deb07c2e1091695e7561}
+
+
+Definition at line 122 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_ab2b01a2d0224ace0cd720a6d807afd0b}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!parser@{parser}}
+\index{parser@{parser}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+parser}}\label{a00124_ab2b01a2d0224ace0cd720a6d807afd0b}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}
 1 = ArgumentParser(
-2                                 description=\textcolor{stringliteral}{'This script characterize the buffered flux dynamics.'}
-3                                 , epilog=\textcolor{stringliteral}{'''Buffered flux dynamics. '''})
+2                                 description=\textcolor{stringliteral}{'Function to analyze the different final dynamical states from
+       different simulations (final states).\(\backslash\)}
+3 \textcolor{stringliteral}{                                                        The algorithm compares all the final states (in
+       terms of concentrations) of the simulations contained in StrPath. \(\backslash\)}
+4 \textcolor{stringliteral}{                                                        If there are both several generations and
+       simulations the script will process everything.'}
+5                                 , epilog=\textcolor{stringliteral}{'''acsattrsactoranalysis '''})
 \end{DoxyCode}
 
 
-Definition at line 28 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 44 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a60a2c6fa1b6a8c5d40a751491ffd04e7}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!rct\-Files@{rct\-Files}}
-\index{rct\-Files@{rct\-Files}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{rct\-Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-rct\-Files = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Rct})))}}\label{a00124_a60a2c6fa1b6a8c5d40a751491ffd04e7}
-
-
-Definition at line 131 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_abc625ab1aeed5741a02bbaccfbee5c06}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!res\-Dir\-Path@{res\-Dir\-Path}}
-\index{res\-Dir\-Path@{res\-Dir\-Path}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{res\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-res\-Dir\-Path = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))}}\label{a00124_abc625ab1aeed5741a02bbaccfbee5c06}
+\hypertarget{a00124_abae060beb170fe923fc10b75f9e82079}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!pos@{pos}}
+\index{pos@{pos}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+pos = {\bf seq.\+index}(key)}}\label{a00124_abae060beb170fe923fc10b75f9e82079}
 
 
-Definition at line 65 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 167 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_ae41c9dafcdeb581e70eeb889d16c6551}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!species\-Files@{species\-Files}}
-\index{species\-Files@{species\-Files}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{species\-Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-species\-Files = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Species})))}}\label{a00124_ae41c9dafcdeb581e70eeb889d16c6551}
-
-
-Definition at line 89 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a8c18127c32adcc1a3403749a047270e5}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!species\-Files\-Zero@{species\-Files\-Zero}}
-\index{species\-Files\-Zero@{species\-Files\-Zero}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{species\-Files\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-species\-Files\-Zero = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Species\-Zero})))}}\label{a00124_a8c18127c32adcc1a3403749a047270e5}
+\hypertarget{a00124_a6ab79d8205f5d0ae2da47fb0af93149a}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!pos2@{pos2}}
+\index{pos2@{pos2}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{pos2}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+pos2 = {\bf seq.\+index}(key2)}}\label{a00124_a6ab79d8205f5d0ae2da47fb0af93149a}
 
 
-Definition at line 84 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 173 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_ae3cf837e258f4b4c7f2d2b1118d2ae65}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!str2wrt@{str2wrt}}
-\index{str2wrt@{str2wrt}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{str2wrt}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-str2wrt = str(rct\-Time)}}\label{a00124_ae3cf837e258f4b4c7f2d2b1118d2ae65}
-
-
-Definition at line 182 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_acbfee694f1d4745446ad7ed83d1f7494}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!str\-Cat@{str\-Cat}}
-\index{str\-Cat@{str\-Cat}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{str\-Cat}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Buffered\-Fluxes.\-str\-Cat = 'catalysis\-\_\-'}}\label{a00124_acbfee694f1d4745446ad7ed83d1f7494}
+\hypertarget{a00124_a35eb3b681c7408f1476b92798d4f2c16}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!res\+Dir\+Path@{res\+Dir\+Path}}
+\index{res\+Dir\+Path@{res\+Dir\+Path}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{res\+Dir\+Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+res\+Dir\+Path = os.\+path.\+abspath(os.\+path.\+join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))}}\label{a00124_a35eb3b681c7408f1476b92798d4f2c16}
 
 
-Definition at line 129 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 77 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a82e861baaf9ae17ee61c8105afcffb8d}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!Str\-Path@{Str\-Path}}
-\index{Str\-Path@{Str\-Path}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{Str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-Str\-Path = os.\-path.\-abspath(args.\-str\-Path)}}\label{a00124_a82e861baaf9ae17ee61c8105afcffb8d}
-
-
-Definition at line 35 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a8a10e31ae1f56ead45ef13fe84ba868f}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!str\-Rct@{str\-Rct}}
-\index{str\-Rct@{str\-Rct}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{str\-Rct}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Buffered\-Fluxes.\-str\-Rct = 'reactions\-\_\-'}}\label{a00124_a8a10e31ae1f56ead45ef13fe84ba868f}
+\hypertarget{a00124_acc1016f353d0e1b36c837cb0b480edef}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!save\+File\+Stat@{save\+File\+Stat}}
+\index{save\+File\+Stat@{save\+File\+Stat}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{save\+File\+Stat}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+save\+File\+Stat = open({\bf out\+Fname\+Stat}, 'w')}}\label{a00124_acc1016f353d0e1b36c837cb0b480edef}
 
 
-Definition at line 128 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 245 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_ac571c8d78a216f58ebc1e37bef25a541}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!str\-Rct\-Par@{str\-Rct\-Par}}
-\index{str\-Rct\-Par@{str\-Rct\-Par}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{str\-Rct\-Par}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Buffered\-Fluxes.\-str\-Rct\-Par = 'reactions\-\_\-parameters\-\_\-'}}\label{a00124_ac571c8d78a216f58ebc1e37bef25a541}
-
-
-Definition at line 113 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a36518d8de93502466a6d4b2e62eb7734}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!str\-Species@{str\-Species}}
-\index{str\-Species@{str\-Species}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{str\-Species}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Buffered\-Fluxes.\-str\-Species = 'species\-\_\-'}}\label{a00124_a36518d8de93502466a6d4b2e62eb7734}
+\hypertarget{a00124_a33bc0e3fc99bab3df33d3f1626a19528}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!seq@{seq}}
+\index{seq@{seq}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{seq}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis.\+seq = \mbox{[}$\,$\mbox{]}}}\label{a00124_a33bc0e3fc99bab3df33d3f1626a19528}
 
 
-Definition at line 86 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 101 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a658920d97b6df23e672e290d362033b4}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!str\-Species\-Zero@{str\-Species\-Zero}}
-\index{str\-Species\-Zero@{str\-Species\-Zero}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{str\-Species\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Buffered\-Fluxes.\-str\-Species\-Zero = 'species\-\_\-'}}\label{a00124_a658920d97b6df23e672e290d362033b4}
-
-
-Definition at line 83 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_af89a0c5bd58d5bd9787225c1c9aeab8b}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!str\-To\-Write@{str\-To\-Write}}
-\index{str\-To\-Write@{str\-To\-Write}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{str\-To\-Write}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Buffered\-Fluxes.\-str\-To\-Write = \char`\"{}Time\textbackslash{}t\-I\-N\textbackslash{}t\-O\-U\-T\textbackslash{}t\-D\-E\-L\-T\-A\textbackslash{}tbrick\-\_\-\-I\-N\textbackslash{}tbrick\-\_\-\-O\-U\-T\textbackslash{}tbrick\-\_\-\-D\-E\-L\-T\-A\textbackslash{}n\char`\"{}}}\label{a00124_af89a0c5bd58d5bd9787225c1c9aeab8b}
+\hypertarget{a00124_a0e036b776f4f724254115c2e284657eb}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!species\+File@{species\+File}}
+\index{species\+File@{species\+File}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{species\+File}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis.\+species\+File = {\bf species\+Files}\mbox{[}-\/1\mbox{]}}}\label{a00124_a0e036b776f4f724254115c2e284657eb}
 
 
-Definition at line 78 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 92 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_abfa8fbc48a0ad5b6dff6914d6052b2b6}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!str\-Zeros@{str\-Zeros}}
-\index{str\-Zeros@{str\-Zeros}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{str\-Zeros}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-str\-Zeros = {\bf zero\-Before\-Str\-Num}(ngen, {\bf number\-Of\-Gen})}}\label{a00124_abfa8fbc48a0ad5b6dff6914d6052b2b6}
-
-
-Definition at line 81 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_af740eb0100dc7010628161baeaf9b474}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!tmp\-Dirs@{tmp\-Dirs}}
-\index{tmp\-Dirs@{tmp\-Dirs}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{tmp\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-tmp\-Dirs = sort(os.\-listdir({\bf Str\-Path}))}}\label{a00124_af740eb0100dc7010628161baeaf9b474}
+\hypertarget{a00124_a670249d163388a9d93c8f3b9fb63afac}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!species\+Files@{species\+Files}}
+\index{species\+Files@{species\+Files}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{species\+Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+species\+Files = sorted(glob.\+glob(os.\+path.\+join({\bf res\+Dir\+Path},{\bf str\+Species})))}}\label{a00124_a670249d163388a9d93c8f3b9fb63afac}
 
 
-Definition at line 36 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 91 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a170166907641e54151f8d83d51420165}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!tmp\-Flux\-File@{tmp\-Flux\-File}}
-\index{tmp\-Flux\-File@{tmp\-Flux\-File}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{tmp\-Flux\-File}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Buffered\-Fluxes.\-tmp\-Flux\-File = 'flux\-Dynamics\-\_\-'}}\label{a00124_a170166907641e54151f8d83d51420165}
-
-
-Definition at line 76 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a9212bb73d018f7f9c7112fc40900335c}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!tot\-\_\-\-B\-\_\-\-I\-N@{tot\-\_\-\-B\-\_\-\-I\-N}}
-\index{tot\-\_\-\-B\-\_\-\-I\-N@{tot\-\_\-\-B\-\_\-\-I\-N}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{tot\-\_\-\-B\-\_\-\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-tot\-\_\-\-B\-\_\-\-I\-N = 0}}\label{a00124_a9212bb73d018f7f9c7112fc40900335c}
+\hypertarget{a00124_a8941499f40259763765b64e3185be82c}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!Str\+Path@{Str\+Path}}
+\index{Str\+Path@{Str\+Path}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{Str\+Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+Str\+Path = os.\+path.\+abspath(args.\+Str\+Path)}}\label{a00124_a8941499f40259763765b64e3185be82c}
 
 
-Definition at line 124 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 56 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a05f604fc532aebf8d9418c9162e2c1b7}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!tot\-\_\-\-B\-\_\-\-O\-U\-T@{tot\-\_\-\-B\-\_\-\-O\-U\-T}}
-\index{tot\-\_\-\-B\-\_\-\-O\-U\-T@{tot\-\_\-\-B\-\_\-\-O\-U\-T}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{tot\-\_\-\-B\-\_\-\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-tot\-\_\-\-B\-\_\-\-O\-U\-T = 0}}\label{a00124_a05f604fc532aebf8d9418c9162e2c1b7}
-
-
-Definition at line 125 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a7883e37b9556e49968e7a7dd08893bfb}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!tot\-Dir\-Name@{tot\-Dir\-Name}}
-\index{tot\-Dir\-Name@{tot\-Dir\-Name}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{tot\-Dir\-Name}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Buffered\-Fluxes.\-tot\-Dir\-Name = os.\-path.\-join({\bf Str\-Path},tmp\-Dir)}}\label{a00124_a7883e37b9556e49968e7a7dd08893bfb}
+\hypertarget{a00124_aa76707ba3058ba96fc8e5aeafa461193}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!str\+Species@{str\+Species}}
+\index{str\+Species@{str\+Species}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{str\+Species}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Attractor\+Analysis.\+str\+Species = 'species\+\_\+'}}\label{a00124_aa76707ba3058ba96fc8e5aeafa461193}
 
 
-Definition at line 61 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 88 of file acs\+Attractor\+Analysis.\+py.
 
-\hypertarget{a00124_a59bf56491943c5f1414e0cc407b48b93}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!tot\-I\-N@{tot\-I\-N}}
-\index{tot\-I\-N@{tot\-I\-N}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{tot\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-tot\-I\-N = 0}}\label{a00124_a59bf56491943c5f1414e0cc407b48b93}
-
-
-Definition at line 121 of file acs\-Buffered\-Fluxes.\-py.
-
-\hypertarget{a00124_a730efee103fd41819ea5848cec249d07}{\index{acs\-Buffered\-Fluxes@{acs\-Buffered\-Fluxes}!tot\-O\-U\-T@{tot\-O\-U\-T}}
-\index{tot\-O\-U\-T@{tot\-O\-U\-T}!acsBufferedFluxes@{acs\-Buffered\-Fluxes}}
-\subsubsection[{tot\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Buffered\-Fluxes.\-tot\-O\-U\-T = 0}}\label{a00124_a730efee103fd41819ea5848cec249d07}
+\hypertarget{a00124_ae5f324ca114055fca79473eecd17bb80}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!str\+Types@{str\+Types}}
+\index{str\+Types@{str\+Types}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{str\+Types}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Attractor\+Analysis.\+str\+Types = ''}}\label{a00124_ae5f324ca114055fca79473eecd17bb80}
 
 
-Definition at line 122 of file acs\-Buffered\-Fluxes.\-py.
+Definition at line 247 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_a5708d1d44920d75a918ec1c988c02c57}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!str\+Zeros@{str\+Zeros}}
+\index{str\+Zeros@{str\+Zeros}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{str\+Zeros}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+str\+Zeros = {\bf zero\+Before\+Str\+Num}(ngen, {\bf number\+Of\+Gen})}}\label{a00124_a5708d1d44920d75a918ec1c988c02c57}
+
+
+Definition at line 87 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_a305669433b259c5ffcb797769e7c30df}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!tmp\+Cos@{tmp\+Cos}}
+\index{tmp\+Cos@{tmp\+Cos}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{tmp\+Cos}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+tmp\+Cos = float(np.\+dot({\bf vec\+X},{\bf vec\+Y}) / (np.\+linalg.\+norm({\bf vec\+X}) $\ast$ np.\+linalg.\+norm({\bf vec\+Y})))}}\label{a00124_a305669433b259c5ffcb797769e7c30df}
+
+
+Definition at line 198 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_ac88c3245a42ebefee3fcf90626f6eaf4}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!tmp\+Dirs@{tmp\+Dirs}}
+\index{tmp\+Dirs@{tmp\+Dirs}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{tmp\+Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+tmp\+Dirs = sort(os.\+listdir({\bf Str\+Path}))}}\label{a00124_ac88c3245a42ebefee3fcf90626f6eaf4}
+
+
+Definition at line 58 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_a0c4860774229747cda9dabe70614abc6}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!tmp\+E\+U@{tmp\+E\+U}}
+\index{tmp\+E\+U@{tmp\+E\+U}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{tmp\+E\+U}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+Attractor\+Analysis.\+tmp\+E\+U = 0}}\label{a00124_a0c4860774229747cda9dabe70614abc6}
+
+
+Definition at line 203 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_a1fe1582f1d1dc5f55558d25c8eb30ad7}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!tmp\+H\+D@{tmp\+H\+D}}
+\index{tmp\+H\+D@{tmp\+H\+D}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{tmp\+H\+D}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+Attractor\+Analysis.\+tmp\+H\+D = 0}}\label{a00124_a1fe1582f1d1dc5f55558d25c8eb30ad7}
+
+
+Definition at line 202 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_a71bc5e3d205016fb7893b438e75be78e}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!today@{today}}
+\index{today@{today}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{today}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+today = dt.\+date.\+today()}}\label{a00124_a71bc5e3d205016fb7893b438e75be78e}
+
+
+Definition at line 57 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_ad3caf9c42727aaab24f4ea4dae362fc9}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!tot\+Dir\+Name@{tot\+Dir\+Name}}
+\index{tot\+Dir\+Name@{tot\+Dir\+Name}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{tot\+Dir\+Name}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+tot\+Dir\+Name = os.\+path.\+join({\bf Str\+Path},tmp\+Dir)}}\label{a00124_ad3caf9c42727aaab24f4ea4dae362fc9}
+
+
+Definition at line 73 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_af20e9c92b7d977049b881882c0d1382c}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!vec\+X@{vec\+X}}
+\index{vec\+X@{vec\+X}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{vec\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+vec\+X = np.\+array(lx)}}\label{a00124_af20e9c92b7d977049b881882c0d1382c}
+
+
+Definition at line 195 of file acs\+Attractor\+Analysis.\+py.
+
+\hypertarget{a00124_a691fb5bd87af2162b5acaf48ea4c06e7}{\index{acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}!vec\+Y@{vec\+Y}}
+\index{vec\+Y@{vec\+Y}!acs\+Attractor\+Analysis@{acs\+Attractor\+Analysis}}
+\subsubsection[{vec\+Y}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis.\+vec\+Y = np.\+array(ly)}}\label{a00124_a691fb5bd87af2162b5acaf48ea4c06e7}
+
+
+Definition at line 196 of file acs\+Attractor\+Analysis.\+py.
 

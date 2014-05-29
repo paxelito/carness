@@ -1,18 +1,19 @@
 var functions_dup =
 [
     [ "a", "functions.html", null ],
-    [ "c", "functions_0x63.html", null ],
-    [ "d", "functions_0x64.html", null ],
-    [ "e", "functions_0x65.html", null ],
-    [ "g", "functions_0x67.html", null ],
-    [ "i", "functions_0x69.html", null ],
-    [ "m", "functions_0x6d.html", null ],
-    [ "n", "functions_0x6e.html", null ],
-    [ "o", "functions_0x6f.html", null ],
-    [ "p", "functions_0x70.html", null ],
-    [ "r", "functions_0x72.html", null ],
-    [ "s", "functions_0x73.html", null ],
-    [ "u", "functions_0x75.html", null ],
-    [ "z", "functions_0x7a.html", null ],
-    [ "~", "functions_0x7e.html", null ]
+    [ "c", "functions_c.html", null ],
+    [ "d", "functions_d.html", null ],
+    [ "e", "functions_e.html", null ],
+    [ "g", "functions_g.html", null ],
+    [ "i", "functions_i.html", null ],
+    [ "m", "functions_m.html", null ],
+    [ "n", "functions_n.html", null ],
+    [ "o", "functions_o.html", null ],
+    [ "p", "functions_p.html", null ],
+    [ "r", "functions_r.html", null ],
+    [ "s", "functions_s.html", null ],
+    [ "t", "functions_t.html", null ],
+    [ "u", "functions_u.html", null ],
+    [ "z", "functions_z.html", null ],
+    [ "~", "functions_~.html", null ]
 ];

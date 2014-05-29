@@ -1,7 +1,6 @@
 var a00113 =
 [
-    [ "condensazione", "a00113.html#a8c8df28fc47986989fead7fb4ee1a3ea", null ],
-    [ "exist", "a00113.html#acda334cb7ae2a2f83fa0ec9c6f57a846", null ],
+    [ "cd", "a00113.html#abe327856a9ee2f30f3ccafe4dc9edf5e", null ],
     [ "funzioni_booleane_in_dec", "a00113.html#aca80ac3e93dabd95e623a51f90fb37b6", null ],
     [ "reazioni", "a00113.html#a69962f56e60d0c88abc5d4b6839c2886", null ],
     [ "rete", "a00113.html#a40d2922f55b48d94c99038a8c2bef2ff", null ],
@@ -19,10 +18,9 @@ var a00113 =
     [ "debugLevel", "a00113.html#a08ef28bc85447e904ca9ea64de89b676", null ],
     [ "decisione_catalizzatori", "a00113.html#a78948f867453293fcff0835b1bb05b8c", null ],
     [ "diffusion_contribute", "a00113.html#a9341167cb56ed18499df723220990b9c", null ],
-    [ "energia", "a00113.html#a15a0e3f3007df072a07460518322b944", null ],
+    [ "dir", "a00113.html#a4ca269cf93df1b512b52174c1a256fe5", null ],
     [ "energy", "a00113.html#ac002779c383d2cc783e881f94449de66", null ],
     [ "ensambles", "a00113.html#a450b0c257ca2430779e4244700c076e7", null ],
-    [ "fid20", "a00113.html#aaad88534fbf3d065202db78a891374ca", null ],
     [ "fileTimesSaveInterval", "a00113.html#a825ee95e200498001c9f82b9637c1ff5", null ],
     [ "fino_a_che_lunghezza_i_polimeri_non_catalizzano", "a00113.html#ab6966d9ee620bc7376dc41a38352b948", null ],
     [ "FISSI", "a00113.html#aea8a3181c0f6f0f47e51930921720484", null ],
@@ -44,7 +42,6 @@ var a00113 =
     [ "lunghezze", "a00113.html#ad1bbbd24e4be6c7d8af30304c155c742", null ],
     [ "massima_lunghezza_su_cui_calcolare_le_reazioni", "a00113.html#a4e714d8e6551275aafab501b8c9f18ad", null ],
     [ "maxLOut", "a00113.html#abb126c97fed10420e64f85923bf5e04b", null ],
-    [ "met", "a00113.html#a53f2a5c181e46a513a4e87f144d19f6b", null ],
     [ "moleculeDecay_KineticConstant", "a00113.html#a85569bbcfd8fbc0081b5a144eaf516f5", null ],
     [ "nets", "a00113.html#a006c95919fb4982bffba044f13cd2a7f", null ],
     [ "nGEN", "a00113.html#a4c8fe523edbe179c5d215da13f469f72", null ],

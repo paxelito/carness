@@ -1,168 +1,151 @@
-\hypertarget{a00127}{\section{acs\-R\-A\-Fanalysis Namespace Reference}
-\label{a00127}\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}}
+\hypertarget{a00127}{\section{acs\+Dyn\+Stat\+In\+Time Namespace Reference}
+\label{a00127}\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
 }
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-tuple \hyperlink{a00127_ac31a9eb101f9abd2dfb68dddf3cdea49}{parser}
+tuple \hyperlink{a00127_a14b76a8235da778083f610cabe968c34}{parser}
 \item 
-tuple \hyperlink{a00127_a921f7b120160ad6199dc72fa76cc61d7}{args} = parser.\-parse\-\_\-args()
+tuple \hyperlink{a00127_a0fef98b331f3de5212d309bd2d3556e7}{args} = parser.\+parse\+\_\+args()
 \item 
-tuple \hyperlink{a00127_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
+tuple \hyperlink{a00127_aff72277efad2fb1d2f51e95f6fefc288}{str\+Path} = os.\+path.\+abspath(args.\+str\+Path)
 \item 
-int \hyperlink{a00127_ae3bd0bf5edba7fcc3fddc439ceebd7e5}{\-\_\-\-C\-L\-O\-S\-E\-\_\-} = 0
+string \hyperlink{a00127_a4331412d1cdff7111cdc69adc31528c4}{str\+Sub\+Str\+Key} = '$\ast$'
 \item 
-int \hyperlink{a00127_a3420c7f044424df4c735884411cf064e}{\-\_\-\-P\-R\-O\-T\-O\-\_\-} = 1
+tuple \hyperlink{a00127_a353a268554f9ac8661c5e0142496f580}{files\+To\+Anal} = sorted(glob.\+glob(os.\+path.\+join(\hyperlink{a00127_aff72277efad2fb1d2f51e95f6fefc288}{str\+Path},\hyperlink{a00127_a4331412d1cdff7111cdc69adc31528c4}{str\+Sub\+Str\+Key})))
 \item 
-int \hyperlink{a00127_a83f5d2a644a6e3960655ca4ae1c55038}{\-\_\-\-C\-S\-T\-R\-\_\-} = 2
+tuple \hyperlink{a00127_abf8db6a4d0dc9132f54755c72c871471}{len\+Files\+To\+Anal} = len(\hyperlink{a00127_a353a268554f9ac8661c5e0142496f580}{files\+To\+Anal})
 \item 
-tuple \hyperlink{a00127_a0d6fedc77ef111d5aebc888527a7b60d}{conf} = rf.\-read\-Conf\-File(\hyperlink{a00127_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path})
+int \hyperlink{a00127_a4679690d186f44a3ad8e6eb3a545fd39}{num\+Of\+Traj} = 0
 \item 
-tuple \hyperlink{a00127_a1be7f568f3bae43bcf5cf721d0ab506d}{closure} = dm.\-generate\-Flux\-List(\hyperlink{a00127_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path}, sys\-Type)
+tuple \hyperlink{a00127_a52808d1f82b263c51e9bfb9e18b053c0}{x} = np.\+array(map(list, np.\+loadtxt(file\+To\+Anal, str)), float)
 \item 
-tuple \hyperlink{a00127_a9686a166e08ff3540d419f831433da74}{food\-Set} = deepcopy(\hyperlink{a00127_a1be7f568f3bae43bcf5cf721d0ab506d}{closure})
+\hyperlink{a00127_ade03788f04a663a14a9abeae4e7ea0e2}{xsize} = x.\+shape
 \item 
-tuple \hyperlink{a00127_a45383e21457afcc9643eec4200984680}{rcts} = rf.\-load\-All\-Data(\hyperlink{a00127_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path},'\-\_\-acsreactions.\-csv')
+list \hyperlink{a00127_a565bd873618e4d135a9903fb70ee5981}{run4\+Chem} = \hyperlink{a00127_ade03788f04a663a14a9abeae4e7ea0e2}{xsize}\mbox{[}0\mbox{]}
 \item 
-tuple \hyperlink{a00127_a5b83a251211f875fde99d3ed17fa5f18}{cats} = rf.\-load\-All\-Data(\hyperlink{a00127_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path},'\-\_\-acscatalysis.\-csv')
+tuple \hyperlink{a00127_aa7979c32d5499d000edacba8fcadd039}{y} = np.\+zeros((\hyperlink{a00127_abf8db6a4d0dc9132f54755c72c871471}{len\+Files\+To\+Anal},\hyperlink{a00127_a4679690d186f44a3ad8e6eb3a545fd39}{num\+Of\+Traj}))
 \item 
-tuple \hyperlink{a00127_a13356ba12c204e0406b75995282613d3}{R\-A} = raf.\-R\-Acondition(\hyperlink{a00127_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path},\hyperlink{a00127_a1be7f568f3bae43bcf5cf721d0ab506d}{closure},\hyperlink{a00127_a45383e21457afcc9643eec4200984680}{rcts},\hyperlink{a00127_a5b83a251211f875fde99d3ed17fa5f18}{cats})
+int \hyperlink{a00127_a7ce24ac1959d7d1512b663f20f3e3100}{pos} = 0
 \item 
-tuple \hyperlink{a00127_ad44f37d5b138abfe77d1c212fd3d41a2}{R\-A\-F} = raf.\-Fcondition(\hyperlink{a00127_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\-Path},\hyperlink{a00127_a1be7f568f3bae43bcf5cf721d0ab506d}{closure},\hyperlink{a00127_a13356ba12c204e0406b75995282613d3}{R\-A},\hyperlink{a00127_a45383e21457afcc9643eec4200984680}{rcts})
+int \hyperlink{a00127_aa0ad135db98d635147ecbd1480de89df}{chem} = 1
 \item 
-tuple \hyperlink{a00127_a6e44ceb30d60cc17a4bf428a882aa51a}{R\-A\-Flpre} = len(\hyperlink{a00127_ad44f37d5b138abfe77d1c212fd3d41a2}{R\-A\-F})
+string \hyperlink{a00127_acb2620669fa00dd24be0687c86647b43}{tmp\+Head} = ''
 \item 
-list \hyperlink{a00127_ae9584596a4202245353198abb6042fa0}{red\-Rcts} = \hyperlink{a00127_a45383e21457afcc9643eec4200984680}{rcts}\mbox{[}\hyperlink{a00127_ad44f37d5b138abfe77d1c212fd3d41a2}{R\-A\-F},\-:\mbox{]}
-\item 
-int \hyperlink{a00127_aece7a419c5b139173191eb9035bb4260}{R\-A\-Flpost} = 0
-\item 
-tuple \hyperlink{a00127_a2b3738754ae59f4529738a09188fbbe5}{catalists} = raf.\-find\-Catfor\-R\-A\-F(\hyperlink{a00127_a5b83a251211f875fde99d3ed17fa5f18}{cats}, \hyperlink{a00127_ad44f37d5b138abfe77d1c212fd3d41a2}{R\-A\-F}, \hyperlink{a00127_a1be7f568f3bae43bcf5cf721d0ab506d}{closure})
+string \hyperlink{a00127_aa77abf10e3a92416282af2030df3b4b0}{filename} = \char`\"{}\+\_\+arranged\+\_\+\char`\"{}
 \end{DoxyCompactItemize}
 
 
 \subsection{Variable Documentation}
-\hypertarget{a00127_ae3bd0bf5edba7fcc3fddc439ceebd7e5}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!\-\_\-\-C\-L\-O\-S\-E\-\_\-@{\-\_\-\-C\-L\-O\-S\-E\-\_\-}}
-\index{\-\_\-\-C\-L\-O\-S\-E\-\_\-@{\-\_\-\-C\-L\-O\-S\-E\-\_\-}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{\-\_\-\-C\-L\-O\-S\-E\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-R\-A\-Fanalysis.\-\_\-\-C\-L\-O\-S\-E\-\_\- = 0}}\label{a00127_ae3bd0bf5edba7fcc3fddc439ceebd7e5}
+\hypertarget{a00127_a0fef98b331f3de5212d309bd2d3556e7}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!args@{args}}
+\index{args@{args}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Dyn\+Stat\+In\+Time.\+args = parser.\+parse\+\_\+args()}}\label{a00127_a0fef98b331f3de5212d309bd2d3556e7}
 
 
-Definition at line 31 of file acs\-R\-A\-Fanalysis.\-py.
+Definition at line 24 of file acs\+Dyn\+Stat\+In\+Time.\+py.
 
-\hypertarget{a00127_a83f5d2a644a6e3960655ca4ae1c55038}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!\-\_\-\-C\-S\-T\-R\-\_\-@{\-\_\-\-C\-S\-T\-R\-\_\-}}
-\index{\-\_\-\-C\-S\-T\-R\-\_\-@{\-\_\-\-C\-S\-T\-R\-\_\-}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{\-\_\-\-C\-S\-T\-R\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-R\-A\-Fanalysis.\-\_\-\-C\-S\-T\-R\-\_\- = 2}}\label{a00127_a83f5d2a644a6e3960655ca4ae1c55038}
-
-
-Definition at line 33 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00127_a3420c7f044424df4c735884411cf064e}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!\-\_\-\-P\-R\-O\-T\-O\-\_\-@{\-\_\-\-P\-R\-O\-T\-O\-\_\-}}
-\index{\-\_\-\-P\-R\-O\-T\-O\-\_\-@{\-\_\-\-P\-R\-O\-T\-O\-\_\-}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{\-\_\-\-P\-R\-O\-T\-O\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-R\-A\-Fanalysis.\-\_\-\-P\-R\-O\-T\-O\-\_\- = 1}}\label{a00127_a3420c7f044424df4c735884411cf064e}
+\hypertarget{a00127_aa0ad135db98d635147ecbd1480de89df}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!chem@{chem}}
+\index{chem@{chem}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{chem}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+Dyn\+Stat\+In\+Time.\+chem = 1}}\label{a00127_aa0ad135db98d635147ecbd1480de89df}
 
 
-Definition at line 32 of file acs\-R\-A\-Fanalysis.\-py.
+Definition at line 47 of file acs\+Dyn\+Stat\+In\+Time.\+py.
 
-\hypertarget{a00127_a921f7b120160ad6199dc72fa76cc61d7}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!args@{args}}
-\index{args@{args}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-args = parser.\-parse\-\_\-args()}}\label{a00127_a921f7b120160ad6199dc72fa76cc61d7}
-
-
-Definition at line 26 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00127_a2b3738754ae59f4529738a09188fbbe5}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!catalists@{catalists}}
-\index{catalists@{catalists}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{catalists}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-catalists = raf.\-find\-Catfor\-R\-A\-F({\bf cats}, {\bf R\-A\-F}, {\bf closure})}}\label{a00127_a2b3738754ae59f4529738a09188fbbe5}
+\hypertarget{a00127_aa77abf10e3a92416282af2030df3b4b0}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!filename@{filename}}
+\index{filename@{filename}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{filename}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Dyn\+Stat\+In\+Time.\+filename = \char`\"{}\+\_\+arranged\+\_\+\char`\"{}}}\label{a00127_aa77abf10e3a92416282af2030df3b4b0}
 
 
-Definition at line 76 of file acs\-R\-A\-Fanalysis.\-py.
+Definition at line 66 of file acs\+Dyn\+Stat\+In\+Time.\+py.
 
-\hypertarget{a00127_a5b83a251211f875fde99d3ed17fa5f18}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!cats@{cats}}
-\index{cats@{cats}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{cats}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-cats = rf.\-load\-All\-Data({\bf str\-Path},'\-\_\-acscatalysis.\-csv')}}\label{a00127_a5b83a251211f875fde99d3ed17fa5f18}
-
-
-Definition at line 45 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00127_a1be7f568f3bae43bcf5cf721d0ab506d}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!closure@{closure}}
-\index{closure@{closure}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{closure}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-closure = dm.\-generate\-Flux\-List({\bf str\-Path}, sys\-Type)}}\label{a00127_a1be7f568f3bae43bcf5cf721d0ab506d}
+\hypertarget{a00127_a353a268554f9ac8661c5e0142496f580}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!files\+To\+Anal@{files\+To\+Anal}}
+\index{files\+To\+Anal@{files\+To\+Anal}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{files\+To\+Anal}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Dyn\+Stat\+In\+Time.\+files\+To\+Anal = sorted(glob.\+glob(os.\+path.\+join({\bf str\+Path},{\bf str\+Sub\+Str\+Key})))}}\label{a00127_a353a268554f9ac8661c5e0142496f580}
 
 
-Definition at line 41 of file acs\-R\-A\-Fanalysis.\-py.
+Definition at line 34 of file acs\+Dyn\+Stat\+In\+Time.\+py.
 
-\hypertarget{a00127_a0d6fedc77ef111d5aebc888527a7b60d}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!conf@{conf}}
-\index{conf@{conf}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{conf}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-conf = rf.\-read\-Conf\-File({\bf str\-Path})}}\label{a00127_a0d6fedc77ef111d5aebc888527a7b60d}
-
-
-Definition at line 34 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00127_a9686a166e08ff3540d419f831433da74}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!food\-Set@{food\-Set}}
-\index{food\-Set@{food\-Set}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{food\-Set}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-food\-Set = deepcopy({\bf closure})}}\label{a00127_a9686a166e08ff3540d419f831433da74}
+\hypertarget{a00127_abf8db6a4d0dc9132f54755c72c871471}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!len\+Files\+To\+Anal@{len\+Files\+To\+Anal}}
+\index{len\+Files\+To\+Anal@{len\+Files\+To\+Anal}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{len\+Files\+To\+Anal}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Dyn\+Stat\+In\+Time.\+len\+Files\+To\+Anal = len({\bf files\+To\+Anal})}}\label{a00127_abf8db6a4d0dc9132f54755c72c871471}
 
 
-Definition at line 42 of file acs\-R\-A\-Fanalysis.\-py.
+Definition at line 35 of file acs\+Dyn\+Stat\+In\+Time.\+py.
 
-\hypertarget{a00127_ac31a9eb101f9abd2dfb68dddf3cdea49}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!parser@{parser}}
-\index{parser@{parser}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-parser}}\label{a00127_ac31a9eb101f9abd2dfb68dddf3cdea49}
-{\bfseries Initial value\-:}
+\hypertarget{a00127_a4679690d186f44a3ad8e6eb3a545fd39}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!num\+Of\+Traj@{num\+Of\+Traj}}
+\index{num\+Of\+Traj@{num\+Of\+Traj}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{num\+Of\+Traj}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Dyn\+Stat\+In\+Time.\+num\+Of\+Traj = 0}}\label{a00127_a4679690d186f44a3ad8e6eb3a545fd39}
+
+
+Definition at line 36 of file acs\+Dyn\+Stat\+In\+Time.\+py.
+
+\hypertarget{a00127_a14b76a8235da778083f610cabe968c34}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!parser@{parser}}
+\index{parser@{parser}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Dyn\+Stat\+In\+Time.\+parser}}\label{a00127_a14b76a8235da778083f610cabe968c34}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}
 1 = ArgumentParser(
-2                                 description=\textcolor{stringliteral}{'Script to perform a RAF analysis.'}
+2                                 description=\textcolor{stringliteral}{'This script re-arrange results in a more friendly way from the
+       angle analysis in time.'}
 3                                 , epilog=\textcolor{stringliteral}{'''File with angle trajectories are created. '''})
 \end{DoxyCode}
 
 
-Definition at line 22 of file acs\-R\-A\-Fanalysis.\-py.
+Definition at line 17 of file acs\+Dyn\+Stat\+In\+Time.\+py.
 
-\hypertarget{a00127_a13356ba12c204e0406b75995282613d3}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!R\-A@{R\-A}}
-\index{R\-A@{R\-A}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{R\-A}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-R\-A = raf.\-R\-Acondition({\bf str\-Path},{\bf closure},{\bf rcts},{\bf cats})}}\label{a00127_a13356ba12c204e0406b75995282613d3}
-
-
-Definition at line 50 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00127_ad44f37d5b138abfe77d1c212fd3d41a2}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!R\-A\-F@{R\-A\-F}}
-\index{R\-A\-F@{R\-A\-F}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{R\-A\-F}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-R\-A\-F = raf.\-Fcondition({\bf str\-Path},{\bf closure},{\bf R\-A},{\bf rcts})}}\label{a00127_ad44f37d5b138abfe77d1c212fd3d41a2}
+\hypertarget{a00127_a7ce24ac1959d7d1512b663f20f3e3100}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!pos@{pos}}
+\index{pos@{pos}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+Dyn\+Stat\+In\+Time.\+pos = 0}}\label{a00127_a7ce24ac1959d7d1512b663f20f3e3100}
 
 
-Definition at line 52 of file acs\-R\-A\-Fanalysis.\-py.
+Definition at line 46 of file acs\+Dyn\+Stat\+In\+Time.\+py.
 
-\hypertarget{a00127_aece7a419c5b139173191eb9035bb4260}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!R\-A\-Flpost@{R\-A\-Flpost}}
-\index{R\-A\-Flpost@{R\-A\-Flpost}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{R\-A\-Flpost}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-R\-A\-Flpost = 0}}\label{a00127_aece7a419c5b139173191eb9035bb4260}
-
-
-Definition at line 60 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00127_a6e44ceb30d60cc17a4bf428a882aa51a}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!R\-A\-Flpre@{R\-A\-Flpre}}
-\index{R\-A\-Flpre@{R\-A\-Flpre}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{R\-A\-Flpre}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-R\-A\-Flpre = len({\bf R\-A\-F})}}\label{a00127_a6e44ceb30d60cc17a4bf428a882aa51a}
+\hypertarget{a00127_a565bd873618e4d135a9903fb70ee5981}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!run4\+Chem@{run4\+Chem}}
+\index{run4\+Chem@{run4\+Chem}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{run4\+Chem}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Dyn\+Stat\+In\+Time.\+run4\+Chem = {\bf xsize}\mbox{[}0\mbox{]}}}\label{a00127_a565bd873618e4d135a9903fb70ee5981}
 
 
-Definition at line 53 of file acs\-R\-A\-Fanalysis.\-py.
+Definition at line 42 of file acs\+Dyn\+Stat\+In\+Time.\+py.
 
-\hypertarget{a00127_a45383e21457afcc9643eec4200984680}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!rcts@{rcts}}
-\index{rcts@{rcts}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{rcts}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-rcts = rf.\-load\-All\-Data({\bf str\-Path},'\-\_\-acsreactions.\-csv')}}\label{a00127_a45383e21457afcc9643eec4200984680}
-
-
-Definition at line 44 of file acs\-R\-A\-Fanalysis.\-py.
-
-\hypertarget{a00127_ae9584596a4202245353198abb6042fa0}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!red\-Rcts@{red\-Rcts}}
-\index{red\-Rcts@{red\-Rcts}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{red\-Rcts}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-R\-A\-Fanalysis.\-red\-Rcts = {\bf rcts}\mbox{[}{\bf R\-A\-F},\-:\mbox{]}}}\label{a00127_ae9584596a4202245353198abb6042fa0}
+\hypertarget{a00127_aff72277efad2fb1d2f51e95f6fefc288}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!str\+Path@{str\+Path}}
+\index{str\+Path@{str\+Path}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{str\+Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Dyn\+Stat\+In\+Time.\+str\+Path = os.\+path.\+abspath(args.\+str\+Path)}}\label{a00127_aff72277efad2fb1d2f51e95f6fefc288}
 
 
-Definition at line 55 of file acs\-R\-A\-Fanalysis.\-py.
+Definition at line 27 of file acs\+Dyn\+Stat\+In\+Time.\+py.
 
-\hypertarget{a00127_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{\index{acs\-R\-A\-Fanalysis@{acs\-R\-A\-Fanalysis}!str\-Path@{str\-Path}}
-\index{str\-Path@{str\-Path}!acsRAFanalysis@{acs\-R\-A\-Fanalysis}}
-\subsubsection[{str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-R\-A\-Fanalysis.\-str\-Path = os.\-path.\-abspath(args.\-str\-Path)}}\label{a00127_ab5ddf85dcaa5dff4cd3f2906b8f37e78}
+\hypertarget{a00127_a4331412d1cdff7111cdc69adc31528c4}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!str\+Sub\+Str\+Key@{str\+Sub\+Str\+Key}}
+\index{str\+Sub\+Str\+Key@{str\+Sub\+Str\+Key}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{str\+Sub\+Str\+Key}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Dyn\+Stat\+In\+Time.\+str\+Sub\+Str\+Key = '$\ast$'}}\label{a00127_a4331412d1cdff7111cdc69adc31528c4}
 
 
-Definition at line 29 of file acs\-R\-A\-Fanalysis.\-py.
+Definition at line 33 of file acs\+Dyn\+Stat\+In\+Time.\+py.
+
+\hypertarget{a00127_acb2620669fa00dd24be0687c86647b43}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!tmp\+Head@{tmp\+Head}}
+\index{tmp\+Head@{tmp\+Head}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{tmp\+Head}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Dyn\+Stat\+In\+Time.\+tmp\+Head = ''}}\label{a00127_acb2620669fa00dd24be0687c86647b43}
+
+
+Definition at line 48 of file acs\+Dyn\+Stat\+In\+Time.\+py.
+
+\hypertarget{a00127_a52808d1f82b263c51e9bfb9e18b053c0}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!x@{x}}
+\index{x@{x}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Dyn\+Stat\+In\+Time.\+x = np.\+array(map(list, np.\+loadtxt(file\+To\+Anal, str)), float)}}\label{a00127_a52808d1f82b263c51e9bfb9e18b053c0}
+
+
+Definition at line 39 of file acs\+Dyn\+Stat\+In\+Time.\+py.
+
+\hypertarget{a00127_ade03788f04a663a14a9abeae4e7ea0e2}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!xsize@{xsize}}
+\index{xsize@{xsize}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{xsize}]{\setlength{\rightskip}{0pt plus 5cm}acs\+Dyn\+Stat\+In\+Time.\+xsize = x.\+shape}}\label{a00127_ade03788f04a663a14a9abeae4e7ea0e2}
+
+
+Definition at line 40 of file acs\+Dyn\+Stat\+In\+Time.\+py.
+
+\hypertarget{a00127_aa7979c32d5499d000edacba8fcadd039}{\index{acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}!y@{y}}
+\index{y@{y}!acs\+Dyn\+Stat\+In\+Time@{acs\+Dyn\+Stat\+In\+Time}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Dyn\+Stat\+In\+Time.\+y = np.\+zeros(({\bf len\+Files\+To\+Anal},{\bf num\+Of\+Traj}))}}\label{a00127_aa7979c32d5499d000edacba8fcadd039}
+
+
+Definition at line 44 of file acs\+Dyn\+Stat\+In\+Time.\+py.
 

@@ -40,7 +40,7 @@ typedef unsigned int acs_int;
 // CONSTANTS
 //----------
 
-#define __SOFTVERSION__ "6.0b20140523.71"
+#define __SOFTVERSION__ "6.1b20140529.72"
 
 // DEBUG LEVELS
 
@@ -116,6 +116,9 @@ typedef unsigned int acs_int;
 
 //WRITE TO FILE EVERY...
 #define N_BUFFER 1000
+
+//PROMPT SIMUATION STATE EVERY...
+#define PROMPT_TIME 10000
 
 using namespace std;
 

@@ -1,151 +1,422 @@
-\hypertarget{a00125}{\section{acs\-Dyn\-Stat\-In\-Time Namespace Reference}
-\label{a00125}\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}}
+\hypertarget{a00125}{\section{acs\+Attractor\+Analysis\+In\+Time Namespace Reference}
+\label{a00125}\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
 }
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{a00125_a52efd37e3719214b7a4c7c46842ae229}{zero\+Before\+Str\+Num}
+\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-tuple \hyperlink{a00125_a14b76a8235da778083f610cabe968c34}{parser}
+tuple \hyperlink{a00125_abed547533f84e18ca5b4c4a2cfaef63a}{parser}
 \item 
-tuple \hyperlink{a00125_a0fef98b331f3de5212d309bd2d3556e7}{args} = parser.\-parse\-\_\-args()
+tuple \hyperlink{a00125_ab6621347b1ac2fe0e436bd2f384af8dc}{args} = parser.\+parse\+\_\+args()
 \item 
-tuple \hyperlink{a00125_aff72277efad2fb1d2f51e95f6fefc288}{str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
+tuple \hyperlink{a00125_a1d168f4d444ea1d02f186a7568344fba}{Str\+Path} = os.\+path.\+abspath(args.\+Str\+Path)
 \item 
-string \hyperlink{a00125_a4331412d1cdff7111cdc69adc31528c4}{str\-Sub\-Str\-Key} = '$\ast$'
+tuple \hyperlink{a00125_af30cd903eabfe4c9167f2a5d0062a4ce}{today} = dt.\+date.\+today()
 \item 
-tuple \hyperlink{a00125_a353a268554f9ac8661c5e0142496f580}{files\-To\-Anal} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00125_aff72277efad2fb1d2f51e95f6fefc288}{str\-Path},\hyperlink{a00125_a4331412d1cdff7111cdc69adc31528c4}{str\-Sub\-Str\-Key})))
+tuple \hyperlink{a00125_a4f312756a4e405be853b0a84be7e2e54}{tmp\+Dirs} = sort(os.\+listdir(\hyperlink{a00125_a1d168f4d444ea1d02f186a7568344fba}{Str\+Path}))
 \item 
-tuple \hyperlink{a00125_abf8db6a4d0dc9132f54755c72c871471}{len\-Files\-To\-Anal} = len(\hyperlink{a00125_a353a268554f9ac8661c5e0142496f580}{files\-To\-Anal})
+list \hyperlink{a00125_aceddba8afb0eb0cc7ba102491a9a3c30}{all\+Sorted\+Species} = \mbox{[}$\,$\mbox{]}
 \item 
-int \hyperlink{a00125_a4679690d186f44a3ad8e6eb3a545fd39}{num\-Of\-Traj} = 0
+list \hyperlink{a00125_a8c439282d32e80d2e2d4c02cc36f1101}{all\+Concentrations} = \mbox{[}$\,$\mbox{]}
 \item 
-tuple \hyperlink{a00125_a52808d1f82b263c51e9bfb9e18b053c0}{x} = np.\-array(map(list, np.\-loadtxt(file\-To\-Anal, str)), float)
+list \hyperlink{a00125_a48013e92108a94a85d1e32c2397eb37c}{all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X} = \mbox{[}$\,$\mbox{]}
 \item 
-\hyperlink{a00125_ade03788f04a663a14a9abeae4e7ea0e2}{xsize} = x.\-shape
+list \hyperlink{a00125_af6dd7a5a396717328c091d96d629af7c}{all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X} = \mbox{[}$\,$\mbox{]}
 \item 
-list \hyperlink{a00125_a565bd873618e4d135a9903fb70ee5981}{run4\-Chem} = \hyperlink{a00125_ade03788f04a663a14a9abeae4e7ea0e2}{xsize}\mbox{[}0\mbox{]}
+tuple \hyperlink{a00125_aeed4ca0c266fb5e31aebbbbe2f389378}{tot\+Dir\+Name} = os.\+path.\+join(\hyperlink{a00125_a1d168f4d444ea1d02f186a7568344fba}{Str\+Path},tmp\+Dir)
 \item 
-tuple \hyperlink{a00125_aa7979c32d5499d000edacba8fcadd039}{y} = np.\-zeros((\hyperlink{a00125_abf8db6a4d0dc9132f54755c72c871471}{len\-Files\-To\-Anal},\hyperlink{a00125_a4679690d186f44a3ad8e6eb3a545fd39}{num\-Of\-Traj}))
+tuple \hyperlink{a00125_a28ca19f0f566396ef664e068a41a2837}{res\+Dir\+Path} = os.\+path.\+abspath(os.\+path.\+join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))
 \item 
-int \hyperlink{a00125_a7ce24ac1959d7d1512b663f20f3e3100}{pos} = 0
+tuple \hyperlink{a00125_a28cc280ff54c726bd790cf781d3bab8c}{number\+Of\+Gen} = len(glob.\+glob(os.\+path.\+join(\hyperlink{a00125_a28ca19f0f566396ef664e068a41a2837}{res\+Dir\+Path},'times\+\_\+$\ast$')))
 \item 
-int \hyperlink{a00125_aa0ad135db98d635147ecbd1480de89df}{chem} = 1
+tuple \hyperlink{a00125_a9401cc8fb642e77e034e21ef9babcb24}{str\+Zeros} = \hyperlink{a00125_a52efd37e3719214b7a4c7c46842ae229}{zero\+Before\+Str\+Num}(ngen, \hyperlink{a00125_a28cc280ff54c726bd790cf781d3bab8c}{number\+Of\+Gen})
 \item 
-string \hyperlink{a00125_acb2620669fa00dd24be0687c86647b43}{tmp\-Head} = ''
+string \hyperlink{a00125_aea2d717887265b294c623099d2495d4f}{str\+Species\+Zero} = 'species\+\_\+'
 \item 
-string \hyperlink{a00125_aa77abf10e3a92416282af2030df3b4b0}{filename} = \char`\"{}\-\_\-arranged\-\_\-\char`\"{}
+tuple \hyperlink{a00125_a4657fd3a80cf1c76ab075d62d8de3bf3}{species\+Files\+Zero} = sorted(glob.\+glob(os.\+path.\+join(\hyperlink{a00125_a28ca19f0f566396ef664e068a41a2837}{res\+Dir\+Path},\hyperlink{a00125_aea2d717887265b294c623099d2495d4f}{str\+Species\+Zero})))
+\item 
+string \hyperlink{a00125_ac1f05e7db61bcc83ea1ed27460462202}{str\+Species} = 'species\+\_\+'
+\item 
+tuple \hyperlink{a00125_a18645475f8596346ca431e99661b5674}{species\+Files} = sorted(glob.\+glob(os.\+path.\+join(\hyperlink{a00125_a28ca19f0f566396ef664e068a41a2837}{res\+Dir\+Path},\hyperlink{a00125_ac1f05e7db61bcc83ea1ed27460462202}{str\+Species})))
+\item 
+list \hyperlink{a00125_a3c620554bbf7ae30d97a60565fea8d1e}{species\+File} = \hyperlink{a00125_a18645475f8596346ca431e99661b5674}{species\+Files}\mbox{[}time\+File\+I\+D\mbox{]}
+\item 
+tuple \hyperlink{a00125_a70d70b9ab98e722475b03465c7f8dbbe}{fid\+Species} = open(\hyperlink{a00125_a3c620554bbf7ae30d97a60565fea8d1e}{species\+File}, '\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+list \hyperlink{a00125_a1bdf98839177836f238806755e46ac3c}{seq} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{a00125_a2cebadd75179c46e551a2facbdd2741b}{overall\+Conc\+List} = \mbox{[}$\,$\mbox{]}
+\item 
+list \hyperlink{a00125_ad7eab833592c6cd395f9e2416dd13920}{overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X} = \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders} = 0
+\item 
+tuple \hyperlink{a00125_aa39692272363cd6f687c4b2a53f96594}{pos} = \hyperlink{a00102_a0cd6a44ffb07342cbc7e5ac33bfc9495}{seq.\+index}(key)
+\item 
+tuple \hyperlink{a00125_a49fec7e1deea4728b5ef4a487d155de9}{pos2} = \hyperlink{a00102_a0cd6a44ffb07342cbc7e5ac33bfc9495}{seq.\+index}(key2)
+\item 
+tuple \hyperlink{a00125_a15adfffa273548845cea67d8b89f0bb1}{A\+N\+G\+\_\+overall\+Res\+Matrix} = np.\+zeros((\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders},\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders}))
+\item 
+tuple \hyperlink{a00125_a7b0e67be0cf8de69432bdf56919d9e33}{A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X} = np.\+zeros((\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders},\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders}))
+\item 
+tuple \hyperlink{a00125_a5e8d5d65865736555e76c3f04058ddd9}{H\+A\+M\+\_\+overall\+Res\+Matrix} = np.\+zeros((\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders},\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders}))
+\item 
+tuple \hyperlink{a00125_a6ea74abf4c94200ed1b27d892ecacc97}{H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X} = np.\+zeros((\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders},\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders}))
+\item 
+tuple \hyperlink{a00125_a63ee1925f76a40d04495e9b35c0973d2}{E\+U\+C\+\_\+overall\+Res\+Matrix} = np.\+zeros((\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders},\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders}))
+\item 
+tuple \hyperlink{a00125_a4f2ecc559d2c5d79bb138a2e8ced8127}{E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X} = np.\+zeros((\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders},\hyperlink{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{number\+Of\+Folders}))
+\item 
+tuple \hyperlink{a00125_a55e7171c96f320a08ad29f21ad5faf9a}{vec\+X} = np.\+array(lx)
+\item 
+tuple \hyperlink{a00125_aaa4ad55a8fe44bfc5a386dff027886b0}{vec\+Y} = np.\+array(ly)
+\item 
+tuple \hyperlink{a00125_a547703ec10e432928645bbe8d226dceb}{tmp\+Cos} = float(np.\+dot(\hyperlink{a00125_a55e7171c96f320a08ad29f21ad5faf9a}{vec\+X},\hyperlink{a00125_aaa4ad55a8fe44bfc5a386dff027886b0}{vec\+Y}) / (np.\+linalg.\+norm(\hyperlink{a00125_a55e7171c96f320a08ad29f21ad5faf9a}{vec\+X}) $\ast$ np.\+linalg.\+norm(\hyperlink{a00125_aaa4ad55a8fe44bfc5a386dff027886b0}{vec\+Y})))
+\item 
+int \hyperlink{a00125_a35b7af9eb7cd962d33c5d56eae794c7b}{tmp\+H\+D} = 0
+\item 
+int \hyperlink{a00125_a9019a56cfd992899ffc519204307a8ae}{tmp\+E\+U} = 0
+\item 
+string \hyperlink{a00125_ab0e0a55161ee1fd9fb0f086a328f67b7}{ndn} = '\+\_\+0\+\_\+new\+\_\+all\+Stat\+Results'
+\item 
+tuple \hyperlink{a00125_aaf0f6fcbaaf97dcff16b62e86df0209c}{newdir\+All\+Results} = os.\+path.\+join(os.\+curdir, \hyperlink{a00125_ab0e0a55161ee1fd9fb0f086a328f67b7}{ndn})
+\item 
+tuple \hyperlink{a00125_ae86fc9dc3283934244ec28446445f722}{tmp\+Zero\+Saving} = \hyperlink{a00125_a52efd37e3719214b7a4c7c46842ae229}{zero\+Before\+Str\+Num}(time\+File\+I\+D, args.\+tmp\+N\+O\+F)
+\item 
+string \hyperlink{a00125_a05e902a00f3333a303563029c80605de}{out\+Fname\+Stat} = 'species\+Vector'
+\item 
+tuple \hyperlink{a00125_a372b8cd0e4d3200958e9c61e3a276fb1}{save\+File\+Stat} = open(\hyperlink{a00125_a05e902a00f3333a303563029c80605de}{out\+Fname\+Stat}, 'w')
+\item 
+string \hyperlink{a00125_a80aeec3ef5cc335351588c6f7c4b76cb}{str\+Types} = ''
+\item 
+int \hyperlink{a00125_aabada0bdbcd7fb71d37a9310d32f0a28}{cnt} = 0
 \end{DoxyCompactItemize}
 
 
+\subsection{Function Documentation}
+\hypertarget{a00125_a52efd37e3719214b7a4c7c46842ae229}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!zero\+Before\+Str\+Num@{zero\+Before\+Str\+Num}}
+\index{zero\+Before\+Str\+Num@{zero\+Before\+Str\+Num}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{zero\+Before\+Str\+Num}]{\setlength{\rightskip}{0pt plus 5cm}def acs\+Attractor\+Analysis\+In\+Time.\+zero\+Before\+Str\+Num (
+\begin{DoxyParamCaption}
+\item[{}]{tmpl, }
+\item[{}]{tmp\+L}
+\end{DoxyParamCaption}
+)}}\label{a00125_a52efd37e3719214b7a4c7c46842ae229}
+
+
+Definition at line 23 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+
+
 \subsection{Variable Documentation}
-\hypertarget{a00125_a0fef98b331f3de5212d309bd2d3556e7}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!args@{args}}
-\index{args@{args}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-args = parser.\-parse\-\_\-args()}}\label{a00125_a0fef98b331f3de5212d309bd2d3556e7}
+\hypertarget{a00125_a8c439282d32e80d2e2d4c02cc36f1101}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!all\+Concentrations@{all\+Concentrations}}
+\index{all\+Concentrations@{all\+Concentrations}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{all\+Concentrations}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis\+In\+Time.\+all\+Concentrations = \mbox{[}$\,$\mbox{]}}}\label{a00125_a8c439282d32e80d2e2d4c02cc36f1101}
 
 
-Definition at line 24 of file acs\-Dyn\-Stat\-In\-Time.\-py.
+Definition at line 54 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
 
-\hypertarget{a00125_aa0ad135db98d635147ecbd1480de89df}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!chem@{chem}}
-\index{chem@{chem}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{chem}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Dyn\-Stat\-In\-Time.\-chem = 1}}\label{a00125_aa0ad135db98d635147ecbd1480de89df}
-
-
-Definition at line 47 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00125_aa77abf10e3a92416282af2030df3b4b0}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!filename@{filename}}
-\index{filename@{filename}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{filename}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Dyn\-Stat\-In\-Time.\-filename = \char`\"{}\-\_\-arranged\-\_\-\char`\"{}}}\label{a00125_aa77abf10e3a92416282af2030df3b4b0}
+\hypertarget{a00125_af6dd7a5a396717328c091d96d629af7c}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X@{all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X@{all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis\+In\+Time.\+all\+Concentrations\+N\+O\+I\+N\+F\+L\+U\+X = \mbox{[}$\,$\mbox{]}}}\label{a00125_af6dd7a5a396717328c091d96d629af7c}
 
 
-Definition at line 66 of file acs\-Dyn\-Stat\-In\-Time.\-py.
+Definition at line 56 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
 
-\hypertarget{a00125_a353a268554f9ac8661c5e0142496f580}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!files\-To\-Anal@{files\-To\-Anal}}
-\index{files\-To\-Anal@{files\-To\-Anal}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{files\-To\-Anal}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-files\-To\-Anal = sorted(glob.\-glob(os.\-path.\-join({\bf str\-Path},{\bf str\-Sub\-Str\-Key})))}}\label{a00125_a353a268554f9ac8661c5e0142496f580}
-
-
-Definition at line 34 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00125_abf8db6a4d0dc9132f54755c72c871471}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!len\-Files\-To\-Anal@{len\-Files\-To\-Anal}}
-\index{len\-Files\-To\-Anal@{len\-Files\-To\-Anal}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{len\-Files\-To\-Anal}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-len\-Files\-To\-Anal = len({\bf files\-To\-Anal})}}\label{a00125_abf8db6a4d0dc9132f54755c72c871471}
+\hypertarget{a00125_aceddba8afb0eb0cc7ba102491a9a3c30}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!all\+Sorted\+Species@{all\+Sorted\+Species}}
+\index{all\+Sorted\+Species@{all\+Sorted\+Species}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{all\+Sorted\+Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+all\+Sorted\+Species = \mbox{[}$\,$\mbox{]}}}\label{a00125_aceddba8afb0eb0cc7ba102491a9a3c30}
 
 
-Definition at line 35 of file acs\-Dyn\-Stat\-In\-Time.\-py.
+Definition at line 53 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
 
-\hypertarget{a00125_a4679690d186f44a3ad8e6eb3a545fd39}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!num\-Of\-Traj@{num\-Of\-Traj}}
-\index{num\-Of\-Traj@{num\-Of\-Traj}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{num\-Of\-Traj}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-num\-Of\-Traj = 0}}\label{a00125_a4679690d186f44a3ad8e6eb3a545fd39}
+\hypertarget{a00125_a48013e92108a94a85d1e32c2397eb37c}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X@{all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X@{all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+all\+Sorted\+Species\+N\+O\+I\+N\+F\+L\+U\+X = \mbox{[}$\,$\mbox{]}}}\label{a00125_a48013e92108a94a85d1e32c2397eb37c}
 
 
-Definition at line 36 of file acs\-Dyn\-Stat\-In\-Time.\-py.
+Definition at line 55 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
 
-\hypertarget{a00125_a14b76a8235da778083f610cabe968c34}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!parser@{parser}}
-\index{parser@{parser}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-parser}}\label{a00125_a14b76a8235da778083f610cabe968c34}
-{\bfseries Initial value\-:}
+\hypertarget{a00125_a15adfffa273548845cea67d8b89f0bb1}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!A\+N\+G\+\_\+overall\+Res\+Matrix@{A\+N\+G\+\_\+overall\+Res\+Matrix}}
+\index{A\+N\+G\+\_\+overall\+Res\+Matrix@{A\+N\+G\+\_\+overall\+Res\+Matrix}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{A\+N\+G\+\_\+overall\+Res\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+A\+N\+G\+\_\+overall\+Res\+Matrix = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00125_a15adfffa273548845cea67d8b89f0bb1}
+
+
+Definition at line 195 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a7b0e67be0cf8de69432bdf56919d9e33}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+A\+N\+G\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00125_a7b0e67be0cf8de69432bdf56919d9e33}
+
+
+Definition at line 196 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_ab6621347b1ac2fe0e436bd2f384af8dc}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!args@{args}}
+\index{args@{args}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+args = parser.\+parse\+\_\+args()}}\label{a00125_ab6621347b1ac2fe0e436bd2f384af8dc}
+
+
+Definition at line 38 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_aabada0bdbcd7fb71d37a9310d32f0a28}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!cnt@{cnt}}
+\index{cnt@{cnt}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{cnt}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+Attractor\+Analysis\+In\+Time.\+cnt = 0}}\label{a00125_aabada0bdbcd7fb71d37a9310d32f0a28}
+
+
+Definition at line 298 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a63ee1925f76a40d04495e9b35c0973d2}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!E\+U\+C\+\_\+overall\+Res\+Matrix@{E\+U\+C\+\_\+overall\+Res\+Matrix}}
+\index{E\+U\+C\+\_\+overall\+Res\+Matrix@{E\+U\+C\+\_\+overall\+Res\+Matrix}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{E\+U\+C\+\_\+overall\+Res\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+E\+U\+C\+\_\+overall\+Res\+Matrix = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00125_a63ee1925f76a40d04495e9b35c0973d2}
+
+
+Definition at line 199 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a4f2ecc559d2c5d79bb138a2e8ced8127}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+E\+U\+C\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00125_a4f2ecc559d2c5d79bb138a2e8ced8127}
+
+
+Definition at line 200 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a70d70b9ab98e722475b03465c7f8dbbe}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!fid\+Species@{fid\+Species}}
+\index{fid\+Species@{fid\+Species}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{fid\+Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+fid\+Species = open({\bf species\+File}, '{\bf r}')}}\label{a00125_a70d70b9ab98e722475b03465c7f8dbbe}
+
+
+Definition at line 96 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a5e8d5d65865736555e76c3f04058ddd9}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!H\+A\+M\+\_\+overall\+Res\+Matrix@{H\+A\+M\+\_\+overall\+Res\+Matrix}}
+\index{H\+A\+M\+\_\+overall\+Res\+Matrix@{H\+A\+M\+\_\+overall\+Res\+Matrix}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{H\+A\+M\+\_\+overall\+Res\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+H\+A\+M\+\_\+overall\+Res\+Matrix = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00125_a5e8d5d65865736555e76c3f04058ddd9}
+
+
+Definition at line 197 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a6ea74abf4c94200ed1b27d892ecacc97}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X@{H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+H\+A\+M\+\_\+overall\+Res\+Matrix\+N\+O\+I\+N\+F\+L\+U\+X = np.\+zeros(({\bf number\+Of\+Folders},{\bf number\+Of\+Folders}))}}\label{a00125_a6ea74abf4c94200ed1b27d892ecacc97}
+
+
+Definition at line 198 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_ab0e0a55161ee1fd9fb0f086a328f67b7}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!ndn@{ndn}}
+\index{ndn@{ndn}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Attractor\+Analysis\+In\+Time.\+ndn = '\+\_\+0\+\_\+new\+\_\+all\+Stat\+Results'}}\label{a00125_ab0e0a55161ee1fd9fb0f086a328f67b7}
+
+
+Definition at line 243 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_aaf0f6fcbaaf97dcff16b62e86df0209c}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!newdir\+All\+Results@{newdir\+All\+Results}}
+\index{newdir\+All\+Results@{newdir\+All\+Results}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{newdir\+All\+Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+newdir\+All\+Results = os.\+path.\+join(os.\+curdir, {\bf ndn})}}\label{a00125_aaf0f6fcbaaf97dcff16b62e86df0209c}
+
+
+Definition at line 244 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!number\+Of\+Folders@{number\+Of\+Folders}}
+\index{number\+Of\+Folders@{number\+Of\+Folders}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{number\+Of\+Folders}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+Attractor\+Analysis\+In\+Time.\+number\+Of\+Folders = 0}}\label{a00125_a3a2fe097086bb0f4a505fca8f53dc2b0}
+
+
+Definition at line 123 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a28cc280ff54c726bd790cf781d3bab8c}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!number\+Of\+Gen@{number\+Of\+Gen}}
+\index{number\+Of\+Gen@{number\+Of\+Gen}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{number\+Of\+Gen}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+number\+Of\+Gen = len(glob.\+glob(os.\+path.\+join({\bf res\+Dir\+Path},'times\+\_\+$\ast$')))}}\label{a00125_a28cc280ff54c726bd790cf781d3bab8c}
+
+
+Definition at line 73 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a05e902a00f3333a303563029c80605de}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!out\+Fname\+Stat@{out\+Fname\+Stat}}
+\index{out\+Fname\+Stat@{out\+Fname\+Stat}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{out\+Fname\+Stat}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Attractor\+Analysis\+In\+Time.\+out\+Fname\+Stat = 'species\+Vector'}}\label{a00125_a05e902a00f3333a303563029c80605de}
+
+
+Definition at line 266 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a2cebadd75179c46e551a2facbdd2741b}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!overall\+Conc\+List@{overall\+Conc\+List}}
+\index{overall\+Conc\+List@{overall\+Conc\+List}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{overall\+Conc\+List}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis\+In\+Time.\+overall\+Conc\+List = \mbox{[}$\,$\mbox{]}}}\label{a00125_a2cebadd75179c46e551a2facbdd2741b}
+
+
+Definition at line 121 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_ad7eab833592c6cd395f9e2416dd13920}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X@{overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X}}
+\index{overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X@{overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis\+In\+Time.\+overall\+Conc\+List\+N\+O\+I\+N\+F\+L\+U\+X = \mbox{[}$\,$\mbox{]}}}\label{a00125_ad7eab833592c6cd395f9e2416dd13920}
+
+
+Definition at line 122 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_abed547533f84e18ca5b4c4a2cfaef63a}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!parser@{parser}}
+\index{parser@{parser}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+parser}}\label{a00125_abed547533f84e18ca5b4c4a2cfaef63a}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}
 1 = ArgumentParser(
-2                                 description=\textcolor{stringliteral}{'This script re-arrange results in a more friendly way from the
-       angle analysis in time.'}
-3                                 , epilog=\textcolor{stringliteral}{'''File with angle trajectories are created. '''})
+2                                 description=\textcolor{stringliteral}{'ELDA (Emergent Levell Dynamic       Assessment).'}
+3                                 , epilog=\textcolor{stringliteral}{'''Copyright Alessandro Filisetti 2013 '''})
 \end{DoxyCode}
 
 
-Definition at line 17 of file acs\-Dyn\-Stat\-In\-Time.\-py.
+Definition at line 32 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
 
-\hypertarget{a00125_a7ce24ac1959d7d1512b663f20f3e3100}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!pos@{pos}}
-\index{pos@{pos}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Dyn\-Stat\-In\-Time.\-pos = 0}}\label{a00125_a7ce24ac1959d7d1512b663f20f3e3100}
-
-
-Definition at line 46 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00125_a565bd873618e4d135a9903fb70ee5981}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!run4\-Chem@{run4\-Chem}}
-\index{run4\-Chem@{run4\-Chem}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{run4\-Chem}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Dyn\-Stat\-In\-Time.\-run4\-Chem = {\bf xsize}\mbox{[}0\mbox{]}}}\label{a00125_a565bd873618e4d135a9903fb70ee5981}
+\hypertarget{a00125_aa39692272363cd6f687c4b2a53f96594}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!pos@{pos}}
+\index{pos@{pos}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+pos = {\bf seq.\+index}(key)}}\label{a00125_aa39692272363cd6f687c4b2a53f96594}
 
 
-Definition at line 42 of file acs\-Dyn\-Stat\-In\-Time.\-py.
+Definition at line 177 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
 
-\hypertarget{a00125_aff72277efad2fb1d2f51e95f6fefc288}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!str\-Path@{str\-Path}}
-\index{str\-Path@{str\-Path}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-str\-Path = os.\-path.\-abspath(args.\-str\-Path)}}\label{a00125_aff72277efad2fb1d2f51e95f6fefc288}
-
-
-Definition at line 27 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00125_a4331412d1cdff7111cdc69adc31528c4}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!str\-Sub\-Str\-Key@{str\-Sub\-Str\-Key}}
-\index{str\-Sub\-Str\-Key@{str\-Sub\-Str\-Key}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{str\-Sub\-Str\-Key}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Dyn\-Stat\-In\-Time.\-str\-Sub\-Str\-Key = '$\ast$'}}\label{a00125_a4331412d1cdff7111cdc69adc31528c4}
+\hypertarget{a00125_a49fec7e1deea4728b5ef4a487d155de9}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!pos2@{pos2}}
+\index{pos2@{pos2}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{pos2}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+pos2 = {\bf seq.\+index}(key2)}}\label{a00125_a49fec7e1deea4728b5ef4a487d155de9}
 
 
-Definition at line 33 of file acs\-Dyn\-Stat\-In\-Time.\-py.
+Definition at line 183 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
 
-\hypertarget{a00125_acb2620669fa00dd24be0687c86647b43}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!tmp\-Head@{tmp\-Head}}
-\index{tmp\-Head@{tmp\-Head}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{tmp\-Head}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Dyn\-Stat\-In\-Time.\-tmp\-Head = ''}}\label{a00125_acb2620669fa00dd24be0687c86647b43}
-
-
-Definition at line 48 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00125_a52808d1f82b263c51e9bfb9e18b053c0}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!x@{x}}
-\index{x@{x}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-x = np.\-array(map(list, np.\-loadtxt(file\-To\-Anal, str)), float)}}\label{a00125_a52808d1f82b263c51e9bfb9e18b053c0}
+\hypertarget{a00125_a28ca19f0f566396ef664e068a41a2837}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!res\+Dir\+Path@{res\+Dir\+Path}}
+\index{res\+Dir\+Path@{res\+Dir\+Path}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{res\+Dir\+Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+res\+Dir\+Path = os.\+path.\+abspath(os.\+path.\+join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))}}\label{a00125_a28ca19f0f566396ef664e068a41a2837}
 
 
-Definition at line 39 of file acs\-Dyn\-Stat\-In\-Time.\-py.
+Definition at line 67 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
 
-\hypertarget{a00125_ade03788f04a663a14a9abeae4e7ea0e2}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!xsize@{xsize}}
-\index{xsize@{xsize}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{xsize}]{\setlength{\rightskip}{0pt plus 5cm}acs\-Dyn\-Stat\-In\-Time.\-xsize = x.\-shape}}\label{a00125_ade03788f04a663a14a9abeae4e7ea0e2}
-
-
-Definition at line 40 of file acs\-Dyn\-Stat\-In\-Time.\-py.
-
-\hypertarget{a00125_aa7979c32d5499d000edacba8fcadd039}{\index{acs\-Dyn\-Stat\-In\-Time@{acs\-Dyn\-Stat\-In\-Time}!y@{y}}
-\index{y@{y}!acsDynStatInTime@{acs\-Dyn\-Stat\-In\-Time}}
-\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Dyn\-Stat\-In\-Time.\-y = np.\-zeros(({\bf len\-Files\-To\-Anal},{\bf num\-Of\-Traj}))}}\label{a00125_aa7979c32d5499d000edacba8fcadd039}
+\hypertarget{a00125_a372b8cd0e4d3200958e9c61e3a276fb1}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!save\+File\+Stat@{save\+File\+Stat}}
+\index{save\+File\+Stat@{save\+File\+Stat}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{save\+File\+Stat}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+save\+File\+Stat = open({\bf out\+Fname\+Stat}, 'w')}}\label{a00125_a372b8cd0e4d3200958e9c61e3a276fb1}
 
 
-Definition at line 44 of file acs\-Dyn\-Stat\-In\-Time.\-py.
+Definition at line 267 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a1bdf98839177836f238806755e46ac3c}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!seq@{seq}}
+\index{seq@{seq}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{seq}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis\+In\+Time.\+seq = \mbox{[}$\,$\mbox{]}}}\label{a00125_a1bdf98839177836f238806755e46ac3c}
+
+
+Definition at line 101 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a3c620554bbf7ae30d97a60565fea8d1e}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!species\+File@{species\+File}}
+\index{species\+File@{species\+File}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{species\+File}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+Attractor\+Analysis\+In\+Time.\+species\+File = {\bf species\+Files}\mbox{[}time\+File\+I\+D\mbox{]}}}\label{a00125_a3c620554bbf7ae30d97a60565fea8d1e}
+
+
+Definition at line 91 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a18645475f8596346ca431e99661b5674}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!species\+Files@{species\+Files}}
+\index{species\+Files@{species\+Files}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{species\+Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+species\+Files = sorted(glob.\+glob(os.\+path.\+join({\bf res\+Dir\+Path},{\bf str\+Species})))}}\label{a00125_a18645475f8596346ca431e99661b5674}
+
+
+Definition at line 86 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a4657fd3a80cf1c76ab075d62d8de3bf3}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!species\+Files\+Zero@{species\+Files\+Zero}}
+\index{species\+Files\+Zero@{species\+Files\+Zero}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{species\+Files\+Zero}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+species\+Files\+Zero = sorted(glob.\+glob(os.\+path.\+join({\bf res\+Dir\+Path},{\bf str\+Species\+Zero})))}}\label{a00125_a4657fd3a80cf1c76ab075d62d8de3bf3}
+
+
+Definition at line 81 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a1d168f4d444ea1d02f186a7568344fba}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!Str\+Path@{Str\+Path}}
+\index{Str\+Path@{Str\+Path}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{Str\+Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+Str\+Path = os.\+path.\+abspath(args.\+Str\+Path)}}\label{a00125_a1d168f4d444ea1d02f186a7568344fba}
+
+
+Definition at line 41 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_ac1f05e7db61bcc83ea1ed27460462202}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!str\+Species@{str\+Species}}
+\index{str\+Species@{str\+Species}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{str\+Species}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Attractor\+Analysis\+In\+Time.\+str\+Species = 'species\+\_\+'}}\label{a00125_ac1f05e7db61bcc83ea1ed27460462202}
+
+
+Definition at line 83 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_aea2d717887265b294c623099d2495d4f}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!str\+Species\+Zero@{str\+Species\+Zero}}
+\index{str\+Species\+Zero@{str\+Species\+Zero}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{str\+Species\+Zero}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Attractor\+Analysis\+In\+Time.\+str\+Species\+Zero = 'species\+\_\+'}}\label{a00125_aea2d717887265b294c623099d2495d4f}
+
+
+Definition at line 80 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a80aeec3ef5cc335351588c6f7c4b76cb}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!str\+Types@{str\+Types}}
+\index{str\+Types@{str\+Types}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{str\+Types}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+Attractor\+Analysis\+In\+Time.\+str\+Types = ''}}\label{a00125_a80aeec3ef5cc335351588c6f7c4b76cb}
+
+
+Definition at line 269 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a9401cc8fb642e77e034e21ef9babcb24}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!str\+Zeros@{str\+Zeros}}
+\index{str\+Zeros@{str\+Zeros}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{str\+Zeros}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+str\+Zeros = {\bf zero\+Before\+Str\+Num}(ngen, {\bf number\+Of\+Gen})}}\label{a00125_a9401cc8fb642e77e034e21ef9babcb24}
+
+
+Definition at line 77 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a547703ec10e432928645bbe8d226dceb}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!tmp\+Cos@{tmp\+Cos}}
+\index{tmp\+Cos@{tmp\+Cos}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{tmp\+Cos}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+tmp\+Cos = float(np.\+dot({\bf vec\+X},{\bf vec\+Y}) / (np.\+linalg.\+norm({\bf vec\+X}) $\ast$ np.\+linalg.\+norm({\bf vec\+Y})))}}\label{a00125_a547703ec10e432928645bbe8d226dceb}
+
+
+Definition at line 208 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a4f312756a4e405be853b0a84be7e2e54}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!tmp\+Dirs@{tmp\+Dirs}}
+\index{tmp\+Dirs@{tmp\+Dirs}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{tmp\+Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+tmp\+Dirs = sort(os.\+listdir({\bf Str\+Path}))}}\label{a00125_a4f312756a4e405be853b0a84be7e2e54}
+
+
+Definition at line 52 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a9019a56cfd992899ffc519204307a8ae}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!tmp\+E\+U@{tmp\+E\+U}}
+\index{tmp\+E\+U@{tmp\+E\+U}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{tmp\+E\+U}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+Attractor\+Analysis\+In\+Time.\+tmp\+E\+U = 0}}\label{a00125_a9019a56cfd992899ffc519204307a8ae}
+
+
+Definition at line 213 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a35b7af9eb7cd962d33c5d56eae794c7b}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!tmp\+H\+D@{tmp\+H\+D}}
+\index{tmp\+H\+D@{tmp\+H\+D}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{tmp\+H\+D}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+Attractor\+Analysis\+In\+Time.\+tmp\+H\+D = 0}}\label{a00125_a35b7af9eb7cd962d33c5d56eae794c7b}
+
+
+Definition at line 212 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_ae86fc9dc3283934244ec28446445f722}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!tmp\+Zero\+Saving@{tmp\+Zero\+Saving}}
+\index{tmp\+Zero\+Saving@{tmp\+Zero\+Saving}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{tmp\+Zero\+Saving}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+tmp\+Zero\+Saving = {\bf zero\+Before\+Str\+Num}(time\+File\+I\+D, args.\+tmp\+N\+O\+F)}}\label{a00125_ae86fc9dc3283934244ec28446445f722}
+
+
+Definition at line 263 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_af30cd903eabfe4c9167f2a5d0062a4ce}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!today@{today}}
+\index{today@{today}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{today}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+today = dt.\+date.\+today()}}\label{a00125_af30cd903eabfe4c9167f2a5d0062a4ce}
+
+
+Definition at line 43 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_aeed4ca0c266fb5e31aebbbbe2f389378}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!tot\+Dir\+Name@{tot\+Dir\+Name}}
+\index{tot\+Dir\+Name@{tot\+Dir\+Name}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{tot\+Dir\+Name}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+tot\+Dir\+Name = os.\+path.\+join({\bf Str\+Path},tmp\+Dir)}}\label{a00125_aeed4ca0c266fb5e31aebbbbe2f389378}
+
+
+Definition at line 63 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_a55e7171c96f320a08ad29f21ad5faf9a}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!vec\+X@{vec\+X}}
+\index{vec\+X@{vec\+X}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{vec\+X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+vec\+X = np.\+array(lx)}}\label{a00125_a55e7171c96f320a08ad29f21ad5faf9a}
+
+
+Definition at line 205 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
+
+\hypertarget{a00125_aaa4ad55a8fe44bfc5a386dff027886b0}{\index{acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}!vec\+Y@{vec\+Y}}
+\index{vec\+Y@{vec\+Y}!acs\+Attractor\+Analysis\+In\+Time@{acs\+Attractor\+Analysis\+In\+Time}}
+\subsubsection[{vec\+Y}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+Attractor\+Analysis\+In\+Time.\+vec\+Y = np.\+array(ly)}}\label{a00125_aaa4ad55a8fe44bfc5a386dff027886b0}
+
+
+Definition at line 206 of file acs\+Attractor\+Analysis\+In\+Time.\+py.
 

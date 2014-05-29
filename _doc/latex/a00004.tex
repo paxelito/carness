@@ -1,4 +1,4 @@
-In order to proceed with the simulation the system needs from {\bfseries 4} to {\bfseries 6 (open system and energy on)} initial data structures files (an example for each file is located into the source code folder)\-: \begin{DoxyVerb} - \c acsm2s.conf (described in the \ref parameters section)
+In order to proceed with the simulation the system needs from {\bfseries 4} to {\bfseries 6 (open system and energy on)} initial data structures files (an example for each file is located into the source code folder)\+: \begin{DoxyVerb} - \c acsm2s.conf (described in the \ref parameters section)
  - \c _acsspecies.csv - This file contains all the initial <b>species</b> with their proprieties
  - \c _acsreactions.csv - This file contains all the initial <b>reactions</b> with their proprieties
  - \c _acscatalysis.csv - This file contains all the <b>correspondances between species and reactions</b> with their proprieties
@@ -13,79 +13,79 @@ and. if the system is energy based \begin{DoxyVerb}          - \c _acsnrgboolean
 \end{DoxyVerb}
 
 
-\par
- \hypertarget{a00004_subSpecies}{}\section{\-\_\-acsspecies.\-csv}\label{a00004_subSpecies}
-Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{15}
+~\newline
+ \hypertarget{a00004_subSpecies}{}\section{\+\_\+acsspecies.\+csv}\label{a00004_subSpecies}
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\+: \begin{TabularC}{15}
 \hline
-Identificator(\-I\-D)&Sequence&Concentration&Diffusion enhancement&Precipitation flag&Complex Dissociation Kinetic Constant&Complex Binding Point &Already evaluated flag&Species Age&Number of reborns&Catalyst I\-D&Complex I\-D&Phosphorilation Kinetic constant&Charged Molecules Concentration&Concentration locked  \\\cline{1-15}
+Identificator(\+I\+D)&Sequence&Concentration&Diffusion enhancement&Precipitation flag&Complex Dissociation Kinetic Constant&Complex Binding Point &Already evaluated flag&Species Age&Number of reborns&Catalyst I\+D&Complex I\+D&Phosphorilation Kinetic constant&Charged Molecules Concentration&Concentration locked  \\\cline{1-15}
 \end{TabularC}
 
 \begin{DoxyItemize}
-\item {\itshape I\-D}\-: Species Index
-\item {\itshape Sequence}\-: Species sequence
-\item {\itshape Concentration}\-: Total concentration of the species
-\item {\itshape Diffusion enhancement}\-: Diffusion enhancement
-\item {\itshape Precipitation flag}\-: If 0 species is precipited and each new molecules of this species will be precipited
-\item {\itshape Dissociation Kinetic Constant}\-: Complex dissociation kinetic constant
-\item {\itshape Binding point}\-: If the species is a complex this field indicates the division point between catalyst and substrate
-\item {\itshape Evaluated}\-: If 1 the species is not virtual and all the reactions it catalyzes are created, if 0 the species is only potentially created
-\item {\itshape Species Age}\-: Age (in seconds) of the species since its last cretion, each time that a species amount pass from 0 to $>$ 1 the counter is resetted
-\item {\itshape Number of reborns}\-: Number of times that a species amount pass from 0 to $>$ 0
-\item {\itshape Catalyst I\-D}\-: If the species is a complex (e.\-g. catalyst C forming a complex C.\-A with the substrate A) this is the C\-A\-T\-A\-L\-Y\-S\-T I\-D
-\item {\itshape Substrate I\-D}\-: If the species is a complex (e.\-g. catalyst C forming a complex C.\-A with the substrate A) this is the S\-U\-B\-S\-T\-A\-T\-E I\-D
-\item {\itshape Phosphorilation Kinetic constant}\-: N\-O\-T U\-S\-E\-D N\-O\-W!!!
-\item {\itshape Charged Molecules Concentration}\-: Concentration of the charged molecules belonging to the species.
-\item {\itshape Concentration locked}\-: 0 -\/$>$ Concentration of the species changes according to the reactions affecting it, 1 -\/$>$ The concentration of the species is locked (permeable species, the concentration of the species is assumed to be constant within the cell and in the environment) \par
+\item {\itshape I\+D}\+: Species Index
+\item {\itshape Sequence}\+: Species sequence
+\item {\itshape Concentration}\+: Total concentration of the species
+\item {\itshape Diffusion enhancement}\+: Diffusion enhancement
+\item {\itshape Precipitation flag}\+: If 0 species is precipited and each new molecules of this species will be precipited
+\item {\itshape Dissociation Kinetic Constant}\+: Complex dissociation kinetic constant
+\item {\itshape Binding point}\+: If the species is a complex this field indicates the division point between catalyst and substrate
+\item {\itshape Evaluated}\+: If 1 the species is not virtual and all the reactions it catalyzes are created, if 0 the species is only potentially created
+\item {\itshape Species Age}\+: Age (in seconds) of the species since its last cretion, each time that a species amount pass from 0 to $>$ 1 the counter is resetted
+\item {\itshape Number of reborns}\+: Number of times that a species amount pass from 0 to $>$ 0
+\item {\itshape Catalyst I\+D}\+: If the species is a complex (e.\+g. catalyst C forming a complex C.\+A with the substrate A) this is the C\+A\+T\+A\+L\+Y\+S\+T I\+D
+\item {\itshape Substrate I\+D}\+: If the species is a complex (e.\+g. catalyst C forming a complex C.\+A with the substrate A) this is the S\+U\+B\+S\+T\+A\+T\+E I\+D
+\item {\itshape Phosphorilation Kinetic constant}\+: N\+O\+T U\+S\+E\+D N\+O\+W!!!
+\item {\itshape Charged Molecules Concentration}\+: Concentration of the charged molecules belonging to the species.
+\item {\itshape Concentration locked}\+: 0 -\/$>$ Concentration of the species changes according to the reactions affecting it, 1 -\/$>$ The concentration of the species is locked (permeable species, the concentration of the species is assumed to be constant within the cell and in the environment) ~\newline
  
-\end{DoxyItemize}\hypertarget{a00004_subReactions}{}\section{\-\_\-acsreactions.\-csv}\label{a00004_subReactions}
-Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{8}
+\end{DoxyItemize}\hypertarget{a00004_subReactions}{}\section{\+\_\+acsreactions.\+csv}\label{a00004_subReactions}
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\+: \begin{TabularC}{8}
 \hline
 Identificator&Reaction type&Species 1&Species 2&Species 3 &Reaction counter&Energy type&k spont  \\\cline{1-8}
 \end{TabularC}
 
 \begin{DoxyItemize}
-\item {\itshape Identificator}\-: Reaction I\-D
-\item {\itshape Reaction type}\-: 0 Condensation, 1 Cleavage
-\item {\itshape Species 1}\-: Product I\-D if reaction type = 1, Substrate I\-D reaction type = 0
-\item {\itshape Species 2}\-: Product I\-D if reaction type = 0, Substrate I\-D reaction type = 1
-\item {\itshape Species 3}\-: Product I\-D if reaction type = 0, Substrate I\-D reaction type = 1
-\item {\itshape Reaction counter}\-: Reaction occurrance counter
-\item {\itshape Energy Type}\-: The reaction energetic configuration, 1 for endoergonic 0 for esoergonic
-\item {\itshape Spontaneous Constant}\-: Spontaneous reaction constant \par
+\item {\itshape Identificator}\+: Reaction I\+D
+\item {\itshape Reaction type}\+: 0 Condensation, 1 Cleavage
+\item {\itshape Species 1}\+: Product I\+D if reaction type = 1, Substrate I\+D reaction type = 0
+\item {\itshape Species 2}\+: Product I\+D if reaction type = 0, Substrate I\+D reaction type = 1
+\item {\itshape Species 3}\+: Product I\+D if reaction type = 0, Substrate I\+D reaction type = 1
+\item {\itshape Reaction counter}\+: Reaction occurrance counter
+\item {\itshape Energy Type}\+: The reaction energetic configuration, 1 for endoergonic 0 for esoergonic
+\item {\itshape Spontaneous Constant}\+: Spontaneous reaction constant ~\newline
  
-\end{DoxyItemize}\hypertarget{a00004_subCatalysis}{}\section{\-\_\-acscatalysis.\-csv}\label{a00004_subCatalysis}
-Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{8}
+\end{DoxyItemize}\hypertarget{a00004_subCatalysis}{}\section{\+\_\+acscatalysis.\+csv}\label{a00004_subCatalysis}
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\+: \begin{TabularC}{8}
 \hline
-Identificator&Catalyst I\-D&Reaction I\-D&Catalysis counter&K condensation&K cleavage&K Complex Association&Complex creation substrate target  \\\cline{1-8}
+Identificator&Catalyst I\+D&Reaction I\+D&Catalysis counter&K condensation&K cleavage&K Complex Association&Complex creation substrate target  \\\cline{1-8}
 \end{TabularC}
 
 \begin{DoxyItemize}
-\item {\itshape Identificator}\-: Catalysis I\-D
-\item {\itshape Catalyst I\-D}\-: species (as catalyst) I\-D
-\item {\itshape Reaction I\-D}\-: Reaction I\-D
-\item {\itshape Catalysis counter}\-: Catalysis counter
-\item {\itshape K final step end condensation kinetic constant}\-: Final step end condensation kinetic constant
-\item {\itshape K Cleavage}\-: Cleavage Kinetic constant
-\item {\itshape K complex association}\-: Complex association kinetic constant
-\item {\itshape Complex creation substrate target}\-: Which substrate will be involved in complex creation, 1 or 2 \par
+\item {\itshape Identificator}\+: Catalysis I\+D
+\item {\itshape Catalyst I\+D}\+: species (as catalyst) I\+D
+\item {\itshape Reaction I\+D}\+: Reaction I\+D
+\item {\itshape Catalysis counter}\+: Catalysis counter
+\item {\itshape K final step end condensation kinetic constant}\+: Final step end condensation kinetic constant
+\item {\itshape K Cleavage}\+: Cleavage Kinetic constant
+\item {\itshape K complex association}\+: Complex association kinetic constant
+\item {\itshape Complex creation substrate target}\+: Which substrate will be involved in complex creation, 1 or 2 ~\newline
  
-\end{DoxyItemize}\hypertarget{a00004_subInflux}{}\section{\-\_\-acsinflux.\-csv}\label{a00004_subInflux}
-Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{2}
+\end{DoxyItemize}\hypertarget{a00004_subInflux}{}\section{\+\_\+acsinflux.\+csv}\label{a00004_subInflux}
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\+: \begin{TabularC}{2}
 \hline
 Identificator&Probabilitity  \\\cline{1-2}
 \end{TabularC}
 
 \begin{DoxyItemize}
-\item {\itshape Identificator}\-: Species I\-D
-\item {\itshape Probabilitity}\-: Probability to be selected when a species has to be inserted into the system \par
+\item {\itshape Identificator}\+: Species I\+D
+\item {\itshape Probabilitity}\+: Probability to be selected when a species has to be inserted into the system ~\newline
  
-\end{DoxyItemize}\hypertarget{a00004_subEnergy}{}\section{\-\_\-acsnrgbooleanfunctions.\-csv}\label{a00004_subEnergy}
-Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\-: \begin{TabularC}{2}
+\end{DoxyItemize}\hypertarget{a00004_subEnergy}{}\section{\+\_\+acsnrgbooleanfunctions.\+csv}\label{a00004_subEnergy}
+Columns description (each field is delimited using \char`\"{}\textbackslash{}t\char`\"{})\+: \begin{TabularC}{2}
 \hline
 Energetic Boolean Function (decimal form)&Probabilitity  \\\cline{1-2}
 \end{TabularC}
 
 \begin{DoxyItemize}
-\item {\itshape Energetic Boolean Function (decimal form)}\-: Energetic Boolean Function decimal form, e.\-g. 1001011010100 = 4820
-\item {\itshape Probabilitity}\-: Probability to be selected when a new reaction has to be created 
+\item {\itshape Energetic Boolean Function (decimal form)}\+: Energetic Boolean Function decimal form, e.\+g. 1001011010100 = 4820
+\item {\itshape Probabilitity}\+: Probability to be selected when a new reaction has to be created 
 \end{DoxyItemize}

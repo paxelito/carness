@@ -52,7 +52,8 @@ species::species()
 */
 species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, acs_double tmpDiffusionEnh, 
 				 acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint, 
-				 acs_int tmpEvalueted, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut)
+				 acs_int tmpEvalueted, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable,
+				 acs_double tmpInflux_rate, acs_int tmpMaxLOut)
 {
 	id = tmpID;
 	sequence = tmpSequence;
@@ -98,7 +99,8 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
  */
 species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentration, acs_double tmpDiffusionEnh, 
 				 acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint, 
-				 acs_int tmpEvalueted, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut)
+				 acs_int tmpEvalueted, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable,
+				 acs_double tmpInflux_rate, acs_int tmpMaxLOut)
 {
 	id = tmpID;
 	sequence = tmpSequence;
@@ -140,7 +142,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 				 acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
                  acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho,
                  acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut,
-                 bool tmpRndConcentration)
+                 bool tmpRndConcentration, MTRand& tmp_RndDoubleGen)
 {
 
 	id = tmpID;
@@ -162,6 +164,8 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 	
 	//cout << "concentration based random concentration: " << tmpRndConcentration << endl;
 	//cin.ignore().get();
+	if(tmpRndConcentration){amount = random_poisson(acs_double(amount),tmp_RndDoubleGen);}
+	numToConc(tmpVolume);
 
 	// Set concentrationFixed propriety
 	concentrationFixed = false;
@@ -183,15 +187,10 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 				 acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
                  acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho,
                  acs_double tmpKLoadConc, acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut,
-                 bool tmpRndConcentration)
-
+                 bool tmpRndConcentration, MTRand& tmp_RndDoubleGen)
 {
-
 	id = tmpID;
 	sequence = tmpSequence;
-	concentration = tmpConcentration;
-	concToNum(tmpVolume);
-	numToConc(tmpVolume);
 	chargedMols = round(tmpKLoadConc*tmpVolume*AVO);
 	age = tmpAge;
 	reborns = tmpReborns;
@@ -205,10 +204,15 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 	K_phospho = tmpK_phospho;
 	energizable = tmpEnergizable;
 	
+	// CONCENTRATION SETTINGS
     //cout << "concentration based random concentration: " << tmpRndConcentration << endl;
 	//cin.ignore().get();
+	concentration = tmpConcentration;
+	concToNum(tmpVolume);
+	if(tmpRndConcentration){amount = random_poisson(acs_double(amount),tmp_RndDoubleGen);}
+	numToConc(tmpVolume);
 
-	// Set concentrationFixed propriety
+	// Set concentrationFixed proprerty
 	concentrationFixed = false;
 	if((tmpInflux_rate == 0) && (tmpMaxLOut > 0)){ if(sequence.length() <= tmpMaxLOut) concentrationFixed = true;}
 
@@ -458,9 +462,19 @@ void species::printEventsList() {
 	else
 		for (acs_longInt i = 0; i < events.size(); i++)
 			cout<<events[i]<<"  ";
+	cout << endl;
+}
 
-	cout<<endl;
+/**
+ * Function to reset the species concentration according to the initialization method
+ */
 
+void species::resetToInitConc(acs_double tmpVolume, bool tmpRndConcentration, MTRand& tmp_rndDoubleGen){
+
+	concentration=firstConcentration;
+	concToNum(tmpVolume);
+	if(tmpRndConcentration){amount = random_poisson(acs_double(amount),tmp_rndDoubleGen);}
+	numToConc(tmpVolume);
 }
 
 

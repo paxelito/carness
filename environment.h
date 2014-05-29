@@ -29,8 +29,10 @@ private:
     acs_int nAttempts; // MAX number of attempts for simulation
     acs_int Currentattempts; // Current number of temptatives
     acs_double timeStructuresSavingInterval; // Time between two successive files storing procedure
+    bool saveReactionParameters; // boolean variable indicating if the reaction parameters must be saved
     acs_double fileTimesSaveInterval; // Time between two successive times.csv storing procedure
     acs_double fileAmountSaveInterval; // Time between two successive species amount storing procedure
+    acs_int bufferRctsCountRow;
     bool randomInitSpeciesConcentration; // If true the initial concentration of a species is randomly created
     acs_double newSpeciesProbMinThreshold; // Minimal new species creation probability to allow system expansion
     acs_int lastFiringDiskSpeciesID; // ID of the last species of the firing disk
@@ -167,6 +169,7 @@ private:
     acs_int getMAXattempts()const{return nAttempts;}
     acs_int getCurrentAttempts()const{return Currentattempts;}
 	acs_double getTimeStructuresSavingInterval()const{return timeStructuresSavingInterval;}
+	bool getsaveReactionParameters()const{return saveReactionParameters;}
     acs_double getFileTimesSavingInterval()const{return fileTimesSaveInterval;}
     acs_double getFileAmountSavingInterval()const{return fileAmountSaveInterval;}
 	acs_int getLastFiringDiskSpeciesID()const{return lastFiringDiskSpeciesID;}
@@ -184,6 +187,8 @@ private:
 	acs_longInt getNnewSpecies();
 	acs_longInt getNcpx()const{return numberOfCpx;}
 	acs_longInt getNcpxMols()const{return numberOfCpxMols;}
+	acs_int getBufferRctsCountRow()const{return bufferRctsCountRow;}
+	void setBufferRctsCountRow(acs_int tmpValue){bufferRctsCountRow = tmpValue;}
 	
 	acs_double getGillespieMean()const{return gillespieMean;}
 	acs_double getgillespieSD()const{return gillespieSD;}
@@ -261,13 +266,13 @@ private:
 	void	printAllSpeciesIdAndSequenceWithEvents();
 	
     // FILE STRUCTURE UPLOAD FUNCTION
-    bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath);
+    bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath, MTRand& tmpRndDoubleGen);
     bool createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePath);
     bool createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFilePath);
     bool createInfluxLayersFromFileSTD(string tmpInfluxFilePath);
     bool createNrgBooleanFunctionsFromFileSTD(string tmpBoolNrgFilePath);
 
-    bool createInitialMoleculesPopulationFromSpecificFileSTD(string tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
+    bool createInitialMoleculesPopulationFromSpecificFileSTD(string tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM, MTRand& tmpRndDoubleGen);
     bool createInitialReactionsLayerFromSpecificFileSTD(string tmpReactionsFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
     bool createInitialCatalysisLayerFromSpecificFileSTD(string tmpCatalysisFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
 	
@@ -356,7 +361,7 @@ private:
     // STRUCTURE CLEANING
 	void clearAllStructures();
     //void resetConcentrationToInitialConditions(QString tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM);
-    void resetConcentrationToInitialConditions();
+    void resetConcentrationToInitialConditions(MTRand& tmprndDoubleGen);
     void storeInitialStructures();
 	void clearGilScores();
 
@@ -418,6 +423,7 @@ private:
 	//bool saveAdjacentStructures(acs_int tmpCurrentSim, acs_int tmpCurrentStep, QString tmpStoringPath);
 	bool saveTimeSpeciesAmountSTD(acs_int tmp__CurrentStep);
 	bool saveTimeReactionBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
+	bool saveReactionBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
 	bool saveAmountBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
 
     // STATISTIC FUNCTIONS

@@ -1,79 +1,106 @@
-\hypertarget{a00150}{\section{lib.\-visual.\-graphics Namespace Reference}
-\label{a00150}\index{lib.\-visual.\-graphics@{lib.\-visual.\-graphics}}
+\hypertarget{a00150}{\section{lib.\+model.\+species Namespace Reference}
+\label{a00150}\index{lib.\+model.\+species@{lib.\+model.\+species}}
 }
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{a00150_aa27c34e948992165c7a98e5ca3605549}{plot\-\_\-np\-\_\-txt\-\_\-selcols\-\_\-and\-\_\-rows\-\_\-allvarinrows}
+def \hyperlink{a00150_aaa0ed83b7623b65c77b0d583590219ec}{create\+Complete\+Species\+Population}
 \item 
-def \hyperlink{a00150_a99e047c066345a973bfbb527e8a91085}{Plot\-Matrix}
+def \hyperlink{a00150_a1c482d162198854303fbcd154fb1ccbf}{get\+Tot\+Number\+Of\+Species\+From\+Complete\+Pop}
+\item 
+def \hyperlink{a00150_a0aab4ec6c7d010b885204f0420072f29}{create\+File\+Species}
+\item 
+def \hyperlink{a00150_a13eb7af04a51ec15dd79ef70fadc93f4}{weighted\+Choice}
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-dictionary \hyperlink{a00150_a3c83ccb4d4d1fcb0ea5f6b8616a1d0df}{font}
-\item 
-list \hyperlink{a00150_aae94b6a9df961a260c0fa476e2b4693a}{colr} = \mbox{[}'\hyperlink{a00110_abf70355c2e58f64c6b18bda1b9bccfd7}{k}','\hyperlink{a00031_ac862e7284527eb913b1351c8bfb8e079}{r}','\hyperlink{a00035_a50b4f3ddde10830a3976c71083aaee3f}{b}','g','\hyperlink{a00035_a6be92348ba85ef257b11d06209e1d7b6}{c}','m','y'\mbox{]}
+float \hyperlink{a00150_a4a6d118da79b62429ea35b64ef429b11}{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+} = 6.\+022141e23
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{a00150_aa27c34e948992165c7a98e5ca3605549}{\index{lib\-::visual\-::graphics@{lib\-::visual\-::graphics}!plot\-\_\-np\-\_\-txt\-\_\-selcols\-\_\-and\-\_\-rows\-\_\-allvarinrows@{plot\-\_\-np\-\_\-txt\-\_\-selcols\-\_\-and\-\_\-rows\-\_\-allvarinrows}}
-\index{plot\-\_\-np\-\_\-txt\-\_\-selcols\-\_\-and\-\_\-rows\-\_\-allvarinrows@{plot\-\_\-np\-\_\-txt\-\_\-selcols\-\_\-and\-\_\-rows\-\_\-allvarinrows}!lib::visual::graphics@{lib\-::visual\-::graphics}}
-\subsubsection[{plot\-\_\-np\-\_\-txt\-\_\-selcols\-\_\-and\-\_\-rows\-\_\-allvarinrows}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-visual.\-graphics.\-plot\-\_\-np\-\_\-txt\-\_\-selcols\-\_\-and\-\_\-rows\-\_\-allvarinrows (
+\hypertarget{a00150_aaa0ed83b7623b65c77b0d583590219ec}{\index{lib\+::model\+::species@{lib\+::model\+::species}!create\+Complete\+Species\+Population@{create\+Complete\+Species\+Population}}
+\index{create\+Complete\+Species\+Population@{create\+Complete\+Species\+Population}!lib\+::model\+::species@{lib\+::model\+::species}}
+\subsubsection[{create\+Complete\+Species\+Population}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+model.\+species.\+create\+Complete\+Species\+Population (
 \begin{DoxyParamCaption}
-\item[{}]{tmpfn, }
-\item[{}]{tmpdata, }
-\item[{}]{cols, }
-\item[{}]{vars, }
-\item[{}]{varcond, }
-\item[{}]{tmpxlab, }
-\item[{}]{tmpylab, }
-\item[{}]{tmplegend, }
-\item[{}]{tmpylim = {\ttfamily None}, }
-\item[{}]{tmpxlim = {\ttfamily None}, }
-\item[{}]{pstore = {\ttfamily '../'}, }
-\item[{}]{tmpimgformat = {\ttfamily 'png'}, }
-\item[{}]{tmpdpi = {\ttfamily 150}}
+\item[{}]{M, }
+\item[{}]{alphabet}
 \end{DoxyParamCaption}
-)}}\label{a00150_aa27c34e948992165c7a98e5ca3605549}
-\begin{DoxyVerb}Plot a numpy matrix with all the variables in rows. Variables are defined by the value of a particular colum
-\end{DoxyVerb}
- 
+)}}\label{a00150_aaa0ed83b7623b65c77b0d583590219ec}
 
-Definition at line 29 of file graphics.\-py.
 
-\hypertarget{a00150_a99e047c066345a973bfbb527e8a91085}{\index{lib\-::visual\-::graphics@{lib\-::visual\-::graphics}!Plot\-Matrix@{Plot\-Matrix}}
-\index{Plot\-Matrix@{Plot\-Matrix}!lib::visual::graphics@{lib\-::visual\-::graphics}}
-\subsubsection[{Plot\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-visual.\-graphics.\-Plot\-Matrix (
-\begin{DoxyParamCaption}
-\item[{}]{tmp\-Filename, }
-\item[{}]{tmp\-X, }
-\item[{}]{tmp\-Y, }
-\item[{}]{tmp\-Xlabel, }
-\item[{}]{tmp\-Ylabel, }
-\item[{}]{tmp\-Legend}
-\end{DoxyParamCaption}
-)}}\label{a00150_a99e047c066345a973bfbb527e8a91085}
-\begin{DoxyVerb}PlotMatrix is a function for plotting one or more lines.
-        - tmpFilename is the path + file name of the file to save
-        - tmpX can be a matrix column or a vector
-        - tmpY can be a matrix or a vector
-        - tmpTitle, tmpXlabel and tmpYlabel are a strings
-        - tmpLegend can be a set of strings or can be set to None value if you dont't need legend 
-\end{DoxyVerb}
- 
-
-Definition at line 54 of file graphics.\-py.
+Definition at line 12 of file species.\+py.
 
 
 
-Here is the call graph for this function\-:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=268pt]{a00150_a99e047c066345a973bfbb527e8a91085_cgraph}
+\includegraphics[width=350pt]{a00150_aaa0ed83b7623b65c77b0d583590219ec_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00150_a0aab4ec6c7d010b885204f0420072f29}{\index{lib\+::model\+::species@{lib\+::model\+::species}!create\+File\+Species@{create\+File\+Species}}
+\index{create\+File\+Species@{create\+File\+Species}!lib\+::model\+::species@{lib\+::model\+::species}}
+\subsubsection[{create\+File\+Species}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+model.\+species.\+create\+File\+Species (
+\begin{DoxyParamCaption}
+\item[{}]{tmp\+Folder, }
+\item[{}]{args, }
+\item[{}]{pars, }
+\item[{}]{tmp\+Scale = {\ttfamily 1}, }
+\item[{}]{specieslist = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{a00150_a0aab4ec6c7d010b885204f0420072f29}
+
+
+Definition at line 21 of file species.\+py.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00150_a0aab4ec6c7d010b885204f0420072f29_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00150_a1c482d162198854303fbcd154fb1ccbf}{\index{lib\+::model\+::species@{lib\+::model\+::species}!get\+Tot\+Number\+Of\+Species\+From\+Complete\+Pop@{get\+Tot\+Number\+Of\+Species\+From\+Complete\+Pop}}
+\index{get\+Tot\+Number\+Of\+Species\+From\+Complete\+Pop@{get\+Tot\+Number\+Of\+Species\+From\+Complete\+Pop}!lib\+::model\+::species@{lib\+::model\+::species}}
+\subsubsection[{get\+Tot\+Number\+Of\+Species\+From\+Complete\+Pop}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+model.\+species.\+get\+Tot\+Number\+Of\+Species\+From\+Complete\+Pop (
+\begin{DoxyParamCaption}
+\item[{}]{M}
+\end{DoxyParamCaption}
+)}}\label{a00150_a1c482d162198854303fbcd154fb1ccbf}
+
+
+Definition at line 17 of file species.\+py.
+
+\hypertarget{a00150_a13eb7af04a51ec15dd79ef70fadc93f4}{\index{lib\+::model\+::species@{lib\+::model\+::species}!weighted\+Choice@{weighted\+Choice}}
+\index{weighted\+Choice@{weighted\+Choice}!lib\+::model\+::species@{lib\+::model\+::species}}
+\subsubsection[{weighted\+Choice}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+model.\+species.\+weighted\+Choice (
+\begin{DoxyParamCaption}
+\item[{}]{weights, }
+\item[{}]{objects}
+\end{DoxyParamCaption}
+)}}\label{a00150_a13eb7af04a51ec15dd79ef70fadc93f4}
+\begin{DoxyVerb}Return a random item from objects, with the weighting defined by weights 
+(which must sum to 1).\end{DoxyVerb}
+ 
+
+Definition at line 46 of file species.\+py.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{a00150_a13eb7af04a51ec15dd79ef70fadc93f4_cgraph}
 \end{center}
 \end{figure}
 
@@ -81,24 +108,10 @@ Here is the call graph for this function\-:
 
 
 \subsection{Variable Documentation}
-\hypertarget{a00150_aae94b6a9df961a260c0fa476e2b4693a}{\index{lib\-::visual\-::graphics@{lib\-::visual\-::graphics}!colr@{colr}}
-\index{colr@{colr}!lib::visual::graphics@{lib\-::visual\-::graphics}}
-\subsubsection[{colr}]{\setlength{\rightskip}{0pt plus 5cm}list lib.\-visual.\-graphics.\-colr = \mbox{[}'{\bf k}','{\bf r}','{\bf b}','g','{\bf c}','m','y'\mbox{]}}}\label{a00150_aae94b6a9df961a260c0fa476e2b4693a}
+\hypertarget{a00150_a4a6d118da79b62429ea35b64ef429b11}{\index{lib\+::model\+::species@{lib\+::model\+::species}!\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+@{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+}}
+\index{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+@{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+}!lib\+::model\+::species@{lib\+::model\+::species}}
+\subsubsection[{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}float lib.\+model.\+species.\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+ = 6.\+022141e23}}\label{a00150_a4a6d118da79b62429ea35b64ef429b11}
 
 
-Definition at line 20 of file graphics.\-py.
-
-\hypertarget{a00150_a3c83ccb4d4d1fcb0ea5f6b8616a1d0df}{\index{lib\-::visual\-::graphics@{lib\-::visual\-::graphics}!font@{font}}
-\index{font@{font}!lib::visual::graphics@{lib\-::visual\-::graphics}}
-\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}dictionary lib.\-visual.\-graphics.\-font}}\label{a00150_a3c83ccb4d4d1fcb0ea5f6b8616a1d0df}
-{\bfseries Initial value\-:}
-\begin{DoxyCode}
-1 = \{\textcolor{stringliteral}{'family'} : \textcolor{stringliteral}{'serif'},
-2         \textcolor{stringliteral}{'weight'} : \textcolor{stringliteral}{'normal'},
-3         \textcolor{stringliteral}{'size'}   : 10,
-4         \}
-\end{DoxyCode}
-
-
-Definition at line 14 of file graphics.\-py.
+Definition at line 10 of file species.\+py.
 

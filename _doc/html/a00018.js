@@ -1,13 +1,19 @@
 var a00018 =
 [
-    [ "MTRand_closed", "a00018.html#a09b3b21b3cb35d04f2b6c290a817b2e8", null ],
-    [ "MTRand_closed", "a00018.html#ad5dc83250b16f22d4693a18b51816271", null ],
-    [ "MTRand_closed", "a00018.html#a37e322f97253b7013823a267bcfe82d1", null ],
-    [ "~MTRand_closed", "a00018.html#a46567ee841b5f54b305ac051ac837a8c", null ],
-    [ "MTRand_closed", "a00018.html#a09b3b21b3cb35d04f2b6c290a817b2e8", null ],
-    [ "MTRand_closed", "a00018.html#ad5dc83250b16f22d4693a18b51816271", null ],
-    [ "MTRand_closed", "a00018.html#a37e322f97253b7013823a267bcfe82d1", null ],
-    [ "~MTRand_closed", "a00018.html#a46567ee841b5f54b305ac051ac837a8c", null ],
-    [ "operator()", "a00018.html#ad0c535263b63c95029523183f672f62d", null ],
-    [ "operator()", "a00018.html#ad0c535263b63c95029523183f672f62d", null ]
+    [ "MTRand_int32", "a00018.html#a034f223c086f5368bd220b02f2cc12a8", null ],
+    [ "MTRand_int32", "a00018.html#ad30f7c63a6f1fb3c3b76b8ce6ffa0206", null ],
+    [ "MTRand_int32", "a00018.html#a19acddb3910a7282517b2ffc398b92b4", null ],
+    [ "~MTRand_int32", "a00018.html#a364900abea0758d070ce89922159923a", null ],
+    [ "MTRand_int32", "a00018.html#a034f223c086f5368bd220b02f2cc12a8", null ],
+    [ "MTRand_int32", "a00018.html#ad30f7c63a6f1fb3c3b76b8ce6ffa0206", null ],
+    [ "MTRand_int32", "a00018.html#a19acddb3910a7282517b2ffc398b92b4", null ],
+    [ "~MTRand_int32", "a00018.html#a364900abea0758d070ce89922159923a", null ],
+    [ "operator()", "a00018.html#ad7fe22190d0411c6dac8e6f471633aa4", null ],
+    [ "operator()", "a00018.html#ad7fe22190d0411c6dac8e6f471633aa4", null ],
+    [ "rand_int32", "a00018.html#abacdfa346255baeac69d29bb57f29b22", null ],
+    [ "rand_int32", "a00018.html#abacdfa346255baeac69d29bb57f29b22", null ],
+    [ "seed", "a00018.html#a0c57076fe30358e0700a7ce1baa0ea27", null ],
+    [ "seed", "a00018.html#a0c57076fe30358e0700a7ce1baa0ea27", null ],
+    [ "seed", "a00018.html#a3cabc1e3445716236a570ffd2f69686d", null ],
+    [ "seed", "a00018.html#a3cabc1e3445716236a570ffd2f69686d", null ]
 ];

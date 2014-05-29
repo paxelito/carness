@@ -1,169 +1,55 @@
-\hypertarget{a00140}{\section{lib.\-graph.\-network Namespace Reference}
-\label{a00140}\index{lib.\-graph.\-network@{lib.\-graph.\-network}}
+\hypertarget{a00140}{\section{lib.\+dyn.\+dynamics Namespace Reference}
+\label{a00140}\index{lib.\+dyn.\+dynamics@{lib.\+dyn.\+dynamics}}
 }
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{a00140_aa023644e6dad3ed7be55a592d8576007}{remove\-Rare\-Rcts}
+def \hyperlink{a00140_a5c7482c3127ef70514cbc82ce1aa9f47}{generate\+Flux\+List}
 \item 
-def \hyperlink{a00140_a31099e87728bb8b899360bb641bb6b64}{fix\-Condensation\-Reaction}
+def \hyperlink{a00140_acbc0de876640b8d5355bf6a0e4fdef4a}{range\+Float}
 \item 
-def \hyperlink{a00140_a47be50a907814919f86f8313927d3236}{net\-\_\-analysis\-\_\-of\-\_\-static\-\_\-graphs}
-\item 
-def \hyperlink{a00140_ab2528d394362bfca89834b72d8024e6f}{net\-\_\-analysis\-\_\-of\-\_\-dynamic\-\_\-graphs}
-\item 
-def \hyperlink{a00140_a5c4fdcb64dea8b366645ad27dc71bff8}{return\-\_\-scc\-\_\-in\-\_\-raf}
-\item 
-def \hyperlink{a00140_a22ad63e3d10c613dc181b9e69ad1cef5}{create\-\_\-chemistry}
+def \hyperlink{a00140_ac3232f52dce6e169a93eba81f8fb926e}{flux\+Analysis}
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{a00140_a22ad63e3d10c613dc181b9e69ad1cef5}{\index{lib\-::graph\-::network@{lib\-::graph\-::network}!create\-\_\-chemistry@{create\-\_\-chemistry}}
-\index{create\-\_\-chemistry@{create\-\_\-chemistry}!lib::graph::network@{lib\-::graph\-::network}}
-\subsubsection[{create\-\_\-chemistry}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-network.\-create\-\_\-chemistry (
+\hypertarget{a00140_ac3232f52dce6e169a93eba81f8fb926e}{\index{lib\+::dyn\+::dynamics@{lib\+::dyn\+::dynamics}!flux\+Analysis@{flux\+Analysis}}
+\index{flux\+Analysis@{flux\+Analysis}!lib\+::dyn\+::dynamics@{lib\+::dyn\+::dynamics}}
+\subsubsection[{flux\+Analysis}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+dyn.\+dynamics.\+flux\+Analysis (
 \begin{DoxyParamCaption}
-\item[{}]{args, }
-\item[{}]{original\-Species\-List, }
-\item[{}]{parameters, }
-\item[{}]{rct\-To\-Cat, }
-\item[{}]{tot\-Cleavage, }
-\item[{}]{tot\-Cond, }
-\item[{}]{tmpac}
+\item[{}]{tmp\+Dir, }
+\item[{}]{res\+Dir\+Path, }
+\item[{}]{str\+Zeros, }
+\item[{}]{ngen}
 \end{DoxyParamCaption}
-)}}\label{a00140_a22ad63e3d10c613dc181b9e69ad1cef5}
+)}}\label{a00140_ac3232f52dce6e169a93eba81f8fb926e}
 
 
-Definition at line 97 of file network.\-py.
+Definition at line 37 of file dynamics.\+py.
 
-
-
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=276pt]{a00140_a22ad63e3d10c613dc181b9e69ad1cef5_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00140_a31099e87728bb8b899360bb641bb6b64}{\index{lib\-::graph\-::network@{lib\-::graph\-::network}!fix\-Condensation\-Reaction@{fix\-Condensation\-Reaction}}
-\index{fix\-Condensation\-Reaction@{fix\-Condensation\-Reaction}!lib::graph::network@{lib\-::graph\-::network}}
-\subsubsection[{fix\-Condensation\-Reaction}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-network.\-fix\-Condensation\-Reaction (
+\hypertarget{a00140_a5c7482c3127ef70514cbc82ce1aa9f47}{\index{lib\+::dyn\+::dynamics@{lib\+::dyn\+::dynamics}!generate\+Flux\+List@{generate\+Flux\+List}}
+\index{generate\+Flux\+List@{generate\+Flux\+List}!lib\+::dyn\+::dynamics@{lib\+::dyn\+::dynamics}}
+\subsubsection[{generate\+Flux\+List}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+dyn.\+dynamics.\+generate\+Flux\+List (
 \begin{DoxyParamCaption}
-\item[{}]{m1, }
-\item[{}]{m2, }
-\item[{}]{m3, }
-\item[{}]{rcts}
+\item[{}]{tmp\+Path, }
+\item[{}]{tmp\+Sys\+Type, }
+\item[{}]{tmp\+Last\+I\+D = {\ttfamily None}}
 \end{DoxyParamCaption}
-)}}\label{a00140_a31099e87728bb8b899360bb641bb6b64}
+)}}\label{a00140_a5c7482c3127ef70514cbc82ce1aa9f47}
 
 
-Definition at line 35 of file network.\-py.
+Definition at line 17 of file dynamics.\+py.
 
-
-
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=320pt]{a00140_a31099e87728bb8b899360bb641bb6b64_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00140_ab2528d394362bfca89834b72d8024e6f}{\index{lib\-::graph\-::network@{lib\-::graph\-::network}!net\-\_\-analysis\-\_\-of\-\_\-dynamic\-\_\-graphs@{net\-\_\-analysis\-\_\-of\-\_\-dynamic\-\_\-graphs}}
-\index{net\-\_\-analysis\-\_\-of\-\_\-dynamic\-\_\-graphs@{net\-\_\-analysis\-\_\-of\-\_\-dynamic\-\_\-graphs}!lib::graph::network@{lib\-::graph\-::network}}
-\subsubsection[{net\-\_\-analysis\-\_\-of\-\_\-dynamic\-\_\-graphs}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-network.\-net\-\_\-analysis\-\_\-of\-\_\-dynamic\-\_\-graphs (
+\hypertarget{a00140_acbc0de876640b8d5355bf6a0e4fdef4a}{\index{lib\+::dyn\+::dynamics@{lib\+::dyn\+::dynamics}!range\+Float@{range\+Float}}
+\index{range\+Float@{range\+Float}!lib\+::dyn\+::dynamics@{lib\+::dyn\+::dynamics}}
+\subsubsection[{range\+Float}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\+dyn.\+dynamics.\+range\+Float (
 \begin{DoxyParamCaption}
-\item[{}]{fid\-\_\-dyn\-Raf\-Res, }
-\item[{}]{tmp\-Time, }
-\item[{}]{rcts, }
-\item[{}]{cats, }
-\item[{}]{food\-List, }
-\item[{}]{growth = {\ttfamily False}, }
-\item[{}]{rcts\-A\-L\-L = {\ttfamily None}, }
-\item[{}]{cats\-A\-L\-L = {\ttfamily None}, }
-\item[{}]{complete\-R\-C\-T\-S = {\ttfamily None}, }
-\item[{}]{debug = {\ttfamily False}}
+\item[{}]{start, }
+\item[{}]{step, }
+\item[{}]{stop}
 \end{DoxyParamCaption}
-)}}\label{a00140_ab2528d394362bfca89834b72d8024e6f}
+)}}\label{a00140_acbc0de876640b8d5355bf6a0e4fdef4a}
 
 
-Definition at line 61 of file network.\-py.
-
-
-
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{a00140_ab2528d394362bfca89834b72d8024e6f_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00140_a47be50a907814919f86f8313927d3236}{\index{lib\-::graph\-::network@{lib\-::graph\-::network}!net\-\_\-analysis\-\_\-of\-\_\-static\-\_\-graphs@{net\-\_\-analysis\-\_\-of\-\_\-static\-\_\-graphs}}
-\index{net\-\_\-analysis\-\_\-of\-\_\-static\-\_\-graphs@{net\-\_\-analysis\-\_\-of\-\_\-static\-\_\-graphs}!lib::graph::network@{lib\-::graph\-::network}}
-\subsubsection[{net\-\_\-analysis\-\_\-of\-\_\-static\-\_\-graphs}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-network.\-net\-\_\-analysis\-\_\-of\-\_\-static\-\_\-graphs (
-\begin{DoxyParamCaption}
-\item[{}]{fid\-\_\-init\-Raf\-Res, }
-\item[{}]{fid\-\_\-init\-Raf\-Res\-A\-L\-L, }
-\item[{}]{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T, }
-\item[{}]{tmp\-Dir, }
-\item[{}]{rct\-Prob, }
-\item[{}]{avg\-Con, }
-\item[{}]{rcts, }
-\item[{}]{cats, }
-\item[{}]{food\-List, }
-\item[{}]{max\-Dim, }
-\item[{}]{debug = {\ttfamily False}}
-\end{DoxyParamCaption}
-)}}\label{a00140_a47be50a907814919f86f8313927d3236}
-
-
-Definition at line 47 of file network.\-py.
-
-\hypertarget{a00140_aa023644e6dad3ed7be55a592d8576007}{\index{lib\-::graph\-::network@{lib\-::graph\-::network}!remove\-Rare\-Rcts@{remove\-Rare\-Rcts}}
-\index{remove\-Rare\-Rcts@{remove\-Rare\-Rcts}!lib::graph::network@{lib\-::graph\-::network}}
-\subsubsection[{remove\-Rare\-Rcts}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-network.\-remove\-Rare\-Rcts (
-\begin{DoxyParamCaption}
-\item[{}]{graph, }
-\item[{}]{dt, }
-\item[{}]{life, }
-\item[{}]{nrg, }
-\item[{}]{deltat}
-\end{DoxyParamCaption}
-)}}\label{a00140_aa023644e6dad3ed7be55a592d8576007}
-
-
-Definition at line 26 of file network.\-py.
-
-\hypertarget{a00140_a5c4fdcb64dea8b366645ad27dc71bff8}{\index{lib\-::graph\-::network@{lib\-::graph\-::network}!return\-\_\-scc\-\_\-in\-\_\-raf@{return\-\_\-scc\-\_\-in\-\_\-raf}}
-\index{return\-\_\-scc\-\_\-in\-\_\-raf@{return\-\_\-scc\-\_\-in\-\_\-raf}!lib::graph::network@{lib\-::graph\-::network}}
-\subsubsection[{return\-\_\-scc\-\_\-in\-\_\-raf}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-graph.\-network.\-return\-\_\-scc\-\_\-in\-\_\-raf (
-\begin{DoxyParamCaption}
-\item[{}]{tmp\-R\-A\-F, }
-\item[{}]{tmp\-Closure, }
-\item[{}]{tmp\-Cats}
-\end{DoxyParamCaption}
-)}}\label{a00140_a5c4fdcb64dea8b366645ad27dc71bff8}
-
-
-Definition at line 92 of file network.\-py.
-
-
-
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{a00140_a5c4fdcb64dea8b366645ad27dc71bff8_icgraph}
-\end{center}
-\end{figure}
-
+Definition at line 31 of file dynamics.\+py.
 

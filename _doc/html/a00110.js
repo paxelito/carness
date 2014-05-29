@@ -1,5 +1,7 @@
 var a00110 =
 [
+    [ "cd", "a00110.html#ab526c3939d1049806db989cf3095fc9a", null ],
+    [ "cd", "a00110.html#a778632868660bf2a5fb3a44735cfc066", null ],
     [ "cd", "a00110.html#a767271ad82d244871370a0f0e6a7f8a4", null ],
     [ "complesso", "a00110.html#ad4d1a2311b23c0f860b99297ddc57214", null ],
     [ "crea_concentrazioni_iniziali", "a00110.html#a46820e2abe661887eb3c03ebcdd5aa14", null ],
@@ -9,10 +11,9 @@ var a00110 =
     [ "degradazione", "a00110.html#a43a55a4e9faae78b56ddd9e7ca41ba42", null ],
     [ "file", "a00110.html#a4e8353d6c62cf54bf4a1a8f63e56b8c3", null ],
     [ "fprintf", "a00110.html#aa6dc40efe43a338c9ff278260d95b4d9", null ],
-    [ "i:", "a00110.html#ab5fb59cb99841dd445fbd224275fa226", null ],
+    [ "i:", "a00110.html#aab2a038840a8881d10ad04fd042040a6", null ],
     [ "k", "a00110.html#abf70355c2e58f64c6b18bda1b9bccfd7", null ],
     [ "kk", "a00110.html#a262053c6a2b2b257b33309d12f8f7ba7", null ],
-    [ "mkdir", "a00110.html#abcaf3fe79479456b56924747f1bca0d9", null ],
     [ "mkdir", "a00110.html#ae58a11ed5ac7873b1039a391d5c86a05", null ],
     [ "reazione", "a00110.html#a65cf6e12ba9a8c10222f3f1f71f7c95f", null ],
     [ "specie_def_2", "a00110.html#a206c02e53d19e1a7f6c297114dd5becb", null ],
@@ -21,7 +22,6 @@ var a00110 =
     [ "controllo", "a00110.html#adef1a44b5da0d8f5767284d2c6146569", null ],
     [ "count", "a00110.html#aa0a4866d2600caeb20cfacee8eefc922", null ],
     [ "eso_endo", "a00110.html#aad3b1a68f41f4a6fa247c1cf8e1d450a", null ],
-    [ "fid1", "a00110.html#aff1e821fc5f97a0758f74b5cbd00cacf", null ],
     [ "fid10", "a00110.html#aadad4fd2d661ea2b9f0c3a95e3f7b4ba", null ],
     [ "fid2", "a00110.html#a11af2c31c7926441f43875d99b4577d2", null ],
     [ "fid3", "a00110.html#a153e3250d4161f9bea4c140498016d94", null ],

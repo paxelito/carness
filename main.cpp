@@ -1,7 +1,9 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 6.0 (20140523.71)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 6.1 (20140529.72)
+ *
  * \author Alessandro Filisetti
- * \version 6.0 (20140523.71)
- * \date 2014-05-23
+ * \version 6.1 (20140529.72)
+ * \date 2014-05-29
+ *
  * git repository -- https://github.com/paxelito/carness
  *
  *
@@ -79,7 +81,10 @@
  *      @param nAttempts (>=0) Number of attempts in simulating the same network structure different random seed
  *      @param debugLevel (int) Debug Level Runtime: different runTime message amounts (please refer to header.h file for the different values, 0 is suggested)
  *		@param timeStructuresSavingInterval (> 0) All system structures (species, catalysis and reactions) are saved every <i>timeStructuresSavingInterval</i> seconds (simulation time)
+ *      @param saveReactionParameters (0 or 1) Save information about each condensation or cleavage reaction
  *      @param fileTimesSaveInterval (>= 0) Times data are stored in file times.csv every <i>fileTimesSaveInterval</i> seconds (If 0 reactions are stored continually)
+ *		@param fileAmountSaveInterval (>= 0) Save species amount every (if 0 amounts are stores ad each step)
+ * 		@param randomInitSpeciesConcentration (0 or 1) Initial species concentration initialization method
  *		\subsection paramenv Environment
  *		@param newSpeciesProbMinThreshold (>=0) Minimal new species creation probability to allow system expansion
  *		@param lastFiringDiskSpeciesID (> 0) The ID of the last firing disk species.
@@ -404,7 +409,7 @@ int main (int argc, char *argv[]) {
 		----------------------------------*/
 
 	//LOAD SPECIES FROM FILE
-	if(!puddle->createInitialMoleculesPopulationFromFileSTD(argv[3]))
+	if(!puddle->createInitialMoleculesPopulationFromFileSTD(argv[3], rndDoubleGen))
 		ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species STANDARD loading process");
 	// LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
 	if(puddle->getInflux() > 0)
@@ -471,6 +476,7 @@ int main (int argc, char *argv[]) {
 	acs_int previousStepLastTimesSaving; // declare previousStep
 	acs_int previousStepLastAmountSaving; // declare previousStep
 	acs_int previousStepLastBufferTimesSaving; // declare previousStep
+	acs_int previousStepLastBufferRctSaving; // declare previousStep
 	acs_int previousStepLastBufferAmountSaving; // declare previousStep
 
 	for(acs_int actSIM = 1; actSIM <= puddle->getNsim(); actSIM++)
@@ -493,7 +499,7 @@ int main (int argc, char *argv[]) {
 				if(actGEN > 1)
 				{
 					// Reset structures stats and set concentrations to initial values
-					puddle->resetConcentrationToInitialConditions();
+					puddle->resetConcentrationToInitialConditions(rndDoubleGen);
 					puddle->clearGilScores();
 					saveToFile(argv[2], puddle, actGEN, actSIM, 0);
 
@@ -506,7 +512,7 @@ int main (int argc, char *argv[]) {
 				if(puddle->getDebugLevel() >= MINIMAL_PROMPT)
 				{
 					cout << "|- GEN NUMBER " << actGEN << " OF " << puddle->getNgen()
-                            		 << " - SIM NUMBER " << actSIM << " OF " << totalNumberOfSimulations << endl;
+                         << " - SIM NUMBER " << actSIM << " OF " << totalNumberOfSimulations << endl;
 				}
 
 				// start timer
@@ -516,6 +522,7 @@ int main (int argc, char *argv[]) {
 				previousStepLastTimesSaving = 1;
 				previousStepLastAmountSaving = 1;
 				previousStepLastBufferTimesSaving = 1;
+				previousStepLastBufferRctSaving = 1;
 				previousStepLastBufferAmountSaving = 1;
 
 				// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
@@ -552,7 +559,7 @@ int main (int argc, char *argv[]) {
 						// DISPLAY SIMULATION CONTROL VARIABLES
 						if(puddle->getDebugLevel() >= RUNNING_VERSION)
 						{
-							if((actSTEP % 1000 == 0) || (actSTEP == 1) ||
+							if((actSTEP % PROMPT_TIME == 0) || (actSTEP == 1) ||
 									(puddle->getNseconds() - puddle->getActualTime() < 0.0001) ||
 									(puddle->getMols() == puddle->getOverallLoadedMolsCounter()))
 							{
@@ -573,7 +580,7 @@ int main (int argc, char *argv[]) {
 										<< " - #Cp: " << puddle->getNcpxMols()
 										<< " - Volume: " << puddle->getVolume() << endl
 										<< "\t\t|- M: " << puddle->getTotalNumberOfMonomers()
-										<< " - Mols+Complex: " << puddle->getMols()+puddle->getNcpxMols()
+										<< " - Mols+Complex: " << puddle->getMols() + puddle->getNcpxMols()
 										<< " - Tot Conc: " << double(puddle->getMols()+puddle->getNcpxMols())/(puddle->getVolume()*AVO) << endl
 										<< "\t- ENERGY" << endl
 										<< "\t\t|- Loaded Mols: " << puddle->getOverallLoadedMolsCounter()
@@ -641,6 +648,14 @@ int main (int argc, char *argv[]) {
 							bufferTimesCountRow = 0;
 						}
 
+						//write reactions parameter to files getBufferRctsCountRow
+						if(puddle->getBufferRctsCountRow() == N_BUFFER) {
+							//save data buffers to file
+							puddle->saveReactionBuffersToFile(actGEN, actSIM, argv[2]);
+							previousStepLastBufferRctSaving = actSTEP;
+							puddle->setBufferRctsCountRow(0);
+						}
+
 						//write timeSpeciesAmount to files
 						if(bufferSpeciesCountRow == N_BUFFER) {
 							//save data buffers to file
@@ -654,7 +669,7 @@ int main (int argc, char *argv[]) {
 					}else{ // if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
 						// Increase number of attempts
 						puddle->increaseAttempts();
-						puddle->resetConcentrationToInitialConditions();
+						puddle->resetConcentrationToInitialConditions(rndDoubleGen);
 						puddle->clearGilScores();
 						// STOP WHILE
 						actGEN = actGEN - 1;
@@ -678,6 +693,9 @@ int main (int argc, char *argv[]) {
 
 				if(previousStepLastBufferTimesSaving < actSTEP-1)
 					puddle->saveTimeReactionBuffersToFile(actGEN, actSIM, argv[2]);
+
+				if((previousStepLastBufferRctSaving < actSTEP-1) && puddle->getsaveReactionParameters())
+					puddle->saveReactionBuffersToFile(actGEN, actSIM, argv[2]);
 
 				if(previousStepLastBufferAmountSaving < actSTEP-1)
 					puddle->saveAmountBuffersToFile(actGEN, actSIM, argv[2]);

@@ -4,6 +4,13 @@ Software documentation is available in the doc folder.
 |VERSION HISTORY|
 |---------------| 
 
+Build6.1b20140529.72
+- A bug in the reaction parameter saving procedure has been fixed
+- New the user can choose if save reaction parameters
+- Simulation prompt results every XXX seconds
+- At each generation now concentration can be randomly reassigned or first concentration are assigned
+- Minor bugs fixed
+
 Build6.0b20140523.71
 - File buffering writing procedures have been completed
 - Minor bugs fixed
