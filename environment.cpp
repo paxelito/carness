@@ -36,6 +36,7 @@
 	reactionProbability = 0.01;
 	cleavageProbability = 0.5;
 	cleavage_KineticConstant = 1.5;
+	randomInitSpeciesConcentration=0;
 	complex_KineticConstant = 0.01;
 	condensation_KineticConstant = 0.5;
 	complexDeg_KineticConstant = 0.001;
@@ -110,6 +111,7 @@ environment::environment(string tmpInitialPath)
                 if(linered[0] == "nAttempts") nAttempts = atoi(linered[1].c_str());
 
                 // ENVIRONMENTAL PARAMETERS
+                if(linered[0] == "randomInitSpeciesConcentration") randomInitSpeciesConcentration = atoi(linered[1].c_str());
                 if(linered[0] == "lastFiringDiskSpeciesID") lastFiringDiskSpeciesID = atoi(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE
                 if(linered[0] == "ECConcentration") ECConcentration = atof(linered[1].c_str()); // DA TRASFORMARE NELLA VARIABILE INDICANTE LA QUANTITA DI CARRIER SEMPRE PRESENTI
                 if(linered[0] == "alphabet") alphabet = linered[1];
@@ -1293,7 +1295,7 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
 										 (acs_int)atoi(strEval.c_str()), (acs_double)atof(strAge.c_str()),atoi(strReb.c_str()), volume,
 										 (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
 										 (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
-										 (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut));
+										 (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut, randomInitSpeciesConcentration));
 			// Define the max non catalytic max ID
 			if(!maxNonCatIdDef){if(strCod.size() > nonCatalyticMaxLength){nonCatalyticLastID = (acs_longInt)atol(strID.c_str()) - 1; maxNonCatIdDef=true;}}
 			try{
@@ -7469,6 +7471,7 @@ void environment::showGlobalParameter()
         cout << "\t|- Max number of attempts in simulating the same network with different random seeds: " << nAttempts << endl;
         cout << "\t|- Max number of hours of the simulation (computational time): " << (double)nHours << endl;
         cout << "\t|- Last Firing disk species ID (in structure files upload configuration): " << lastFiringDiskSpeciesID << endl;
+        cout << "\t|- Initial species concentration method (1 random, 0 fixed): " << randomInitSpeciesConcentration << endl;
         cout << "\t|- time Structures Saving Interval: " << (double)timeStructuresSavingInterval << endl;
         cout << "\t|- Time Amounts Saving Interval: " << (double)fileAmountSaveInterval << endl;
         cout << "\t|- Minimal new species prob to allow system expansion: " << (double)newSpeciesProbMinThreshold << endl;
@@ -7988,6 +7991,9 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
 
 	buffer << "# Identificator of the last firing disk species\n";
 	buffer << "lastFiringDiskSpeciesID=" << lastFiringDiskSpeciesID << "\n \n";
+
+	buffer << "# Initial species concentration initialization method\n";
+	buffer << "randomInitSpeciesConcentration=" << randomInitSpeciesConcentration << "\n \n";
 
 	buffer << "# Initial distribution\n";
 	buffer << "# 1- Proportional: Same number of molecules for each species\n";
@@ -8546,8 +8552,8 @@ bool environment::saveTimeSpeciesAmountSTD(acs_int tmp__CurrentStep) {
 		bufferSaveTimeSpeciesAmount << tmp__CurrentStep << "\t" << (double)actualTime;
 		for(acs_longInt i = 0; i < (acs_longInt)allSpecies.size(); i++)
 		{
-			if((allSpecies.at(i).getAmount() > 0) & (allSpecies.at(i).getComplexCutPnt() == 0))
-				bufferSaveTimeSpeciesAmount << "\t" << allSpecies.at(i).getAmount();
+			//if((allSpecies.at(i).getAmount() > 0) & (allSpecies.at(i).getComplexCutPnt() == 0))
+			bufferSaveTimeSpeciesAmount << "\t" << allSpecies.at(i).getAmount();
 		}
 		bufferSaveTimeSpeciesAmount << endl;
 

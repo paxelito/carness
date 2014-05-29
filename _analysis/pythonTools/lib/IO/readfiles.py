@@ -128,6 +128,8 @@ def read_sims_conf_file(paramFile='acsm2s.conf'):
 			cleavageProbability = float(strLine[1])
 		if strLine[0] == "main_rev_rct_allowed":
 			main_rev_rct_allowed = int(strLine[1])
+		else:
+			main_rev_rct_allowed = None
 		if strLine[0] == "reverseReactions":
 			reverseReactions = int(strLine[1])	
 		if strLine[0] == "revRctRatio":

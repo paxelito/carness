@@ -30,7 +30,8 @@ private:
     acs_int Currentattempts; // Current number of temptatives
     acs_double timeStructuresSavingInterval; // Time between two successive files storing procedure
     acs_double fileTimesSaveInterval; // Time between two successive times.csv storing procedure
-   acs_double fileAmountSaveInterval; // Time between two successive species amount storing procedure
+    acs_double fileAmountSaveInterval; // Time between two successive species amount storing procedure
+    bool randomInitSpeciesConcentration; // If true the initial concentration of a species is randomly created
     acs_double newSpeciesProbMinThreshold; // Minimal new species creation probability to allow system expansion
     acs_int lastFiringDiskSpeciesID; // ID of the last species of the firing disk
     acs_double ECConcentration; // Energie Carriers concentration

@@ -1,17 +1,17 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 5.0 (20140402.68)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 6.0 (20140523.71)
  * \author Alessandro Filisetti
- * \version 5.0 (20140402.70)
- * \date 2014-05-14
+ * \version 6.0 (20140523.71)
+ * \date 2014-05-23
  * git repository -- https://github.com/paxelito/carness
  *
  *
-* This manual is divided in the following sections:
-*- \subpage intro
-*- \subpage pageInitStr
-*- \subpage pageoutcomes
-*- \subpage pageGillespie
-*- \subpage pageInitializator
-*
+ * This manual is divided in the following sections:
+ *- \subpage intro
+ *- \subpage pageInitStr
+ *- \subpage pageoutcomes
+ *- \subpage pageGillespie
+ *- \subpage pageInitializator
+ *
  * \page intro Introduction
  * <hr>
  * The <b>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</b> is a software devoted to the hybrid, both stochastic and deterministic, simulation of theoretical complex catalytic
@@ -163,7 +163,7 @@
  *		- <i>Precipitation flag</i>: If 0 species is precipited and each new molecules of this species will be precipited
  *		- <i>Dissociation Kinetic Constant</i>: Complex dissociation kinetic constant
  *		- <i>Binding point</i>: If the species is a complex this field indicates the division point between catalyst and substrate
-  *		- <i>Evaluated</i>: If 1 the species is not virtual and all the reactions it catalyzes are created, if 0 the species is only potentially created
+ *		- <i>Evaluated</i>: If 1 the species is not virtual and all the reactions it catalyzes are created, if 0 the species is only potentially created
  *		- <i>Species Age</i>: Age (in seconds) of the species since its last cretion, each time that a species amount pass from 0 to > 1 the counter is resetted
  *		- <i>Number of reborns</i>: Number of times that a species amount pass from 0 to > 0
  *		- <i>Catalyst ID</i>: If the species is a complex (e.g. catalyst C forming a complex C.A with the substrate A) this is the CATALYST ID
@@ -267,7 +267,7 @@
  *		- <i>Various Processes Computational Time</i>: Number of milliseconds necessary to perform several tasks not correlated with the simulation of the phenomena
  *		- <i>New species creation probability</i>: Given the state of the system, probability to create a new species
  *		- <i>Reverse Reaction Probability</i>: Given the state of the system, probability for a reverse reaction to occur
-*
+ *
  *	\section outReactions Reactions_parameters
  *  Every simulation generates a reactions parameters file called reactions_parameters_<generationNumber>_<simulationNumber>.csv (e.g. <b>reactions_parameters_1_07.csv</b> means reactions parameters file, generation 1 simulation
  *  number 7) containing informations on <b>cleavage and condensation</b> reactions. This file is <b>generated at the beginning of each simulation</b> and it is <b>updated each time that a cleavage or a condensation occur</b>. 
@@ -353,7 +353,7 @@
  * <tr>
  * 	<td>Spontaneous Cleavage</td><td>11</td><td>Substrate</td><td>Product 1</td><td>Product 2</td><td>//</td>
  * </tr>
-  * <tr>
+ * <tr>
  * 	<td>Spontaneous Condensation</td><td>10</td><td>Product</td><td>Substrate 1</td><td>Substrate 2</td><td>//</td>
  * </tr>
  * </table>
@@ -378,333 +378,333 @@ void saveToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGe
 void saveInitialConditionsToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep);
 
 int main (int argc, char *argv[]) {
-	
-    setlocale(LC_NUMERIC,"en_US"); //TR Check whether or not it can be removed when C++ standard
-	
+
+	setlocale(LC_NUMERIC,"en_US"); //TR Check whether or not it can be removed when C++ standard
+
 	MTRand rndDoubleGen; /// double random number generator
-	
+
 	/*---------------\
     |                |
 	| INITIALIZATION |
     |       		 |
 	\ --------------*/ 
-	
-		/*----------------
+
+	/*----------------
 		CREATE ENVIRONMENT
 		-----------------*/ 
 
-        // Declare and inizialize the environment
-        environment* puddle = new environment(argv[1]);
-	
-		//INITIZIALIZE PSEUDO RANDOM NUMBER GENERATOR
-		rndDoubleGen.seed(puddle->getRandomSeed());
-		
-		/*----------------------------------
+	// Declare and inizialize the environment
+	environment* puddle = new environment(argv[1]);
+
+	//INITIZIALIZE PSEUDO RANDOM NUMBER GENERATOR
+	rndDoubleGen.seed(puddle->getRandomSeed());
+
+	/*----------------------------------
 		CREATE INITIAL MOLECULE POPULATION
 		----------------------------------*/
-	
-            //LOAD SPECIES FROM FILE
-            if(!puddle->createInitialMoleculesPopulationFromFileSTD(argv[3]))
-                ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species STANDARD loading process");
-            // LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
-			if(puddle->getInflux() > 0)
-			{
-                if(!puddle->createInfluxLayersFromFileSTD(argv[3]))
-					ExitWithError("CreateInfluxLayersFromFile", "Problem with influx layers loading process");
-			}
-                        // LOAD BOOLEAN FUNCTION CONCERNING THE ENERGY CONFIGURATION
-			if(puddle->getEnergy() <= 1)
-			{
-                //if(!puddle->createNrgBooleanFunctionsFromFile(a.arguments().at(3)))
-                if(!puddle->createNrgBooleanFunctionsFromFileSTD(argv[3]))
-						ExitWithError("createNrgBooleanFunctionsFromFile", "Problem with rct Bool fncs loading process");
-			}
-           //LOAD REACTIONS STRUCTURE FROM FILE (standard C++ libraries)
-           if(!puddle->createInitialReactionsLayerFromFileSTD(argv[3]))
-				ExitWithError("createInitialReactionLayerFromFile", "Problem with the reactions loading process");
 
-           //LOAD CATALYSIS STRUCTURE FROM FILE (catalysis links species with reactions catalyzed)
-            if(!puddle->createInitialCatalysisLayerFromFileSTD(argv[3]))
-				ExitWithError("createInitialCatalysisLayerFromFile", "Problem with the catalysis loading process");
-		
-		if(puddle->getDebugLevel() >= MEDIUM_DEBUG){puddle->printInitialCondition();}
-	
-                // SAVE TO FILE INITIAL CONDITIONS
-        saveInitialConditionsToFile(argv[2], puddle, 0, 0, 0);
-		
-		if(!puddle->structureCoherenceCheckUp())
-		{
-			cout << endl;
-            ExitWithError("structureCoherenceCheckUp", "PROBLEM WITH STRUCTURE COHERENCE... THE SIMULATION WILL BE ABORTED!!!");
-		}
-	
-	
+	//LOAD SPECIES FROM FILE
+	if(!puddle->createInitialMoleculesPopulationFromFileSTD(argv[3]))
+		ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species STANDARD loading process");
+	// LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
+	if(puddle->getInflux() > 0)
+	{
+		if(!puddle->createInfluxLayersFromFileSTD(argv[3]))
+			ExitWithError("CreateInfluxLayersFromFile", "Problem with influx layers loading process");
+	}
+	// LOAD BOOLEAN FUNCTION CONCERNING THE ENERGY CONFIGURATION
+	if(puddle->getEnergy() <= 1)
+	{
+		//if(!puddle->createNrgBooleanFunctionsFromFile(a.arguments().at(3)))
+		if(!puddle->createNrgBooleanFunctionsFromFileSTD(argv[3]))
+			ExitWithError("createNrgBooleanFunctionsFromFile", "Problem with rct Bool fncs loading process");
+	}
+	//LOAD REACTIONS STRUCTURE FROM FILE (standard C++ libraries)
+	if(!puddle->createInitialReactionsLayerFromFileSTD(argv[3]))
+		ExitWithError("createInitialReactionLayerFromFile", "Problem with the reactions loading process");
+
+	//LOAD CATALYSIS STRUCTURE FROM FILE (catalysis links species with reactions catalyzed)
+	if(!puddle->createInitialCatalysisLayerFromFileSTD(argv[3]))
+		ExitWithError("createInitialCatalysisLayerFromFile", "Problem with the catalysis loading process");
+
+	if(puddle->getDebugLevel() >= MEDIUM_DEBUG){puddle->printInitialCondition();}
+
+	// SAVE TO FILE INITIAL CONDITIONS
+	saveInitialConditionsToFile(argv[2], puddle, 0, 0, 0);
+
+	if(!puddle->structureCoherenceCheckUp())
+	{
+		cout << endl;
+		ExitWithError("structureCoherenceCheckUp", "PROBLEM WITH STRUCTURE COHERENCE... THE SIMULATION WILL BE ABORTED!!!");
+	}
+
+
 	// - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + - 
-	
-		/*------------\
-		 |            |
-		 | SIMULATION |
-		 |            |
-		 \ ----------*/
-		
-		//STORE INITIAL STRUCTURES DATA IN ORDER TO REINITIALIZE THE STRUCTURE AFTER EACH SIMULATION
-		puddle->storeInitialStructures();
-		
+
+	/*------------\
+	|            |
+	| SIMULATION |
+	|            |
+	\ ----------*/
+
+	//STORE INITIAL STRUCTURES DATA IN ORDER TO REINITIALIZE THE STRUCTURE AFTER EACH SIMULATION
+	puddle->storeInitialStructures();
+
 	Timer timer;
 	acs_double timeElapsed;
-		
-		if(puddle->getDebugLevel() >= RUNNING_VERSION)
+
+	if(puddle->getDebugLevel() >= RUNNING_VERSION)
+	{
+		cout << endl;
+		cout << "*** SIMULATION START ***" << endl;
+		cout << endl;
+	}
+
+	// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+	// SIMULATIONS
+	// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+	acs_int totalNumberOfSimulations = puddle->getNsim(); // Simulation counter
+	acs_int totalNumberOfGenerations = puddle->getNgen(); // generation are not used now (it will be usefull with protocell division)
+	acs_int actSTEP; // declare simulation step
+	acs_int previousStepLastStructuresSaving; // declare previousStep
+	acs_int previousStepLastTimesSaving; // declare previousStep
+	acs_int previousStepLastAmountSaving; // declare previousStep
+	acs_int previousStepLastBufferTimesSaving; // declare previousStep
+	acs_int previousStepLastBufferAmountSaving; // declare previousStep
+
+	for(acs_int actSIM = 1; actSIM <= puddle->getNsim(); actSIM++)
+	{
+		if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "\n|- - - - - - - - - - - - - - - " << actSIM << endl;}
+		if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "|- SIMULATION NUMBER " << actSIM << endl;}
+		if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "|- - - - - - - - - - - - - - - \n" << actSIM << endl;}
+
+
+		// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+		// GENERATIONS PER SIMULATIONS
+		// +-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+
+		for(acs_int actGEN = 1; actGEN <= totalNumberOfGenerations; actGEN++)
 		{
-			cout << endl;
-			cout << "*** SIMULATION START ***" << endl;
-			cout << endl;
-		}
-				
-        // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-        // SIMULATIONS
-        // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-		
-        acs_int totalNumberOfSimulations = puddle->getNsim(); // Simulation counter
-        acs_int totalNumberOfGenerations = puddle->getNgen(); // generation are not used now (it will be usefull with protocell division)
-        acs_int actSTEP; // declare simulation step
-        acs_int previousStepLastStructuresSaving; // declare previousStep
-        acs_int previousStepLastTimesSaving; // declare previousStep
-        acs_int previousStepLastAmountSaving; // declare previousStep
-        acs_int previousStepLastBufferTimesSaving; // declare previousStep
-        acs_int previousStepLastBufferAmountSaving; // declare previousStep
+			// IF THE ATTEMPTS ARE MORE THAN THE MAX NUMBER THIS SIMULATION IS STOPPED
+			if((puddle->getCurrentAttempts() <= puddle->getMAXattempts()) || (puddle->getMAXattempts() == 0))
+			{
+				if(actGEN > 1)
+				{
+					// Reset structures stats and set concentrations to initial values
+					puddle->resetConcentrationToInitialConditions();
+					puddle->clearGilScores();
+					saveToFile(argv[2], puddle, actGEN, actSIM, 0);
 
-        for(acs_int actSIM = 1; actSIM <= puddle->getNsim(); actSIM++)
-        {
-            if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "\n|- - - - - - - - - - - - - - - " << actSIM << endl;}
-            if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "|- SIMULATION NUMBER " << actSIM << endl;}
-            if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "|- - - - - - - - - - - - - - - \n" << actSIM << endl;}
+				}
+				acs_double dataStoredCounter = 0;
+				acs_double TimesStoredCounter = 0;
+				acs_double AmountsStoredCounter = 0;
+				acs_int bufferTimesCountRow = 0;
+				acs_int bufferSpeciesCountRow = 0;
+				if(puddle->getDebugLevel() >= MINIMAL_PROMPT)
+				{
+					cout << "|- GEN NUMBER " << actGEN << " OF " << puddle->getNgen()
+                            		 << " - SIM NUMBER " << actSIM << " OF " << totalNumberOfSimulations << endl;
+				}
 
-		
-			// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-            // GENERATIONS PER SIMULATIONS
-            // +-+-+-+-+-+-+-+-+-+-+-+-+-+-
+				// start timer
+				timer.start();
+				actSTEP = 1;
+				previousStepLastStructuresSaving = 1;
+				previousStepLastTimesSaving = 1;
+				previousStepLastAmountSaving = 1;
+				previousStepLastBufferTimesSaving = 1;
+				previousStepLastBufferAmountSaving = 1;
 
+				// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+				// SECONDS / REACTIONS PER SIMULATION
+				// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 
-            for(acs_int actGEN = 1; actGEN <= totalNumberOfGenerations; actGEN++)
-            {
-                // IF THE ATTEMPTS ARE MORE THAN THE MAX NUMBER THIS SIMULATION IS STOPPED
-                if((puddle->getCurrentAttempts() <= puddle->getMAXattempts()) || (puddle->getMAXattempts() == 0))
-                {
-                    if(actGEN > 1)
-                    {
-                        // Reset structures stats and set concentrations to initial values
-                        puddle->resetConcentrationToInitialConditions();
-			puddle->clearGilScores();
-                        saveToFile(argv[2], puddle, actGEN, actSIM, 0);
+				while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions())	)
+				{
+					timer.stop();
+					timeElapsed = timer.getElapsedTimeInMilliSec();
+					// IF NUMBER OF MILLISECONDS IS LESS THAN THE MAX NUMBER
+					if(( timeElapsed < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
+					{
+						//GILLESPIE COMPUTATION (CORE OF THE SOFTWARE)
+						if(puddle->getDebugLevel() == SMALL_DEBUG)cout << "Step " << actSTEP << endl;
+						try{
+							// IF the system can expand its structures, se the old gillespie algorithm must be used
+							if(puddle->getSystemExpFlag())
+							{
+								if(!puddle->performOPTGillespieComputation(rndDoubleGen, timer, actGEN, actSIM, actSTEP, argv[2]))
+									ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
+							}else{ // If structures are fixed new optimized Gillespie algorithm can be used
+								if(!puddle->perform_FIXED_GillespieComputation(rndDoubleGen, timer, actGEN, actSIM, actSTEP, argv[2]))
+									ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
+							}
+						}catch(exception&e){
+							cout << "Source Code Line: " << __LINE__ << endl;
+							cerr << "exceptioncaught:" << e.what() << endl;
+							ExitWithError("MAIN function __ Gillespie computation","exceptionerrorthrown");
+						}
+						if(puddle->getDebugLevel() == SMALL_DEBUG)
+							puddle->showGillEngagementInSpecies();
 
-                    }
-                        acs_double dataStoredCounter = 0;
-                        acs_double TimesStoredCounter = 0;
-			acs_double AmountsStoredCounter = 0;
-			acs_int bufferTimesCountRow = 0;
-			acs_int bufferSpeciesCountRow = 0;
-                        if(puddle->getDebugLevel() >= MINIMAL_PROMPT)
-                        {
-                             cout << "|- GEN NUMBER " << actGEN << " OF " << puddle->getNgen()
-                             << " - SIM NUMBER " << actSIM << " OF " << totalNumberOfSimulations << endl;
-                        }
+						// DISPLAY SIMULATION CONTROL VARIABLES
+						if(puddle->getDebugLevel() >= RUNNING_VERSION)
+						{
+							if((actSTEP % 1000 == 0) || (actSTEP == 1) ||
+									(puddle->getNseconds() - puddle->getActualTime() < 0.0001) ||
+									(puddle->getMols() == puddle->getOverallLoadedMolsCounter()))
+							{
+								timer.stop();
+								cout<< "--------------------------------------------------------------------" << endl
+										<< "G: "<< actGEN << "/" << totalNumberOfGenerations
+										<< " - S: " << actSIM << "/" << totalNumberOfSimulations
+										<< " - T: " << puddle->getActualTime() << "/" << puddle->getNseconds()
+										<< " - R: " << actSTEP // << "/" << puddle->getNreactions()
+										<< " - CT (seconds): " << timer.getElapsedTimeInSec()
+										<< " - Gill: " << puddle->getNumberOfGillespieCOPYpossibleRcts() << endl
+										<< "\t- ENVIRONMENT" << endl
+										<< "\t\t|- S: " << puddle->getNspecies()
+										<< " - NS: " << puddle->getNnewSpecies()
+										<< " - M: " << puddle->getMols()
+										<< " - NM: " << puddle->getNewMols() << endl
+										<< "\t\t|- Cp: " << puddle->getNcpx()
+										<< " - #Cp: " << puddle->getNcpxMols()
+										<< " - Volume: " << puddle->getVolume() << endl
+										<< "\t\t|- M: " << puddle->getTotalNumberOfMonomers()
+										<< " - Mols+Complex: " << puddle->getMols()+puddle->getNcpxMols()
+										<< " - Tot Conc: " << double(puddle->getMols()+puddle->getNcpxMols())/(puddle->getVolume()*AVO) << endl
+										<< "\t- ENERGY" << endl
+										<< "\t\t|- Loaded Mols: " << puddle->getOverallLoadedMolsCounter()
+										<< " - Loaded (second Method): " << puddle->getTotNumberOfChargedMols() << endl
+										<< "\t- GILLESPIE INFO" << endl
+										<< "\t\t|- Gil Mean: " << puddle->getGillespieMean()
+										<< " - Gil SD: " << puddle->getgillespieSD()
+										<< " - Gil Entropy: " << puddle->getgillespieEntropy() << endl
+										<< "\t\t|- Gil NS ratio: " << puddle->getRatioBetweenNewGillTotGill()
+										<< " - Back and Forw Ratio: " << puddle->getRatioBetweenBackandForw() << endl
+										<< "\t- REACTIONS COUNTERS" << endl
+										<< "\t\t|- Theoretical Average Connectivity:" << (double)puddle->getNumberOfCatalysis() / puddle->getTotalNumberOfPossibleCatalysts() << endl
+										<< "\t\t|- Cond: " << puddle->getCondensationCounter()
+										<< " - Endo Cond: " << puddle->getEndoCondensationCounter() << endl
+										<< "\t\t|- Cleav: " << puddle->getCleavageCounter()
+										<< " - Endo Cleav: " << puddle->getEndoCleavageCounter() << endl
+										<< "\t\t|- Spont Cleav: " << puddle->getSpontDissCounter()
+										<< " - Spont Cond: "<< puddle->getSpontAssCounter() << endl
+										<< "\t\t|- Cpx: " << puddle->getCpxFormCounter()
+										<< " - Cpx Diss: " << puddle->getCpxDissCounter() << endl;
 
-			// start timer
-			timer.start();
-                        actSTEP = 1;
-                        previousStepLastStructuresSaving = 1;
-                        previousStepLastTimesSaving = 1;
-			previousStepLastAmountSaving = 1;
-			previousStepLastBufferTimesSaving = 1;
-		        previousStepLastBufferAmountSaving = 1;
+							}
+						}
 
-                        // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-                        // SECONDS / REACTIONS PER SIMULATION
-                        // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+						// SAVE STRUCTURES TO FILE EVERY puddle->getTimeStructuresSavingInterval() SECONDS
+						if(puddle->getActualTime() >= (puddle->getTimeStructuresSavingInterval() + dataStoredCounter))
+						{
+							saveToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
+							dataStoredCounter = dataStoredCounter + puddle->getTimeStructuresSavingInterval();
+							previousStepLastStructuresSaving = actSTEP; // save last step moment
+						}
 
-                        while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions())	)
-                        {
-				timer.stop();
-				timeElapsed = timer.getElapsedTimeInMilliSec();
-                            // IF NUMBER OF MILLISECONDS IS LESS THAN THE MAX NUMBER
-                            if(( timeElapsed < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
-                            {
-                                //GILLESPIE COMPUTATION (CORE OF THE SOFTWARE)
-                            	if(puddle->getDebugLevel() == SMALL_DEBUG)cout << "Step " << actSTEP << endl;
-                            	try{
-                            		// IF the system can expand its structures, se the old gillespie algorithm must be used
-                            		if(puddle->getSystemExpFlag())
-                            		{
-                            			if(!puddle->performOPTGillespieComputation(rndDoubleGen, timer, actGEN, actSIM, actSTEP, argv[2]))
-                            						ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
-                            		}else{ // If structures are fixed new optimized Gillespie algorithm can be used
-                            			if(!puddle->perform_FIXED_GillespieComputation(rndDoubleGen, timer, actGEN, actSIM, actSTEP, argv[2]))
-                            			            ExitWithError("performGillespieComputation", "Problems with the Gillespie computation");
-                            		}
-                            	}catch(exception&e){
-                           	     cout << "Source Code Line: " << __LINE__ << endl;
-                           	     cerr << "exceptioncaught:" << e.what() << endl;
-                           	     ExitWithError("MAIN function __ Gillespie computation","exceptionerrorthrown");
-                            	}
-                                if(puddle->getDebugLevel() == SMALL_DEBUG)
-                                	puddle->showGillEngagementInSpecies();
+						// STORE ON FILE TIMES EVERY fileTimesSaveInterval seconds (if at least something happen)
+						if((puddle->getActualTime() >= (puddle->getFileTimesSavingInterval() + TimesStoredCounter)) ||
+								(puddle->getActualTime() == 0) || (puddle->getFileTimesSavingInterval() == 0))
+						{
+							//cout << puddle->getActualTime() << " " << puddle->getFileTimesSavingInterval() << " " << TimesStoredCounter << endl;
+							puddle->saveTimesSTD(actSTEP);
+							if(puddle->getActualTime() > 0)
+							{
+								TimesStoredCounter = TimesStoredCounter + puddle->getFileTimesSavingInterval();
+								previousStepLastTimesSaving = actSTEP;
+							}
+							bufferTimesCountRow++;
+						}
 
-                                // DISPLAY SIMULATION CONTROL VARIABLES
-                                if(puddle->getDebugLevel() >= RUNNING_VERSION)
-                                {
-                                        if((actSTEP % 1000 == 0) || (actSTEP == 1) ||
-                                           (puddle->getNseconds() - puddle->getActualTime() < 0.0001) ||
-                                           (puddle->getMols() == puddle->getOverallLoadedMolsCounter()))
-                                        {
-						timer.stop();
-                                                cout<< "--------------------------------------------------------------------" << endl
-                                                    << "G: "<< actGEN << "/" << totalNumberOfGenerations
-                                                    << " - S: " << actSIM << "/" << totalNumberOfSimulations
-                                                    << " - T: " << puddle->getActualTime() << "/" << puddle->getNseconds()
-                                                    << " - R: " << actSTEP // << "/" << puddle->getNreactions()
-                                                    << " - CT (seconds): " << timer.getElapsedTimeInSec()
-                                                    << " - Gill: " << puddle->getNumberOfGillespieCOPYpossibleRcts() << endl
-                                                    << "\t- ENVIRONMENT" << endl
-                                                    << "\t\t|- S: " << puddle->getNspecies()
-                                                    << " - NS: " << puddle->getNnewSpecies()
-                                                    << " - M: " << puddle->getMols()
-                                                    << " - NM: " << puddle->getNewMols() << endl
-                                                    << "\t\t|- Cp: " << puddle->getNcpx()
-                                                    << " - #Cp: " << puddle->getNcpxMols()
-                                                    << " - Volume: " << puddle->getVolume() << endl
-                                                    << "\t\t|- M: " << puddle->getTotalNumberOfMonomers()
-                                                    << " - Mols+Complex: " << puddle->getMols()+puddle->getNcpxMols()
-                                                    << " - Tot Conc: " << double(puddle->getMols()+puddle->getNcpxMols())/(puddle->getVolume()*AVO) << endl
-                                                    << "\t- ENERGY" << endl
-                                                    << "\t\t|- Loaded Mols: " << puddle->getOverallLoadedMolsCounter()
-                                                    << " - Loaded (second Method): " << puddle->getTotNumberOfChargedMols() << endl
-                                                    << "\t- GILLESPIE INFO" << endl
-                                                    << "\t\t|- Gil Mean: " << puddle->getGillespieMean()
-                                                    << " - Gil SD: " << puddle->getgillespieSD()
-                                                    << " - Gil Entropy: " << puddle->getgillespieEntropy() << endl
-                                                    << "\t\t|- Gil NS ratio: " << puddle->getRatioBetweenNewGillTotGill()
-                                                    << " - Back and Forw Ratio: " << puddle->getRatioBetweenBackandForw() << endl
-                                                    << "\t- REACTIONS COUNTERS" << endl
-                                                    << "\t\t|- Theoretical Average Connectivity:" << (double)puddle->getNumberOfCatalysis() / puddle->getTotalNumberOfPossibleCatalysts() << endl
-                                                    << "\t\t|- Cond: " << puddle->getCondensationCounter()
-                                                    << " - Endo Cond: " << puddle->getEndoCondensationCounter() << endl
-                                                    << "\t\t|- Cleav: " << puddle->getCleavageCounter()
-                                                    << " - Endo Cleav: " << puddle->getEndoCleavageCounter() << endl
-                                                    << "\t\t|- Spont Cleav: " << puddle->getSpontDissCounter()
-                                                    << " - Spont Cond: "<< puddle->getSpontAssCounter() << endl
-                                                	<< "\t\t|- Cpx: " << puddle->getCpxFormCounter()
-                                                	<< " - Cpx Diss: " << puddle->getCpxDissCounter() << endl;
-                                        
+						// STORE SPECIES AMOUNTS
+						if((puddle->getActualTime() > (puddle->getFileAmountSavingInterval() + AmountsStoredCounter)) || (puddle->getActualTime() == 0) ||  (puddle->getFileAmountSavingInterval() == 0)) {
+							//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
+							//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+							//saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+							puddle->saveTimeSpeciesAmountSTD(actSTEP);
+							if(puddle->getActualTime() > 0) {
+								AmountsStoredCounter += puddle->getFileAmountSavingInterval();
+								previousStepLastAmountSaving = actSTEP;
+							}
+							bufferSpeciesCountRow++;
+						}
+
+						//write times and reactions parameter to files
+						if(bufferTimesCountRow == N_BUFFER) {
+							//save data buffers to file
+							puddle->saveTimeReactionBuffersToFile(actGEN, actSIM, argv[2]);
+							previousStepLastBufferTimesSaving = actSTEP;
+							bufferTimesCountRow = 0;
+						}
+
+						//write timeSpeciesAmount to files
+						if(bufferSpeciesCountRow == N_BUFFER) {
+							//save data buffers to file
+							puddle->saveAmountBuffersToFile(actGEN, actSIM, argv[2]);
+							previousStepLastBufferAmountSaving = actSTEP;
+							bufferSpeciesCountRow = 0;
+						}
+
+						actSTEP++; // step update
+
+					}else{ // if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
+						// Increase number of attempts
+						puddle->increaseAttempts();
+						puddle->resetConcentrationToInitialConditions();
+						puddle->clearGilScores();
+						// STOP WHILE
+						actGEN = actGEN - 1;
+						break;
+
 					}
-                                }
+				} // while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions()))
 
-                                // SAVE STRUCTURES TO FILE EVERY puddle->getTimeStructuresSavingInterval() SECONDS
-                                if(puddle->getActualTime() >= (puddle->getTimeStructuresSavingInterval() + dataStoredCounter))
-                                {
-                                        saveToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
-                                        dataStoredCounter = dataStoredCounter + puddle->getTimeStructuresSavingInterval();                                        
-                                        previousStepLastStructuresSaving = actSTEP; // save last step moment
-                                }
+				// Final species ages update
+				puddle->updateSpeciesAges();
 
-                                // STORE ON FILE TIMES EVERY fileTimesSaveInterval seconds (if at least something happen)
-                                if((puddle->getActualTime() >= (puddle->getFileTimesSavingInterval() + TimesStoredCounter)) ||
-                                        (puddle->getActualTime() == 0) || (puddle->getFileTimesSavingInterval() == 0))
-                                {
-                                    //cout << puddle->getActualTime() << " " << puddle->getFileTimesSavingInterval() << " " << TimesStoredCounter << endl;
-                                    puddle->saveTimesSTD(actSTEP);
-                                    if(puddle->getActualTime() > 0)
-                                    {
-                                        TimesStoredCounter = TimesStoredCounter + puddle->getFileTimesSavingInterval();
-                                        previousStepLastTimesSaving = actSTEP;
-                                    }
-					bufferTimesCountRow++;
-                                }
+				// SAVE FINAL STRUCTURES TO FILE if actSTEP is different from the previous one
+				if(previousStepLastStructuresSaving < actSTEP-1)
+					saveToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
 
-				// STORE SPECIES AMOUNTS
-				if((puddle->getActualTime() > (puddle->getFileAmountSavingInterval() + AmountsStoredCounter)) || (puddle->getActualTime() == 0) ||  (puddle->getFileAmountSavingInterval() == 0)) {
-					//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
-					//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
-					//saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
+				if(previousStepLastTimesSaving < actSTEP-1)
+					puddle->saveTimesSTD(actSTEP);
+
+				if(previousStepLastAmountSaving < actSTEP-1)
 					puddle->saveTimeSpeciesAmountSTD(actSTEP);
-					if(puddle->getActualTime() > 0) {
-						AmountsStoredCounter += puddle->getFileAmountSavingInterval();
-						previousStepLastAmountSaving = actSTEP;
-					}
-					bufferSpeciesCountRow++;	
-				}
 
-				//write times and reactions parameter to files
-				if(bufferTimesCountRow == N_BUFFER) {
-					//save data buffers to file
+				if(previousStepLastBufferTimesSaving < actSTEP-1)
 					puddle->saveTimeReactionBuffersToFile(actGEN, actSIM, argv[2]);
-					previousStepLastBufferTimesSaving = actSTEP;
-					bufferTimesCountRow = 0;
-				}
 
-				//write timeSpeciesAmount to files
-				if(bufferSpeciesCountRow == N_BUFFER) {
-					//save data buffers to file
+				if(previousStepLastBufferAmountSaving < actSTEP-1)
 					puddle->saveAmountBuffersToFile(actGEN, actSIM, argv[2]);
-					previousStepLastBufferAmountSaving = actSTEP;
-					bufferSpeciesCountRow = 0;
+
+
+				//CHECK STRUCTURES, THE COHERENCE OF THE INTERNAL STRUCTURES ARE CONTROLLED
+				if(!puddle->structureCoherenceCheckUp())
+				{
+					cout << endl;
+					ExitWithError("structureCoherenceCheckUp", "PROBLEM WITH STRCTURE COHERENCE... BE CARE TO THE SIMULATION OUTCOMES!!!");
 				}
+			}else{ // for if(puddle->getCurrentAttempts() <= puddle->getMAXattempts())
+				// SIMULATION IS STOPPED
+				ExitWithError("MAIN", "FATAL ERROR: The number of MAXIMUM attempts has been exceeded!!!");
+				break;
 
-                                actSTEP++; // step update
-
-                            }else{ // if(( (((float)clock() - tStart) / CLOCKS_PER_SEC) < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
-                                // Increase number of attempts
-                                puddle->increaseAttempts();
-                                puddle->resetConcentrationToInitialConditions();
-				puddle->clearGilScores();
-                                // STOP WHILE
-                                actGEN = actGEN - 1;
-                                break;
-
-                            }
-                        } // while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions()))
-
-                        // Final species ages update
-                        puddle->updateSpeciesAges();
-
-                        // SAVE FINAL STRUCTURES TO FILE if actSTEP is different from the previous one
-                        if(previousStepLastStructuresSaving < actSTEP-1)
-                            saveToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
-
-                        if(previousStepLastTimesSaving < actSTEP-1)
-				puddle->saveTimesSTD(actSTEP);
-
-                        if(previousStepLastAmountSaving < actSTEP-1)
-				puddle->saveTimeSpeciesAmountSTD(actSTEP);
-
-			if(previousStepLastBufferTimesSaving < actSTEP-1)
-				puddle->saveTimeReactionBuffersToFile(actGEN, actSIM, argv[2]);
-
-			if(previousStepLastBufferAmountSaving < actSTEP-1)
-				puddle->saveAmountBuffersToFile(actGEN, actSIM, argv[2]);
-
-
-                        //CHECK STRUCTURES, THE COHERENCE OF THE INTERNAL STRUCTURES ARE CONTROLLED
-                        if(!puddle->structureCoherenceCheckUp())
-                        {
-                            cout << endl;
-                            ExitWithError("structureCoherenceCheckUp", "PROBLEM WITH STRCTURE COHERENCE... BE CARE TO THE SIMULATION OUTCOMES!!!");
-                        }
-                }else{ // for if(puddle->getCurrentAttempts() <= puddle->getMAXattempts())
-                  // SIMULATION IS STOPPED
-                  ExitWithError("MAIN", "FATAL ERROR: The number of MAXIMUM attempts has been exceeded!!!");
-                  break;
-
-                }
-            } // end for(acs_int actGEN = 1; actGEN <= puddle->getNgen(); actGEN++)
-            // RESET STRUCTURES and TIME TO THE INITIAL VALUES FOR THE NEXT SIMULATION
+			}
+		} // end for(acs_int actGEN = 1; actGEN <= puddle->getNgen(); actGEN++)
+		// RESET STRUCTURES and TIME TO THE INITIAL VALUES FOR THE NEXT SIMULATION
 		puddle->clearAllStructures();
 		puddle->clearGilScores();
-        } // end for(acs_int actSIM = 1; actSIM <= puddle->getNsim(); actSIM++)
-					
+	} // end for(acs_int actSIM = 1; actSIM <= puddle->getNsim(); actSIM++)
+
 	//DELETE ALL MAIN HEAP OBJECTS
 	delete puddle;
-    return 0;
- }
+	return 0;
+}
 
 
 /*---------------------------	
@@ -723,11 +723,11 @@ int main (int argc, char *argv[]) {
 void saveToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
 {
 	// SAVE TO FILE INITIAL CONDITIONS
-    if(!tmpEnvironment->saveSpeciesStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+	if(!tmpEnvironment->saveSpeciesStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveSpeciesStructure", "PROBLEM WITH SAVING SPECIES STRUCTURE TO FILE");
-    if(!tmpEnvironment->saveReactionsStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+	if(!tmpEnvironment->saveReactionsStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveReactionsStructure", "PROBLEM WITH SAVING REACTIONS STRUCTURE TO FILE");
-    if(!tmpEnvironment->saveCatalysisStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+	if(!tmpEnvironment->saveCatalysisStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveCatalysisStructure", "PROBLEM WITH SAVING CATALYSIS STRUCTURE TO FILE");	
 }
 
@@ -743,22 +743,22 @@ void saveToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGe
 void saveInitialConditionsToFile(string tmpSavingPath, environment *tmpEnvironment, acs_int tmpGen, acs_int tmpSim, acs_int tmpStep)
 {
 	// SAVE TO FILE INITIAL CONDITIONS
-    if(!tmpEnvironment->saveConfigurationFileSTD(tmpSavingPath))
+	if(!tmpEnvironment->saveConfigurationFileSTD(tmpSavingPath))
 		ExitWithError("saveConfigurationFile", "PROBLEM WITH SAVING CONFIGURATION FILE");	
 	if (tmpEnvironment->getInflux() > 0)
 	{
-        if(!tmpEnvironment->saveInfluxStructureSTD(tmpSavingPath))
+		if(!tmpEnvironment->saveInfluxStructureSTD(tmpSavingPath))
 			ExitWithError("saveInfluxStructure", "PROBLM WITH SAVING SPECIES INFLUX FILE");
 	}
-        if(tmpEnvironment->getEnergy() <= 1)
-        {
-            if(!tmpEnvironment->saveNrgBoolFncStructureSTD(tmpSavingPath))
-                    ExitWithError("saveNrgBoolFncStructure", "PROBLM WITH SAVING ENERGY BOOLEAN FUNCTIONS FILE");
-        }
-    if(!tmpEnvironment->saveSpeciesStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+	if(tmpEnvironment->getEnergy() <= 1)
+	{
+		if(!tmpEnvironment->saveNrgBoolFncStructureSTD(tmpSavingPath))
+			ExitWithError("saveNrgBoolFncStructure", "PROBLM WITH SAVING ENERGY BOOLEAN FUNCTIONS FILE");
+	}
+	if(!tmpEnvironment->saveSpeciesStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveSpeciesStructure", "PROBLEM WITH SAVING INITIAL SPECIES STRUCTURE TO FILE");
-    if(!tmpEnvironment->saveReactionsStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+	if(!tmpEnvironment->saveReactionsStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveReactionsStructure", "PROBLEM WITH SAVING INITIAL REACTIONS STRUCTURE TO FILE");
-    if(!tmpEnvironment->saveCatalysisStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
+	if(!tmpEnvironment->saveCatalysisStructureSTD(tmpGen, tmpSim, tmpStep, tmpSavingPath))
 		ExitWithError("saveCatalysisStructure", "PROBLEM WITH SAVING INITIAL CATALYSIS STRUCTURE TO FILE");
 }

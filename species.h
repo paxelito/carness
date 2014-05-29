@@ -63,14 +63,14 @@ public:
 			acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint,
 			acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
 			acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho, acs_int tmpEnergizable, 
-			acs_double tmpInflux_rate, acs_int tmpMaxLOut);
+			acs_double tmpInflux_rate, acs_int tmpMaxLOut, bool tmpRndConcentration);
 	
 	//!< New species constructor in case of species structure file upload (IN CONCENTRATION)
 	species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentration, acs_double tmpDiffusionEnh, 
 			acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint,
 			acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
 			acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho, acs_double tmpKLoadConc, 
-			acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut);	
+			acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut, bool tmpRndConcentration);
 	
 	//!< New random species constructor
 	species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, acs_double tmpDiffusionEnh, 

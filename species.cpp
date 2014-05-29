@@ -139,7 +139,8 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 				 acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint, 
 				 acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
                  acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho,
-                 acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut)
+                 acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut,
+                 bool tmpRndConcentration)
 {
 
 	id = tmpID;
@@ -159,12 +160,12 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 	K_phospho = tmpK_phospho;
 	energizable = tmpEnergizable;
 	
+	//cout << "concentration based random concentration: " << tmpRndConcentration << endl;
+	//cin.ignore().get();
+
 	// Set concentrationFixed propriety
 	concentrationFixed = false;
-	if((tmpInflux_rate == 0) && (tmpMaxLOut > 0))
-	{
-		if(sequence.length() <= tmpMaxLOut) concentrationFixed = true;
-	}
+	if((tmpInflux_rate == 0) && (tmpMaxLOut > 0)){ if(sequence.length() <= tmpMaxLOut) concentrationFixed = true;}
 
     firstConcentration = concentration; // If the species is loaded from file that's the very initial concentration
     lastSpeciesEvaluated = 0;
@@ -181,7 +182,8 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 				 acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint, 
 				 acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
                  acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho,
-                 acs_double tmpKLoadConc, acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut)
+                 acs_double tmpKLoadConc, acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut,
+                 bool tmpRndConcentration)
 
 {
 
@@ -203,12 +205,12 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 	K_phospho = tmpK_phospho;
 	energizable = tmpEnergizable;
 	
+    //cout << "concentration based random concentration: " << tmpRndConcentration << endl;
+	//cin.ignore().get();
+
 	// Set concentrationFixed propriety
 	concentrationFixed = false;
-	if((tmpInflux_rate == 0) && (tmpMaxLOut > 0))
-	{
-		if(sequence.length() <= tmpMaxLOut) concentrationFixed = true;
-	}
+	if((tmpInflux_rate == 0) && (tmpMaxLOut > 0)){ if(sequence.length() <= tmpMaxLOut) concentrationFixed = true;}
 
     firstConcentration = tmpConcentration; // If the species is loaded from file that's the very initial concentration
     lastSpeciesEvaluated = 0;

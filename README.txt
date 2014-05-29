@@ -4,6 +4,10 @@ Software documentation is available in the doc folder.
 |VERSION HISTORY|
 |---------------| 
 
+Build6.0b20140523.71
+- File buffering writing procedures have been completed
+- Minor bugs fixed
+
 Build5.0b20140512.70
 - Added buffering for writing to files
 - Changed some file writing function to improve software performance
