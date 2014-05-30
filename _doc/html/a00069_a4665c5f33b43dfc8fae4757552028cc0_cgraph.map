@@ -1,0 +1,12 @@
+<map id="saveInitialConditionsToFile" name="saveInitialConditionsToFile">
+<area shape="rect" id="node2" href="$a00013.html#a71f4c5ff1c11a9d61cbc818682a4a91e" title="environment::saveConfiguration\lFileSTD" alt="" coords="252,5,463,46"/>
+<area shape="rect" id="node3" href="$a00056.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="579,188,679,215"/>
+<area shape="rect" id="node4" href="$a00013.html#a6f0b4481779cd12dbcd8155916c7d703" title="environment::getInflux" alt="" coords="281,436,434,463"/>
+<area shape="rect" id="node5" href="$a00013.html#a8f831e2db11fa5d840484345dac64fc7" title="environment::saveInfluxStructureSTD" alt="" coords="235,71,479,97"/>
+<area shape="rect" id="node6" href="$a00013.html#ab463a460de102c79c1044ab8a2c176ae" title="environment::getEnergy" alt="" coords="275,487,439,513"/>
+<area shape="rect" id="node7" href="$a00013.html#a1412b9b1c3bd3e42bcb481f5e18ea931" title="environment::saveNrgBool\lFncStructureSTD" alt="" coords="268,122,447,163"/>
+<area shape="rect" id="node8" href="$a00013.html#a9daeb4f255100b8ad59de9ea80b19b5b" title="environment::saveSpecies\lStructureSTD" alt="" coords="268,239,447,281"/>
+<area shape="rect" id="node10" href="$a00013.html#ad381c4ce24045d504539bb7c74800739" title="environment::saveReactions\lStructureSTD" alt="" coords="262,305,453,346"/>
+<area shape="rect" id="node11" href="$a00013.html#a0a799b3a42bd90845a915298e184708c" title="environment::saveCatalysis\lStructureSTD" alt="" coords="265,370,450,411"/>
+<area shape="rect" id="node9" href="$a00013.html#a8699a0f85f5e8dc23eb8f78fa22c6b17" title="environment::zeroBeforeString\lNumberSTD" alt="" coords="528,305,731,346"/>
+</map>

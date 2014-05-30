@@ -1,0 +1,9 @@
+<map id="environment::performEventUpdate" name="environment::performEventUpdate">
+<area shape="rect" id="node2" href="$a00056.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="519,5,619,32"/>
+<area shape="rect" id="node3" href="$a00013.html#aa862f1f98c6060747d6f1f30377671ff" title="environment::getKass" alt="" coords="254,37,405,64"/>
+<area shape="rect" id="node4" href="$a00013.html#ab429d2057ee1092bf210c29e70153f75" title="environment::getKdiss" alt="" coords="253,88,406,115"/>
+<area shape="rect" id="node5" href="$a00013.html#ad25f6aa3ab2ac6097f57828bcf78e5c9" title="environment::performScore\lUpdate" alt="" coords="237,139,421,181"/>
+<area shape="rect" id="node6" href="$a00013.html#ae1270b9c235dd6b28413075197dba8e0" title="environment::computeSingl\lGilScore" alt="" coords="477,74,661,115"/>
+<area shape="rect" id="node7" href="$a00013.html#aa3a18c59f6127c642603a98c1b3a2224" title="environment::printGillespie\lStructure" alt="" coords="479,139,659,181"/>
+<area shape="rect" id="node8" href="$a00013.html#a4721ebd79c1f52a583fd60ff8f2ece2c" title="environment::newSpeciesAdd" alt="" coords="470,205,669,232"/>
+</map>
