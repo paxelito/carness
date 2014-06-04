@@ -6431,6 +6431,7 @@ bool environment::performCleavage(acs_longInt tmpSubstrate, acs_longInt tmpProdu
 	// substrate decrement
 	if((!allSpecies.at(tmpSubstrate).getAmount() > 0) || (!allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getAmount() > 0))
 	{
+		cout << "Substrate: " << tmpSubstrate << " | Catalysts: " << allCatalysis.at(tmpIdCatalysis).getCat() << " | catalysis: " << tmpIdCatalysis << endl;
 		ExitWithError("performCleavage", "Substrate or catalyst not Avalaible!!!");
 	}else{
 		if(allCatalysis.at(tmpIdCatalysis).getCat() == tmpSubstrate)
