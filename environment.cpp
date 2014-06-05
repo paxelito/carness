@@ -5748,7 +5748,7 @@ bool environment::performReaction(acs_longInt reaction_u, MTRand& tmp_RndDoubleG
 								allGillespieScores.at(reaction_u).getCatalysisID(), // Catalysis ID 
 								tmp_RndDoubleGen)){
 				ExitWithError("performCleavage", "Problems during the CLEAVAGE reaction");	}
-			
+
 			saveReactionsParametersSTD(tmp_ActSTEP, allGillespieScores.at(reaction_u).getIdReactionType(), allGillespieScores.at(reaction_u).getMolIV(), allGillespieScores.at(reaction_u).getMolI(), allGillespieScores.at(reaction_u).getMolII(), allGillespieScores.at(reaction_u).getMolIII());
 
 			//species involved in reaction: molI is product, molII is firstSubstrate, molIII is secondSubstrate
@@ -6431,7 +6431,9 @@ bool environment::performCleavage(acs_longInt tmpSubstrate, acs_longInt tmpProdu
 	// substrate decrement
 	if((!allSpecies.at(tmpSubstrate).getAmount() > 0) || (!allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getAmount() > 0))
 	{
-		cout << "Substrate: " << tmpSubstrate << " | Catalysts: " << allCatalysis.at(tmpIdCatalysis).getCat() << " | catalysis: " << tmpIdCatalysis << endl;
+		cout << "Substrate: " << tmpSubstrate <<  " " << allSpecies.at(tmpSubstrate).getAmount()
+			 << " | Catalysts: " << allCatalysis.at(tmpIdCatalysis).getCat() << " " << allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getAmount()
+			 << " | catalysis: " << tmpIdCatalysis << endl;
 		ExitWithError("performCleavage", "Substrate or catalyst not Avalaible!!!");
 	}else{
 		if(allCatalysis.at(tmpIdCatalysis).getCat() == tmpSubstrate)
