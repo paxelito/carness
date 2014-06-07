@@ -4,6 +4,9 @@ Software documentation is available in the doc folder.
 |VERSION HISTORY|
 |---------------| 
 
+Build6.1b20140529.73
+- A bug in the gillespie introduction has been fixed
+
 Build6.1b20140529.72
 - A bug in the reaction parameter saving procedure has been fixed
 - New the user can choose if save reaction parameters
