@@ -93,8 +93,10 @@ private:
     acs_double timeSinceTheLastInFlux; // Time elapsed from the previous injection of nutrients
     string alphabet; // Alphabet (e.g. AB, RNA, DNA, Proteins)
     acs_double volume; // Reactor volume
+    acs_double initVolume; // Init volume to compare with the varying volume
     bool volumeGrowth; // Boolean variable defining the possibility for the volume to change
     bool stochDivision; // Boolean Variable defining the division process (stochastic or deterministic)
+    acs_double theta; // Volume increasing for division
     acs_double randomSeed; //Random seed of the simulation
     //TR acs_double totalPossibleNumberOfSpecies; // Overall number of species in the firing disk. According to this parameters the initial set of molecules is set
     vector<species> allSpecies; // List containing all the species
@@ -223,6 +225,8 @@ private:
 	acs_double getRefillInterval()const{return influx_rate;}
 	string getAlphabet()const{return alphabet;}
 	acs_double getVolume()const{return volume;}
+	acs_double getInitVolume()const{return initVolume;}
+	acs_double getTheta()const{return theta;}
 	acs_double getRandomSeed()const{return randomSeed;}
     vector<species> getMoleculesPopulation()const{return allSpecies;}
 	acs_longInt getTotalNumberOfSpecies();
@@ -306,7 +310,7 @@ private:
 
 
 	// VOLUME OPERATIVE FUNCTIONS
-	void changeVolume(acs_int tmpTimeSinceLastReaction);
+	void changeVolume(acs_double tmpTimeSinceLastReaction);
 	
 	// Change overall COUNTER number of species, molecules, complexes type and complexes token
 	void incNumberOfSpecies(acs_int tmpID){if(allSpecies.at(tmpID).getAmount() == 1) numberOfSpecies++;}

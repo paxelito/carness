@@ -36,6 +36,7 @@ private:
 	acs_double K_phospho;				/**< Energy Phosphorilation kinetic constant associated with each species */
 	acs_int energizable;				/**< This parameter indicates whether the species is energizable or not*/
 	bool concentrationFixed;			/**< This parameter indicates whether or not the species concentration may change*/
+	acs_double alpha;					/**< Contribute of the specie to the growth of the container*/
     acs_double firstConcentration;      /**< Concentration at the beginning of the simulation, > 0 for the initial species, 0 otherwise*/
     acs_int lastSpeciesEvaluated;		/**< ID of the last species evaluated by this species for possible reactions*/
     vector<acs_longInt> secondSubstrates;/**< If the species is a complex this is a list of the second substrates which perform the final condensation with*/
@@ -63,19 +64,19 @@ public:
 			acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint,
 			acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
 			acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho, acs_int tmpEnergizable, 
-			acs_double tmpInflux_rate, acs_int tmpMaxLOut, bool tmpRndConcentration, MTRand& tmp_RndDoubleGen);
+			acs_double tmpInflux_rate, acs_int tmpMaxLOut, bool tmpRndConcentration, acs_double tmpAlpha, MTRand& tmp_RndDoubleGen);
 	
 	//!< New species constructor in case of species structure file upload (IN CONCENTRATION)
 	species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentration, acs_double tmpDiffusionEnh, 
 			acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint,
 			acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
 			acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho, acs_double tmpKLoadConc, 
-			acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut, bool tmpRndConcentration, MTRand& tmp_RndDoubleGen);
+			acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut, bool tmpRndConcentration, acs_double tmpAlpha, MTRand& tmp_RndDoubleGen);
 	
 	//!< New random species constructor
 	species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, acs_double tmpDiffusionEnh, 
 			acs_int tmpSoluble, acs_double tmpComplexProb, acs_double tmpMaxComplexDegKinetic,
-			MTRand& tmp_RandomGenerator, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable);
+			MTRand& tmp_RandomGenerator, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable, acs_double tmpAlpha);
 	
 	//!< new Complex species constructor
 	species(acs_longInt tmpID, string tmpSequence, acs_double tmpDiffusionEnh, 
@@ -97,6 +98,7 @@ public:
 	acs_int getReborns()const{return reborns;} 
 	acs_double getDiffusionEnh()const{return diffusionEnh;}
 	acs_int getSolubility()const{return soluble;}
+	acs_double getAlpha()const{return alpha;}
 	acs_double getComplexDegEnh()const{return complexDegradationEnh;}
 	acs_int getComplexCutPnt()const{return complexCuttingPoint;}
 	acs_int getEvaluated()const{return evaluated;}
@@ -149,7 +151,7 @@ public:
     // Reset Functions
     void resetAge(){age=0;}
     void resetReborns(){reborns=0;}
-    void resetToInitConc(acs_double tmpVolume, bool tmpRndConcentration, MTRand& tmp_rndDoubleGen);
+    void resetToInitConc(acs_double tmpVolume, bool tmpRndConcentration, acs_double tmpTheta, acs_int tmpStochDivision, MTRand& tmp_rndDoubleGen);
     void setLastSpeciesEvaluated(acs_int tmpID){lastSpeciesEvaluated = tmpID;}
     void insertSecSub(acs_longInt tmpID, acs_double tmpK, acs_longInt tmpCat);
     bool checkIFtheSecondSubstrateIsAlreadyPresent(acs_longInt tmpSecSubID);

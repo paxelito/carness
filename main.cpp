@@ -1,8 +1,8 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 6.1 (20140529.72)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 6.2 (20140611.74)
  *
  * \author Alessandro Filisetti
- * \version 6.1 (20140529.73)
- * \date 2014-05-29
+ * \version 6.2 (20140611.74)
+ * \date 2014-06-20
  *
  * git repository -- https://github.com/paxelito/carness
  *
@@ -91,6 +91,9 @@
  *		@param ECConcentration (> 0) Incoming concentration of charged molecules per second.
  *		@param alphabet (string) Alphabet used in the simulation (e.g. <i>AB</i> for binary alphabet, <i>AGCT</i> for DNA, <i>ADEGFLYCWPHQIMTNKSRV</i> for proteins)
  *		@param volume (> 0) Volume of the CSTR or of the protocell
+ *		@param volumeGrowth (0 or 1) Volume growth (1) or fixed volume (0)
+ *		@param stochDivision (0 or 1) This parameter defines the division type: 1) Stochastic (material are divided randomly into the two cells), 0) deterministic (1)
+ *		@param theta (> 0) this parameter defines the necessary volume increase to divide, if 0 no division is considered
  *		\subsection paramdyn Dynamic
  *		@param energy (0 or 1) 0 no energy in the system, 1 energy constraints are applied
  *      @param ratioSpeciesEnergizable (%) The probability for a species to be potentially energized by the energy carriers
@@ -478,6 +481,7 @@ int main (int argc, char *argv[]) {
 	acs_int previousStepLastBufferTimesSaving; // declare previousStep
 	acs_int previousStepLastBufferRctSaving; // declare previousStep
 	acs_int previousStepLastBufferAmountSaving; // declare previousStep
+	bool growing = false; // This variable is used to stop the growth of the protocell
 
 	for(acs_int actSIM = 1; actSIM <= puddle->getNsim(); actSIM++)
 	{
@@ -493,6 +497,7 @@ int main (int argc, char *argv[]) {
 
 		for(acs_int actGEN = 1; actGEN <= totalNumberOfGenerations; actGEN++)
 		{
+			if(puddle->getTheta() > 0) growing = true;
 			// IF THE ATTEMPTS ARE MORE THAN THE MAX NUMBER THIS SIMULATION IS STOPPED
 			if((puddle->getCurrentAttempts() <= puddle->getMAXattempts()) || (puddle->getMAXattempts() == 0))
 			{
@@ -526,10 +531,10 @@ int main (int argc, char *argv[]) {
 				previousStepLastBufferAmountSaving = 1;
 
 				// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-				// SECONDS / REACTIONS PER SIMULATION
+				// SECONDS / REACTIONS PER GENERATION
 				// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 
-				while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions())	)
+				while(((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions()) & (puddle->getTheta() == 0)) || growing)
 				{
 					timer.stop();
 					timeElapsed = timer.getElapsedTimeInMilliSec();
@@ -560,7 +565,6 @@ int main (int argc, char *argv[]) {
 						if(puddle->getDebugLevel() >= RUNNING_VERSION)
 						{
 							if((actSTEP % PROMPT_TIME == 0) || (actSTEP == 1) ||
-									(puddle->getNseconds() - puddle->getActualTime() < 0.0001) ||
 									(puddle->getMols() == puddle->getOverallLoadedMolsCounter()))
 							{
 								timer.stop();
@@ -628,7 +632,8 @@ int main (int argc, char *argv[]) {
 						}
 
 						// STORE SPECIES AMOUNTS
-						if((puddle->getActualTime() > (puddle->getFileAmountSavingInterval() + AmountsStoredCounter)) || (puddle->getActualTime() == 0) ||  (puddle->getFileAmountSavingInterval() == 0)) {
+						if((puddle->getActualTime() > (puddle->getFileAmountSavingInterval() + AmountsStoredCounter)) ||
+						   (puddle->getActualTime() == 0) ||  (puddle->getFileAmountSavingInterval() == 0)) {
 							//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 							//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
 							//saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
@@ -676,7 +681,12 @@ int main (int argc, char *argv[]) {
 						break;
 
 					}
-				} // while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions()))
+					// If necessary, check the volume condition
+					if(puddle->getTheta() > 0)
+					{
+						if(puddle->getInitVolume()*puddle->getTheta() < puddle->getVolume()){growing = false;}
+					}
+				} // while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions()) & growing)
 
 				// Final species ages update
 				puddle->updateSpeciesAges();

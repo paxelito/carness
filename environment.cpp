@@ -73,6 +73,7 @@
     revRctRatio = 1000;
     bufferRctsCountRow = 0;
     saveReactionParameters = 1;
+    theta = 2;
 }*/
 
 /**
@@ -121,6 +122,7 @@ environment::environment(string tmpInitialPath)
                 if(linered[0] == "volume") volume = atof(linered[1].c_str());
                 if(linered[0] == "volumeGrowth") volumeGrowth = fromStrToBool(linered[1]);
                 if(linered[0] == "stochDivision") stochDivision = fromStrToBool(linered[1]);
+                if(linered[0] == "theta") theta = atof(linered[1].c_str());
 
                 // DYNAMIC PARAMETERS
                 if(linered[0] == "energy") energy = atoi(linered[1].c_str()); // DA ELIMINARE CON ATTENZIONE, IL TUTTO VERRA' SOSTITUITO DALLA FUNZIONE BOOLEANA
@@ -203,6 +205,7 @@ environment::environment(string tmpInitialPath)
     Currentattempts = 0;
     resetReactionsCounter();
     bufferRctsCountRow = 0;
+    initVolume = volume;
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment end" << endl;
 
@@ -1272,7 +1275,7 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
 		cerr << "|- ERROR!!! PROBLEM WITH FILE " << SpeciesFilePath << e.what() << endl;
 		ExitWithError("createInitialMoleculesPopulationFromFile","exceptionerrorthrown");
     }
-    string strID, strCod, strConc, strDiff, strPrec, strK_cpx, strCpxBin, strEval, strAge, strReb, strCatID, strCpxID, strPho, strChar, strLock;
+    string strID, strCod, strConc, strDiff, strPrec, strK_cpx, strCpxBin, strEval, strAge, strReb, strCatID, strCpxID, strPho, strChar, strLock, strKmem;
     while (myfile.good())
     {
         getline(myfile, strID, '\t');
@@ -1289,7 +1292,8 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
         getline(myfile, strCpxID, '\t');
         getline(myfile, strPho, '\t');
         getline(myfile, strChar, '\t');
-        getline(myfile, strLock, '\n');
+        getline(myfile, strLock, '\t');
+        getline(myfile, strKmem, '\n');
 
         if(strID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
         {
@@ -1299,7 +1303,8 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
 										 (acs_int)atoi(strEval.c_str()), (acs_double)atof(strAge.c_str()),atoi(strReb.c_str()), volume,
 										 (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
 										 (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
-										 (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut, randomInitSpeciesConcentration, tmpRndDoubleGen));
+										 (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut, randomInitSpeciesConcentration,
+										 (acs_double)atof(strKmem.c_str()), tmpRndDoubleGen));
 			// Define the max non catalytic max ID
 			if(!maxNonCatIdDef){if(strCod.size() > nonCatalyticMaxLength){nonCatalyticLastID = (acs_longInt)atol(strID.c_str()) - 1; maxNonCatIdDef=true;}}
 			try{
@@ -1508,7 +1513,7 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
 
     ifstream myfile;
     myfile.open(SpeciesFilePath.c_str());
-    string strID, strCod, strConc, strDiff, strPrec, strK_cpx, strCpxBin, strEval, strAge, strReb, strCatID, strCpxID, strPho, strChar, strLock;
+    string strID, strCod, strConc, strDiff, strPrec, strK_cpx, strCpxBin, strEval, strAge, strReb, strCatID, strCpxID, strPho, strChar, strLock, strKmem;
     while (myfile.good())
     {
         getline(myfile, strID, '\t');
@@ -1525,7 +1530,8 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
         getline(myfile, strCpxID, '\t');
         getline(myfile, strPho, '\t');
         getline(myfile, strChar, '\t');
-        getline(myfile, strLock, '\n');
+        getline(myfile, strLock, '\t');
+        getline(myfile, strKmem, '\n');
 
         if(strID.find("\n") != 0 && (strID.size() > 0) && (strID.find(" ") != 0))
         {
@@ -1536,7 +1542,8 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
 										 (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
 										 (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
 										 (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut,
-										 randomInitSpeciesConcentration, tmpRndDoubleGen));
+										 randomInitSpeciesConcentration, (acs_double)atof(strKmem.c_str()), tmpRndDoubleGen));
+
 			if(!maxNonCatIdDef){if(strCod.size() > nonCatalyticMaxLength){nonCatalyticLastID = (acs_longInt)atol(strID.c_str()) - 1; maxNonCatIdDef=true;}}
 			try{
 				if(allSpecies.at((acs_longInt)atoi(strID.c_str())).getComplexCutPnt() == 0)
@@ -3216,11 +3223,6 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, Timer&
 					 ExitWithError("performOPTGillespieComputation::Perform Reaction","exceptionerrorthrown");
 				}
 
-				// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-				// CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
-				// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-				if(volumeGrowth) changeVolume(tmpDeltaT);
-
 			}else{
 				try{
 					gillespieMean = 0;
@@ -3295,6 +3297,11 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, Timer&
 			 cerr << "exceptioncaught:" << e.what() << endl;
 			 ExitWithError("performOPTGillespieComputation::Time registration","exceptionerrorthrown");
 		}
+
+		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		// CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
+		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		if(volumeGrowth) changeVolume(tmpDeltaT);
 
 		// If the system is open influx and efflux processes are performed
 		if(influx_rate > 0)
@@ -3878,8 +3885,9 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 
 			// CREATE RANDOM NUMBER TO COMPUTE THE TIME
 
+			//cin.ignore().get();
+
 			tmpDeltaT = ((1 / gillespieTotalScore) * log(1 / tmpRndDoubleGen()));
-			//cout<<"gillespieTotalScore   "<<gillespieTotalScore<<endl;
 
 			// If deltaT is lower than 10 seconds, it is fixed to 10 second in order to continue the simulation
 			if((tmpDeltaT) > MINIMALRCTTIMEMULTI*minimalTimeForOneMols) {
@@ -3942,11 +3950,6 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 					 cerr << "exceptioncaught:" << e.what() << endl;
 					 ExitWithError("perform_FIXED_GillespieComputation::Perform Reaction","exceptionerrorthrown");
 				}
-
-				// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-				// CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
-				// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-				if(volumeGrowth) changeVolume(tmpDeltaT);
 
 			} else{
 				try{
@@ -4018,6 +4021,11 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 			cerr << "exceptioncaught:" << e.what() << endl;
 			ExitWithError("perform_FIXED_GillespieComputation::Time registration","exceptionerrorthrown");
 		}
+
+		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		// CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
+		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		if(volumeGrowth) changeVolume(tmpDeltaT);
 
 	//--------------------------------END SELECT AND PERFORM EVENT---------------------------------------
 
@@ -4139,33 +4147,33 @@ void environment::performSingleGilleSpieIntroductionFIXED(acs_longInt tmpAmountI
 
 	try{
 		switch(tmp__rctType) {
-			case CONDENSATION:
-				temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKass();
-				break;
-	                case ENDO_CONDENSATION:
-				temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKass();
-				break;
-        	        case CLEAVAGE:
-				temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKdiss();
-				break;
-		        case ENDO_CLEAVAGE:
-				temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKdiss();
-				break;
-        	        case COMPLEXFORMATION:
-				temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getK_cpx();
-				break;
-        	        case ENDO_COMPLEXFORMATION:
-				temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getK_cpx();
-				break;
-        	        case SPONTANEOUS_CONDENSATION:
-        	        	temp_k_reaction = allReactions.at(tmpRctID).getKspont();
-		        	break;
-        	        case SPONTANEOUS_CLEAVAGE:
-        	        	temp_k_reaction = allReactions.at(tmpRctID).getKspont();
+		case CONDENSATION:
+			temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKass();
+			break;
+		case ENDO_CONDENSATION:
+			temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKass();
+			break;
+		case CLEAVAGE:
+			temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKdiss();
+			break;
+		case ENDO_CLEAVAGE:
+			temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getKdiss();
+			break;
+		case COMPLEXFORMATION:
+			temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getK_cpx();
+			break;
+		case ENDO_COMPLEXFORMATION:
+			temp_k_reaction = allCatalysis.at(tmpIDCatalysis).getK_cpx();
+			break;
+		case SPONTANEOUS_CONDENSATION:
+			temp_k_reaction = allReactions.at(tmpRctID).getKspont();
+			break;
+		case SPONTANEOUS_CLEAVAGE:
+			temp_k_reaction = allReactions.at(tmpRctID).getKspont();
 		}
 		if(tmpSameSpeciesControl)
 			if(tmpIDI == tmpIDII)
-                	        temp_sameSpecies = true;
+				temp_sameSpecies = true;
 	} catch(exception&e){
 		cout << "switch(tmp__rctType)" << endl;
 		cout << "Vectorsize "<< allCatalysis.size() << " - position " << tmpIDCatalysis << endl;
@@ -4180,7 +4188,7 @@ void environment::performSingleGilleSpieIntroductionFIXED(acs_longInt tmpAmountI
 		cout << "Vectorsize "<< allSpecies.size() << " - position " << tmpIDI << endl;
 		cerr << "exceptioncaught:" << e.what() << endl;
 		ExitWithError("performSimgleGilleSpieIntroduction","exceptionerrorthrown");
-       }
+	}
 
 	if((debugLevel >= SMALL_DEBUG))
 		cout << "\t\t\t|- Amount 1: " << tmpIDI << " " << tmpAmountI <<
@@ -4215,7 +4223,7 @@ void environment::performSingleGilleSpieIntroductionFIXED(acs_longInt tmpAmountI
 			try{
 				IDEvent = allGillespieScores.size();	// ID Event
 				allGillespieScores.push_back(gillespie((acs_longInt)allGillespieScores.size(), tmp__rctType, temp_score, tmpMol_I, tmpMol_II, tmpMol_III, tmpMol_IV, tmp_NRGDirection, tmpRctID, tmpIDCatalysis));
-						
+
 				gillespieTotalScore += temp_score;
 				gillespieCumulativeStepScoreList.push_back(gillespieTotalScore);
 				// If the theoretical product is not evaluated gillespieNewSpeciesScore is incremented
@@ -4239,16 +4247,16 @@ void environment::performSingleGilleSpieIntroductionFIXED(acs_longInt tmpAmountI
 
 				}
 
-			//if the (tmpIDI) species concentration affects the event's score, then add the event to the species' events list
-			allSpecies.at(tmpIDI).insertEvent(IDEvent);
-			if (!temp_sameSpecies)	//if IDI and IDII are different species, add the event to the second species' events list
-				allSpecies.at(tmpIDII).insertEvent(IDEvent);
+				//if the (tmpIDI) species concentration affects the event's score, then add the event to the species' events list
+				allSpecies.at(tmpIDI).insertEvent(IDEvent);
+				if (!temp_sameSpecies)	//if IDI and IDII are different species, add the event to the second species' events list
+					allSpecies.at(tmpIDII).insertEvent(IDEvent);
 
 			}catch(exception&e){
 				cout << "!!! ERROR in line " << __LINE__ << endl;
 				cout << "|- Gill size -> " << allGillespieScores.size() << " || gillCumuStepScoreList size -> " << gillespieCumulativeStepScoreList.size()
-					 << " || M1: " << tmpMol_I << " || M2: " << tmpMol_II << " || M3: " << tmpMol_III << " || M4: " << tmpMol_IV
-					 << " || type: " << tmp__rctType << " || RCTID: "  << tmpRctID << " || Catalysis: " << tmpIDCatalysis << endl;
+							 << " || M1: " << tmpMol_I << " || M2: " << tmpMol_II << " || M3: " << tmpMol_III << " || M4: " << tmpMol_IV
+							 << " || type: " << tmp__rctType << " || RCTID: "  << tmpRctID << " || Catalysis: " << tmpIDCatalysis << endl;
 				cerr << "exceptioncaught:" << e.what() << endl;
 				ExitWithError("performSimgleGilleSpieIntroduction","exceptionerrorthrown");
 			}
@@ -4259,7 +4267,7 @@ void environment::performSingleGilleSpieIntroductionFIXED(acs_longInt tmpAmountI
 		ExitWithError("performSimgleGilleSpieIntroduction","exceptionerrorthrown");
 	}
 
-    if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performSingleGilleSpieIntroduction end" << endl;
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performSingleGilleSpieIntroduction end" << endl;
 
 }
 
@@ -4661,85 +4669,79 @@ bool environment::performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performRefill start" << endl;
 	bool refillFlag = true;
-	
-//TR	//IF THE MAX LENGTH TO REFILL IS GREATER THAN THE MAX LENGHT OF THE FIRING DISK
-//	if(influx > initialMaxLength)
-//	{
-//		ExitWithError("performRefill", "ERROR: The max refill lenght is longer than the initial max length");
-//		refillFlag = false;
-//	}
+
 	acs_int numberOfMolsToRefill = acsround(tmpTimeSinceTheLastInFlux/tmpMinimalTimeForOneMols);
 	if(debugLevel >= SMALL_DEBUG ||  numberOfMolsToRefill > 1000)
 	{
 		cout << "\t\t\t\t|- Number of molecules to refill: " << numberOfMolsToRefill << " DT: " << tmpTimeSinceTheLastInFlux << " T: " << tmpMinimalTimeForOneMols << endl;
 	}
-	
+
 	if(numberOfMolsToRefill > 0)
 	{
-            // SELECT NUTRIENTS FROM THE FIRING DISK
-            for(acs_longInt singleRefill = 0; singleRefill < numberOfMolsToRefill; singleRefill++)
-            {
-                acs_longInt nutrientForInflux_ID = returnSelectionIdFromAWeightProbVectorAlreadyNormalized(nutrientsProb2BeSelected,tmp__RndDoubleGen);
-                if(debugLevel >= HIGH_DEBUG)
-                {
-                        cout << "\t\t\t\t";
-                        for(acs_int sngProb = 0; sngProb < (acs_int)nutrientsProb2BeSelected.size(); sngProb++)
-                        {
-                           cout << nutrientsProb2BeSelected.at(sngProb) << " ";
-                        }
-                        cout << endl;
-                        cout << "\t\t\t\t|- Nutrient To refill: " << allSpecies.at(nutrientsForInflux.at(nutrientForInflux_ID)).getSequence() << "#" <<  nutrientForInflux_ID << endl;
-                }
+		// SELECT NUTRIENTS FROM THE FIRING DISK
+		for(acs_longInt singleRefill = 0; singleRefill < numberOfMolsToRefill; singleRefill++)
+		{
+			acs_longInt nutrientForInflux_ID = returnSelectionIdFromAWeightProbVectorAlreadyNormalized(nutrientsProb2BeSelected,tmp__RndDoubleGen);
+			if(debugLevel >= HIGH_DEBUG)
+			{
+				cout << "\t\t\t\t";
+				for(acs_int sngProb = 0; sngProb < (acs_int)nutrientsProb2BeSelected.size(); sngProb++)
+				{
+					cout << nutrientsProb2BeSelected.at(sngProb) << " ";
+				}
+				cout << endl;
+				cout << "\t\t\t\t|- Nutrient To refill: " << allSpecies.at(nutrientsForInflux.at(nutrientForInflux_ID)).getSequence() << "#" <<  nutrientForInflux_ID << endl;
+			}
 
-                if(nutrientForInflux_ID >= (unsigned)nutrientsForInflux.size())
-                        cout << nutrientsForInflux.at(nutrientForInflux_ID) << " greater than the possible nutrients selection " << nutrientsForInflux.size()-1 << endl;
+			if(nutrientForInflux_ID >= (unsigned)nutrientsForInflux.size())
+				cout << nutrientsForInflux.at(nutrientForInflux_ID) << " greater than the possible nutrients selection " << nutrientsForInflux.size()-1 << endl;
 
-                acs_longInt IDspecies;
-                try{
-                    IDspecies = allSpecies.at(nutrientsForInflux.at(nutrientForInflux_ID)).getID();
-                  }
-                catch(exception&e){
-                    cout << "allSpecies.at(nutrientsForInflux.at(nutrientForInflux_ID)).getID();" << endl;
-                    cout << "Vectorsize " << allSpecies.size()<<" - position " << nutrientsForInflux.at(nutrientForInflux_ID) << endl;
-                    cerr << "exceptioncaught:" << e.what() << endl;
+			acs_longInt IDspecies;
+			try{
+				IDspecies = allSpecies.at(nutrientsForInflux.at(nutrientForInflux_ID)).getID();
+			}
+			catch(exception&e){
+				cout << "allSpecies.at(nutrientsForInflux.at(nutrientForInflux_ID)).getID();" << endl;
+				cout << "Vectorsize " << allSpecies.size()<<" - position " << nutrientsForInflux.at(nutrientForInflux_ID) << endl;
+				cerr << "exceptioncaught:" << e.what() << endl;
 
-                }
+			}
 
-                if(debugLevel >= SMALL_DEBUG)
-                {
-                    cout << "\t\t\t\t|- " << singleRefill << "/" << numberOfMolsToRefill << " - Tot Number of Moles before refilling: " << getTotalNumberOfMolecules();
-                    cout << " - Species to Refill: (" << allSpecies.at(IDspecies).getSequence() << "#" << IDspecies << ") - Tot Amount: " <<
-                                    allSpecies.at(IDspecies).getAmount() << endl;
-                }
+			if(debugLevel >= SMALL_DEBUG)
+			{
+				cout << "\t\t\t\t|- " << singleRefill << "/" << numberOfMolsToRefill << " - Tot Number of Moles before refilling: " << getTotalNumberOfMolecules();
+				cout << " - Species to Refill: (" << allSpecies.at(IDspecies).getSequence() << "#" << IDspecies << ") - Tot Amount: " <<
+						allSpecies.at(IDspecies).getAmount() << endl;
+			}
 
-                // ACTUAL INFLUX EVENT ----------------- increment specific species and the total number of species
-                if(IDspecies >= (unsigned)allSpecies.size())
-                    cout << IDspecies << " maggiore del massimo consentito che è " << allSpecies.size()-1 << endl;
-                try{
-                allSpecies.at(IDspecies).increment(volume);
-		//update events of species involved
-		vector<acs_longInt> speciesInvolved;
-		speciesInvolved.push_back(IDspecies);
-		performEventUpdate(speciesInvolved);
-                }
-                catch(exception&e){
-                    cout << " allSpecies.at(IDspecies).increment(volume);" << endl;
-                    cout << "Vectorsize " << allSpecies.size()<<" - position " << IDspecies<< endl;
-                    cerr << "exceptioncaught:" << e.what() << endl;
+			// ACTUAL INFLUX EVENT ----------------- increment specific species and the total number of species
+			if(IDspecies >= (unsigned)allSpecies.size())
+				cout << IDspecies << " maggiore del massimo consentito che è " << allSpecies.size()-1 << endl;
+			try{
+				allSpecies.at(IDspecies).increment(volume);
+				//update events of species involved
+				vector<acs_longInt> speciesInvolved;
+				speciesInvolved.push_back(IDspecies);
+				performEventUpdate(speciesInvolved);
+			}
+			catch(exception&e){
+				cout << " allSpecies.at(IDspecies).increment(volume);" << endl;
+				cout << "Vectorsize " << allSpecies.size()<<" - position " << IDspecies<< endl;
+				cerr << "exceptioncaught:" << e.what() << endl;
 
-                }
+			}
 
-                incMolSpeciesProcedure(IDspecies);
+			incMolSpeciesProcedure(IDspecies);
 
-                if(debugLevel >= SMALL_DEBUG)
-                {
-                        cout << " - after refilling: " << getTotalNumberOfMolecules() << " - Tot Amount: " << allSpecies.at(IDspecies).getAmount() << endl;
-                }
-            }
+			if(debugLevel >= SMALL_DEBUG)
+			{
+				cout << " - after refilling: " << getTotalNumberOfMolecules() << " - Tot Amount: " << allSpecies.at(IDspecies).getAmount() << endl;
+			}
+		}
 	}else{
 		refillFlag = false;
 	}
-	
+
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performRefill end" << endl;
 	return refillFlag;
 }
@@ -5917,7 +5919,9 @@ void environment::performEventUpdate(vector<acs_longInt> speciesInvolved){
 			//if both concentration are fixed, we don't need to update scores
 			if (!allSpecies.at(tmpIDI).getConcentrationFixed() || !allSpecies.at(tmpIDII).getConcentrationFixed())
 				//compute new score
-				performScoreUpdate(allSpecies.at(tmpIDI).getAmount(), allSpecies.at(tmpIDI).getDiffusionEnh(), allSpecies.at(tmpIDI).getSolubility(), allSpecies.at(tmpIDII).getAmount(), allSpecies.at(tmpIDII).getDiffusionEnh(), allSpecies.at(tmpIDII).getSolubility(), temp_k_reaction, temp_sameSpecies, events[e]);				
+				performScoreUpdate(allSpecies.at(tmpIDI).getAmount(), allSpecies.at(tmpIDI).getDiffusionEnh(), allSpecies.at(tmpIDI).getSolubility(),
+								   allSpecies.at(tmpIDII).getAmount(), allSpecies.at(tmpIDII).getDiffusionEnh(), allSpecies.at(tmpIDII).getSolubility(),
+								   temp_k_reaction, temp_sameSpecies, events[e]);
 		} 	//end for events
 	}	//end for speciesInvolved
 
@@ -5966,6 +5970,7 @@ void environment::performScoreUpdate(acs_longInt tmpAmountI, acs_double tmpDifI,
 	if (gillespieTotalScore != gillespieCumulativeStepScoreList.back()){
 		cout<<"gillespieTotalScore :"<<gillespieTotalScore<<endl;
 		cout<<"gillespieCumulativeStepScoreList.back() :"<<gillespieCumulativeStepScoreList.back()<<endl;
+		cout<<"Difference: "<<gillespieTotalScore-gillespieCumulativeStepScoreList.back()<<endl;
 		cout<<"Source Code Line: "<<__LINE__<<endl;
 		ExitWithError("performScoreUpdate", "exceptionerrorthrown");
 
@@ -5997,7 +6002,7 @@ void environment::performScoreUpdate(acs_longInt tmpAmountI, acs_double tmpDifI,
 		idProduct1 = allGillespieScores.at(event).getMolII();
 		idProduct2 = allGillespieScores.at(event).getMolIII();
 	}
-	else 	if ((allGillespieScores.at(event).getIdReactionType() == CONDENSATION) || (allGillespieScores.at(event).getIdReactionType() == ENDO_CONDENSATION)) {
+	else if ((allGillespieScores.at(event).getIdReactionType() == CONDENSATION) || (allGillespieScores.at(event).getIdReactionType() == ENDO_CONDENSATION)) {
 	//if the reaction creates new species (1 product for condensation)
 		idProduct1 = allGillespieScores.at(event).getMolIII();
 	}
@@ -7391,11 +7396,62 @@ void environment::updateSpeciesAges()
  @date 2013/07/17
  @author Alessandro Filisetti
  */
-void environment::changeVolume(acs_int tmpTimeSinceLastReaction)
+void environment::changeVolume(acs_double tmpTimeSinceLastReaction)
 {
-	//volume = volume + ((volume * 10) * tmpTimeSinceLastReaction) ;
-	cout << "volue change" << endl;
-	volume = volume * 10 ;
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::changeVolume start" << endl;
+	acs_double oldScore;
+	acs_double newScore;
+	acs_double oldVolume = volume;
+	// Change the volume according to the concentration of the species contributing to change the volume
+	for(vector<species>::iterator tmpAllSpecies = allSpecies.begin(); tmpAllSpecies != allSpecies.end(); tmpAllSpecies++)
+	{
+		if(tmpAllSpecies->getAlpha() > 0)
+		{
+			//cout << "........." << endl;
+			//cout << "prima: " << volume << " " << tmpAllSpecies->getConcentration() << " " << tmpAllSpecies->getAlpha() << " " << tmpTimeSinceLastReaction << endl;
+			if(tmpAllSpecies->getComplexCutPnt() == 0)
+				volume += volume * tmpAllSpecies->getConcentration() * tmpAllSpecies->getAlpha() * tmpTimeSinceLastReaction;
+			//cout << "prima: " << volume << endl;
+			//cin.ignore().get();
+		}
+	}
+	// Change the concentration of all the species according to the new volume
+	for(vector<species>::iterator tmpAllSpecies = allSpecies.begin(); tmpAllSpecies != allSpecies.end(); tmpAllSpecies++)
+	{
+		//cout << "-------" << endl;
+		//cout << tmpAllSpecies->getConcentration() << " " << tmpAllSpecies->getAmount() << endl;
+		//tmpAllSpecies->numToConc(volume);
+		// If buffered species, amount must be changed according to the new concentration
+		if(tmpAllSpecies->getConcentrationFixed()) tmpAllSpecies->concToNum(volume);
+		else{tmpAllSpecies->numToConc(volume);}
+		//cout << tmpAllSpecies->getConcentration() << " " << tmpAllSpecies->getAmount() << endl;
+		//cin.ignore().get();
+	}
+
+	// Correct all the gillespie scores according to the new volume
+	if(newSpeciesProbMinThreshold >= 1)
+	{
+		acs_double newCumGilScore = 0;
+		gillespieCumulativeStepScoreList.clear();
+		for(vector<gillespie>::iterator tmpAllGil = allGillespieScores.begin(); tmpAllGil != allGillespieScores.end(); tmpAllGil++)
+		{
+			oldScore = tmpAllGil->getScore();
+			if((tmpAllGil->getIdReactionType() != SPONTANEOUS_CLEAVAGE) &&
+					(tmpAllGil->getIdReactionType() != SPECIESDECAY) &&
+					(tmpAllGil->getIdReactionType() != COMPLEXDEGRADATION))
+			{
+				newScore = oldScore / (volume / oldVolume);
+				newCumGilScore += newScore;
+				tmpAllGil->setNewScore(newScore);
+				gillespieCumulativeStepScoreList.push_back(newCumGilScore);
+			}else{
+				newCumGilScore += oldScore;
+				gillespieCumulativeStepScoreList.push_back(newCumGilScore);
+			}
+		}
+		gillespieTotalScore = gillespieCumulativeStepScoreList.back();
+	}
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::changeVolume end" << endl;
 }
 
 /* ************************
@@ -7418,9 +7474,9 @@ void environment::showGlobalParameter()
         cout << "|   ****         ***   *     *          *****   *****                             " << endl;
         cout << "|  *            *   *  **    *         *       *                                  " << endl;
         cout << "| *        ***  *   *  * *   *  ****   *       *                                  " << endl;
-        cout << "| *          *  ****   *  *  *  *  *    ****    ****       " << endl;
+        cout << "| *          *  ****   *  *  *  *  *    ****    ****       					   " << endl;
         cout << "| *       ****  **     *   * *  ****        *       *                             " << endl;
-        cout << "|  *      *  *  * *    *    **  *           *       *                             "  << endl;
+        cout << "|  *      *  *  * *    *    **  *           *       *                             " << endl;
         cout << "|   ****  ****  *  *   *     *   ***   *****   *****                              " << endl;
         cout << "|  												                               " << endl;
         cout << "| CAtalytic     Reaction NEtworks      Stochastic Simulator	                   " << endl;
@@ -7760,6 +7816,9 @@ void environment::resetConcentrationToInitialConditions(MTRand& tmprndDoubleGen)
             cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
     }
 
+    // Reset volume if necessary
+    if(theta > 0) volume = volume / 2;
+
     // RESET REACTIONS COUNTER
     for(vector<reactions>::iterator tmpAllReactionsIter = allReactions.begin(); tmpAllReactionsIter != allReactions.end(); tmpAllReactionsIter++)
     {
@@ -7775,7 +7834,7 @@ void environment::resetConcentrationToInitialConditions(MTRand& tmprndDoubleGen)
     {
         tmpAllSpeciesIter->resetAge();
         tmpAllSpeciesIter->resetReborns();
-        tmpAllSpeciesIter->resetToInitConc(volume, randomInitSpeciesConcentration, tmprndDoubleGen);
+        tmpAllSpeciesIter->resetToInitConc(volume, randomInitSpeciesConcentration, theta, stochDivision, tmprndDoubleGen);
     }
 
     //allSpecies.clear();
@@ -7986,6 +8045,9 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
 
 	buffer << "# Division type (1: Stochastic, 0: deterministic)\n";
 	buffer << "stochDivision=" << stochDivision << "\n \n";
+
+	buffer << "# Dimension with respect to the initial volume for division\n";
+	buffer << "theta=" << (double)theta << "\n \n";
 
 	buffer << "# ------------------\n";
 	buffer << "# DYNAMIC PARAMETERS\n";
@@ -8526,7 +8588,7 @@ bool environment::saveTimeSpeciesAmountSTD(acs_int tmp__CurrentStep) {
 	try{
 	
 		//saving data on buffer...
-		bufferSaveTimeSpeciesAmount << tmp__CurrentStep << "\t" << (double)actualTime;
+		bufferSaveTimeSpeciesAmount << tmp__CurrentStep << "\t" << (double)actualTime << "\t" << (double)volume;
 		for(acs_longInt i = 0; i < (acs_longInt)allSpecies.size(); i++)
 		{
 			//if((allSpecies.at(i).getAmount() > 0) & (allSpecies.at(i).getComplexCutPnt() == 0))

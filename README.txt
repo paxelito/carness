@@ -4,6 +4,10 @@ Software documentation is available in the doc folder.
 |VERSION HISTORY|
 |---------------| 
 
+Build6.2b20140611.74
+- Volume growth has been introduced with adiabatic assumption
+- Protocell division has been added 
+
 Build6.1b20140529.73
 - A bug in the gillespie introduction has been fixed
 

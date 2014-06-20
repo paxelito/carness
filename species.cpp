@@ -34,6 +34,7 @@ species::species()
 	concentrationFixed = false;
 	lastSpeciesEvaluated = 0;
 	firstConcentration = 0; 
+	alpha=0;
 
 }
 
@@ -75,12 +76,11 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 	// Set concentrationFixed propriety
 	concentrationFixed = false;
 	if((tmpInflux_rate == 0) && (tmpMaxLOut > 0))
-	{
 		if(sequence.length() <= tmpMaxLOut) concentrationFixed = true;
-	}
 
     firstConcentration = 0; // 0 because the species is created during on run
     lastSpeciesEvaluated = 0;
+    alpha = 0;
 
 }
 
@@ -123,12 +123,11 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 	// Set concentrationFixed propriety
 	concentrationFixed = false;
 	if((tmpInflux_rate == 0) && (tmpMaxLOut > 0))
-	{
 		if(sequence.length() <= tmpMaxLOut) concentrationFixed = true;
-	}
 
     firstConcentration = 0; // 0 because the species is created during on run
     lastSpeciesEvaluated = 0;
+    alpha = 0;
 }
 
 /** \brief This constructor is used when a new species is uploaded from file (TOTAL AMOUNT BASED)
@@ -142,7 +141,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 				 acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
                  acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho,
                  acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut,
-                 bool tmpRndConcentration, MTRand& tmp_RndDoubleGen)
+                 bool tmpRndConcentration, acs_double tmpAlpha, MTRand& tmp_RndDoubleGen)
 {
 
 	id = tmpID;
@@ -173,6 +172,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 
     firstConcentration = concentration; // If the species is loaded from file that's the very initial concentration
     lastSpeciesEvaluated = 0;
+    alpha = tmpAlpha;
 	
 }
 
@@ -187,7 +187,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 				 acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
                  acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho,
                  acs_double tmpKLoadConc, acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut,
-                 bool tmpRndConcentration, MTRand& tmp_RndDoubleGen)
+                 bool tmpRndConcentration, acs_double tmpAlpha, MTRand& tmp_RndDoubleGen)
 {
 	id = tmpID;
 	sequence = tmpSequence;
@@ -218,6 +218,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 
     firstConcentration = tmpConcentration; // If the species is loaded from file that's the very initial concentration
     lastSpeciesEvaluated = 0;
+    alpha = tmpAlpha;
 }
 
 /** \brief This constructor is used when a species is randomly created (!!! NOT USED NOW)
@@ -233,7 +234,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
  */
 species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, acs_double tmpDiffusionEnh, 
 				 acs_int tmpSoluble, acs_double tmpComplexProb, acs_double tmpMaxComplexDegKinetic, 
-				 MTRand& tmp_RandomGenerator, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable)
+				 MTRand& tmp_RandomGenerator, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable, acs_double tmpAlpha)
 {
 	cout << "four" << endl;
 
@@ -263,6 +264,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 	concentrationFixed = false;
     firstConcentration = 0; // 0 because the species is created during on run
     lastSpeciesEvaluated = 0;
+    alpha = tmpAlpha;
 }
 
 /** \brief This constructor is used to create a molecular complex
@@ -289,6 +291,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpDiffusionE
 	numToConc(tmpVolume);
 	age = 0;
 	reborns = 0;
+	alpha = 0;
 	diffusionEnh =tmpDiffusionEnh;
 	soluble = tmpSoluble;
 	complexDegradationEnh = getDoubleRandom(tmpMaxComplexDegKinetic, tmpMaxComplexDegKinetic, tmp_RandomGenerator);
@@ -469,12 +472,27 @@ void species::printEventsList() {
  * Function to reset the species concentration according to the initialization method
  */
 
-void species::resetToInitConc(acs_double tmpVolume, bool tmpRndConcentration, MTRand& tmp_rndDoubleGen){
+void species::resetToInitConc(acs_double tmpVolume, bool tmpRndConcentration, acs_double tmpTheta, acs_int tmpStochDivision, MTRand& tmp_rndDoubleGen){
 
-	concentration=firstConcentration;
-	concToNum(tmpVolume);
-	if(tmpRndConcentration){amount = random_poisson(acs_double(amount),tmp_rndDoubleGen);}
-	numToConc(tmpVolume);
+	if(tmpTheta == 0) // IF division is not considered
+	{
+		concentration=firstConcentration;
+		concToNum(tmpVolume);
+		if(tmpRndConcentration){amount = random_poisson(acs_double(amount),tmp_rndDoubleGen);}
+		numToConc(tmpVolume);
+	}else{
+		if(!concentrationFixed)
+		{
+			if(tmpStochDivision==1) // IF stochastic division
+			{
+				amount = random_poisson(acs_double(amount/2),tmp_rndDoubleGen);
+				numToConc(tmpVolume);
+			}else{
+				amount = (acs_int)amount/2;
+				numToConc(tmpVolume);
+			}
+		}
+	}
 }
 
 
