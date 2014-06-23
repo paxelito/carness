@@ -6396,7 +6396,7 @@ bool environment::performCleavage(acs_longInt tmpSubstrate, acs_longInt tmpProdu
     try{
 	
 	// substrate decrement
-	if((!allSpecies.at(tmpSubstrate).getAmount() > 0) || (!allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getAmount() > 0))
+	if(!(allSpecies.at(tmpSubstrate).getAmount() > 0) || !(allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getAmount() > 0))
 	{
 		cout << "Substrate: " << tmpSubstrate <<  " " << allSpecies.at(tmpSubstrate).getAmount()
 			 << " | Catalysts: " << allCatalysis.at(tmpIdCatalysis).getCat() << " " << allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getAmount()
@@ -6506,7 +6506,7 @@ bool environment::perform_endo_Cleavage(acs_longInt tmpSubstrate, acs_longInt tm
 
         switch (tmpNRGside) {
         case CATALYSTLOAD:
-            if((!allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getChargeMols() > 0) || (!allSpecies.at(tmpSubstrate).getNOTchargeMols() > 0))
+            if(!(allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getChargeMols() > 0) || !(allSpecies.at(tmpSubstrate).getNOTchargeMols() > 0))
             {
                 ExitWithError("perform_endo_Cleavage", "Loaded substrate not Avalaible!!!");
             }else{
@@ -6518,7 +6518,7 @@ bool environment::perform_endo_Cleavage(acs_longInt tmpSubstrate, acs_longInt tm
             }
             break;
         case SUBSTRATELOAD:
-            if((!allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getNOTchargeMols() > 0) || (!allSpecies.at(tmpSubstrate).getChargeMols() > 0))
+            if(!(allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getNOTchargeMols() > 0) || !(allSpecies.at(tmpSubstrate).getChargeMols() > 0))
             {
                 ExitWithError("perform_endo_Cleavage", "Loaded substrate not Avalaible!!!");
             }else{
@@ -6530,7 +6530,7 @@ bool environment::perform_endo_Cleavage(acs_longInt tmpSubstrate, acs_longInt tm
             }
             break;
         default:
-            if((!allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getChargeMols() > 0) || (!allSpecies.at(tmpSubstrate).getChargeMols() > 0))
+            if(!(allSpecies.at(allCatalysis.at(tmpIdCatalysis).getCat()).getChargeMols() > 0) || !(allSpecies.at(tmpSubstrate).getChargeMols() > 0))
             {
                 ExitWithError("perform_endo_Cleavage", "Loaded substrate not Avalaible!!!");
             }else{
