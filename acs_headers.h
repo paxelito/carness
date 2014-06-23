@@ -40,7 +40,8 @@ typedef unsigned int acs_int;
 // CONSTANTS
 //----------
 
-#define __SOFTVERSION__ "6.2b20140611.74"
+#define __SOFTVERSION__ "7.0b20140623.74"
+#define __SOFTVERSIONCOODE__ 2014062374
 
 // DEBUG LEVELS
 
@@ -119,6 +120,9 @@ typedef unsigned int acs_int;
 
 //PROMPT SIMUATION STATE EVERY...
 #define PROMPT_TIME 10000
+
+//MAX NON VOLUME GROWTH STEPS
+#define NOVOLUMEGROWTHMAXSTEPS 1000
 
 using namespace std;
 

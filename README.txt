@@ -4,7 +4,7 @@ Software documentation is available in the doc folder.
 |VERSION HISTORY|
 |---------------| 
 
-Build6.2b20140611.74
+Build7.0b20140623.74
 - Volume growth has been introduced with adiabatic assumption
 - Protocell division has been added 
 

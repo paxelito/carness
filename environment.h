@@ -96,6 +96,7 @@ private:
     acs_double initVolume; // Init volume to compare with the varying volume
     bool volumeGrowth; // Boolean variable defining the possibility for the volume to change
     bool stochDivision; // Boolean Variable defining the division process (stochastic or deterministic)
+    acs_int noVolumeGrowthStepCounter; // Increasing counter in accordance with no volume growth, after 1000 no growing step simulation is stopped
     acs_double theta; // Volume increasing for division
     acs_double randomSeed; //Random seed of the simulation
     //TR acs_double totalPossibleNumberOfSpecies; // Overall number of species in the firing disk. According to this parameters the initial set of molecules is set

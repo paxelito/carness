@@ -74,6 +74,7 @@
     bufferRctsCountRow = 0;
     saveReactionParameters = 1;
     theta = 2;
+    noVolumeGrowthStepCounter = 0;
 }*/
 
 /**
@@ -206,6 +207,7 @@ environment::environment(string tmpInitialPath)
     resetReactionsCounter();
     bufferRctsCountRow = 0;
     initVolume = volume;
+    noVolumeGrowthStepCounter = 0;
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment end" << endl;
 
@@ -7407,49 +7409,53 @@ void environment::changeVolume(acs_double tmpTimeSinceLastReaction)
 	{
 		if(tmpAllSpecies->getAlpha() > 0)
 		{
-			//cout << "........." << endl;
-			//cout << "prima: " << volume << " " << tmpAllSpecies->getConcentration() << " " << tmpAllSpecies->getAlpha() << " " << tmpTimeSinceLastReaction << endl;
 			if(tmpAllSpecies->getComplexCutPnt() == 0)
 				volume += volume * tmpAllSpecies->getConcentration() * tmpAllSpecies->getAlpha() * tmpTimeSinceLastReaction;
-			//cout << "prima: " << volume << endl;
-			//cin.ignore().get();
 		}
-	}
-	// Change the concentration of all the species according to the new volume
-	for(vector<species>::iterator tmpAllSpecies = allSpecies.begin(); tmpAllSpecies != allSpecies.end(); tmpAllSpecies++)
-	{
-		//cout << "-------" << endl;
-		//cout << tmpAllSpecies->getConcentration() << " " << tmpAllSpecies->getAmount() << endl;
-		//tmpAllSpecies->numToConc(volume);
-		// If buffered species, amount must be changed according to the new concentration
-		if(tmpAllSpecies->getConcentrationFixed()) tmpAllSpecies->concToNum(volume);
-		else{tmpAllSpecies->numToConc(volume);}
-		//cout << tmpAllSpecies->getConcentration() << " " << tmpAllSpecies->getAmount() << endl;
-		//cin.ignore().get();
 	}
 
-	// Correct all the gillespie scores according to the new volume
-	if(newSpeciesProbMinThreshold >= 1)
+	if(oldVolume != volume)
 	{
-		acs_double newCumGilScore = 0;
-		gillespieCumulativeStepScoreList.clear();
-		for(vector<gillespie>::iterator tmpAllGil = allGillespieScores.begin(); tmpAllGil != allGillespieScores.end(); tmpAllGil++)
+		// Change the concentration of all the species according to the new volume
+		for(vector<species>::iterator tmpAllSpecies = allSpecies.begin(); tmpAllSpecies != allSpecies.end(); tmpAllSpecies++)
 		{
-			oldScore = tmpAllGil->getScore();
-			if((tmpAllGil->getIdReactionType() != SPONTANEOUS_CLEAVAGE) &&
-					(tmpAllGil->getIdReactionType() != SPECIESDECAY) &&
-					(tmpAllGil->getIdReactionType() != COMPLEXDEGRADATION))
-			{
-				newScore = oldScore / (volume / oldVolume);
-				newCumGilScore += newScore;
-				tmpAllGil->setNewScore(newScore);
-				gillespieCumulativeStepScoreList.push_back(newCumGilScore);
-			}else{
-				newCumGilScore += oldScore;
-				gillespieCumulativeStepScoreList.push_back(newCumGilScore);
-			}
+			if(tmpAllSpecies->getConcentrationFixed()) tmpAllSpecies->concToNum(volume);
+			else{tmpAllSpecies->numToConc(volume);}
 		}
-		gillespieTotalScore = gillespieCumulativeStepScoreList.back();
+
+		// Correct all the gillespie scores according to the new volume
+		if((newSpeciesProbMinThreshold >= 1) && (oldVolume != volume))
+		{
+			acs_double newCumGilScore = 0;
+			gillespieCumulativeStepScoreList.clear();
+			for(vector<gillespie>::iterator tmpAllGil = allGillespieScores.begin(); tmpAllGil != allGillespieScores.end(); tmpAllGil++)
+			{
+				oldScore = tmpAllGil->getScore();
+				if((tmpAllGil->getIdReactionType() != SPONTANEOUS_CLEAVAGE) &&
+						(tmpAllGil->getIdReactionType() != SPECIESDECAY) &&
+						(tmpAllGil->getIdReactionType() != COMPLEXDEGRADATION))
+				{
+					newScore = oldScore / (volume / oldVolume);
+					newCumGilScore += newScore;
+					tmpAllGil->setNewScore(newScore);
+					gillespieCumulativeStepScoreList.push_back(newCumGilScore);
+				}else{
+					newCumGilScore += oldScore;
+					gillespieCumulativeStepScoreList.push_back(newCumGilScore);
+				}
+			}
+			gillespieTotalScore = gillespieCumulativeStepScoreList.back();
+		}
+		noVolumeGrowthStepCounter = 0;
+	}else{
+		if(noVolumeGrowthStepCounter < NOVOLUMEGROWTHMAXSTEPS){noVolumeGrowthStepCounter++;}
+		else{
+			cout << endl << endl <<  "-----------------------------------------------------------------------" << endl;
+			cout << "| WARNING :: Volume is no longer growing, simulation will be stopped   |" << endl;
+			cout << "-----------------------------------------------------------------------" << endl;
+			ExitWithError("warning in changeVolume function","novolumegrowth");
+		}
+
 	}
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::changeVolume end" << endl;
 }
