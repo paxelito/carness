@@ -46,7 +46,7 @@ acs_longInt returnSelectionIdFromAWeightProbVector(vector<acs_double>& tmpVector
     acs_longInt idReturned = position;
     while (foundFlag == false) {
         try{
-			if (tmpVector.at(position) >= (pnt*tmpMaxValue))
+			if (tmpVector.at(position) > (pnt*tmpMaxValue))
 			{
 				idReturned = position;
 				foundFlag = true;
