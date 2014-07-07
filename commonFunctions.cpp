@@ -46,7 +46,7 @@ acs_longInt returnSelectionIdFromAWeightProbVector(vector<acs_double>& tmpVector
     acs_longInt idReturned = position;
     while (foundFlag == false) {
         try{
-			if (tmpVector.at(position) > (pnt*tmpMaxValue))
+			if (tmpVector.at(position) >= (pnt*tmpMaxValue))
 			{
 				idReturned = position;
 				foundFlag = true;
@@ -60,6 +60,14 @@ acs_longInt returnSelectionIdFromAWeightProbVector(vector<acs_double>& tmpVector
         }
         position++;
     }
+    //cancellare
+/*    if((tmpRow == 3870) && (idReturned == 15))
+    {
+    	cout << endl << endl;
+    	cout << "vec position: " << tmpVector.at(idReturned) << " - double position: " << (pnt*tmpMaxValue) << endl;
+    	cout << "max value: " << tmpMaxValue << " - random: " << pnt << " - idReturned: " << idReturned << endl;
+    }*/
+
     return idReturned;
 }
 

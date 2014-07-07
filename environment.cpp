@@ -3833,9 +3833,6 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 
 	}	//if actSTEP == 1
 
-	
-
-
 	//--------------------------------END OF POSSIBLE EVENTS LIST CREATION--------------------------------
 
 
@@ -3871,6 +3868,29 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 			} else {
 				try{
 					reaction_u = returnSelectionIdFromAWeightProbVector(gillespieCumulativeStepScoreList, gillespieCumulativeStepScoreList.back(), tmpRndDoubleGen, __LINE__);
+/*					if (((volume >= initVolume * 1.9999) && (tmpActGEN == 20)) || (reaction_u == 15)){//cancellare
+						printGillespieStructure();
+						cout << "gill id " << reaction_u << endl;
+						cout << "6  -> " << allSpecies[6].getAmount() << " || ";
+						cout << "8  -> " << allSpecies[8].getAmount() << " || ";
+						cout << "13 -> " << allSpecies[13].getAmount() << " || ";
+						cout << "16 -> " << allSpecies[16].getAmount() << endl;
+						cout << "10 -> " << allSpecies[10].getAmount() << " || ";
+						cout << "17 -> " << allSpecies[17].getAmount() << " || ";
+						cout << "25 -> " << allSpecies[25].getAmount() << " || ";
+						cout << "26 -> " << allSpecies.at(26).getAmount() << endl;
+						cout << "c126 -> " << allSpecies[126].getAmount() << " || ";
+						cout << "c127 -> " << allSpecies[127].getAmount() << " || ";
+						cout << "c128 -> " << allSpecies[128].getAmount() << " || ";
+						cout << "c129 -> " << allSpecies.at(129).getAmount() << endl;
+						cout << "c130 -> " << allSpecies[130].getAmount() << " || ";
+						cout << "c131 -> " << allSpecies[131].getAmount() << " || ";
+						cout << "c132 -> " << allSpecies[132].getAmount() << " || ";
+						cout << "c133 -> " << allSpecies.at(133).getAmount() << endl;
+						cout << "VOLUME: " << volume << " - TIME: " << tmpActSTEP << endl;
+
+						cin.ignore().get();
+					}*/
 
 					if(debugLevel == GILLESPIESTUFF){
 						printGillespieStructure();
@@ -4801,6 +4821,7 @@ bool environment::performDETComplexDissociation(acs_double tmpTimeInterval, MTRa
 			if(debugLevel == COMPLEXSTUFF) cout << tempCpx.size() << endl;
 
 			if(decimalComplexesToDissociate < 0) decimalComplexesToDissociate = 0;
+
 		for(acs_int i = 0; i < cpxIntegerPart; i++)
 		{
 			try{
@@ -4809,11 +4830,22 @@ bool environment::performDETComplexDissociation(acs_double tmpTimeInterval, MTRa
 					// According to the propensity list the complex is randomly selected
 					if(tempCpx.size() > 1)
 					{
-						selectedPosition = returnSelectionIdFromAWeightProbVector(tempCpx,totCpxDissRate,tmp_RndDoubleGen, __LINE__);
+						selectedPosition = returnSelectionIdFromAWeightProbVector(tempCpx,tempCpx.back(),tmp_RndDoubleGen, __LINE__);
 					}else{
 						selectedPosition = 0;
 					}
+
 					selectedID = tempID.at(selectedPosition);
+
+					// CANCELLARE
+					/*if(tempCpx.size() > 2)
+					{
+						cout << "len: " << tempCpx.size() << " - Position: " << selectedPosition <<
+								" - catalyst: " << allSpecies.at(selectedID).getCatalyst_ID() << endl;
+
+						cin.ignore().get();
+					}*/
+
 					if(debugLevel == COMPLEXSTUFF)
 					{	cout << "-- REMOVING " << i+1 << " OF " << cpxIntegerPart
 							<< "Pos " << selectedPosition << " - Sel " << selectedID << " - #" << allSpecies.at(selectedID).getAmount()

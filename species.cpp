@@ -219,6 +219,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
     firstConcentration = tmpConcentration; // If the species is loaded from file that's the very initial concentration
     lastSpeciesEvaluated = 0;
     alpha = tmpAlpha;
+
 }
 
 /** \brief This constructor is used when a species is randomly created (!!! NOT USED NOW)
