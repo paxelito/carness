@@ -7447,7 +7447,7 @@ void environment::changeVolume(acs_double tmpTimeSinceLastReaction)
 		if(tmpAllSpecies->getAlpha() > 0)
 		{
 			if(tmpAllSpecies->getComplexCutPnt() == 0)
-				lipids += lipids * tmpAllSpecies->getConcentration() * tmpAllSpecies->getAlpha() * tmpTimeSinceLastReaction;
+				lipids += volume * tmpAllSpecies->getConcentration() * tmpAllSpecies->getAlpha() * tmpTimeSinceLastReaction;
 		}
 	}
 
