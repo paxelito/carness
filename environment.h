@@ -94,6 +94,9 @@ private:
     string alphabet; // Alphabet (e.g. AB, RNA, DNA, Proteins)
     acs_double volume; // Reactor volume
     acs_double initVolume; // Init volume to compare with the varying volume
+    acs_double lipids; // Initial number of lipids.
+    acs_double initLipids; // Init number of lipids
+    acs_double psi; // Constant connecting lipids and volume
     bool volumeGrowth; // Boolean variable defining the possibility for the volume to change
     bool stochDivision; // Boolean Variable defining the division process (stochastic or deterministic)
     acs_int noVolumeGrowthStepCounter; // Increasing counter in accordance with no volume growth, after 1000 no growing step simulation is stopped
@@ -226,6 +229,7 @@ private:
 	acs_double getRefillInterval()const{return influx_rate;}
 	string getAlphabet()const{return alphabet;}
 	acs_double getVolume()const{return volume;}
+	acs_double getLipids()const{return lipids;}
 	acs_double getInitVolume()const{return initVolume;}
 	acs_double getTheta()const{return theta;}
 	acs_double getRandomSeed()const{return randomSeed;}

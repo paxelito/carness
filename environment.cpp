@@ -206,8 +206,13 @@ environment::environment(string tmpInitialPath)
     Currentattempts = 0;
     resetReactionsCounter();
     bufferRctsCountRow = 0;
+
+    // VOLUME
     initVolume = volume;
     noVolumeGrowthStepCounter = 0;
+    lipids = 600;
+    initLipids = lipids;
+    psi = volume / (pow(lipids,3/2));
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment end" << endl;
 
@@ -7442,9 +7447,11 @@ void environment::changeVolume(acs_double tmpTimeSinceLastReaction)
 		if(tmpAllSpecies->getAlpha() > 0)
 		{
 			if(tmpAllSpecies->getComplexCutPnt() == 0)
-				volume += volume * tmpAllSpecies->getConcentration() * tmpAllSpecies->getAlpha() * tmpTimeSinceLastReaction;
+				lipids += lipids * tmpAllSpecies->getConcentration() * tmpAllSpecies->getAlpha() * tmpTimeSinceLastReaction;
 		}
 	}
+
+	volume = pow(lipids,3/2) * psi;
 
 	if(oldVolume != volume)
 	{
@@ -7855,7 +7862,11 @@ void environment::resetConcentrationToInitialConditions(MTRand& tmprndDoubleGen)
     }
 
     // Reset volume if necessary
-    if(theta > 0) volume = volume / 2;
+    if(theta > 0)
+    {
+    	volume = volume / 2;
+    	lipids = lipids / 2;
+    }
 
     // RESET REACTIONS COUNTER
     for(vector<reactions>::iterator tmpAllReactionsIter = allReactions.begin(); tmpAllReactionsIter != allReactions.end(); tmpAllReactionsIter++)

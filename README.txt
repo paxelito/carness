@@ -4,6 +4,10 @@ Software documentation is available in the doc folder.
 |VERSION HISTORY|
 |---------------| 
 
+Build7.1b20140721.75
+- Volume now growths as a function of the lipids. Relation between volume and lipids is computed during the initialization and it is equal to 
+ 	V = omega*C^{3/2}.  
+
 Build7.0b20140623.74
 - Volume growth has been introduced with adiabatic assumption
 - Protocell division has been added 
