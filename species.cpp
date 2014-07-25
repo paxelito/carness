@@ -100,12 +100,12 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentration, acs_double tmpDiffusionEnh, 
 				 acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint, 
 				 acs_int tmpEvalueted, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable,
-				 acs_double tmpInflux_rate, acs_int tmpMaxLOut)
+				 acs_double tmpInflux_rate, acs_int tmpMaxLOut, MTRand& tmp_RndDoubleGen)
 {
 	id = tmpID;
 	sequence = tmpSequence;
 	concentration = tmpConcentration;
-	concToNum(tmpVolume);
+	concToNum(tmpVolume, tmp_RndDoubleGen);
 	numToConc(tmpVolume);
 	chargedMols = 0;
 	age = 0;
@@ -208,7 +208,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
     //cout << "concentration based random concentration: " << tmpRndConcentration << endl;
 	//cin.ignore().get();
 	concentration = tmpConcentration;
-	concToNum(tmpVolume);
+	concToNum(tmpVolume, tmp_RndDoubleGen);
 	if(tmpRndConcentration){amount = random_poisson(acs_double(amount),tmp_RndDoubleGen);}
 	numToConc(tmpVolume);
 
@@ -473,26 +473,37 @@ void species::printEventsList() {
  * Function to reset the species concentration according to the initialization method
  */
 
-void species::resetToInitConc(acs_double tmpVolume, bool tmpRndConcentration, acs_double tmpTheta, acs_int tmpStochDivision, MTRand& tmp_rndDoubleGen){
+void species::resetToInitConc(acs_double tmpVolumeBeforeDivision, acs_double tmpVolume, bool tmpRndConcentration, acs_double tmpTheta, acs_int tmpStochDivision, MTRand& tmp_rndDoubleGen){
 
 	if(tmpTheta == 0) // IF division is not considered
 	{
 		concentration=firstConcentration;
-		concToNum(tmpVolume);
+		concToNum(tmpVolume, tmp_rndDoubleGen);
 		if(tmpRndConcentration){amount = random_poisson(acs_double(amount),tmp_rndDoubleGen);}
 		numToConc(tmpVolume);
 	}else{
+
+		//cout << "V: " << tmpVolume << " Volume Before Division: " << tmpVolumeBeforeDivision << " ratio: " << tmpVolumeBeforeDivision/tmpVolume
+			//	<< "ID: " << id << " amount before: " << amount;
+
 		if(!concentrationFixed)
 		{
 			if(tmpStochDivision==1) // IF stochastic division
 			{
-				amount = random_poisson(acs_double(amount/2),tmp_rndDoubleGen);
+				amount = random_poisson(acs_double(amount/(tmpVolumeBeforeDivision/tmpVolume)),tmp_rndDoubleGen);
 				numToConc(tmpVolume);
 			}else{
-				amount = (acs_int)amount/2;
+				if(amount > 1){amount = acsround((acs_double)amount/(tmpVolumeBeforeDivision/tmpVolume),tmp_rndDoubleGen);}
+				else{if(tmp_rndDoubleGen() < (tmpVolume/tmpVolumeBeforeDivision)){amount = 1;}else{amount = 0;}}
 				numToConc(tmpVolume);
 			}
+		}else{
+			concToNum(tmpVolume,tmp_rndDoubleGen);
 		}
+
+		//cout << " amount after: " << amount << endl;
+		//cin.ignore().get();
+
 	}
 }
 

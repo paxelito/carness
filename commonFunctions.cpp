@@ -234,12 +234,18 @@ acs_longInt random_binomial(acs_longInt n, acs_double tmpP, MTRand& tmpRandomGen
 /**
  Function to round double numbers in integers 
 */
-acs_double acsround(acs_double tmpX)
+acs_double acsround(acs_double tmpX, MTRand& tmprnd)
 {
 	// integer part
 	acs_int integerPart = (acs_int)tmpX;
 	acs_double decimalPart = tmpX - (acs_double)integerPart;
-	if(decimalPart>=0.5){return ceil(decimalPart) + integerPart;}else{return floor(decimalPart) + integerPart;}	
+	if(decimalPart > 0.5){
+		return ceil(decimalPart) + integerPart;
+	}else if(decimalPart < 0.5){
+		return floor(decimalPart) + integerPart;
+	}else{
+		if(tmprnd() > 0.5){return integerPart;}else{return integerPart+1;}
+	}
 }
 
 /**

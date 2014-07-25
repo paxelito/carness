@@ -57,7 +57,7 @@ public:
 	species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentration, acs_double tmpDiffusionEnh, 
 			acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint,
 			acs_int tmpEvalueted, acs_double tmpVolume, acs_double tmpK_phospho, acs_int tmpEnergizable, 
-			acs_double tmpInflux_rate, acs_int tmpMaxLOut);
+			acs_double tmpInflux_rate, acs_int tmpMaxLOut, MTRand& tmp_RndDoubleGen);
 	
 	//!< New species constructor in case of species structure file upload (IN AMOUNT)
 	species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, acs_double tmpDiffusionEnh, 
@@ -123,7 +123,7 @@ public:
     void increment(acs_double tmpVolume);
 	void specificIncrement(acs_int tmpIncrement, acs_double tmpVolume){amount = amount + tmpIncrement; numToConc(tmpVolume);}
 	void setAmount(acs_int tmpAmount, acs_double tmpVolume){amount = tmpAmount; numToConc(tmpVolume);}
-	void setConcentration(acs_double tmpConc, acs_double tmpVolume){concentration = tmpConc; concToNum(tmpVolume);}
+	void setConcentration(acs_double tmpConc, acs_double tmpVolume, MTRand& tmpRnd){concentration = tmpConc; concToNum(tmpVolume,tmpRnd);}
     //TR void decrement(acs_double tmpVolume){amount--; numToConc(tmpVolume);}
     void decrement(acs_double tmpVolume);
 	bool setChargeMols(acs_int tmpMolsToCharge);
@@ -146,12 +146,12 @@ public:
 	void clearEventsList(){events.clear();}
 
 	// Concentration and amount update
-	void concToNum(acs_double tmpVolume){amount = acsround(AVO * concentration * tmpVolume);}
+	void concToNum(acs_double tmpVolume, MTRand& tmpRnd){amount = acsround((AVO * concentration * tmpVolume),tmpRnd);}
 	void numToConc(acs_double tmpVolume){concentration = amount / (AVO * tmpVolume);}
     // Reset Functions
     void resetAge(){age=0;}
     void resetReborns(){reborns=0;}
-    void resetToInitConc(acs_double tmpVolume, bool tmpRndConcentration, acs_double tmpTheta, acs_int tmpStochDivision, MTRand& tmp_rndDoubleGen);
+    void resetToInitConc(acs_double tmpVolumeBeforeDivision, acs_double tmpVolume, bool tmpRndConcentration, acs_double tmpTheta, acs_int tmpStochDivision, MTRand& tmp_rndDoubleGen);
     void setLastSpeciesEvaluated(acs_int tmpID){lastSpeciesEvaluated = tmpID;}
     void insertSecSub(acs_longInt tmpID, acs_double tmpK, acs_longInt tmpCat);
     bool checkIFtheSecondSubstrateIsAlreadyPresent(acs_longInt tmpSecSubID);

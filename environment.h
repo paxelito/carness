@@ -316,7 +316,7 @@ private:
 
 
 	// VOLUME OPERATIVE FUNCTIONS
-	void changeVolume(acs_double tmpTimeSinceLastReaction);
+	void changeVolume(acs_double tmpTimeSinceLastReaction, MTRand& tmprand);
 	
 	// Change overall COUNTER number of species, molecules, complexes type and complexes token
 	void incNumberOfSpecies(acs_int tmpID){if(allSpecies.at(tmpID).getAmount() == 1) numberOfSpecies++;}

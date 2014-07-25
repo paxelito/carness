@@ -3308,7 +3308,7 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, Timer&
 		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		// CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
 		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		if(volumeGrowth) changeVolume(tmpDeltaT);
+		if(volumeGrowth) changeVolume(tmpDeltaT, tmpRndDoubleGen);
 
 		// If the system is open influx and efflux processes are performed
 		if(influx_rate > 0)
@@ -4052,7 +4052,7 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		// CHANGE VOLUME IF PROTOCELL WITH VARYING VOLUME
 		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		if(volumeGrowth) changeVolume(tmpDeltaT);
+		if(volumeGrowth) changeVolume(tmpDeltaT, tmpRndDoubleGen);
 
 	//--------------------------------END SELECT AND PERFORM EVENT---------------------------------------
 
@@ -4697,7 +4697,7 @@ bool environment::performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performRefill start" << endl;
 	bool refillFlag = true;
 
-	acs_int numberOfMolsToRefill = acsround(tmpTimeSinceTheLastInFlux/tmpMinimalTimeForOneMols);
+	acs_int numberOfMolsToRefill = acsround(tmpTimeSinceTheLastInFlux/tmpMinimalTimeForOneMols, tmp__RndDoubleGen);
 	if(debugLevel >= SMALL_DEBUG ||  numberOfMolsToRefill > 1000)
 	{
 		cout << "\t\t\t\t|- Number of molecules to refill: " << numberOfMolsToRefill << " DT: " << tmpTimeSinceTheLastInFlux << " T: " << tmpMinimalTimeForOneMols << endl;
@@ -7435,7 +7435,7 @@ void environment::updateSpeciesAges()
  @date 2013/07/17
  @author Alessandro Filisetti
  */
-void environment::changeVolume(acs_double tmpTimeSinceLastReaction)
+void environment::changeVolume(acs_double tmpTimeSinceLastReaction, MTRand& tmprand)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::changeVolume start" << endl;
 	acs_double oldScore;
@@ -7453,15 +7453,14 @@ void environment::changeVolume(acs_double tmpTimeSinceLastReaction)
 		}
 	}
 
-	//volume = pow(lipids,3.0/2.0) * psi;
-	volume = lipids * psi;
+	volume = pow(lipids,3.0/2.0) * psi;
 
 	if(oldVolume != volume)
 	{
 		// Change the concentration of all the species according to the new volume
 		for(vector<species>::iterator tmpAllSpecies = allSpecies.begin(); tmpAllSpecies != allSpecies.end(); tmpAllSpecies++)
 		{
-			if(tmpAllSpecies->getConcentrationFixed()) tmpAllSpecies->concToNum(volume);
+			if(tmpAllSpecies->getConcentrationFixed()) tmpAllSpecies->concToNum(volume, tmprand);
 			else{tmpAllSpecies->numToConc(volume);}
 		}
 
@@ -7864,12 +7863,14 @@ void environment::resetConcentrationToInitialConditions(MTRand& tmprndDoubleGen)
             cout << "\t\t|- Number of Catalysis: " << allCatalysis.size() << endl;
     }
 
+    acs_double volBeforeDivision = volume;
+
     // Reset volume if necessary
     if(theta > 0)
     {
     	//volume = volume / 2;
-    	lipids = lipids / 2;
-    	volume = pow(lipids,3/2) * psi;
+    	lipids = lipids / 2.0;
+    	volume = pow(lipids,3.0/2.0) * psi;
     	//lipids = initLipids;
     }
 
@@ -7888,7 +7889,7 @@ void environment::resetConcentrationToInitialConditions(MTRand& tmprndDoubleGen)
     {
         tmpAllSpeciesIter->resetAge();
         tmpAllSpeciesIter->resetReborns();
-        tmpAllSpeciesIter->resetToInitConc(volume, randomInitSpeciesConcentration, theta, stochDivision, tmprndDoubleGen);
+        tmpAllSpeciesIter->resetToInitConc(volBeforeDivision, volume, randomInitSpeciesConcentration, theta, stochDivision, tmprndDoubleGen);
     }
 
     //allSpecies.clear();
