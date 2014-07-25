@@ -212,7 +212,7 @@ environment::environment(string tmpInitialPath)
     noVolumeGrowthStepCounter = 0;
     lipids = 600;
     initLipids = lipids;
-    psi = volume / (pow(lipids,3/2));
+    psi = volume / (pow(lipids,3.0/2.0));
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment end" << endl;
 
@@ -7453,7 +7453,8 @@ void environment::changeVolume(acs_double tmpTimeSinceLastReaction)
 		}
 	}
 
-	volume = pow(lipids,3/2) * psi;
+	//volume = pow(lipids,3.0/2.0) * psi;
+	volume = lipids * psi;
 
 	if(oldVolume != volume)
 	{
