@@ -231,6 +231,7 @@ private:
 	acs_double getVolume()const{return volume;}
 	acs_double getLipids()const{return lipids;}
 	acs_double getInitVolume()const{return initVolume;}
+	acs_double getInitLipids()const{return initLipids;}
 	acs_double getTheta()const{return theta;}
 	acs_double getRandomSeed()const{return randomSeed;}
     vector<species> getMoleculesPopulation()const{return allSpecies;}

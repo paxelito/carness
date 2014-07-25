@@ -685,7 +685,8 @@ int main (int argc, char *argv[]) {
 					// If necessary, check the volume condition
 					if(puddle->getTheta() > 0)
 					{
-						if(puddle->getInitVolume()*puddle->getTheta() < puddle->getVolume()){growing = false;}
+						//if(puddle->getInitVolume()*puddle->getTheta() < puddle->getVolume()){growing = false;}
+						if(puddle->getInitLipids()*puddle->getTheta() < puddle->getLipids()){growing = false;}
 					}
 				} // while((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions()) & growing)
 
