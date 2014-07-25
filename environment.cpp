@@ -7866,8 +7866,9 @@ void environment::resetConcentrationToInitialConditions(MTRand& tmprndDoubleGen)
     // Reset volume if necessary
     if(theta > 0)
     {
-    	volume = volume / 2;
-    	//lipids = lipids / 2;
+    	//volume = volume / 2;
+    	lipids = lipids / 2;
+    	volume =
     	lipids = initLipids;
     }
 
