@@ -7868,8 +7868,8 @@ void environment::resetConcentrationToInitialConditions(MTRand& tmprndDoubleGen)
     {
     	//volume = volume / 2;
     	lipids = lipids / 2;
-    	volume =
-    	lipids = initLipids;
+    	volume = pow(lipids,3/2) * psi;
+    	//lipids = initLipids;
     }
 
     // RESET REACTIONS COUNTER
