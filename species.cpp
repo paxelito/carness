@@ -488,14 +488,21 @@ void species::resetToInitConc(acs_double tmpVolumeBeforeDivision, acs_double tmp
 
 		if(!concentrationFixed)
 		{
-			if(tmpStochDivision==1) // IF stochastic division
+			if (amount >= 1)
 			{
-				amount = random_poisson(acs_double(amount/(tmpVolumeBeforeDivision/tmpVolume)),tmp_rndDoubleGen);
-				numToConc(tmpVolume);
+				if(tmpStochDivision==1) // IF stochastic division
+				{
+					amount = random_poisson(acs_double(amount/(tmpVolumeBeforeDivision/tmpVolume)),tmp_rndDoubleGen);
+					numToConc(tmpVolume);
+				}else{
+					if(amount > 1){amount = acsround((acs_double)amount/(tmpVolumeBeforeDivision/tmpVolume),tmp_rndDoubleGen);}
+					else{if(tmp_rndDoubleGen() < (tmpVolume/tmpVolumeBeforeDivision)){amount = 1;}else{amount = 0;}}
+					numToConc(tmpVolume);
+				}
 			}else{
-				if(amount > 1){amount = acsround((acs_double)amount/(tmpVolumeBeforeDivision/tmpVolume),tmp_rndDoubleGen);}
-				else{if(tmp_rndDoubleGen() < (tmpVolume/tmpVolumeBeforeDivision)){amount = 1;}else{amount = 0;}}
-				numToConc(tmpVolume);
+				if(amount != 0){
+					ExitWithError("species::resetToInitConc","FATAl ERROR: The amount the molecules should be 0!!!");
+				}
 			}
 		}else{
 			concToNum(tmpVolume,tmp_rndDoubleGen);

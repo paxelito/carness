@@ -6945,7 +6945,7 @@ bool environment::performSpontaneousCleavage(acs_longInt tmpReaction, MTRand& tm
    try{
 
 		// substrate decrement
-		if(!allSpecies.at(tmpSubstrate).getAmount() > 0)
+		if(!(allSpecies.at(tmpSubstrate).getAmount() > 0))
 		{
 			ExitWithError("performCleavage", "Substrate or catalyst not Avalaible!!!");
 		}else{
