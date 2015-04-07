@@ -124,6 +124,9 @@ typedef unsigned int acs_int;
 //MAX NON VOLUME GROWTH STEPS
 #define NOVOLUMEGROWTHMAXSTEPS 1000
 
+//MAX ALLOWABLE CONCENTRATION
+#define MAXALLOWCONCENTRATION 1
+
 using namespace std;
 
 #endif

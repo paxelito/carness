@@ -538,6 +538,21 @@ int main (int argc, char *argv[]) {
 				{
 					timer.stop();
 					timeElapsed = timer.getElapsedTimeInMilliSec();
+
+					// IF PROTOCELL CHECK THE OVERALL CONCENTRATION. If the concentration is greater than a threshold, we assume that the protocell is going to be a stone and
+					// the simulaiton is stopped.
+					// double(puddle->getMols()+puddle->getNcpxMols())/(puddle->getVolume()*AVO)
+					if(puddle->getTheta() > 0){
+
+						if(double(puddle->getMols()+puddle->getNcpxMols())/(puddle->getVolume()*AVO) > MAXALLOWCONCENTRATION){
+							cout << endl << endl <<  "-----------------------------------------------------------------------" << endl;
+							cout << "| WARNING :: The protocell is going to be a stone, simulation will be stopped   |" << endl;
+							cout << "-----------------------------------------------------------------------" << endl;
+							ExitWithError("warning in overall concentration in protocell","main");
+						}
+
+					}
+
 					// IF NUMBER OF MILLISECONDS IS LESS THAN THE MAX NUMBER
 					if(( timeElapsed < (puddle->getMAXhours()*60*60)) || (puddle->getMAXhours() == 0))
 					{
