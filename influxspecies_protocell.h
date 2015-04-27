@@ -1,5 +1,6 @@
 /** class influxspecies_protocell
- *	\brief This class contains declarations of the influxspecies_protocell class
+ *	\brief This class contains declarations of the influxspecies_protocell class. It contains the code dealing
+ *	with the inflow process in case of protocell.
  *
  *  @authors Alessandro Filisetti
  *  @version 0.0
@@ -31,7 +32,5 @@ public:
 	void changeRemainingConc(acs_double tmpRemConc){remainingConc = tmpRemConc;}
 
 };
-
-
 
 #endif

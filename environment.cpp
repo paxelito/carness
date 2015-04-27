@@ -1,9 +1,14 @@
-/**  \class environment
- * \author Alessandro Filisetti
- * \version 2.4
- * \date 2010-06-10
- * *^*^*^*^*
+/**  \class environmenf
+ *  \brief This class contains most of the carness code. It connects all the classes and their interactions.
+ *
+ * 	@author Alessandro Filisetti
+ * 	@version 2.5
+ * 	@date 2015-04-27
+ *
+ * 	Created by Alessandro Filisetti on 2010-06-10
+ * 	Copyright 2015 Alessandro Filisetti. All right reserved.
  */
+
 #include "environment.h"
 
 /**
@@ -1599,6 +1604,7 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
 bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath)
 {
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFileSTD start" << endl;
+
     // SPECIES FILE PATH CREATION
     string FilePath = tmpInfluxFilePath + "_acsinflux.csv";
     ifstream myfile;
@@ -1611,15 +1617,18 @@ bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath)
 
         if(strFeedID.find("\n") != 0 && (strFeedID.size() > 0) && (strFeedID.find(" ") != 0))
         {
-        	nutrientsForInflux.push_back((acs_int)atoi(strFeedID.c_str()));
+        	//TR nutrientsForInflux.push_back((acs_int)atoi(strFeedID.c_str()));
         	nutrientsProb2BeSelected.push_back((acs_double)atof(strFeedProb.c_str()));
+        	influx_cstr.push_back(influxspecies_cstr((acs_int)atoi(strFeedID.c_str()),(acs_double)atof(strFeedProb.c_str())));
         }
 
     }
 
     myfile.close();
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFileSTD end" << endl;
+
     return true;
+
 }//eof createInfluxLayersFromFileSTD
 
 /**
@@ -2161,11 +2170,11 @@ bool environment::structureCoherenceCheckUp()
                 acs_int tempPresentSpeciesTOT = 0;
                 acs_int tempInfluxID = 0;
 
-                for(vector<acs_int>::iterator tmpAllNutrientsIter = nutrientsForInflux.begin(); tmpAllNutrientsIter != nutrientsForInflux.end(); tmpAllNutrientsIter++)
+                for(vector<influxspecies_cstr>::iterator tmpAllNutrientsIter = influx_cstr.begin(); tmpAllNutrientsIter != influx_cstr.end(); tmpAllNutrientsIter++)
                 {
                     for(vector<species>::iterator tmpAllSpeciesIter = allSpecies.begin(); tmpAllSpeciesIter != allSpecies.end(); tmpAllSpeciesIter++)
                     {
-                        if(*tmpAllNutrientsIter == tmpAllSpeciesIter->getID())
+                        if(tmpAllNutrientsIter->getID() == tmpAllSpeciesIter->getID())
                         {
                                 tempPresentSpeciesTOT += 1;
                                 break;
@@ -4622,27 +4631,16 @@ acs_int environment::getTotNumberOfChargedMols()
 }
 
 /**
- This function print to monitor the content of the vectors nutrientsForInflux and nutrientsProb2BeSelected
- @version 1.0
- @date 2010-05-17
+ This function print to monitor the content of the inflowed molecular species
+ @version 1.1
+ @date 2015-04-27
 */
 void environment::printNutrientsAndProbability()
 {
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::printNutrientsAndProbability start" << endl;
 
-    for(vector<acs_int>::iterator tmpAllNutrientsIter = nutrientsForInflux.begin(); tmpAllNutrientsIter != nutrientsForInflux.end(); tmpAllNutrientsIter++)
-    {
-        cout << *tmpAllNutrientsIter << "\t";
-    }
-
-    cout << endl;
-	
-    for(vector<acs_double>::iterator tmpAllNutrientsIter = nutrientsProb2BeSelected.begin(); tmpAllNutrientsIter != nutrientsProb2BeSelected.end(); tmpAllNutrientsIter++)
-    {
-        cout << *tmpAllNutrientsIter << "\t";
-    }
-
-    cout << endl;
+    for(vector<influxspecies_cstr>::iterator tmpAllNutrientsIter = influx_cstr.begin(); tmpAllNutrientsIter != influx_cstr.end(); tmpAllNutrientsIter++)
+    	tmpAllNutrientsIter->print_cstr_inflow();
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\tenvironment::printNutrientsAndProbability end" << endl;
 }
@@ -4659,29 +4657,29 @@ acs_longInt environment::getNumberOfGillespieCOPYpossibleRcts() {
  Nutrients amount fixing process. The amount of nutrients has to be fixed according to the initial theoretical distribution
  @version 1.0
  */
-void environment::nutrientsAmountsFixing()
-{
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::nutrientsAmountsFixing start" << endl;
-	
-	// Cumulative temporary probability
-	acs_double tmpTotProb = 0;
-	
-    for(vector<acs_double>::iterator tmpAllNutrientsIter = nutrientsProb2BeSelected.begin(); tmpAllNutrientsIter != nutrientsProb2BeSelected.end(); tmpAllNutrientsIter++)
-	{
-		tmpTotProb += *tmpAllNutrientsIter;
-	}
-	
-    vector<acs_double>nutrientsProb2BeSelectedCOPY = nutrientsProb2BeSelected;
-	//Clear wrong structure
-	nutrientsProb2BeSelected.clear();
-	
-    for(vector<acs_double>::iterator tmpAllNutrientsIter = nutrientsProb2BeSelectedCOPY.begin(); tmpAllNutrientsIter != nutrientsProb2BeSelectedCOPY.end(); tmpAllNutrientsIter++)
-	{
-		nutrientsProb2BeSelected.push_back(*tmpAllNutrientsIter/tmpTotProb);
-	}	
-
-	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::nutrientsAmountsFixing end" << endl;
-}
+//void environment::nutrientsAmountsFixing() //TR
+//{
+//	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::nutrientsAmountsFixing start" << endl;
+//
+//	// Cumulative temporary probability
+//	acs_double tmpTotProb = 0;
+//
+//    for(vector<acs_double>::iterator tmpAllNutrientsIter = nutrientsProb2BeSelected.begin(); tmpAllNutrientsIter != nutrientsProb2BeSelected.end(); tmpAllNutrientsIter++)
+//	{
+//		tmpTotProb += *tmpAllNutrientsIter;
+//	}
+//
+//    vector<acs_double>nutrientsProb2BeSelectedCOPY = nutrientsProb2BeSelected;
+//	//Clear wrong structure
+//	nutrientsProb2BeSelected.clear();
+//
+//    for(vector<acs_double>::iterator tmpAllNutrientsIter = nutrientsProb2BeSelectedCOPY.begin(); tmpAllNutrientsIter != nutrientsProb2BeSelectedCOPY.end(); tmpAllNutrientsIter++)
+//	{
+//		nutrientsProb2BeSelected.push_back(*tmpAllNutrientsIter/tmpTotProb);
+//	}
+//
+//	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::nutrientsAmountsFixing end" << endl;
+//}
 
 
 /**
@@ -4712,24 +4710,22 @@ bool environment::performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double
 			if(debugLevel >= HIGH_DEBUG)
 			{
 				cout << "\t\t\t\t";
-				for(acs_int sngProb = 0; sngProb < (acs_int)nutrientsProb2BeSelected.size(); sngProb++)
-				{
-					cout << nutrientsProb2BeSelected.at(sngProb) << " ";
-				}
+				for(vector<influxspecies_cstr>::iterator infspecies = influx_cstr.begin(); infspecies < influx_cstr.end(); infspecies++)
+					cout << infspecies->getprob2beselected() << " ";
 				cout << endl;
-				cout << "\t\t\t\t|- Nutrient To refill: " << allSpecies.at(nutrientsForInflux.at(nutrientForInflux_ID)).getSequence() << "#" <<  nutrientForInflux_ID << endl;
+				cout << "\t\t\t\t|- Molecular species To refill: " << allSpecies.at(influx_cstr.at(nutrientForInflux_ID).getID()).getSequence() << "#" <<  nutrientForInflux_ID << endl;
 			}
 
-			if(nutrientForInflux_ID >= (unsigned)nutrientsForInflux.size())
-				cout << nutrientsForInflux.at(nutrientForInflux_ID) << " greater than the possible nutrients selection " << nutrientsForInflux.size()-1 << endl;
+			if(nutrientForInflux_ID >= (unsigned)influx_cstr.size())
+				cout << influx_cstr.at(nutrientForInflux_ID).getID() << " greater than the possible nutrients selection " << influx_cstr.size()-1 << endl;
 
 			acs_longInt IDspecies;
 			try{
-				IDspecies = allSpecies.at(nutrientsForInflux.at(nutrientForInflux_ID)).getID();
+				IDspecies = allSpecies.at(influx_cstr.at(nutrientForInflux_ID).getID()).getID();
 			}
 			catch(exception&e){
-				cout << "allSpecies.at(nutrientsForInflux.at(nutrientForInflux_ID)).getID();" << endl;
-				cout << "Vectorsize " << allSpecies.size()<<" - position " << nutrientsForInflux.at(nutrientForInflux_ID) << endl;
+				cout << "allSpecies.at(influx_cstr.at(nutrientForInflux_ID).getID()).getID();" << endl;
+				cout << "Vectorsize " << allSpecies.size()<<" - position " << influx_cstr.at(nutrientForInflux_ID).getID() << endl;
 				cerr << "exceptioncaught:" << e.what() << endl;
 
 			}
@@ -8203,12 +8199,8 @@ bool environment::saveInfluxStructureSTD(string tmpStoringPath)
 	// buffer for writing in the file
 	ostringstream buffer;
 
-	acs_int influxSpeciesID = 0;
-	for(vector<acs_int>::iterator tmpAllInfluxIter = nutrientsForInflux.begin(); tmpAllInfluxIter != nutrientsForInflux.end(); tmpAllInfluxIter++)
-	{
-		buffer << *tmpAllInfluxIter << "\t" << (double)nutrientsProb2BeSelected.at(influxSpeciesID) << "\n";
-		influxSpeciesID++;
-	}
+	for(vector<influxspecies_cstr>::iterator tmpAllInfluxIter = influx_cstr.begin(); tmpAllInfluxIter != influx_cstr.end(); tmpAllInfluxIter++)
+		buffer << tmpAllInfluxIter->getID() << "\t" << tmpAllInfluxIter->getprob2beselected() << "\n";
 	buffer.flush();
 	
 	try {

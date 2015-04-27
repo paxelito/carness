@@ -19,3 +19,9 @@ influxspecies_cstr::influxspecies_cstr(acs_longInt tmpID, acs_double tmpProb2BeS
 	prob2BeSelected = tmpProb2BeSelected;
 	remainingConc = 0;
 }
+
+void influxspecies_cstr::print_cstr_inflow()
+{
+	cout << "\t\t|- Inflow Species [" << id << "] Prob to be selected: " << prob2BeSelected << endl;
+}
+

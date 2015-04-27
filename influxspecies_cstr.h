@@ -26,6 +26,7 @@ public:
 	acs_double getprob2beselected()const{return prob2BeSelected;}
 
 	void changeRemainingConc(acs_double tmpRemConc){remainingConc = tmpRemConc;}
+	void print_cstr_inflow();
 
 };
 

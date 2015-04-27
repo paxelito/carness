@@ -16,6 +16,9 @@
 #include "commonFunctions.h"
 #include "catalysis.h"
 #include "gillespie.h"
+#include "influxspecies.h"
+#include "influxspecies_cstr.h"
+#include "influxspecies_protocell.h"
 
 class environment
 {
@@ -105,7 +108,7 @@ private:
     //TR acs_double totalPossibleNumberOfSpecies; // Overall number of species in the firing disk. According to this parameters the initial set of molecules is set
     vector<species> allSpecies; // List containing all the species
     vector<species> firingDisk; // Species present in the firing disk
-    vector<acs_int> nutrientsForInflux; // Create an influx species IDs list
+    //TR vector<acs_int> nutrientsForInflux; // Create an influx species IDs list
     vector<acs_double> nutrientsProb2BeSelected; // create an influx parallel list containing the probability to be selected for the influx species
     vector<reactions> allReactions; // List containing all the reactions
     vector<catalysis> allCatalysis; // List containing all the catalysis
@@ -128,7 +131,11 @@ private:
 	vector<acs_int> newSpecies;
 	vector<acs_int> speciesInitialConcentrationZero;
 
-	//string buffers
+	// INCOMING FLOW
+	vector<influxspecies_protocell> influx_protocell;
+	vector<influxspecies_cstr> influx_cstr;
+
+	// STRING BUFFER
 	ostringstream bufferSaveTimes;
 	ostringstream bufferSaveReactionsParameters;
 	ostringstream bufferSaveTimeSpeciesAmount;
@@ -289,7 +296,7 @@ private:
 	// OPERATIVE FUNCTIONS
 	//TR void createInitialMoleculesPopulation(MTRand& tmpRndDoubleGen);
 	//TR void createReactionsLayer(MTRand& tmpRndDoubleGen);
-	void nutrientsAmountsFixing();
+	//TR void nutrientsAmountsFixing();
 	acs_int computeSngSpeciesRctsNumber(acs_longInt tmpTotalNumberOfReactions, MTRand& tmpRndDoubleGen);
 	acs_int selectWhetherCleavageOrCond(MTRand& tmp__RndDoubleGen);
     bool createReactionsForThisSpecies(acs_longInt tmpsID, acs_int tmpReactionsForThisSpecies, MTRand& tmp_RndDoubleGen, vector<acs_longInt>& tmpIDOfCandidateSpecies, acs_int tmpRctCreationType);
