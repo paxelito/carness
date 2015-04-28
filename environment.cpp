@@ -7125,7 +7125,7 @@ bool environment::newSpeciesEvaluationIII(acs_longInt tmpNewSpecies, MTRand& tmp
         if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\t\t\tenvironment::newSpeciesEvaluationIII start" << endl;
 
         bool newSpeciesFlag = true; // Function Flag Control
-        bool tmpNotEqualSeqBetweenTwoSpecies = true; // True whether there is not equal species
+        //TR bool tmpNotEqualSeqBetweenTwoSpecies; // True whether there is not equal species
         bool tmpAlreadyEvaluated = false; // True if the species has been already evaluated
         bool toEvaluate = true; // another control to check whether the evaluation is to do
 
@@ -7138,7 +7138,7 @@ bool environment::newSpeciesEvaluationIII(acs_longInt tmpNewSpecies, MTRand& tmp
 		if(!allSpecies.at(tmpNewSpecies).getConcentrationFixed()) incMolSpeciesProcedure(tmpNewSpecies);
 
 
-		tmpNotEqualSeqBetweenTwoSpecies = false; // IF THE SPECIES IS ALREADY PRESENT
+		//TR bool tmpNotEqualSeqBetweenTwoSpecies = false; // IF THE SPECIES IS ALREADY PRESENT
 		if(allSpecies.at(tmpNewSpecies).getEvaluated() == 1) // IF THE SPECIES HAS BEEN ALREADY EVALUATED TOO
 		{
 			tmpAlreadyEvaluated = true;

@@ -240,6 +240,7 @@ private:
 	acs_double getInitVolume()const{return initVolume;}
 	acs_double getInitLipids()const{return initLipids;}
 	acs_double getTheta()const{return theta;}
+	bool getVolumeGrowth()const{return volumeGrowth;}
 	acs_double getRandomSeed()const{return randomSeed;}
     vector<species> getMoleculesPopulation()const{return allSpecies;}
 	acs_longInt getTotalNumberOfSpecies();

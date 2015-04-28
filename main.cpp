@@ -66,11 +66,12 @@
  *		- Environment
  *		- Dynamic
  *
- *		Categories are useful only to help users in the parameter recognition within the configuration file. They are not handled from the software, if you like you can rearrange configuration
- *		file as you prefer, notice only that comments have to start with character <i>"#"</i>.
- *		Within the source code folder an example of the acsm2s.conf file is provided. (./_inputDataExamples/configurationFile/acsm2s.conf)<br>
- *      The following parameters are used both by the initializator and the simulator. Nvertheless it is ALWAYS necessary having a complete configuration file even if the structures have been already created.
- *		\subsection paramsystem System
+ * Categories are useful only to help users in the parameter recognition within the configuration file. They are not handled from the software, if you like you can rearrange configuration
+ * file as you prefer, notice only that comments have to start with character <i>"#"</i>.
+ * Within the source code folder an example of the acsm2s.conf file is provided. (./_inputDataExamples/configurationFile/acsm2s.conf)<br>
+ * The following parameters are used both by the initializator and the simulator. Nvertheless it is ALWAYS necessary having a complete configuration file even if the structures have been already created.
+ *
+ * \subsection paramsystem System
  *		@param nGen (> 0) Number of generations. This parameter indicate how many times the simulation restarts, concentrations are set to the initial ones and the simulation restart for other nSeconds seconds.
  *		@param nSIM (> 0) Number of simulations per generation starting with the same initial conditions (SAME DATA STRUCTURES) but different random seed.
  *		It is worth stressing that in such a way the system, if allowed to create new reactions, will create different final structures starting from the same initial structures.
@@ -85,7 +86,7 @@
  *      @param fileTimesSaveInterval (>= 0) Times data are stored in file times.csv every <i>fileTimesSaveInterval</i> seconds (If 0 reactions are stored continually)
  *		@param fileAmountSaveInterval (>= 0) Save species amount every (if 0 amounts are stores ad each step)
  * 		@param randomInitSpeciesConcentration (0 or 1) Initial species concentration initialization method
- *		\subsection paramenv Environment
+ * \subsection paramenv Environment
  *		@param newSpeciesProbMinThreshold (>=0) Minimal new species creation probability to allow system expansion
  *		@param lastFiringDiskSpeciesID (> 0) The ID of the last firing disk species.
  *		@param ECConcentration (> 0) Incoming concentration of charged molecules per second.
@@ -94,7 +95,7 @@
  *		@param volumeGrowth (0 or 1) Volume growth (1) or fixed volume (0)
  *		@param stochDivision (0 or 1) This parameter defines the division type: 1) Stochastic (material are divided randomly into the two cells), 0) deterministic (1)
  *		@param theta (> 0) this parameter defines the necessary volume increase to divide, if 0 no division is considered
- *		\subsection paramdyn Dynamic
+ * \subsection paramdyn Dynamic
  *		@param energy (0 or 1) 0 no energy in the system, 1 energy constraints are applied
  *      @param ratioSpeciesEnergizable (%) The probability for a species to be potentially energized by the energy carriers
  *		@param nonCatalyticMaxLength (>= 0) Max length of non catalytic species
@@ -116,15 +117,15 @@
  *		 is closed (maxLOut=0) or only the species that can cross the membrane come in and go out (maxLOut>0).
  *		@param maxLOut Maximum length of the species involved in the efflux process (\c influx_rate  > 0), equal to 0 indicates that all the species can be involved in the efflux process
  *		 (no filter). If influx_rate = 0 the parameter indicates the species that can cross the semipermeable membrane of the protocell.
+ *		@param diffusion_contribute (KD) (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length, L^{-KD}
+ *		@param solubility_threshold (> 0) Solubility Threshold, all the species longer than solubility_threshold precipitate
+ *
  *		 <b>THE COUPLING BETWEEN INFLUX_RATE AND MAXLOUT INDICATES IF WE ARE SIMULATING A PROTOCELL OR A FLOW REACTOR (CSTR)</b>:
  *
  *		  - influx_rate > 0 & maxLOut > 0 :: <b>FILTERED SYSTEM</b>: Deterministic simulation of the flux with a filter for the species with length up to maxLOut
  *		  - influx_rate = 0 & maxLOut > 0 :: <b>PROTOCELL</b>: Flux is not simulated, concentration of the species with length up to maxLOut are buffered
  *		  - influx_rate > 0 & maxLOut = 0 :: <b>CSTR</b>: Deterministic simulation of the flux, _acsinflux.csv species enter and all the species, according to their concentrations, can leave the system
  *		  - influx_rate = 0 & maxLOut = 0 :: <b>CLOSE SYSTEM</b>
- *
- *		@param diffusion_contribute (KD) (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length, L^{-KD}
- *		@param solubility_threshold (> 0) Solubility Threshold, all the species longer than solubility_threshold precipitate
  *
  *<br><br>
  * \section Acknowledgments
@@ -497,7 +498,7 @@ int main (int argc, char *argv[]) {
 
 		for(acs_int actGEN = 1; actGEN <= totalNumberOfGenerations; actGEN++)
 		{
-			if(puddle->getTheta() > 0) growing = true;
+			if(puddle->getVolumeGrowth()) growing = true;
 			// IF THE ATTEMPTS ARE MORE THAN THE MAX NUMBER THIS SIMULATION IS STOPPED
 			if((puddle->getCurrentAttempts() <= puddle->getMAXattempts()) || (puddle->getMAXattempts() == 0))
 			{
@@ -534,11 +535,12 @@ int main (int argc, char *argv[]) {
 				// SECONDS / REACTIONS PER GENERATION
 				// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 
-				while(((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions()) & (puddle->getTheta() == 0)) || growing)
+				while(((puddle->getActualTime() <= puddle->getNseconds()) & (actSTEP <= puddle->getNreactions()) & (puddle->getVolumeGrowth() == 0))
+						||
+						growing)
 				{
 					timer.stop();
 					timeElapsed = timer.getElapsedTimeInMilliSec();
-
 					// IF PROTOCELL CHECK THE OVERALL CONCENTRATION. If the concentration is greater than a threshold, we assume that the protocell is going to be a stone and
 					// the simulaiton is stopped.
 					// double(puddle->getMols()+puddle->getNcpxMols())/(puddle->getVolume()*AVO)
