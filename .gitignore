@@ -16,6 +16,7 @@ Icon?
 Thumbs.db
 /Release/
 /Debug/
+.settings/
 .cproject
 .project
 
