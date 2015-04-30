@@ -207,6 +207,7 @@ environment::environment(string tmpInitialPath)
     internalAmountsStoredCounter = 0;
     lastEvaluatedSpeceisForNewReactions = 0;
     nonCatalyticLastID = 0;
+
     // TO BE PARAMETRIZED
     Currentattempts = 0;
     resetReactionsCounter();
@@ -218,6 +219,19 @@ environment::environment(string tmpInitialPath)
     lipids = 600;
     initLipids = lipids;
     psi = volume / (pow(lipids,3.0/2.0));
+
+    // Define system architecture systemArchitecture
+    if(influx_rate == 0)
+    {
+    	if(maxLOut == 0) systemArchitecture = CLOSESYSTEM;
+    	else systemArchitecture = PROTOCELLFLUXBUFFERED;
+    }
+    else if(influx_rate > 0){
+    	if(maxLOut == 0) systemArchitecture = CSTRSYSTEM;
+    	else systemArchitecture = SEMIPERMEABLESYSTEM;
+    }else{
+    	systemArchitecture = PROTOCELLFLUXFINITE;
+    }
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment end" << endl;
 
@@ -1601,7 +1615,7 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
  @param string tmpInfluxFilePath file path
  @date 20130702
  */
-bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath)
+bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath, int tmpsystemtype)
 {
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFileSTD start" << endl;
 
@@ -1610,17 +1624,25 @@ bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath)
     ifstream myfile;
     myfile.open(FilePath.c_str());
     string strFeedID, strFeedProb;
+    string strExtConc, strKin;
     while (myfile.good())
     {
-        getline(myfile, strFeedID, '\t');
-        getline(myfile, strFeedProb, '\n');
+    	if((tmpsystemtype == CSTRSYSTEM) || (tmpsystemtype == SEMIPERMEABLESYSTEM))
+    	{
+			getline(myfile, strFeedID, '\t');
+			getline(myfile, strFeedProb, '\n');
 
-        if(strFeedID.find("\n") != 0 && (strFeedID.size() > 0) && (strFeedID.find(" ") != 0))
-        {
-        	//TR nutrientsForInflux.push_back((acs_int)atoi(strFeedID.c_str()));
-        	nutrientsProb2BeSelected.push_back((acs_double)atof(strFeedProb.c_str()));
-        	influx_cstr.push_back(influxspecies_cstr((acs_int)atoi(strFeedID.c_str()),(acs_double)atof(strFeedProb.c_str())));
-        }
+			if(strFeedID.find("\n") != 0 && (strFeedID.size() > 0) && (strFeedID.find(" ") != 0))
+			{
+				//TR nutrientsForInflux.push_back((acs_int)atoi(strFeedID.c_str()));
+				nutrientsProb2BeSelected.push_back((acs_double)atof(strFeedProb.c_str()));
+				influx_cstr.push_back(influxspecies_cstr((acs_int)atoi(strFeedID.c_str()),(acs_double)atof(strFeedProb.c_str())));
+			}
+    	}else{ // PROTOCELL WITH FINITE MEMBRANE PASSAGE
+    		getline(myfile, strFeedID, '\t');
+    		getline(myfile, strExtConc, '\t');
+    		getline(myfile, strKin, '\n');
+    	}
 
     }
 
@@ -2157,44 +2179,44 @@ bool environment::structureCoherenceCheckUp()
 	// IF THE SYSTEM IS OPEN
 	// ===================================
 	
-    if(influx_rate > 0)
+    if((systemArchitecture == CSTRSYSTEM) || (systemArchitecture == SEMIPERMEABLESYSTEM))
 	{
-            if(flagControl) // IF THE PREVIOUS CONTROL WAS OK REACTION CONTROL WILL BE PERFORMED
-            {
-                if(debugLevel == RUNNING_VERSION)
-                {
-                    //Check reactions structures
-                    cout << "\t|- INFLUX LAYER STRUCTURE" << endl;
-                    cout << "\t\t|- Searching for firing disk lacking coupling with the influx species and incorrect cumulative probability... ";
-                }
-                acs_int tempPresentSpeciesTOT = 0;
-                acs_int tempInfluxID = 0;
+		if(flagControl) // IF THE PREVIOUS CONTROL WAS OK REACTION CONTROL WILL BE PERFORMED
+		{
+			if(debugLevel == RUNNING_VERSION)
+			{
+				//Check reactions structures
+				cout << "\t|- INFLUX LAYER STRUCTURE" << endl;
+				cout << "\t\t|- Searching for firing disk lacking coupling with the influx species and incorrect cumulative probability... ";
+			}
+			acs_int tempPresentSpeciesTOT = 0;
+			acs_int tempInfluxID = 0;
 
-                for(vector<influxspecies_cstr>::iterator tmpAllNutrientsIter = influx_cstr.begin(); tmpAllNutrientsIter != influx_cstr.end(); tmpAllNutrientsIter++)
-                {
-                    for(vector<species>::iterator tmpAllSpeciesIter = allSpecies.begin(); tmpAllSpeciesIter != allSpecies.end(); tmpAllSpeciesIter++)
-                    {
-                        if(tmpAllNutrientsIter->getID() == tmpAllSpeciesIter->getID())
-                        {
-                                tempPresentSpeciesTOT += 1;
-                                break;
-                        }
-                    }
-                    tempInfluxID += 1;
-                }
+			for(vector<influxspecies_cstr>::iterator tmpAllNutrientsIter = influx_cstr.begin(); tmpAllNutrientsIter != influx_cstr.end(); tmpAllNutrientsIter++)
+			{
+				for(vector<species>::iterator tmpAllSpeciesIter = allSpecies.begin(); tmpAllSpeciesIter != allSpecies.end(); tmpAllSpeciesIter++)
+				{
+					if(tmpAllNutrientsIter->getID() == tmpAllSpeciesIter->getID())
+					{
+							tempPresentSpeciesTOT += 1;
+							break;
+					}
+				}
+				tempInfluxID += 1;
+			}
 
-                if(tempInfluxID != tempPresentSpeciesTOT)
-                {
-                    flagControl = false;
-                    cout << endl << "\t\t\tERROR: Not all the influx species are prenset in the firing fisk";
-                }else{
-                    if(debugLevel == RUNNING_VERSION)
-                    {
-                            cout << endl << "\t\t\t|- Influx Species are already present in the firing disk... OK!" << endl;
+			if(tempInfluxID != tempPresentSpeciesTOT)
+			{
+				flagControl = false;
+				cout << endl << "\t\t\tERROR: Not all the influx species are prenset in the firing fisk";
+			}else{
+				if(debugLevel == RUNNING_VERSION)
+				{
+						cout << endl << "\t\t\t|- Influx Species are already present in the firing disk... OK!" << endl;
 
-                    }
-                }
-            }
+				}
+			}
+		}
 	}
 	
 	// ===================================

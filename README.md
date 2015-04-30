@@ -1,3 +1,6 @@
+Introdurre nel costruttore di ENV il tipo di sistema e utilizzare per creare flusso!!!
+
+
 RELEASE NOTES
 =============
 

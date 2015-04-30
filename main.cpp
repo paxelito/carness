@@ -418,7 +418,7 @@ int main (int argc, char *argv[]) {
 	// LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
 	if(puddle->getInflux() > 0)
 	{
-		if(!puddle->createInfluxLayersFromFileSTD(argv[3]))
+		if(!puddle->createInfluxLayersFromFileSTD(argv[3], 1))
 			ExitWithError("CreateInfluxLayersFromFile", "Problem with influx layers loading process");
 	}
 	// LOAD BOOLEAN FUNCTION CONCERNING THE ENERGY CONFIGURATION

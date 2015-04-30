@@ -130,6 +130,7 @@ private:
     vector<acs_double> nrgBoolFncsProb2BeSelected; // create a Boolean functions parallel list containing the probability for a Bool fnc to be selected
 	vector<acs_int> newSpecies;
 	vector<acs_int> speciesInitialConcentrationZero;
+	int systemArchitecture;
 
 	// INCOMING FLOW
 	vector<influxspecies_protocell> influx_protocell;
@@ -287,7 +288,7 @@ private:
     bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath, MTRand& tmpRndDoubleGen);
     bool createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePath);
     bool createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFilePath);
-    bool createInfluxLayersFromFileSTD(string tmpInfluxFilePath);
+    bool createInfluxLayersFromFileSTD(string tmpInfluxFilePath, int tmpsystemtype);
     bool createNrgBooleanFunctionsFromFileSTD(string tmpBoolNrgFilePath);
 
     bool createInitialMoleculesPopulationFromSpecificFileSTD(string tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM, MTRand& tmpRndDoubleGen);

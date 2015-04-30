@@ -36,15 +36,11 @@ typedef long double	acs_double;
 typedef unsigned long int acs_longInt;
 typedef unsigned int acs_int;
 
-//----------
 // CONSTANTS
-//----------
-
 #define __SOFTVERSION__ "7.0b20140623.74"
 #define __SOFTVERSIONCOODE__ 2014062374
 
 // DEBUG LEVELS
-
 #define MINIMAL_PROMPT -1
 #define RUNNING_VERSION 0
 #define SMALL_DEBUG 1
@@ -56,6 +52,13 @@ typedef unsigned int acs_int;
 
 // RANDOM INITIALIZATION
 #define RANDOMRANGE random()
+
+// SYSTEM TYPE
+#define CLOSESYSTEM 0
+#define CSTRSYSTEM 1
+#define PROTOCELLFLUXBUFFERED 2
+#define PROTOCELLFLUXFINITE 3
+#define SEMIPERMEABLESYSTEM 4
 
 // INITIAL SPECIES CONCENTRATION DISTRIBUTION
 #define PROPORTIONALMOLECULEAMOUNT 1
