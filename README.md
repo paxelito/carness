@@ -1,5 +1,10 @@
 Introdurre nel costruttore di ENV il tipo di sistema e utilizzare per creare flusso!!!
 
+La concentrazione fissa non viene assolutamente presa dal file, viene sempre calcolata sulle base degli altri parametri
+
+FARE IN MODO CHE LA CONCENTRAZIONE FISSA VENGA DEFINITA DAL FILE SPECIES... AL momento passiamo il parametro conclock ma la fuznioen lo usa come legato all'energia
+e calcola da sola se la specie ha concentrazione o meno 
+
 
 RELEASE NOTES
 =============
@@ -7,7 +12,9 @@ RELEASE NOTES
 Build8.0b20150427.76
 --------------------
 	
-	* A new class influxspecies has been introduce to deal with membrane finite diffusion of external food
+	* A new class influxspecies has been introduced to deal with membrane finite diffusion of external food
+	* New surface is computed too
+	* Runtime interface has been enxhanced, information have been riorganized and surface has been added
 
 Build7.1b20140721.75
 --------------------

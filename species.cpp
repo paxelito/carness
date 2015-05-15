@@ -176,7 +176,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_longInt tmpAmount, a
 	
 }
 
-/** \brief This constructor is used when a new species is uploaded from file (CONCENTRATION BASED)
+/** \brief This constructor is used when a new species is uploaded from file (CONCENTRATION BASED). Currently we are using this one
  @param tmpID species identificator
  @param tmpSequence species sequence (e.g. ABABAABABA)
  @param tmpAmount species initial amount of molecules

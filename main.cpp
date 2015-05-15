@@ -416,11 +416,13 @@ int main (int argc, char *argv[]) {
 	if(!puddle->createInitialMoleculesPopulationFromFileSTD(argv[3], rndDoubleGen))
 		ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species STANDARD loading process");
 	// LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
-	if(puddle->getInflux() > 0)
+
+	if(puddle->getInflux() != 0)
 	{
 		if(!puddle->createInfluxLayersFromFileSTD(argv[3], 1))
 			ExitWithError("CreateInfluxLayersFromFile", "Problem with influx layers loading process");
 	}
+
 	// LOAD BOOLEAN FUNCTION CONCERNING THE ENERGY CONFIGURATION
 	if(puddle->getEnergy() <= 1)
 	{
@@ -593,14 +595,15 @@ int main (int argc, char *argv[]) {
 										<< " - CT (seconds): " << timer.getElapsedTimeInSec()
 										<< " - Gill: " << puddle->getNumberOfGillespieCOPYpossibleRcts() << endl
 										<< "\t- ENVIRONMENT" << endl
+										<< "\t\t|- Volume: " << puddle->getVolume()
+										<< " - Surface: " << puddle->getSurface()
+										<< " - Lipids: " << puddle->getLipids() << endl
 										<< "\t\t|- S: " << puddle->getNspecies()
 										<< " - NS: " << puddle->getNnewSpecies()
 										<< " - M: " << puddle->getMols()
 										<< " - NM: " << puddle->getNewMols() << endl
 										<< "\t\t|- Cp: " << puddle->getNcpx()
-										<< " - #Cp: " << puddle->getNcpxMols()
-										<< " - Volume: " << puddle->getVolume()
-										<< " - C: " << puddle->getLipids() << endl
+										<< " - #Cp: " << puddle->getNcpxMols() << endl
 										<< "\t\t|- M: " << puddle->getTotalNumberOfMonomers()
 										<< " - Mols+Complex: " << puddle->getMols() + puddle->getNcpxMols()
 										<< " - Tot Conc: " << double(puddle->getMols()+puddle->getNcpxMols())/(puddle->getVolume()*AVO) << endl

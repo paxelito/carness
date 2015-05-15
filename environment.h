@@ -95,10 +95,11 @@ private:
     acs_double influx_rate; // how many molecules per second are introduced in the system
     acs_double timeSinceTheLastInFlux; // Time elapsed from the previous injection of nutrients
     string alphabet; // Alphabet (e.g. AB, RNA, DNA, Proteins)
-    acs_double volume; // Reactor volume
+    acs_double volume; // Reactor volume 4/3 *pi * r^3 --> r = (V / pi * 3/4)^1/3
     acs_double initVolume; // Init volume to compare with the varying volume
     acs_double lipids; // Initial number of lipids.
     acs_double initLipids; // Init number of lipids
+    acs_double surface; // Protocell surface (assuming spherical volume) 4*pi*r^2
     acs_double psi; // Constant connecting lipids and volume
     bool volumeGrowth; // Boolean variable defining the possibility for the volume to change
     bool stochDivision; // Boolean Variable defining the division process (stochastic or deterministic)
@@ -238,6 +239,7 @@ private:
 	string getAlphabet()const{return alphabet;}
 	acs_double getVolume()const{return volume;}
 	acs_double getLipids()const{return lipids;}
+	acs_double getSurface()const{return surface;}
 	acs_double getInitVolume()const{return initVolume;}
 	acs_double getInitLipids()const{return initLipids;}
 	acs_double getTheta()const{return theta;}
@@ -282,7 +284,7 @@ private:
 	void printGillespieStructure();
 	void printNutrientsAndProbability();
 	void printAllChargeMols();
-	void	printAllSpeciesIdAndSequenceWithEvents();
+	void printAllSpeciesIdAndSequenceWithEvents();
 	
     // FILE STRUCTURE UPLOAD FUNCTION
     bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath, MTRand& tmpRndDoubleGen);
@@ -326,6 +328,7 @@ private:
 
 	// VOLUME OPERATIVE FUNCTIONS
 	void changeVolume(acs_double tmpTimeSinceLastReaction, MTRand& tmprand);
+	void computeSurface(){surface = 4.0 * PI * pow( ( pow((volume / PI * 3.0/4.0),1.0/3.0) ) ,2.0);}
 	
 	// Change overall COUNTER number of species, molecules, complexes type and complexes token
 	void incNumberOfSpecies(acs_int tmpID){if(allSpecies.at(tmpID).getAmount() == 1) numberOfSpecies++;}
@@ -389,6 +392,7 @@ private:
 
     //  DETERMINISTIC FUNCTIONS
 	bool performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double tmpMinimalTimeForOneMols, MTRand& tmp__RndDoubleGen);
+	bool performFiniteMembraneGradientCrossing(acs_double tmp_deltat, MTRand& tmp__RndDoubleGen);
 	bool performMoleculesEfflux(acs_double tmpTimeInterval, MTRand& tmp_RndDoubleGen);
 	bool performDETMoleculesCharging(acs_double tmpTimeInterval, MTRand& tmp_RndDoubleGen);
 	bool performDETComplexDissociation(acs_double tmpTimeInterval, MTRand& tmp_RndDoubleGen);

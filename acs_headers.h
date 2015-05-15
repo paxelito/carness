@@ -37,8 +37,8 @@ typedef unsigned long int acs_longInt;
 typedef unsigned int acs_int;
 
 // CONSTANTS
-#define __SOFTVERSION__ "7.0b20140623.74"
-#define __SOFTVERSIONCOODE__ 2014062374
+#define __SOFTVERSION__ "8.0b20150427.76"
+#define __SOFTVERSIONCOODE__ 2015042776
 
 // DEBUG LEVELS
 #define MINIMAL_PROMPT -1
@@ -111,6 +111,7 @@ typedef unsigned int acs_int;
 // SPECIAL NUMBERS
 #define NEP 2.7182818284590452353602874
 #define AVO 6.02214179e+23
+#define PI 3.14159265358979
 
 // MINIMAL MULTIPLICATOR FOR MINIMAL REACTION TIME
 #define MINIMALRCTTIMEMULTI 100

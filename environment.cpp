@@ -167,8 +167,6 @@ environment::environment(string tmpInitialPath)
     if(nSeconds < fileAmountSaveInterval)
         ExitWithError("environment::environment","No amount file will be saved during the simulation, nSeconds < fileAmountSaveInterval");
 
-    if(debugLevel >= RUNNING_VERSION)
-        showGlobalParameter();
     //IF RANDOM SEED IS 0 IT HAS TO BE CREATED RANDOMLY
     if(randomSeed == 0)
     {
@@ -218,20 +216,27 @@ environment::environment(string tmpInitialPath)
     noVolumeGrowthStepCounter = 0;
     lipids = 600;
     initLipids = lipids;
+    computeSurface();
     psi = volume / (pow(lipids,3.0/2.0));
 
     // Define system architecture systemArchitecture
+    string msg = "";
     if(influx_rate == 0)
     {
-    	if(maxLOut == 0) systemArchitecture = CLOSESYSTEM;
-    	else systemArchitecture = PROTOCELLFLUXBUFFERED;
+    	if(maxLOut == 0){systemArchitecture = CLOSESYSTEM; msg = "\n*** CLOSE SYSTEM ***\n";}
+    	else {systemArchitecture = PROTOCELLFLUXBUFFERED; msg = "\n*** BUFFERED PROTOCELL SYSTEM ***\n";}
     }
     else if(influx_rate > 0){
-    	if(maxLOut == 0) systemArchitecture = CSTRSYSTEM;
-    	else systemArchitecture = SEMIPERMEABLESYSTEM;
+    	if(maxLOut == 0) {systemArchitecture = CSTRSYSTEM; msg = "\n*** CSTR SYSTEM ***\n";}
+    	else {systemArchitecture = SEMIPERMEABLESYSTEM; msg = "\n*** SEMIPERMEABLE MEMBRANE SYSTEM ***\n";}
     }else{
-    	systemArchitecture = PROTOCELLFLUXFINITE;
+    	{systemArchitecture = PROTOCELLFLUXFINITE; msg = "\n*** PROTOCELL FINITE MEMBRANE PASSAGE SYSTEM ***\n";}
     }
+
+    cout << msg << endl;
+
+    if(debugLevel >= RUNNING_VERSION)
+        showGlobalParameter();
 
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::environment end" << endl;
 
@@ -1610,7 +1615,7 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
 }//eof createInitialMoleculesPopulationFromSpecificFileSTD
 
 /**
- Create influx layer from file C++ libraries
+ Create CSTR influx layer from file C++ libraries
  @version 1.0
  @param string tmpInfluxFilePath file path
  @date 20130702
@@ -1642,6 +1647,13 @@ bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath, int tm
     		getline(myfile, strFeedID, '\t');
     		getline(myfile, strExtConc, '\t');
     		getline(myfile, strKin, '\n');
+			if(strFeedID.find("\n") != 0 && (strFeedID.size() > 0) && (strFeedID.find(" ") != 0))
+			{
+				influx_protocell.push_back(influxspecies_protocell((acs_int)atoi(strFeedID.c_str()),
+										   (acs_double)atof(strExtConc.c_str()),
+										   (acs_double)atof(strKin.c_str())));
+				// CONTINUARE CARICAMENTO PROTOCELL
+			}
     	}
 
     }
@@ -3341,8 +3353,10 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, Timer&
 		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		if(volumeGrowth) changeVolume(tmpDeltaT, tmpRndDoubleGen);
 
-		// If the system is open influx and efflux processes are performed
-		if(influx_rate > 0)
+		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		// CSTR INCOMING AND OUTGOING FLOWS
+		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		if((systemArchitecture == CSTRSYSTEM) || (systemArchitecture == SEMIPERMEABLESYSTEM))
 		{
 			//     acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
 			if(debugLevel >= SMALL_DEBUG)
@@ -3379,6 +3393,18 @@ bool environment::performOPTGillespieComputation(MTRand& tmpRndDoubleGen, Timer&
 				 ExitWithError("performOPTGillespieComputation::Perform molecules efflux","exceptionerrorthrown");
 			}
 		 }
+
+		// IN CASE OF FINITE MEMBRANE PASSAGE
+		if(systemArchitecture == PROTOCELLFLUXFINITE)
+		{
+			try{
+				performFiniteMembraneGradientCrossing(tmpDeltaT, tmpRndDoubleGen);
+			}catch(exception&e){
+				cout << "Source Code Line: " << __LINE__ << endl;
+				cerr << "exceptioncaught:" << e.what() << endl;
+				ExitWithError("perform_FIXED_GillespieComputation::performFiniteMembraneGradientCrossing","exceptionerrorthrown");
+			}
+		}
     }catch(exception&e){
  		 cout << "Source Code Line: " << __LINE__ << endl;
  		 cerr << "exceptioncaught:" << e.what() << endl;
@@ -4088,7 +4114,8 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 	//--------------------------------END SELECT AND PERFORM EVENT---------------------------------------
 
 		// If the system is open influx and efflux processes are performed
-		if(influx_rate > 0) {
+		if((systemArchitecture == CSTRSYSTEM) || (systemArchitecture == SEMIPERMEABLESYSTEM))
+		{
 			//     acs_double minimalTimeForOneMols = 1 / (influx_rate * AVO);
 			if(debugLevel >= SMALL_DEBUG) {
 				cout << "\t\t\t|- REFILL --------" << endl;
@@ -4121,6 +4148,18 @@ bool environment::perform_FIXED_GillespieComputation(MTRand& tmpRndDoubleGen, Ti
 				cout << "Source Code Line: " << __LINE__ << endl;
 				cerr << "exceptioncaught:" << e.what() << endl;
 				ExitWithError("perform_FIXED_GillespieComputation::Perform molecules efflux","exceptionerrorthrown");
+			}
+		}
+
+		// IN CASE OF FINITE MEMBRANE PASSAGE
+		if(systemArchitecture == PROTOCELLFLUXFINITE)
+		{
+			try{
+				performFiniteMembraneGradientCrossing(tmpDeltaT, tmpRndDoubleGen);
+			}catch(exception&e){
+				cout << "Source Code Line: " << __LINE__ << endl;
+				cerr << "exceptioncaught:" << e.what() << endl;
+				ExitWithError("perform_FIXED_GillespieComputation::performFiniteMembraneGradientCrossing","exceptionerrorthrown");
 			}
 		}
 	} catch(exception&e){
@@ -4789,6 +4828,54 @@ bool environment::performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double
 
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performRefill end" << endl;
 	return refillFlag;
+}
+
+/**
+ Function to simulate the finite membrame nutrients diffusion
+ @version 1.0
+ @date 2015-05-12
+
+ */
+
+bool environment::performFiniteMembraneGradientCrossing(acs_double tmp_deltat, MTRand& tmp__RndDoubleGen)
+{
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performFiniteMembraneGradientCrossing start" << endl;
+	bool flag = true;
+	acs_double tempDeltaConc = 0;
+	acs_double tempNewConc = 0;
+	acs_double tempNumberOfMols = 0;
+
+	//cpxIntegerPart = (acs_int)decimalComplexesToDissociate;
+	//if(debugLevel == COMPLEXSTUFF) cout << cpxIntegerPart << endl;
+	//decimalComplexesToDissociate = decimalComplexesToDissociate - cpxIntegerPart;
+
+
+	for(vector<influxspecies_protocell>::iterator protoiter = influx_protocell.begin(); protoiter < influx_protocell.end(); protoiter++ )
+	{
+		// For each molecular species in the flux the delta concentration is computed
+		// If EXTCONC > INTCONC, then MOLS IN, ELSE MOLS OUT
+		tempDeltaConc = ((protoiter->getExtConc() - allSpecies.at(protoiter->getID()).getConcentration())
+						* protoiter->getKin() * tmp_deltat * surface) + protoiter->getRemConc();
+
+		cout << tempDeltaConc << endl;
+		cin.ignore().get();
+
+		// If tempDelta conc is +, so concentration must decrease, incresing otherwise.
+		// According to the time interval, the delta concentration and the k_in the number of molecules to add is computed
+		tempNewConc = (allSpecies.at(protoiter->getID()).getConcentration() + tempDeltaConc);
+		if(tempNewConc < 0) tempNewConc = 0;
+
+		// Compute the exact number of mols, update data and store decimal
+		tempNumberOfMols = tempNewConc * AVO * volume;
+		protoiter->changeRemainingConc((tempNumberOfMols - (acs_int)tempNumberOfMols)/(AVO * volume));
+
+		// Finally, set new molecule concentration
+		allSpecies.at(protoiter->getID()).setConcentration((acs_int)tempNumberOfMols/(AVO * volume),volume,tmp__RndDoubleGen);
+	}
+
+	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performFiniteMembraneGradientCrossing end" << endl;
+	return flag;
+
 }
 
 /**
@@ -7471,7 +7558,9 @@ void environment::changeVolume(acs_double tmpTimeSinceLastReaction, MTRand& tmpr
 		}
 	}
 
+	// Compute new surface
 	volume = pow(lipids,3.0/2.0) * psi;
+	computeSurface();
 
 	if(oldVolume != volume)
 	{
@@ -7516,6 +7605,7 @@ void environment::changeVolume(acs_double tmpTimeSinceLastReaction, MTRand& tmpr
 		}
 
 	}
+
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::changeVolume end" << endl;
 }
 
@@ -7553,6 +7643,7 @@ void environment::showGlobalParameter()
 		//TR if(onlyEnvironmentCreation)
 		//TR 	out << "\t|-ONLY THE ENVIRONMENT WILL BE CREATED..." << endl; 
         cout << "|- GLOBAL PARAMETERS" << endl;
+        cout << "\t|- System Architecture: " << systemArchitecture << endl;
         cout << "\t|- Number of Generations: " << nGEN << endl;
         cout << "\t|- Number of Simulations: " << nSIM << endl;
         cout << "\t|- Number of Seconds: " << (double)nSeconds << endl;
