@@ -419,7 +419,7 @@ int main (int argc, char *argv[]) {
 
 	if(puddle->getInflux() != 0)
 	{
-		if(!puddle->createInfluxLayersFromFileSTD(argv[3], 1))
+		if(!puddle->createInfluxLayersFromFileSTD(argv[3], puddle->getSysArch()))
 			ExitWithError("CreateInfluxLayersFromFile", "Problem with influx layers loading process");
 	}
 
@@ -488,9 +488,9 @@ int main (int argc, char *argv[]) {
 
 	for(acs_int actSIM = 1; actSIM <= puddle->getNsim(); actSIM++)
 	{
-		if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "\n|- - - - - - - - - - - - - - - " << actSIM << endl;}
+		if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "\n|- - - - - - - - - - - - - - - " << endl;}
 		if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "|- SIMULATION NUMBER " << actSIM << endl;}
-		if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "|- - - - - - - - - - - - - - - \n" << actSIM << endl;}
+		if(puddle->getDebugLevel() >= RUNNING_VERSION){cout << "|- - - - - - - - - - - - - - - \n" << endl;}
 
 
 		// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+

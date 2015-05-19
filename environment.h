@@ -175,6 +175,7 @@ private:
 	~environment(){}
 	
 	//GET FUNCTIONS
+	int getSysArch()const{return systemArchitecture;}
 	acs_int getNgen()const{return nGEN;}
 	acs_int getNsim()const{return nSIM;}
 	acs_double getActualTime()const{return actualTime;}

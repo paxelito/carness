@@ -4849,28 +4849,41 @@ bool environment::performFiniteMembraneGradientCrossing(acs_double tmp_deltat, M
 	//if(debugLevel == COMPLEXSTUFF) cout << cpxIntegerPart << endl;
 	//decimalComplexesToDissociate = decimalComplexesToDissociate - cpxIntegerPart;
 
+	//cout << "influx protocell size " << influx_protocell.size() << endl;
+	//cin.ignore().get();
 
 	for(vector<influxspecies_protocell>::iterator protoiter = influx_protocell.begin(); protoiter < influx_protocell.end(); protoiter++ )
 	{
 		// For each molecular species in the flux the delta concentration is computed
 		// If EXTCONC > INTCONC, then MOLS IN, ELSE MOLS OUT
+
 		tempDeltaConc = ((protoiter->getExtConc() - allSpecies.at(protoiter->getID()).getConcentration())
 						* protoiter->getKin() * tmp_deltat * surface) + protoiter->getRemConc();
-
-		cout << tempDeltaConc << endl;
-		cin.ignore().get();
 
 		// If tempDelta conc is +, so concentration must decrease, incresing otherwise.
 		// According to the time interval, the delta concentration and the k_in the number of molecules to add is computed
 		tempNewConc = (allSpecies.at(protoiter->getID()).getConcentration() + tempDeltaConc);
-		if(tempNewConc < 0) tempNewConc = 0;
+		if(tempNewConc < 0) tempNewConc = 0.0;
 
 		// Compute the exact number of mols, update data and store decimal
 		tempNumberOfMols = tempNewConc * AVO * volume;
+        //cout << tempDeltaConc << " " << tempNumberOfMols << endl;
+        //cin.ignore().get();
 		protoiter->changeRemainingConc((tempNumberOfMols - (acs_int)tempNumberOfMols)/(AVO * volume));
 
 		// Finally, set new molecule concentration
+
+        if (protoiter->getID() == 0){
+            cout << tempDeltaConc << " " << allSpecies.at(protoiter->getID()).getConcentration() << " --> " << tempNewConc << " " << tempNumberOfMols << endl; 
+		  cout << allSpecies.at(protoiter->getID()).getAmount() << " " << allSpecies.at(protoiter->getID()).getConcentration() << " " << tempDeltaConc << endl;
+        }
 		allSpecies.at(protoiter->getID()).setConcentration((acs_int)tempNumberOfMols/(AVO * volume),volume,tmp__RndDoubleGen);
+		if (protoiter->getID() == 0){
+            cout << allSpecies.at(protoiter->getID()).getAmount() << " " << allSpecies.at(protoiter->getID()).getConcentration() << " " << endl;
+            cout << "...................." << endl;
+        }
+		//cin.ignore().get();
+
 	}
 
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performFiniteMembraneGradientCrossing end" << endl;

@@ -482,10 +482,6 @@ void species::resetToInitConc(acs_double tmpVolumeBeforeDivision, acs_double tmp
 		if(tmpRndConcentration){amount = random_poisson(acs_double(amount),tmp_rndDoubleGen);}
 		numToConc(tmpVolume);
 	}else{
-
-		//cout << "V: " << tmpVolume << " Volume Before Division: " << tmpVolumeBeforeDivision << " ratio: " << tmpVolumeBeforeDivision/tmpVolume
-			//	<< "ID: " << id << " amount before: " << amount;
-
 		if(!concentrationFixed)
 		{
 			if (amount >= 1)
@@ -507,10 +503,6 @@ void species::resetToInitConc(acs_double tmpVolumeBeforeDivision, acs_double tmp
 		}else{
 			concToNum(tmpVolume,tmp_rndDoubleGen);
 		}
-
-		//cout << " amount after: " << amount << endl;
-		//cin.ignore().get();
-
 	}
 }
 
