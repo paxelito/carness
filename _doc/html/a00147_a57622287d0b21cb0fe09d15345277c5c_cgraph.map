@@ -1,7 +1,0 @@
-<map id="lib.IO.writefiles.writeAllFilesAndCreateResFolder" name="lib.IO.writefiles.writeAllFilesAndCreateResFolder">
-<area shape="rect" id="node2" href="$a00147.html#a593c166784723a06f4f6a1a96890aa17" title="lib.IO.writefiles.write\l_acsms_file" alt="" coords="245,5,385,46"/>
-<area shape="rect" id="node3" href="$a00147.html#ae2842322fe821ae86172affce98f3aa1" title="lib.IO.writefiles.write\l_and_createInfluxFile" alt="" coords="240,70,389,111"/>
-<area shape="rect" id="node4" href="$a00147.html#a395b3244d381850f60bf1ee95dbe84dd" title="lib.IO.writefiles.write\l_and_create_std_nrgFile" alt="" coords="230,135,399,177"/>
-<area shape="rect" id="node5" href="$a00147.html#af18d8f2d2d0fc78ca4418866631f347b" title="lib.IO.writefiles.write\l_acsCatalysis_file" alt="" coords="245,201,385,242"/>
-<area shape="rect" id="node6" href="$a00147.html#adbff7889ebd8786ecf5791e8a7b00d59" title="lib.IO.writefiles.write\l_acsReactions_file" alt="" coords="245,266,385,307"/>
-</map>

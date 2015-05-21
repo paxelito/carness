@@ -1,0 +1,13 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}System Requirements}{3}{chapter.1}
+\contentsline {chapter}{\numberline {2}Installing}{5}{chapter.2}
+\contentsline {chapter}{\numberline {3}Usage}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}initializator Module}{7}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}TO Do}{7}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}Chemistry Graph Analysis}{7}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Bipartite MultiGraph legend}{8}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}OUTPUT files}{8}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Protocell Duplication Analysis}{8}{section.3.3}
+\contentsline {chapter}{\numberline {4}Indices}{9}{chapter.4}
+\contentsline {chapter}{Python Module Index}{11}{section*.3}
+\contentsline {chapter}{Index}{13}{section*.4}

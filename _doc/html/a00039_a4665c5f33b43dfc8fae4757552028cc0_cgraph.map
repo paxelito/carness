@@ -1,0 +1,12 @@
+<map id="saveInitialConditionsToFile" name="saveInitialConditionsToFile">
+<area shape="rect" id="node2" href="$a00011.html#a71f4c5ff1c11a9d61cbc818682a4a91e" title="Save a file with the configuration parameters. " alt="" coords="249,5,452,46"/>
+<area shape="rect" id="node3" href="$a00027.html#aa678d0a98232158c48108227b98de4b6" title="Function to close the program after having en error. " alt="" coords="567,188,663,215"/>
+<area shape="rect" id="node4" href="$a00011.html#a6f0b4481779cd12dbcd8155916c7d703" title="environment::getInflux" alt="" coords="277,436,424,463"/>
+<area shape="rect" id="node5" href="$a00011.html#a8f831e2db11fa5d840484345dac64fc7" title="Save influx structure on file, standard C++. " alt="" coords="233,71,469,97"/>
+<area shape="rect" id="node6" href="$a00011.html#ab463a460de102c79c1044ab8a2c176ae" title="environment::getEnergy" alt="" coords="273,487,429,513"/>
+<area shape="rect" id="node7" href="$a00011.html#a1412b9b1c3bd3e42bcb481f5e18ea931" title="Save Energetic Boolean Function on file, standard C++. " alt="" coords="263,122,438,163"/>
+<area shape="rect" id="node8" href="$a00011.html#a9daeb4f255100b8ad59de9ea80b19b5b" title="Save the species structures in a file named species_[currentSims]_[currentStep].csv. " alt="" coords="263,239,438,281"/>
+<area shape="rect" id="node10" href="$a00011.html#ad381c4ce24045d504539bb7c74800739" title="Save the reactions structures in a file named reactions_[currentSims]_[currentStep].csv. " alt="" coords="258,305,443,346"/>
+<area shape="rect" id="node11" href="$a00011.html#a0a799b3a42bd90845a915298e184708c" title="Save the catalysis structures in a file named catalysis_[currentSims]_[currentStep].csv. " alt="" coords="261,370,441,411"/>
+<area shape="rect" id="node9" href="$a00011.html#a8699a0f85f5e8dc23eb8f78fa22c6b17" title="This function creates a chain of zero as STRING according to tmpTotN and tmpCurrent N in order to mak..." alt="" coords="517,305,712,346"/>
+</map>

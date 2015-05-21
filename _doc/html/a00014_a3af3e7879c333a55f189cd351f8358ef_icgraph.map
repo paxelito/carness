@@ -1,0 +1,7 @@
+<map id="species::getChargeMols" name="species::getChargeMols">
+<area shape="rect" id="node2" href="$a00003.html#aff7607e0f3a74790109a7d87de3031bd" title="Perform ENERGY EFFLUX reaction. " alt="" coords="214,38,397,79"/>
+<area shape="rect" id="node6" href="$a00003.html#a02346c5d824e83e0a76dd01f4672ad8b" title="environment::getATP" alt="" coords="234,104,377,131"/>
+<area shape="rect" id="node3" href="$a00003.html#a1db4e67ba458a54f4fab3e10a203765c" title="Perform the reaction after the Gillespie computation and call the events&#39; score update. " alt="" coords="445,45,640,72"/>
+<area shape="rect" id="node4" href="$a00003.html#ad4dcf928538066ff8a501dc7f72ac750" title="Perform the gillespie algorithm (OPTIMIZED VERSION) " alt="" coords="689,5,909,46"/>
+<area shape="rect" id="node5" href="$a00003.html#a847f333ec6acea11f2d0fc99bab52586" title="Perform the gillespie algorithm (FIXED VERSION) " alt="" coords="700,70,897,111"/>
+</map>

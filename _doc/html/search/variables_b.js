@@ -1,5 +1,12 @@
 var searchData=
 [
-  ['j',['j',['../a00028.html#ad34e9c7e9ae69ae0b9f1866faed5e4ad',1,'j():&#160;generalConcentrationOverThreshold.m'],['../a00029.html#ad34e9c7e9ae69ae0b9f1866faed5e4ad',1,'j():&#160;KillSpam.m'],['../a00031.html#ad34e9c7e9ae69ae0b9f1866faed5e4ad',1,'j():&#160;KSSearchLauncher.m'],['../a00106.html#a8f47e0001258b78994326e2d07d7c51d',1,'j():&#160;crea_influx.m'],['../a00107.html#ac86694252f8dfdb19aaeadc4b7c342c6',1,'j():&#160;crea_influx_semplice.m'],['../a00110.html#ac86694252f8dfdb19aaeadc4b7c342c6',1,'j():&#160;inizializzatore_ACS.m']]],
-  ['jjjj',['jjjj',['../a00110.html#a3c593281c5c1e28d5bb9f766c614c4c0',1,'inizializzatore_ACS.m']]]
+  ['k',['k',['../a00018.html#a1c73327b2882639bc9f5e416bb3cc7ac',1,'concAnalysis.m']]],
+  ['kcrows',['KCRows',['../a00022.html#a62227634d3ceda9bf932c630583da2b9',1,'KillSpam.m']]],
+  ['killercatalysts',['killerCatalysts',['../a00022.html#a1a42aaee01b2cc37a3835e0fe30cf9d3',1,'KillSpam.m']]],
+  ['killersmatrix',['killersMatrix',['../a00022.html#a929016802e1ede2217a41240a6974fa6',1,'killersMatrix():&#160;KillSpam.m'],['../a00023.html#a929016802e1ede2217a41240a6974fa6',1,'killersMatrix():&#160;KSSearch.m']]],
+  ['killrows',['killRows',['../a00022.html#a747bc1d10158c78e88e314825ed41a13',1,'killRows():&#160;KillSpam.m'],['../a00023.html#a0e22d9868b850c50dfc13f5d28db8c30',1,'killRows():&#160;KSSearch.m']]],
+  ['kscatalysts',['KSCatalysts',['../a00022.html#a25c085d4378366ed81f0f97547802c8f',1,'KillSpam.m']]],
+  ['kscrows',['KSCRows',['../a00022.html#a56aa0b3ac00410dc36f9043c641ae205',1,'KillSpam.m']]],
+  ['ksmatrix',['KSMatrix',['../a00022.html#aea43faf8d3d68de03c645edc96b0c1c0',1,'KSMatrix():&#160;KillSpam.m'],['../a00023.html#aea43faf8d3d68de03c645edc96b0c1c0',1,'KSMatrix():&#160;KSSearch.m']]],
+  ['kssearch',['KSSearch',['../a00024.html#af04f94b875b4f18fd2d6bd47d989f2b8',1,'KSSearchLauncher.m']]]
 ];

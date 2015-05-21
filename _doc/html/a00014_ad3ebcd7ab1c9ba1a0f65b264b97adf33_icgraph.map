@@ -1,6 +1,0 @@
-<map id="environment::checkAvailability" name="environment::checkAvailability">
-<area shape="rect" id="node2" href="$a00014.html#a90fba3b2cc589f32c97a74540620bd84" title="environment::performOPTGillespie\lComputation" alt="" coords="253,5,480,46"/>
-<area shape="rect" id="node4" href="$a00014.html#aa4fba7d5679a16fd6ef1a9a2041779a2" title="environment::perform\l_FIXED_GillespieComputation" alt="" coords="265,70,468,111"/>
-<area shape="rect" id="node3" href="$a00068.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="528,12,579,39"/>
-<area shape="rect" id="node5" href="$a00069.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="528,77,579,104"/>
-</map>

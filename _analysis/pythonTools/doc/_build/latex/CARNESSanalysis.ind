@@ -1,0 +1,15 @@
+\begin{theindex}
+\def\bigletter#1{{\Large\sffamily#1}\nopagebreak\vspace{1mm}}
+
+  \bigletter A
+  \item acsDuplicationAnalysis (module), \hyperpage{8}
+
+  \indexspace
+  \bigletter G
+  \item graph\_chemistry\_analysis (module), \hyperpage{7}
+
+  \indexspace
+  \bigletter I
+  \item initializator (module), \hyperpage{7}
+
+\end{theindex}

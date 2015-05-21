@@ -1,9 +1,0 @@
-<map id="sum" name="sum">
-<area shape="rect" id="node2" href="$a00142.html#a31099e87728bb8b899360bb641bb6b64" title="lib.graph.network.fixCondensation\lReaction" alt="" coords="102,5,325,46"/>
-<area shape="rect" id="node3" href="$a00142.html#a22ad63e3d10c613dc181b9e69ad1cef5" title="lib.graph.network.create\l_chemistry" alt="" coords="131,70,295,111"/>
-<area shape="rect" id="node4" href="$a00143.html#aa4fb376eecb97a88efdb35aa15466c3b" title="lib.graph.raf.findRAFrcts" alt="" coords="131,136,296,163"/>
-<area shape="rect" id="node6" href="$a00144.html#aff58b86401d5f04b13100aae79560fe7" title="lib.graph.scc.createNetXGraph\lForRAF" alt="" coords="111,187,315,229"/>
-<area shape="rect" id="node7" href="$a00149.html#a39866224c062e8fdc5905a4202d9e579" title="lib.model.reactions.getNum\lOfCleavages" alt="" coords="121,253,305,294"/>
-<area shape="rect" id="node8" href="$a00150.html#a13eb7af04a51ec15dd79ef70fadc93f4" title="lib.model.species.weighted\lChoice" alt="" coords="123,318,304,359"/>
-<area shape="rect" id="node5" href="$a00143.html#a0b49d65e78e62c4ddd5022d4405f8286" title="lib.graph.raf.rafDynamic\lComputation" alt="" coords="374,129,538,170"/>
-</map>

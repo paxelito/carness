@@ -1,0 +1,8 @@
+<map id="Timer::getElapsedTimeInMicroSec" name="Timer::getElapsedTimeInMicroSec">
+<area shape="rect" id="node2" href="$a00023.html#a71a44ab36290730bc49f8719546194fc" title="Timer::getElapsedTimeInMilliSec" alt="" coords="275,51,485,78"/>
+<area shape="rect" id="node6" href="$a00023.html#ac05212f488db392f857660e28a402927" title="Timer::getElapsedTimeInSec" alt="" coords="286,109,474,135"/>
+<area shape="rect" id="node3" href="$a00011.html#ad4dcf928538066ff8a501dc7f72ac750" title="Perform the gillespie algorithm (OPTIMIZED VERSION) " alt="" coords="534,101,754,143"/>
+<area shape="rect" id="node4" href="$a00039.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="803,77,853,103"/>
+<area shape="rect" id="node5" href="$a00011.html#a847f333ec6acea11f2d0fc99bab52586" title="Perform the gillespie algorithm (FIXED VERSION) " alt="" coords="545,36,743,77"/>
+<area shape="rect" id="node7" href="$a00023.html#a71aa716bd43676a5a340eeca5f41cece" title="Timer::getElapsedTime" alt="" coords="567,218,721,245"/>
+</map>

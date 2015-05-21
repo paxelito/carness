@@ -1,13 +1,8 @@
 var a00015 =
 [
-    [ "MTRand", "a00015.html#a265dc65546e26073c0d5f8787b045a1d", null ],
-    [ "MTRand", "a00015.html#a2c88736896bcbdb54bcdd7a0026720d5", null ],
-    [ "MTRand", "a00015.html#a6075a3beacdfb8e4cf48d9fb56cc193a", null ],
-    [ "~MTRand", "a00015.html#a8c276546a41ae350dc9efc5e9c10a261", null ],
-    [ "MTRand", "a00015.html#a265dc65546e26073c0d5f8787b045a1d", null ],
-    [ "MTRand", "a00015.html#a2c88736896bcbdb54bcdd7a0026720d5", null ],
-    [ "MTRand", "a00015.html#a6075a3beacdfb8e4cf48d9fb56cc193a", null ],
-    [ "~MTRand", "a00015.html#a8c276546a41ae350dc9efc5e9c10a261", null ],
-    [ "operator()", "a00015.html#abbb87a08d622d58fdee0eea4cb5471a0", null ],
-    [ "operator()", "a00015.html#abbb87a08d622d58fdee0eea4cb5471a0", null ]
+    [ "influxspecies_protocell", "a00015.html#a0db73c396ab7d4a61b3c8a79f17d2d88", null ],
+    [ "changeRemainingConc", "a00015.html#ad092d0a3709e93316dd4325699c34a86", null ],
+    [ "getExtConc", "a00015.html#a973ce325110d3baab2794a7f37a0bc3a", null ],
+    [ "getKin", "a00015.html#aefa4f5947eab64175f45e72ae658afca", null ],
+    [ "getRemConc", "a00015.html#a69d83464d8ebc5c52ce6efee8e4c588a", null ]
 ];

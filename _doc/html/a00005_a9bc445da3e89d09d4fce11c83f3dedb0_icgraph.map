@@ -1,0 +1,6 @@
+<map id="environment::setActualTime" name="environment::setActualTime">
+<area shape="rect" id="node2" href="$a00005.html#ad4dcf928538066ff8a501dc7f72ac750" title="Perform the gillespie algorithm (OPTIMIZED VERSION) " alt="" coords="238,5,458,46"/>
+<area shape="rect" id="node3" href="$a00005.html#a847f333ec6acea11f2d0fc99bab52586" title="Perform the gillespie algorithm (FIXED VERSION) " alt="" coords="249,70,447,111"/>
+<area shape="rect" id="node4" href="$a00005.html#aa860227725dbe5b0251a25f440773161" title="Clear all structures after each simulation. " alt="" coords="247,136,449,163"/>
+<area shape="rect" id="node5" href="$a00005.html#ad8000316befe74598a123bdcd7024697" title="set the concentrations to the initial values and reset internal statistics and counter ..." alt="" coords="244,187,452,229"/>
+</map>

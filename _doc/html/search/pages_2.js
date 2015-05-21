@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['gillespie_20class',['Gillespie Class',['../a00008.html',1,'index']]]
+  ['introduction',['Introduction',['../a00002.html',1,'index']]],
+  ['initial_20data_20structures',['Initial Data Structures',['../a00004.html',1,'index']]]
 ];

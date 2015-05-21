@@ -1,13 +1,8 @@
-La concentrazione fissa non viene assolutamente presa dal file, viene sempre calcolata sulle base degli altri parametri
-
-FARE IN MODO CHE LA CONCENTRAZIONE FISSA VENGA DEFINITA DAL FILE SPECIES... AL momento passiamo il parametro conclock ma la fuznioen lo usa come legato all'energia
-e calcola da sola se la specie ha concentrazione o meno 
-
-fare in modo che non vengano mai salvati i file volendo
-
-ExitWithError save structure anyway4. Pass by const reference when the value is expensive to copy AND the function does
-not want to modify the value referred to AND NULL would not be a valid value if
-a pointer was used instead.
+Aggiungere al file di inizializzazione il tipo di ambiente da inizializzare. 
+Aggiungere al file di inizializzazione la creazione del file flusso corretta. 
+Aggiunere all'analisi l'andamento anche intragenerazioni 
+Spostare tutte l'analisi dentro questo GIT ed eliminare quell'altro. 
+Meetere il nome giusto
 
 
 
@@ -15,15 +10,17 @@ a pointer was used instead.
 RELEASE NOTES
 =============
 
-Build8.0b20150427.76
+Build8.0b20150522.76
 --------------------
 	
-	* A new class influxspecies has been introduced to deal with membrane finite diffusion of external food
-	* New surface is computed too
+	* A new class influxspecies has been introduced to deal with membrane finite diffusion of external molecules (look at the documentation for details)
+	* A new parameter systemArchitecture in acsm2m.conf has been added to select the system architecture in a easiest way
+	* Now surface is computed too
 	* Runtime interface has been enxhanced, information have been riorganized and surface has been added
-	* Files can be now saved only at the beginning at the end of the simulation using "-1" value for the specific parameters
+	* Files can be now saved only at the beginning and at the end of the simulation using "-1" value for the specific parameters timeStructuresSavingInterval, fileTimesSaveInterval and fileAmountSaveInterval
 	* Various little improvements
 	* Documentation has been updated. 
+	* Demo folders CSTR, protocell_buffered_flow and protocell_finite_membrane_passage have been added to test the simulation for the specific environmental system architecture
 
 Build7.1b20140721.75
 --------------------

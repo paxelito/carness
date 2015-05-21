@@ -1,168 +1,71 @@
-\hypertarget{a00129}{\section{acs\+R\+A\+Fanalysis Namespace Reference}
-\label{a00129}\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
+\hypertarget{a00129}{\section{topology\-\_\-graphs Namespace Reference}
+\label{a00129}\index{topology\-\_\-graphs@{topology\-\_\-graphs}}
 }
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-tuple \hyperlink{a00129_ac31a9eb101f9abd2dfb68dddf3cdea49}{parser}
+tuple \hyperlink{a00129_ae8f5442ee1adf5cb74402ea355fa8624}{parser}
 \item 
-tuple \hyperlink{a00129_a921f7b120160ad6199dc72fa76cc61d7}{args} = parser.\+parse\+\_\+args()
+tuple \hyperlink{a00129_a24c8c694ace179f28bd0178c8a98cc1f}{args} = parser.\-parse\-\_\-args()
 \item 
-tuple \hyperlink{a00129_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\+Path} = os.\+path.\+abspath(args.\+str\+Path)
+tuple \hyperlink{a00129_a700aee16b39b4ad2a88c4ad9b2595a7c}{str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
 \item 
-int \hyperlink{a00129_ae3bd0bf5edba7fcc3fddc439ceebd7e5}{\+\_\+\+C\+L\+O\+S\+E\+\_\+} = 0
+tuple \hyperlink{a00129_a8eb5b4fb2ce4eb5e86f9fa6b5ba89ce8}{tmp\-Dirs} = sort(os.\-listdir(\hyperlink{a00129_a700aee16b39b4ad2a88c4ad9b2595a7c}{str\-Path}))
 \item 
-int \hyperlink{a00129_a3420c7f044424df4c735884411cf064e}{\+\_\+\+P\+R\+O\+T\+O\+\_\+} = 1
+tuple \hyperlink{a00129_a0bffd0371cf5a2357be1b52798816c2c}{dat} = np.\-loadtxt(open('0\-\_\-init\-Raf\-Analysis\-S\-U\-M.\-csv'), delimiter='\textbackslash{}t', skiprows=1)
 \item 
-int \hyperlink{a00129_a83f5d2a644a6e3960655ca4ae1c55038}{\+\_\+\+C\+S\+T\+R\+\_\+} = 2
-\item 
-tuple \hyperlink{a00129_a0d6fedc77ef111d5aebc888527a7b60d}{conf} = rf.\+read\+Conf\+File(\hyperlink{a00129_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\+Path})
-\item 
-tuple \hyperlink{a00129_a1be7f568f3bae43bcf5cf721d0ab506d}{closure} = dm.\+generate\+Flux\+List(\hyperlink{a00129_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\+Path}, sys\+Type)
-\item 
-tuple \hyperlink{a00129_a9686a166e08ff3540d419f831433da74}{food\+Set} = deepcopy(\hyperlink{a00129_a1be7f568f3bae43bcf5cf721d0ab506d}{closure})
-\item 
-tuple \hyperlink{a00129_a45383e21457afcc9643eec4200984680}{rcts} = rf.\+load\+All\+Data(\hyperlink{a00129_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\+Path},'\+\_\+acsreactions.\+csv')
-\item 
-tuple \hyperlink{a00129_a5b83a251211f875fde99d3ed17fa5f18}{cats} = rf.\+load\+All\+Data(\hyperlink{a00129_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\+Path},'\+\_\+acscatalysis.\+csv')
-\item 
-tuple \hyperlink{a00129_a13356ba12c204e0406b75995282613d3}{R\+A} = raf.\+R\+Acondition(\hyperlink{a00129_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\+Path},\hyperlink{a00129_a1be7f568f3bae43bcf5cf721d0ab506d}{closure},\hyperlink{a00129_a45383e21457afcc9643eec4200984680}{rcts},\hyperlink{a00129_a5b83a251211f875fde99d3ed17fa5f18}{cats})
-\item 
-tuple \hyperlink{a00129_ad44f37d5b138abfe77d1c212fd3d41a2}{R\+A\+F} = raf.\+Fcondition(\hyperlink{a00129_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{str\+Path},\hyperlink{a00129_a1be7f568f3bae43bcf5cf721d0ab506d}{closure},\hyperlink{a00129_a13356ba12c204e0406b75995282613d3}{R\+A},\hyperlink{a00129_a45383e21457afcc9643eec4200984680}{rcts})
-\item 
-tuple \hyperlink{a00129_a6e44ceb30d60cc17a4bf428a882aa51a}{R\+A\+Flpre} = len(\hyperlink{a00129_ad44f37d5b138abfe77d1c212fd3d41a2}{R\+A\+F})
-\item 
-list \hyperlink{a00129_ae9584596a4202245353198abb6042fa0}{red\+Rcts} = \hyperlink{a00129_a45383e21457afcc9643eec4200984680}{rcts}\mbox{[}\hyperlink{a00129_ad44f37d5b138abfe77d1c212fd3d41a2}{R\+A\+F},\+:\mbox{]}
-\item 
-int \hyperlink{a00129_aece7a419c5b139173191eb9035bb4260}{R\+A\+Flpost} = 0
-\item 
-tuple \hyperlink{a00129_a2b3738754ae59f4529738a09188fbbe5}{catalists} = raf.\+find\+Catfor\+R\+A\+F(\hyperlink{a00129_a5b83a251211f875fde99d3ed17fa5f18}{cats}, \hyperlink{a00129_ad44f37d5b138abfe77d1c212fd3d41a2}{R\+A\+F}, \hyperlink{a00129_a1be7f568f3bae43bcf5cf721d0ab506d}{closure})
+string \hyperlink{a00129_a7c33855a7bcf13e566f1b8026065fa90}{tmpfilename} = '1\-\_\-raf\-\_\-'
 \end{DoxyCompactItemize}
 
 
 \subsection{Variable Documentation}
-\hypertarget{a00129_ae3bd0bf5edba7fcc3fddc439ceebd7e5}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!\+\_\+\+C\+L\+O\+S\+E\+\_\+@{\+\_\+\+C\+L\+O\+S\+E\+\_\+}}
-\index{\+\_\+\+C\+L\+O\+S\+E\+\_\+@{\+\_\+\+C\+L\+O\+S\+E\+\_\+}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{\+\_\+\+C\+L\+O\+S\+E\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+R\+A\+Fanalysis.\+\_\+\+C\+L\+O\+S\+E\+\_\+ = 0}}\label{a00129_ae3bd0bf5edba7fcc3fddc439ceebd7e5}
+\hypertarget{a00129_a24c8c694ace179f28bd0178c8a98cc1f}{\index{topology\-\_\-graphs@{topology\-\_\-graphs}!args@{args}}
+\index{args@{args}!topology_graphs@{topology\-\_\-graphs}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-graphs.\-args = parser.\-parse\-\_\-args()}}\label{a00129_a24c8c694ace179f28bd0178c8a98cc1f}
 
 
-Definition at line 31 of file acs\+R\+A\+Fanalysis.\+py.
+Definition at line 28 of file topology\-\_\-graphs.\-py.
 
-\hypertarget{a00129_a83f5d2a644a6e3960655ca4ae1c55038}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!\+\_\+\+C\+S\+T\+R\+\_\+@{\+\_\+\+C\+S\+T\+R\+\_\+}}
-\index{\+\_\+\+C\+S\+T\+R\+\_\+@{\+\_\+\+C\+S\+T\+R\+\_\+}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{\+\_\+\+C\+S\+T\+R\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+R\+A\+Fanalysis.\+\_\+\+C\+S\+T\+R\+\_\+ = 2}}\label{a00129_a83f5d2a644a6e3960655ca4ae1c55038}
-
-
-Definition at line 33 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_a3420c7f044424df4c735884411cf064e}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!\+\_\+\+P\+R\+O\+T\+O\+\_\+@{\+\_\+\+P\+R\+O\+T\+O\+\_\+}}
-\index{\+\_\+\+P\+R\+O\+T\+O\+\_\+@{\+\_\+\+P\+R\+O\+T\+O\+\_\+}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{\+\_\+\+P\+R\+O\+T\+O\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+R\+A\+Fanalysis.\+\_\+\+P\+R\+O\+T\+O\+\_\+ = 1}}\label{a00129_a3420c7f044424df4c735884411cf064e}
+\hypertarget{a00129_a0bffd0371cf5a2357be1b52798816c2c}{\index{topology\-\_\-graphs@{topology\-\_\-graphs}!dat@{dat}}
+\index{dat@{dat}!topology_graphs@{topology\-\_\-graphs}}
+\subsubsection[{dat}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-graphs.\-dat = np.\-loadtxt(open('0\-\_\-init\-Raf\-Analysis\-S\-U\-M.\-csv'), delimiter='\textbackslash{}t', skiprows=1)}}\label{a00129_a0bffd0371cf5a2357be1b52798816c2c}
 
 
-Definition at line 32 of file acs\+R\+A\+Fanalysis.\+py.
+Definition at line 42 of file topology\-\_\-graphs.\-py.
 
-\hypertarget{a00129_a921f7b120160ad6199dc72fa76cc61d7}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!args@{args}}
-\index{args@{args}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+args = parser.\+parse\+\_\+args()}}\label{a00129_a921f7b120160ad6199dc72fa76cc61d7}
-
-
-Definition at line 26 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_a2b3738754ae59f4529738a09188fbbe5}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!catalists@{catalists}}
-\index{catalists@{catalists}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{catalists}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+catalists = raf.\+find\+Catfor\+R\+A\+F({\bf cats}, {\bf R\+A\+F}, {\bf closure})}}\label{a00129_a2b3738754ae59f4529738a09188fbbe5}
-
-
-Definition at line 76 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_a5b83a251211f875fde99d3ed17fa5f18}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!cats@{cats}}
-\index{cats@{cats}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{cats}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+cats = rf.\+load\+All\+Data({\bf str\+Path},'\+\_\+acscatalysis.\+csv')}}\label{a00129_a5b83a251211f875fde99d3ed17fa5f18}
-
-
-Definition at line 45 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_a1be7f568f3bae43bcf5cf721d0ab506d}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!closure@{closure}}
-\index{closure@{closure}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{closure}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+closure = dm.\+generate\+Flux\+List({\bf str\+Path}, sys\+Type)}}\label{a00129_a1be7f568f3bae43bcf5cf721d0ab506d}
-
-
-Definition at line 41 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_a0d6fedc77ef111d5aebc888527a7b60d}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!conf@{conf}}
-\index{conf@{conf}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{conf}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+conf = rf.\+read\+Conf\+File({\bf str\+Path})}}\label{a00129_a0d6fedc77ef111d5aebc888527a7b60d}
-
-
-Definition at line 34 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_a9686a166e08ff3540d419f831433da74}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!food\+Set@{food\+Set}}
-\index{food\+Set@{food\+Set}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{food\+Set}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+food\+Set = deepcopy({\bf closure})}}\label{a00129_a9686a166e08ff3540d419f831433da74}
-
-
-Definition at line 42 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_ac31a9eb101f9abd2dfb68dddf3cdea49}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!parser@{parser}}
-\index{parser@{parser}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+parser}}\label{a00129_ac31a9eb101f9abd2dfb68dddf3cdea49}
-{\bfseries Initial value\+:}
+\hypertarget{a00129_ae8f5442ee1adf5cb74402ea355fa8624}{\index{topology\-\_\-graphs@{topology\-\_\-graphs}!parser@{parser}}
+\index{parser@{parser}!topology_graphs@{topology\-\_\-graphs}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-graphs.\-parser}}\label{a00129_ae8f5442ee1adf5cb74402ea355fa8624}
+{\bfseries Initial value\-:}
 \begin{DoxyCode}
 1 = ArgumentParser(
-2                                 description=\textcolor{stringliteral}{'Script to perform a RAF analysis.'}
-3                                 , epilog=\textcolor{stringliteral}{'''File with angle trajectories are created. '''})
+2                                 description=\textcolor{stringliteral}{'This script create graphs with regard to the network
+       topological assessment.'}
+3                                 , epilog=\textcolor{stringliteral}{'''Random Catalytic Reaction Networks Topological Assessment
+       graphic view'''})
 \end{DoxyCode}
 
 
-Definition at line 22 of file acs\+R\+A\+Fanalysis.\+py.
+Definition at line 20 of file topology\-\_\-graphs.\-py.
 
-\hypertarget{a00129_a13356ba12c204e0406b75995282613d3}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!R\+A@{R\+A}}
-\index{R\+A@{R\+A}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{R\+A}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+R\+A = raf.\+R\+Acondition({\bf str\+Path},{\bf closure},{\bf rcts},{\bf cats})}}\label{a00129_a13356ba12c204e0406b75995282613d3}
-
-
-Definition at line 50 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_ad44f37d5b138abfe77d1c212fd3d41a2}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!R\+A\+F@{R\+A\+F}}
-\index{R\+A\+F@{R\+A\+F}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{R\+A\+F}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+R\+A\+F = raf.\+Fcondition({\bf str\+Path},{\bf closure},{\bf R\+A},{\bf rcts})}}\label{a00129_ad44f37d5b138abfe77d1c212fd3d41a2}
+\hypertarget{a00129_a700aee16b39b4ad2a88c4ad9b2595a7c}{\index{topology\-\_\-graphs@{topology\-\_\-graphs}!str\-Path@{str\-Path}}
+\index{str\-Path@{str\-Path}!topology_graphs@{topology\-\_\-graphs}}
+\subsubsection[{str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-graphs.\-str\-Path = os.\-path.\-abspath(args.\-str\-Path)}}\label{a00129_a700aee16b39b4ad2a88c4ad9b2595a7c}
 
 
-Definition at line 52 of file acs\+R\+A\+Fanalysis.\+py.
+Definition at line 31 of file topology\-\_\-graphs.\-py.
 
-\hypertarget{a00129_aece7a419c5b139173191eb9035bb4260}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!R\+A\+Flpost@{R\+A\+Flpost}}
-\index{R\+A\+Flpost@{R\+A\+Flpost}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{R\+A\+Flpost}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+R\+A\+Flpost = 0}}\label{a00129_aece7a419c5b139173191eb9035bb4260}
-
-
-Definition at line 60 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_a6e44ceb30d60cc17a4bf428a882aa51a}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!R\+A\+Flpre@{R\+A\+Flpre}}
-\index{R\+A\+Flpre@{R\+A\+Flpre}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{R\+A\+Flpre}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+R\+A\+Flpre = len({\bf R\+A\+F})}}\label{a00129_a6e44ceb30d60cc17a4bf428a882aa51a}
+\hypertarget{a00129_a8eb5b4fb2ce4eb5e86f9fa6b5ba89ce8}{\index{topology\-\_\-graphs@{topology\-\_\-graphs}!tmp\-Dirs@{tmp\-Dirs}}
+\index{tmp\-Dirs@{tmp\-Dirs}!topology_graphs@{topology\-\_\-graphs}}
+\subsubsection[{tmp\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-graphs.\-tmp\-Dirs = sort(os.\-listdir({\bf str\-Path}))}}\label{a00129_a8eb5b4fb2ce4eb5e86f9fa6b5ba89ce8}
 
 
-Definition at line 53 of file acs\+R\+A\+Fanalysis.\+py.
+Definition at line 32 of file topology\-\_\-graphs.\-py.
 
-\hypertarget{a00129_a45383e21457afcc9643eec4200984680}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!rcts@{rcts}}
-\index{rcts@{rcts}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{rcts}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+rcts = rf.\+load\+All\+Data({\bf str\+Path},'\+\_\+acsreactions.\+csv')}}\label{a00129_a45383e21457afcc9643eec4200984680}
-
-
-Definition at line 44 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_ae9584596a4202245353198abb6042fa0}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!red\+Rcts@{red\+Rcts}}
-\index{red\+Rcts@{red\+Rcts}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{red\+Rcts}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+R\+A\+Fanalysis.\+red\+Rcts = {\bf rcts}\mbox{[}{\bf R\+A\+F},\+:\mbox{]}}}\label{a00129_ae9584596a4202245353198abb6042fa0}
+\hypertarget{a00129_a7c33855a7bcf13e566f1b8026065fa90}{\index{topology\-\_\-graphs@{topology\-\_\-graphs}!tmpfilename@{tmpfilename}}
+\index{tmpfilename@{tmpfilename}!topology_graphs@{topology\-\_\-graphs}}
+\subsubsection[{tmpfilename}]{\setlength{\rightskip}{0pt plus 5cm}string topology\-\_\-graphs.\-tmpfilename = '1\-\_\-raf\-\_\-'}}\label{a00129_a7c33855a7bcf13e566f1b8026065fa90}
 
 
-Definition at line 55 of file acs\+R\+A\+Fanalysis.\+py.
-
-\hypertarget{a00129_ab5ddf85dcaa5dff4cd3f2906b8f37e78}{\index{acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}!str\+Path@{str\+Path}}
-\index{str\+Path@{str\+Path}!acs\+R\+A\+Fanalysis@{acs\+R\+A\+Fanalysis}}
-\subsubsection[{str\+Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+R\+A\+Fanalysis.\+str\+Path = os.\+path.\+abspath(args.\+str\+Path)}}\label{a00129_ab5ddf85dcaa5dff4cd3f2906b8f37e78}
-
-
-Definition at line 29 of file acs\+R\+A\+Fanalysis.\+py.
+Definition at line 45 of file topology\-\_\-graphs.\-py.
 

@@ -1,29 +1,213 @@
-\hypertarget{a00094}{\section{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+analysis/python\+Tools/lib/\+I\+O/writefiles.py File Reference}
-\label{a00094}\index{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+analysis/python\+Tools/lib/\+I\+O/writefiles.\+py@{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+analysis/python\+Tools/lib/\+I\+O/writefiles.\+py}}
+\hypertarget{a00094}{\section{acs\-Duplication\-Analysis Namespace Reference}
+\label{a00094}\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}}
 }
-\subsection*{Namespaces}
+\subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
- \hyperlink{a00147}{lib.\+I\+O.\+writefiles}
+tuple \hyperlink{a00094_afa045b1b79e3cc0d0ff252ca426a9976}{parser}
+\item 
+tuple \hyperlink{a00094_a7e2e8e21468d3a77a5b5727b1db34cf5}{args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{a00094_aebcbc9d17a453b6b3fb1813a731ad091}{Str\-Path} = os.\-path.\-abspath(args.\-Str\-Path)
+\item 
+tuple \hyperlink{a00094_a5030678434c0a50876042c56b443fb93}{tmp\-Dirs} = sort(os.\-listdir(\hyperlink{a00094_aebcbc9d17a453b6b3fb1813a731ad091}{Str\-Path}))
+\item 
+string \hyperlink{a00094_ab5558c536d6d2eec449ad9b978bff5ab}{current\-Dir} = ''
+\item 
+string \hyperlink{a00094_a8f37d6ca1d77d4f1402584470a097308}{ndn} = \hyperlink{a00094_ab5558c536d6d2eec449ad9b978bff5ab}{current\-Dir}+'\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'
+\item 
+tuple \hyperlink{a00094_a78f5a1cb54411a11cc368302aac35ca9}{newdir\-All\-Results} = os.\-path.\-abspath(os.\-path.\-join(os.\-curdir, \hyperlink{a00094_a8f37d6ca1d77d4f1402584470a097308}{ndn}))
+\item 
+int \hyperlink{a00094_a149535e505ef09d35a9ea8f4cee45b1f}{valid\-Dir} = 1
+\item 
+list \hyperlink{a00094_a71f19251e2a07b86d019204de83241ec}{dup\-Time} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{a00094_af2da42e1f2bbe8235624263867ef2719}{tot\-Dir\-Name} = os.\-path.\-join(\hyperlink{a00094_aebcbc9d17a453b6b3fb1813a731ad091}{Str\-Path},tmp\-Dir)
+\item 
+tuple \hyperlink{a00094_ace1b658a12d17a1359f37ebf927ea9b5}{res\-Dir\-Path} = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))
+\item 
+tuple \hyperlink{a00094_a4db9785401a572b6067cabb96b3c5ecd}{number\-Of\-Gen} = len(glob.\-glob(os.\-path.\-join(\hyperlink{a00094_ace1b658a12d17a1359f37ebf927ea9b5}{res\-Dir\-Path},'times\-\_\-$\ast$')))
+\item 
+tuple \hyperlink{a00094_aebf6e36a8ab4ee728eb30781f25cbba2}{dup\-Time\-Single\-X} = np.\-zeros((\hyperlink{a00094_a4db9785401a572b6067cabb96b3c5ecd}{number\-Of\-Gen},\hyperlink{a00021_ad7a297e3111ffc45eba4a3b88590cb30}{args.\-species}))
+\item 
+tuple \hyperlink{a00094_a234dce1a3fa6fada4ecff6272abe38f1}{str\-Zeros} = ut.\-zero\-Before\-Str\-Num(ngen, args.\-divisions)
+\item 
+string \hyperlink{a00094_a16ce767c459a75b657e3a2592b4228d9}{str\-Species} = 'time\-Species\-Amount\-\_\-'
+\item 
+tuple \hyperlink{a00094_ad70f67ea048141937d94adbeb21b8803}{species\-Files} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00094_ace1b658a12d17a1359f37ebf927ea9b5}{res\-Dir\-Path},\hyperlink{a00094_a16ce767c459a75b657e3a2592b4228d9}{str\-Species})))
+\item 
+tuple \hyperlink{a00094_ae11ddb8ad49a2afeaa7276e3e1a59a54}{data} = np.\-loadtxt(open(sng\-Species\-File,\char`\"{}rb\char`\"{}),delimiter=\char`\"{}\textbackslash{}t\char`\"{})
+\item 
+int \hyperlink{a00094_a272117a5453b492c5fe58c89b0454921}{tot\-X} = 0
+\item 
+tuple \hyperlink{a00094_a6e5f6f3f617f9d327da64d8cb492cc6f}{f\-\_\-name} = os.\-path.\-join(\hyperlink{a00094_a78f5a1cb54411a11cc368302aac35ca9}{newdir\-All\-Results},\char`\"{}deltat\-\_\-\char`\"{} + tmp\-Dir +\char`\"{}.csv\char`\"{})
+\item 
+tuple \hyperlink{a00094_aeb0384baa8b5272c0a730d55994c3b1c}{cols2plot} = range(args.\-last\-Flux+1,\hyperlink{a00021_ad7a297e3111ffc45eba4a3b88590cb30}{args.\-species})
+\item 
+list \hyperlink{a00094_a3b11d6e735ad53661a17cf0854cb9270}{reduced\-Data} = \hyperlink{a00094_aebf6e36a8ab4ee728eb30781f25cbba2}{dup\-Time\-Single\-X}\mbox{[}\-:,\hyperlink{a00094_aeb0384baa8b5272c0a730d55994c3b1c}{cols2plot}\mbox{]}
+\item 
+tuple \hyperlink{a00094_a668f6f31c1cf7235d2843b0b5f95b08d}{fn} = os.\-path.\-join(\hyperlink{a00094_a78f5a1cb54411a11cc368302aac35ca9}{newdir\-All\-Results},\char`\"{}divplot\-\_\-\char`\"{} + tmp\-Dir)
 \end{DoxyCompactItemize}
-\subsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-def \hyperlink{a00147_a7fddc2c2879e8fedd8fbb345a19aa6f6}{lib.\+I\+O.\+writefiles.\+save\+Random\+Seed}
-\item 
-def \hyperlink{a00147_a33a9a95566de3841055c5dbf7fdc3505}{lib.\+I\+O.\+writefiles.\+write\+\_\+init\+\_\+raf\+\_\+list}
-\item 
-def \hyperlink{a00147_ad13fc2e762b8deaeb661f939e26e706f}{lib.\+I\+O.\+writefiles.\+write\+\_\+init\+\_\+raf\+\_\+all}
-\item 
-def \hyperlink{a00147_af18d8f2d2d0fc78ca4418866631f347b}{lib.\+I\+O.\+writefiles.\+write\+\_\+acs\+Catalysis\+\_\+file}
-\item 
-def \hyperlink{a00147_adbff7889ebd8786ecf5791e8a7b00d59}{lib.\+I\+O.\+writefiles.\+write\+\_\+acs\+Reactions\+\_\+file}
-\item 
-def \hyperlink{a00147_ae2842322fe821ae86172affce98f3aa1}{lib.\+I\+O.\+writefiles.\+write\+\_\+and\+\_\+create\+Influx\+File}
-\item 
-def \hyperlink{a00147_a395b3244d381850f60bf1ee95dbe84dd}{lib.\+I\+O.\+writefiles.\+write\+\_\+and\+\_\+create\+\_\+std\+\_\+nrg\+File}
-\item 
-def \hyperlink{a00147_a57622287d0b21cb0fe09d15345277c5c}{lib.\+I\+O.\+writefiles.\+write\+All\+Files\+And\+Create\+Res\+Folder}
-\item 
-def \hyperlink{a00147_a593c166784723a06f4f6a1a96890aa17}{lib.\+I\+O.\+writefiles.\+write\+\_\+acsms\+\_\+file}
-\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00094_a7e2e8e21468d3a77a5b5727b1db34cf5}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!args@{args}}
+\index{args@{args}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-args = parser.\-parse\-\_\-args()}}\label{a00094_a7e2e8e21468d3a77a5b5727b1db34cf5}
+
+
+Definition at line 45 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_aeb0384baa8b5272c0a730d55994c3b1c}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!cols2plot@{cols2plot}}
+\index{cols2plot@{cols2plot}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{cols2plot}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Duplication\-Analysis.\-cols2plot = range(args.\-last\-Flux+1,{\bf args.\-species})}}\label{a00094_aeb0384baa8b5272c0a730d55994c3b1c}
+
+
+Definition at line 118 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_ab5558c536d6d2eec449ad9b978bff5ab}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!current\-Dir@{current\-Dir}}
+\index{current\-Dir@{current\-Dir}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{current\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Duplication\-Analysis.\-current\-Dir = ''}}\label{a00094_ab5558c536d6d2eec449ad9b978bff5ab}
+
+
+Definition at line 56 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_ae11ddb8ad49a2afeaa7276e3e1a59a54}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!data@{data}}
+\index{data@{data}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-data = np.\-loadtxt(open(sng\-Species\-File,\char`\"{}rb\char`\"{}),delimiter=\char`\"{}\textbackslash{}t\char`\"{})}}\label{a00094_ae11ddb8ad49a2afeaa7276e3e1a59a54}
+
+
+Definition at line 99 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a71f19251e2a07b86d019204de83241ec}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!dup\-Time@{dup\-Time}}
+\index{dup\-Time@{dup\-Time}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{dup\-Time}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-dup\-Time = \mbox{[}$\,$\mbox{]}}}\label{a00094_a71f19251e2a07b86d019204de83241ec}
+
+
+Definition at line 67 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_aebf6e36a8ab4ee728eb30781f25cbba2}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!dup\-Time\-Single\-X@{dup\-Time\-Single\-X}}
+\index{dup\-Time\-Single\-X@{dup\-Time\-Single\-X}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{dup\-Time\-Single\-X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-dup\-Time\-Single\-X = np.\-zeros(({\bf number\-Of\-Gen},{\bf args.\-species}))}}\label{a00094_aebf6e36a8ab4ee728eb30781f25cbba2}
+
+
+Definition at line 82 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a6e5f6f3f617f9d327da64d8cb492cc6f}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!f\-\_\-name@{f\-\_\-name}}
+\index{f\-\_\-name@{f\-\_\-name}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{f\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-f\-\_\-name = os.\-path.\-join({\bf newdir\-All\-Results},\char`\"{}deltat\-\_\-\char`\"{} + tmp\-Dir +\char`\"{}.csv\char`\"{})}}\label{a00094_a6e5f6f3f617f9d327da64d8cb492cc6f}
+
+
+Definition at line 112 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a668f6f31c1cf7235d2843b0b5f95b08d}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!fn@{fn}}
+\index{fn@{fn}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{fn}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-fn = os.\-path.\-join({\bf newdir\-All\-Results},\char`\"{}divplot\-\_\-\char`\"{} + tmp\-Dir)}}\label{a00094_a668f6f31c1cf7235d2843b0b5f95b08d}
+
+
+Definition at line 123 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a8f37d6ca1d77d4f1402584470a097308}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!ndn@{ndn}}
+\index{ndn@{ndn}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Duplication\-Analysis.\-ndn = {\bf current\-Dir}+'\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'}}\label{a00094_a8f37d6ca1d77d4f1402584470a097308}
+
+
+Definition at line 57 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a78f5a1cb54411a11cc368302aac35ca9}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!newdir\-All\-Results@{newdir\-All\-Results}}
+\index{newdir\-All\-Results@{newdir\-All\-Results}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-newdir\-All\-Results = os.\-path.\-abspath(os.\-path.\-join(os.\-curdir, {\bf ndn}))}}\label{a00094_a78f5a1cb54411a11cc368302aac35ca9}
+
+
+Definition at line 58 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a4db9785401a572b6067cabb96b3c5ecd}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!number\-Of\-Gen@{number\-Of\-Gen}}
+\index{number\-Of\-Gen@{number\-Of\-Gen}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{number\-Of\-Gen}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-number\-Of\-Gen = len(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},'times\-\_\-$\ast$')))}}\label{a00094_a4db9785401a572b6067cabb96b3c5ecd}
+
+
+Definition at line 80 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_afa045b1b79e3cc0d0ff252ca426a9976}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!parser@{parser}}
+\index{parser@{parser}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-parser}}\label{a00094_afa045b1b79e3cc0d0ff252ca426a9976}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = ArgumentParser(
+2                                 description=\textcolor{stringliteral}{'Protocell division and synchronization assessment'}
+3                                 , epilog=\textcolor{stringliteral}{'''File with angle trajectories are created. '''})
+\end{DoxyCode}
+
+
+Definition at line 36 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a3b11d6e735ad53661a17cf0854cb9270}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!reduced\-Data@{reduced\-Data}}
+\index{reduced\-Data@{reduced\-Data}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{reduced\-Data}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Duplication\-Analysis.\-reduced\-Data = {\bf dup\-Time\-Single\-X}\mbox{[}\-:,{\bf cols2plot}\mbox{]}}}\label{a00094_a3b11d6e735ad53661a17cf0854cb9270}
+
+
+Definition at line 122 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_ace1b658a12d17a1359f37ebf927ea9b5}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!res\-Dir\-Path@{res\-Dir\-Path}}
+\index{res\-Dir\-Path@{res\-Dir\-Path}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{res\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-res\-Dir\-Path = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))}}\label{a00094_ace1b658a12d17a1359f37ebf927ea9b5}
+
+
+Definition at line 75 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_ad70f67ea048141937d94adbeb21b8803}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!species\-Files@{species\-Files}}
+\index{species\-Files@{species\-Files}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{species\-Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-species\-Files = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Species})))}}\label{a00094_ad70f67ea048141937d94adbeb21b8803}
+
+
+Definition at line 94 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_aebcbc9d17a453b6b3fb1813a731ad091}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!Str\-Path@{Str\-Path}}
+\index{Str\-Path@{Str\-Path}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{Str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-Str\-Path = os.\-path.\-abspath(args.\-Str\-Path)}}\label{a00094_aebcbc9d17a453b6b3fb1813a731ad091}
+
+
+Definition at line 49 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a16ce767c459a75b657e3a2592b4228d9}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!str\-Species@{str\-Species}}
+\index{str\-Species@{str\-Species}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{str\-Species}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Duplication\-Analysis.\-str\-Species = 'time\-Species\-Amount\-\_\-'}}\label{a00094_a16ce767c459a75b657e3a2592b4228d9}
+
+
+Definition at line 90 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a234dce1a3fa6fada4ecff6272abe38f1}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!str\-Zeros@{str\-Zeros}}
+\index{str\-Zeros@{str\-Zeros}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{str\-Zeros}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-str\-Zeros = ut.\-zero\-Before\-Str\-Num(ngen, args.\-divisions)}}\label{a00094_a234dce1a3fa6fada4ecff6272abe38f1}
+
+
+Definition at line 88 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a5030678434c0a50876042c56b443fb93}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!tmp\-Dirs@{tmp\-Dirs}}
+\index{tmp\-Dirs@{tmp\-Dirs}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{tmp\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-tmp\-Dirs = sort(os.\-listdir({\bf Str\-Path}))}}\label{a00094_a5030678434c0a50876042c56b443fb93}
+
+
+Definition at line 51 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_af2da42e1f2bbe8235624263867ef2719}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!tot\-Dir\-Name@{tot\-Dir\-Name}}
+\index{tot\-Dir\-Name@{tot\-Dir\-Name}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{tot\-Dir\-Name}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Duplication\-Analysis.\-tot\-Dir\-Name = os.\-path.\-join({\bf Str\-Path},tmp\-Dir)}}\label{a00094_af2da42e1f2bbe8235624263867ef2719}
+
+
+Definition at line 68 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a272117a5453b492c5fe58c89b0454921}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!tot\-X@{tot\-X}}
+\index{tot\-X@{tot\-X}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{tot\-X}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Duplication\-Analysis.\-tot\-X = 0}}\label{a00094_a272117a5453b492c5fe58c89b0454921}
+
+
+Definition at line 100 of file acs\-Duplication\-Analysis.\-py.
+
+\hypertarget{a00094_a149535e505ef09d35a9ea8f4cee45b1f}{\index{acs\-Duplication\-Analysis@{acs\-Duplication\-Analysis}!valid\-Dir@{valid\-Dir}}
+\index{valid\-Dir@{valid\-Dir}!acsDuplicationAnalysis@{acs\-Duplication\-Analysis}}
+\subsubsection[{valid\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Duplication\-Analysis.\-valid\-Dir = 1}}\label{a00094_a149535e505ef09d35a9ea8f4cee45b1f}
+
+
+Definition at line 65 of file acs\-Duplication\-Analysis.\-py.
+

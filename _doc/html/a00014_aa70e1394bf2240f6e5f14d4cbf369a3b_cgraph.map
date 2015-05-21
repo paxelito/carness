@@ -1,6 +1,0 @@
-<map id="environment::createInitialMoleculesPopulationFromSpecificFileSTD" name="environment::createInitialMoleculesPopulationFromSpecificFileSTD">
-<area shape="rect" id="node2" href="$a00014.html#a8699a0f85f5e8dc23eb8f78fa22c6b17" title="environment::zeroBeforeString\lNumberSTD" alt="" coords="279,5,481,46"/>
-<area shape="rect" id="node3" href="$a00014.html#a69ae530ef6f9298e3ab8304157709404" title="environment::incNumberOfCpx" alt="" coords="277,71,483,97"/>
-<area shape="rect" id="node4" href="$a00056.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="330,121,430,148"/>
-<area shape="rect" id="node5" href="$a00014.html#a984f79e5f89b774b65db901899687ac0" title="environment::getLastFiring\lDiskSpeciesID" alt="" coords="290,173,470,214"/>
-</map>

@@ -1,23 +1,251 @@
-\hypertarget{a00090}{\section{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+analysis/python\+Tools/lib/graph/network.py File Reference}
-\label{a00090}\index{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+analysis/python\+Tools/lib/graph/network.\+py@{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+analysis/python\+Tools/lib/graph/network.\+py}}
+\hypertarget{a00090}{\section{acs\-Angle\-In\-Time\-Between\-Generations Namespace Reference}
+\label{a00090}\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}}
 }
-\subsection*{Namespaces}
-\begin{DoxyCompactItemize}
-\item 
- \hyperlink{a00142}{lib.\+graph.\+network}
-\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{a00142_aa023644e6dad3ed7be55a592d8576007}{lib.\+graph.\+network.\+remove\+Rare\+Rcts}
-\item 
-def \hyperlink{a00142_a31099e87728bb8b899360bb641bb6b64}{lib.\+graph.\+network.\+fix\+Condensation\+Reaction}
-\item 
-def \hyperlink{a00142_a47be50a907814919f86f8313927d3236}{lib.\+graph.\+network.\+net\+\_\+analysis\+\_\+of\+\_\+static\+\_\+graphs}
-\item 
-def \hyperlink{a00142_ab2528d394362bfca89834b72d8024e6f}{lib.\+graph.\+network.\+net\+\_\+analysis\+\_\+of\+\_\+dynamic\+\_\+graphs}
-\item 
-def \hyperlink{a00142_a5c4fdcb64dea8b366645ad27dc71bff8}{lib.\+graph.\+network.\+return\+\_\+scc\+\_\+in\+\_\+raf}
-\item 
-def \hyperlink{a00142_a22ad63e3d10c613dc181b9e69ad1cef5}{lib.\+graph.\+network.\+create\+\_\+chemistry}
+def \hyperlink{a00090_aaf526cfff328bc58345967069b8fbae0}{zero\-Before\-Str\-Num}
 \end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{a00090_af06690b151a135aaff10825277c4345e}{parser}
+\item 
+tuple \hyperlink{a00090_a5c45bb374ae578f2f1ac1f6f683491f1}{args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{a00090_aadf83bb83f171da2e513401ece951083}{Str\-Path} = os.\-path.\-abspath(args.\-Str\-Path)
+\item 
+tuple \hyperlink{a00090_a3912324aec0b455c560ebd6e192e44aa}{res\-Dir\-Path} = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))
+\item 
+tuple \hyperlink{a00090_ae87ac48e6ef93d79f64689af63d1681f}{newdir\-All\-Results} = os.\-path.\-abspath(os.\-path.\-join(os.\-curdir, '\-\_\-0\-\_\-angles'))
+\item 
+tuple \hyperlink{a00090_ac26097b5b5657fa4d6bb0d226ffca9da}{param} = readfiles.\-read\-\_\-sims\-\_\-conf\-\_\-file('./acsm2s.\-conf')
+\item 
+list \hyperlink{a00090_a7edb016f9fd02abe3714165252652af6}{deltat} = \hyperlink{a00090_ac26097b5b5657fa4d6bb0d226ffca9da}{param}\mbox{[}2\mbox{]}
+\item 
+tuple \hyperlink{a00090_a2dc25dc1c0af14713786b9004cd602f7}{number\-Of\-Gens} = len(glob.\-glob(os.\-path.\-join(\hyperlink{a00090_a3912324aec0b455c560ebd6e192e44aa}{res\-Dir\-Path},'time\-Species\-Amount\-\_\-$\ast$')))
+\item 
+string \hyperlink{a00090_ab01731bd9870c6012778591010032301}{str\-Amount} = 'time\-Species\-Amount\-\_\-$\ast$'
+\item 
+tuple \hyperlink{a00090_a85e5d5f2db38215a8478b7c574368377}{amount\-Files} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00090_a3912324aec0b455c560ebd6e192e44aa}{res\-Dir\-Path},\hyperlink{a00090_ab01731bd9870c6012778591010032301}{str\-Amount})))
+\item 
+list \hyperlink{a00090_a5ba3601fadf52ac203118473b6c4db3e}{npvector} = \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{a00090_aa2b0aed68cf0d465add0d2683c686ff7}{str\-Zeros} = \hyperlink{a00090_aaf526cfff328bc58345967069b8fbae0}{zero\-Before\-Str\-Num}(gen+1, \hyperlink{a00090_a2dc25dc1c0af14713786b9004cd602f7}{number\-Of\-Gens})
+\item 
+string \hyperlink{a00090_adbcd9cfa3b0b922cf1d708519535f6da}{file\-Name} = 'time\-Species\-Amount\-\_\-'
+\item 
+tuple \hyperlink{a00090_a6b62fbc94ad1a2b022ec05389a1a5da8}{data} = np.\-loadtxt(open(\hyperlink{a00090_adbcd9cfa3b0b922cf1d708519535f6da}{file\-Name},\char`\"{}rb\char`\"{}),delimiter=\char`\"{}\textbackslash{}t\char`\"{})
+\item 
+tuple \hyperlink{a00090_aa7a5bbed8bb957c1d48a86d058e9dba9}{cubeangle} = np.\-zeros((\hyperlink{a00090_a5ba3601fadf52ac203118473b6c4db3e}{npvector}\mbox{[}0\mbox{]}.shape\mbox{[}0\mbox{]},\hyperlink{a00090_a2dc25dc1c0af14713786b9004cd602f7}{number\-Of\-Gens},\hyperlink{a00090_a2dc25dc1c0af14713786b9004cd602f7}{number\-Of\-Gens}))
+\item 
+int \hyperlink{a00090_a3d5bd3fb43b0cae106d2b05c22d64b1c}{firstspeciesid} = args.\-last\-Food\-Mol+1
+\item 
+int \hyperlink{a00090_ab78a312c378cd8ff7fc988f15165b0af}{lastspeciesid} = 2
+\item 
+tuple \hyperlink{a00090_ada59022b084d32f959c70d980c256873}{vec\-X} = np.\-array(gx\mbox{[}t,firstspeciesid\-:lastspeciesid\mbox{]})
+\item 
+tuple \hyperlink{a00090_af9dceee4ca99d15e7b95905f674ceda5}{vec\-Y} = np.\-array(gy\mbox{[}t,firstspeciesid\-:lastspeciesid\mbox{]})
+\item 
+tuple \hyperlink{a00090_afb0b11c375d9982cee623e5be776e6b1}{tmp\-Cos} = float(np.\-dot(\hyperlink{a00090_ada59022b084d32f959c70d980c256873}{vec\-X},\hyperlink{a00090_af9dceee4ca99d15e7b95905f674ceda5}{vec\-Y}) / (np.\-linalg.\-norm(\hyperlink{a00090_ada59022b084d32f959c70d980c256873}{vec\-X}) $\ast$ np.\-linalg.\-norm(\hyperlink{a00090_af9dceee4ca99d15e7b95905f674ceda5}{vec\-Y})))
+\item 
+tuple \hyperlink{a00090_ac5c8e440ab927fcfdf1bc4411d0f901c}{aseno} = np.\-arccos(\hyperlink{a00090_afb0b11c375d9982cee623e5be776e6b1}{tmp\-Cos})
+\item 
+tuple \hyperlink{a00090_ace6fb423ddbe7dd4b6e1d2828c8b05af}{summarystats} = np.\-zeros((\hyperlink{a00090_a5ba3601fadf52ac203118473b6c4db3e}{npvector}\mbox{[}0\mbox{]}.shape\mbox{[}0\mbox{]},2))
+\item 
+string \hyperlink{a00090_a8c361074d6e19ebcfb4f61f18cb8be4c}{savename} = 'angle\-\_\-'
+\item 
+list \hyperlink{a00090_af953e69c8207cf7aada9e39d5ccd4ae3}{hi} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{a00090_aaf526cfff328bc58345967069b8fbae0}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}}
+\index{zero\-Before\-Str\-Num@{zero\-Before\-Str\-Num}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{zero\-Before\-Str\-Num}]{\setlength{\rightskip}{0pt plus 5cm}def acs\-Angle\-In\-Time\-Between\-Generations.\-zero\-Before\-Str\-Num (
+\begin{DoxyParamCaption}
+\item[{}]{tmpl, }
+\item[{}]{tmp\-L}
+\end{DoxyParamCaption}
+)}}\label{a00090_aaf526cfff328bc58345967069b8fbae0}
+
+
+Definition at line 26 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00090_a85e5d5f2db38215a8478b7c574368377}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!amount\-Files@{amount\-Files}}
+\index{amount\-Files@{amount\-Files}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{amount\-Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-amount\-Files = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Amount})))}}\label{a00090_a85e5d5f2db38215a8478b7c574368377}
+
+
+Definition at line 67 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_a5c45bb374ae578f2f1ac1f6f683491f1}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!args@{args}}
+\index{args@{args}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-args = parser.\-parse\-\_\-args()}}\label{a00090_a5c45bb374ae578f2f1ac1f6f683491f1}
+
+
+Definition at line 41 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_ac5c8e440ab927fcfdf1bc4411d0f901c}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!aseno@{aseno}}
+\index{aseno@{aseno}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{aseno}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-aseno = np.\-arccos({\bf tmp\-Cos})}}\label{a00090_ac5c8e440ab927fcfdf1bc4411d0f901c}
+
+
+Definition at line 91 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_aa7a5bbed8bb957c1d48a86d058e9dba9}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!cubeangle@{cubeangle}}
+\index{cubeangle@{cubeangle}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{cubeangle}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-cubeangle = np.\-zeros(({\bf npvector}\mbox{[}0\mbox{]}.shape\mbox{[}0\mbox{]},{\bf number\-Of\-Gens},{\bf number\-Of\-Gens}))}}\label{a00090_aa7a5bbed8bb957c1d48a86d058e9dba9}
+
+
+Definition at line 78 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_a6b62fbc94ad1a2b022ec05389a1a5da8}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!data@{data}}
+\index{data@{data}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-data = np.\-loadtxt(open({\bf file\-Name},\char`\"{}rb\char`\"{}),delimiter=\char`\"{}\textbackslash{}t\char`\"{})}}\label{a00090_a6b62fbc94ad1a2b022ec05389a1a5da8}
+
+
+Definition at line 74 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_a7edb016f9fd02abe3714165252652af6}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!deltat@{deltat}}
+\index{deltat@{deltat}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{deltat}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Angle\-In\-Time\-Between\-Generations.\-deltat = {\bf param}\mbox{[}2\mbox{]}}}\label{a00090_a7edb016f9fd02abe3714165252652af6}
+
+
+Definition at line 61 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_adbcd9cfa3b0b922cf1d708519535f6da}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!file\-Name@{file\-Name}}
+\index{file\-Name@{file\-Name}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{file\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Angle\-In\-Time\-Between\-Generations.\-file\-Name = 'time\-Species\-Amount\-\_\-'}}\label{a00090_adbcd9cfa3b0b922cf1d708519535f6da}
+
+
+Definition at line 73 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_a3d5bd3fb43b0cae106d2b05c22d64b1c}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!firstspeciesid@{firstspeciesid}}
+\index{firstspeciesid@{firstspeciesid}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{firstspeciesid}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Angle\-In\-Time\-Between\-Generations.\-firstspeciesid = args.\-last\-Food\-Mol+1}}\label{a00090_a3d5bd3fb43b0cae106d2b05c22d64b1c}
+
+
+Definition at line 80 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_af953e69c8207cf7aada9e39d5ccd4ae3}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!hi@{hi}}
+\index{hi@{hi}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{hi}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Angle\-In\-Time\-Between\-Generations.\-hi = \mbox{[}$\,$\mbox{]}}}\label{a00090_af953e69c8207cf7aada9e39d5ccd4ae3}
+
+
+Definition at line 106 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_ab78a312c378cd8ff7fc988f15165b0af}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!lastspeciesid@{lastspeciesid}}
+\index{lastspeciesid@{lastspeciesid}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{lastspeciesid}]{\setlength{\rightskip}{0pt plus 5cm}int acs\-Angle\-In\-Time\-Between\-Generations.\-lastspeciesid = 2}}\label{a00090_ab78a312c378cd8ff7fc988f15165b0af}
+
+
+Definition at line 81 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_ae87ac48e6ef93d79f64689af63d1681f}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!newdir\-All\-Results@{newdir\-All\-Results}}
+\index{newdir\-All\-Results@{newdir\-All\-Results}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-newdir\-All\-Results = os.\-path.\-abspath(os.\-path.\-join(os.\-curdir, '\-\_\-0\-\_\-angles'))}}\label{a00090_ae87ac48e6ef93d79f64689af63d1681f}
+
+
+Definition at line 49 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_a5ba3601fadf52ac203118473b6c4db3e}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!npvector@{npvector}}
+\index{npvector@{npvector}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{npvector}]{\setlength{\rightskip}{0pt plus 5cm}list acs\-Angle\-In\-Time\-Between\-Generations.\-npvector = \mbox{[}$\,$\mbox{]}}}\label{a00090_a5ba3601fadf52ac203118473b6c4db3e}
+
+
+Definition at line 70 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_a2dc25dc1c0af14713786b9004cd602f7}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!number\-Of\-Gens@{number\-Of\-Gens}}
+\index{number\-Of\-Gens@{number\-Of\-Gens}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{number\-Of\-Gens}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-number\-Of\-Gens = len(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},'time\-Species\-Amount\-\_\-$\ast$')))}}\label{a00090_a2dc25dc1c0af14713786b9004cd602f7}
+
+
+Definition at line 64 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_ac26097b5b5657fa4d6bb0d226ffca9da}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!param@{param}}
+\index{param@{param}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-param = readfiles.\-read\-\_\-sims\-\_\-conf\-\_\-file('./acsm2s.\-conf')}}\label{a00090_ac26097b5b5657fa4d6bb0d226ffca9da}
+
+
+Definition at line 59 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_af06690b151a135aaff10825277c4345e}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!parser@{parser}}
+\index{parser@{parser}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-parser}}\label{a00090_af06690b151a135aaff10825277c4345e}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = ArgumentParser(
+2                                 description=\textcolor{stringliteral}{'ELDA (Emergent Levell Dynamic       Assessment).'}
+3                                 , epilog=\textcolor{stringliteral}{'''Copyright Alessandro Filisetti 2013 '''})
+\end{DoxyCode}
+
+
+Definition at line 35 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_a3912324aec0b455c560ebd6e192e44aa}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!res\-Dir\-Path@{res\-Dir\-Path}}
+\index{res\-Dir\-Path@{res\-Dir\-Path}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{res\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-res\-Dir\-Path = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, \char`\"{}res\char`\"{}))}}\label{a00090_a3912324aec0b455c560ebd6e192e44aa}
+
+
+Definition at line 47 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_a8c361074d6e19ebcfb4f61f18cb8be4c}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!savename@{savename}}
+\index{savename@{savename}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{savename}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Angle\-In\-Time\-Between\-Generations.\-savename = 'angle\-\_\-'}}\label{a00090_a8c361074d6e19ebcfb4f61f18cb8be4c}
+
+
+Definition at line 100 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_ab01731bd9870c6012778591010032301}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!str\-Amount@{str\-Amount}}
+\index{str\-Amount@{str\-Amount}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{str\-Amount}]{\setlength{\rightskip}{0pt plus 5cm}string acs\-Angle\-In\-Time\-Between\-Generations.\-str\-Amount = 'time\-Species\-Amount\-\_\-$\ast$'}}\label{a00090_ab01731bd9870c6012778591010032301}
+
+
+Definition at line 66 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_aadf83bb83f171da2e513401ece951083}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!Str\-Path@{Str\-Path}}
+\index{Str\-Path@{Str\-Path}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{Str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-Str\-Path = os.\-path.\-abspath(args.\-Str\-Path)}}\label{a00090_aadf83bb83f171da2e513401ece951083}
+
+
+Definition at line 44 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_aa2b0aed68cf0d465add0d2683c686ff7}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!str\-Zeros@{str\-Zeros}}
+\index{str\-Zeros@{str\-Zeros}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{str\-Zeros}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-str\-Zeros = {\bf zero\-Before\-Str\-Num}(gen+1, {\bf number\-Of\-Gens})}}\label{a00090_aa2b0aed68cf0d465add0d2683c686ff7}
+
+
+Definition at line 72 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_ace6fb423ddbe7dd4b6e1d2828c8b05af}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!summarystats@{summarystats}}
+\index{summarystats@{summarystats}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{summarystats}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-summarystats = np.\-zeros(({\bf npvector}\mbox{[}0\mbox{]}.shape\mbox{[}0\mbox{]},2))}}\label{a00090_ace6fb423ddbe7dd4b6e1d2828c8b05af}
+
+
+Definition at line 96 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_afb0b11c375d9982cee623e5be776e6b1}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!tmp\-Cos@{tmp\-Cos}}
+\index{tmp\-Cos@{tmp\-Cos}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{tmp\-Cos}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-tmp\-Cos = float(np.\-dot({\bf vec\-X},{\bf vec\-Y}) / (np.\-linalg.\-norm({\bf vec\-X}) $\ast$ np.\-linalg.\-norm({\bf vec\-Y})))}}\label{a00090_afb0b11c375d9982cee623e5be776e6b1}
+
+
+Definition at line 89 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_ada59022b084d32f959c70d980c256873}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!vec\-X@{vec\-X}}
+\index{vec\-X@{vec\-X}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{vec\-X}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-vec\-X = np.\-array(gx\mbox{[}t,firstspeciesid\-:lastspeciesid\mbox{]})}}\label{a00090_ada59022b084d32f959c70d980c256873}
+
+
+Definition at line 86 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+
+\hypertarget{a00090_af9dceee4ca99d15e7b95905f674ceda5}{\index{acs\-Angle\-In\-Time\-Between\-Generations@{acs\-Angle\-In\-Time\-Between\-Generations}!vec\-Y@{vec\-Y}}
+\index{vec\-Y@{vec\-Y}!acsAngleInTimeBetweenGenerations@{acs\-Angle\-In\-Time\-Between\-Generations}}
+\subsubsection[{vec\-Y}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\-Angle\-In\-Time\-Between\-Generations.\-vec\-Y = np.\-array(gy\mbox{[}t,firstspeciesid\-:lastspeciesid\mbox{]})}}\label{a00090_af9dceee4ca99d15e7b95905f674ceda5}
+
+
+Definition at line 87 of file acs\-Angle\-In\-Time\-Between\-Generations.\-py.
+

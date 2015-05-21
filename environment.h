@@ -291,7 +291,7 @@ private:
     bool createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesFilePath, MTRand& tmpRndDoubleGen);
     bool createInitialReactionsLayerFromFileSTD(string tmpSpeciesFilePath);
     bool createInitialCatalysisLayerFromFileSTD(string tmpCatalysisFilePath);
-    bool createInfluxLayersFromFileSTD(string tmpInfluxFilePath, int tmpsystemtype);
+    bool createInfluxLayersFromFileSTD(string tmpInfluxFilePath);
     bool createNrgBooleanFunctionsFromFileSTD(string tmpBoolNrgFilePath);
 
     bool createInitialMoleculesPopulationFromSpecificFileSTD(string tmpSpeciesFilePath, acs_int tmpActGEN, acs_int tmpActSIM, MTRand& tmpRndDoubleGen);
@@ -449,6 +449,7 @@ private:
 	bool saveTimeReactionBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
 	bool saveReactionBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
 	bool saveAmountBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
+    void save_all_buffer_to_file(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath);
 
     // STATISTIC FUNCTIONS
     bool devStd();

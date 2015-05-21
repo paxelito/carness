@@ -1,78 +1,55 @@
-\hypertarget{a00107}{\section{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+matlabinitializator/crea\+\_\+influx\+\_\+semplice.m File Reference}
-\label{a00107}\index{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+matlabinitializator/crea\+\_\+influx\+\_\+semplice.\+m@{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+matlabinitializator/crea\+\_\+influx\+\_\+semplice.\+m}}
+\hypertarget{a00107}{\section{lib.\-dyn.\-dynamics Namespace Reference}
+\label{a00107}\index{lib.\-dyn.\-dynamics@{lib.\-dyn.\-dynamics}}
 }
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{a00107_a902e747aeec6b345d3a057099152f41f}{influx} (\hyperlink{a00110_ac86694252f8dfdb19aaeadc4b7c342c6}{j}, 2)
-\end{DoxyCompactItemize}
-\subsection*{Variables}
-\begin{DoxyCompactItemize}
+def \hyperlink{a00107_a5c7482c3127ef70514cbc82ce1aa9f47}{generate\-Flux\-List}
 \item 
-\hyperlink{a00107_a9e9d25cb3f9488c7e910885a0eed2ffa}{function} \mbox{[}\hyperlink{a00107_a902e747aeec6b345d3a057099152f41f}{influx}\mbox{]}
+def \hyperlink{a00107_acbc0de876640b8d5355bf6a0e4fdef4a}{range\-Float}
 \item 
-for \hyperlink{a00107_a6f6ccfcf58b31cb6412107d9d5281426}{i}
-\item 
-\hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00107_ae426dd61c2988c7949ce81e0d7e08634}{influx} = zeros(sn,2)
-\item 
-for \hyperlink{a00107_ac86694252f8dfdb19aaeadc4b7c342c6}{j}
+def \hyperlink{a00107_ac3232f52dce6e169a93eba81f8fb926e}{flux\-Analysis}
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{a00107_a902e747aeec6b345d3a057099152f41f}{\index{crea\+\_\+influx\+\_\+semplice.\+m@{crea\+\_\+influx\+\_\+semplice.\+m}!influx@{influx}}
-\index{influx@{influx}!crea\+\_\+influx\+\_\+semplice.\+m@{crea\+\_\+influx\+\_\+semplice.\+m}}
-\subsubsection[{influx}]{\setlength{\rightskip}{0pt plus 5cm}influx (
+\hypertarget{a00107_ac3232f52dce6e169a93eba81f8fb926e}{\index{lib\-::dyn\-::dynamics@{lib\-::dyn\-::dynamics}!flux\-Analysis@{flux\-Analysis}}
+\index{flux\-Analysis@{flux\-Analysis}!lib::dyn::dynamics@{lib\-::dyn\-::dynamics}}
+\subsubsection[{flux\-Analysis}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-dyn.\-dynamics.\-flux\-Analysis (
 \begin{DoxyParamCaption}
-\item[{{\bf j}}]{, }
-\item[{2}]{}
+\item[{}]{tmp\-Dir, }
+\item[{}]{res\-Dir\-Path, }
+\item[{}]{str\-Zeros, }
+\item[{}]{ngen}
 \end{DoxyParamCaption}
-)}}\label{a00107_a902e747aeec6b345d3a057099152f41f}
+)}}\label{a00107_ac3232f52dce6e169a93eba81f8fb926e}
 
 
-\subsection{Variable Documentation}
-\hypertarget{a00107_a9e9d25cb3f9488c7e910885a0eed2ffa}{\index{crea\+\_\+influx\+\_\+semplice.\+m@{crea\+\_\+influx\+\_\+semplice.\+m}!function@{function}}
-\index{function@{function}!crea\+\_\+influx\+\_\+semplice.\+m@{crea\+\_\+influx\+\_\+semplice.\+m}}
-\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}function\mbox{[}{\bf influx}\mbox{]}}}\label{a00107_a9e9d25cb3f9488c7e910885a0eed2ffa}
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-= crea\_influx\_semplice(\hyperlink{a00113_a2935a4c4576291c52f0dd2eb070e55e0}{lMaxInflux},\hyperlink{a00136_aca44f11e84467e8090217b689da68785}{alphabet})
+Definition at line 37 of file dynamics.\-py.
 
-% total Number of \hyperlink{a00021}{species}
-sn = 0
-\end{DoxyCode}
-
-
-Definition at line 3 of file crea\+\_\+influx\+\_\+semplice.\+m.
-
-\hypertarget{a00107_a6f6ccfcf58b31cb6412107d9d5281426}{\index{crea\+\_\+influx\+\_\+semplice.\+m@{crea\+\_\+influx\+\_\+semplice.\+m}!i@{i}}
-\index{i@{i}!crea\+\_\+influx\+\_\+semplice.\+m@{crea\+\_\+influx\+\_\+semplice.\+m}}
-\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}for i}}\label{a00107_a6f6ccfcf58b31cb6412107d9d5281426}
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-= 1:\hyperlink{a00113_a2935a4c4576291c52f0dd2eb070e55e0}{lMaxInflux}
-   sn = sn + length(\hyperlink{a00136_aca44f11e84467e8090217b689da68785}{alphabet})^\hyperlink{a00107_a6f6ccfcf58b31cb6412107d9d5281426}{i}
-\end{DoxyCode}
+\hypertarget{a00107_a5c7482c3127ef70514cbc82ce1aa9f47}{\index{lib\-::dyn\-::dynamics@{lib\-::dyn\-::dynamics}!generate\-Flux\-List@{generate\-Flux\-List}}
+\index{generate\-Flux\-List@{generate\-Flux\-List}!lib::dyn::dynamics@{lib\-::dyn\-::dynamics}}
+\subsubsection[{generate\-Flux\-List}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-dyn.\-dynamics.\-generate\-Flux\-List (
+\begin{DoxyParamCaption}
+\item[{}]{tmp\-Path, }
+\item[{}]{tmp\-Sys\-Type, }
+\item[{}]{tmp\-Last\-I\-D = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{a00107_a5c7482c3127ef70514cbc82ce1aa9f47}
 
 
-Definition at line 7 of file crea\+\_\+influx\+\_\+semplice.\+m.
+Definition at line 17 of file dynamics.\-py.
 
-\hypertarget{a00107_ae426dd61c2988c7949ce81e0d7e08634}{\index{crea\+\_\+influx\+\_\+semplice.\+m@{crea\+\_\+influx\+\_\+semplice.\+m}!influx@{influx}}
-\index{influx@{influx}!crea\+\_\+influx\+\_\+semplice.\+m@{crea\+\_\+influx\+\_\+semplice.\+m}}
-\subsubsection[{influx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} influx = zeros(sn,2)}}\label{a00107_ae426dd61c2988c7949ce81e0d7e08634}
-
-
-Definition at line 11 of file crea\+\_\+influx\+\_\+semplice.\+m.
-
-\hypertarget{a00107_ac86694252f8dfdb19aaeadc4b7c342c6}{\index{crea\+\_\+influx\+\_\+semplice.\+m@{crea\+\_\+influx\+\_\+semplice.\+m}!j@{j}}
-\index{j@{j}!crea\+\_\+influx\+\_\+semplice.\+m@{crea\+\_\+influx\+\_\+semplice.\+m}}
-\subsubsection[{j}]{\setlength{\rightskip}{0pt plus 5cm}for j}}\label{a00107_ac86694252f8dfdb19aaeadc4b7c342c6}
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-= 1:sn
-   \hyperlink{a00107_ae426dd61c2988c7949ce81e0d7e08634}{influx}(\hyperlink{a00107_ac86694252f8dfdb19aaeadc4b7c342c6}{j},1)=\hyperlink{a00107_ac86694252f8dfdb19aaeadc4b7c342c6}{j}
-\end{DoxyCode}
+\hypertarget{a00107_acbc0de876640b8d5355bf6a0e4fdef4a}{\index{lib\-::dyn\-::dynamics@{lib\-::dyn\-::dynamics}!range\-Float@{range\-Float}}
+\index{range\-Float@{range\-Float}!lib::dyn::dynamics@{lib\-::dyn\-::dynamics}}
+\subsubsection[{range\-Float}]{\setlength{\rightskip}{0pt plus 5cm}def lib.\-dyn.\-dynamics.\-range\-Float (
+\begin{DoxyParamCaption}
+\item[{}]{start, }
+\item[{}]{step, }
+\item[{}]{stop}
+\end{DoxyParamCaption}
+)}}\label{a00107_acbc0de876640b8d5355bf6a0e4fdef4a}
 
 
-Definition at line 12 of file crea\+\_\+influx\+\_\+semplice.\+m.
+Definition at line 31 of file dynamics.\-py.
 

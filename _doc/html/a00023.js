@@ -1,11 +1,11 @@
 var a00023 =
 [
-    [ "disp", "a00023.html#a9be64ccaf83f215ee184d5aafefd7352", null ],
-    [ "disp", "a00023.html#a3bc93d8e435484e29a4cce2e7479360e", null ],
-    [ "figures", "a00023.html#a22372587c75be87d9f79609e8fc7a815", null ],
-    [ "currentDir", "a00023.html#af32eb97339f1e9d37b5540de2cbc79c9", null ],
-    [ "deltaT", "a00023.html#a5318eae09f2b8ac76b2d6df39ba9c1cd", null ],
-    [ "figureVisible", "a00023.html#a63b4c2789d7e1513024181d12e4f1b6b", null ],
-    [ "function", "a00023.html#a370f3dd25136a73d619eba0aa2e3bb4b", null ],
-    [ "totT", "a00023.html#aa9758857dd92f7845934f06daa7c4120", null ]
+    [ "Timer", "a00023.html#a5f16e8da27d2a5a5242dead46de05d97", null ],
+    [ "~Timer", "a00023.html#a14fa469c4c295c5fa6e66a4ad1092146", null ],
+    [ "getElapsedTime", "a00023.html#a71aa716bd43676a5a340eeca5f41cece", null ],
+    [ "getElapsedTimeInMicroSec", "a00023.html#aeec8f4f81e1b09c6e00ca6744f01af31", null ],
+    [ "getElapsedTimeInMilliSec", "a00023.html#a71a44ab36290730bc49f8719546194fc", null ],
+    [ "getElapsedTimeInSec", "a00023.html#ac05212f488db392f857660e28a402927", null ],
+    [ "start", "a00023.html#a3a8b5272198d029779dc9302a54305a8", null ],
+    [ "stop", "a00023.html#a63f0eb44b27402196590a03781515dba", null ]
 ];

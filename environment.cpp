@@ -1,4 +1,4 @@
-/**  \class environmenf
+/**  \class environment
  *  \brief This class contains most of the carness code. It connects all the classes and their interactions.
  *
  * 	@author Alessandro Filisetti
@@ -106,6 +106,7 @@ environment::environment(string tmpInitialPath)
             if(strID.c_str()[0] != '#'){
                 //cout << strID << endl;
                 linered = split(strID, "=");
+                if(linered[0] == "systemArchitecture") systemArchitecture = atoi(linered[1].c_str());
                 if(linered[0] == "nGEN") nGEN = atoi(linered[1].c_str());
                 if(linered[0] == "nSIM") nSIM = atoi(linered[1].c_str());
                 if(linered[0] == "nSeconds") nSeconds = atof(linered[1].c_str());
@@ -219,21 +220,64 @@ environment::environment(string tmpInitialPath)
     computeSurface();
     psi = volume / (pow(lipids,3.0/2.0));
 
-    // Define system architecture systemArchitecture
+    // Check system architecture systemArchitecture
     string msg = "";
-    if(influx_rate == 0)
-    {
-    	if(maxLOut == 0){systemArchitecture = CLOSESYSTEM; msg = "\n*** CLOSE SYSTEM ***\n";}
-    	else {systemArchitecture = PROTOCELLFLUXBUFFERED; msg = "\n*** BUFFERED PROTOCELL SYSTEM ***\n";}
-    }
-    else if(influx_rate > 0){
-    	if(maxLOut == 0) {systemArchitecture = CSTRSYSTEM; msg = "\n*** CSTR SYSTEM ***\n";}
-    	else {systemArchitecture = SEMIPERMEABLESYSTEM; msg = "\n*** SEMIPERMEABLE MEMBRANE SYSTEM ***\n";}
-    }else{
-    	{systemArchitecture = PROTOCELLFLUXFINITE; msg = "\n*** PROTOCELL FINITE MEMBRANE PASSAGE SYSTEM ***\n";}
+    bool check_system_architecture = true;
+
+    switch(systemArchitecture) {
+        case CLOSESYSTEM:
+            if(influx_rate != 0){
+                msg += "\t|- FATAL PARAMETER ERROR: Close system must have influx_rate parameter = 0\n";
+                check_system_architecture = false;
+            }
+            if(maxLOut != 0){
+                msg += "\t|- FATAL PARAMETER ERROR: Close system must have maxLOut parameter = 0\n";
+                check_system_architecture = false;
+            }
+            break;
+        case CSTRSYSTEM:
+            if(influx_rate <= 0){
+                msg += "\t|- FATAL PARAMETER ERROR: CSTR system must have influx_rate parameter > 0\n";
+                check_system_architecture = false;
+            }
+            if(maxLOut != 0){
+                msg += "\t|- FATAL PARAMETER ERROR: CSTR system must have maxLOut parameter = 0\n";
+                check_system_architecture = false;
+            }           
+            break;
+        case SEMIPERMEABLESYSTEM:
+            if(influx_rate <= 0){
+                msg += "\t|- FATAL PARAMETER ERROR: SEMI PERMEABLE system must have influx_rate parameter > 0\n";
+                check_system_architecture = false;
+            }
+            if(maxLOut <= 0){
+                msg += "\t|- FATAL PARAMETER ERROR: SEMI PERMEABLE system must have maxLOut parameter > 0\n";
+                check_system_architecture = false;
+            }            
+            break;
+        case PROTOCELLFLUXBUFFERED:
+            if(influx_rate != 0){
+                msg += "\t|- FATAL PARAMETER ERROR: BUFFERED MEMBRANE protocell system must have influx_rate parameter = 0\n";
+                check_system_architecture = false;
+            }
+            if(maxLOut != 0){
+                msg += "\t|- FATAL PARAMETER ERROR: BUFFERED MEMBRANE protocell system must have maxLOut parameter = 0\n";
+                check_system_architecture = false;
+            }           
+            break;
+        case PROTOCELLFLUXFINITE:
+            if(influx_rate != 0){
+                msg += "\t|- FATAL PARAMETER ERROR: Since everything comes from the _acsinflux file, FINITE TRANSMEMBRANE protocell system must have influx_rate parameter = 0\n";
+                check_system_architecture = false;
+            }
+            if(maxLOut != 0){
+                msg += "\t|- FATAL PARAMETER ERROR: Since everything comes from the _acsinflux file, FINITE TRANSMEMBRANE protocell system must have maxLOut parameter = 0\n";
+                check_system_architecture = false;
+            }           
+            break;
     }
 
-    cout << msg << endl;
+    if(!check_system_architecture) ExitWithError("environment::environment",msg);
 
     if(debugLevel >= RUNNING_VERSION)
         showGlobalParameter();
@@ -1335,7 +1379,7 @@ bool environment::createInitialMoleculesPopulationFromFileSTD(string tmpSpeciesF
 										 (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
 										 (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
 										 (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut, randomInitSpeciesConcentration,
-										 (acs_double)atof(strKmem.c_str()), tmpRndDoubleGen));
+										 (acs_double)atof(strKmem.c_str()), tmpRndDoubleGen, systemArchitecture));
 			// Define the max non catalytic max ID
 			if(!maxNonCatIdDef){if(strCod.size() > nonCatalyticMaxLength){nonCatalyticLastID = (acs_longInt)atol(strID.c_str()) - 1; maxNonCatIdDef=true;}}
 			try{
@@ -1573,7 +1617,8 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
 										 (acs_longInt)atol(strCatID.c_str()), (acs_longInt)atol(strCpxID.c_str()),
 										 (acs_double)atof(strPho.c_str()), (acs_double)atof(strChar.c_str()),
 										 (acs_int)atoi(strLock.c_str()), influx_rate, maxLOut,
-										 randomInitSpeciesConcentration, (acs_double)atof(strKmem.c_str()), tmpRndDoubleGen));
+										 randomInitSpeciesConcentration, (acs_double)atof(strKmem.c_str()), tmpRndDoubleGen, 
+                                         systemArchitecture));
 
 			if(!maxNonCatIdDef){if(strCod.size() > nonCatalyticMaxLength){nonCatalyticLastID = (acs_longInt)atol(strID.c_str()) - 1; maxNonCatIdDef=true;}}
 			try{
@@ -1620,7 +1665,7 @@ bool environment::createInitialMoleculesPopulationFromSpecificFileSTD(string tmp
  @param string tmpInfluxFilePath file path
  @date 20130702
  */
-bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath, int tmpsystemtype)
+bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath)
 {
     if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::createInfluxLayersFromFileSTD start" << endl;
 
@@ -1632,7 +1677,7 @@ bool environment::createInfluxLayersFromFileSTD(string tmpInfluxFilePath, int tm
     string strExtConc, strKin;
     while (myfile.good())
     {
-    	if((tmpsystemtype == CSTRSYSTEM) || (tmpsystemtype == SEMIPERMEABLESYSTEM))
+    	if((systemArchitecture == CSTRSYSTEM) || (systemArchitecture == SEMIPERMEABLESYSTEM))
     	{
 			getline(myfile, strFeedID, '\t');
 			getline(myfile, strFeedProb, '\n');
@@ -8173,6 +8218,14 @@ bool environment::saveConfigurationFileSTD(string tmpStoringPath)
 	//TR out << "# Limit the work of the software to the environment creation" << endl;
 	//TR out << "onlyEnvironmentCreation=" << onlyEnvironmentCreation << endl << endl;
 
+    buffer << "# System Architecture\n";
+    buffer << "#   for CLOSESYSTEM set 0\n";
+    buffer << "#   for CSTRSYSTEM set 1\n";
+    buffer << "#   for PROTOCELLFLUXBUFFERED set 2\n";
+    buffer << "#   for PROTOCELLFLUXFINITE set 3 \n";
+    buffer << "#   for SEMIPERMEABLESYSTEM set 4 \n";
+    buffer << "systemArchitecture=" << systemArchitecture << "\n\n";
+
 	buffer << "# Number of Generations\n";
 	buffer << "nGEN=" << nGEN << "\n \n";
 
@@ -8969,6 +9022,18 @@ bool environment::saveAmountBuffersToFile(acs_int tmp__CurrentGen, acs_int tmp__
 }
 
 /**
+ Save the all the buffers on file is buffer is not emptyu 
+ @version 1.0
+ @date 2014-05-14
+ */
+void environment::save_all_buffer_to_file(acs_int tmp__CurrentGen, acs_int tmp__CurrentSim, string tmp__StoringPath)
+{
+    saveTimeReactionBuffersToFile( tmp__CurrentGen,  tmp__CurrentSim, tmp__StoringPath);
+    saveReactionBuffersToFile( tmp__CurrentGen,  tmp__CurrentSim, tmp__StoringPath);
+    saveAmountBuffersToFile( tmp__CurrentGen,  tmp__CurrentSim, tmp__StoringPath);
+}
+
+/**
  Save living species in a file named living_species_[currentSim].csv. Standard C++
  The file is saved in the directory indicated as a second parameter in the run command
  @version 1.1
@@ -9030,7 +9095,6 @@ bool environment::saveLivingSpeciesIDSTD(acs_int tmp__CurrentGen, acs_int tmp__C
 		COPYOFallGillespieScores.clear();
 
 		if(debugLevel == FINDERRORDURINGRUNTIME) cout << "environment::saveLivingSpeciesIDSTD end" << endl;
-
 	}
 	catch(exception&e)
 	{

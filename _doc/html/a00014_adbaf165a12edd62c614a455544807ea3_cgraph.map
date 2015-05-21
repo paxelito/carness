@@ -1,7 +1,0 @@
-<map id="environment::performDETMoleculesCharging" name="environment::performDETMoleculesCharging">
-<area shape="rect" id="node2" href="$a00014.html#ac5528a39937cdc76f0dd23c27542110c" title="environment::setNotCharged\lAndChargedSpeciesIDsAndAmounts" alt="" coords="291,5,531,46"/>
-<area shape="rect" id="node3" href="$a00056.html#aa6403f90846f5fb19fcfb8b81aeee73c" title="This funtion returns a random position in a probability weight array of N elements. " alt="" coords="309,70,513,111"/>
-<area shape="rect" id="node4" href="$a00056.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="361,136,461,163"/>
-<area shape="rect" id="node5" href="$a00014.html#a719b14624d9a2f891b8d4eb47649a00e" title="environment::incOverallLoaded\lMolsCounter" alt="" coords="307,187,514,229"/>
-<area shape="rect" id="node6" href="$a00014.html#a6686b0489ed94f11c4b03c011978f9af" title="environment::decOverallLoaded\lMolsCounter" alt="" coords="305,253,516,294"/>
-</map>

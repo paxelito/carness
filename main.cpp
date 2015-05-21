@@ -1,8 +1,8 @@
-/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 8.0 (20150427.76)
+/** \mainpage Catalytic Rections Network Stochastic Simulator - CaRNeSS 8.0 (20150522.76)
  *
  * \author Alessandro Filisetti
- * \version 8.0 (20150427.76)
- * \date 2015-04-27
+ * \version 8.0 (20150522.76)
+ * \date 2015-05-22
  *
  * git repository -- https://github.com/paxelito/carness
  *
@@ -12,13 +12,13 @@
  *- \subpage pageInitStr
  *- \subpage pageoutcomes
  *- \subpage pageGillespie
- *- \subpage pageInitializator
+ *
  *
  * \page intro Introduction
  * <hr>
  * The <b>Catalytic Reactions Network Stochastic Simulator (CaRNeSS)</b> is a software devoted to the hybrid, both stochastic and deterministic, simulation of theoretical complex catalytic
  * networks models.
- * All the models, characterized by their environmental conditions, basically CSTR and protocell, take inspiration from the original model proposed by Stuart Kauffman in 1986, and describe
+ * All the models, characterized by their environmental conditions, basically CSTR and protocell with different flow conditions, take inspiration from the original model proposed by Stuart Kauffman in 1986, and describe
  * systems composed of molecular species interacting by means of two possible reactions only, cleavage and condensation. One molecular species (basicallt a polymer) is divided into two short polymers in the former
  * case in the former case, while two polymers are glued together forming a longer polymer in the latter case.
  * Each reaction to occur must be catalyzed by another species present in the system, and one of the main assumptions is that any chemical has an independent probability to catalyze a
@@ -31,10 +31,11 @@
  * In order to have the simulator run correctly the recommended stuff is required:
  *		- MacOsX 10.4 or later, Linux (or in general a system UNIX based) or Windows OS (tests have been performed on Win7 and win Vista) as well
  *		- GCC (G++) compiler, or similar, installed (if you need to compile the software on your machine)
- *      - On UNIX systems compile using \c g++ -Wall -ansi -lm -o carness *.cpp
- *<br><br>
- *\section secUsage Using the simulator
- * To run the simulator open a terminal shell and type:<br><br>
+ *      - On UNIX systems compile using \c g++ -Wall -ansi -lm -o [path_where_you_like_to_save_binary_file]/carness [path_of_source_files/] 	*.cpp
+ * <br><br>
+ *
+ * \section secUsage Using the simulator
+ *  To run the simulator open a terminal shell and type:<br><br>
  *	\c$path/carness \c<configuration_File_Folder> \c<output_folder> \c<reaction_structures_folder><br>
  *		Examples:
  *      - Unix Based Systems:\c ~/Documents/project/carness \c ~/Documents/.../confFileFolder/ \c ~/Documents/.../resFolder/ \c ~/Documents/.../StructuresFolder/
@@ -43,10 +44,14 @@
  *      The first argument indicates the folder containing the configuration file acsm2s.conf. The second argument refers to the folder that will contain the simulation results while
  *      the third parameter indicates the folder containing the structures of the system contained within the following files: _acsspecies.csv, _acsreactions.csv, _acscatalysis.csv, _acsinflux.csv,
  *      _acsnrgbooleanfunctions.csv.
- *      Currently the simulator does not generate the initial structures. You must create the structures on your own.
- *
- *      In order to test the DEMO structures, after the program has been compiled, go into the carness folder and run the following command:
- *      \c <path_of_the_program>/carness \c ./_inputDataExamples/configurationFile/ \c ./_inputDataExamples/initStructures/res/ \c ./_inputDataExamples/initStructures/
+ *      Currently the simulator does not generate the initial structures. You must create the structures on your own (see python carenss acs analysis package for details)S.
+ *      In order to test the DEMO structures, after the program has been compiled, go into the carness folder and run the following commands:
+ *		
+ *		- CSTR: <path_of_the_program>/carness ./_inputDataExamples/CSTR/ ./_inputDataExamples/CSTR/res/ ./_inputDataExamples/CSTR/
+ *  	
+ *		- PROTOCELL WITH BUFFERED FLOW:  <path_of_the_program>/carness ./_inputDataExamples/protocell_buffered_flow/ ./_inputDataExamples/protocell_buffered_flow/res/ ./_inputDataExamples/protocell_buffered_flow/
+ *		
+ *		- PROTOCELL WITH FINITE TRANSMEMBRANE PASSAGE: <path_of_the_program>/carness ./_inputDataExamples/protocell_finite_membrane_passage/ ./_inputDataExamples/protocell_finite_membrane_passage/res/ ./_inputDataExamples/protocell_finite_membrane_passage/
  *
  *      PS: For windows platform change the command accordingly.
  *
@@ -72,6 +77,7 @@
  * The following parameters are used both by the initializator and the simulator. Nvertheless it is ALWAYS necessary having a complete configuration file even if the structures have been already created.
  *
  * \subsection paramsystem System
+ *		@param systemArchitecture [0-4] Environmental System Architecture [CLOSESYSTEM (0), CSTRSYSTEM (1), POTOCELLFLUXBUFFERED (2), PROTOCELLFLUXFINITE (3), SEMIPERMEABLESYSTEM (4)]
  *		@param nGen (> 0) Number of generations. This parameter indicate how many times the simulation restarts, concentrations are set to the initial ones and the simulation restart for other nSeconds seconds.
  *		@param nSIM (> 0) Number of simulations per generation starting with the same initial conditions (SAME DATA STRUCTURES) but different random seed.
  *		It is worth stressing that in such a way the system, if allowed to create new reactions, will create different final structures starting from the same initial structures.
@@ -120,28 +126,19 @@
  *		@param diffusion_contribute (KD) (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length, L^{-KD}
  *		@param solubility_threshold (> 0) Solubility Threshold, all the species longer than solubility_threshold precipitate
  *
- *		 <b>THE COUPLING BETWEEN INFLUX_RATE AND MAXLOUT INDICATES IF WE ARE SIMULATING A PROTOCELL (BUFFERED or FINITE MEMBRANE PASSAGE) OR A FLOW REACTOR (CSTR)</b>:
- *
- *		  IF influx_rate >= 0:
- *		  - influx_rate > 0 & maxLOut > 0 :: <b>FILTERED SYSTEM</b>: Deterministic simulation of the flux with a filter for the species with length up to maxLOut
- *		  - influx_rate = 0 & maxLOut > 0 :: <b>PROTOCELL</b>: Flux is not simulated, concentration of the species with length up to maxLOut are buffered
- *		  - influx_rate > 0 & maxLOut = 0 :: <b>CSTR</b>: Deterministic simulation of the flux, _acsinflux.csv species enter and all the species, according to their concentrations, can leave the system
- *		  - influx_rate = 0 & maxLOut = 0 :: <b>CLOSE SYSTEM</b>
- *		  ELSE (influx_rate < 0):
- *		  - influx_rate < 0 :: <FINITE MEMBRANE PASSAGE> Data concerning flow are in the _acsinflux.csv file. 
- *
- *<br><br>
+ * <br><br>
  * \section Acknowledgments
  * <hr>
- *- European Centre for Living Technology http://www.ecltech.org/
- *- Fondazione Venezia http://www.fondazionevenezia.it
- *- University of Bologna, Interdepartment of industrial research (C.I.R.I)
- *- Alex Graudenzi to take care of the initilizator.
- *- Chiara Damiani to contribute to the development of the software.
- *- Giovanni Lamberti to contribute to the development of the software.
- *- Roberto Serra, Marco Villani, Timoteo Carletti, Davide De Lucrezia, Norman Packard, Ruedi Fuchslin, Andrea Roli and Stuart Kauffman for the essential hints.
- *- http://www.bedaux.net/mtrand/ for the pseudo-random Marseinne-Twister library for C++.
- *- http://perso.wanadoo.es/antlarr/otherapps.html for the poisson distribution generator numbers (acs_longInt random_poisson(acs_double tmpLambda, MTRand& tmpRandomGenerator)).
+ * - EXPLORA BIOTECH Srl http://www.explora-biotech.com
+ * - European Centre for Living Technology http://www.ecltech.org/
+ * - Fondazione Venezia http://www.fondazionevenezia.it
+ * - University of Bologna, Interdepartment of industrial research (C.I.R.I)
+ * - Alex Graudenzi to take care of the initilizator.
+ * - Chiara Damiani to contribute to the development of the software.
+ * - Giovanni Lamberti to contribute to the development of the software.
+ * - Roberto Serra, Marco Villani, Timoteo Carletti, Davide De Lucrezia, Norman Packard, Ruedi Fuchslin, Andrea Roli and Stuart Kauffman for the essential hints.
+ * - http://www.bedaux.net/mtrand/ for the pseudo-random Marseinne-Twister library for C++.
+ * - http://perso.wanadoo.es/antlarr/otherapps.html for the poisson distribution generator numbers (acs_longInt random_poisson(acs_double tmpLambda, MTRand& tmpRandomGenerator)).
  *
  * \page pageInitStr Initial Data Structures
  * In order to proceed with the simulation the system needs from <b>4</b> to <b>6 (open system and energy on)</b> initial data structures files (an example for each file is located into the source code folder):
@@ -183,7 +180,7 @@
  *		- <i>Phosphorilation Kinetic constant</i>: NOT USED NOW!!!
  *		- <i>Charged Molecules Concentration</i>: Concentration of the charged molecules belonging to the species.
  *		- <i>Concentration locked</i>: 0 -> Concentration of the species changes according to the reactions affecting it, 1 -> The concentration of the species is locked (permeable species, the concentration of the species is assumed to be constant within the cell and in the environment)
- *<br>
+ * <br>
  *	\section subReactions _acsreactions.csv
  *	Columns description (each field is delimited using "\t"):
  *	  <table>
@@ -200,7 +197,7 @@
  *		- <i>Reaction counter</i>:  Reaction occurrance counter
  *		- <i>Energy Type</i>: The reaction energetic configuration, 1 for endoergonic 0 for esoergonic
  *		- <i>Spontaneous Constant</i>: Spontaneous reaction constant
- *<br>
+ * <br>
  *	\section subCatalysis _acscatalysis.csv
  * Columns description (each field is delimited using "\t"):
  *	  <table>
@@ -216,8 +213,8 @@
  *		- <i>K Cleavage</i>: Cleavage Kinetic constant
  *		- <i>K complex association</i>: Complex association kinetic constant
  *		- <i>Complex creation substrate target</i>: Which substrate will be involved in complex creation, 1 or 2
- *<br>
- *	\section subInflux _acsinflux.csv
+ * <br>
+ *	\section subInflux _acsinflux.csv (FOR CSTR SYSTEM ONLY)
  * Columns description (each field is delimited using "\t"):
  *	  <table>
  *		<tr>
@@ -226,7 +223,18 @@
  *	  </table>
  *		- <i>Identificator</i>: Species ID
  *		- <i>Probabilitity</i>: Probability to be selected when a species has to be inserted into the system
- *<br>
+ * <br>
+ *	\section subInfluxBis _acsinflux.csv (FOR FINITE TRANSMEMBRANE PASSAGE PROTOCELL SYSTEM ONLY)
+ * Columns description (each field is delimited using "\t"):
+ *	  <table>
+ *		<tr>
+ *			<td>Identificator</td><td>External Concentration</td><td>Transmembrane kinetic constant</td>
+ *		</tr>
+ *	  </table>
+ *		- <i>Identificator</i>: Species ID
+ *		- <i>External Concentration</i>: Concentration of the molecular species in the external environment
+ *		- <i>Transmembrane kinetic constant</i>: Transmembrane kinetic constant 
+ * <br>
  *	\section subEnergy _acsnrgbooleanfunctions.csv
  * Columns description (each field is delimited using "\t"):
  *	  <table>
@@ -370,16 +378,6 @@
  * </tr>
  * </table>
  *
- *
- * \page pageInitializator The initializator (DEPRECATED) (a very brief description)
- * The initializator provided with the simulator is located in the \c initializator folder (within the source code folder) and it is developed in Matlab code. All the parameters are set in the \c start.m file (from line 22 to line 63). In addition you find the parameters related to the name of the folder that will contain the simulation (\c simFolder.name), the path where that folder will be created (\c simFolder.path) and the number of different network ensambles to create (\c simFolder.nets). It is important to notice that the initializator has not been thought to be shared, so it is not too much user friendly to be manipulated. Nevertheless it could be very useful with a little bit of practice.
- *  \section initSensitivity Screening Parameter
- * To initialize structures to perform a sensitivity analysis of a specific parameters follow the following instruction:
- *  - Change the name of the array at row 13 with the name of the parameter you want analyze. This array contains the values of the paramter. Remember to insert the old parameter you are changing in the parameters list with its single value, otherwise it would be a missing parameter.
- *  - In the array at row 14 (\c nome_folder) you have put the same number of elements of the array containing the screening values. This array contains a numeric tag of the values (used to create the simulations folder names) contained in the values array.
- *  - In the code of the \c start.m file (rows 122 to 150) you must change:
- *      - row 121: \c [rows,b]=size(reactionProbability); --> [rows,b]=size(name_of_the_parameter_you_have_trasformed_in_array);
- *      - row 146: \c inizializzatore_ACS(... reactionProbability(i), ...); -> inizializzatore_ACS(... name_of_the_parameter_you_have_trasformed_in_array(i), ...); (remember to remove the index to the reactionProbability parameter
  */
 
 
@@ -420,9 +418,9 @@ int main (int argc, char *argv[]) {
 		ExitWithError("createInitialMoleculesPopulationFromFile", "Problem with the species STANDARD loading process");
 	// LOAD INFLUX LAYERS FROM FILE (if the system is open with a simulated flux)
 
-	if(puddle->getInflux() != 0)
+	if((puddle->getSysArch() == PROTOCELLFLUXFINITE) || (puddle->getSysArch() == CSTRSYSTEM))
 	{
-		if(!puddle->createInfluxLayersFromFileSTD(argv[3], puddle->getSysArch()))
+		if(!puddle->createInfluxLayersFromFileSTD(argv[3]))
 			ExitWithError("CreateInfluxLayersFromFile", "Problem with influx layers loading process");
 	}
 

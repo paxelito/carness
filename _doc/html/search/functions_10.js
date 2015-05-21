@@ -1,8 +1,14 @@
 var searchData=
 [
-  ['timeinterval',['timeInterval',['../a00028.html#a430673c9821c17e4bf93cd42f59e00bb',1,'generalConcentrationOverThreshold.m']]],
-  ['timer',['Timer',['../a00022.html#a5f16e8da27d2a5a5242dead46de05d97',1,'Timer']]],
-  ['tmpanalysis',['tmpAnalysis',['../a00032.html#a0bafb8140cf49e5e5478c170ffa8880d',1,'tmpAnalysis(1):&#160;overallStats.m'],['../a00032.html#ab41953ee2db3da78ed71808b12490209',1,'tmpAnalysis(2):&#160;overallStats.m'],['../a00032.html#a2e3fcc5ce8c864c086058fa1fcd8adb4',1,'tmpAnalysis(3):&#160;overallStats.m'],['../a00032.html#a08f902f5af41bb11acdd6ce5130e5934',1,'tmpAnalysis(4):&#160;overallStats.m'],['../a00032.html#a98ae4bf3f5f573af6ea4fc18d2a1125e',1,'tmpAnalysis(6):&#160;overallStats.m']]],
-  ['tmpbindpnt',['tmpbindpnt',['../a00025.html#a00f81a9dbc71b6c82583a1be559f70e2',1,'concAnalysis.m']]],
-  ['tmpevaluated',['tmpevaluated',['../a00025.html#a578805b808d01076403bf6fb9f7f0dab',1,'concAnalysis.m']]]
+  ['_7ecatalysis',['~catalysis',['../a00009.html#a982805165c59e95ac055dc24e684fa05',1,'catalysis']]],
+  ['_7eenvironment',['~environment',['../a00011.html#ae323954bd5b674bf34d954c3f7b67629',1,'environment']]],
+  ['_7egillespie',['~gillespie',['../a00012.html#a33a97651932d8f82d82d164c94a2eae7',1,'gillespie']]],
+  ['_7emtrand',['~MTRand',['../a00016.html#a8c276546a41ae350dc9efc5e9c10a261',1,'MTRand']]],
+  ['_7emtrand53',['~MTRand53',['../a00017.html#a947a6a7afd0c8a17612cda3faa705a75',1,'MTRand53']]],
+  ['_7emtrand_5fclosed',['~MTRand_closed',['../a00018.html#a46567ee841b5f54b305ac051ac837a8c',1,'MTRand_closed']]],
+  ['_7emtrand_5fint32',['~MTRand_int32',['../a00019.html#a364900abea0758d070ce89922159923a',1,'MTRand_int32']]],
+  ['_7emtrand_5fopen',['~MTRand_open',['../a00020.html#a4f4774b5d9b79972dedaec984b248581',1,'MTRand_open']]],
+  ['_7ereactions',['~reactions',['../a00021.html#ad0c79e56e87891c502d8fcd6c4005987',1,'reactions']]],
+  ['_7especies',['~species',['../a00022.html#a4ec3e21535ff68a06dba4e1eed935dc0',1,'species']]],
+  ['_7etimer',['~Timer',['../a00023.html#a14fa469c4c295c5fa6e66a4ad1092146',1,'Timer']]]
 ];

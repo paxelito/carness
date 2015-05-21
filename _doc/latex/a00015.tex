@@ -1,201 +1,144 @@
-\hypertarget{a00015}{\section{M\+T\+Rand Class Reference}
-\label{a00015}\index{M\+T\+Rand@{M\+T\+Rand}}
+\hypertarget{a00015}{\section{influxspecies\-\_\-protocell Class Reference}
+\label{a00015}\index{influxspecies\-\_\-protocell@{influxspecies\-\_\-protocell}}
 }
 
 
-{\ttfamily \#include $<$mtrand.\+h$>$}
+class \hyperlink{a00015}{influxspecies\-\_\-protocell}  
 
 
 
-Inheritance diagram for M\+T\+Rand\+:\nopagebreak
+
+{\ttfamily \#include $<$influxspecies\-\_\-protocell.\-h$>$}
+
+
+
+Inheritance diagram for influxspecies\-\_\-protocell\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=162pt]{a00215}
+\includegraphics[width=194pt]{a00094}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for M\+T\+Rand\+:\nopagebreak
+Collaboration diagram for influxspecies\-\_\-protocell\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=162pt]{a00216}
+\includegraphics[width=194pt]{a00095}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{a00015_a265dc65546e26073c0d5f8787b045a1d}{M\+T\+Rand} ()
+\hyperlink{a00015_a0db73c396ab7d4a61b3c8a79f17d2d88}{influxspecies\-\_\-protocell} (\hyperlink{a00024_a19319d75f02db4308bc5c0026d98cd85}{acs\-\_\-long\-Int} tmp\-I\-D, \hyperlink{a00024_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} tmp\-Ext\-Conc, \hyperlink{a00024_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} tmp\-Kin)
+\begin{DoxyCompactList}\small\item\em Remaining concentration (according to dt) to add or remove in the next time interval. \end{DoxyCompactList}\item 
+\hyperlink{a00024_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{a00015_a973ce325110d3baab2794a7f37a0bc3a}{get\-Ext\-Conc} () const 
 \item 
-\hyperlink{a00015_a2c88736896bcbdb54bcdd7a0026720d5}{M\+T\+Rand} (unsigned long \hyperlink{a00018_a0c57076fe30358e0700a7ce1baa0ea27}{seed})
+\hyperlink{a00024_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{a00015_aefa4f5947eab64175f45e72ae658afca}{get\-Kin} () const 
 \item 
-\hyperlink{a00015_a6075a3beacdfb8e4cf48d9fb56cc193a}{M\+T\+Rand} (const unsigned long $\ast$\hyperlink{a00018_a0c57076fe30358e0700a7ce1baa0ea27}{seed}, int \hyperlink{a00104_ae113ea7f9e515a12ac4b5595c6faf61e}{size})
+\hyperlink{a00024_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} \hyperlink{a00015_a69d83464d8ebc5c52ce6efee8e4c588a}{get\-Rem\-Conc} () const 
 \item 
-\hyperlink{a00015_a8c276546a41ae350dc9efc5e9c10a261}{$\sim$\+M\+T\+Rand} ()
-\item 
-double \hyperlink{a00015_abbb87a08d622d58fdee0eea4cb5471a0}{operator()} ()
-\item 
-\hyperlink{a00015_a265dc65546e26073c0d5f8787b045a1d}{M\+T\+Rand} ()
-\item 
-\hyperlink{a00015_a2c88736896bcbdb54bcdd7a0026720d5}{M\+T\+Rand} (unsigned long \hyperlink{a00018_a0c57076fe30358e0700a7ce1baa0ea27}{seed})
-\item 
-\hyperlink{a00015_a6075a3beacdfb8e4cf48d9fb56cc193a}{M\+T\+Rand} (const unsigned long $\ast$\hyperlink{a00018_a0c57076fe30358e0700a7ce1baa0ea27}{seed}, int \hyperlink{a00104_ae113ea7f9e515a12ac4b5595c6faf61e}{size})
-\item 
-\hyperlink{a00015_a8c276546a41ae350dc9efc5e9c10a261}{$\sim$\+M\+T\+Rand} ()
-\item 
-double \hyperlink{a00015_abbb87a08d622d58fdee0eea4cb5471a0}{operator()} ()
+void \hyperlink{a00015_ad092d0a3709e93316dd4325699c34a86}{change\-Remaining\-Conc} (\hyperlink{a00024_ab776853a005fcbf56af0424a2a4dd607}{acs\-\_\-double} tmp\-Rem\-Conc)
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
+class \hyperlink{a00015}{influxspecies\-\_\-protocell} 
 
+This class contains declarations of the \hyperlink{a00015}{influxspecies\-\_\-protocell} class. It contains the code dealing with the inflow process in case of protocell.
 
-Definition at line 97 of file mtrand.\+h.
+\begin{DoxyAuthor}{Authors}
+Alessandro Filisetti 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-0
+\end{DoxyVersion}
+Created by Alessandro Filisetti on 27/04/15. Copyright 2015 Alessandro Filisetti. All rights reserved. 
+
+Definition at line 19 of file influxspecies\-\_\-protocell.\-h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{a00015_a265dc65546e26073c0d5f8787b045a1d}{\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\subsubsection[{M\+T\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+Rand\+::\+M\+T\+Rand (
+\hypertarget{a00015_a0db73c396ab7d4a61b3c8a79f17d2d88}{\index{influxspecies\-\_\-protocell@{influxspecies\-\_\-protocell}!influxspecies\-\_\-protocell@{influxspecies\-\_\-protocell}}
+\index{influxspecies\-\_\-protocell@{influxspecies\-\_\-protocell}!influxspecies_protocell@{influxspecies\-\_\-protocell}}
+\subsubsection[{influxspecies\-\_\-protocell}]{\setlength{\rightskip}{0pt plus 5cm}influxspecies\-\_\-protocell\-::influxspecies\-\_\-protocell (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf acs\-\_\-long\-Int}}]{tmp\-I\-D, }
+\item[{{\bf acs\-\_\-double}}]{tmp\-Ext\-Conc, }
+\item[{{\bf acs\-\_\-double}}]{tmp\-Kin}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_a265dc65546e26073c0d5f8787b045a1d}
+)}}\label{a00015_a0db73c396ab7d4a61b3c8a79f17d2d88}
 
 
-Definition at line 99 of file mtrand.\+h.
+Remaining concentration (according to dt) to add or remove in the next time interval. 
 
-\hypertarget{a00015_a2c88736896bcbdb54bcdd7a0026720d5}{\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\subsubsection[{M\+T\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+Rand\+::\+M\+T\+Rand (
-\begin{DoxyParamCaption}
-\item[{unsigned long}]{seed}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_a2c88736896bcbdb54bcdd7a0026720d5}
+class \hyperlink{a00015}{influxspecies\-\_\-protocell}
 
+This class contains implementation of the \hyperlink{a00015}{influxspecies\-\_\-protocell} class
 
-Definition at line 100 of file mtrand.\+h.
+\begin{DoxyAuthor}{Authors}
+Alessandro Filisetti 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-0
+\end{DoxyVersion}
+Created by Alessandro Filisetti on 27/04/15. Copyright 2015 Alessandro Filisetti. All rights reserved.\-Default constructor 
 
-\hypertarget{a00015_a6075a3beacdfb8e4cf48d9fb56cc193a}{\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\subsubsection[{M\+T\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+Rand\+::\+M\+T\+Rand (
-\begin{DoxyParamCaption}
-\item[{const unsigned long $\ast$}]{seed, }
-\item[{int}]{size}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_a6075a3beacdfb8e4cf48d9fb56cc193a}
-
-
-Definition at line 101 of file mtrand.\+h.
-
-\hypertarget{a00015_a8c276546a41ae350dc9efc5e9c10a261}{\index{M\+T\+Rand@{M\+T\+Rand}!````~M\+T\+Rand@{$\sim$\+M\+T\+Rand}}
-\index{````~M\+T\+Rand@{$\sim$\+M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\subsubsection[{$\sim$\+M\+T\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+Rand\+::$\sim$\+M\+T\+Rand (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_a8c276546a41ae350dc9efc5e9c10a261}
-
-
-Definition at line 102 of file mtrand.\+h.
-
-\hypertarget{a00015_a265dc65546e26073c0d5f8787b045a1d}{\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\subsubsection[{M\+T\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+Rand\+::\+M\+T\+Rand (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_a265dc65546e26073c0d5f8787b045a1d}
-
-
-Definition at line 99 of file mtrand.\+h.
-
-\hypertarget{a00015_a2c88736896bcbdb54bcdd7a0026720d5}{\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\subsubsection[{M\+T\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+Rand\+::\+M\+T\+Rand (
-\begin{DoxyParamCaption}
-\item[{unsigned long}]{seed}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_a2c88736896bcbdb54bcdd7a0026720d5}
-
-
-Definition at line 100 of file mtrand.\+h.
-
-\hypertarget{a00015_a6075a3beacdfb8e4cf48d9fb56cc193a}{\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\index{M\+T\+Rand@{M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\subsubsection[{M\+T\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+Rand\+::\+M\+T\+Rand (
-\begin{DoxyParamCaption}
-\item[{const unsigned long $\ast$}]{seed, }
-\item[{int}]{size}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_a6075a3beacdfb8e4cf48d9fb56cc193a}
-
-
-Definition at line 101 of file mtrand.\+h.
-
-\hypertarget{a00015_a8c276546a41ae350dc9efc5e9c10a261}{\index{M\+T\+Rand@{M\+T\+Rand}!````~M\+T\+Rand@{$\sim$\+M\+T\+Rand}}
-\index{````~M\+T\+Rand@{$\sim$\+M\+T\+Rand}!M\+T\+Rand@{M\+T\+Rand}}
-\subsubsection[{$\sim$\+M\+T\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+Rand\+::$\sim$\+M\+T\+Rand (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_a8c276546a41ae350dc9efc5e9c10a261}
-
-
-Definition at line 102 of file mtrand.\+h.
+Definition at line 16 of file influxspecies\-\_\-protocell.\-cpp.
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{a00015_abbb87a08d622d58fdee0eea4cb5471a0}{\index{M\+T\+Rand@{M\+T\+Rand}!operator()@{operator()}}
-\index{operator()@{operator()}!M\+T\+Rand@{M\+T\+Rand}}
-\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}double M\+T\+Rand\+::operator() (
+\hypertarget{a00015_ad092d0a3709e93316dd4325699c34a86}{\index{influxspecies\-\_\-protocell@{influxspecies\-\_\-protocell}!change\-Remaining\-Conc@{change\-Remaining\-Conc}}
+\index{change\-Remaining\-Conc@{change\-Remaining\-Conc}!influxspecies_protocell@{influxspecies\-\_\-protocell}}
+\subsubsection[{change\-Remaining\-Conc}]{\setlength{\rightskip}{0pt plus 5cm}void influxspecies\-\_\-protocell\-::change\-Remaining\-Conc (
+\begin{DoxyParamCaption}
+\item[{{\bf acs\-\_\-double}}]{tmp\-Rem\-Conc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_ad092d0a3709e93316dd4325699c34a86}
+
+
+Definition at line 32 of file influxspecies\-\_\-protocell.\-h.
+
+\hypertarget{a00015_a973ce325110d3baab2794a7f37a0bc3a}{\index{influxspecies\-\_\-protocell@{influxspecies\-\_\-protocell}!get\-Ext\-Conc@{get\-Ext\-Conc}}
+\index{get\-Ext\-Conc@{get\-Ext\-Conc}!influxspecies_protocell@{influxspecies\-\_\-protocell}}
+\subsubsection[{get\-Ext\-Conc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-double} influxspecies\-\_\-protocell\-::get\-Ext\-Conc (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_abbb87a08d622d58fdee0eea4cb5471a0}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_a973ce325110d3baab2794a7f37a0bc3a}
 
 
-Definition at line 103 of file mtrand.\+h.
+Definition at line 28 of file influxspecies\-\_\-protocell.\-h.
 
-
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=328pt]{a00015_abbb87a08d622d58fdee0eea4cb5471a0_cgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{a00015_abbb87a08d622d58fdee0eea4cb5471a0}{\index{M\+T\+Rand@{M\+T\+Rand}!operator()@{operator()}}
-\index{operator()@{operator()}!M\+T\+Rand@{M\+T\+Rand}}
-\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}double M\+T\+Rand\+::operator() (
+\hypertarget{a00015_aefa4f5947eab64175f45e72ae658afca}{\index{influxspecies\-\_\-protocell@{influxspecies\-\_\-protocell}!get\-Kin@{get\-Kin}}
+\index{get\-Kin@{get\-Kin}!influxspecies_protocell@{influxspecies\-\_\-protocell}}
+\subsubsection[{get\-Kin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-double} influxspecies\-\_\-protocell\-::get\-Kin (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_abbb87a08d622d58fdee0eea4cb5471a0}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_aefa4f5947eab64175f45e72ae658afca}
 
 
-Definition at line 103 of file mtrand.\+h.
+Definition at line 29 of file influxspecies\-\_\-protocell.\-h.
+
+\hypertarget{a00015_a69d83464d8ebc5c52ce6efee8e4c588a}{\index{influxspecies\-\_\-protocell@{influxspecies\-\_\-protocell}!get\-Rem\-Conc@{get\-Rem\-Conc}}
+\index{get\-Rem\-Conc@{get\-Rem\-Conc}!influxspecies_protocell@{influxspecies\-\_\-protocell}}
+\subsubsection[{get\-Rem\-Conc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf acs\-\_\-double} influxspecies\-\_\-protocell\-::get\-Rem\-Conc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{a00015_a69d83464d8ebc5c52ce6efee8e4c588a}
+
+
+Definition at line 30 of file influxspecies\-\_\-protocell.\-h.
 
 
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=328pt]{a00015_abbb87a08d622d58fdee0eea4cb5471a0_cgraph}
-\end{center}
-\end{figure}
-
-
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+analysis/python\+Tools/init/exps/source\+Code/\hyperlink{a00072}{mtrand.\+h}\end{DoxyCompactItemize}
+/media/ale/data/\-G\-I\-T/carness/\hyperlink{a00038}{influxspecies\-\_\-protocell.\-h}\item 
+/media/ale/data/\-G\-I\-T/carness/\hyperlink{a00037}{influxspecies\-\_\-protocell.\-cpp}\end{DoxyCompactItemize}

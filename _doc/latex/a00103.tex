@@ -1,293 +1,199 @@
-\hypertarget{a00103}{\section{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+matlabinitializator/crea\+\_\+concentrazioni\+\_\+iniziali.m File Reference}
-\label{a00103}\index{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+matlabinitializator/crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+\_\+matlabinitializator/crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
+\hypertarget{a00103}{\section{graph\-\_\-chemistry\-\_\-analysis Namespace Reference}
+\label{a00103}\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}}
 }
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{a00103_a1440ec938fc50b283d6d3201ea2eb957}{firing\+\_\+disk} (\+:, 3)
-\item 
-\hyperlink{a00030_a01d55766b8058903dd360b4bda71f9f5}{if} \hyperlink{a00103_acb72987b5000cf59c6f81c482e2ac8ac}{firing\+\_\+disk} (\hyperlink{a00102_a0cd6a44ffb07342cbc7e5ac33bfc9495}{index}, 3)
-\item 
-\hyperlink{a00031_af5946383720aa572eb93e1e63afc23c2}{else} \hyperlink{a00103_a89801fa89eee3ba40f6610f290d6f6c3}{concentrazioni\+\_\+iniziali} (\hyperlink{a00113_ad3efca1ea6e3333daf30719ee0501862}{i})=0
-\item 
-\hyperlink{a00103_aef55cdfac5443b73e52fad643e4a52e7}{firing\+\_\+disk\+\_\+reale} (\hyperlink{a00110_abf70355c2e58f64c6b18bda1b9bccfd7}{k},\+:) =\hyperlink{a00103_acb72987b5000cf59c6f81c482e2ac8ac}{firing\+\_\+disk}(\hyperlink{a00113_ad3efca1ea6e3333daf30719ee0501862}{i},\+:)
-\item 
-id \hyperlink{a00103_a2c89bcf20fa3676a38e9e6ad9d4e76f9}{Z} ()
-\item 
-\hyperlink{a00103_abc9be4849231a626a9dffd0bfb31e55d}{valore} (1\+:\hyperlink{a00104_a6d9c24e62aee61f54530163edf684ae2}{max}(\hyperlink{a00103_ab664f3c8f1715d88fc8f6d47e38ed118}{firing\+\_\+disk\+\_\+bck}(\+:, 2)))=0
-\item 
-\hyperlink{a00103_a9625a7643b9f4c36e6aeb8c23c281e20}{valore} (\hyperlink{a00113_ad3efca1ea6e3333daf30719ee0501862}{i})
-\item 
-\hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} S\+T\+A\+M\+P\+A \\*
-D\+I\+S\+T\+R\+I\+B\+U\+Z\+I\+O\+N\+I D\+E\+L\+L\+E \\*
-C\+O\+N\+C\+E\+N\+T\+R\+A\+Z\+I\+O\+N\+I \hyperlink{a00103_a85bcf07528c0363b01fabdece86a8848}{figure} (123)\%plot(\hyperlink{a00103_a9625a7643b9f4c36e6aeb8c23c281e20}{valore}
+def \hyperlink{a00103_a4f1cb8cacda7a862100a91f2bba21b49}{paramsin}
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{a00103_ae213b450a82f1c98ca269d4b25838a93}{function} \mbox{[}\hyperlink{a00103_a89801fa89eee3ba40f6610f290d6f6c3}{concentrazioni\+\_\+iniziali}\mbox{]} = \hyperlink{a00110_a46820e2abe661887eb3c03ebcdd5aa14}{crea\+\_\+concentrazioni\+\_\+iniziali}(\hyperlink{a00113_abcbc32fc68e4323620d6171a17310212}{alphabet},\hyperlink{a00103_acb72987b5000cf59c6f81c482e2ac8ac}{firing\+\_\+disk},\hyperlink{a00112_a4c7433c24b6426a15069cc5a93a5cbec}{initial\+Max\+Length},\hyperlink{a00113_a7c974cc56015b6503e0619d32ebd4180}{lunghezza\+\_\+max\+\_\+fd},\hyperlink{a00112_acd685f63a27f53fc049aff633634ddd6}{ratio\+\_\+firing\+\_\+disk}, \hyperlink{a00113_ac60b74a4c1b8bc23e64008ba1e0c41a8}{scelta\+\_\+concentrazioni}, \hyperlink{a00113_a59597688ed79473c0234f45eb9167574}{overall\+Concentration}, gamma)
+tuple \hyperlink{a00103_a56a89c268db9387680d2afc8d00af322}{args} = \hyperlink{a00103_a4f1cb8cacda7a862100a91f2bba21b49}{paramsin}()
 \item 
-le specie fittizie create fino \\*
-alla \\*
-lunghezza\+\_\+massima\+\_\+per\+\_\+calcolare\+\_\+le\+\_\+reazioni \\*
-vengono poste uguali \hyperlink{a00035_a2ffdbad9ea59541e59cbd2b938e0770c}{a} in \\*
-\hyperlink{a00025_a816e2260bf1c36cbca7ade7517c19b07}{concentrazione} \hyperlink{a00103_a776a9a06b8375875869043079a11ba0c}{tot\+\_\+species} = 0
+tuple \hyperlink{a00103_afcc190cd479c93d1f2442b3214b0765d}{str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
 \item 
-for \hyperlink{a00103_a6f6ccfcf58b31cb6412107d9d5281426}{i}
+tuple \hyperlink{a00103_a16a858871fb81c4d23fa4bb57a438b6d}{tmp\-Dirs} = sort(os.\-listdir(\hyperlink{a00103_afcc190cd479c93d1f2442b3214b0765d}{str\-Path}))
 \item 
-\hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00103_a057c5e0a9ce8e046a040f24eb9043289}{lunghezza\+\_\+totale} = length(\hyperlink{a00103_acb72987b5000cf59c6f81c482e2ac8ac}{firing\+\_\+disk}(\+:,1))
+string \hyperlink{a00103_a47102719cd6e664cce6fa7202e3982b1}{ndn} = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'
 \item 
-\hyperlink{a00103_ab664f3c8f1715d88fc8f6d47e38ed118}{firing\+\_\+disk\+\_\+bck} =\hyperlink{a00103_acb72987b5000cf59c6f81c482e2ac8ac}{firing\+\_\+disk}
+tuple \hyperlink{a00103_a4e302e188faffc99286c6c7b38cbf1f8}{newdir\-All\-Results} = os.\-path.\-join(\hyperlink{a00103_afcc190cd479c93d1f2442b3214b0765d}{str\-Path}, \hyperlink{a00103_a47102719cd6e664cce6fa7202e3982b1}{ndn})
 \item 
-\hyperlink{a00103_a86970565109c8a51c3191912243410b6}{firing\+\_\+disk\+\_\+2} =\hyperlink{a00103_acb72987b5000cf59c6f81c482e2ac8ac}{firing\+\_\+disk}(1\+:\hyperlink{a00106_a354e9aa3d0786bab7f2475c58693017d}{tot\+\_\+species},\+:)
+tuple \hyperlink{a00103_ae61b55457549e0a6028d8933d0b31d00}{fname\-\_\-init\-Raf\-Res} = os.\-path.\-join(\hyperlink{a00103_a4e302e188faffc99286c6c7b38cbf1f8}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis.\-csv')
 \item 
-\hyperlink{a00103_a2d2940c89db3abbcc0c1331eab98a267}{firing\+\_\+disk} =\mbox{[}$\,$\mbox{]}
+tuple \hyperlink{a00103_a5f7aa907185951a89bae40e384167bff}{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = os.\-path.\-join(\hyperlink{a00103_a4e302e188faffc99286c6c7b38cbf1f8}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')
 \item 
-check di esistenza nel firing \hyperlink{a00103_a74f35d11ff0800cc575f55351e084a1f}{disk} \hyperlink{a00103_a88a0f7d52768638928258ed8900a4a30}{numero\+\_\+molecole}
+tuple \hyperlink{a00103_a950ae7a4f866dc7a17dd7ba635e0d2cd}{fname\-\_\-init\-Raf\-Res\-A\-L\-L} = os.\-path.\-join(\hyperlink{a00103_a4e302e188faffc99286c6c7b38cbf1f8}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')
 \item 
-\hyperlink{a00035_a2ffdbad9ea59541e59cbd2b938e0770c}{a} seconda dei casi seleziono \\*
-le specie esistenti del firing \hyperlink{a00103_a74f35d11ff0800cc575f55351e084a1f}{disk}
+tuple \hyperlink{a00103_a258139f61b00fd46cde4a1efe7867c64}{fid\-\_\-init\-Raf\-Res} = open(\hyperlink{a00103_ae61b55457549e0a6028d8933d0b31d00}{fname\-\_\-init\-Raf\-Res}, 'w')
 \item 
-\hyperlink{a00035_a2ffdbad9ea59541e59cbd2b938e0770c}{a} seconda dei casi seleziono \\*
-le specie esistenti del firing \\*
-quelle non esistenti andranno \\*
-semplicemente \hyperlink{a00035_a2ffdbad9ea59541e59cbd2b938e0770c}{a} \hyperlink{a00025_a816e2260bf1c36cbca7ade7517c19b07}{concentrazione} \hyperlink{a00103_a954c3e86b303e7b5ff41a314b0e845db}{remaining\+\_\+species} = \hyperlink{a00106_a354e9aa3d0786bab7f2475c58693017d}{tot\+\_\+species}
+tuple \hyperlink{a00103_a1e29abad83e5d8e79fda248ea0404d66}{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = open(\hyperlink{a00103_a5f7aa907185951a89bae40e384167bff}{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'w')
 \item 
-\hyperlink{a00103_ab10fb0f79db7ffeb421b335cce374d9c}{l\+\_\+max} =0
+tuple \hyperlink{a00103_a8145e32e6c235cd8bfb404f137ec233e}{fid\-\_\-init\-Raf\-Res\-A\-L\-L} = open(\hyperlink{a00103_a950ae7a4f866dc7a17dd7ba635e0d2cd}{fname\-\_\-init\-Raf\-Res\-A\-L\-L}, 'w')
 \item 
-\hyperlink{a00103_a6d872cdbb63424cff04a431f8c23cb99}{species\+\_\+to\+\_\+delete} = round(\hyperlink{a00112_acd685f63a27f53fc049aff633634ddd6}{ratio\+\_\+firing\+\_\+disk}$\ast$\hyperlink{a00106_a3749709d4cc2c50b5107d802173fb144}{remaining\+\_\+species})
+string \hyperlink{a00103_ac8b74f709a3b83c74a10e0ca5b55d041}{str\-To\-Write} = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\-Size\textbackslash{}t\-Cats\-Size\textbackslash{}tu\-R\-A\-F\textbackslash{}t\-S\-C\-C\textbackslash{}t\-Auto\-Cat\textbackslash{}n\char`\"{}
 \item 
-la percentuale è di \hyperlink{a00113_a69962f56e60d0c88abc5d4b6839c2886}{reazioni} \\*
-fra quelle che restano \hyperlink{a00103_a529ab6e60f79d401d9fcbab38ef5c25b}{species\+\_\+to\+\_\+keep} = \hyperlink{a00106_a3749709d4cc2c50b5107d802173fb144}{remaining\+\_\+species} -\/ \hyperlink{a00106_a6d872cdbb63424cff04a431f8c23cb99}{species\+\_\+to\+\_\+delete} + \hyperlink{a00103_ab10fb0f79db7ffeb421b335cce374d9c}{l\+\_\+max}
+tuple \hyperlink{a00103_aaceb851a0cb09285621f45da6fc25ddf}{tot\-Dir\-Name} = os.\-path.\-join(\hyperlink{a00103_afcc190cd479c93d1f2442b3214b0765d}{str\-Path},tmp\-Dir)
 \item 
-while \hyperlink{a00103_ab9820e0c2b1ec444c369e5ba77827df6}{trovato}
+tuple \hyperlink{a00103_a428d5f80473d901d21779f75ec4a7495}{conf} = readfiles.\-read\-Conf\-File(\hyperlink{a00103_aaceb851a0cb09285621f45da6fc25ddf}{tot\-Dir\-Name})
 \item 
-\hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00102_a0d28c684ab6483b3af034981a7db4806}{switch} \\*
-\hyperlink{a00113_ac60b74a4c1b8bc23e64008ba1e0c41a8}{scelta\+\_\+concentrazioni} case \\*
-distribuzione uniforme su \\*
-tutte le specie esistenti del \\*
-firing \hyperlink{a00103_a74f35d11ff0800cc575f55351e084a1f}{disk} \hyperlink{a00103_a2dd6586cf04872271a07edc16499c9f0}{probabilita\+\_\+uniforme} = 1/\hyperlink{a00106_ac8f034c683f5b66572af8149f27da7e0}{species\+\_\+to\+\_\+keep}
+tuple \hyperlink{a00103_a4001c4b7597550cda360d67d35c39d8e}{food\-List} = range(0,args.\-last\-Flux\-I\-D+1)
 \item 
-\hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} case uniforme sulle \\*
-\hyperlink{a00106_a984d293145d85a936f430c0990316e51}{lunghezza} \hyperlink{a00103_ab7005e24e9bb6ea9b6e14c4ac2614a31}{k} =0
+tuple \hyperlink{a00103_a9b52fd0d4ec8369bdc21d79c282a0c87}{rcts} = readfiles.\-load\-All\-Data(\hyperlink{a00103_aaceb851a0cb09285621f45da6fc25ddf}{tot\-Dir\-Name},'\-\_\-acsreactions.\-csv')
 \item 
-\hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00103_ac80ca4e7b06ad2dab57b781b68fa9dc3}{vettore\+\_\+ordinato\+\_\+lunghezze} = unique(\hyperlink{a00103_aef55cdfac5443b73e52fad643e4a52e7}{firing\+\_\+disk\+\_\+reale}(\+:,2))
+tuple \hyperlink{a00103_a2598a91c3cafd8b33e22408f492d6a25}{cats} = readfiles.\-load\-All\-Data(\hyperlink{a00103_aaceb851a0cb09285621f45da6fc25ddf}{tot\-Dir\-Name},'\-\_\-acscatalysis.\-csv')
 \item 
-\hyperlink{a00103_ac087daeaaacac0f77f0e74d128d3c60a}{probabilita\+\_\+per\+\_\+lunghezza} = 1/length(\hyperlink{a00103_ac80ca4e7b06ad2dab57b781b68fa9dc3}{vettore\+\_\+ordinato\+\_\+lunghezze})
+list \hyperlink{a00103_a31989d0bc1095d20a17527f6f7913c81}{rafcats} = \hyperlink{a00103_a2598a91c3cafd8b33e22408f492d6a25}{cats}\mbox{[}np.\-in1d(\hyperlink{a00103_a2598a91c3cafd8b33e22408f492d6a25}{cats}\mbox{[}\-:,1\mbox{]}, raf\mbox{[}3\mbox{]})\mbox{]}
 \item 
-\hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} \hyperlink{a00025_afb358f48b1646c750fb9da6c6585be2b}{end} normalizzazione per \\*
-avere la \hyperlink{a00025_a816e2260bf1c36cbca7ade7517c19b07}{concentrazione} \hyperlink{a00103_a409d61ee8298ee18e20b19b5bd3f7abc}{concentrazioni\+\_\+iniziali} =concentrazioni\+\_\+iniziali/\hyperlink{a00106_a59a869fb2b28d56dacd91c09e1dffc8d}{sum}(concentrazioni\+\_\+iniziali)$\ast$\hyperlink{a00113_a59597688ed79473c0234f45eb9167574}{overall\+Concentration}
+list \hyperlink{a00103_abcbd149fd36b6e318e2ff5db08256c7f}{rafrcts} = \hyperlink{a00103_a9b52fd0d4ec8369bdc21d79c282a0c87}{rcts}\mbox{[}np.\-in1d(\hyperlink{a00103_a9b52fd0d4ec8369bdc21d79c282a0c87}{rcts}\mbox{[}\-:,0\mbox{]}, raf\mbox{[}2\mbox{]})\mbox{]}
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{a00103_a89801fa89eee3ba40f6610f290d6f6c3}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!concentrazioni\+\_\+iniziali@{concentrazioni\+\_\+iniziali}}
-\index{concentrazioni\+\_\+iniziali@{concentrazioni\+\_\+iniziali}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{concentrazioni\+\_\+iniziali}]{\setlength{\rightskip}{0pt plus 5cm}{\bf else} concentrazioni\+\_\+iniziali (
-\begin{DoxyParamCaption}
-\item[{{\bf i}}]{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{a00103_a89801fa89eee3ba40f6610f290d6f6c3}
-\hypertarget{a00103_a85bcf07528c0363b01fabdece86a8848}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!figure@{figure}}
-\index{figure@{figure}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{figure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} {\bf end} {\bf end} S\+T\+A\+M\+P\+A D\+I\+S\+T\+R\+I\+B\+U\+Z\+I\+O\+N\+I D\+E\+L\+L\+E C\+O\+N\+C\+E\+N\+T\+R\+A\+Z\+I\+O\+N\+I figure (
-\begin{DoxyParamCaption}
-\item[{123}]{}
-\end{DoxyParamCaption}
-)}}\label{a00103_a85bcf07528c0363b01fabdece86a8848}
-\hypertarget{a00103_a1440ec938fc50b283d6d3201ea2eb957}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!firing\+\_\+disk@{firing\+\_\+disk}}
-\index{firing\+\_\+disk@{firing\+\_\+disk}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{firing\+\_\+disk}]{\setlength{\rightskip}{0pt plus 5cm}firing\+\_\+disk (
-\begin{DoxyParamCaption}
-\item[{\+:}]{, }
-\item[{3}]{}
-\end{DoxyParamCaption}
-)}}\label{a00103_a1440ec938fc50b283d6d3201ea2eb957}
-\hypertarget{a00103_acb72987b5000cf59c6f81c482e2ac8ac}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!firing\+\_\+disk@{firing\+\_\+disk}}
-\index{firing\+\_\+disk@{firing\+\_\+disk}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{firing\+\_\+disk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} firing\+\_\+disk (
-\begin{DoxyParamCaption}
-\item[{{\bf index}}]{, }
-\item[{3}]{}
-\end{DoxyParamCaption}
-)}}\label{a00103_acb72987b5000cf59c6f81c482e2ac8ac}
-\hypertarget{a00103_aef55cdfac5443b73e52fad643e4a52e7}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!firing\+\_\+disk\+\_\+reale@{firing\+\_\+disk\+\_\+reale}}
-\index{firing\+\_\+disk\+\_\+reale@{firing\+\_\+disk\+\_\+reale}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{firing\+\_\+disk\+\_\+reale}]{\setlength{\rightskip}{0pt plus 5cm}firing\+\_\+disk\+\_\+reale (
-\begin{DoxyParamCaption}
-\item[{{\bf k}}]{, }
-\item[{\+:}]{}
-\end{DoxyParamCaption}
-) ={\bf firing\+\_\+disk}({\bf i},\+:)}}\label{a00103_aef55cdfac5443b73e52fad643e4a52e7}
-\hypertarget{a00103_abc9be4849231a626a9dffd0bfb31e55d}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!valore@{valore}}
-\index{valore@{valore}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{valore}]{\setlength{\rightskip}{0pt plus 5cm}valore (
-\begin{DoxyParamCaption}
-\item[{1\+:}]{maxfiring\+\_\+disk\+\_\+bck(\+:, 2)}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{a00103_abc9be4849231a626a9dffd0bfb31e55d}
-\hypertarget{a00103_a9625a7643b9f4c36e6aeb8c23c281e20}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!valore@{valore}}
-\index{valore@{valore}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{valore}]{\setlength{\rightskip}{0pt plus 5cm}valore (
-\begin{DoxyParamCaption}
-\item[{{\bf i}}]{}
-\end{DoxyParamCaption}
-)}}\label{a00103_a9625a7643b9f4c36e6aeb8c23c281e20}
-\hypertarget{a00103_a2c89bcf20fa3676a38e9e6ad9d4e76f9}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!Z@{Z}}
-\index{Z@{Z}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{Z}]{\setlength{\rightskip}{0pt plus 5cm}id Z (
+\hypertarget{a00103_a4f1cb8cacda7a862100a91f2bba21b49}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!paramsin@{paramsin}}
+\index{paramsin@{paramsin}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{paramsin}]{\setlength{\rightskip}{0pt plus 5cm}def graph\-\_\-chemistry\-\_\-analysis.\-paramsin (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{a00103_a2c89bcf20fa3676a38e9e6ad9d4e76f9}
+)}}\label{a00103_a4f1cb8cacda7a862100a91f2bba21b49}
+
+
+Definition at line 82 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
+
 
 
 \subsection{Variable Documentation}
-\hypertarget{a00103_a409d61ee8298ee18e20b19b5bd3f7abc}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!concentrazioni\+\_\+iniziali@{concentrazioni\+\_\+iniziali}}
-\index{concentrazioni\+\_\+iniziali@{concentrazioni\+\_\+iniziali}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{concentrazioni\+\_\+iniziali}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sum}(concentrazioni\+\_\+iniziali) {\bf end} concentrazioni\+\_\+iniziali =concentrazioni\+\_\+iniziali/{\bf sum}(concentrazioni\+\_\+iniziali)$\ast${\bf overall\+Concentration}}}\label{a00103_a409d61ee8298ee18e20b19b5bd3f7abc}
+\hypertarget{a00103_a56a89c268db9387680d2afc8d00af322}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!args@{args}}
+\index{args@{args}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-args = {\bf paramsin}()}}\label{a00103_a56a89c268db9387680d2afc8d00af322}
 
 
-Definition at line 129 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 94 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 
-\hypertarget{a00103_a74f35d11ff0800cc575f55351e084a1f}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!disk@{disk}}
-\index{disk@{disk}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{disk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf a} seconda dei casi seleziono le specie esistenti del firing disk}}\label{a00103_a74f35d11ff0800cc575f55351e084a1f}
-
-
-Definition at line 25 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
-
-\hypertarget{a00103_a2d2940c89db3abbcc0c1331eab98a267}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!firing\+\_\+disk@{firing\+\_\+disk}}
-\index{firing\+\_\+disk@{firing\+\_\+disk}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{firing\+\_\+disk}]{\setlength{\rightskip}{0pt plus 5cm}firing\+\_\+disk =\mbox{[}$\,$\mbox{]}}}\label{a00103_a2d2940c89db3abbcc0c1331eab98a267}
+\hypertarget{a00103_a2598a91c3cafd8b33e22408f492d6a25}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!cats@{cats}}
+\index{cats@{cats}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{cats}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-cats = readfiles.\-load\-All\-Data({\bf tot\-Dir\-Name},'\-\_\-acscatalysis.\-csv')}}\label{a00103_a2598a91c3cafd8b33e22408f492d6a25}
 
 
-Definition at line 17 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 138 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 
-\hypertarget{a00103_a86970565109c8a51c3191912243410b6}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!firing\+\_\+disk\+\_\+2@{firing\+\_\+disk\+\_\+2}}
-\index{firing\+\_\+disk\+\_\+2@{firing\+\_\+disk\+\_\+2}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{firing\+\_\+disk\+\_\+2}]{\setlength{\rightskip}{0pt plus 5cm}firing\+\_\+disk\+\_\+2 ={\bf firing\+\_\+disk}(1\+:{\bf tot\+\_\+species},\+:)}}\label{a00103_a86970565109c8a51c3191912243410b6}
-
-
-Definition at line 16 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
-
-\hypertarget{a00103_ab664f3c8f1715d88fc8f6d47e38ed118}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!firing\+\_\+disk\+\_\+bck@{firing\+\_\+disk\+\_\+bck}}
-\index{firing\+\_\+disk\+\_\+bck@{firing\+\_\+disk\+\_\+bck}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{firing\+\_\+disk\+\_\+bck}]{\setlength{\rightskip}{0pt plus 5cm}firing\+\_\+disk\+\_\+bck ={\bf firing\+\_\+disk}}}\label{a00103_ab664f3c8f1715d88fc8f6d47e38ed118}
+\hypertarget{a00103_a428d5f80473d901d21779f75ec4a7495}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!conf@{conf}}
+\index{conf@{conf}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{conf}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-conf = readfiles.\-read\-Conf\-File({\bf tot\-Dir\-Name})}}\label{a00103_a428d5f80473d901d21779f75ec4a7495}
 
 
-Definition at line 14 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 132 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 
-\hypertarget{a00103_ae213b450a82f1c98ca269d4b25838a93}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!function@{function}}
-\index{function@{function}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}function\mbox{[}{\bf concentrazioni\+\_\+iniziali}\mbox{]} = {\bf crea\+\_\+concentrazioni\+\_\+iniziali}({\bf alphabet},{\bf firing\+\_\+disk},{\bf initial\+Max\+Length},{\bf lunghezza\+\_\+max\+\_\+fd},{\bf ratio\+\_\+firing\+\_\+disk}, {\bf scelta\+\_\+concentrazioni}, {\bf overall\+Concentration}, gamma)}}\label{a00103_ae213b450a82f1c98ca269d4b25838a93}
-
-
-Definition at line 1 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
-
-\hypertarget{a00103_a6f6ccfcf58b31cb6412107d9d5281426}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!i@{i}}
-\index{i@{i}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{i}]{\setlength{\rightskip}{0pt plus 5cm}for i}}\label{a00103_a6f6ccfcf58b31cb6412107d9d5281426}
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-= 1:\hyperlink{a00112_a4c7433c24b6426a15069cc5a93a5cbec}{initialMaxLength}
-    \hyperlink{a00103_a776a9a06b8375875869043079a11ba0c}{tot\_species} = \hyperlink{a00103_a776a9a06b8375875869043079a11ba0c}{tot\_species}+length(\hyperlink{a00136_aca44f11e84467e8090217b689da68785}{alphabet})^\hyperlink{a00103_a6f6ccfcf58b31cb6412107d9d5281426}{i}
-\end{DoxyCode}
+\hypertarget{a00103_a258139f61b00fd46cde4a1efe7867c64}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!fid\-\_\-init\-Raf\-Res@{fid\-\_\-init\-Raf\-Res}}
+\index{fid\-\_\-init\-Raf\-Res@{fid\-\_\-init\-Raf\-Res}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-fid\-\_\-init\-Raf\-Res = open({\bf fname\-\_\-init\-Raf\-Res}, 'w')}}\label{a00103_a258139f61b00fd46cde4a1efe7867c64}
 
 
-Definition at line 9 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 114 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 
-\hypertarget{a00103_ab7005e24e9bb6ea9b6e14c4ac2614a31}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!k@{k}}
-\index{k@{k}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{k}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} {\bf end} case favorire quelle corte con una scale free di esponente gamma k =0}}\label{a00103_ab7005e24e9bb6ea9b6e14c4ac2614a31}
-
-
-Definition at line 73 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
-
-\hypertarget{a00103_ab10fb0f79db7ffeb421b335cce374d9c}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!l\+\_\+max@{l\+\_\+max}}
-\index{l\+\_\+max@{l\+\_\+max}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{l\+\_\+max}]{\setlength{\rightskip}{0pt plus 5cm}l\+\_\+max =0}}\label{a00103_ab10fb0f79db7ffeb421b335cce374d9c}
+\hypertarget{a00103_a8145e32e6c235cd8bfb404f137ec233e}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!fid\-\_\-init\-Raf\-Res\-A\-L\-L@{fid\-\_\-init\-Raf\-Res\-A\-L\-L}}
+\index{fid\-\_\-init\-Raf\-Res\-A\-L\-L@{fid\-\_\-init\-Raf\-Res\-A\-L\-L}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-fid\-\_\-init\-Raf\-Res\-A\-L\-L = open({\bf fname\-\_\-init\-Raf\-Res\-A\-L\-L}, 'w')}}\label{a00103_a8145e32e6c235cd8bfb404f137ec233e}
 
 
-Definition at line 31 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 116 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 
-\hypertarget{a00103_a057c5e0a9ce8e046a040f24eb9043289}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!lunghezza\+\_\+totale@{lunghezza\+\_\+totale}}
-\index{lunghezza\+\_\+totale@{lunghezza\+\_\+totale}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{lunghezza\+\_\+totale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} lunghezza\+\_\+totale = length({\bf firing\+\_\+disk}(\+:,1))}}\label{a00103_a057c5e0a9ce8e046a040f24eb9043289}
-
-
-Definition at line 13 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
-
-\hypertarget{a00103_a88a0f7d52768638928258ed8900a4a30}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!numero\+\_\+molecole@{numero\+\_\+molecole}}
-\index{numero\+\_\+molecole@{numero\+\_\+molecole}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{numero\+\_\+molecole}]{\setlength{\rightskip}{0pt plus 5cm}check di esistenza nel firing {\bf disk} numero\+\_\+molecole}}\label{a00103_a88a0f7d52768638928258ed8900a4a30}
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-= \hyperlink{a00112_a59597688ed79473c0234f45eb9167574}{overallConcentration}*\hyperlink{a00112_a9bc498ccac8db41438f855f5dd3f4c05}{volume}
-\hyperlink{a00102_ab5807df6e5701d7529696a19c65fab49}{numero\_specie} = length(\hyperlink{a00103_a2d2940c89db3abbcc0c1331eab98a267}{firing\_disk}(:,1))
-\end{DoxyCode}
+\hypertarget{a00103_a1e29abad83e5d8e79fda248ea0404d66}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}}
+\index{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T = open({\bf fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'w')}}\label{a00103_a1e29abad83e5d8e79fda248ea0404d66}
 
 
-Definition at line 22 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 115 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 
-\hypertarget{a00103_ac087daeaaacac0f77f0e74d128d3c60a}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!probabilita\+\_\+per\+\_\+lunghezza@{probabilita\+\_\+per\+\_\+lunghezza}}
-\index{probabilita\+\_\+per\+\_\+lunghezza@{probabilita\+\_\+per\+\_\+lunghezza}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{probabilita\+\_\+per\+\_\+lunghezza}]{\setlength{\rightskip}{0pt plus 5cm}probabilita\+\_\+per\+\_\+lunghezza = 1/length({\bf vettore\+\_\+ordinato\+\_\+lunghezze})}}\label{a00103_ac087daeaaacac0f77f0e74d128d3c60a}
-
-
-Definition at line 82 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
-
-\hypertarget{a00103_a2dd6586cf04872271a07edc16499c9f0}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!probabilita\+\_\+uniforme@{probabilita\+\_\+uniforme}}
-\index{probabilita\+\_\+uniforme@{probabilita\+\_\+uniforme}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{probabilita\+\_\+uniforme}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} {\bf end} {\bf end} {\bf switch} {\bf scelta\+\_\+concentrazioni} case distribuzione uniforme su tutte le specie esistenti del firing {\bf disk} probabilita\+\_\+uniforme = 1/{\bf species\+\_\+to\+\_\+keep}}}\label{a00103_a2dd6586cf04872271a07edc16499c9f0}
+\hypertarget{a00103_ae61b55457549e0a6028d8933d0b31d00}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!fname\-\_\-init\-Raf\-Res@{fname\-\_\-init\-Raf\-Res}}
+\index{fname\-\_\-init\-Raf\-Res@{fname\-\_\-init\-Raf\-Res}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-fname\-\_\-init\-Raf\-Res = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis.\-csv')}}\label{a00103_ae61b55457549e0a6028d8933d0b31d00}
 
 
-Definition at line 60 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 111 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 
-\hypertarget{a00103_a954c3e86b303e7b5ff41a314b0e845db}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!remaining\+\_\+species@{remaining\+\_\+species}}
-\index{remaining\+\_\+species@{remaining\+\_\+species}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{remaining\+\_\+species}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} remaining\+\_\+species = {\bf tot\+\_\+species}}}\label{a00103_a954c3e86b303e7b5ff41a314b0e845db}
-
-
-Definition at line 30 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
-
-\hypertarget{a00103_a6d872cdbb63424cff04a431f8c23cb99}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!species\+\_\+to\+\_\+delete@{species\+\_\+to\+\_\+delete}}
-\index{species\+\_\+to\+\_\+delete@{species\+\_\+to\+\_\+delete}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{species\+\_\+to\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} {\bf end} species\+\_\+to\+\_\+delete = round({\bf ratio\+\_\+firing\+\_\+disk}$\ast${\bf remaining\+\_\+species})}}\label{a00103_a6d872cdbb63424cff04a431f8c23cb99}
+\hypertarget{a00103_a950ae7a4f866dc7a17dd7ba635e0d2cd}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!fname\-\_\-init\-Raf\-Res\-A\-L\-L@{fname\-\_\-init\-Raf\-Res\-A\-L\-L}}
+\index{fname\-\_\-init\-Raf\-Res\-A\-L\-L@{fname\-\_\-init\-Raf\-Res\-A\-L\-L}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-fname\-\_\-init\-Raf\-Res\-A\-L\-L = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')}}\label{a00103_a950ae7a4f866dc7a17dd7ba635e0d2cd}
 
 
-Definition at line 38 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 113 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 
-\hypertarget{a00103_a529ab6e60f79d401d9fcbab38ef5c25b}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!species\+\_\+to\+\_\+keep@{species\+\_\+to\+\_\+keep}}
-\index{species\+\_\+to\+\_\+keep@{species\+\_\+to\+\_\+keep}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{species\+\_\+to\+\_\+keep}]{\setlength{\rightskip}{0pt plus 5cm}la percentuale è di {\bf reazioni} fra quelle che restano species\+\_\+to\+\_\+keep = {\bf remaining\+\_\+species} -\/ {\bf species\+\_\+to\+\_\+delete} + {\bf l\+\_\+max}}}\label{a00103_a529ab6e60f79d401d9fcbab38ef5c25b}
-
-
-Definition at line 39 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
-
-\hypertarget{a00103_a776a9a06b8375875869043079a11ba0c}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!tot\+\_\+species@{tot\+\_\+species}}
-\index{tot\+\_\+species@{tot\+\_\+species}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{tot\+\_\+species}]{\setlength{\rightskip}{0pt plus 5cm}le specie fittizie create fino alla lunghezza\+\_\+massima\+\_\+per\+\_\+calcolare\+\_\+le\+\_\+reazioni vengono poste uguali {\bf a} in {\bf concentrazione} tot\+\_\+species = 0}}\label{a00103_a776a9a06b8375875869043079a11ba0c}
+\hypertarget{a00103_a5f7aa907185951a89bae40e384167bff}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}}
+\index{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')}}\label{a00103_a5f7aa907185951a89bae40e384167bff}
 
 
-Definition at line 8 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 112 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 
-\hypertarget{a00103_ab9820e0c2b1ec444c369e5ba77827df6}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!trovato@{trovato}}
-\index{trovato@{trovato}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{trovato}]{\setlength{\rightskip}{0pt plus 5cm}while trovato}}\label{a00103_ab9820e0c2b1ec444c369e5ba77827df6}
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-==0
-                \hyperlink{a00133_af7658ba15697dfeb9cd4bff8a57c7360}{index} = \hyperlink{a00103_ab10fb0f79db7ffeb421b335cce374d9c}{l\_max}+ceil(\hyperlink{a00112_a078f67f8fbdd9ac6587e03bdf2651d32}{rand}*\hyperlink{a00103_a954c3e86b303e7b5ff41a314b0e845db}{remaining\_species})
-\end{DoxyCode}
+\hypertarget{a00103_a4001c4b7597550cda360d67d35c39d8e}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!food\-List@{food\-List}}
+\index{food\-List@{food\-List}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{food\-List}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-food\-List = range(0,args.\-last\-Flux\-I\-D+1)}}\label{a00103_a4001c4b7597550cda360d67d35c39d8e}
 
 
-Definition at line 44 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 133 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 
-\hypertarget{a00103_ac80ca4e7b06ad2dab57b781b68fa9dc3}{\index{crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}!vettore\+\_\+ordinato\+\_\+lunghezze@{vettore\+\_\+ordinato\+\_\+lunghezze}}
-\index{vettore\+\_\+ordinato\+\_\+lunghezze@{vettore\+\_\+ordinato\+\_\+lunghezze}!crea\+\_\+concentrazioni\+\_\+iniziali.\+m@{crea\+\_\+concentrazioni\+\_\+iniziali.\+m}}
-\subsubsection[{vettore\+\_\+ordinato\+\_\+lunghezze}]{\setlength{\rightskip}{0pt plus 5cm}{\bf end} {\bf end} vettore\+\_\+ordinato\+\_\+lunghezze = unique({\bf firing\+\_\+disk\+\_\+reale}(\+:,2))}}\label{a00103_ac80ca4e7b06ad2dab57b781b68fa9dc3}
+\hypertarget{a00103_a47102719cd6e664cce6fa7202e3982b1}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!ndn@{ndn}}
+\index{ndn@{ndn}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string graph\-\_\-chemistry\-\_\-analysis.\-ndn = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'}}\label{a00103_a47102719cd6e664cce6fa7202e3982b1}
 
 
-Definition at line 81 of file crea\+\_\+concentrazioni\+\_\+iniziali.\+m.
+Definition at line 104 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
+
+\hypertarget{a00103_a4e302e188faffc99286c6c7b38cbf1f8}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!newdir\-All\-Results@{newdir\-All\-Results}}
+\index{newdir\-All\-Results@{newdir\-All\-Results}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-newdir\-All\-Results = os.\-path.\-join({\bf str\-Path}, {\bf ndn})}}\label{a00103_a4e302e188faffc99286c6c7b38cbf1f8}
+
+
+Definition at line 105 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
+
+\hypertarget{a00103_a31989d0bc1095d20a17527f6f7913c81}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!rafcats@{rafcats}}
+\index{rafcats@{rafcats}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{rafcats}]{\setlength{\rightskip}{0pt plus 5cm}list graph\-\_\-chemistry\-\_\-analysis.\-rafcats = {\bf cats}\mbox{[}np.\-in1d({\bf cats}\mbox{[}\-:,1\mbox{]}, raf\mbox{[}3\mbox{]})\mbox{]}}}\label{a00103_a31989d0bc1095d20a17527f6f7913c81}
+
+
+Definition at line 145 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
+
+\hypertarget{a00103_abcbd149fd36b6e318e2ff5db08256c7f}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!rafrcts@{rafrcts}}
+\index{rafrcts@{rafrcts}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{rafrcts}]{\setlength{\rightskip}{0pt plus 5cm}list graph\-\_\-chemistry\-\_\-analysis.\-rafrcts = {\bf rcts}\mbox{[}np.\-in1d({\bf rcts}\mbox{[}\-:,0\mbox{]}, raf\mbox{[}2\mbox{]})\mbox{]}}}\label{a00103_abcbd149fd36b6e318e2ff5db08256c7f}
+
+
+Definition at line 146 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
+
+\hypertarget{a00103_a9b52fd0d4ec8369bdc21d79c282a0c87}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!rcts@{rcts}}
+\index{rcts@{rcts}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{rcts}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-rcts = readfiles.\-load\-All\-Data({\bf tot\-Dir\-Name},'\-\_\-acsreactions.\-csv')}}\label{a00103_a9b52fd0d4ec8369bdc21d79c282a0c87}
+
+
+Definition at line 137 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
+
+\hypertarget{a00103_afcc190cd479c93d1f2442b3214b0765d}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!str\-Path@{str\-Path}}
+\index{str\-Path@{str\-Path}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-str\-Path = os.\-path.\-abspath(args.\-str\-Path)}}\label{a00103_afcc190cd479c93d1f2442b3214b0765d}
+
+
+Definition at line 97 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
+
+\hypertarget{a00103_ac8b74f709a3b83c74a10e0ca5b55d041}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!str\-To\-Write@{str\-To\-Write}}
+\index{str\-To\-Write@{str\-To\-Write}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{str\-To\-Write}]{\setlength{\rightskip}{0pt plus 5cm}string graph\-\_\-chemistry\-\_\-analysis.\-str\-To\-Write = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\-Size\textbackslash{}t\-Cats\-Size\textbackslash{}tu\-R\-A\-F\textbackslash{}t\-S\-C\-C\textbackslash{}t\-Auto\-Cat\textbackslash{}n\char`\"{}}}\label{a00103_ac8b74f709a3b83c74a10e0ca5b55d041}
+
+
+Definition at line 117 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
+
+\hypertarget{a00103_a16a858871fb81c4d23fa4bb57a438b6d}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!tmp\-Dirs@{tmp\-Dirs}}
+\index{tmp\-Dirs@{tmp\-Dirs}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{tmp\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-tmp\-Dirs = sort(os.\-listdir({\bf str\-Path}))}}\label{a00103_a16a858871fb81c4d23fa4bb57a438b6d}
+
+
+Definition at line 98 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
+
+\hypertarget{a00103_aaceb851a0cb09285621f45da6fc25ddf}{\index{graph\-\_\-chemistry\-\_\-analysis@{graph\-\_\-chemistry\-\_\-analysis}!tot\-Dir\-Name@{tot\-Dir\-Name}}
+\index{tot\-Dir\-Name@{tot\-Dir\-Name}!graph_chemistry_analysis@{graph\-\_\-chemistry\-\_\-analysis}}
+\subsubsection[{tot\-Dir\-Name}]{\setlength{\rightskip}{0pt plus 5cm}tuple graph\-\_\-chemistry\-\_\-analysis.\-tot\-Dir\-Name = os.\-path.\-join({\bf str\-Path},tmp\-Dir)}}\label{a00103_aaceb851a0cb09285621f45da6fc25ddf}
+
+
+Definition at line 124 of file graph\-\_\-chemistry\-\_\-analysis.\-py.
 

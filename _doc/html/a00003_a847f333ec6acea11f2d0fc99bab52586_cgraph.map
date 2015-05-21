@@ -1,0 +1,51 @@
+<map id="environment::perform_FIXED_GillespieComputation" name="environment::perform_FIXED_GillespieComputation">
+<area shape="rect" id="node2" href="$a00015.html#a3a8b5272198d029779dc9302a54305a8" title="Timer::start" alt="" coords="321,5,407,32"/>
+<area shape="rect" id="node3" href="$a00019.html#aa678d0a98232158c48108227b98de4b6" title="Function to close the program after having en error. " alt="" coords="1123,848,1219,875"/>
+<area shape="rect" id="node4" href="$a00003.html#a375fc2dc0afc38a8a3afbd016acc4983" title="This function copy in the vector speciesInitialConcentrationZero, the species with initial concentrat..." alt="" coords="277,1709,451,1750"/>
+<area shape="rect" id="node5" href="$a00019.html#a1a13653eb649b6fc74090deecddf1028" title="Function to convert a decimal number in a binary string composed of 12 bit such Example &#45;&gt; input: 10..." alt="" coords="331,1775,397,1801"/>
+<area shape="rect" id="node6" href="$a00003.html#ad3ebcd7ab1c9ba1a0f65b264b97adf33" title="Return TRUE if there are sufficient molecules for the reaction. " alt="" coords="809,337,1005,364"/>
+<area shape="rect" id="node7" href="$a00003.html#a4ebb93b149e9ac023661f74657f634c7" title="Compute and introduct a single Gillespie entry within the Gillespie Structure for all the generation..." alt="" coords="274,169,454,210"/>
+<area shape="rect" id="node9" href="$a00003.html#aa3a18c59f6127c642603a98c1b3a2224" title="Show all the Gillespie Structure. " alt="" coords="549,225,723,266"/>
+<area shape="rect" id="node10" href="$a00003.html#aa88b64fa5005973926a121f1aa46770d" title="This function searches the complex with sequence and cutting point identical to the parameters and re..." alt="" coords="274,1825,454,1852"/>
+<area shape="rect" id="node11" href="$a00003.html#a5ee6b203f077de1467aa72042814db7d" title="Complex evaluation. " alt="" coords="803,1568,1010,1595"/>
+<area shape="rect" id="node17" href="$a00003.html#a48d8fd9d8d5c9c31f0b4af87c8cbd28f" title="Show all the species with their ID. " alt="" coords="271,1877,457,1918"/>
+<area shape="rect" id="node18" href="$a00003.html#a3beddfc55f70a9cc855c3e3caaa7f188" title="Show all the species with their ID. " alt="" coords="271,1942,457,1983"/>
+<area shape="rect" id="node19" href="$a00015.html#a63f0eb44b27402196590a03781515dba" title="Timer::stop" alt="" coords="321,2008,407,2035"/>
+<area shape="rect" id="node20" href="$a00015.html#a71a44ab36290730bc49f8719546194fc" title="Timer::getElapsedTimeInMilliSec" alt="" coords="259,2059,469,2085"/>
+<area shape="rect" id="node22" href="$a00019.html#aa6403f90846f5fb19fcfb8b81aeee73c" title="This funtion returns a random position in a probability weight array of N elements. " alt="" coords="537,1467,735,1509"/>
+<area shape="rect" id="node23" href="$a00003.html#a429c2529badaeda72e553f500b990e11" title="Show all initial species in table format. " alt="" coords="287,1643,441,1685"/>
+<area shape="rect" id="node27" href="$a00003.html#a9bc445da3e89d09d4fce11c83f3dedb0" title="environment::setActualTime" alt="" coords="273,2160,455,2187"/>
+<area shape="rect" id="node28" href="$a00015.html#ac05212f488db392f857660e28a402927" title="Timer::getElapsedTimeInSec" alt="" coords="270,2109,458,2136"/>
+<area shape="rect" id="node29" href="$a00003.html#ae7fd21d14f81c4854b3a6163b0278857" title="Save living species in a file named living_species_[currentSim].csv. " alt="" coords="294,2211,434,2237"/>
+<area shape="rect" id="node30" href="$a00003.html#a4e9b60ec8b05e888cf0e55def03ee906" title="environment::entropy" alt="" coords="293,2261,435,2288"/>
+<area shape="rect" id="node31" href="$a00003.html#a1db4e67ba458a54f4fab3e10a203765c" title="Perform the reaction after the Gillespie computation and call the events&#39; score update. " alt="" coords="267,747,461,773"/>
+<area shape="rect" id="node45" href="$a00003.html#a4dfd9bff19e6026f3b4b35af5cedac9a" title="Change volume function &#160;1.0. " alt="" coords="814,89,999,116"/>
+<area shape="rect" id="node46" href="$a00003.html#a8a53821ad1675b0da50591616aac3b74" title="Nutrients amount fixing process. " alt="" coords="551,965,721,992"/>
+<area shape="rect" id="node47" href="$a00003.html#acbbcdb4c77231e9ffa4c169e0caa0d0c" title="This function perform the deterministic molecules efflux process. " alt="" coords="263,1343,465,1385"/>
+<area shape="rect" id="node48" href="$a00003.html#ad714dd5a6f4bab1f418d3426216f4179" title="Function to simulate the finite membrame nutrients diffusion. " alt="" coords="273,1173,455,1214"/>
+<area shape="rect" id="node49" href="$a00003.html#adbaf165a12edd62c614a455544807ea3" title="This function perform the pseudo&#45;deterministic molecules charging process. " alt="" coords="251,1526,477,1567"/>
+<area shape="rect" id="node50" href="$a00003.html#a6ae793f9d2dca0632239be955dd83cee" title="This function perform the deterministic dissociation of the complex. " alt="" coords="255,1409,473,1450"/>
+<area shape="rect" id="node8" href="$a00003.html#ae1270b9c235dd6b28413075197dba8e0" title="Compute a single gillespie score according to the amount and properties of the species involved..." alt="" coords="547,107,725,149"/>
+<area shape="rect" id="node12" href="$a00003.html#a69ae530ef6f9298e3ab8304157709404" title="environment::incNumberOfCpx" alt="" coords="1071,1501,1270,1528"/>
+<area shape="rect" id="node13" href="$a00003.html#ab101d2158575829ddfe846087040f2fa" title="environment::incNumberOf\lCpxMols" alt="" coords="1083,1553,1259,1594"/>
+<area shape="rect" id="node14" href="$a00003.html#a719b14624d9a2f891b8d4eb47649a00e" title="environment::incOverallLoaded\lMolsCounter" alt="" coords="1071,1670,1271,1711"/>
+<area shape="rect" id="node15" href="$a00003.html#af795a4d1f04dfbfcbdf321e20e74f9c2" title="Create the diffusion constant renforcement according to the species length. " alt="" coords="1078,1435,1263,1477"/>
+<area shape="rect" id="node16" href="$a00003.html#a883327bbb969164eb8b3c2d1c941ca03" title="environment::getSystemExpFlag" alt="" coords="1067,1619,1274,1645"/>
+<area shape="rect" id="node21" href="$a00015.html#aeec8f4f81e1b09c6e00ca6744f01af31" title="Timer::getElapsedTimeInMicroSec" alt="" coords="526,2084,746,2111"/>
+<area shape="rect" id="node24" href="$a00003.html#ab98d4ad28b101f08279aa3458d5dfda3" title="environment::getNumberOf\lTheoreticalSpecies" alt="" coords="547,1737,725,1778"/>
+<area shape="rect" id="node25" href="$a00003.html#abf45b6406f8c0e95c4c5edf6b374e112" title="environment::getNumberOf\lReactions" alt="" coords="547,1802,725,1843"/>
+<area shape="rect" id="node26" href="$a00003.html#a21609adb1a83a4cb7eaec78a90acd624" title="environment::getNumberOf\lCatalysis" alt="" coords="547,1867,725,1909"/>
+<area shape="rect" id="node32" href="$a00003.html#a1baf5512b7e0a8fb6f8f890ba9f99cd1" title="Perform CONDENSATION reaction. " alt="" coords="795,636,1018,663"/>
+<area shape="rect" id="node33" href="$a00003.html#ae342684050eb7b52144015d258133098" title="Save the reactions parameters in a buffer that will be saved in a file named reactions_parameters_[cu..." alt="" coords="814,687,999,729"/>
+<area shape="rect" id="node34" href="$a00003.html#aa7a2cc95d8ba242c805a8fda063b23a7" title="Perform ENDO CONDENSATION reaction. " alt="" coords="835,753,978,794"/>
+<area shape="rect" id="node35" href="$a00003.html#aa4ed307a123c402166cfc7f6ed99043a" title="Perform CLEAVAGE reaction. " alt="" coords="808,819,1005,845"/>
+<area shape="rect" id="node36" href="$a00003.html#ade26b82a3b48a5bda7e5751cbfd31b04" title="Perform ENDO_CLEAVAGE reaction. " alt="" coords="835,870,978,911"/>
+<area shape="rect" id="node37" href="$a00003.html#aaf4f4f6be28edb182d2a2516c9394f9b" title="Perform COMPLEX FORMATION reaction. " alt="" coords="539,899,733,941"/>
+<area shape="rect" id="node38" href="$a00003.html#ae942db2453c56b60250a5d43452b91a5" title="Perform ENDO COMPLEX FORMATION reaction. " alt="" coords="550,1198,722,1239"/>
+<area shape="rect" id="node39" href="$a00003.html#a5c5e57b0558067cbf55c894f33d0a121" title="Perform COMPLEX DISASSOCIATION reaction. " alt="" coords="539,1133,733,1174"/>
+<area shape="rect" id="node40" href="$a00003.html#ae7ef2ef3277e15e1644496e118ebb9bc" title="Perform the events&#39; scores update of scores involved in the reaction. " alt="" coords="819,990,995,1031"/>
+<area shape="rect" id="node41" href="$a00003.html#ad072a40a7d9521379c7ff50ed8110fbe" title="Perform MOLECULE EFFLUX reaction. " alt="" coords="539,1067,733,1109"/>
+<area shape="rect" id="node42" href="$a00003.html#a4949138a3771b7f6ec2bfe82cbad947e" title="Perform SPONTANEOUS CLEAVAGE reaction. " alt="" coords="797,389,1016,430"/>
+<area shape="rect" id="node43" href="$a00003.html#acc764a05297ae00db52360f3df5ed1d5" title="Perform SPONTANEOUS CONDENSATION reaction. " alt="" coords="797,454,1016,495"/>
+<area shape="rect" id="node44" href="$a00003.html#aff7607e0f3a74790109a7d87de3031bd" title="Perform ENERGY EFFLUX reaction. " alt="" coords="815,519,998,561"/>
+</map>

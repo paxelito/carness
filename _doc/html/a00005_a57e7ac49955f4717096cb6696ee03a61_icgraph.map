@@ -1,0 +1,9 @@
+<map id="environment::getTotalNumberOfMolecules" name="environment::getTotalNumberOfMolecules">
+<area shape="rect" id="node2" href="$a00005.html#a8a53821ad1675b0da50591616aac3b74" title="Nutrients amount fixing process. " alt="" coords="264,73,435,100"/>
+<area shape="rect" id="node5" href="$a00005.html#acbbcdb4c77231e9ffa4c169e0caa0d0c" title="This function perform the deterministic molecules efflux process. " alt="" coords="248,7,451,49"/>
+<area shape="rect" id="node6" href="$a00005.html#aa860227725dbe5b0251a25f440773161" title="Clear all structures after each simulation. " alt="" coords="248,124,451,151"/>
+<area shape="rect" id="node7" href="$a00005.html#ad8000316befe74598a123bdcd7024697" title="set the concentrations to the initial values and reset internal statistics and counter ..." alt="" coords="245,175,453,217"/>
+<area shape="rect" id="node8" href="$a00005.html#af8083321a2bc93f4f613b05d74d37833" title="Save the reactions times in a file named times_[currentSim].csv. " alt="" coords="255,241,444,268"/>
+<area shape="rect" id="node3" href="$a00005.html#ad4dcf928538066ff8a501dc7f72ac750" title="Perform the gillespie algorithm (OPTIMIZED VERSION) " alt="" coords="502,5,722,46"/>
+<area shape="rect" id="node4" href="$a00005.html#a847f333ec6acea11f2d0fc99bab52586" title="Perform the gillespie algorithm (FIXED VERSION) " alt="" coords="513,70,711,111"/>
+</map>

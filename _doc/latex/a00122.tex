@@ -1,12 +1,621 @@
-\hypertarget{a00122}{\section{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+Timer.cpp File Reference}
-\label{a00122}\index{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+Timer.\+cpp@{/\+Users/alessandrofilisetti/\+Documents/\+G\+I\+T/carness/\+Timer.\+cpp}}
+\hypertarget{a00122}{\section{main Namespace Reference}
+\label{a00122}\index{main@{main}}
 }
-{\ttfamily \#include \char`\"{}Timer.\+h\char`\"{}}\\*
-{\ttfamily \#include $<$stdlib.\+h$>$}\\*
-Include dependency graph for Timer.\+cpp\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=254pt]{a00208}
-\end{center}
-\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \hyperlink{a00122_a6596d20927a9196bbb33aef704e88297}{parser}
+\item 
+tuple \hyperlink{a00122_a80760a53c8941c6f6f30e633649ffd8d}{args} = parser.\-parse\-\_\-args()
+\item 
+tuple \hyperlink{a00122_ac0b5b603b5f89c10838ce6a42be8c6f7}{str\-Path} = os.\-path.\-abspath(args.\-str\-Path)
+\item 
+tuple \hyperlink{a00122_a9606754176252315321d1faa6191479e}{tmp\-Dirs} = sort(os.\-listdir(\hyperlink{a00122_ac0b5b603b5f89c10838ce6a42be8c6f7}{str\-Path}))
+\item 
+string \hyperlink{a00122_acaa3f6fffb18a543c7c04d985e77fa6f}{ndn} = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'
+\item 
+tuple \hyperlink{a00122_af73b43f5468097ae9443adeb6010a75c}{newdir\-All\-Results} = os.\-path.\-join(\hyperlink{a00122_ac0b5b603b5f89c10838ce6a42be8c6f7}{str\-Path}, \hyperlink{a00122_acaa3f6fffb18a543c7c04d985e77fa6f}{ndn})
+\item 
+int \hyperlink{a00122_a05832bb8aa5b5b63ca022653c9b32af5}{\-\_\-\-C\-L\-O\-S\-E\-\_\-} = 0
+\item 
+int \hyperlink{a00122_afe92b072adc360963093d3660e7684ce}{\-\_\-\-P\-R\-O\-T\-O\-\_\-} = 1
+\item 
+int \hyperlink{a00122_a4994448f45a50087ae8864153ab89e10}{\-\_\-\-C\-S\-T\-R\-\_\-} = 2
+\item 
+tuple \hyperlink{a00122_a72ed3f9434cc4dcc2240c6ca408960ff}{fname\-\_\-init\-Raf\-Res} = os.\-path.\-join(\hyperlink{a00122_af73b43f5468097ae9443adeb6010a75c}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis.\-csv')
+\item 
+tuple \hyperlink{a00122_adf05ced8171427a0ea7daf7e595f72b6}{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = os.\-path.\-join(\hyperlink{a00122_af73b43f5468097ae9443adeb6010a75c}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')
+\item 
+tuple \hyperlink{a00122_a1b43b3b737d94a412b2334b78252cdef}{fname\-\_\-init\-Raf\-Res\-A\-L\-L} = os.\-path.\-join(\hyperlink{a00122_af73b43f5468097ae9443adeb6010a75c}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')
+\item 
+tuple \hyperlink{a00122_a98d514a663f6bedde329d0bbbd2b78fa}{fid\-\_\-init\-Raf\-Res} = open(\hyperlink{a00122_a72ed3f9434cc4dcc2240c6ca408960ff}{fname\-\_\-init\-Raf\-Res}, 'w')
+\item 
+tuple \hyperlink{a00122_ae24c607a37f0f3f23d7e87f6bb4fe45b}{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = open(\hyperlink{a00122_adf05ced8171427a0ea7daf7e595f72b6}{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'w')
+\item 
+tuple \hyperlink{a00122_a45aeb03f0d9cc30cb0a490354fd76d6c}{fid\-\_\-init\-Raf\-Res\-A\-L\-L} = open(\hyperlink{a00122_a1b43b3b737d94a412b2334b78252cdef}{fname\-\_\-init\-Raf\-Res\-A\-L\-L}, 'w')
+\item 
+string \hyperlink{a00122_ab9980383a541b03ce91d6b812a4bf79a}{str\-To\-Write} = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\-Size\textbackslash{}t\-Cats\-Size\textbackslash{}tu\-R\-A\-F\textbackslash{}t\-S\-C\-C\textbackslash{}t\-Auto\-Cat\textbackslash{}n\char`\"{}
+\item 
+tuple \hyperlink{a00122_a82f73a786e4c93e909fd689ee0d0812e}{tot\-Dir\-Name} = os.\-path.\-join(\hyperlink{a00122_ac0b5b603b5f89c10838ce6a42be8c6f7}{str\-Path},tmp\-Dir)
+\item 
+tuple \hyperlink{a00122_a93d7d68ada532b3cedaab103283ab91a}{res\-Dir\-Path} = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, args.\-res\-Folder))
+\item 
+tuple \hyperlink{a00122_adc567db25548116293968a9102beab98}{conf} = readfiles.\-read\-Conf\-File(\hyperlink{a00122_a82f73a786e4c93e909fd689ee0d0812e}{tot\-Dir\-Name})
+\item 
+tuple \hyperlink{a00122_a07ce1f0750b6dc5baff89792fc194152}{food\-List} = dm.\-generate\-Flux\-List(\hyperlink{a00122_a82f73a786e4c93e909fd689ee0d0812e}{tot\-Dir\-Name}, sys\-Type)
+\item 
+tuple \hyperlink{a00122_ac2fe1ed3228b8e616f25ccfbe4cc7dc4}{rcts} = readfiles.\-load\-All\-Data(\hyperlink{a00122_a82f73a786e4c93e909fd689ee0d0812e}{tot\-Dir\-Name},'\-\_\-acsreactions.\-csv')
+\item 
+tuple \hyperlink{a00122_adc0282a6415a88834556e66807bcc800}{cats} = readfiles.\-load\-All\-Data(\hyperlink{a00122_a82f73a786e4c93e909fd689ee0d0812e}{tot\-Dir\-Name},'\-\_\-acscatalysis.\-csv')
+\item 
+tuple \hyperlink{a00122_aabf82b9e9c2293000a67162becdd440d}{number\-Of\-Gen} = len(glob.\-glob(os.\-path.\-join(\hyperlink{a00122_a93d7d68ada532b3cedaab103283ab91a}{res\-Dir\-Path},'times\-\_\-$\ast$')))
+\item 
+tuple \hyperlink{a00122_a02d59015bebcf0ad1bc1162efca757c3}{str\-Zeros} = readfiles.\-zero\-Before\-Str\-Num(ngen, \hyperlink{a00122_aabf82b9e9c2293000a67162becdd440d}{number\-Of\-Gen})
+\item 
+string \hyperlink{a00122_a9fff4b23f9489649601960dabc4a6cdd}{f\-Name} = 'R\-A\-F\-\_\-structures\-In\-Time\-\_\-analysis\-\_\-gen\-\_\-'
+\item 
+tuple \hyperlink{a00122_a64d742d069748ddd43a9378ef918d0b1}{fname\-\_\-in\-Time\-Raf\-Res} = os.\-path.\-join(\hyperlink{a00122_af73b43f5468097ae9443adeb6010a75c}{newdir\-All\-Results}, \hyperlink{a00122_a9fff4b23f9489649601960dabc4a6cdd}{f\-Name})
+\item 
+tuple \hyperlink{a00122_ab82095abcedb97b7abf8e003f4724d0c}{fid\-\_\-in\-Time\-Raf\-Res} = open(\hyperlink{a00122_a64d742d069748ddd43a9378ef918d0b1}{fname\-\_\-in\-Time\-Raf\-Res}, 'w')
+\item 
+\hyperlink{a00122_abe4c267a63409b1b7cd9c6aaf0779b4a}{potential} = False
+\item 
+string \hyperlink{a00122_adbfa32333003aa707723362b43bc11ff}{str\-Rct\-Zero} = 'reactions\-\_\-'
+\item 
+string \hyperlink{a00122_a6bb1e2c0e0d0a9e63313c082ee4eec76}{str\-Cat\-Zero} = 'catalysis\-\_\-'
+\item 
+tuple \hyperlink{a00122_aa37eddd86a00bf98dff8cc9260d6d13b}{rct\-Files\-Zero} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00122_a93d7d68ada532b3cedaab103283ab91a}{res\-Dir\-Path},\hyperlink{a00122_adbfa32333003aa707723362b43bc11ff}{str\-Rct\-Zero})))
+\item 
+tuple \hyperlink{a00122_a7ab6089d577bd60acf22b92e84930523}{cat\-Files\-Zero} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00122_a93d7d68ada532b3cedaab103283ab91a}{res\-Dir\-Path},\hyperlink{a00122_a6bb1e2c0e0d0a9e63313c082ee4eec76}{str\-Cat\-Zero})))
+\item 
+string \hyperlink{a00122_a28a37e653a4c0984df32f8d83c3596ff}{str\-Rct} = 'reactions\-\_\-'
+\item 
+string \hyperlink{a00122_ab12df661b7defb4d7077777ad7d6352d}{str\-Cat} = 'catalysis\-\_\-'
+\item 
+tuple \hyperlink{a00122_a9016a8f5eafe76e4e8dbb1bc3ce94af5}{rct\-Files} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00122_a93d7d68ada532b3cedaab103283ab91a}{res\-Dir\-Path},\hyperlink{a00122_a28a37e653a4c0984df32f8d83c3596ff}{str\-Rct})))
+\item 
+tuple \hyperlink{a00122_a189dc9cf606d870dacab059d5e7dca24}{cat\-Files} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00122_a93d7d68ada532b3cedaab103283ab91a}{res\-Dir\-Path},\hyperlink{a00122_ab12df661b7defb4d7077777ad7d6352d}{str\-Cat})))
+\item 
+list \hyperlink{a00122_ab4296f1ae2e4c4bb597ca27e84849510}{sng\-Time} = \hyperlink{a00122_adc567db25548116293968a9102beab98}{conf}\mbox{[}2\mbox{]}
+\item 
+int \hyperlink{a00122_a9c2013c88f8354ccf6504c51843f1d5e}{act\-Time} = 0
+\item 
+list \hyperlink{a00122_a2120e8355b3501aed0114a74091d56c1}{procrcts} = \hyperlink{a00122_ac2fe1ed3228b8e616f25ccfbe4cc7dc4}{rcts}\mbox{[}\hyperlink{a00122_ac2fe1ed3228b8e616f25ccfbe4cc7dc4}{rcts}\mbox{[}\-:,5\mbox{]} $>$ 0,\-:\mbox{]}
+\item 
+list \hyperlink{a00122_a4e3c4b627d098aef6c7905cb20683e07}{proccats} = \hyperlink{a00122_adc0282a6415a88834556e66807bcc800}{cats}\mbox{[}\hyperlink{a00122_adc0282a6415a88834556e66807bcc800}{cats}\mbox{[}\-:,3\mbox{]} $>$ 0,\-:\mbox{]}
+\item 
+tuple \hyperlink{a00122_a8a594014e054956af345eaa5e16bea0d}{R}
+\item 
+tuple \hyperlink{a00122_ad9cee9fada504bb0dab86df3a416232b}{last\-Rct} = readfiles.\-load\-All\-Data(\hyperlink{a00122_a82f73a786e4c93e909fd689ee0d0812e}{tot\-Dir\-Name},\hyperlink{a00122_a9016a8f5eafe76e4e8dbb1bc3ce94af5}{rct\-Files}\mbox{[}-\/1\mbox{]})
+\item 
+tuple \hyperlink{a00122_a1d69cc4251d83bb227555044baf27b86}{last\-Cat} = readfiles.\-load\-All\-Data(\hyperlink{a00122_a82f73a786e4c93e909fd689ee0d0812e}{tot\-Dir\-Name},\hyperlink{a00122_a189dc9cf606d870dacab059d5e7dca24}{cat\-Files}\mbox{[}-\/1\mbox{]})
+\item 
+tuple \hyperlink{a00122_a6a031fb0c5a0a5519fc4c3f6d7ef35d1}{fname\-\_\-dyn\-Raf\-Res} = os.\-path.\-join(\hyperlink{a00122_af73b43f5468097ae9443adeb6010a75c}{newdir\-All\-Results}, \hyperlink{a00122_a9fff4b23f9489649601960dabc4a6cdd}{f\-Name})
+\item 
+tuple \hyperlink{a00122_aaff6b4fb4c2e2089c2a207a12f1757e3}{fid\-\_\-dyn\-Raf\-Res} = open(\hyperlink{a00122_a6a031fb0c5a0a5519fc4c3f6d7ef35d1}{fname\-\_\-dyn\-Raf\-Res}, 'w')
+\item 
+string \hyperlink{a00122_af48af84bff2351a55727aba6a63c1b52}{str\-Rct\-Par} = 'reactions\-\_\-parameters\-\_\-'
+\item 
+tuple \hyperlink{a00122_ac4e9cba2fd0b813ba19029541ad609e5}{rct\-Param\-File} = sorted(glob.\-glob(os.\-path.\-join(\hyperlink{a00122_a93d7d68ada532b3cedaab103283ab91a}{res\-Dir\-Path},\hyperlink{a00122_af48af84bff2351a55727aba6a63c1b52}{str\-Rct\-Par})))
+\item 
+tuple \hyperlink{a00122_a68ab0ffa4b5ff1cceff01f4abe686ad0}{fid} = open(\hyperlink{a00122_ac4e9cba2fd0b813ba19029541ad609e5}{rct\-Param\-File}\mbox{[}0\mbox{]}, '\hyperlink{a00024_ac862e7284527eb913b1351c8bfb8e079}{r}')
+\item 
+int \hyperlink{a00122_a6a6de947e3b6ada5ea6e761d208228bd}{previous\-Time} = 0
+\item 
+\hyperlink{a00122_a5517c07ae046c271d6291e9b3f7d139d}{decay\-Time} = args.\-decay
+\item 
+int \hyperlink{a00122_a358b60986e7e25df0dfb61562b7aa3e2}{condensation\-\_\-counter} = 0
+\item 
+int \hyperlink{a00122_a0521d81d319c4d79433b5fb65a6da1c2}{endo\-\_\-condensation\-\_\-counter} = 0
+\item 
+int \hyperlink{a00122_aba28788973ae3e9140b53078efe5d204}{cleavage\-\_\-counter} = 0
+\item 
+int \hyperlink{a00122_a17b22b48a2afe0223186b4275fe5ba70}{endo\-\_\-cleavage\-\_\-counter} = 0
+\item 
+int \hyperlink{a00122_ae7ca1c378927da05feb71e5a9f775afb}{n\-Anal} = 1
+\item 
+int \hyperlink{a00122_a53e397dea15f17442a198395e65b377b}{rct\-Curr\-I\-D} = 0
+\item 
+int \hyperlink{a00122_aa56c55225fa65fa569bd8d5f1063550e}{cat\-Curr\-I\-D} = 0
+\item 
+int \hyperlink{a00122_a2dcb93d1b24fce96491e031528ed43c0}{real\-Rctl} = 0
+\item 
+\hyperlink{a00122_a5ba0cd0b7538ed8047b2fea322ecb4b7}{time\-Interval} = \hyperlink{a00021_afc6b38657a313b9f1de2ee356910b6ee}{rtime}-\/\hyperlink{a00122_a6a6de947e3b6ada5ea6e761d208228bd}{previous\-Time}
+\item 
+tuple \hyperlink{a00122_a4cfdc01ecc5ad260a4f30c9353e3d856}{graph} = network.\-remove\-Rare\-Rcts(graph,2,3,4,\hyperlink{a00122_a5ba0cd0b7538ed8047b2fea322ecb4b7}{time\-Interval})
+\item 
+tuple \hyperlink{a00122_ab96de87bc8cbe59221256af996bdc43e}{graph\-S\-U\-B} = network.\-remove\-Rare\-Rcts(graph\-S\-U\-B,2,3,4,\hyperlink{a00122_a5ba0cd0b7538ed8047b2fea322ecb4b7}{time\-Interval})
+\item 
+tuple \hyperlink{a00122_ab26ffc3eda5d201a779d705813b06348}{onrcts} = network.\-remove\-Rare\-Rcts(onrcts,5,6,7,\hyperlink{a00122_a5ba0cd0b7538ed8047b2fea322ecb4b7}{time\-Interval})
+\item 
+tuple \hyperlink{a00122_ab4d380bc4bfcb970acc39ddf18a73972}{oncats} = network.\-remove\-Rare\-Rcts(oncats,3,4,5,\hyperlink{a00122_a5ba0cd0b7538ed8047b2fea322ecb4b7}{time\-Interval})
+\item 
+tuple \hyperlink{a00122_adbbdc0f6ad0f08400b3e492f7a807a6b}{position\-R} = ((\hyperlink{a00122_ab26ffc3eda5d201a779d705813b06348}{onrcts}\mbox{[}\-:,1\mbox{]} == \hyperlink{a00021_afb5980388a6e55ca55437b53cdaf528a}{cc}) \& (\hyperlink{a00122_ab26ffc3eda5d201a779d705813b06348}{onrcts}\mbox{[}\-:,2\mbox{]} == \hyperlink{a00021_ab346189eef5359a07ba32144ddcd4465}{mol\-\_\-\-I}) \& (\hyperlink{a00122_ab26ffc3eda5d201a779d705813b06348}{onrcts}\mbox{[}\-:,3\mbox{]} == \hyperlink{a00021_a4d2c086887289f8900b38ffa56854da3}{mol\-\_\-\-I\-I}))
+\item 
+tuple \hyperlink{a00122_ac67c60df3cc9afae7e4888d2b48b846d}{position} = ((\hyperlink{a00122_ab4d380bc4bfcb970acc39ddf18a73972}{oncats}\mbox{[}\-:,1\mbox{]} == \hyperlink{a00021_a7073f71a43389f3032e69b1fffc2551a}{cat}) \& (\hyperlink{a00122_ab4d380bc4bfcb970acc39ddf18a73972}{oncats}\mbox{[}\-:,2\mbox{]} == \hyperlink{a00122_ab26ffc3eda5d201a779d705813b06348}{onrcts}\mbox{[}\hyperlink{a00122_adbbdc0f6ad0f08400b3e492f7a807a6b}{position\-R},0\mbox{]}))
+\item 
+tuple \hyperlink{a00122_a02c2194d4e56d3d8c6d2c204a8017e3a}{netouts}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{a00122_a05832bb8aa5b5b63ca022653c9b32af5}{\index{main@{main}!\-\_\-\-C\-L\-O\-S\-E\-\_\-@{\-\_\-\-C\-L\-O\-S\-E\-\_\-}}
+\index{\-\_\-\-C\-L\-O\-S\-E\-\_\-@{\-\_\-\-C\-L\-O\-S\-E\-\_\-}!main@{main}}
+\subsubsection[{\-\_\-\-C\-L\-O\-S\-E\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-\_\-\-C\-L\-O\-S\-E\-\_\- = 0}}\label{a00122_a05832bb8aa5b5b63ca022653c9b32af5}
+
+
+Definition at line 57 of file main.\-py.
+
+\hypertarget{a00122_a4994448f45a50087ae8864153ab89e10}{\index{main@{main}!\-\_\-\-C\-S\-T\-R\-\_\-@{\-\_\-\-C\-S\-T\-R\-\_\-}}
+\index{\-\_\-\-C\-S\-T\-R\-\_\-@{\-\_\-\-C\-S\-T\-R\-\_\-}!main@{main}}
+\subsubsection[{\-\_\-\-C\-S\-T\-R\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-\_\-\-C\-S\-T\-R\-\_\- = 2}}\label{a00122_a4994448f45a50087ae8864153ab89e10}
+
+
+Definition at line 59 of file main.\-py.
+
+\hypertarget{a00122_afe92b072adc360963093d3660e7684ce}{\index{main@{main}!\-\_\-\-P\-R\-O\-T\-O\-\_\-@{\-\_\-\-P\-R\-O\-T\-O\-\_\-}}
+\index{\-\_\-\-P\-R\-O\-T\-O\-\_\-@{\-\_\-\-P\-R\-O\-T\-O\-\_\-}!main@{main}}
+\subsubsection[{\-\_\-\-P\-R\-O\-T\-O\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-\_\-\-P\-R\-O\-T\-O\-\_\- = 1}}\label{a00122_afe92b072adc360963093d3660e7684ce}
+
+
+Definition at line 58 of file main.\-py.
+
+\hypertarget{a00122_a9c2013c88f8354ccf6504c51843f1d5e}{\index{main@{main}!act\-Time@{act\-Time}}
+\index{act\-Time@{act\-Time}!main@{main}}
+\subsubsection[{act\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-act\-Time = 0}}\label{a00122_a9c2013c88f8354ccf6504c51843f1d5e}
+
+
+Definition at line 144 of file main.\-py.
+
+\hypertarget{a00122_a80760a53c8941c6f6f30e633649ffd8d}{\index{main@{main}!args@{args}}
+\index{args@{args}!main@{main}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-args = parser.\-parse\-\_\-args()}}\label{a00122_a80760a53c8941c6f6f30e633649ffd8d}
+
+
+Definition at line 40 of file main.\-py.
+
+\hypertarget{a00122_aa56c55225fa65fa569bd8d5f1063550e}{\index{main@{main}!cat\-Curr\-I\-D@{cat\-Curr\-I\-D}}
+\index{cat\-Curr\-I\-D@{cat\-Curr\-I\-D}!main@{main}}
+\subsubsection[{cat\-Curr\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-cat\-Curr\-I\-D = 0}}\label{a00122_aa56c55225fa65fa569bd8d5f1063550e}
+
+
+Definition at line 196 of file main.\-py.
+
+\hypertarget{a00122_a189dc9cf606d870dacab059d5e7dca24}{\index{main@{main}!cat\-Files@{cat\-Files}}
+\index{cat\-Files@{cat\-Files}!main@{main}}
+\subsubsection[{cat\-Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-cat\-Files = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Cat})))}}\label{a00122_a189dc9cf606d870dacab059d5e7dca24}
+
+
+Definition at line 137 of file main.\-py.
+
+\hypertarget{a00122_a7ab6089d577bd60acf22b92e84930523}{\index{main@{main}!cat\-Files\-Zero@{cat\-Files\-Zero}}
+\index{cat\-Files\-Zero@{cat\-Files\-Zero}!main@{main}}
+\subsubsection[{cat\-Files\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-cat\-Files\-Zero = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Cat\-Zero})))}}\label{a00122_a7ab6089d577bd60acf22b92e84930523}
+
+
+Definition at line 132 of file main.\-py.
+
+\hypertarget{a00122_adc0282a6415a88834556e66807bcc800}{\index{main@{main}!cats@{cats}}
+\index{cats@{cats}!main@{main}}
+\subsubsection[{cats}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-cats = readfiles.\-load\-All\-Data({\bf tot\-Dir\-Name},'\-\_\-acscatalysis.\-csv')}}\label{a00122_adc0282a6415a88834556e66807bcc800}
+
+
+Definition at line 95 of file main.\-py.
+
+\hypertarget{a00122_aba28788973ae3e9140b53078efe5d204}{\index{main@{main}!cleavage\-\_\-counter@{cleavage\-\_\-counter}}
+\index{cleavage\-\_\-counter@{cleavage\-\_\-counter}!main@{main}}
+\subsubsection[{cleavage\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-cleavage\-\_\-counter = 0}}\label{a00122_aba28788973ae3e9140b53078efe5d204}
+
+
+Definition at line 192 of file main.\-py.
+
+\hypertarget{a00122_a358b60986e7e25df0dfb61562b7aa3e2}{\index{main@{main}!condensation\-\_\-counter@{condensation\-\_\-counter}}
+\index{condensation\-\_\-counter@{condensation\-\_\-counter}!main@{main}}
+\subsubsection[{condensation\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-condensation\-\_\-counter = 0}}\label{a00122_a358b60986e7e25df0dfb61562b7aa3e2}
+
+
+Definition at line 190 of file main.\-py.
+
+\hypertarget{a00122_adc567db25548116293968a9102beab98}{\index{main@{main}!conf@{conf}}
+\index{conf@{conf}!main@{main}}
+\subsubsection[{conf}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-conf = readfiles.\-read\-Conf\-File({\bf tot\-Dir\-Name})}}\label{a00122_adc567db25548116293968a9102beab98}
+
+
+Definition at line 84 of file main.\-py.
+
+\hypertarget{a00122_a5517c07ae046c271d6291e9b3f7d139d}{\index{main@{main}!decay\-Time@{decay\-Time}}
+\index{decay\-Time@{decay\-Time}!main@{main}}
+\subsubsection[{decay\-Time}]{\setlength{\rightskip}{0pt plus 5cm}main.\-decay\-Time = args.\-decay}}\label{a00122_a5517c07ae046c271d6291e9b3f7d139d}
+
+
+Definition at line 189 of file main.\-py.
+
+\hypertarget{a00122_a17b22b48a2afe0223186b4275fe5ba70}{\index{main@{main}!endo\-\_\-cleavage\-\_\-counter@{endo\-\_\-cleavage\-\_\-counter}}
+\index{endo\-\_\-cleavage\-\_\-counter@{endo\-\_\-cleavage\-\_\-counter}!main@{main}}
+\subsubsection[{endo\-\_\-cleavage\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-endo\-\_\-cleavage\-\_\-counter = 0}}\label{a00122_a17b22b48a2afe0223186b4275fe5ba70}
+
+
+Definition at line 193 of file main.\-py.
+
+\hypertarget{a00122_a0521d81d319c4d79433b5fb65a6da1c2}{\index{main@{main}!endo\-\_\-condensation\-\_\-counter@{endo\-\_\-condensation\-\_\-counter}}
+\index{endo\-\_\-condensation\-\_\-counter@{endo\-\_\-condensation\-\_\-counter}!main@{main}}
+\subsubsection[{endo\-\_\-condensation\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-endo\-\_\-condensation\-\_\-counter = 0}}\label{a00122_a0521d81d319c4d79433b5fb65a6da1c2}
+
+
+Definition at line 191 of file main.\-py.
+
+\hypertarget{a00122_a68ab0ffa4b5ff1cceff01f4abe686ad0}{\index{main@{main}!fid@{fid}}
+\index{fid@{fid}!main@{main}}
+\subsubsection[{fid}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fid = open({\bf rct\-Param\-File}\mbox{[}0\mbox{]}, '{\bf r}')}}\label{a00122_a68ab0ffa4b5ff1cceff01f4abe686ad0}
+
+
+Definition at line 187 of file main.\-py.
+
+\hypertarget{a00122_aaff6b4fb4c2e2089c2a207a12f1757e3}{\index{main@{main}!fid\-\_\-dyn\-Raf\-Res@{fid\-\_\-dyn\-Raf\-Res}}
+\index{fid\-\_\-dyn\-Raf\-Res@{fid\-\_\-dyn\-Raf\-Res}!main@{main}}
+\subsubsection[{fid\-\_\-dyn\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fid\-\_\-dyn\-Raf\-Res = open({\bf fname\-\_\-dyn\-Raf\-Res}, 'w')}}\label{a00122_aaff6b4fb4c2e2089c2a207a12f1757e3}
+
+
+Definition at line 179 of file main.\-py.
+
+\hypertarget{a00122_a98d514a663f6bedde329d0bbbd2b78fa}{\index{main@{main}!fid\-\_\-init\-Raf\-Res@{fid\-\_\-init\-Raf\-Res}}
+\index{fid\-\_\-init\-Raf\-Res@{fid\-\_\-init\-Raf\-Res}!main@{main}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fid\-\_\-init\-Raf\-Res = open({\bf fname\-\_\-init\-Raf\-Res}, 'w')}}\label{a00122_a98d514a663f6bedde329d0bbbd2b78fa}
+
+
+Definition at line 65 of file main.\-py.
+
+\hypertarget{a00122_a45aeb03f0d9cc30cb0a490354fd76d6c}{\index{main@{main}!fid\-\_\-init\-Raf\-Res\-A\-L\-L@{fid\-\_\-init\-Raf\-Res\-A\-L\-L}}
+\index{fid\-\_\-init\-Raf\-Res\-A\-L\-L@{fid\-\_\-init\-Raf\-Res\-A\-L\-L}!main@{main}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fid\-\_\-init\-Raf\-Res\-A\-L\-L = open({\bf fname\-\_\-init\-Raf\-Res\-A\-L\-L}, 'w')}}\label{a00122_a45aeb03f0d9cc30cb0a490354fd76d6c}
+
+
+Definition at line 67 of file main.\-py.
+
+\hypertarget{a00122_ae24c607a37f0f3f23d7e87f6bb4fe45b}{\index{main@{main}!fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}}
+\index{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}!main@{main}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T = open({\bf fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'w')}}\label{a00122_ae24c607a37f0f3f23d7e87f6bb4fe45b}
+
+
+Definition at line 66 of file main.\-py.
+
+\hypertarget{a00122_ab82095abcedb97b7abf8e003f4724d0c}{\index{main@{main}!fid\-\_\-in\-Time\-Raf\-Res@{fid\-\_\-in\-Time\-Raf\-Res}}
+\index{fid\-\_\-in\-Time\-Raf\-Res@{fid\-\_\-in\-Time\-Raf\-Res}!main@{main}}
+\subsubsection[{fid\-\_\-in\-Time\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fid\-\_\-in\-Time\-Raf\-Res = open({\bf fname\-\_\-in\-Time\-Raf\-Res}, 'w')}}\label{a00122_ab82095abcedb97b7abf8e003f4724d0c}
+
+
+Definition at line 119 of file main.\-py.
+
+\hypertarget{a00122_a9fff4b23f9489649601960dabc4a6cdd}{\index{main@{main}!f\-Name@{f\-Name}}
+\index{f\-Name@{f\-Name}!main@{main}}
+\subsubsection[{f\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string main.\-f\-Name = 'R\-A\-F\-\_\-structures\-In\-Time\-\_\-analysis\-\_\-gen\-\_\-'}}\label{a00122_a9fff4b23f9489649601960dabc4a6cdd}
+
+
+Definition at line 117 of file main.\-py.
+
+\hypertarget{a00122_a6a031fb0c5a0a5519fc4c3f6d7ef35d1}{\index{main@{main}!fname\-\_\-dyn\-Raf\-Res@{fname\-\_\-dyn\-Raf\-Res}}
+\index{fname\-\_\-dyn\-Raf\-Res@{fname\-\_\-dyn\-Raf\-Res}!main@{main}}
+\subsubsection[{fname\-\_\-dyn\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fname\-\_\-dyn\-Raf\-Res = os.\-path.\-join({\bf newdir\-All\-Results}, {\bf f\-Name})}}\label{a00122_a6a031fb0c5a0a5519fc4c3f6d7ef35d1}
+
+
+Definition at line 178 of file main.\-py.
+
+\hypertarget{a00122_a72ed3f9434cc4dcc2240c6ca408960ff}{\index{main@{main}!fname\-\_\-init\-Raf\-Res@{fname\-\_\-init\-Raf\-Res}}
+\index{fname\-\_\-init\-Raf\-Res@{fname\-\_\-init\-Raf\-Res}!main@{main}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fname\-\_\-init\-Raf\-Res = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis.\-csv')}}\label{a00122_a72ed3f9434cc4dcc2240c6ca408960ff}
+
+
+Definition at line 62 of file main.\-py.
+
+\hypertarget{a00122_a1b43b3b737d94a412b2334b78252cdef}{\index{main@{main}!fname\-\_\-init\-Raf\-Res\-A\-L\-L@{fname\-\_\-init\-Raf\-Res\-A\-L\-L}}
+\index{fname\-\_\-init\-Raf\-Res\-A\-L\-L@{fname\-\_\-init\-Raf\-Res\-A\-L\-L}!main@{main}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fname\-\_\-init\-Raf\-Res\-A\-L\-L = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')}}\label{a00122_a1b43b3b737d94a412b2334b78252cdef}
+
+
+Definition at line 64 of file main.\-py.
+
+\hypertarget{a00122_adf05ced8171427a0ea7daf7e595f72b6}{\index{main@{main}!fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}}
+\index{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}!main@{main}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')}}\label{a00122_adf05ced8171427a0ea7daf7e595f72b6}
+
+
+Definition at line 63 of file main.\-py.
+
+\hypertarget{a00122_a64d742d069748ddd43a9378ef918d0b1}{\index{main@{main}!fname\-\_\-in\-Time\-Raf\-Res@{fname\-\_\-in\-Time\-Raf\-Res}}
+\index{fname\-\_\-in\-Time\-Raf\-Res@{fname\-\_\-in\-Time\-Raf\-Res}!main@{main}}
+\subsubsection[{fname\-\_\-in\-Time\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-fname\-\_\-in\-Time\-Raf\-Res = os.\-path.\-join({\bf newdir\-All\-Results}, {\bf f\-Name})}}\label{a00122_a64d742d069748ddd43a9378ef918d0b1}
+
+
+Definition at line 118 of file main.\-py.
+
+\hypertarget{a00122_a07ce1f0750b6dc5baff89792fc194152}{\index{main@{main}!food\-List@{food\-List}}
+\index{food\-List@{food\-List}!main@{main}}
+\subsubsection[{food\-List}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-food\-List = dm.\-generate\-Flux\-List({\bf tot\-Dir\-Name}, sys\-Type)}}\label{a00122_a07ce1f0750b6dc5baff89792fc194152}
+
+
+Definition at line 89 of file main.\-py.
+
+\hypertarget{a00122_a4cfdc01ecc5ad260a4f30c9353e3d856}{\index{main@{main}!graph@{graph}}
+\index{graph@{graph}!main@{main}}
+\subsubsection[{graph}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-graph = network.\-remove\-Rare\-Rcts(graph,2,3,4,{\bf time\-Interval})}}\label{a00122_a4cfdc01ecc5ad260a4f30c9353e3d856}
+
+
+Definition at line 213 of file main.\-py.
+
+\hypertarget{a00122_ab96de87bc8cbe59221256af996bdc43e}{\index{main@{main}!graph\-S\-U\-B@{graph\-S\-U\-B}}
+\index{graph\-S\-U\-B@{graph\-S\-U\-B}!main@{main}}
+\subsubsection[{graph\-S\-U\-B}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-graph\-S\-U\-B = network.\-remove\-Rare\-Rcts(graph\-S\-U\-B,2,3,4,{\bf time\-Interval})}}\label{a00122_ab96de87bc8cbe59221256af996bdc43e}
+
+
+Definition at line 214 of file main.\-py.
+
+\hypertarget{a00122_a1d69cc4251d83bb227555044baf27b86}{\index{main@{main}!last\-Cat@{last\-Cat}}
+\index{last\-Cat@{last\-Cat}!main@{main}}
+\subsubsection[{last\-Cat}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-last\-Cat = readfiles.\-load\-All\-Data({\bf tot\-Dir\-Name},{\bf cat\-Files}\mbox{[}-\/1\mbox{]})}}\label{a00122_a1d69cc4251d83bb227555044baf27b86}
+
+
+Definition at line 161 of file main.\-py.
+
+\hypertarget{a00122_ad9cee9fada504bb0dab86df3a416232b}{\index{main@{main}!last\-Rct@{last\-Rct}}
+\index{last\-Rct@{last\-Rct}!main@{main}}
+\subsubsection[{last\-Rct}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-last\-Rct = readfiles.\-load\-All\-Data({\bf tot\-Dir\-Name},{\bf rct\-Files}\mbox{[}-\/1\mbox{]})}}\label{a00122_ad9cee9fada504bb0dab86df3a416232b}
+
+
+Definition at line 160 of file main.\-py.
+
+\hypertarget{a00122_ae7ca1c378927da05feb71e5a9f775afb}{\index{main@{main}!n\-Anal@{n\-Anal}}
+\index{n\-Anal@{n\-Anal}!main@{main}}
+\subsubsection[{n\-Anal}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-n\-Anal = 1}}\label{a00122_ae7ca1c378927da05feb71e5a9f775afb}
+
+
+Definition at line 194 of file main.\-py.
+
+\hypertarget{a00122_acaa3f6fffb18a543c7c04d985e77fa6f}{\index{main@{main}!ndn@{ndn}}
+\index{ndn@{ndn}!main@{main}}
+\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string main.\-ndn = '\-\_\-0\-\_\-new\-\_\-all\-Stat\-Results'}}\label{a00122_acaa3f6fffb18a543c7c04d985e77fa6f}
+
+
+Definition at line 50 of file main.\-py.
+
+\hypertarget{a00122_a02c2194d4e56d3d8c6d2c204a8017e3a}{\index{main@{main}!netouts@{netouts}}
+\index{netouts@{netouts}!main@{main}}
+\subsubsection[{netouts}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-netouts}}\label{a00122_a02c2194d4e56d3d8c6d2c204a8017e3a}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = network.net\_analysis\_of\_dynamic\_graphs(fid\_dynRafRes, rtime, onrcts[:,0:5], oncats[:,0:5], foodList,\(\backslash\)
+2                                                                                                                                                                 
+         \textcolor{keyword}{False}, completeRCTS=lastRct , debug=args.debug)
+\end{DoxyCode}
+
+
+Definition at line 255 of file main.\-py.
+
+\hypertarget{a00122_af73b43f5468097ae9443adeb6010a75c}{\index{main@{main}!newdir\-All\-Results@{newdir\-All\-Results}}
+\index{newdir\-All\-Results@{newdir\-All\-Results}!main@{main}}
+\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-newdir\-All\-Results = os.\-path.\-join({\bf str\-Path}, {\bf ndn})}}\label{a00122_af73b43f5468097ae9443adeb6010a75c}
+
+
+Definition at line 51 of file main.\-py.
+
+\hypertarget{a00122_aabf82b9e9c2293000a67162becdd440d}{\index{main@{main}!number\-Of\-Gen@{number\-Of\-Gen}}
+\index{number\-Of\-Gen@{number\-Of\-Gen}!main@{main}}
+\subsubsection[{number\-Of\-Gen}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-number\-Of\-Gen = len(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},'times\-\_\-$\ast$')))}}\label{a00122_aabf82b9e9c2293000a67162becdd440d}
+
+
+Definition at line 102 of file main.\-py.
+
+\hypertarget{a00122_ab4d380bc4bfcb970acc39ddf18a73972}{\index{main@{main}!oncats@{oncats}}
+\index{oncats@{oncats}!main@{main}}
+\subsubsection[{oncats}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-oncats = network.\-remove\-Rare\-Rcts(oncats,3,4,5,{\bf time\-Interval})}}\label{a00122_ab4d380bc4bfcb970acc39ddf18a73972}
+
+
+Definition at line 216 of file main.\-py.
+
+\hypertarget{a00122_ab26ffc3eda5d201a779d705813b06348}{\index{main@{main}!onrcts@{onrcts}}
+\index{onrcts@{onrcts}!main@{main}}
+\subsubsection[{onrcts}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-onrcts = network.\-remove\-Rare\-Rcts(onrcts,5,6,7,{\bf time\-Interval})}}\label{a00122_ab26ffc3eda5d201a779d705813b06348}
+
+
+Definition at line 215 of file main.\-py.
+
+\hypertarget{a00122_a6596d20927a9196bbb33aef704e88297}{\index{main@{main}!parser@{parser}}
+\index{parser@{parser}!main@{main}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-parser}}\label{a00122_a6596d20927a9196bbb33aef704e88297}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = ArgumentParser(
+2                                 description=\textcolor{stringliteral}{'Main script of ACS analysis.'}
+3                                 , epilog=\textcolor{stringliteral}{'''ACS ANALYSIS Main File. '''})
+\end{DoxyCode}
+
+
+Definition at line 28 of file main.\-py.
+
+\hypertarget{a00122_ac67c60df3cc9afae7e4888d2b48b846d}{\index{main@{main}!position@{position}}
+\index{position@{position}!main@{main}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-position = (({\bf oncats}\mbox{[}\-:,1\mbox{]} == {\bf cat}) \& ({\bf oncats}\mbox{[}\-:,2\mbox{]} == {\bf onrcts}\mbox{[}{\bf position\-R},0\mbox{]}))}}\label{a00122_ac67c60df3cc9afae7e4888d2b48b846d}
+
+
+Definition at line 242 of file main.\-py.
+
+\hypertarget{a00122_adbbdc0f6ad0f08400b3e492f7a807a6b}{\index{main@{main}!position\-R@{position\-R}}
+\index{position\-R@{position\-R}!main@{main}}
+\subsubsection[{position\-R}]{\setlength{\rightskip}{0pt plus 5cm}list main.\-position\-R = (({\bf onrcts}\mbox{[}\-:,1\mbox{]} == {\bf cc}) \& ({\bf onrcts}\mbox{[}\-:,2\mbox{]} == {\bf mol\-\_\-\-I}) \& ({\bf onrcts}\mbox{[}\-:,3\mbox{]} == {\bf mol\-\_\-\-I\-I}))}}\label{a00122_adbbdc0f6ad0f08400b3e492f7a807a6b}
+
+
+Definition at line 229 of file main.\-py.
+
+\hypertarget{a00122_abe4c267a63409b1b7cd9c6aaf0779b4a}{\index{main@{main}!potential@{potential}}
+\index{potential@{potential}!main@{main}}
+\subsubsection[{potential}]{\setlength{\rightskip}{0pt plus 5cm}main.\-potential = False}}\label{a00122_abe4c267a63409b1b7cd9c6aaf0779b4a}
+
+
+Definition at line 122 of file main.\-py.
+
+\hypertarget{a00122_a6a6de947e3b6ada5ea6e761d208228bd}{\index{main@{main}!previous\-Time@{previous\-Time}}
+\index{previous\-Time@{previous\-Time}!main@{main}}
+\subsubsection[{previous\-Time}]{\setlength{\rightskip}{0pt plus 5cm}main.\-previous\-Time = 0}}\label{a00122_a6a6de947e3b6ada5ea6e761d208228bd}
+
+
+Definition at line 188 of file main.\-py.
+
+\hypertarget{a00122_a4e3c4b627d098aef6c7905cb20683e07}{\index{main@{main}!proccats@{proccats}}
+\index{proccats@{proccats}!main@{main}}
+\subsubsection[{proccats}]{\setlength{\rightskip}{0pt plus 5cm}list main.\-proccats = {\bf cats}\mbox{[}{\bf cats}\mbox{[}\-:,3\mbox{]} $>$ 0,\-:\mbox{]}}}\label{a00122_a4e3c4b627d098aef6c7905cb20683e07}
+
+
+Definition at line 153 of file main.\-py.
+
+\hypertarget{a00122_a2120e8355b3501aed0114a74091d56c1}{\index{main@{main}!procrcts@{procrcts}}
+\index{procrcts@{procrcts}!main@{main}}
+\subsubsection[{procrcts}]{\setlength{\rightskip}{0pt plus 5cm}list main.\-procrcts = {\bf rcts}\mbox{[}{\bf rcts}\mbox{[}\-:,5\mbox{]} $>$ 0,\-:\mbox{]}}}\label{a00122_a2120e8355b3501aed0114a74091d56c1}
+
+
+Definition at line 152 of file main.\-py.
+
+\hypertarget{a00122_a8a594014e054956af345eaa5e16bea0d}{\index{main@{main}!R@{R}}
+\index{R@{R}!main@{main}}
+\subsubsection[{R}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-R}}\label{a00122_a8a594014e054956af345eaa5e16bea0d}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+1 = network.net\_analysis\_of\_dynamic\_graphs(fid\_inTimeRafRes, actTime, procrcts[:,0:5], proccats[:,0:5], \(\backslash\)
+2                                                                                                                                                 
+         foodList, potential, rcts, cats, debug=args.debug)
+\end{DoxyCode}
+
+
+Definition at line 154 of file main.\-py.
+
+\hypertarget{a00122_a53e397dea15f17442a198395e65b377b}{\index{main@{main}!rct\-Curr\-I\-D@{rct\-Curr\-I\-D}}
+\index{rct\-Curr\-I\-D@{rct\-Curr\-I\-D}!main@{main}}
+\subsubsection[{rct\-Curr\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-rct\-Curr\-I\-D = 0}}\label{a00122_a53e397dea15f17442a198395e65b377b}
+
+
+Definition at line 195 of file main.\-py.
+
+\hypertarget{a00122_a9016a8f5eafe76e4e8dbb1bc3ce94af5}{\index{main@{main}!rct\-Files@{rct\-Files}}
+\index{rct\-Files@{rct\-Files}!main@{main}}
+\subsubsection[{rct\-Files}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-rct\-Files = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Rct})))}}\label{a00122_a9016a8f5eafe76e4e8dbb1bc3ce94af5}
+
+
+Definition at line 136 of file main.\-py.
+
+\hypertarget{a00122_aa37eddd86a00bf98dff8cc9260d6d13b}{\index{main@{main}!rct\-Files\-Zero@{rct\-Files\-Zero}}
+\index{rct\-Files\-Zero@{rct\-Files\-Zero}!main@{main}}
+\subsubsection[{rct\-Files\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-rct\-Files\-Zero = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Rct\-Zero})))}}\label{a00122_aa37eddd86a00bf98dff8cc9260d6d13b}
+
+
+Definition at line 131 of file main.\-py.
+
+\hypertarget{a00122_ac4e9cba2fd0b813ba19029541ad609e5}{\index{main@{main}!rct\-Param\-File@{rct\-Param\-File}}
+\index{rct\-Param\-File@{rct\-Param\-File}!main@{main}}
+\subsubsection[{rct\-Param\-File}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-rct\-Param\-File = sorted(glob.\-glob(os.\-path.\-join({\bf res\-Dir\-Path},{\bf str\-Rct\-Par})))}}\label{a00122_ac4e9cba2fd0b813ba19029541ad609e5}
+
+
+Definition at line 186 of file main.\-py.
+
+\hypertarget{a00122_ac2fe1ed3228b8e616f25ccfbe4cc7dc4}{\index{main@{main}!rcts@{rcts}}
+\index{rcts@{rcts}!main@{main}}
+\subsubsection[{rcts}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-rcts = readfiles.\-load\-All\-Data({\bf tot\-Dir\-Name},'\-\_\-acsreactions.\-csv')}}\label{a00122_ac2fe1ed3228b8e616f25ccfbe4cc7dc4}
+
+
+Definition at line 94 of file main.\-py.
+
+\hypertarget{a00122_a2dcb93d1b24fce96491e031528ed43c0}{\index{main@{main}!real\-Rctl@{real\-Rctl}}
+\index{real\-Rctl@{real\-Rctl}!main@{main}}
+\subsubsection[{real\-Rctl}]{\setlength{\rightskip}{0pt plus 5cm}int main.\-real\-Rctl = 0}}\label{a00122_a2dcb93d1b24fce96491e031528ed43c0}
+
+
+Definition at line 197 of file main.\-py.
+
+\hypertarget{a00122_a93d7d68ada532b3cedaab103283ab91a}{\index{main@{main}!res\-Dir\-Path@{res\-Dir\-Path}}
+\index{res\-Dir\-Path@{res\-Dir\-Path}!main@{main}}
+\subsubsection[{res\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-res\-Dir\-Path = os.\-path.\-abspath(os.\-path.\-join(\char`\"{}./\char`\"{}, args.\-res\-Folder))}}\label{a00122_a93d7d68ada532b3cedaab103283ab91a}
+
+
+Definition at line 79 of file main.\-py.
+
+\hypertarget{a00122_ab4296f1ae2e4c4bb597ca27e84849510}{\index{main@{main}!sng\-Time@{sng\-Time}}
+\index{sng\-Time@{sng\-Time}!main@{main}}
+\subsubsection[{sng\-Time}]{\setlength{\rightskip}{0pt plus 5cm}list main.\-sng\-Time = {\bf conf}\mbox{[}2\mbox{]}}}\label{a00122_ab4296f1ae2e4c4bb597ca27e84849510}
+
+
+Definition at line 143 of file main.\-py.
+
+\hypertarget{a00122_ab12df661b7defb4d7077777ad7d6352d}{\index{main@{main}!str\-Cat@{str\-Cat}}
+\index{str\-Cat@{str\-Cat}!main@{main}}
+\subsubsection[{str\-Cat}]{\setlength{\rightskip}{0pt plus 5cm}string main.\-str\-Cat = 'catalysis\-\_\-'}}\label{a00122_ab12df661b7defb4d7077777ad7d6352d}
+
+
+Definition at line 134 of file main.\-py.
+
+\hypertarget{a00122_a6bb1e2c0e0d0a9e63313c082ee4eec76}{\index{main@{main}!str\-Cat\-Zero@{str\-Cat\-Zero}}
+\index{str\-Cat\-Zero@{str\-Cat\-Zero}!main@{main}}
+\subsubsection[{str\-Cat\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}string main.\-str\-Cat\-Zero = 'catalysis\-\_\-'}}\label{a00122_a6bb1e2c0e0d0a9e63313c082ee4eec76}
+
+
+Definition at line 130 of file main.\-py.
+
+\hypertarget{a00122_ac0b5b603b5f89c10838ce6a42be8c6f7}{\index{main@{main}!str\-Path@{str\-Path}}
+\index{str\-Path@{str\-Path}!main@{main}}
+\subsubsection[{str\-Path}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-str\-Path = os.\-path.\-abspath(args.\-str\-Path)}}\label{a00122_ac0b5b603b5f89c10838ce6a42be8c6f7}
+
+
+Definition at line 43 of file main.\-py.
+
+\hypertarget{a00122_a28a37e653a4c0984df32f8d83c3596ff}{\index{main@{main}!str\-Rct@{str\-Rct}}
+\index{str\-Rct@{str\-Rct}!main@{main}}
+\subsubsection[{str\-Rct}]{\setlength{\rightskip}{0pt plus 5cm}string main.\-str\-Rct = 'reactions\-\_\-'}}\label{a00122_a28a37e653a4c0984df32f8d83c3596ff}
+
+
+Definition at line 133 of file main.\-py.
+
+\hypertarget{a00122_af48af84bff2351a55727aba6a63c1b52}{\index{main@{main}!str\-Rct\-Par@{str\-Rct\-Par}}
+\index{str\-Rct\-Par@{str\-Rct\-Par}!main@{main}}
+\subsubsection[{str\-Rct\-Par}]{\setlength{\rightskip}{0pt plus 5cm}string main.\-str\-Rct\-Par = 'reactions\-\_\-parameters\-\_\-'}}\label{a00122_af48af84bff2351a55727aba6a63c1b52}
+
+
+Definition at line 185 of file main.\-py.
+
+\hypertarget{a00122_adbfa32333003aa707723362b43bc11ff}{\index{main@{main}!str\-Rct\-Zero@{str\-Rct\-Zero}}
+\index{str\-Rct\-Zero@{str\-Rct\-Zero}!main@{main}}
+\subsubsection[{str\-Rct\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}string main.\-str\-Rct\-Zero = 'reactions\-\_\-'}}\label{a00122_adbfa32333003aa707723362b43bc11ff}
+
+
+Definition at line 129 of file main.\-py.
+
+\hypertarget{a00122_ab9980383a541b03ce91d6b812a4bf79a}{\index{main@{main}!str\-To\-Write@{str\-To\-Write}}
+\index{str\-To\-Write@{str\-To\-Write}!main@{main}}
+\subsubsection[{str\-To\-Write}]{\setlength{\rightskip}{0pt plus 5cm}string main.\-str\-To\-Write = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\-Size\textbackslash{}t\-Cats\-Size\textbackslash{}tu\-R\-A\-F\textbackslash{}t\-S\-C\-C\textbackslash{}t\-Auto\-Cat\textbackslash{}n\char`\"{}}}\label{a00122_ab9980383a541b03ce91d6b812a4bf79a}
+
+
+Definition at line 68 of file main.\-py.
+
+\hypertarget{a00122_a02d59015bebcf0ad1bc1162efca757c3}{\index{main@{main}!str\-Zeros@{str\-Zeros}}
+\index{str\-Zeros@{str\-Zeros}!main@{main}}
+\subsubsection[{str\-Zeros}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-str\-Zeros = readfiles.\-zero\-Before\-Str\-Num(ngen, {\bf number\-Of\-Gen})}}\label{a00122_a02d59015bebcf0ad1bc1162efca757c3}
+
+
+Definition at line 111 of file main.\-py.
+
+\hypertarget{a00122_a5ba0cd0b7538ed8047b2fea322ecb4b7}{\index{main@{main}!time\-Interval@{time\-Interval}}
+\index{time\-Interval@{time\-Interval}!main@{main}}
+\subsubsection[{time\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}main.\-time\-Interval = {\bf rtime}-\/{\bf previous\-Time}}}\label{a00122_a5ba0cd0b7538ed8047b2fea322ecb4b7}
+
+
+Definition at line 208 of file main.\-py.
+
+\hypertarget{a00122_a9606754176252315321d1faa6191479e}{\index{main@{main}!tmp\-Dirs@{tmp\-Dirs}}
+\index{tmp\-Dirs@{tmp\-Dirs}!main@{main}}
+\subsubsection[{tmp\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-tmp\-Dirs = sort(os.\-listdir({\bf str\-Path}))}}\label{a00122_a9606754176252315321d1faa6191479e}
+
+
+Definition at line 44 of file main.\-py.
+
+\hypertarget{a00122_a82f73a786e4c93e909fd689ee0d0812e}{\index{main@{main}!tot\-Dir\-Name@{tot\-Dir\-Name}}
+\index{tot\-Dir\-Name@{tot\-Dir\-Name}!main@{main}}
+\subsubsection[{tot\-Dir\-Name}]{\setlength{\rightskip}{0pt plus 5cm}tuple main.\-tot\-Dir\-Name = os.\-path.\-join({\bf str\-Path},tmp\-Dir)}}\label{a00122_a82f73a786e4c93e909fd689ee0d0812e}
+
+
+Definition at line 73 of file main.\-py.
+

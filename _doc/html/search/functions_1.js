@@ -1,5 +1,30 @@
 var searchData=
 [
-  ['b',['b',['../a00035.html#a50b4f3ddde10830a3976c71083aaee3f',1,'somma.m']]],
-  ['bindpnt',['bindpnt',['../a00025.html#abe7c50c8b184b4269ba5aaecedcd5457',1,'concAnalysis.m']]]
+  ['catalysis',['catalysis',['../a00009.html#a7c4d1a67d2745293a17a6bee0df7c5cd',1,'catalysis::catalysis()'],['../a00009.html#ab6af429c051e2bc9756bac72b99cc4ce',1,'catalysis::catalysis(acs_longInt tmpCatId, acs_longInt tmpCat, acs_longInt tmpRctId, acs_longInt tmpAmount, acs_double tmpKass, acs_double tmpKdiss, acs_double tmpK_cpx, acs_int tmpCpxTarget)']]],
+  ['changeremainingconc',['changeRemainingConc',['../a00015.html#ad092d0a3709e93316dd4325699c34a86',1,'influxspecies_protocell']]],
+  ['changevolume',['changeVolume',['../a00011.html#a4dfd9bff19e6026f3b4b35af5cedac9a',1,'environment']]],
+  ['chargemol',['chargeMol',['../a00022.html#adc36fb991695aed6503b8ed82e06bca5',1,'species']]],
+  ['checkavailability',['checkAvailability',['../a00011.html#ad3ebcd7ab1c9ba1a0f65b264b97adf33',1,'environment']]],
+  ['checkifonlymutualcatalysis',['checkIfOnlyMutualCatalysis',['../a00011.html#abdafaeba15b5d32fd35569869c6244d5',1,'environment']]],
+  ['checkifthereactionisalreadycatalyzedbythisspecies',['checkIfTheReactionIsAlreadyCatalyzedByThisSpecies',['../a00011.html#ac4c90b07b8e75ea03e2ced0ea644a69f',1,'environment']]],
+  ['checkifthesecondsubstrateisalreadypresent',['checkIFtheSecondSubstrateIsAlreadyPresent',['../a00022.html#af04a95fb2b35bf988271a60413ec508e',1,'species']]],
+  ['clearallstructures',['clearAllStructures',['../a00011.html#aa860227725dbe5b0251a25f440773161',1,'environment']]],
+  ['cleareventslist',['clearEventsList',['../a00022.html#a625274ee9a1b299cfdf0f84888b1353e',1,'species']]],
+  ['cleargilscores',['clearGilScores',['../a00011.html#aa33d7b81db9632c8ba1f9ce3f362df8e',1,'environment']]],
+  ['complexevaluation',['complexEvaluation',['../a00011.html#a5ee6b203f077de1467aa72042814db7d',1,'environment']]],
+  ['computesinglgilscore',['computeSinglGilScore',['../a00011.html#ae1270b9c235dd6b28413075197dba8e0',1,'environment']]],
+  ['computesngspeciesrctsnumber',['computeSngSpeciesRctsNumber',['../a00011.html#a0fd3cb062d35d2f6dd8961e95dd477b7',1,'environment']]],
+  ['computesurface',['computeSurface',['../a00011.html#a4526a2b544fe9dc2d174d2699bead876',1,'environment']]],
+  ['conctonum',['concToNum',['../a00022.html#a5502b77cd470c01e32a9fb4b2971c23c',1,'species']]],
+  ['copyspeciesinitialconcentrationzero',['copySpeciesInitialConcentrationZero',['../a00011.html#a375fc2dc0afc38a8a3afbd016acc4983',1,'environment']]],
+  ['creatediffusionrenforcement',['createDiffusionRenforcement',['../a00011.html#af795a4d1f04dfbfcbdf321e20e74f9c2',1,'environment']]],
+  ['createinfluxlayersfromfilestd',['createInfluxLayersFromFileSTD',['../a00011.html#a902df40829dad9a885122082ec8fff7a',1,'environment']]],
+  ['createinitialcatalysislayerfromfilestd',['createInitialCatalysisLayerFromFileSTD',['../a00011.html#a29eeb7a1b4689c10fd872e82179b4d84',1,'environment']]],
+  ['createinitialcatalysislayerfromspecificfilestd',['createInitialCatalysisLayerFromSpecificFileSTD',['../a00011.html#a6dd31bae82367ebe7d6a6bb062b8cd07',1,'environment']]],
+  ['createinitialmoleculespopulationfromfilestd',['createInitialMoleculesPopulationFromFileSTD',['../a00011.html#af6db92c710f2588ba7dff1165e26d538',1,'environment']]],
+  ['createinitialmoleculespopulationfromspecificfilestd',['createInitialMoleculesPopulationFromSpecificFileSTD',['../a00011.html#ab85fdf18a88fb51afc48eba31d0ed1b2',1,'environment']]],
+  ['createinitialreactionslayerfromfilestd',['createInitialReactionsLayerFromFileSTD',['../a00011.html#a2f181e0d3ad1e8062ba0a8c9358ebc58',1,'environment']]],
+  ['createinitialreactionslayerfromspecificfilestd',['createInitialReactionsLayerFromSpecificFileSTD',['../a00011.html#a743956229b11d7860dbc89a18f869586',1,'environment']]],
+  ['createnrgbooleanfunctionsfromfilestd',['createNrgBooleanFunctionsFromFileSTD',['../a00011.html#abe1a616460ea328067874df715679319',1,'environment']]],
+  ['createreactionsforthisspecies',['createReactionsForThisSpecies',['../a00011.html#a76794f37d6d94b7504c58f0f4a4709ca',1,'environment']]]
 ];

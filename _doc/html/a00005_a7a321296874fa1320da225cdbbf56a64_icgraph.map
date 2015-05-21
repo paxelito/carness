@@ -1,0 +1,5 @@
+<map id="environment::getTotalNumberOfSpecies" name="environment::getTotalNumberOfSpecies">
+<area shape="rect" id="node2" href="$a00005.html#aa860227725dbe5b0251a25f440773161" title="Clear all structures after each simulation. " alt="" coords="248,5,451,32"/>
+<area shape="rect" id="node3" href="$a00005.html#ad8000316befe74598a123bdcd7024697" title="set the concentrations to the initial values and reset internal statistics and counter ..." alt="" coords="245,57,453,98"/>
+<area shape="rect" id="node4" href="$a00005.html#af8083321a2bc93f4f613b05d74d37833" title="Save the reactions times in a file named times_[currentSim].csv. " alt="" coords="255,123,444,149"/>
+</map>

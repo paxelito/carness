@@ -120,7 +120,7 @@ typedef unsigned int acs_int;
 #define NOCOMPLEX -1
 
 //WRITE TO FILE EVERY...
-#define N_BUFFER 10
+#define N_BUFFER 500
 
 //PROMPT SIMUATION STATE EVERY...
 #define PROMPT_TIME 10000

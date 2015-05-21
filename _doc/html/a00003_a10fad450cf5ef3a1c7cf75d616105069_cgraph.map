@@ -1,0 +1,6 @@
+<map id="environment::decMolSpeciesProcedure" name="environment::decMolSpeciesProcedure">
+<area shape="rect" id="node2" href="$a00003.html#a69a926e0b9bb4f4b29876d0e45b54d84" title="environment::decNumberOf\lSpecies" alt="" coords="257,5,437,46"/>
+<area shape="rect" id="node3" href="$a00003.html#af042f7904c92fdd239995bebbab2cf60" title="environment::decNumberOfMols" alt="" coords="243,71,451,97"/>
+<area shape="rect" id="node4" href="$a00003.html#a5fa52a4f8e73a71fa41d3a1641e50535" title="environment::decNumberOf\lNewSpecies" alt="" coords="257,122,437,163"/>
+<area shape="rect" id="node5" href="$a00003.html#ae9bbd78076706050ced4dd7fb99036f1" title="environment::decNumberOf\lNewMols" alt="" coords="257,187,437,229"/>
+</map>

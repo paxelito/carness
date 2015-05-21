@@ -1,0 +1,7 @@
+<map id="saveToFile" name="saveToFile">
+<area shape="rect" id="node2" href="$a00011.html#a9daeb4f255100b8ad59de9ea80b19b5b" title="Save the species structures in a file named species_[currentSims]_[currentStep].csv. " alt="" coords="147,5,322,46"/>
+<area shape="rect" id="node4" href="$a00027.html#aa678d0a98232158c48108227b98de4b6" title="Function to close the program after having en error. " alt="" coords="425,139,521,165"/>
+<area shape="rect" id="node5" href="$a00011.html#ad381c4ce24045d504539bb7c74800739" title="Save the reactions structures in a file named reactions_[currentSims]_[currentStep].csv. " alt="" coords="142,70,327,111"/>
+<area shape="rect" id="node6" href="$a00011.html#a0a799b3a42bd90845a915298e184708c" title="Save the catalysis structures in a file named catalysis_[currentSims]_[currentStep].csv. " alt="" coords="145,135,325,177"/>
+<area shape="rect" id="node3" href="$a00011.html#a8699a0f85f5e8dc23eb8f78fa22c6b17" title="This function creates a chain of zero as STRING according to tmpTotN and tmpCurrent N in order to mak..." alt="" coords="376,70,571,111"/>
+</map>

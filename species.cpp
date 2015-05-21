@@ -186,9 +186,11 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 				 acs_int tmpSoluble, acs_double tmpComplexDegEnh, acs_int tmpComplexCuttingPoint, 
 				 acs_int tmpEvalueted, acs_double tmpAge, acs_int tmpReborns, acs_double tmpVolume, 
                  acs_longInt tmpNotUsedCatID, acs_longInt tmpNotUsedSubID, acs_double tmpK_phospho,
-                 acs_double tmpKLoadConc, acs_int tmpEnergizable, acs_double tmpInflux_rate, acs_int tmpMaxLOut,
-                 bool tmpRndConcentration, acs_double tmpAlpha, MTRand& tmp_RndDoubleGen)
+                 acs_double tmpKLoadConc, acs_int tmpLockConc, acs_double tmpInflux_rate, acs_int tmpMaxLOut,
+                 bool tmpRndConcentration, acs_double tmpAlpha, MTRand& tmp_RndDoubleGen, int tmpSystemArchitecture)
 {
+	cout << "\t|- CONCENTRATION BASED SPECIES CONSTRUCTOR FROM FILE -|\n";
+
 	id = tmpID;
 	sequence = tmpSequence;
 	chargedMols = round(tmpKLoadConc*tmpVolume*AVO);
@@ -202,7 +204,7 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 	catalyst_ID = tmpNotUsedCatID;
 	substrate_ID = tmpNotUsedSubID;
 	K_phospho = tmpK_phospho;
-	energizable = tmpEnergizable;
+	energizable = tmpLockConc;
 	
 	// CONCENTRATION SETTINGS
     //cout << "concentration based random concentration: " << tmpRndConcentration << endl;
@@ -213,8 +215,13 @@ species::species(acs_longInt tmpID, string tmpSequence, acs_double tmpConcentrat
 	numToConc(tmpVolume);
 
 	// Set concentrationFixed proprerty
-	concentrationFixed = false;
-	if((tmpInflux_rate == 0) && (tmpMaxLOut > 0)){ if(sequence.length() <= tmpMaxLOut) concentrationFixed = true;}
+	// concentrationFixed = false;
+	// if((tmpInflux_rate == 0) && (tmpMaxLOut > 0)){ if(sequence.length() <= tmpMaxLOut) concentrationFixed = true;}
+	if (tmpSystemArchitecture == PROTOCELLFLUXBUFFERED)
+	{
+		if(tmpLockConc == 1) concentrationFixed = true;
+		else concentrationFixed = false;
+	}else{concentrationFixed = false;}
 
     firstConcentration = tmpConcentration; // If the species is loaded from file that's the very initial concentration
     lastSpeciesEvaluated = 0;

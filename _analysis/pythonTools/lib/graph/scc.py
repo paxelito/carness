@@ -77,24 +77,34 @@ def diGraph_netX_stats(tmpDig):
 
 def checkMinimalSCCdimension(tmpDig,tmpMinDim):
 	findflag = False
-	sccSize = 0
+	sccSize = []
 	scc = nx.strongly_connected_components(tmpDig)
-	sccL = nx.strongly_connected_components_recursive(tmpDig)
+	#print scc
+	#raw_input("cioa")
+	#sccL = nx.strongly_connected_components_recursive(tmpDig)
+	#print scc
+	#print sccL
+	autocat = tmpDig.nodes_with_selfloops()
 	if len(scc) > 0:
 		for i in scc: 
-			if len(i) > tmpMinDim:
-				findflag = True
-				sccSize = len(i)
+			if len(i) >= tmpMinDim:
+				if len(i) > 1:
+					findflag = True
+					sccSize.append(len(i))
+				else:
+					if i[0] in autocat:
+						findflag = True
+						sccSize.append(len(i))
 				break
 			
-	return [findflag, sccSize, sccL]
+	return [findflag, sccSize, scc, autocat]
 
 def printSCConFile(tmpSCCL, tmpfolderName, filePrefix):
 	filename = '0_' + str(filePrefix) + '_SCCs.txt'
 	fname_scc = os.path.join(tmpfolderName, filename)
 	fid_fname_scc = open(fname_scc, 'w')
 	for sccid, SCC in enumerate(tmpSCCL):
-		if len(SCC) > 1:
+		if len(SCC) >= 1:
 			str2w = '\n*** Chemistry ' + str(filePrefix) + ' - SCC number ' + str(sccid+1) + '\n\n'
 			fid_fname_scc.write(str2w)
 			for scc in SCC: 

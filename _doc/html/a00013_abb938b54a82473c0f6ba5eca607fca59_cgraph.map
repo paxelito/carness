@@ -1,6 +1,0 @@
-<map id="environment::performSingleGilleSpieIntroduction" name="environment::performSingleGilleSpieIntroduction">
-<area shape="rect" id="node2" href="$a00056.html#aa678d0a98232158c48108227b98de4b6" title="ExitWithError" alt="" coords="286,5,386,32"/>
-<area shape="rect" id="node3" href="$a00013.html#ae1270b9c235dd6b28413075197dba8e0" title="environment::computeSingl\lGilScore" alt="" coords="244,57,428,98"/>
-<area shape="rect" id="node4" href="$a00013.html#a48d8fd9d8d5c9c31f0b4af87c8cbd28f" title="environment::printAllSpecies\lIdAndSequence" alt="" coords="241,122,431,163"/>
-<area shape="rect" id="node5" href="$a00013.html#aa3a18c59f6127c642603a98c1b3a2224" title="environment::printGillespie\lStructure" alt="" coords="246,187,426,229"/>
-</map>

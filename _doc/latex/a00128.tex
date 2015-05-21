@@ -1,330 +1,529 @@
-\hypertarget{a00128}{\section{acs\+From\+Wim2\+Carness Namespace Reference}
-\label{a00128}\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
+\hypertarget{a00128}{\section{topology\-\_\-analysis Namespace Reference}
+\label{a00128}\index{topology\-\_\-analysis@{topology\-\_\-analysis}}
 }
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-tuple \hyperlink{a00128_aed93287ef2c9a4a9ba68f8ffc75aae17}{parser}
+tuple \hyperlink{a00128_aeff833532f5cd31a9720a78cc0f8d97b}{parser}
 \item 
-tuple \hyperlink{a00128_ac4c461267ee7f11bbe525de64f56cd10}{args} = parser.\+parse\+\_\+args()
+tuple \hyperlink{a00128_a6741aa05e3fb94565993dd2001401e98}{args} = parser.\-parse\-\_\-args()
 \item 
-float \hyperlink{a00128_abfe2f871ea28e48198cdd5799807de5b}{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+} = 6.\+022141e23
+string \hyperlink{a00128_aa6d4ad4089dc05372dcdfe03c969b8b4}{ndn} = '\-\_\-topological\-\_\-assessment\-\_\-'
 \item 
-string \hyperlink{a00128_a6f995419ddd7f2de58506d9541238dbc}{ndn} = '\+\_\+0\+\_\+\+Hordijk\+\_\+raf'
+tuple \hyperlink{a00128_a8e1c34cb190151a28fd81e19d6252253}{newdir\-All\-Results} = os.\-path.\-join(args.\-str\-Out, \hyperlink{a00128_aa6d4ad4089dc05372dcdfe03c969b8b4}{ndn})
 \item 
-tuple \hyperlink{a00128_a4af2fb5abbd4a6e8930401e66af5b79d}{newdir\+All\+Results} = os.\+path.\+join(args.\+str\+Out, \hyperlink{a00128_a6f995419ddd7f2de58506d9541238dbc}{ndn})
+tuple \hyperlink{a00128_a80488e9379ed7dc114c3ea6739d4fda9}{fname\-\_\-init\-Raf\-Res} = os.\-path.\-join(\hyperlink{a00128_a8e1c34cb190151a28fd81e19d6252253}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis.\-csv')
 \item 
-tuple \hyperlink{a00128_a6df9226d812c675c76a936c215c07e53}{fname\+\_\+init\+Raf\+Res} = os.\+path.\+join(\hyperlink{a00128_a4af2fb5abbd4a6e8930401e66af5b79d}{newdir\+All\+Results}, '0\+\_\+init\+Raf\+Analysis.\+csv')
+tuple \hyperlink{a00128_ac3f3b9f72351b39261d33caf3d22d03e}{fname\-\_\-init\-Raf\-Res\-S\-U\-M} = os.\-path.\-join(\hyperlink{a00128_a8e1c34cb190151a28fd81e19d6252253}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-S\-U\-M.\-csv')
 \item 
-tuple \hyperlink{a00128_a69f06c42408f8a1ae74e34daa83402b7}{fname\+\_\+init\+Raf\+Res\+L\+I\+S\+T} = os.\+path.\+join(\hyperlink{a00128_a4af2fb5abbd4a6e8930401e66af5b79d}{newdir\+All\+Results}, '0\+\_\+init\+Raf\+Analysis\+L\+I\+S\+T.\+csv')
+tuple \hyperlink{a00128_ae1a425430860aba59e0118dbe1ac2163}{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = os.\-path.\-join(\hyperlink{a00128_a8e1c34cb190151a28fd81e19d6252253}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')
 \item 
-tuple \hyperlink{a00128_a89c98e628d7938077b4ed18215d4fd9b}{fname\+\_\+init\+Raf\+Res\+A\+L\+L} = os.\+path.\+join(\hyperlink{a00128_a4af2fb5abbd4a6e8930401e66af5b79d}{newdir\+All\+Results}, '0\+\_\+init\+Raf\+Analysis\+A\+L\+L.\+csv')
+tuple \hyperlink{a00128_a2ef3a802ca870bda339c2b50c046bc71}{fname\-\_\-init\-Raf\-Res\-A\-L\-L} = os.\-path.\-join(\hyperlink{a00128_a8e1c34cb190151a28fd81e19d6252253}{newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')
 \item 
-tuple \hyperlink{a00128_a2f9cfe05abfed3ab6326d0cb094c7c80}{fid\+\_\+init\+Raf\+Res} = open(\hyperlink{a00128_a6df9226d812c675c76a936c215c07e53}{fname\+\_\+init\+Raf\+Res}, 'w')
+tuple \hyperlink{a00128_aa47d62b7ce95f5c4e730d081209770c2}{fid\-\_\-init\-Raf\-Res} = open(\hyperlink{a00128_a80488e9379ed7dc114c3ea6739d4fda9}{fname\-\_\-init\-Raf\-Res}, 'w')
 \item 
-tuple \hyperlink{a00128_a7af2668de12720f3c7925527002d81b0}{fid\+\_\+init\+Raf\+Res\+L\+I\+S\+T} = open(\hyperlink{a00128_a69f06c42408f8a1ae74e34daa83402b7}{fname\+\_\+init\+Raf\+Res\+L\+I\+S\+T}, 'w')
+tuple \hyperlink{a00128_a89401fb2ff1eb8e1567b1625ad0bb84f}{fid\-\_\-init\-Raf\-Res\-S\-U\-M} = open(\hyperlink{a00128_ac3f3b9f72351b39261d33caf3d22d03e}{fname\-\_\-init\-Raf\-Res\-S\-U\-M}, 'w')
 \item 
-tuple \hyperlink{a00128_add1c3bb75f1d98889c27099fc14fc6a8}{fid\+\_\+init\+Raf\+Res\+A\+L\+L} = open(\hyperlink{a00128_a89c98e628d7938077b4ed18215d4fd9b}{fname\+\_\+init\+Raf\+Res\+A\+L\+L}, 'w')
+tuple \hyperlink{a00128_abca13a03834449d5629252329999f1a3}{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T} = open(\hyperlink{a00128_ae1a425430860aba59e0118dbe1ac2163}{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'w')
 \item 
-string \hyperlink{a00128_a34b3667c3c217a35a0e9b71458d2b233}{str\+To\+Write} = \char`\"{}Folder\textbackslash{}t\+P\textbackslash{}t\+A\+C\textbackslash{}t\+M\textbackslash{}t\+R\+A\+Fsize\textbackslash{}t\+Closure\textbackslash{}t\+Cats\textbackslash{}tu\+R\+A\+F\textbackslash{}n\char`\"{}
+tuple \hyperlink{a00128_afcacf140d9efed55635e8dcd084db870}{fid\-\_\-init\-Raf\-Res\-A\-L\-L} = open(\hyperlink{a00128_a2ef3a802ca870bda339c2b50c046bc71}{fname\-\_\-init\-Raf\-Res\-A\-L\-L}, 'w')
 \item 
-tuple \hyperlink{a00128_ab599c65fad60b9c6ccc220002ce8f89c}{f} = open(args.\+wim\+File)
+string \hyperlink{a00128_acecbaeef1428691283d6df79d6b1e689}{str\-To\-Write} = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\textbackslash{}t\-Cats\textbackslash{}tu\-R\-A\-F\textbackslash{}t\-S\-C\-C\textbackslash{}t\-Auto\-Cat\textbackslash{}n\char`\"{}
 \item 
-tuple \hyperlink{a00128_a2a83f40b2aa2cbcbd487195fef9af340}{lines} = f.\+readlines()
+\hyperlink{a00128_a5a68ea0f110f2fae7b8f03d1ce52d54d}{increase\-Yet} = True
 \item 
-int \hyperlink{a00128_ac84174dad0b933ca88ebdb79cf3497ec}{procedure} = 0
+\hyperlink{a00128_a0d59133b2bb42e7aa26a3dba3a2a9a70}{average\-Conn} = args.\-minavgcon
 \item 
-list \hyperlink{a00128_aff8baae5d4cd1678204477dd5e620775}{species\+List} = \mbox{[}$\,$\mbox{]}
+tuple \hyperlink{a00128_ac7160059dec8067db4645fa39feec359}{time1} = time()
 \item 
-list \hyperlink{a00128_a878da371fd02e9515fe7305e0a57be09}{food\+List} = \mbox{[}$\,$\mbox{]}
+int \hyperlink{a00128_ad625a009a3da81a04b490e62975ecf39}{raffound} = 0
 \item 
-int \hyperlink{a00128_a61159eb5aec77b97808ce3fb742d8f6d}{rct} = 0
+int \hyperlink{a00128_aa8258ef828502be89350332ae97a0d3a}{sccfound} = 0
 \item 
-int \hyperlink{a00128_a92a1d1f6272fbef428680bed82dd37e7}{cat\+I\+D} = 0
+int \hyperlink{a00128_aeacefe088f3283ea0e80ee31c0486d6d}{sccselffound} = 0
 \item 
-tuple \hyperlink{a00128_a0437cd4d2a377ca0e34ab59f4bfd833f}{l} = \hyperlink{a00059_a4d1aa74fac80ae0275c056575fdb6626}{line.\+split}()
+int \hyperlink{a00128_ac05c0aaedb357a42df2d5f3915bbedfa}{scctotfound} = 0
 \item 
-tuple \hyperlink{a00128_aee9290533a24e96dbde7c8e71055497f}{food} = deepcopy(\hyperlink{a00128_a878da371fd02e9515fe7305e0a57be09}{food\+List})
+int \hyperlink{a00128_a3dd0e59d1fb4786b4bec44f325585eb6}{sccinraffound} = 0
 \item 
-tuple \hyperlink{a00128_a0d474343423a1a87a760dd91411f96b4}{cat\+Nums} = len(\hyperlink{a00128_a0437cd4d2a377ca0e34ab59f4bfd833f}{l})
+int \hyperlink{a00128_a4d888d782ac3414961c2b844bed8b1bd}{self\-\_\-sccinraffound} = 0
 \item 
-tuple \hyperlink{a00128_aea4d714ca7ceaba151380b3aed7c34d8}{cats} = np.\+vstack(\mbox{[}cats,(int(\hyperlink{a00128_a92a1d1f6272fbef428680bed82dd37e7}{cat\+I\+D}), int(\hyperlink{a00102_a0cd6a44ffb07342cbc7e5ac33bfc9495}{species\+List.\+index}(\hyperlink{a00128_a0437cd4d2a377ca0e34ab59f4bfd833f}{l}\mbox{[}6+\hyperlink{a00128_a0d474343423a1a87a760dd91411f96b4}{cat\+Nums}-\/1\mbox{]}\mbox{[}0\+:len(\hyperlink{a00128_a0437cd4d2a377ca0e34ab59f4bfd833f}{l}\mbox{[}6+\hyperlink{a00128_a0d474343423a1a87a760dd91411f96b4}{cat\+Nums}-\/1\mbox{]})-\/1\mbox{]})), int(\hyperlink{a00128_a61159eb5aec77b97808ce3fb742d8f6d}{rct}), int(0), int(args.\+rates\mbox{[}0\mbox{]}), int(args.\+rates\mbox{[}1\mbox{]}), int(args.\+rates\mbox{[}2\mbox{]}), int(1))\mbox{]})
+tuple \hyperlink{a00128_a2117e01e4647cbdecc0ece27cec1cff4}{iterations} = int((args.\-iteration/(maxlength+1-\/args.\-min\-Dim)))
 \item 
-tuple \hyperlink{a00128_a36370edf2a6a4e19f0a99413aac43096}{rafsets} = raf.\+raf\+Computation(\hyperlink{a00128_a2f9cfe05abfed3ab6326d0cb094c7c80}{fid\+\_\+init\+Raf\+Res}, \hyperlink{a00128_add1c3bb75f1d98889c27099fc14fc6a8}{fid\+\_\+init\+Raf\+Res\+A\+L\+L}, \hyperlink{a00128_a7af2668de12720f3c7925527002d81b0}{fid\+\_\+init\+Raf\+Res\+L\+I\+S\+T}, 'tmp\+Dir', 0, \hyperlink{a00128_a61159eb5aec77b97808ce3fb742d8f6d}{rct}/float(len(\hyperlink{a00128_aff8baae5d4cd1678204477dd5e620775}{species\+List})), rcts, \hyperlink{a00128_aea4d714ca7ceaba151380b3aed7c34d8}{cats}, \hyperlink{a00128_a878da371fd02e9515fe7305e0a57be09}{food\+List}, 10)
+list \hyperlink{a00128_a0527a0989312340a402661aebc675d30}{time\-Creatin\-Vector} = \mbox{[}$\,$\mbox{]}
 \item 
-tuple \hyperlink{a00128_aa78205fca6ef215871776684bc141b26}{exps\+Folder} = os.\+path.\+join(args.\+str\+Out, \char`\"{}exps\char`\"{})
+list \hyperlink{a00128_a3ddbda333425be797470f7d058e2c8a4}{time\-Analysis\-Vector} = \mbox{[}$\,$\mbox{]}
 \item 
-\hyperlink{a00128_adf74f9028f6a6e9a2de2046146a29ffe}{save\+Str\+Folder} = \hyperlink{a00128_aa78205fca6ef215871776684bc141b26}{exps\+Folder}
+int \hyperlink{a00128_a9975713682889eae03088e5575e1a0e4}{n\-Cleavage} = 0
 \item 
-tuple \hyperlink{a00128_a58053e5bf5bd9f634c82e6fe7a330770}{fname\+\_\+run} = os.\+path.\+join(\hyperlink{a00128_adf74f9028f6a6e9a2de2046146a29ffe}{save\+Str\+Folder}, 'simulation.\+sh')
+int \hyperlink{a00128_a38aa665f11207bbd8cd2da4c382d4aca}{n\-Condensa} = 0
 \item 
-tuple \hyperlink{a00128_a107606e6132ad38bc8591a7931a277fc}{fid\+\_\+run} = open(\hyperlink{a00128_a58053e5bf5bd9f634c82e6fe7a330770}{fname\+\_\+run}, 'w')
+list \hyperlink{a00128_ab0d9c13eee214bf78b20760bf2835248}{alphabet} = \mbox{[}'A', 'B'\mbox{]}
 \item 
-tuple \hyperlink{a00128_a42c0d5f9f5131fc14ddb04d765cee15b}{folder} = str(cx)
+tuple \hyperlink{a00128_a5bfc4cfa78ac777159cb0ca9c9c5c2f6}{species\-List} = sp.\-create\-Complete\-Species\-Population(maxlength, \hyperlink{a00128_ab0d9c13eee214bf78b20760bf2835248}{alphabet})
 \item 
-tuple \hyperlink{a00128_ad8daa0d6fb501f0e422c7fb04e93c7cd}{s\+\_\+exps\+Folder} = os.\+path.\+join(\hyperlink{a00128_adf74f9028f6a6e9a2de2046146a29ffe}{save\+Str\+Folder}, \hyperlink{a00128_a42c0d5f9f5131fc14ddb04d765cee15b}{folder})
+tuple \hyperlink{a00128_a62b034cfe14eff36f09dd65a51ae7c9c}{original\-Species\-List} = deepcopy(\hyperlink{a00128_a5bfc4cfa78ac777159cb0ca9c9c5c2f6}{species\-List})
 \item 
-tuple \hyperlink{a00128_a6053e1a97cef2ed661333b2a7b0cf67e}{fname\+\_\+init\+Species} = os.\+path.\+join(\hyperlink{a00128_ad8daa0d6fb501f0e422c7fb04e93c7cd}{s\+\_\+exps\+Folder}, '\+\_\+acsspecies.\+csv')
+tuple \hyperlink{a00128_ac657414359bc072005d43b2328119a7d}{tot\-Species} = sp.\-get\-Tot\-Number\-Of\-Species\-From\-Complete\-Pop(maxlength)
 \item 
-tuple \hyperlink{a00128_aac88079820753d1e8c6628b7016a71d5}{fid\+\_\+init\+Species} = open(\hyperlink{a00128_a6053e1a97cef2ed661333b2a7b0cf67e}{fname\+\_\+init\+Species}, 'w')
+tuple \hyperlink{a00128_a1e875e49e1f980d461a398fd6a072b0b}{tot\-Cleavage} = reactions.\-get\-Num\-Of\-Cleavages(\hyperlink{a00128_a5bfc4cfa78ac777159cb0ca9c9c5c2f6}{species\-List})
 \item 
-tuple \hyperlink{a00128_a4fad8527bf8c9b7981003678aba3edff}{init\+Conc} = args.\+initial\+Numerosity/(\hyperlink{a00113_a9bc498ccac8db41438f855f5dd3f4c05}{args.\+volume} $\ast$ \hyperlink{a00128_abfe2f871ea28e48198cdd5799807de5b}{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+})
+\hyperlink{a00128_a059c41eb160321f87ba469fddd20eda7}{tot\-Rcts} = \hyperlink{a00128_a1e875e49e1f980d461a398fd6a072b0b}{tot\-Cleavage}+tot\-Cond
 \item 
-string \hyperlink{a00128_ae1f2c64eb13a9c020ffe6ec073883573}{lastc} = \char`\"{}0\char`\"{}
+tuple \hyperlink{a00128_aad2c05e3d2146196ed236911dd796f6e}{prob} = (1 / float(\hyperlink{a00128_a059c41eb160321f87ba469fddd20eda7}{tot\-Rcts}))
 \item 
-tuple \hyperlink{a00128_a015e630bcbd779acd7f68bf514793e0d}{str2w} = str(id)
+tuple \hyperlink{a00128_afa804d4b1d39a63de9f14e5ab379ae34}{rct\-To\-Cat} = int(round(\hyperlink{a00128_ac657414359bc072005d43b2328119a7d}{tot\-Species} $\ast$ \hyperlink{a00128_a0d59133b2bb42e7aa26a3dba3a2a9a70}{average\-Conn}))
+\item 
+tuple \hyperlink{a00128_af2370a811b14632a793a28e451be8150}{init\-Species\-List\-Length} = len(\hyperlink{a00128_a5bfc4cfa78ac777159cb0ca9c9c5c2f6}{species\-List})
+\item 
+tuple \hyperlink{a00128_aa468c4ff92202c7d89fb631e8cb54dc8}{conf} = (1,1,2000,0,200000,0,0,2,args.\-last\-Food,\hyperlink{a00128_aad2c05e3d2146196ed236911dd796f6e}{prob})
+\item 
+int \hyperlink{a00128_a07d632b487fabd051ab725ee95a85368}{reaction\-I\-D} = 0
+\item 
+int \hyperlink{a00128_a35953bf84aa0f7a2a3ffa3f68190c0fa}{catalysis\-I\-D} = 0
+\item 
+\hyperlink{a00128_a6f49caf3b9250cab918ae8dc5aef9931}{check\-Rct} = False
+\item 
+list \hyperlink{a00128_a67cf979bfd8cf26867524a1a788a5e63}{weight\-Cat} = \mbox{[}1\mbox{]}
+\item 
+list \hyperlink{a00128_a516f339905d01b02a4e16181f2fde4be}{pars} = \mbox{[}0\mbox{]}
+\item 
+tuple \hyperlink{a00128_a2f85d448268dd44ad47f66b65bfa45b6}{time\-Net\-Creation} = time()
+\item 
+int \hyperlink{a00128_a1aa5d59ebf308accb3c960b5fd90a445}{last\-Species\-I\-D} = 2
+\item 
+tuple \hyperlink{a00128_a96850fa3d62df1176a8d7a5b988f4a32}{food\-List} = range(\hyperlink{a00128_a1aa5d59ebf308accb3c960b5fd90a445}{last\-Species\-I\-D})
+\item 
+tuple \hyperlink{a00128_ace5bda70ff24e6a220afb4438240003a}{time\-Analysis} = time()
+\item 
+tuple \hyperlink{a00128_af42f57da8ba80463f419efaf0f6f2c33}{netouts} = network.\-net\-\_\-analysis\-\_\-of\-\_\-static\-\_\-graphs(\hyperlink{a00128_aa47d62b7ce95f5c4e730d081209770c2}{fid\-\_\-init\-Raf\-Res}, \hyperlink{a00128_afcacf140d9efed55635e8dcd084db870}{fid\-\_\-init\-Raf\-Res\-A\-L\-L}, \hyperlink{a00128_abca13a03834449d5629252329999f1a3}{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'tmp\-Dir', \hyperlink{a00128_aad2c05e3d2146196ed236911dd796f6e}{prob}, \hyperlink{a00128_a0d59133b2bb42e7aa26a3dba3a2a9a70}{average\-Conn}, rcts, cats, \hyperlink{a00128_a96850fa3d62df1176a8d7a5b988f4a32}{food\-List}, maxlength)
+\item 
+list \hyperlink{a00128_aeb909c76682b690cc5ab6aca5ac37c4d}{rcts\-R\-A\-F} = rcts\mbox{[}np.\-any(rcts\mbox{[}\-:, 0\mbox{]} == np.\-expand\-\_\-dims(\hyperlink{a00128_af42f57da8ba80463f419efaf0f6f2c33}{netouts}\mbox{[}0\mbox{]}\mbox{[}2\mbox{]},1), 0), \-:\mbox{]}
+\item 
+tuple \hyperlink{a00128_ac864e2a75b705766c1d81f68897f52c0}{scc\-\_\-in\-\_\-raf} = network.\-return\-\_\-scc\-\_\-in\-\_\-raf(\hyperlink{a00128_aeb909c76682b690cc5ab6aca5ac37c4d}{rcts\-R\-A\-F}, \hyperlink{a00128_af42f57da8ba80463f419efaf0f6f2c33}{netouts}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}, cats)
+\item 
+tuple \hyperlink{a00128_a44666efa43bfc08ab8305c8d325f7456}{time2} = time()
+\item 
+tuple \hyperlink{a00128_a4cd61f10a5a0a8d80608e71a1fc2009c}{time\-Avg\-Creation} = \hyperlink{a00021_a5330c3728d2e8d052841f1bbf8d33845}{sum}(\hyperlink{a00128_a0527a0989312340a402661aebc675d30}{time\-Creatin\-Vector})
+\item 
+tuple \hyperlink{a00128_a0689e49982e7bedba8ac4eb5534963db}{time\-Avg\-Analysis} = \hyperlink{a00021_a5330c3728d2e8d052841f1bbf8d33845}{sum}(\hyperlink{a00128_a3ddbda333425be797470f7d058e2c8a4}{time\-Analysis\-Vector})
+\item 
+tuple \hyperlink{a00128_a51a66ce80f70aeab8bde70af9960e419}{perc\-R\-A\-F\-Founds} = \hyperlink{a00128_ad625a009a3da81a04b490e62975ecf39}{raffound}/float(\hyperlink{a00128_a2117e01e4647cbdecc0ece27cec1cff4}{iterations})
+\item 
+tuple \hyperlink{a00128_aee49954a6b9abb7c4bd677c17ed4013b}{perc\-Scc\-Tot\-Founds} = \hyperlink{a00128_ac05c0aaedb357a42df2d5f3915bbedfa}{scctotfound}/float(\hyperlink{a00128_a2117e01e4647cbdecc0ece27cec1cff4}{iterations})
+\item 
+tuple \hyperlink{a00128_a14f23c89de77042b80e78e1d9ab7b754}{perc\-Scc\-Founds} = \hyperlink{a00128_aa8258ef828502be89350332ae97a0d3a}{sccfound}/float(\hyperlink{a00128_a2117e01e4647cbdecc0ece27cec1cff4}{iterations})
+\item 
+tuple \hyperlink{a00128_a8bf55c62b8e7385526396a9003e343bb}{perc\-Sccselffound} = \hyperlink{a00128_aeacefe088f3283ea0e80ee31c0486d6d}{sccselffound}/float(\hyperlink{a00128_a2117e01e4647cbdecc0ece27cec1cff4}{iterations})
+\item 
+\hyperlink{a00128_a5b12bbbc66679be171ab082dbaeba90b}{timet} = \hyperlink{a00128_a44666efa43bfc08ab8305c8d325f7456}{time2}-\/\hyperlink{a00128_ac7160059dec8067db4645fa39feec359}{time1}
 \end{DoxyCompactItemize}
 
 
 \subsection{Variable Documentation}
-\hypertarget{a00128_abfe2f871ea28e48198cdd5799807de5b}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+@{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+}}
-\index{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+@{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}float acs\+From\+Wim2\+Carness.\+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+ = 6.\+022141e23}}\label{a00128_abfe2f871ea28e48198cdd5799807de5b}
+\hypertarget{a00128_ab0d9c13eee214bf78b20760bf2835248}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!alphabet@{alphabet}}
+\index{alphabet@{alphabet}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{alphabet}]{\setlength{\rightskip}{0pt plus 5cm}list topology\-\_\-analysis.\-alphabet = \mbox{[}'A', 'B'\mbox{]}}}\label{a00128_ab0d9c13eee214bf78b20760bf2835248}
 
 
-Definition at line 45 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 118 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_ac4c461267ee7f11bbe525de64f56cd10}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!args@{args}}
-\index{args@{args}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+args = parser.\+parse\+\_\+args()}}\label{a00128_ac4c461267ee7f11bbe525de64f56cd10}
+\hypertarget{a00128_a6741aa05e3fb94565993dd2001401e98}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!args@{args}}
+\index{args@{args}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{args}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-args = parser.\-parse\-\_\-args()}}\label{a00128_a6741aa05e3fb94565993dd2001401e98}
 
 
-Definition at line 43 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 51 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a92a1d1f6272fbef428680bed82dd37e7}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!cat\+I\+D@{cat\+I\+D}}
-\index{cat\+I\+D@{cat\+I\+D}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{cat\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+From\+Wim2\+Carness.\+cat\+I\+D = 0}}\label{a00128_a92a1d1f6272fbef428680bed82dd37e7}
+\hypertarget{a00128_a0d59133b2bb42e7aa26a3dba3a2a9a70}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!average\-Conn@{average\-Conn}}
+\index{average\-Conn@{average\-Conn}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{average\-Conn}]{\setlength{\rightskip}{0pt plus 5cm}topology\-\_\-analysis.\-average\-Conn = args.\-minavgcon}}\label{a00128_a0d59133b2bb42e7aa26a3dba3a2a9a70}
 
 
-Definition at line 72 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 97 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a0d474343423a1a87a760dd91411f96b4}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!cat\+Nums@{cat\+Nums}}
-\index{cat\+Nums@{cat\+Nums}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{cat\+Nums}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+cat\+Nums = len({\bf l})}}\label{a00128_a0d474343423a1a87a760dd91411f96b4}
+\hypertarget{a00128_a35953bf84aa0f7a2a3ffa3f68190c0fa}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!catalysis\-I\-D@{catalysis\-I\-D}}
+\index{catalysis\-I\-D@{catalysis\-I\-D}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{catalysis\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-catalysis\-I\-D = 0}}\label{a00128_a35953bf84aa0f7a2a3ffa3f68190c0fa}
 
 
-Definition at line 116 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 149 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_aea4d714ca7ceaba151380b3aed7c34d8}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!cats@{cats}}
-\index{cats@{cats}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{cats}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+cats = np.\+vstack(\mbox{[}cats,(int({\bf cat\+I\+D}), int({\bf species\+List.\+index}({\bf l}\mbox{[}6+{\bf cat\+Nums}-\/1\mbox{]}\mbox{[}0\+:len({\bf l}\mbox{[}6+{\bf cat\+Nums}-\/1\mbox{]})-\/1\mbox{]})), int({\bf rct}), int(0), int(args.\+rates\mbox{[}0\mbox{]}), int(args.\+rates\mbox{[}1\mbox{]}), int(args.\+rates\mbox{[}2\mbox{]}), int(1))\mbox{]})}}\label{a00128_aea4d714ca7ceaba151380b3aed7c34d8}
+\hypertarget{a00128_a6f49caf3b9250cab918ae8dc5aef9931}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!check\-Rct@{check\-Rct}}
+\index{check\-Rct@{check\-Rct}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{check\-Rct}]{\setlength{\rightskip}{0pt plus 5cm}topology\-\_\-analysis.\-check\-Rct = False}}\label{a00128_a6f49caf3b9250cab918ae8dc5aef9931}
 
 
-Definition at line 127 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 151 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_aa78205fca6ef215871776684bc141b26}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!exps\+Folder@{exps\+Folder}}
-\index{exps\+Folder@{exps\+Folder}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{exps\+Folder}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+exps\+Folder = os.\+path.\+join(args.\+str\+Out, \char`\"{}exps\char`\"{})}}\label{a00128_aa78205fca6ef215871776684bc141b26}
+\hypertarget{a00128_aa468c4ff92202c7d89fb631e8cb54dc8}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!conf@{conf}}
+\index{conf@{conf}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{conf}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-conf = (1,1,2000,0,200000,0,0,2,args.\-last\-Food,{\bf prob})}}\label{a00128_aa468c4ff92202c7d89fb631e8cb54dc8}
 
 
-Definition at line 146 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 147 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_ab599c65fad60b9c6ccc220002ce8f89c}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!f@{f}}
-\index{f@{f}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+f = open(args.\+wim\+File)}}\label{a00128_ab599c65fad60b9c6ccc220002ce8f89c}
+\hypertarget{a00128_aa47d62b7ce95f5c4e730d081209770c2}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!fid\-\_\-init\-Raf\-Res@{fid\-\_\-init\-Raf\-Res}}
+\index{fid\-\_\-init\-Raf\-Res@{fid\-\_\-init\-Raf\-Res}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-fid\-\_\-init\-Raf\-Res = open({\bf fname\-\_\-init\-Raf\-Res}, 'w')}}\label{a00128_aa47d62b7ce95f5c4e730d081209770c2}
 
 
-Definition at line 66 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 85 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a2f9cfe05abfed3ab6326d0cb094c7c80}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!fid\+\_\+init\+Raf\+Res@{fid\+\_\+init\+Raf\+Res}}
-\index{fid\+\_\+init\+Raf\+Res@{fid\+\_\+init\+Raf\+Res}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{fid\+\_\+init\+Raf\+Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+fid\+\_\+init\+Raf\+Res = open({\bf fname\+\_\+init\+Raf\+Res}, 'w')}}\label{a00128_a2f9cfe05abfed3ab6326d0cb094c7c80}
+\hypertarget{a00128_afcacf140d9efed55635e8dcd084db870}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!fid\-\_\-init\-Raf\-Res\-A\-L\-L@{fid\-\_\-init\-Raf\-Res\-A\-L\-L}}
+\index{fid\-\_\-init\-Raf\-Res\-A\-L\-L@{fid\-\_\-init\-Raf\-Res\-A\-L\-L}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-fid\-\_\-init\-Raf\-Res\-A\-L\-L = open({\bf fname\-\_\-init\-Raf\-Res\-A\-L\-L}, 'w')}}\label{a00128_afcacf140d9efed55635e8dcd084db870}
 
 
-Definition at line 60 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 88 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_add1c3bb75f1d98889c27099fc14fc6a8}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!fid\+\_\+init\+Raf\+Res\+A\+L\+L@{fid\+\_\+init\+Raf\+Res\+A\+L\+L}}
-\index{fid\+\_\+init\+Raf\+Res\+A\+L\+L@{fid\+\_\+init\+Raf\+Res\+A\+L\+L}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{fid\+\_\+init\+Raf\+Res\+A\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+fid\+\_\+init\+Raf\+Res\+A\+L\+L = open({\bf fname\+\_\+init\+Raf\+Res\+A\+L\+L}, 'w')}}\label{a00128_add1c3bb75f1d98889c27099fc14fc6a8}
+\hypertarget{a00128_abca13a03834449d5629252329999f1a3}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}}
+\index{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T = open({\bf fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'w')}}\label{a00128_abca13a03834449d5629252329999f1a3}
 
 
-Definition at line 62 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 87 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a7af2668de12720f3c7925527002d81b0}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!fid\+\_\+init\+Raf\+Res\+L\+I\+S\+T@{fid\+\_\+init\+Raf\+Res\+L\+I\+S\+T}}
-\index{fid\+\_\+init\+Raf\+Res\+L\+I\+S\+T@{fid\+\_\+init\+Raf\+Res\+L\+I\+S\+T}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{fid\+\_\+init\+Raf\+Res\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+fid\+\_\+init\+Raf\+Res\+L\+I\+S\+T = open({\bf fname\+\_\+init\+Raf\+Res\+L\+I\+S\+T}, 'w')}}\label{a00128_a7af2668de12720f3c7925527002d81b0}
+\hypertarget{a00128_a89401fb2ff1eb8e1567b1625ad0bb84f}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!fid\-\_\-init\-Raf\-Res\-S\-U\-M@{fid\-\_\-init\-Raf\-Res\-S\-U\-M}}
+\index{fid\-\_\-init\-Raf\-Res\-S\-U\-M@{fid\-\_\-init\-Raf\-Res\-S\-U\-M}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{fid\-\_\-init\-Raf\-Res\-S\-U\-M}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-fid\-\_\-init\-Raf\-Res\-S\-U\-M = open({\bf fname\-\_\-init\-Raf\-Res\-S\-U\-M}, 'w')}}\label{a00128_a89401fb2ff1eb8e1567b1625ad0bb84f}
 
 
-Definition at line 61 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 86 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_aac88079820753d1e8c6628b7016a71d5}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!fid\+\_\+init\+Species@{fid\+\_\+init\+Species}}
-\index{fid\+\_\+init\+Species@{fid\+\_\+init\+Species}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{fid\+\_\+init\+Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+fid\+\_\+init\+Species = open({\bf fname\+\_\+init\+Species}, 'w')}}\label{a00128_aac88079820753d1e8c6628b7016a71d5}
+\hypertarget{a00128_a80488e9379ed7dc114c3ea6739d4fda9}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!fname\-\_\-init\-Raf\-Res@{fname\-\_\-init\-Raf\-Res}}
+\index{fname\-\_\-init\-Raf\-Res@{fname\-\_\-init\-Raf\-Res}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-fname\-\_\-init\-Raf\-Res = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis.\-csv')}}\label{a00128_a80488e9379ed7dc114c3ea6739d4fda9}
 
 
-Definition at line 169 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 81 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a107606e6132ad38bc8591a7931a277fc}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!fid\+\_\+run@{fid\+\_\+run}}
-\index{fid\+\_\+run@{fid\+\_\+run}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{fid\+\_\+run}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+fid\+\_\+run = open({\bf fname\+\_\+run}, 'w')}}\label{a00128_a107606e6132ad38bc8591a7931a277fc}
+\hypertarget{a00128_a2ef3a802ca870bda339c2b50c046bc71}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!fname\-\_\-init\-Raf\-Res\-A\-L\-L@{fname\-\_\-init\-Raf\-Res\-A\-L\-L}}
+\index{fname\-\_\-init\-Raf\-Res\-A\-L\-L@{fname\-\_\-init\-Raf\-Res\-A\-L\-L}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-fname\-\_\-init\-Raf\-Res\-A\-L\-L = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-A\-L\-L.\-csv')}}\label{a00128_a2ef3a802ca870bda339c2b50c046bc71}
 
 
-Definition at line 154 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 84 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a6df9226d812c675c76a936c215c07e53}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!fname\+\_\+init\+Raf\+Res@{fname\+\_\+init\+Raf\+Res}}
-\index{fname\+\_\+init\+Raf\+Res@{fname\+\_\+init\+Raf\+Res}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{fname\+\_\+init\+Raf\+Res}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+fname\+\_\+init\+Raf\+Res = os.\+path.\+join({\bf newdir\+All\+Results}, '0\+\_\+init\+Raf\+Analysis.\+csv')}}\label{a00128_a6df9226d812c675c76a936c215c07e53}
+\hypertarget{a00128_ae1a425430860aba59e0118dbe1ac2163}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}}
+\index{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T@{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-fname\-\_\-init\-Raf\-Res\-L\-I\-S\-T = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-L\-I\-S\-T.\-csv')}}\label{a00128_ae1a425430860aba59e0118dbe1ac2163}
 
 
-Definition at line 57 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 83 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a89c98e628d7938077b4ed18215d4fd9b}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!fname\+\_\+init\+Raf\+Res\+A\+L\+L@{fname\+\_\+init\+Raf\+Res\+A\+L\+L}}
-\index{fname\+\_\+init\+Raf\+Res\+A\+L\+L@{fname\+\_\+init\+Raf\+Res\+A\+L\+L}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{fname\+\_\+init\+Raf\+Res\+A\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+fname\+\_\+init\+Raf\+Res\+A\+L\+L = os.\+path.\+join({\bf newdir\+All\+Results}, '0\+\_\+init\+Raf\+Analysis\+A\+L\+L.\+csv')}}\label{a00128_a89c98e628d7938077b4ed18215d4fd9b}
+\hypertarget{a00128_ac3f3b9f72351b39261d33caf3d22d03e}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!fname\-\_\-init\-Raf\-Res\-S\-U\-M@{fname\-\_\-init\-Raf\-Res\-S\-U\-M}}
+\index{fname\-\_\-init\-Raf\-Res\-S\-U\-M@{fname\-\_\-init\-Raf\-Res\-S\-U\-M}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{fname\-\_\-init\-Raf\-Res\-S\-U\-M}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-fname\-\_\-init\-Raf\-Res\-S\-U\-M = os.\-path.\-join({\bf newdir\-All\-Results}, '0\-\_\-init\-Raf\-Analysis\-S\-U\-M.\-csv')}}\label{a00128_ac3f3b9f72351b39261d33caf3d22d03e}
 
 
-Definition at line 59 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 82 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a69f06c42408f8a1ae74e34daa83402b7}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!fname\+\_\+init\+Raf\+Res\+L\+I\+S\+T@{fname\+\_\+init\+Raf\+Res\+L\+I\+S\+T}}
-\index{fname\+\_\+init\+Raf\+Res\+L\+I\+S\+T@{fname\+\_\+init\+Raf\+Res\+L\+I\+S\+T}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{fname\+\_\+init\+Raf\+Res\+L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+fname\+\_\+init\+Raf\+Res\+L\+I\+S\+T = os.\+path.\+join({\bf newdir\+All\+Results}, '0\+\_\+init\+Raf\+Analysis\+L\+I\+S\+T.\+csv')}}\label{a00128_a69f06c42408f8a1ae74e34daa83402b7}
+\hypertarget{a00128_a96850fa3d62df1176a8d7a5b988f4a32}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!food\-List@{food\-List}}
+\index{food\-List@{food\-List}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{food\-List}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-food\-List = range({\bf last\-Species\-I\-D})}}\label{a00128_a96850fa3d62df1176a8d7a5b988f4a32}
 
 
-Definition at line 58 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 167 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a6053e1a97cef2ed661333b2a7b0cf67e}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!fname\+\_\+init\+Species@{fname\+\_\+init\+Species}}
-\index{fname\+\_\+init\+Species@{fname\+\_\+init\+Species}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{fname\+\_\+init\+Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+fname\+\_\+init\+Species = os.\+path.\+join({\bf s\+\_\+exps\+Folder}, '\+\_\+acsspecies.\+csv')}}\label{a00128_a6053e1a97cef2ed661333b2a7b0cf67e}
+\hypertarget{a00128_a5a68ea0f110f2fae7b8f03d1ce52d54d}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!increase\-Yet@{increase\-Yet}}
+\index{increase\-Yet@{increase\-Yet}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{increase\-Yet}]{\setlength{\rightskip}{0pt plus 5cm}topology\-\_\-analysis.\-increase\-Yet = True}}\label{a00128_a5a68ea0f110f2fae7b8f03d1ce52d54d}
 
 
-Definition at line 168 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 96 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a58053e5bf5bd9f634c82e6fe7a330770}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!fname\+\_\+run@{fname\+\_\+run}}
-\index{fname\+\_\+run@{fname\+\_\+run}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{fname\+\_\+run}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+fname\+\_\+run = os.\+path.\+join({\bf save\+Str\+Folder}, 'simulation.\+sh')}}\label{a00128_a58053e5bf5bd9f634c82e6fe7a330770}
+\hypertarget{a00128_af2370a811b14632a793a28e451be8150}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!init\-Species\-List\-Length@{init\-Species\-List\-Length}}
+\index{init\-Species\-List\-Length@{init\-Species\-List\-Length}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{init\-Species\-List\-Length}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-init\-Species\-List\-Length = len({\bf species\-List})}}\label{a00128_af2370a811b14632a793a28e451be8150}
 
 
-Definition at line 153 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 145 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a42c0d5f9f5131fc14ddb04d765cee15b}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!folder@{folder}}
-\index{folder@{folder}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{folder}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+folder = str(cx)}}\label{a00128_a42c0d5f9f5131fc14ddb04d765cee15b}
+\hypertarget{a00128_a2117e01e4647cbdecc0ece27cec1cff4}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!iterations@{iterations}}
+\index{iterations@{iterations}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{iterations}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-iterations = int((args.\-iteration/(maxlength+1-\/args.\-min\-Dim)))}}\label{a00128_a2117e01e4647cbdecc0ece27cec1cff4}
 
 
-Definition at line 161 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 106 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_aee9290533a24e96dbde7c8e71055497f}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!food@{food}}
-\index{food@{food}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{food}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+food = deepcopy({\bf food\+List})}}\label{a00128_aee9290533a24e96dbde7c8e71055497f}
+\hypertarget{a00128_a1aa5d59ebf308accb3c960b5fd90a445}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!last\-Species\-I\-D@{last\-Species\-I\-D}}
+\index{last\-Species\-I\-D@{last\-Species\-I\-D}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{last\-Species\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-last\-Species\-I\-D = 2}}\label{a00128_a1aa5d59ebf308accb3c960b5fd90a445}
 
 
-Definition at line 98 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 166 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a878da371fd02e9515fe7305e0a57be09}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!food\+List@{food\+List}}
-\index{food\+List@{food\+List}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{food\+List}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+From\+Wim2\+Carness.\+food\+List = \mbox{[}$\,$\mbox{]}}}\label{a00128_a878da371fd02e9515fe7305e0a57be09}
+\hypertarget{a00128_a9975713682889eae03088e5575e1a0e4}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!n\-Cleavage@{n\-Cleavage}}
+\index{n\-Cleavage@{n\-Cleavage}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{n\-Cleavage}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-n\-Cleavage = 0}}\label{a00128_a9975713682889eae03088e5575e1a0e4}
 
 
-Definition at line 70 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 114 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a4fad8527bf8c9b7981003678aba3edff}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!init\+Conc@{init\+Conc}}
-\index{init\+Conc@{init\+Conc}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{init\+Conc}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+init\+Conc = args.\+initial\+Numerosity/({\bf args.\+volume} $\ast$ {\bf \+\_\+\+A\+V\+O\+G\+A\+D\+R\+O\+\_\+})}}\label{a00128_a4fad8527bf8c9b7981003678aba3edff}
+\hypertarget{a00128_a38aa665f11207bbd8cd2da4c382d4aca}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!n\-Condensa@{n\-Condensa}}
+\index{n\-Condensa@{n\-Condensa}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{n\-Condensa}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-n\-Condensa = 0}}\label{a00128_a38aa665f11207bbd8cd2da4c382d4aca}
 
 
-Definition at line 170 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 115 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a0437cd4d2a377ca0e34ab59f4bfd833f}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!l@{l}}
-\index{l@{l}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{l}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+l = {\bf line.\+split}()}}\label{a00128_a0437cd4d2a377ca0e34ab59f4bfd833f}
+\hypertarget{a00128_aa6d4ad4089dc05372dcdfe03c969b8b4}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!ndn@{ndn}}
+\index{ndn@{ndn}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string topology\-\_\-analysis.\-ndn = '\-\_\-topological\-\_\-assessment\-\_\-'}}\label{a00128_aa6d4ad4089dc05372dcdfe03c969b8b4}
 
 
-Definition at line 87 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 62 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_ae1f2c64eb13a9c020ffe6ec073883573}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!lastc@{lastc}}
-\index{lastc@{lastc}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{lastc}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+From\+Wim2\+Carness.\+lastc = \char`\"{}0\char`\"{}}}\label{a00128_ae1f2c64eb13a9c020ffe6ec073883573}
+\hypertarget{a00128_af42f57da8ba80463f419efaf0f6f2c33}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!netouts@{netouts}}
+\index{netouts@{netouts}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{netouts}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-netouts = network.\-net\-\_\-analysis\-\_\-of\-\_\-static\-\_\-graphs({\bf fid\-\_\-init\-Raf\-Res}, {\bf fid\-\_\-init\-Raf\-Res\-A\-L\-L}, {\bf fid\-\_\-init\-Raf\-Res\-L\-I\-S\-T}, 'tmp\-Dir', {\bf prob}, {\bf average\-Conn}, rcts, cats, {\bf food\-List}, maxlength)}}\label{a00128_af42f57da8ba80463f419efaf0f6f2c33}
 
 
-Definition at line 172 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 171 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a2a83f40b2aa2cbcbd487195fef9af340}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!lines@{lines}}
-\index{lines@{lines}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{lines}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+lines = f.\+readlines()}}\label{a00128_a2a83f40b2aa2cbcbd487195fef9af340}
+\hypertarget{a00128_a8e1c34cb190151a28fd81e19d6252253}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!newdir\-All\-Results@{newdir\-All\-Results}}
+\index{newdir\-All\-Results@{newdir\-All\-Results}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{newdir\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-newdir\-All\-Results = os.\-path.\-join(args.\-str\-Out, {\bf ndn})}}\label{a00128_a8e1c34cb190151a28fd81e19d6252253}
 
 
-Definition at line 67 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 64 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a6f995419ddd7f2de58506d9541238dbc}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!ndn@{ndn}}
-\index{ndn@{ndn}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{ndn}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+From\+Wim2\+Carness.\+ndn = '\+\_\+0\+\_\+\+Hordijk\+\_\+raf'}}\label{a00128_a6f995419ddd7f2de58506d9541238dbc}
+\hypertarget{a00128_a62b034cfe14eff36f09dd65a51ae7c9c}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!original\-Species\-List@{original\-Species\-List}}
+\index{original\-Species\-List@{original\-Species\-List}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{original\-Species\-List}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-original\-Species\-List = deepcopy({\bf species\-List})}}\label{a00128_a62b034cfe14eff36f09dd65a51ae7c9c}
 
 
-Definition at line 48 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 120 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a4af2fb5abbd4a6e8930401e66af5b79d}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!newdir\+All\+Results@{newdir\+All\+Results}}
-\index{newdir\+All\+Results@{newdir\+All\+Results}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{newdir\+All\+Results}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+newdir\+All\+Results = os.\+path.\+join(args.\+str\+Out, {\bf ndn})}}\label{a00128_a4af2fb5abbd4a6e8930401e66af5b79d}
+\hypertarget{a00128_a516f339905d01b02a4e16181f2fde4be}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!pars@{pars}}
+\index{pars@{pars}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{pars}]{\setlength{\rightskip}{0pt plus 5cm}list topology\-\_\-analysis.\-pars = \mbox{[}0\mbox{]}}}\label{a00128_a516f339905d01b02a4e16181f2fde4be}
 
 
-Definition at line 49 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 156 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_aed93287ef2c9a4a9ba68f8ffc75aae17}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!parser@{parser}}
-\index{parser@{parser}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+parser}}\label{a00128_aed93287ef2c9a4a9ba68f8ffc75aae17}
-{\bfseries Initial value\+:}
+\hypertarget{a00128_aeff833532f5cd31a9720a78cc0f8d97b}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!parser@{parser}}
+\index{parser@{parser}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-parser}}\label{a00128_aeff833532f5cd31a9720a78cc0f8d97b}
+{\bfseries Initial value\-:}
 \begin{DoxyCode}
 1 = ArgumentParser(
-2                                 description=\textcolor{stringliteral}{'From WIM format to my format'}
-3                                 , epilog=\textcolor{stringliteral}{'''From WIM format to my format. '''})
+2                                 description=\textcolor{stringliteral}{'This script perform a topological analysis of random catalytic
+       reaction networks.'}
+3                                 , epilog=\textcolor{stringliteral}{'''Random Catalytic Reaction Networks Topological Assessment '''})
 \end{DoxyCode}
 
 
-Definition at line 28 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 32 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_ac84174dad0b933ca88ebdb79cf3497ec}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!procedure@{procedure}}
-\index{procedure@{procedure}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{procedure}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+From\+Wim2\+Carness.\+procedure = 0}}\label{a00128_ac84174dad0b933ca88ebdb79cf3497ec}
-
-
-Definition at line 68 of file acs\+From\+Wim2\+Carness.\+py.
-
-\hypertarget{a00128_a36370edf2a6a4e19f0a99413aac43096}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!rafsets@{rafsets}}
-\index{rafsets@{rafsets}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{rafsets}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+rafsets = raf.\+raf\+Computation({\bf fid\+\_\+init\+Raf\+Res}, {\bf fid\+\_\+init\+Raf\+Res\+A\+L\+L}, {\bf fid\+\_\+init\+Raf\+Res\+L\+I\+S\+T}, 'tmp\+Dir', 0, {\bf rct}/float(len({\bf species\+List})), rcts, {\bf cats}, {\bf food\+List}, 10)}}\label{a00128_a36370edf2a6a4e19f0a99413aac43096}
+\hypertarget{a00128_a51a66ce80f70aeab8bde70af9960e419}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!perc\-R\-A\-F\-Founds@{perc\-R\-A\-F\-Founds}}
+\index{perc\-R\-A\-F\-Founds@{perc\-R\-A\-F\-Founds}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{perc\-R\-A\-F\-Founds}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-perc\-R\-A\-F\-Founds = {\bf raffound}/float({\bf iterations})}}\label{a00128_a51a66ce80f70aeab8bde70af9960e419}
 
 
-Definition at line 134 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 194 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a61159eb5aec77b97808ce3fb742d8f6d}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!rct@{rct}}
-\index{rct@{rct}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{rct}]{\setlength{\rightskip}{0pt plus 5cm}int acs\+From\+Wim2\+Carness.\+rct = 0}}\label{a00128_a61159eb5aec77b97808ce3fb742d8f6d}
-
-
-Definition at line 71 of file acs\+From\+Wim2\+Carness.\+py.
-
-\hypertarget{a00128_ad8daa0d6fb501f0e422c7fb04e93c7cd}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!s\+\_\+exps\+Folder@{s\+\_\+exps\+Folder}}
-\index{s\+\_\+exps\+Folder@{s\+\_\+exps\+Folder}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{s\+\_\+exps\+Folder}]{\setlength{\rightskip}{0pt plus 5cm}tuple acs\+From\+Wim2\+Carness.\+s\+\_\+exps\+Folder = os.\+path.\+join({\bf save\+Str\+Folder}, {\bf folder})}}\label{a00128_ad8daa0d6fb501f0e422c7fb04e93c7cd}
+\hypertarget{a00128_a14f23c89de77042b80e78e1d9ab7b754}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!perc\-Scc\-Founds@{perc\-Scc\-Founds}}
+\index{perc\-Scc\-Founds@{perc\-Scc\-Founds}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{perc\-Scc\-Founds}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-perc\-Scc\-Founds = {\bf sccfound}/float({\bf iterations})}}\label{a00128_a14f23c89de77042b80e78e1d9ab7b754}
 
 
-Definition at line 162 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 196 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_adf74f9028f6a6e9a2de2046146a29ffe}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!save\+Str\+Folder@{save\+Str\+Folder}}
-\index{save\+Str\+Folder@{save\+Str\+Folder}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{save\+Str\+Folder}]{\setlength{\rightskip}{0pt plus 5cm}acs\+From\+Wim2\+Carness.\+save\+Str\+Folder = {\bf exps\+Folder}}}\label{a00128_adf74f9028f6a6e9a2de2046146a29ffe}
-
-
-Definition at line 151 of file acs\+From\+Wim2\+Carness.\+py.
-
-\hypertarget{a00128_aff8baae5d4cd1678204477dd5e620775}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!species\+List@{species\+List}}
-\index{species\+List@{species\+List}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{species\+List}]{\setlength{\rightskip}{0pt plus 5cm}list acs\+From\+Wim2\+Carness.\+species\+List = \mbox{[}$\,$\mbox{]}}}\label{a00128_aff8baae5d4cd1678204477dd5e620775}
+\hypertarget{a00128_a8bf55c62b8e7385526396a9003e343bb}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!perc\-Sccselffound@{perc\-Sccselffound}}
+\index{perc\-Sccselffound@{perc\-Sccselffound}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{perc\-Sccselffound}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-perc\-Sccselffound = {\bf sccselffound}/float({\bf iterations})}}\label{a00128_a8bf55c62b8e7385526396a9003e343bb}
 
 
-Definition at line 69 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 197 of file topology\-\_\-analysis.\-py.
 
-\hypertarget{a00128_a015e630bcbd779acd7f68bf514793e0d}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!str2w@{str2w}}
-\index{str2w@{str2w}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{str2w}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+From\+Wim2\+Carness.\+str2w = str(id)}}\label{a00128_a015e630bcbd779acd7f68bf514793e0d}
-
-
-Definition at line 175 of file acs\+From\+Wim2\+Carness.\+py.
-
-\hypertarget{a00128_a34b3667c3c217a35a0e9b71458d2b233}{\index{acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}!str\+To\+Write@{str\+To\+Write}}
-\index{str\+To\+Write@{str\+To\+Write}!acs\+From\+Wim2\+Carness@{acs\+From\+Wim2\+Carness}}
-\subsubsection[{str\+To\+Write}]{\setlength{\rightskip}{0pt plus 5cm}string acs\+From\+Wim2\+Carness.\+str\+To\+Write = \char`\"{}Folder\textbackslash{}t\+P\textbackslash{}t\+A\+C\textbackslash{}t\+M\textbackslash{}t\+R\+A\+Fsize\textbackslash{}t\+Closure\textbackslash{}t\+Cats\textbackslash{}tu\+R\+A\+F\textbackslash{}n\char`\"{}}}\label{a00128_a34b3667c3c217a35a0e9b71458d2b233}
+\hypertarget{a00128_aee49954a6b9abb7c4bd677c17ed4013b}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!perc\-Scc\-Tot\-Founds@{perc\-Scc\-Tot\-Founds}}
+\index{perc\-Scc\-Tot\-Founds@{perc\-Scc\-Tot\-Founds}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{perc\-Scc\-Tot\-Founds}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-perc\-Scc\-Tot\-Founds = {\bf scctotfound}/float({\bf iterations})}}\label{a00128_aee49954a6b9abb7c4bd677c17ed4013b}
 
 
-Definition at line 63 of file acs\+From\+Wim2\+Carness.\+py.
+Definition at line 195 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_aad2c05e3d2146196ed236911dd796f6e}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!prob@{prob}}
+\index{prob@{prob}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{prob}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-prob = (1 / float({\bf tot\-Rcts}))}}\label{a00128_aad2c05e3d2146196ed236911dd796f6e}
+
+
+Definition at line 133 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_ad625a009a3da81a04b490e62975ecf39}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!raffound@{raffound}}
+\index{raffound@{raffound}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{raffound}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-raffound = 0}}\label{a00128_ad625a009a3da81a04b490e62975ecf39}
+
+
+Definition at line 100 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_aeb909c76682b690cc5ab6aca5ac37c4d}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!rcts\-R\-A\-F@{rcts\-R\-A\-F}}
+\index{rcts\-R\-A\-F@{rcts\-R\-A\-F}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{rcts\-R\-A\-F}]{\setlength{\rightskip}{0pt plus 5cm}list topology\-\_\-analysis.\-rcts\-R\-A\-F = rcts\mbox{[}np.\-any(rcts\mbox{[}\-:, 0\mbox{]} == np.\-expand\-\_\-dims({\bf netouts}\mbox{[}0\mbox{]}\mbox{[}2\mbox{]},1), 0), \-:\mbox{]}}}\label{a00128_aeb909c76682b690cc5ab6aca5ac37c4d}
+
+
+Definition at line 178 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_afa804d4b1d39a63de9f14e5ab379ae34}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!rct\-To\-Cat@{rct\-To\-Cat}}
+\index{rct\-To\-Cat@{rct\-To\-Cat}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{rct\-To\-Cat}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-rct\-To\-Cat = int(round({\bf tot\-Species} $\ast$ {\bf average\-Conn}))}}\label{a00128_afa804d4b1d39a63de9f14e5ab379ae34}
+
+
+Definition at line 140 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a07d632b487fabd051ab725ee95a85368}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!reaction\-I\-D@{reaction\-I\-D}}
+\index{reaction\-I\-D@{reaction\-I\-D}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{reaction\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-reaction\-I\-D = 0}}\label{a00128_a07d632b487fabd051ab725ee95a85368}
+
+
+Definition at line 148 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_ac864e2a75b705766c1d81f68897f52c0}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!scc\-\_\-in\-\_\-raf@{scc\-\_\-in\-\_\-raf}}
+\index{scc\-\_\-in\-\_\-raf@{scc\-\_\-in\-\_\-raf}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{scc\-\_\-in\-\_\-raf}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-scc\-\_\-in\-\_\-raf = network.\-return\-\_\-scc\-\_\-in\-\_\-raf({\bf rcts\-R\-A\-F}, {\bf netouts}\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}, cats)}}\label{a00128_ac864e2a75b705766c1d81f68897f52c0}
+
+
+Definition at line 179 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_aa8258ef828502be89350332ae97a0d3a}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!sccfound@{sccfound}}
+\index{sccfound@{sccfound}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{sccfound}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-sccfound = 0}}\label{a00128_aa8258ef828502be89350332ae97a0d3a}
+
+
+Definition at line 101 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a3dd0e59d1fb4786b4bec44f325585eb6}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!sccinraffound@{sccinraffound}}
+\index{sccinraffound@{sccinraffound}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{sccinraffound}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-sccinraffound = 0}}\label{a00128_a3dd0e59d1fb4786b4bec44f325585eb6}
+
+
+Definition at line 104 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_aeacefe088f3283ea0e80ee31c0486d6d}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!sccselffound@{sccselffound}}
+\index{sccselffound@{sccselffound}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{sccselffound}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-sccselffound = 0}}\label{a00128_aeacefe088f3283ea0e80ee31c0486d6d}
+
+
+Definition at line 102 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_ac05c0aaedb357a42df2d5f3915bbedfa}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!scctotfound@{scctotfound}}
+\index{scctotfound@{scctotfound}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{scctotfound}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-scctotfound = 0}}\label{a00128_ac05c0aaedb357a42df2d5f3915bbedfa}
+
+
+Definition at line 103 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a4d888d782ac3414961c2b844bed8b1bd}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!self\-\_\-sccinraffound@{self\-\_\-sccinraffound}}
+\index{self\-\_\-sccinraffound@{self\-\_\-sccinraffound}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{self\-\_\-sccinraffound}]{\setlength{\rightskip}{0pt plus 5cm}int topology\-\_\-analysis.\-self\-\_\-sccinraffound = 0}}\label{a00128_a4d888d782ac3414961c2b844bed8b1bd}
+
+
+Definition at line 105 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a5bfc4cfa78ac777159cb0ca9c9c5c2f6}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!species\-List@{species\-List}}
+\index{species\-List@{species\-List}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{species\-List}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-species\-List = sp.\-create\-Complete\-Species\-Population(maxlength, {\bf alphabet})}}\label{a00128_a5bfc4cfa78ac777159cb0ca9c9c5c2f6}
+
+
+Definition at line 119 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_acecbaeef1428691283d6df79d6b1e689}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!str\-To\-Write@{str\-To\-Write}}
+\index{str\-To\-Write@{str\-To\-Write}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{str\-To\-Write}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-str\-To\-Write = \char`\"{}Folder\textbackslash{}t\-P\textbackslash{}t\-A\-C\textbackslash{}t\-M\textbackslash{}t\-R\-A\-Fsize\textbackslash{}t\-Closure\textbackslash{}t\-Cats\textbackslash{}tu\-R\-A\-F\textbackslash{}t\-S\-C\-C\textbackslash{}t\-Auto\-Cat\textbackslash{}n\char`\"{}}}\label{a00128_acecbaeef1428691283d6df79d6b1e689}
+
+
+Definition at line 89 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_ac7160059dec8067db4645fa39feec359}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!time1@{time1}}
+\index{time1@{time1}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{time1}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-time1 = time()}}\label{a00128_ac7160059dec8067db4645fa39feec359}
+
+
+Definition at line 99 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a44666efa43bfc08ab8305c8d325f7456}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!time2@{time2}}
+\index{time2@{time2}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{time2}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-time2 = time()}}\label{a00128_a44666efa43bfc08ab8305c8d325f7456}
+
+
+Definition at line 191 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_ace5bda70ff24e6a220afb4438240003a}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!time\-Analysis@{time\-Analysis}}
+\index{time\-Analysis@{time\-Analysis}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{time\-Analysis}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-time\-Analysis = time()}}\label{a00128_ace5bda70ff24e6a220afb4438240003a}
+
+
+Definition at line 170 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a3ddbda333425be797470f7d058e2c8a4}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!time\-Analysis\-Vector@{time\-Analysis\-Vector}}
+\index{time\-Analysis\-Vector@{time\-Analysis\-Vector}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{time\-Analysis\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}list topology\-\_\-analysis.\-time\-Analysis\-Vector = \mbox{[}$\,$\mbox{]}}}\label{a00128_a3ddbda333425be797470f7d058e2c8a4}
+
+
+Definition at line 108 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a0689e49982e7bedba8ac4eb5534963db}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!time\-Avg\-Analysis@{time\-Avg\-Analysis}}
+\index{time\-Avg\-Analysis@{time\-Avg\-Analysis}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{time\-Avg\-Analysis}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-time\-Avg\-Analysis = {\bf sum}({\bf time\-Analysis\-Vector})}}\label{a00128_a0689e49982e7bedba8ac4eb5534963db}
+
+
+Definition at line 193 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a4cd61f10a5a0a8d80608e71a1fc2009c}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!time\-Avg\-Creation@{time\-Avg\-Creation}}
+\index{time\-Avg\-Creation@{time\-Avg\-Creation}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{time\-Avg\-Creation}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-time\-Avg\-Creation = {\bf sum}({\bf time\-Creatin\-Vector})}}\label{a00128_a4cd61f10a5a0a8d80608e71a1fc2009c}
+
+
+Definition at line 192 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a0527a0989312340a402661aebc675d30}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!time\-Creatin\-Vector@{time\-Creatin\-Vector}}
+\index{time\-Creatin\-Vector@{time\-Creatin\-Vector}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{time\-Creatin\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}list topology\-\_\-analysis.\-time\-Creatin\-Vector = \mbox{[}$\,$\mbox{]}}}\label{a00128_a0527a0989312340a402661aebc675d30}
+
+
+Definition at line 107 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a2f85d448268dd44ad47f66b65bfa45b6}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!time\-Net\-Creation@{time\-Net\-Creation}}
+\index{time\-Net\-Creation@{time\-Net\-Creation}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{time\-Net\-Creation}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-time\-Net\-Creation = time()}}\label{a00128_a2f85d448268dd44ad47f66b65bfa45b6}
+
+
+Definition at line 160 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a5b12bbbc66679be171ab082dbaeba90b}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!timet@{timet}}
+\index{timet@{timet}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{timet}]{\setlength{\rightskip}{0pt plus 5cm}topology\-\_\-analysis.\-timet = {\bf time2}-\/{\bf time1}}}\label{a00128_a5b12bbbc66679be171ab082dbaeba90b}
+
+
+Definition at line 206 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a1e875e49e1f980d461a398fd6a072b0b}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!tot\-Cleavage@{tot\-Cleavage}}
+\index{tot\-Cleavage@{tot\-Cleavage}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{tot\-Cleavage}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-tot\-Cleavage = reactions.\-get\-Num\-Of\-Cleavages({\bf species\-List})}}\label{a00128_a1e875e49e1f980d461a398fd6a072b0b}
+
+
+Definition at line 126 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a059c41eb160321f87ba469fddd20eda7}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!tot\-Rcts@{tot\-Rcts}}
+\index{tot\-Rcts@{tot\-Rcts}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{tot\-Rcts}]{\setlength{\rightskip}{0pt plus 5cm}topology\-\_\-analysis.\-tot\-Rcts = {\bf tot\-Cleavage}+tot\-Cond}}\label{a00128_a059c41eb160321f87ba469fddd20eda7}
+
+
+Definition at line 130 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_ac657414359bc072005d43b2328119a7d}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!tot\-Species@{tot\-Species}}
+\index{tot\-Species@{tot\-Species}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{tot\-Species}]{\setlength{\rightskip}{0pt plus 5cm}tuple topology\-\_\-analysis.\-tot\-Species = sp.\-get\-Tot\-Number\-Of\-Species\-From\-Complete\-Pop(maxlength)}}\label{a00128_ac657414359bc072005d43b2328119a7d}
+
+
+Definition at line 123 of file topology\-\_\-analysis.\-py.
+
+\hypertarget{a00128_a67cf979bfd8cf26867524a1a788a5e63}{\index{topology\-\_\-analysis@{topology\-\_\-analysis}!weight\-Cat@{weight\-Cat}}
+\index{weight\-Cat@{weight\-Cat}!topology_analysis@{topology\-\_\-analysis}}
+\subsubsection[{weight\-Cat}]{\setlength{\rightskip}{0pt plus 5cm}list topology\-\_\-analysis.\-weight\-Cat = \mbox{[}1\mbox{]}}}\label{a00128_a67cf979bfd8cf26867524a1a788a5e63}
+
+
+Definition at line 152 of file topology\-\_\-analysis.\-py.
 
