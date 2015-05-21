@@ -120,12 +120,15 @@
  *		@param diffusion_contribute (KD) (0 or 0.5) if set to 0.5 the speed of molecules goes with the inverse of the square of the length, L^{-KD}
  *		@param solubility_threshold (> 0) Solubility Threshold, all the species longer than solubility_threshold precipitate
  *
- *		 <b>THE COUPLING BETWEEN INFLUX_RATE AND MAXLOUT INDICATES IF WE ARE SIMULATING A PROTOCELL OR A FLOW REACTOR (CSTR)</b>:
+ *		 <b>THE COUPLING BETWEEN INFLUX_RATE AND MAXLOUT INDICATES IF WE ARE SIMULATING A PROTOCELL (BUFFERED or FINITE MEMBRANE PASSAGE) OR A FLOW REACTOR (CSTR)</b>:
  *
+ *		  IF influx_rate >= 0:
  *		  - influx_rate > 0 & maxLOut > 0 :: <b>FILTERED SYSTEM</b>: Deterministic simulation of the flux with a filter for the species with length up to maxLOut
  *		  - influx_rate = 0 & maxLOut > 0 :: <b>PROTOCELL</b>: Flux is not simulated, concentration of the species with length up to maxLOut are buffered
  *		  - influx_rate > 0 & maxLOut = 0 :: <b>CSTR</b>: Deterministic simulation of the flux, _acsinflux.csv species enter and all the species, according to their concentrations, can leave the system
  *		  - influx_rate = 0 & maxLOut = 0 :: <b>CLOSE SYSTEM</b>
+ *		  ELSE (influx_rate < 0):
+ *		  - influx_rate < 0 :: <FINITE MEMBRANE PASSAGE> Data concerning flow are in the _acsinflux.csv file. 
  *
  *<br><br>
  * \section Acknowledgments
@@ -631,7 +634,8 @@ int main (int argc, char *argv[]) {
 						}
 
 						// SAVE STRUCTURES TO FILE EVERY puddle->getTimeStructuresSavingInterval() SECONDS
-						if(puddle->getActualTime() >= (puddle->getTimeStructuresSavingInterval() + dataStoredCounter))
+						if(puddle->getActualTime() >= (puddle->getTimeStructuresSavingInterval() + dataStoredCounter) &&
+								(puddle->getTimeStructuresSavingInterval() >= 0))
 						{
 							saveToFile(argv[2], puddle, actGEN, actSIM, actSTEP);
 							dataStoredCounter = dataStoredCounter + puddle->getTimeStructuresSavingInterval();
@@ -639,8 +643,9 @@ int main (int argc, char *argv[]) {
 						}
 
 						// STORE ON FILE TIMES EVERY fileTimesSaveInterval seconds (if at least something happen)
-						if((puddle->getActualTime() >= (puddle->getFileTimesSavingInterval() + TimesStoredCounter)) ||
-								(puddle->getActualTime() == 0) || (puddle->getFileTimesSavingInterval() == 0))
+						if(((puddle->getActualTime() >= (puddle->getFileTimesSavingInterval() + TimesStoredCounter)) ||
+								(puddle->getActualTime() == 0) || (puddle->getFileTimesSavingInterval() == 0)) &&
+								(puddle->getFileTimesSavingInterval() >= 0))
 						{
 							//cout << puddle->getActualTime() << " " << puddle->getFileTimesSavingInterval() << " " << TimesStoredCounter << endl;
 							puddle->saveTimesSTD(actSTEP);
@@ -653,8 +658,10 @@ int main (int argc, char *argv[]) {
 						}
 
 						// STORE SPECIES AMOUNTS
-						if((puddle->getActualTime() > (puddle->getFileAmountSavingInterval() + AmountsStoredCounter)) ||
-						   (puddle->getActualTime() == 0) ||  (puddle->getFileAmountSavingInterval() == 0)) {
+						if(((puddle->getActualTime() > (puddle->getFileAmountSavingInterval() + AmountsStoredCounter)) ||
+						   (puddle->getActualTime() == 0) ||  (puddle->getFileAmountSavingInterval() == 0)) &&
+						   (puddle->getFileAmountSavingInterval() >= 0))
+						{
 							//saveLivingSpeciesIDSTD(tmp_ActGEN, tmp_ActSIM, tmp_ActSTEP, tmp_StoringPath);
 							//saveLivingSpeciesAmountSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);
 							//saveLivingSpeciesConcentrationSTD(tmp_ActGEN, tmp_ActSIM, tmp_StoringPath);

@@ -4834,56 +4834,82 @@ bool environment::performRefill(acs_double tmpTimeSinceTheLastInFlux, acs_double
  Function to simulate the finite membrame nutrients diffusion
  @version 1.0
  @date 2015-05-12
-
+ @param tmp_deltat Gillespie delta T
+ @param tmp__RndDoubleGen Random Seed Object
  */
-
 bool environment::performFiniteMembraneGradientCrossing(acs_double tmp_deltat, MTRand& tmp__RndDoubleGen)
 {
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performFiniteMembraneGradientCrossing start" << endl;
 	bool flag = true;
 	acs_double tempDeltaConc = 0;
-	acs_double tempNewConc = 0;
 	acs_double tempNumberOfMols = 0;
-
-	//cpxIntegerPart = (acs_int)decimalComplexesToDissociate;
-	//if(debugLevel == COMPLEXSTUFF) cout << cpxIntegerPart << endl;
-	//decimalComplexesToDissociate = decimalComplexesToDissociate - cpxIntegerPart;
-
-	//cout << "influx protocell size " << influx_protocell.size() << endl;
-	//cin.ignore().get();
 
 	for(vector<influxspecies_protocell>::iterator protoiter = influx_protocell.begin(); protoiter < influx_protocell.end(); protoiter++ )
 	{
 		// For each molecular species in the flux the delta concentration is computed
 		// If EXTCONC > INTCONC, then MOLS IN, ELSE MOLS OUT
 
-		tempDeltaConc = ((protoiter->getExtConc() - allSpecies.at(protoiter->getID()).getConcentration())
-						* protoiter->getKin() * tmp_deltat * surface) + protoiter->getRemConc();
+		try{
+            tempDeltaConc = ((protoiter->getExtConc() - allSpecies.at(protoiter->getID()).getConcentration())
+    						* protoiter->getKin() * tmp_deltat * surface) + protoiter->getRemConc();
 
-		// If tempDelta conc is +, so concentration must decrease, incresing otherwise.
-		// According to the time interval, the delta concentration and the k_in the number of molecules to add is computed
-		tempNewConc = (allSpecies.at(protoiter->getID()).getConcentration() + tempDeltaConc);
-		if(tempNewConc < 0) tempNewConc = 0.0;
 
-		// Compute the exact number of mols, update data and store decimal
-		tempNumberOfMols = tempNewConc * AVO * volume;
-        //cout << tempDeltaConc << " " << tempNumberOfMols << endl;
-        //cin.ignore().get();
-		protoiter->changeRemainingConc((tempNumberOfMols - (acs_int)tempNumberOfMols)/(AVO * volume));
 
-		// Finally, set new molecule concentration
+    		// If tempDelta conc is +, so concentration must decrease, incresing otherwise.
+    		// According to the time interval, the delta concentration and the k_in the number of molecules to add is computed
 
-        if (protoiter->getID() == 0){
-            cout << tempDeltaConc << " " << allSpecies.at(protoiter->getID()).getConcentration() << " --> " << tempNewConc << " " << tempNumberOfMols << endl; 
-		  cout << allSpecies.at(protoiter->getID()).getAmount() << " " << allSpecies.at(protoiter->getID()).getConcentration() << " " << tempDeltaConc << endl;
+    		// Compute the exact number of mols, update data and store decimal
+    		tempNumberOfMols = tempDeltaConc * AVO * volume;
+            //cout << tempDeltaConc << " " << tempNumberOfMols << endl;
+            //cin.ignore().get();
+    		protoiter->changeRemainingConc((tempNumberOfMols - (int)tempNumberOfMols)/(AVO * volume));
+
+            /*
+            cout << "*********\n\tID: " << protoiter->getID() << " - Amount: " << allSpecies.at(protoiter->getID()).getAmount() << endl
+                 << "\tMols to add: " << tempNumberOfMols << endl
+                 << "\t\t" << protoiter->getExtConc()  << endl
+                 << "\t\t" << protoiter->getKin()<< endl
+                 << "\t\t" << surface << endl
+                 << "\t\t" << (tempNumberOfMols - (int)tempNumberOfMols) << " ||| intero: " << (int)tempNumberOfMols << " decimale " << protoiter->getRemConc()<< endl
+                 << "\tDelta conc:  " << tempDeltaConc << endl
+                 << "\tConc: " << allSpecies.at(protoiter->getID()).getConcentration() << endl
+                 << "\tExt Conc " << protoiter->getExtConc() << endl
+                 << "\tDT: " << tmp_deltat <<  endl;
+            */
+
+            // AT THE END PUT IN A TRY CONTROL
+
+            if ((int)tempNumberOfMols != 0){
+                int tempCounter = 0;
+                if ((int)tempNumberOfMols > 0){
+                    // Add molecules procedure
+                    vector<acs_longInt> speciesInvolved;
+                    while(tempCounter < (int)tempNumberOfMols){
+                        allSpecies.at(protoiter->getID()).increment(volume);
+                        speciesInvolved.push_back(protoiter->getID());
+                        incMolSpeciesProcedure(protoiter->getID());
+                        tempCounter++;
+                        //cout << "metti " << tempCounter <<  endl;
+                    }
+                    performEventUpdate(speciesInvolved);
+                }else{
+                    // Remove molecules procedure 
+                    while(tempCounter < (abs)((int)tempNumberOfMols)){
+                        performMoleculeEfflux(protoiter->getID(), tmp__RndDoubleGen);               
+                        tempCounter++;
+                        //cout << "togli " << tempCounter <<  endl;
+                    }
+                }
+                //cin.ignore().get();
+            }
+
+
+        }catch(exception&e)
+        {
+            cout << "performFiniteMembraneGradientCrossing, line " << __LINE__ << endl;
+            cerr << "exceptioncaught:" << e.what() << endl;
+            ExitWithError("performDETComplexDissociation","exceptionerrorthrown");
         }
-		allSpecies.at(protoiter->getID()).setConcentration((acs_int)tempNumberOfMols/(AVO * volume),volume,tmp__RndDoubleGen);
-		if (protoiter->getID() == 0){
-            cout << allSpecies.at(protoiter->getID()).getAmount() << " " << allSpecies.at(protoiter->getID()).getConcentration() << " " << endl;
-            cout << "...................." << endl;
-        }
-		//cin.ignore().get();
-
 	}
 
 	if(debugLevel == FINDERRORDURINGRUNTIME) cout << "\tenvironment::performFiniteMembraneGradientCrossing end" << endl;

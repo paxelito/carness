@@ -1,9 +1,15 @@
-Introdurre nel costruttore di ENV il tipo di sistema e utilizzare per creare flusso!!!
-
 La concentrazione fissa non viene assolutamente presa dal file, viene sempre calcolata sulle base degli altri parametri
 
 FARE IN MODO CHE LA CONCENTRAZIONE FISSA VENGA DEFINITA DAL FILE SPECIES... AL momento passiamo il parametro conclock ma la fuznioen lo usa come legato all'energia
 e calcola da sola se la specie ha concentrazione o meno 
+
+fare in modo che non vengano mai salvati i file volendo
+
+ExitWithError save structure anyway4. Pass by const reference when the value is expensive to copy AND the function does
+not want to modify the value referred to AND NULL would not be a valid value if
+a pointer was used instead.
+
+
 
 
 RELEASE NOTES
@@ -15,6 +21,9 @@ Build8.0b20150427.76
 	* A new class influxspecies has been introduced to deal with membrane finite diffusion of external food
 	* New surface is computed too
 	* Runtime interface has been enxhanced, information have been riorganized and surface has been added
+	* Files can be now saved only at the beginning at the end of the simulation using "-1" value for the specific parameters
+	* Various little improvements
+	* Documentation has been updated. 
 
 Build7.1b20140721.75
 --------------------
