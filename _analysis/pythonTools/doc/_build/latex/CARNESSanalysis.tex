@@ -14,8 +14,8 @@
 
 
 \title{CARNESS analysis package}
-\date{April 24, 2015}
-\release{20150424.001}
+\date{May 26, 2015}
+\release{20150526.002}
 \author{Alessandro Filisetti}
 \newcommand{\sphinxlogo}{\includegraphics{logo.png}\par}
 \renewcommand{\releasename}{Release}
@@ -139,7 +139,8 @@ On UNIX systems you can install the necessary packages by the usual commands, fo
 
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYGZdl{} sudo apt\PYGZhy{}get update
-\PYGZdl{} sudo apt\PYGZhy{}get install python\PYGZhy{}numpy python\PYGZhy{}scipy python\PYGZhy{}matplotlib python\PYGZhy{}setuptools python\PYGZhy{}networkx python\PYGZhy{}deap graphviz libgraphviz\PYGZhy{}dev pkg\PYGZhy{}config python\PYGZhy{}pygraphviz
+\PYGZdl{} sudo apt\PYGZhy{}get install python\PYGZhy{}numpy python\PYGZhy{}scipy python\PYGZhy{}matplotlib python\PYGZhy{}setuptools
+python\PYGZhy{}networkx python\PYGZhy{}deap graphviz libgraphviz\PYGZhy{}dev pkg\PYGZhy{}config python\PYGZhy{}pygraphviz
 \end{Verbatim}
 
 On WINDOWS system, I personally suggest that the simplest solution may be to rely on the alternative solutions proposed \href{https://www.python.org/download/alternatives/}{here}.
@@ -147,10 +148,16 @@ On WINDOWS system, I personally suggest that the simplest solution may be to rel
 
 \chapter{Installing}
 \label{index:installing}
-To get the packages (the package is entirely contained in a folder named ``ACS\_analysis'') it is sufficent to clone it from GIT with the command:
+To get the packages (the package is entirely contained in the folder:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-git clone https://github.com/paxelito/ACS\PYGZus{}analysis.git
+\PYGZlt{}path\PYGZgt{}/carness/\PYGZus{}analysis/pythonTools
+\end{Verbatim}
+
+cloning the carness software, the carness analysis script will be automatically downloade:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+git clone https://github.com/paxelito/carness.git
 \end{Verbatim}
 
 Since the package is still under development it is a good practice to check for possible updates or upgrades each time you use it. To seach for new updates please run the following command within the ``ACS\_analysis'' folder
@@ -179,13 +186,9 @@ To have a description of all the parameters admitted by the initializator plase 
 python \PYGZlt{}path\PYGZgt{}/initializator.py \PYGZhy{}h
 \end{Verbatim}
 
-
-\subsection{TO Do}
-\label{initializator:to-do}\begin{itemize}
-\item {} 
-Introduce here all the parameters allow to upload all the parameters from file, not some here and some on file
-
-\end{itemize}
+WARNING: In case of finite membrane passage (systemArchitecture=3 in acsm2s.conf) all the incoming species present in the \_acsinflux.csv file 
+will have the same values for the external concentrations and the transmembrane kinetic constants. To simulate different values all the \_acsinflux.csv files
+must be modified manually. If several protocells or several seeds have been planned, then all the \_acsinflux.csv files must be modified.
 
 
 \section{Chemistry Graph Analysis}
@@ -283,21 +286,35 @@ Script to compute the successive cell division times and the value of each molec
 Please digit:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-python \PYGZlt{}path\PYGZgt{}/acsDuplicationAnalysis.py
+python \PYGZlt{}path\PYGZgt{}/acsDuplicationAnalysis.py \PYGZhy{}h
 \end{Verbatim}
 
 for the SYNOPSIS of the script.
 
-In particular by means of this analysis three files are saved:
+An interesting example concerns the creation of a plot with just some molecular species:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+python \PYGZlt{}path\PYGZgt{}/acsDuplicationAnalysis.py \PYGZhy{}p ./ \PYGZhy{}d50 \PYGZhy{}g \PYGZhy{}a \PYGZhy{}m30 \PYGZhy{}c 14 29
+\end{Verbatim}
+
+-c 14 29 indicates that only the species 14 and 29 will be  plotted
+
+In particular, a folder named \_0\_new\_allStatResults will be created into the chemistry and three files will be stored there:
 \begin{enumerate}
 \item {} 
-deltat\_\textless{}CHEMISTRY\textgreater{}.csv: In this file the cell division time and the overall amount of each molecular species at each division are stored
+deltat\_\textless{}CHEMISTRY\textgreater{}.csv: In this file the cell division time and the overall amount of molecules at each division are stored
 
 \item {} 
 delta\_ALL\_\textless{}CHEMISTRY\textgreater{}.csv: In this file the overall amount of each molecular species at each division is stored
 
 \item {} 
+allTimes\_\textless{}CHEMISTRY\textgreater{}.csv: If \emph{param --alldynamics -a}, hence in this file the amount of the molecules in function of time is stored
+
+\item {} 
 divplot\_\textless{}CHEMISTRY\textgreater{}.{[}png/eps{]}: If \emph{param --graphs -g}, hence the plot of the species amount at each generation is generated.
+
+\item {} 
+all\_time\_plot\_\textless{}CHEMISTRY\textgreater{}.{[}png.eps{]}: If \emph{param --graphs -g} and \emph{param --alldynamics -a}, hence the plot of the species amount at each time is generated.
 
 \end{enumerate}
 

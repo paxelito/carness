@@ -32,6 +32,17 @@ Currently Documented
 Release Notes
 -------------
 
+Version 002 - 20150526
+**********************
+
+* Parameters are now stored in a dictionary for a more simple management
+* Initializator.py
+	* the system architecture is now set in the acsm2m.conf file, hence the parameter sysType has been removed
+	* The influx file related to the systemArchitecture 3 (PROTOCELLFLUXFINITE) is now created. 
+* acsDuplicationAnalysis.py
+	* The amount of the species in now extracted also within two successive generation and not only at the end of each generation. 
+* Documentation updated
+
 Version 001 - 20150424
 **********************
 

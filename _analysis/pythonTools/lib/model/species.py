@@ -22,7 +22,7 @@ def getTotNumberOfSpeciesFromCompletePop(M):
 def createFileSpecies(tmpFolder, args, pars, tmpScale=1, specieslist = None, tmpCatInRAF=None, tmpRafCatContribute2C=1):
 	# Create species file 
 	if specieslist and len(specieslist) > 1: tempSpeciesList = specieslist
-	else: tempSpeciesList = createCompleteSpeciesPopulation(args.maxDim, pars[14])
+	else: tempSpeciesList = createCompleteSpeciesPopulation(args.maxDim, pars['alphabet'])
 	
 	fname_initSpecies = os.path.join(tmpFolder, '_acsspecies.csv')
 	fid_initSpecies = open(fname_initSpecies, 'w')
@@ -31,20 +31,20 @@ def createFileSpecies(tmpFolder, args, pars, tmpScale=1, specieslist = None, tmp
 	tmpAlpha = '\t0\n'
 	for idspecies, singleSpecies in enumerate(tempSpeciesList):
 		lastc = "0"
-		initConc = args.initAmount / (_AVOGADRO_ * pars[15])
+		initConc = args.initAmount / (_AVOGADRO_ * pars['volume'])
 		
 		# FOOD SPECIES
 		if len(singleSpecies) <= args.lastFood: 
-			if args.sysType == 2: lastc = "1"
+			if pars['systemArchitecture'] == 2: lastc = "1"
 			tempFood.append(idspecies)
-			initConc = args.initBufferAmount / (_AVOGADRO_ * pars[15])
+			initConc = args.initBufferAmount / (_AVOGADRO_ * pars['volume'])
 		
 		# Species of initial set	
 		if (len(singleSpecies) > args.lastFood) & (len(singleSpecies) <= args.initSet): 
 			#scalingFactor = int(args.initAmount/(10**tmpScale))
 			scalingFactor = int(args.initAmount)
 			if scalingFactor < 1: scalingFactor = 1
-			if args.fixedConcentration == 0: initConc = np.random.poisson(scalingFactor) / (_AVOGADRO_ * pars[15])
+			if args.fixedConcentration == 0: initConc = np.random.poisson(scalingFactor) / (_AVOGADRO_ * pars['volume'])
 			
 		# Species with reduced concentrations	
 		if len(singleSpecies) >= args.redConc: initConc = initConc / _REDUCEDCONCENTRATION_;		

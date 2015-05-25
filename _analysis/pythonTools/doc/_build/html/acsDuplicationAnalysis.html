@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Protocell Duplication Analysis &mdash; CARNESS analysis package 20150424.001 documentation</title>
+    <title>Protocell Duplication Analysis &mdash; CARNESS analysis package 20150526.002 documentation</title>
     
     <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '20150424.001',
+        VERSION:     '20150526.002',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="CARNESS analysis package 20150424.001 documentation" href="index.html" />
+    <link rel="top" title="CARNESS analysis package 20150526.002 documentation" href="index.html" />
     <link rel="prev" title="Chemistry Graph Analysis" href="graph_chemistry_analysis.html" /> 
   </head>
   <body>
@@ -34,7 +34,7 @@
             <img class="logo" src="_static/logo.png" alt="Logo"/>
           </a></p>
         <div class="headertitle"><a
-          href="index.html">CARNESS analysis package 20150424.001 documentation</a></div>
+          href="index.html">CARNESS analysis package 20150526.002 documentation</a></div>
         <div class="rel">
           <a href="graph_chemistry_analysis.html" title="Chemistry Graph Analysis"
              accesskey="P">previous</a> |
@@ -58,15 +58,22 @@
 <span id="protocell-duplication-analysis"></span><h1>Protocell Duplication Analysis<a class="headerlink" href="#module-acsDuplicationAnalysis" title="Permalink to this headline">¶</a></h1>
 <p>Script to compute the successive cell division times and the value of each molecule in proximity of the cell division.
 Please digit:</p>
-<div class="highlight-python"><div class="highlight"><pre>python &lt;path&gt;/acsDuplicationAnalysis.py 
+<div class="highlight-python"><div class="highlight"><pre>python &lt;path&gt;/acsDuplicationAnalysis.py -h
 </pre></div>
 </div>
 <p>for the SYNOPSIS of the script.</p>
-<p>In particular by means of this analysis three files are saved:</p>
+<p>An interesting example concerns the creation of a plot with just some molecular species:</p>
+<div class="highlight-python"><div class="highlight"><pre>python &lt;path&gt;/acsDuplicationAnalysis.py -p ./ -d50 -g -a -m30 -c 14 29
+</pre></div>
+</div>
+<p>-c 14 29 indicates that only the species 14 and 29 will be  plotted</p>
+<p>In particular, a folder named _0_new_allStatResults will be created into the chemistry and three files will be stored there:</p>
 <ol class="arabic simple">
-<li>deltat_&lt;CHEMISTRY&gt;.csv: In this file the cell division time and the overall amount of each molecular species at each division are stored</li>
+<li>deltat_&lt;CHEMISTRY&gt;.csv: In this file the cell division time and the overall amount of molecules at each division are stored</li>
 <li>delta_ALL_&lt;CHEMISTRY&gt;.csv: In this file the overall amount of each molecular species at each division is stored</li>
+<li>allTimes_&lt;CHEMISTRY&gt;.csv: If <cite>param &#8211;alldynamics -a</cite>, hence in this file the amount of the molecules in function of time is stored</li>
 <li>divplot_&lt;CHEMISTRY&gt;.[png/eps]: If <cite>param &#8211;graphs -g</cite>, hence the plot of the species amount at each generation is generated.</li>
+<li>all_time_plot_&lt;CHEMISTRY&gt;.[png.eps]: If <cite>param &#8211;graphs -g</cite> and <cite>param &#8211;alldynamics -a</cite>, hence the plot of the species amount at each time is generated.</li>
 </ol>
 </div>
 

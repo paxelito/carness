@@ -15,16 +15,21 @@ In order to use the scripts contained in this package, some further packages nee
 On UNIX systems you can install the necessary packages by the usual commands, for example on DEBIAN-based systems::
 
    $ sudo apt-get update
-   $ sudo apt-get install python-numpy python-scipy python-matplotlib python-setuptools python-networkx python-deap graphviz libgraphviz-dev pkg-config python-pygraphviz
+   $ sudo apt-get install python-numpy python-scipy python-matplotlib python-setuptools 
+   python-networkx python-deap graphviz libgraphviz-dev pkg-config python-pygraphviz
 
 On WINDOWS system, I personally suggest that the simplest solution may be to rely on the alternative solutions proposed `here <https://www.python.org/download/alternatives/>`_.
 
 Installing
 ----------
  
-To get the packages (the package is entirely contained in a folder named "ACS_analysis") it is sufficent to clone it from GIT with the command::
+To get the packages (the package is entirely contained in the folder:: 
+
+	<path>/carness/_analysis/pythonTools
+
+cloning the carness software, the carness analysis script will be automatically downloade::
    
-   git clone https://github.com/paxelito/ACS_analysis.git
+   git clone https://github.com/paxelito/carness.git
 
 Since the package is still under development it is a good practice to check for possible updates or upgrades each time you use it. To seach for new updates please run the following command within the "ACS_analysis" folder ::
 

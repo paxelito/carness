@@ -77,10 +77,13 @@ def read_sims_conf_file(paramFile='acsm2s.conf'):
 	
 	# Initializa theta for old versions of carness
 	theta = 0
+	systemArchitecture = 1
 					
 	# Read reaction probability from configuration file
 	for line in fid:
 		strLine = line.split('=')
+		if strLine[0] == "systemArchitecture":
+			systemArchitecture = int(strLine[1])
 		if strLine[0] == "nGEN":
 			nGEN = int(strLine[1])
 		if strLine[0] == "nSIM":
@@ -175,12 +178,82 @@ def read_sims_conf_file(paramFile='acsm2s.conf'):
 			randomInitSpeciesConcentration = int(strLine[1])
 								
 			
-	#r1 = 0 : 9 || 10 : 17 || 18 : 24 || 25 : 35 || 36 : 43
+	#r1 = 0 : 9 || 10 : 17 || 18 : 24 || 25 : 35 || 36 : 42 || 43 : 44
 	return (nGEN,nSIM,nSeconds,nReactions,nHours,nAttempts,randomSeed,debugLevel,timeStructuresSavingInterval,fileTimesSaveInterval,\
 		    newSpeciesProbMinThreshold,lastFiringDiskSpeciesID,overallConcentration,ECConcentration,alphabet,volume,volumeGrowth,stochDivision,\
 		    energy,ratioSpeciesEnergizable,nonCatalyticMaxLength,reactionProbability,cleavageProbability,main_rev_rct_allowed,reverseReactions,\
 		    revRctRatio,spontRct,K_ass,K_diss,K_cpx,K_cpxDiss,K_nrg,K_nrg_decay,K_spont_ass,K_spont_diss,moleculeDecay_KineticConstant,\
-		    diffusion_contribute,solubility_threshold,influx_rate,maxLOut,fileAmountSaveInterval,saveReactionParameters,randomInitSpeciesConcentration,theta)
+		    diffusion_contribute,solubility_threshold,influx_rate,maxLOut,fileAmountSaveInterval,saveReactionParameters,randomInitSpeciesConcentration,\
+		    theta, systemArchitecture)
+
+def read_sims_conf_file_in_dictonary(paramFile='acsm2s.conf'):
+	#Open Parameter File
+	paramFile = os.path.abspath(paramFile)
+
+	try:
+		fid = open(paramFile, 'r')
+	except:
+		print 'impossible to load ', paramFile; sys.exit(1)
+
+	# Initialize the dictonary that will contain all the parameters
+	params = {}
+	
+	# Initializa params for older versions of carness
+	params['theta']=0
+	params['systemArchitecture']=1
+	params['overallConcentration']=0
+	params['main_rev_rct_allowed']=0
+					
+	# Read reaction probability from configuration file
+	for line in fid:
+		strLine = line.split('=')
+		if strLine[0] == "systemArchitecture": params['systemArchitecture']=int(strLine[1])
+		if strLine[0] == "nGEN": params['nGEN']=int(strLine[1])
+		if strLine[0] == "nSIM": params['nSIM']=int(strLine[1])
+		if strLine[0] == "nSeconds": params['nSeconds']=int(strLine[1])
+		if strLine[0] == "nReactions": params['nReactions']=int(strLine[1])
+		if strLine[0] == "nHours": params['nHours']=int(strLine[1])
+		if strLine[0] == "nAttempts": params['nAttempts']=int(strLine[1])
+		if strLine[0] == "randomSeed": params['randomSeed']=int(strLine[1])
+		if strLine[0] == "debugLevel": params['debugLevel']=int(strLine[1])
+		if strLine[0] == "timeStructuresSavingInterval": params['timeStructuresSavingInterval']=float(strLine[1])
+		if strLine[0] == "fileTimesSaveInterval": params['fileTimesSaveInterval']= float(strLine[1])
+		if strLine[0] == "newSpeciesProbMinThreshold": params['newSpeciesProbMinThreshold']= float(strLine[1])
+		if strLine[0] == "lastFiringDiskSpeciesID": params['lastFiringDiskSpeciesID']= int(strLine[1])
+		if strLine[0] == "overallConcentration": params['overallConcentration']=float(strLine[1])
+		if strLine[0] == "ECConcentration": params['ECConcentration']=float(strLine[1])
+		if strLine[0] == "alphabet": params['alphabet']=str(strLine[1][:-1])
+		if strLine[0] == "volume": params['volume']=float(strLine[1])
+		if strLine[0] == "volumeGrowth": params['volumeGrowth']=int(strLine[1])
+		if strLine[0] == "stochDivision": params['stochDivision']=int(strLine[1])
+		if strLine[0] == "theta": params['theta']=float(strLine[1])
+		if strLine[0] == "energy": params['energy']=int(strLine[1])
+		if strLine[0] == "ratioSpeciesEnergizable": params['ratioSpeciesEnergizable']=float(strLine[1])
+		if strLine[0] == "nonCatalyticMaxLength": params['nonCatalyticMaxLength']=int(strLine[1])
+		if strLine[0] == "reactionProbability": params['reactionProbability']=float(strLine[1])
+		if strLine[0] == "cleavageProbability": params['cleavageProbability']=float(strLine[1])
+		if strLine[0] == "main_rev_rct_allowed": params['main_rev_rct_allowed']=int(strLine[1])
+		if strLine[0] == "reverseReactions": params['reverseReactions']=int(strLine[1])
+		if strLine[0] == "revRctRatio": params['revRctRatio']=float(strLine[1])
+		if strLine[0] == "spontRct": params['spontRct']=float(strLine[1])
+		if strLine[0] == "K_ass": params['K_ass']=float(strLine[1])
+		if strLine[0] == "K_diss": params['K_diss']=float(strLine[1])
+		if strLine[0] == "K_cpx": params['K_cpx']=float(strLine[1])
+		if strLine[0] == "K_cpxDiss": params['K_cpxDiss']=float(strLine[1])
+		if strLine[0] == "K_nrg": params['K_nrg']=float(strLine[1])
+		if strLine[0] == "K_nrg_decay": params['K_nrg_decay']=float(strLine[1])
+		if strLine[0] == "K_spont_ass": params['K_spont_ass']=float(strLine[1])
+		if strLine[0] == "K_spont_diss": params['K_spont_diss']=float(strLine[1])
+		if strLine[0] == "moleculeDecay_KineticConstant": params['moleculeDecay_KineticConstant']=float(strLine[1])
+		if strLine[0] == "diffusion_contribute": params['diffusion_contribute']=float(strLine[1])
+		if strLine[0] == "solubility_threshold": params['solubility_threshold']=float(strLine[1])
+		if strLine[0] == "influx_rate": params['influx_rate']=float(strLine[1])
+		if strLine[0] == "maxLOut": params['maxLOut']=int(strLine[1])
+	 	if strLine[0] == "fileAmountSaveInterval": params['fileAmountSaveInterval']=int(strLine[1])
+		if strLine[0] == "saveReactionParameters": params['saveReactionParameters']=int(strLine[1])
+		if strLine[0] == "randomInitSpeciesConcentration": params['randomInitSpeciesConcentration']=int(strLine[1])
+								
+	return params
 
 def readInitConfFile(tmpPath):
 	#Open Parameter File

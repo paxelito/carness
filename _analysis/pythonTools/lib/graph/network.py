@@ -141,7 +141,7 @@ def create_chemistry(args, originalSpeciesList, parameters, rctToCat, totCleavag
 			
 			# Reaction Structure Creation	
 			while reactionValid == False:
-				tmp1, tmp2, tmp3, tmp1id, tmp2id, tmp3id = reactions.createRandomCleavageForCompleteFiringDisk(speciesList, parameters[14], initSpeciesListLength)
+				tmp1, tmp2, tmp3, tmp1id, tmp2id, tmp3id = reactions.createRandomCleavageForCompleteFiringDisk(speciesList, parameters['alphabet'], initSpeciesListLength)
 				if reactionID > 0:
 					if args.revRcts == 0: # If rev rcts are neglected, reverse reactions already present are searched
 						if sum((rcts[:,1] == revType) & (rcts[:,2] == tmp1id) & (rcts[:,3] == tmp2id)) == 0: reactionValid = True
@@ -157,16 +157,16 @@ def create_chemistry(args, originalSpeciesList, parameters, rctToCat, totCleavag
 			
 			if rctnew: # In the reaction is new
 				if reactionID == 0: # If the reaction is the first one
-					rcts = np.array([[int(reactionID), int(rctType), tmp1id, tmp2id, tmp3id, int(0), int(239), parameters[34]]])
+					rcts = np.array([[int(reactionID), int(rctType), tmp1id, tmp2id, tmp3id, int(0), int(239), parameters['K_spont_diss']]])
 					reactionID += 1
 				else: 
-					rcts = np.vstack([rcts,(int(reactionID), int(rctType), tmp1id, tmp2id, tmp3id, int(0), int(239), parameters[34])])	
+					rcts = np.vstack([rcts,(int(reactionID), int(rctType), tmp1id, tmp2id, tmp3id, int(0), int(239), parameters['K_spont_diss'])])	
 					reactionID += 1
 				if rctType == 1: nCleavage += 1
 				else: nCondensa += 1
 					
 				if (args.creationMethod == 2) | (args.creationMethod == 4): # If WIM method the reverse reaction is added
-					rcts = np.vstack([rcts,(int(reactionID), int(revType), tmp1id, tmp2id, tmp3id, int(0), int(239), parameters[33])])	
+					rcts = np.vstack([rcts,(int(reactionID), int(revType), tmp1id, tmp2id, tmp3id, int(0), int(239), parameters['K_spont_ass'])])	
 					reactionID += 1
 					if revType == 1: nCleavage += 1
 					else: nCondensa += 1
@@ -204,16 +204,16 @@ def create_chemistry(args, originalSpeciesList, parameters, rctToCat, totCleavag
 				# New Reaction is now added (np.vstack) to the creation list (if the list is empty, so the list will be created (np.array))
 				if rctnew:
 					if reactionID == 0: 
-						rcts = np.array([[int(reactionID), int(rctType), tmpprodid, idsub1, idsub2, int(0), int(239), parameters[33]]])
+						rcts = np.array([[int(reactionID), int(rctType), tmpprodid, idsub1, idsub2, int(0), int(239), parameters['K_spont_ass']]])
 						reactionID += 1
 					else: 
-						rcts = np.vstack([rcts,(int(reactionID), int(rctType), tmpprodid, idsub1, idsub2, int(0), int(239), parameters[33])])	
+						rcts = np.vstack([rcts,(int(reactionID), int(rctType), tmpprodid, idsub1, idsub2, int(0), int(239), parameters['K_spont_ass'])])	
 						reactionID += 1
 					nCondensa += 1
 					
 					 # if reverse reaction are present (methods 2 and 4 :: WIM and FILISETTI with reverse reactions)
 					if args.creationMethod == 4:
-						rcts = np.vstack([rcts,(int(reactionID), int(1), tmpprodid, idsub1, idsub2, int(0), int(239), parameters[34])])	
+						rcts = np.vstack([rcts,(int(reactionID), int(1), tmpprodid, idsub1, idsub2, int(0), int(239), parameters['K_spont_diss'])])	
 						reactionID += 1
 						nCleavage += 1
 				else:
@@ -247,7 +247,7 @@ def create_chemistry(args, originalSpeciesList, parameters, rctToCat, totCleavag
 			# Search for the catalyst 
 			while not catFound:
 				if (args.prefAttach == 0) | (i == 0): 
-					catalyst = originalSpeciesList.index(ran.choice(originalSpeciesList[len(parameters[14]):initSpeciesListLength-1]))
+					catalyst = originalSpeciesList.index(ran.choice(originalSpeciesList[len(parameters['alphabet']):initSpeciesListLength-1]))
 					if (args.prefAttach == 1):
 						weightCat[catalyst] += 1.00
 						#pweightCat = [float(i)/sum(weightCat) for i in weightCat]
@@ -302,11 +302,11 @@ def create_chemistry(args, originalSpeciesList, parameters, rctToCat, totCleavag
 			# Store catalysis
 			if catalysisID == 0: # if this is the first catalysis
 				
-				cats = np.array([[int(catalysisID), int(catalyst), int(rctsToCat), int(0), parameters[27], parameters[28], parameters[29], int(1)]])
+				cats = np.array([[int(catalysisID), int(catalyst), int(rctsToCat), int(0), parameters['K_ass'], parameters['K_diss'], parameters['K_cpx'], int(1)]])
 				catalysisID += 1
 					
 				if (args.creationMethod == 2) | (args.creationMethod == 4): # IF wim method
-					cats = np.vstack([cats,(int(catalysisID), int(catalyst), int(rctsToCat + 1), int(0), parameters[27], parameters[28], parameters[29], int(1))])
+					cats = np.vstack([cats,(int(catalysisID), int(catalyst), int(rctsToCat + 1), int(0), parameters['K_ass'], parameters['K_diss'], parameters['K_cpx'], int(1))])
 					catalysisID += 1
 				
 				noSameRct = True # correct catalysis, since the catalysis is new, it is impossible that it has been already catalysed	
@@ -316,20 +316,20 @@ def create_chemistry(args, originalSpeciesList, parameters, rctToCat, totCleavag
 				# If the double catalysis must be assessed
 				if not noSameRct: 
 					if sum((cats[:,1]==int(int(catalyst)))&(cats[:,2]==int(rctsToCat))) == 0: # IF the reaction has not yet been catalysed by the catalyst
-						cats = np.vstack([cats,(int(catalysisID), int(catalyst), int(rctsToCat), int(0), parameters[27], parameters[28], parameters[29], int(1))])
+						cats = np.vstack([cats,(int(catalysisID), int(catalyst), int(rctsToCat), int(0), parameters['K_ass'], parameters['K_diss'], parameters['K_cpx'], int(1))])
 						catalysisID += 1
 						if (args.creationMethod == 2) | (args.creationMethod == 4):
-							cats = np.vstack([cats,(int(catalysisID), int(catalyst), int(rctsToCat + 1), int(0), parameters[27], parameters[28], parameters[29], int(1))])
+							cats = np.vstack([cats,(int(catalysisID), int(catalyst), int(rctsToCat + 1), int(0), parameters['K_ass'], parameters['K_diss'], parameters['K_cpx'], int(1))])
 							catalysisID += 1
 						noSameRct = True # Reaction definitely valid!!!
 					else:
 						catFound = False # New catalyst must be found
 						print "\t\t\t WARNING: The catalyst ", int(catalyst), " already catalyses the reaction ", int(rctsToCat), ", new catalyst must be found"	
 				else: # if the catalysis is valid
-					cats = np.vstack([cats,(int(catalysisID), int(catalyst), int(rctsToCat), int(0), parameters[27], parameters[28], parameters[29], int(1))])
+					cats = np.vstack([cats,(int(catalysisID), int(catalyst), int(rctsToCat), int(0), parameters['K_ass'], parameters['K_diss'], parameters['K_cpx'], int(1))])
 					catalysisID += 1
 					if (args.creationMethod == 2) | (args.creationMethod == 4):
-						cats = np.vstack([cats,(int(catalysisID), int(catalyst), int(rctsToCat + 1), int(0), parameters[27], parameters[28], parameters[29], int(1))])
+						cats = np.vstack([cats,(int(catalysisID), int(catalyst), int(rctsToCat + 1), int(0), parameters['K_ass'], parameters['K_diss'], parameters['K_cpx'], int(1))])
 						catalysisID += 1
 		
 		#if round(tmpac,1) == 1.1: 

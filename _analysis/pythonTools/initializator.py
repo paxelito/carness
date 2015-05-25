@@ -6,12 +6,10 @@
 	To have a description of all the parameters admitted by the initializator plase digit::
 
 		python <path>/initializator.py -h 
-	
 
-	TO Do
-	-----
-
-	* Introduce here all the parameters allow to upload all the parameters from file, not some here and some on file 
+	WARNING: In case of finite membrane passage (systemArchitecture=3 in acsm2s.conf) all the incoming species present in the _acsinflux.csv file 
+	will have the same values for the external concentrations and the transmembrane kinetic constants. To simulate different values all the _acsinflux.csv files
+	must be modified manually. If several protocells or several seeds have been planned, then all the _acsinflux.csv files must be modified. 
 
 '''
 
@@ -47,7 +45,6 @@ if __name__ == '__main__':
 	parser.add_argument('-o', '--strOut', help='Path for output file storing (Default: ./)', default='./')
 	parser.add_argument('-F', '--folderName', help='Simulation Folder Name (Deafault: SIMS)', default='SIMS')
 	parser.add_argument('-C', '--core', help='Number of core on which simulations are distributed (def:2)', default='2', type=int)
-	parser.add_argument('-t', '--sysType', help='System Architecture [1:CLOSE, 2:PROTO, 3:CSTR], deafult: 1', default='2')
 	parser.add_argument('-a', '--prefAttach', help='Type of catalyst choice (1: Preferential Attachment, 0: Random attachment, DEF: 0', default='0', type=int)
 	parser.add_argument('-k', '--creationMethod', help='Network creation method (1: Filisetti, 2: Wim, 3: WimNoRevs, 4: WIM_RAFinREV_noRAFinNOrev, DEF: 3)', default='3', type=int)
 	parser.add_argument('-R', '--revRcts', help='Reverse reactions are allowed to be created for chance(1: Yes, 0: No, Deafult: No)', default='0', type=int)		
@@ -58,6 +55,8 @@ if __name__ == '__main__':
 	parser.add_argument('-S', '--sccinraf', help='minimal dimension of the SCC within a RAF (def: 0). If < 0 dont care about SCC', type=int, default=0)
 	parser.add_argument('-u', '--autocat', help='Allow autocatalysis in principle (no param:TRUE, -u=FALSE)', action="store_false", default=True)
 	parser.add_argument('-f', '--lastFood', type=int, help='max food species length (deafult: 2)', default='2')
+	parser.add_argument('-X', '--extconc', type=float, help='External Concentration of the species crossing the membrane (default: 0.01', default='0.01')
+	parser.add_argument('-T', '--k_membrane', type=float, help='Tranmembrane kinetic value (default: 5e09', default='5e09')
 	parser.add_argument('-s', '--initSet', type=int, help='Max Dimension of the initial set (Default: 6)', default='6')
 	parser.add_argument('-m', '--maxDim', help='Max Dimension of the systems (Default: 6)', default='6', type=int)
 	parser.add_argument('-n', '--noCat', help='Non catalytic max length (default: 2)', default='2', type=int)
@@ -101,7 +100,7 @@ if __name__ == '__main__':
 
 		
 	# Read Conf File !!!!
-	parameters = readfiles.read_sims_conf_file(args.conf)
+	parameters = readfiles.read_sims_conf_file_in_dictonary(args.conf)
 	
 	fidid = 0 # Core on which the chemistry will run
 	
@@ -126,7 +125,7 @@ if __name__ == '__main__':
 		# Create foodlist
 		foodList = range(int(2**(args.lastFood+1)-2))
 		# Create species List
-		speciesList = sp.createCompleteSpeciesPopulation(args.maxDim, parameters[14])
+		speciesList = sp.createCompleteSpeciesPopulation(args.maxDim, parameters['alphabet'])
 		originalSpeciesList = deepcopy(speciesList)
 		# Crate chemist
 		# compute population cardinality
@@ -141,8 +140,8 @@ if __name__ == '__main__':
 		totRcts = totCleavage + totCond
 		
 		# If the reaction probability is 0, it is set to the critical value of 1 reaction per species on average
-		if parameters[21] == 0: prob = (1 / float(totRcts)) * args.avgCon
-		else: prob = parameters[21]
+		if parameters['reactionProbability'] == 0: prob = (1 / float(totRcts)) * args.avgCon
+		else: prob = parameters['reactionProbability']
 		rctToCat = int(round(totSpecies * args.avgCon))
 
 		# Create chemistry 
@@ -228,7 +227,7 @@ if __name__ == '__main__':
 		# CREATE DISTINCT INITIAL CONDITIONS	
 		# If volume growth define species contributing to the volume growth
 		selcats = None
-		if parameters[16] > 0: 
+		if parameters['volumeGrowth'] > 0: 
 			if len(rafset[3]) > 0: 
 				#selcats = [ran.choice(rafset[3]) for i in range(0,6)]
 				selcats = rafset[3]
@@ -258,10 +257,11 @@ if __name__ == '__main__':
 			# -----------------------------
 			# ARTIFICIAL CHEMISTRY CREATION
 			# -----------------------------
-			writefiles.write_acsms_file(condFolderPath,*parameters) # Save config file. 
+			args.systemArchitecture = parameters['systemArchitecture']
+			writefiles.write_acsms_file(condFolderPath,parameters) # Save config file. 
 			writefiles.write_and_create_std_nrgFile(condFolderPath) # Save energy file.
 			sp.createFileSpecies(condFolderPath, args, parameters, singleCond, speciesList, selcats)
-			writefiles.write_and_createInfluxFile(condFolderPath, foodList)		
+			writefiles.write_and_createInfluxFile(condFolderPath, args, foodList)		
 			writefiles.write_acsCatalysis_file(condFolderPath, cats)	
 			writefiles.write_acsReactions_file(condFolderPath, rcts)	
 			

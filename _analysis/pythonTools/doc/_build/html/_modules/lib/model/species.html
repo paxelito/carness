@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>lib.model.species &mdash; CARNESS analysis package 20150424.001 documentation</title>
+    <title>lib.model.species &mdash; CARNESS analysis package 20150526.002 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '20150424.001',
+        VERSION:     '20150526.002',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="CARNESS analysis package 20150424.001 documentation" href="../../../index.html" />
+    <link rel="top" title="CARNESS analysis package 20150526.002 documentation" href="../../../index.html" />
     <link rel="up" title="Module code" href="../../index.html" /> 
   </head>
   <body>
@@ -34,7 +34,7 @@
             <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
           </a></p>
         <div class="headertitle"><a
-          href="../../../index.html">CARNESS analysis package 20150424.001 documentation</a></div>
+          href="../../../index.html">CARNESS analysis package 20150526.002 documentation</a></div>
         <div class="rel">
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |
@@ -77,7 +77,7 @@
 <div class="viewcode-block" id="createFileSpecies"><a class="viewcode-back" href="../../../lib.model.html#lib.model.species.createFileSpecies">[docs]</a><span class="k">def</span> <span class="nf">createFileSpecies</span><span class="p">(</span><span class="n">tmpFolder</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">pars</span><span class="p">,</span> <span class="n">tmpScale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">specieslist</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">tmpCatInRAF</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">tmpRafCatContribute2C</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 	<span class="c"># Create species file </span>
 	<span class="k">if</span> <span class="n">specieslist</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">specieslist</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> <span class="n">tempSpeciesList</span> <span class="o">=</span> <span class="n">specieslist</span>
-	<span class="k">else</span><span class="p">:</span> <span class="n">tempSpeciesList</span> <span class="o">=</span> <span class="n">createCompleteSpeciesPopulation</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">maxDim</span><span class="p">,</span> <span class="n">pars</span><span class="p">[</span><span class="mi">14</span><span class="p">])</span>
+	<span class="k">else</span><span class="p">:</span> <span class="n">tempSpeciesList</span> <span class="o">=</span> <span class="n">createCompleteSpeciesPopulation</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">maxDim</span><span class="p">,</span> <span class="n">pars</span><span class="p">[</span><span class="s">&#39;alphabet&#39;</span><span class="p">])</span>
 	
 	<span class="n">fname_initSpecies</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tmpFolder</span><span class="p">,</span> <span class="s">&#39;_acsspecies.csv&#39;</span><span class="p">)</span>
 	<span class="n">fid_initSpecies</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname_initSpecies</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
@@ -86,20 +86,20 @@
 	<span class="n">tmpAlpha</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\t</span><span class="s">0</span><span class="se">\n</span><span class="s">&#39;</span>
 	<span class="k">for</span> <span class="n">idspecies</span><span class="p">,</span> <span class="n">singleSpecies</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tempSpeciesList</span><span class="p">):</span>
 		<span class="n">lastc</span> <span class="o">=</span> <span class="s">&quot;0&quot;</span>
-		<span class="n">initConc</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">initAmount</span> <span class="o">/</span> <span class="p">(</span><span class="n">_AVOGADRO_</span> <span class="o">*</span> <span class="n">pars</span><span class="p">[</span><span class="mi">15</span><span class="p">])</span>
+		<span class="n">initConc</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">initAmount</span> <span class="o">/</span> <span class="p">(</span><span class="n">_AVOGADRO_</span> <span class="o">*</span> <span class="n">pars</span><span class="p">[</span><span class="s">&#39;volume&#39;</span><span class="p">])</span>
 		
 		<span class="c"># FOOD SPECIES</span>
 		<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">singleSpecies</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">args</span><span class="o">.</span><span class="n">lastFood</span><span class="p">:</span> 
-			<span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">sysType</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="n">lastc</span> <span class="o">=</span> <span class="s">&quot;1&quot;</span>
+			<span class="k">if</span> <span class="n">pars</span><span class="p">[</span><span class="s">&#39;systemArchitecture&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="n">lastc</span> <span class="o">=</span> <span class="s">&quot;1&quot;</span>
 			<span class="n">tempFood</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idspecies</span><span class="p">)</span>
-			<span class="n">initConc</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">initBufferAmount</span> <span class="o">/</span> <span class="p">(</span><span class="n">_AVOGADRO_</span> <span class="o">*</span> <span class="n">pars</span><span class="p">[</span><span class="mi">15</span><span class="p">])</span>
+			<span class="n">initConc</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">initBufferAmount</span> <span class="o">/</span> <span class="p">(</span><span class="n">_AVOGADRO_</span> <span class="o">*</span> <span class="n">pars</span><span class="p">[</span><span class="s">&#39;volume&#39;</span><span class="p">])</span>
 		
 		<span class="c"># Species of initial set	</span>
 		<span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">singleSpecies</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">args</span><span class="o">.</span><span class="n">lastFood</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">singleSpecies</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">args</span><span class="o">.</span><span class="n">initSet</span><span class="p">):</span> 
 			<span class="c">#scalingFactor = int(args.initAmount/(10**tmpScale))</span>
 			<span class="n">scalingFactor</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">initAmount</span><span class="p">)</span>
 			<span class="k">if</span> <span class="n">scalingFactor</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span> <span class="n">scalingFactor</span> <span class="o">=</span> <span class="mi">1</span>
-			<span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">fixedConcentration</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">initConc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">scalingFactor</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">_AVOGADRO_</span> <span class="o">*</span> <span class="n">pars</span><span class="p">[</span><span class="mi">15</span><span class="p">])</span>
+			<span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">fixedConcentration</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">initConc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">scalingFactor</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">_AVOGADRO_</span> <span class="o">*</span> <span class="n">pars</span><span class="p">[</span><span class="s">&#39;volume&#39;</span><span class="p">])</span>
 			
 		<span class="c"># Species with reduced concentrations	</span>
 		<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">singleSpecies</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">args</span><span class="o">.</span><span class="n">redConc</span><span class="p">:</span> <span class="n">initConc</span> <span class="o">=</span> <span class="n">initConc</span> <span class="o">/</span> <span class="n">_REDUCEDCONCENTRATION_</span><span class="p">;</span>		
